@@ -1,0 +1,1310 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.69.0" />
+    <meta name="description" content="여러가지 만들어 보는 중">
+<meta name="author" content="Dongyeop">
+
+    <link rel="icon" href="../../images/favicon.png" type="image/png">
+
+    <title>SWEA - Python - D3 :: 여러가지</title>
+
+    
+    <link href="../../css/nucleus.css?1586590105" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1586590105" rel="stylesheet">
+    <link href="../../css/hybrid.css?1586590105" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1586590105" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1586590105" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1586590105" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1586590105" rel="stylesheet">
+    <link href="../../css/theme.css?1586590105" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1586590105" rel="stylesheet">
+    
+      <link href="../../css/theme-red.css?1586590105" rel="stylesheet">
+    
+
+    <script src="../../js/jquery-3.3.1.min.js?1586590105"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/cont_2/d3/swea-d3.html">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="../../">
+
+<svg id="grav-logo" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	width="100%" height="100%"  viewBox="0 0 285.1 69.9" xml:space="preserve">
+<g>
+	<path d="M35,0c9.6,0,17.9,3.4,24.7,10.3c6.8,6.8,10.3,15,10.3,24.7c0,9.7-3.4,17.9-10.3,24.7c-6.8,6.8-15,10.3-24.7,10.3
+		c-9.7,0-17.9-3.4-24.7-10.3C3.4,52.8,0,44.6,0,34.9c0-9.6,3.4-17.9,10.3-24.7C17.1,3.4,25.3,0,35,0z M22.3,63.7
+		c0.3-7.4,0.3-14.7,0-22.1c-2.1-0.4-4-0.4-5.9,0c-0.2,0.8-0.2,2.5-0.1,4.9c0.1,2.3,0,3.9-0.3,4.8c-1.7-0.6-2.7-2.1-3.1-4.6
+		c-0.1-0.7-0.1-3.3-0.1-8c0-14.5-0.1-23-0.3-25.6c-3.6,4.1-5.6,7-5.9,8.5v10.9c0,4.5,0.1,8.1,0.2,10.9c0,0.4,0,1.3-0.1,2.8
+		c-0.1,1.2,0,2.1,0.1,2.6c0.1,0.6,1.1,2.1,2.8,4.7C13.2,58.7,17.5,62.2,22.3,63.7z M44.6,65.4c0.3-5,0.2-12.9-0.1-23.6
+		c-2.1-0.3-4.1-0.3-5.9,0c-0.2,2-0.2,5.1-0.1,9.5c0.1,4.3,0,7.5-0.1,9.5c-2.9,0.4-5,0.3-6.2-0.1c-0.2-5.6-0.2-15.2-0.1-28.7
+		c0.1-12.4,0-21.8-0.3-28.3c-2.4,0.1-4.3,0.6-5.7,1.3c-0.1,7.7-0.2,17.7-0.1,30.1c0,16.5,0,26.6,0,30.3c2.3,1.1,5.4,1.7,9.4,1.7
+		C38.9,66.9,42.1,66.4,44.6,65.4z M48.1,64.1c9.7-4.6,15.7-12,18-22.2c-1.8-0.2-3.8-0.3-6.1-0.3c-1.6,3.9-2.6,6.3-3.2,7.2
+		c-1.1,1.7-2,2.5-2.7,2.5C54,46,54,39.1,54,30.5c0-11.5,0-18.4,0-20.9c-1.4-1.4-3.3-2.5-5.7-3.4C48.1,6.3,48,6.4,48,6.7
+		c0,3.5,0,13.1,0,28.8C47.9,47.2,48,56.8,48.1,64.1z"/>
+</g>
+<g>
+	<path d="M116.6,51.3h-29c-0.5,0-0.9-0.1-1.3-0.2c-0.4-0.2-0.7-0.4-1-0.7c-0.3-0.3-0.5-0.6-0.7-1c-0.2-0.4-0.2-0.8-0.2-1.3V16.3h6.3
+		V45h25.8V51.3z"/>
+	<path d="M154.8,51.3h-22.9c-0.9,0-1.8-0.2-2.9-0.5c-1-0.3-2-0.8-2.9-1.5c-0.9-0.7-1.6-1.6-2.2-2.8c-0.6-1.1-0.9-2.5-0.9-4.2V19.5
+		c0-0.4,0.1-0.9,0.2-1.2c0.2-0.4,0.4-0.7,0.7-1c0.3-0.3,0.6-0.5,1-0.7c0.4-0.2,0.8-0.2,1.3-0.2h28.6v6.3h-25.4v19.8
+		c0,0.8,0.2,1.5,0.7,1.9s1.1,0.7,1.9,0.7h22.9V51.3z M151.9,37h-20v-6.4h20V37z"/>
+	<path d="M197.3,51.3H191v-8.6h-22.3v8.6h-6.3V33.8c0-2.6,0.4-4.9,1.3-7.1s2.1-4,3.7-5.5c1.6-1.5,3.4-2.8,5.5-3.6
+		c2.1-0.9,4.5-1.3,7-1.3h14.3c0.4,0,0.9,0.1,1.2,0.2c0.4,0.2,0.7,0.4,1,0.7s0.5,0.6,0.7,1c0.2,0.4,0.2,0.8,0.2,1.2V51.3z
+		 M168.7,36.4H191V22.6h-11.2c-0.2,0-0.6,0-1.2,0.1c-0.6,0.1-1.4,0.2-2.2,0.4c-0.8,0.2-1.7,0.6-2.6,1c-0.9,0.5-1.8,1.1-2.5,2
+		c-0.8,0.8-1.4,1.9-1.9,3.1c-0.5,1.2-0.7,2.8-0.7,4.5V36.4z"/>
+	<path d="M241.7,28.1c0,1.4-0.2,2.7-0.5,3.9c-0.4,1.1-0.8,2.1-1.5,3c-0.6,0.9-1.3,1.6-2.1,2.2c-0.8,0.6-1.6,1.1-2.5,1.5
+		c-0.9,0.4-1.8,0.7-2.6,0.9c-0.9,0.2-1.7,0.3-2.5,0.3l13.3,11.5h-9.8l-13.2-11.5h-4.6v-6.3H230c0.8-0.1,1.5-0.2,2.2-0.5
+		c0.7-0.3,1.2-0.6,1.7-1.1c0.5-0.5,0.9-1,1.1-1.6c0.3-0.6,0.4-1.4,0.4-2.2v-4c0-0.4,0-0.6-0.1-0.8c-0.1-0.2-0.2-0.3-0.3-0.4
+		c-0.1-0.1-0.3-0.1-0.4-0.2c-0.2,0-0.3,0-0.4,0h-20.9v28.7h-6.3V19.5c0-0.4,0.1-0.9,0.2-1.2c0.2-0.4,0.4-0.7,0.7-1
+		c0.3-0.3,0.6-0.5,1-0.7c0.4-0.2,0.8-0.2,1.3-0.2H234c1.4,0,2.6,0.3,3.6,0.8s1.8,1.2,2.4,1.9c0.6,0.8,1,1.6,1.3,2.5
+		c0.3,0.9,0.4,1.7,0.4,2.5V28.1z"/>
+	<path d="M285.1,48.6c0,0.5-0.1,0.9-0.3,1.3c-0.2,0.4-0.4,0.7-0.7,1c-0.3,0.3-0.6,0.5-1,0.7c-0.4,0.2-0.8,0.2-1.2,0.2
+		c-0.4,0-0.8-0.1-1.2-0.2c-0.4-0.1-0.8-0.4-1.1-0.7l-23.2-24.2v24.7h-6.3V19c0-0.7,0.2-1.2,0.5-1.8c0.4-0.5,0.8-0.9,1.4-1.2
+		c0.6-0.2,1.2-0.3,1.9-0.2s1.2,0.4,1.6,0.9l23.2,24.2V16.3h6.3V48.6z"/>
+</g>
+</svg>
+
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="../../js/lunr.min.js?1586590105"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1586590105"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/dongyeopgu.github.io\/";
+    
+</script>
+<script type="text/javascript" src="../../js/search.js?1586590105"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/basics.html" title="About" class="dd-item 
+        
+        
+        
+        ">
+      <a href="../../basics.html">
+          About
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/cont_2.html" title="SWEA 문제풀이" class="dd-item 
+        
+        
+        
+        ">
+      <a href="../../cont_2.html">
+          <b>1. </b>SWEA 문제풀이
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/cont_2/d3.html" title="D3 문제풀이" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="../../cont_2/d3.html">
+          D3 문제풀이
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/cont_2/d3/swea-d3.html" title="SWEA - Python - D3" class="dd-item active">
+        <a href="../../cont_2/d3/swea-d3.html">
+        SWEA - Python - D3
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/cont.html" title="Django 학습" class="dd-item 
+        
+        
+        
+        ">
+      <a href="../../cont.html">
+          <b>2. </b>Django 학습
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                   SWEA - Python - D3 
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1240-단순-2진-암호코드">1240. 단순 2진 암호코드</a></li>
+        <li><a href="#1289-원재의-메모리-복구">1289. 원재의 메모리 복구</a></li>
+        <li><a href="#1491-원재의-벽-꾸미기">1491. 원재의 벽 꾸미기</a></li>
+        <li><a href="#1493-수의-새로운-연산">1493. 수의 새로운 연산</a></li>
+        <li><a href="#1860-진기의-최고급-붕어빵">1860. 진기의 최고급 붕어빵</a></li>
+        <li><a href="#1873-상호의-배틀필드">1873. 상호의 배틀필드</a></li>
+        <li><a href="#2805-농작물-수확하기">2805. 농작물 수확하기</a></li>
+        <li><a href="#2806-n-queen">2806. N-Queen</a></li>
+        <li><a href="#2814-최장-경로">2814. 최장 경로</a></li>
+        <li><a href="#2817-부분-수열의-합">2817. 부분 수열의 합</a></li>
+        <li><a href="#2948-문자열-교집합">2948. 문자열 교집합</a></li>
+        <li><a href="#3032-홍준이의-숫자-놀이">3032. 홍준이의 숫자 놀이</a></li>
+        <li><a href="#3131-100만-이하의-모든-소수">3131. 100만 이하의 모든 소수</a></li>
+        <li><a href="#3142-영준이와-신비한-뿔의-숲">3142. 영준이와 신비한 뿔의 숲</a></li>
+        <li><a href="#3233-정삼각현-분할">3233. 정삼각현 분할</a></li>
+        <li><a href="#3260-두-수의-덧셈">3260. 두 수의 덧셈</a></li>
+        <li><a href="#3304-최장-공통-부분">3304. 최장 공통 부분</a></li>
+        <li><a href="#3307-최장-증가-부분">3307. 최장 증가 부분</a></li>
+        <li><a href="#3282-01-knapsack">3282. 0/1 Knapsack</a></li>
+        <li><a href="#3314-보충학습과-평균">3314. 보충학습과 평균</a></li>
+        <li><a href="#3376-파도반-수열">3376. 파도반 수열</a></li>
+        <li><a href="#3408-세가지합">3408. 세가지합</a></li>
+        <li><a href="#3431-준환이의-운동관리">3431. 준환이의 운동관리</a></li>
+        <li><a href="#3456-직사각형-길이-찾기">3456. 직사각형 길이 찾기</a></li>
+        <li><a href="#3499-퍼펙트-셔플">3499. 퍼펙트 셔플</a></li>
+        <li><a href="#3750-digit-sum">3750. Digit sum</a></li>
+        <li><a href="#3809-화섭이의-정수-나열">3809. 화섭이의 정수 나열</a></li>
+        <li><a href="#3975-승률-비교하기">3975. 승률 비교하기</a></li>
+        <li><a href="#4047-영준이의-카드-카운팅">4047. 영준이의 카드 카운팅</a></li>
+        <li><a href="#4299-태혁이의-사랑은-타이밍">4299. 태혁이의 사랑은 타이밍</a></li>
+        <li><a href="#4371-항구에-들어오는-배">4371. 항구에 들어오는 배</a></li>
+        <li><a href="#4406-모음이-보이지-않는-사람">4406. 모음이 보이지 않는 사람</a></li>
+        <li><a href="#4466-최대-성적표-만들기">4466. 최대 성적표 만들기</a></li>
+        <li><a href="#4522-세상의-모든-팰린드롬">4522. 세상의 모든 팰린드롬</a></li>
+        <li><a href="#4579-세상의-모든-팰린드롬2">4579. 세상의 모든 팰린드롬2</a></li>
+        <li><a href="#4615-재미있는-오셀로-게임">4615. 재미있는 오셀로 게임</a></li>
+        <li><a href="#4676-늘어지는-소리-만들기">4676. 늘어지는 소리 만들기</a></li>
+        <li><a href="#4751-다솔이의-다이아몬드-장식">4751. 다솔이의 다이아몬드 장식</a></li>
+        <li><a href="#4789-성공적인-공연-기획">4789. 성공적인 공연 기획</a></li>
+        <li><a href="#5162-두가지-빵의-딜레마">5162. 두가지 빵의 딜레마</a></li>
+        <li><a href="#5215-햄버거-다이어트">5215. 햄버거 다이어트</a></li>
+        <li><a href="#5356-의석이의-세로로-말해요">5356. 의석이의 세로로 말해요</a></li>
+        <li><a href="#5431-민석이의-과제-체크하기">5431. 민석이의 과제 체크하기</a></li>
+        <li><a href="#5515-2016년-요일-맞추기">5515. 2016년 요일 맞추기</a></li>
+        <li><a href="#5549-홀수일까-짝수일까">5549. 홀수일까 짝수일까</a></li>
+        <li><a href="#5601-쥬스-나누기">5601. 쥬스 나누기</a></li>
+        <li><a href="#5603-건초더미">5603. 건초더미</a></li>
+        <li><a href="#5642-합">5642. 합</a></li>
+        <li><a href="#5789-현주의-상자-바꾸기">5789. 현주의 상자 바꾸기</a></li>
+        <li><a href="#5948-새샘이의-7-3-5-게임">5948. 새샘이의 7-3-5 게임</a></li>
+        <li><a href="#5986-새샘이와-세-소수">5986. 새샘이와 세 소수</a></li>
+        <li><a href="#6019-기차-사이의-파리">6019. 기차 사이의 파리</a></li>
+        <li><a href="#6190-정곤이의-단조-증가하는-수">6190. 정곤이의 단조 증가하는 수</a></li>
+        <li><a href="#6485-삼성시의-버스-노선">6485. 삼성시의 버스 노선</a></li>
+        <li><a href="#6485">6485.</a></li>
+        <li><a href="#6692-다솔이의-월급-상자">6692. 다솔이의 월급 상자</a></li>
+        <li><a href="#7675-통역사-성경이">7675. 통역사 성경이</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              SWEA - Python - D3
+            </h1>
+          
+
+        
+
+
+
+<h3 id="1240-단순-2진-암호코드">1240. 단순 2진 암호코드</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> range(int(input())):
+    n <span style="color:#f92672">=</span> int(input())
+    arr <span style="color:#f92672">=</span> [<span style="color:#ae81ff">0</span>]<span style="color:#f92672">*</span>n
+    cnt <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+    a <span style="color:#f92672">=</span> list(input()<span style="color:#f92672">.</span>split())
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> a:
+        flag <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+        <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> i:
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> flag <span style="color:#f92672">and</span> j<span style="color:#f92672">.</span>isupper():
+                flag <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+            <span style="color:#66d9ef">elif</span> j<span style="color:#f92672">.</span>isdigit() <span style="color:#f92672">or</span> (flag <span style="color:#f92672">and</span> j<span style="color:#f92672">.</span>isupper()):
+                flag <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+                <span style="color:#66d9ef">break</span>
+        <span style="color:#66d9ef">if</span> flag:
+            arr[cnt] <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+        <span style="color:#66d9ef">if</span> (<span style="color:#e6db74">&#39;.&#39;</span> <span style="color:#f92672">in</span> i) <span style="color:#f92672">or</span> (<span style="color:#e6db74">&#39;!&#39;</span> <span style="color:#f92672">in</span> i) <span style="color:#f92672">or</span> (<span style="color:#e6db74">&#39;?&#39;</span> <span style="color:#f92672">in</span> i):
+            cnt <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+    <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;#{t+1} {&#39; &#39;.join(map(str, arr))}&#34;</span>)
+</code></pre></div><h3 id="1289-원재의-메모리-복구">1289. 원재의 메모리 복구</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">for</span> test_case <span style="color:#f92672">in</span> range(int(input())):
+    N <span style="color:#f92672">=</span> list(map(int, <span style="color:#e6db74">&#39; &#39;</span><span style="color:#f92672">.</span>join(input()<span style="color:#f92672">.</span>split())))
+    cnt <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+    a <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+    <span style="color:#66d9ef">if</span> N[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>:
+        cnt <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+    <span style="color:#66d9ef">else</span>:
+        cnt <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>,len(N)):
+        <span style="color:#66d9ef">if</span> N[i] <span style="color:#f92672">!=</span> N[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]:
+            cnt <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+        <span style="color:#66d9ef">else</span>:
+            cnt <span style="color:#f92672">+=</span> <span style="color:#ae81ff">0</span>
+    <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;#{test_case + 1} {cnt}&#34;</span>)
+</code></pre></div><h3 id="1491-원재의-벽-꾸미기">1491. 원재의 벽 꾸미기</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">for</span> test_case <span style="color:#f92672">in</span> range(int(input())):
+    N, A, B <span style="color:#f92672">=</span> map(int, input()<span style="color:#f92672">.</span>split())
+    a <span style="color:#f92672">=</span> []
+    <span style="color:#66d9ef">for</span> R <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, N):
+        <span style="color:#66d9ef">for</span> C <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, N):
+            <span style="color:#66d9ef">if</span> R <span style="color:#f92672">*</span> C <span style="color:#f92672">&lt;=</span> N:
+                <span style="color:#66d9ef">if</span> A<span style="color:#f92672">*</span>abs(R<span style="color:#f92672">-</span>C) <span style="color:#f92672">+</span> B<span style="color:#f92672">*</span>(N<span style="color:#f92672">-</span>R<span style="color:#f92672">*</span>C) <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span>:
+                    a<span style="color:#f92672">.</span>append(A<span style="color:#f92672">*</span>abs(R<span style="color:#f92672">-</span>C) <span style="color:#f92672">+</span> B<span style="color:#f92672">*</span>(N<span style="color:#f92672">-</span>R<span style="color:#f92672">*</span>C))
+    <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;#{test_case} {min(a)}&#34;</span>)
+</code></pre></div><h3 id="1493-수의-새로운-연산">1493. 수의 새로운 연산</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">for</span> test_case <span style="color:#f92672">in</span> range(int(input())):
+    p, q <span style="color:#f92672">=</span> map(int, input()<span style="color:#f92672">.</span>split())
+    mapping <span style="color:#f92672">=</span> [[<span style="color:#ae81ff">0</span> <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">300</span>)]<span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">300</span>)]
+    a <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+    p_x <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+    p_y <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+    q_x <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+    q_y <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">599</span>):
+        <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">300</span>):
+            <span style="color:#66d9ef">if</span> <span style="color:#ae81ff">300</span> <span style="color:#f92672">&gt;</span> i <span style="color:#f92672">-</span> j <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span>:
+                mapping[i<span style="color:#f92672">-</span>j][j] <span style="color:#f92672">=</span> a
+                a <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">300</span>):
+        <span style="color:#66d9ef">if</span> p <span style="color:#f92672">in</span> mapping[i]:
+            p_y <span style="color:#f92672">=</span> mapping[i]<span style="color:#f92672">.</span>index(p)
+            p_x <span style="color:#f92672">=</span> i
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">300</span>):
+        <span style="color:#66d9ef">if</span> q <span style="color:#f92672">in</span> mapping[i]:
+            q_y <span style="color:#f92672">=</span> mapping[i]<span style="color:#f92672">.</span>index(q)
+            q_x <span style="color:#f92672">=</span> i
+    
+    result <span style="color:#f92672">=</span> mapping[p_x<span style="color:#f92672">+</span>q_x<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>][p_y<span style="color:#f92672">+</span>q_y<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>]
+    <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;#{test_case + 1} {result}&#34;</span>)
+    
+</code></pre></div><h3 id="1860-진기의-최고급-붕어빵">1860. 진기의 최고급 붕어빵</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> range(int(input())):
+    N,M,K<span style="color:#f92672">=</span>map(int,input()<span style="color:#f92672">.</span>split())
+    a<span style="color:#f92672">=</span>list(map(int,input()<span style="color:#f92672">.</span>split()))
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(a)):
+        <span style="color:#66d9ef">if</span> sorted(a)[i]<span style="color:#f92672">//</span>M<span style="color:#f92672">*</span>K<span style="color:#f92672">&lt;</span>i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>:
+            result<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Impossible&#34;</span>
+            <span style="color:#66d9ef">break</span>
+        <span style="color:#66d9ef">else</span>:
+            result<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Possible&#34;</span>
+    <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;#{t+1} {result}&#34;</span>)
+</code></pre></div><h3 id="1873-상호의-배틀필드">1873. 상호의 배틀필드</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> range(int(input())):
+    H, W <span style="color:#f92672">=</span> map(int, input()<span style="color:#f92672">.</span>split())
+    move_symbol <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;^&#34;</span>, <span style="color:#e6db74">&#34;v&#34;</span>, <span style="color:#e6db74">&#34;&lt;&#34;</span>, <span style="color:#e6db74">&#34;&gt;&#34;</span>]
+    move_command <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;U&#34;</span>, <span style="color:#e6db74">&#34;D&#34;</span>, <span style="color:#e6db74">&#34;L&#34;</span>, <span style="color:#e6db74">&#34;R&#34;</span>, <span style="color:#e6db74">&#34;S&#34;</span>]
+    move_dir <span style="color:#f92672">=</span> [[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>], [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>], [<span style="color:#ae81ff">0</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>], [<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>]]
+    field <span style="color:#f92672">=</span> []
+    startpoint <span style="color:#f92672">=</span> [<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>]
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(H):
+        a <span style="color:#f92672">=</span> list(input())
+        field<span style="color:#f92672">.</span>append(a)
+        <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(len(a)):
+            <span style="color:#66d9ef">if</span> a[j] <span style="color:#f92672">in</span> move_symbol:
+                startpoint[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> i
+                startpoint[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> j
+                startpoint[<span style="color:#ae81ff">2</span>] <span style="color:#f92672">=</span> move_symbol<span style="color:#f92672">.</span>index(a[j])
+                field[i][j] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;.&#39;</span>
+    N <span style="color:#f92672">=</span> int(input())
+    commandline <span style="color:#f92672">=</span> list(input())
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> commandline:
+        move_index <span style="color:#f92672">=</span> move_command<span style="color:#f92672">.</span>index(i)
+        <span style="color:#66d9ef">if</span> move_index <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">4</span>:
+            i_idx <span style="color:#f92672">=</span> startpoint[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">+</span> move_dir[move_index][<span style="color:#ae81ff">0</span>]
+            j_idx <span style="color:#f92672">=</span> startpoint[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">+</span> move_dir[move_index][<span style="color:#ae81ff">1</span>]
+            <span style="color:#66d9ef">if</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&lt;=</span> i_idx <span style="color:#f92672">&lt;</span> H <span style="color:#f92672">and</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&lt;=</span> j_idx <span style="color:#f92672">&lt;</span> W:
+                <span style="color:#66d9ef">if</span> field[i_idx][j_idx] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;.&#39;</span>:
+                    startpoint[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> i_idx
+                    startpoint[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> j_idx
+            startpoint[<span style="color:#ae81ff">2</span>] <span style="color:#f92672">=</span> move_index
+        <span style="color:#66d9ef">else</span>:
+            n <span style="color:#f92672">=</span> startpoint[<span style="color:#ae81ff">0</span>]
+            m <span style="color:#f92672">=</span> startpoint[<span style="color:#ae81ff">1</span>]
+            <span style="color:#66d9ef">while</span> True:
+                n <span style="color:#f92672">+=</span> move_dir[startpoint[<span style="color:#ae81ff">2</span>]][<span style="color:#ae81ff">0</span>]
+                m <span style="color:#f92672">+=</span> move_dir[startpoint[<span style="color:#ae81ff">2</span>]][<span style="color:#ae81ff">1</span>]
+                <span style="color:#66d9ef">if</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&lt;=</span> n <span style="color:#f92672">&lt;</span> H <span style="color:#f92672">and</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&lt;=</span> m <span style="color:#f92672">&lt;</span> W:
+                    <span style="color:#66d9ef">if</span> field[n][m] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;#&#34;</span>:
+                        <span style="color:#66d9ef">break</span>
+                    <span style="color:#66d9ef">elif</span> field[n][m] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;*&#34;</span>:
+                        field[n][m] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;.&#34;</span>
+                        <span style="color:#66d9ef">break</span>
+                <span style="color:#66d9ef">else</span>:
+                    <span style="color:#66d9ef">break</span>
+    field[startpoint[<span style="color:#ae81ff">0</span>]][startpoint[<span style="color:#ae81ff">1</span>]] <span style="color:#f92672">=</span> move_symbol[startpoint[<span style="color:#ae81ff">2</span>]]
+    <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;#{t+1}&#34;</span>,end<span style="color:#f92672">=</span><span style="color:#e6db74">&#39; &#39;</span>)
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(H):
+        <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;{&#39;&#39;.join(field[i])}&#34;</span>)
+</code></pre></div><h3 id="2805-농작물-수확하기">2805. 농작물 수확하기</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> range(int(input())):
+    N <span style="color:#f92672">=</span> int(input())
+    farm <span style="color:#f92672">=</span> [list(map(int, input()))<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(N)]
+    base_sum <span style="color:#f92672">=</span> sum(farm[N<span style="color:#f92672">//</span><span style="color:#ae81ff">2</span>])
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(N<span style="color:#f92672">//</span><span style="color:#ae81ff">2</span>):
+        base_sum <span style="color:#f92672">+=</span> sum(farm[i][N<span style="color:#f92672">//</span><span style="color:#ae81ff">2</span><span style="color:#f92672">-</span>i:N<span style="color:#f92672">//</span><span style="color:#ae81ff">2</span><span style="color:#f92672">+</span>i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>])
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(N<span style="color:#f92672">//</span><span style="color:#ae81ff">2</span><span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>,N):
+        base_sum <span style="color:#f92672">+=</span> sum(farm[i][i<span style="color:#f92672">-</span>N<span style="color:#f92672">//</span><span style="color:#ae81ff">2</span>:N<span style="color:#f92672">-</span>(i<span style="color:#f92672">-</span>N<span style="color:#f92672">//</span><span style="color:#ae81ff">2</span>)])
+    <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;#{t+1} {base_sum}&#34;</span>)
+</code></pre></div><h3 id="2806-n-queen">2806. N-Queen</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">placeQueen</span>(queen_pos):
+    cnt <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+    n <span style="color:#f92672">=</span> len(queen_pos)
+    <span style="color:#66d9ef">if</span> n <span style="color:#f92672">==</span> N:
+        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span>
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(N):
+        <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(n):
+            <span style="color:#66d9ef">if</span> i <span style="color:#f92672">==</span> queen_pos[j]:
+                <span style="color:#66d9ef">break</span>
+            <span style="color:#66d9ef">if</span> n <span style="color:#f92672">-</span> j <span style="color:#f92672">==</span> i <span style="color:#f92672">-</span> queen_pos[j]:
+                <span style="color:#66d9ef">break</span>
+            <span style="color:#66d9ef">if</span> n <span style="color:#f92672">-</span> j <span style="color:#f92672">==</span> queen_pos[j] <span style="color:#f92672">-</span> i:
+                <span style="color:#66d9ef">break</span>
+        <span style="color:#66d9ef">else</span>:
+            cnt <span style="color:#f92672">+=</span> placeQueen(queen_pos <span style="color:#f92672">+</span> [i])
+    <span style="color:#66d9ef">return</span> cnt
+<span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> range(int(input())):
+    N <span style="color:#f92672">=</span> int(input())
+    <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;#{t+1} {placeQueen([])}&#34;</span>)
+</code></pre></div><h3 id="2814-최장-경로">2814. 최장 경로</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">dfs</span>(a,b):
+    visit[a] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+    result<span style="color:#f92672">.</span>append(b)
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> node[a]:
+        <span style="color:#66d9ef">if</span> visit[i] <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+            dfs(i,b<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)
+            visit[i] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+
+<span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> range(int(input())):
+    n, m <span style="color:#f92672">=</span> map(int, input()<span style="color:#f92672">.</span>split())
+    node <span style="color:#f92672">=</span> dict()
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>,n<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>):
+        node[i] <span style="color:#f92672">=</span> []
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(m):
+        a, b <span style="color:#f92672">=</span> map(int, input()<span style="color:#f92672">.</span>split())
+        node[a]<span style="color:#f92672">.</span>append(b)
+        node[b]<span style="color:#f92672">.</span>append(a)
+    result <span style="color:#f92672">=</span> []
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>,n<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>):
+        visit <span style="color:#f92672">=</span> [<span style="color:#ae81ff">0</span>] <span style="color:#f92672">*</span> (n<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)
+        c <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+        dfs(i,c)
+        result<span style="color:#f92672">.</span>append(c)
+    <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;#{t+1} {max(result)}&#34;</span>)
+
+</code></pre></div><h3 id="2817-부분-수열의-합">2817. 부분 수열의 합</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> range(int(input())):
+    N, K <span style="color:#f92672">=</span> map(int, input()<span style="color:#f92672">.</span>split())
+    a <span style="color:#f92672">=</span> list(map(int, input()<span style="color:#f92672">.</span>split()))
+    n <span style="color:#f92672">=</span> len(a)
+    b <span style="color:#f92672">=</span> []
+    result <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+    cnt <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> n):
+        <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(n<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>):
+            <span style="color:#66d9ef">if</span> i <span style="color:#f92672">&amp;</span> (<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> j):
+                result <span style="color:#f92672">+=</span> a[j]
+                <span style="color:#66d9ef">if</span> result<span style="color:#f92672">&gt;</span>K:
+                    <span style="color:#66d9ef">continue</span>
+        <span style="color:#66d9ef">if</span> result <span style="color:#f92672">==</span> K:
+            cnt <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+        result<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
+
+    <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;#{t+1} {cnt}&#34;</span>)
+</code></pre></div><h3 id="2948-문자열-교집합">2948. 문자열 교집합</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> range(int(input())):
+    N, M <span style="color:#f92672">=</span> map(int,input()<span style="color:#f92672">.</span>split())
+    set_1 <span style="color:#f92672">=</span> set(input()<span style="color:#f92672">.</span>split())
+    set_2 <span style="color:#f92672">=</span> set(input()<span style="color:#f92672">.</span>split())
+    result <span style="color:#f92672">=</span> set_1<span style="color:#f92672">&amp;</span>set_2
+    <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;#{t+1} {len(result)}&#34;</span>)
+</code></pre></div><h3 id="3032-홍준이의-숫자-놀이">3032. 홍준이의 숫자 놀이</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">gcd</span>(a, b):
+    x,y, u,v <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">0</span>
+    <span style="color:#66d9ef">while</span> a <span style="color:#f92672">!=</span> <span style="color:#ae81ff">0</span>:
+        q, r <span style="color:#f92672">=</span> b<span style="color:#f92672">//</span>a, b<span style="color:#f92672">%</span>a
+        m, n <span style="color:#f92672">=</span> x<span style="color:#f92672">-</span>u<span style="color:#f92672">*</span>q, y<span style="color:#f92672">-</span>v<span style="color:#f92672">*</span>q
+        b,a, x,y, u,v <span style="color:#f92672">=</span> a,r, u,v, m,n
+    <span style="color:#66d9ef">return</span> [x, y]
+
+<span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> range(int(input())):
+    A, B <span style="color:#f92672">=</span> map(int, input()<span style="color:#f92672">.</span>split())
+    <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;#{t+1} {&#39; &#39;.join(map(str, gcd(A,B)))}&#34;</span>)
+</code></pre></div><h3 id="3131-100만-이하의-모든-소수">3131. 100만 이하의 모든 소수</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">prime</span>(n):
+    a <span style="color:#f92672">=</span> [False, False] <span style="color:#f92672">+</span> [True] <span style="color:#f92672">*</span> (n <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>) 
+    <span style="color:#66d9ef">for</span> k <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">2</span>, int(n <span style="color:#f92672">**</span> <span style="color:#ae81ff">0.5</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1.5</span>)):
+        <span style="color:#66d9ef">if</span> a[k]: 
+            a[k<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span>::k] <span style="color:#f92672">=</span> [False] <span style="color:#f92672">*</span> ((n <span style="color:#f92672">-</span> k) <span style="color:#f92672">//</span> k) 
+    <span style="color:#66d9ef">return</span> [x <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> range(n<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>) <span style="color:#66d9ef">if</span> a[x]]
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39; &#39;</span><span style="color:#f92672">.</span>join(map(str, prime(<span style="color:#ae81ff">10</span><span style="color:#f92672">**</span><span style="color:#ae81ff">6</span>))))
+</code></pre></div><h3 id="3142-영준이와-신비한-뿔의-숲">3142. 영준이와 신비한 뿔의 숲</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> range(int(input())):
+    n, m <span style="color:#f92672">=</span> map(int, input()<span style="color:#f92672">.</span>split())
+    x <span style="color:#f92672">=</span> n <span style="color:#f92672">-</span> m
+    y <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>m <span style="color:#f92672">-</span> n
+    <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;#{t+1} {y} {x}&#34;</span>)
+</code></pre></div><h3 id="3233-정삼각현-분할">3233. 정삼각현 분할</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> range(int(input())):
+    n, m <span style="color:#f92672">=</span> map(int, input()<span style="color:#f92672">.</span>split())
+    a <span style="color:#f92672">=</span> n<span style="color:#f92672">**</span><span style="color:#ae81ff">2</span><span style="color:#f92672">//</span>m<span style="color:#f92672">**</span><span style="color:#ae81ff">2</span>
+    <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;#{t+1} {a}&#34;</span>)
+</code></pre></div><h3 id="3260-두-수의-덧셈">3260. 두 수의 덧셈</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> range(int(input())):
+    N <span style="color:#f92672">=</span> int(input())
+    farm <span style="color:#f92672">=</span> [list(map(int, input()))<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(N)]
+    base_sum <span style="color:#f92672">=</span> sum(farm[N<span style="color:#f92672">//</span><span style="color:#ae81ff">2</span>])
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(N<span style="color:#f92672">//</span><span style="color:#ae81ff">2</span>):
+        base_sum <span style="color:#f92672">+=</span> sum(farm[i][N<span style="color:#f92672">//</span><span style="color:#ae81ff">2</span><span style="color:#f92672">-</span>i:N<span style="color:#f92672">//</span><span style="color:#ae81ff">2</span><span style="color:#f92672">+</span>i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>])
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(N<span style="color:#f92672">//</span><span style="color:#ae81ff">2</span><span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>,N):
+        base_sum <span style="color:#f92672">+=</span> sum(farm[i][i<span style="color:#f92672">-</span>N<span style="color:#f92672">//</span><span style="color:#ae81ff">2</span>:N<span style="color:#f92672">-</span>(i<span style="color:#f92672">-</span>N<span style="color:#f92672">//</span><span style="color:#ae81ff">2</span>)])
+    <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;#{t+1} {base_sum}&#34;</span>)
+</code></pre></div><h3 id="3304-최장-공통-부분">3304. 최장 공통 부분</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">lcs</span>(a,b):
+    arr <span style="color:#f92672">=</span> [[<span style="color:#ae81ff">0</span> <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(len(b)<span style="color:#f92672">+</span><span style="color:#ae81ff">2</span>)]<span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(len(a)<span style="color:#f92672">+</span><span style="color:#ae81ff">2</span>)]
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>,len(a)<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>):
+        <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>,len(b)<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>):
+            <span style="color:#66d9ef">if</span> a[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">==</span> b[j<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]:
+                arr[i][j] <span style="color:#f92672">=</span> arr[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>][j<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>
+            <span style="color:#66d9ef">else</span>:
+                arr[i][j] <span style="color:#f92672">=</span> max(arr[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>][j],arr[i][j<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>])
+    <span style="color:#66d9ef">return</span> arr[len(a)][len(b)]
+
+<span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> range(int(input())):
+    a, b <span style="color:#f92672">=</span> map(str, input()<span style="color:#f92672">.</span>split())
+    <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;#{t+1} {lcs(a,b)}&#34;</span>)
+</code></pre></div><h3 id="3307-최장-증가-부분">3307. 최장 증가 부분</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">lis</span>(a):
+    d <span style="color:#f92672">=</span> [<span style="color:#ae81ff">0</span>] <span style="color:#f92672">*</span> (N)
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>,N):    
+        <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(i):
+            <span style="color:#66d9ef">if</span> a[i] <span style="color:#f92672">&gt;</span> a[j]:
+                d[i] <span style="color:#f92672">=</span> max(d[i],d[j]<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)
+    <span style="color:#66d9ef">return</span> max(d)
+
+<span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> range(int(input())):
+    N <span style="color:#f92672">=</span> int(input())
+    a_list <span style="color:#f92672">=</span> list(map(int, input()<span style="color:#f92672">.</span>split()))
+    <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;#{t+1} {lis(a_list)+1}&#34;</span>)
+</code></pre></div><h3 id="3282-01-knapsack">3282. 0/1 Knapsack</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">sol</span>(k,n):
+    a <span style="color:#f92672">=</span> [[<span style="color:#ae81ff">0</span> <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(k<span style="color:#f92672">+</span><span style="color:#ae81ff">2</span>)]<span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(n<span style="color:#f92672">+</span><span style="color:#ae81ff">2</span>)]
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>,n<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>):
+        <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>,k<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>):
+            <span style="color:#66d9ef">if</span> v_list[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">&gt;</span> j:
+                a[i][j] <span style="color:#f92672">=</span> a[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>][j]
+            <span style="color:#66d9ef">else</span>:
+                a[i][j] <span style="color:#f92672">=</span> max(c_list[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]<span style="color:#f92672">+</span>a[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>][j<span style="color:#f92672">-</span>v_list[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]], a[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>][j])
+    <span style="color:#66d9ef">return</span> a[n][k]
+
+<span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> range(int(input())):
+    N, K <span style="color:#f92672">=</span> map(int, input()<span style="color:#f92672">.</span>split())
+    sack <span style="color:#f92672">=</span> [list(map(int, input()<span style="color:#f92672">.</span>split()))<span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(N)]
+    v_list <span style="color:#f92672">=</span> []
+    c_list <span style="color:#f92672">=</span> []
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(N):
+        v_list<span style="color:#f92672">.</span>append(sack[i][<span style="color:#ae81ff">0</span>])
+        c_list<span style="color:#f92672">.</span>append(sack[i][<span style="color:#ae81ff">1</span>])
+    <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;#{t+1} {sol(K,N)}&#34;</span>)
+        
+</code></pre></div><h3 id="3314-보충학습과-평균">3314. 보충학습과 평균</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> range(int(input())):
+    score <span style="color:#f92672">=</span> list(map(int, input()<span style="color:#f92672">.</span>split()))
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(score)):
+        <span style="color:#66d9ef">if</span> score[i] <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">40</span>:
+            score[i] <span style="color:#f92672">=</span> <span style="color:#ae81ff">40</span>
+    <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;#{t+1} {sum(score)//5}&#34;</span>)
+</code></pre></div><h3 id="3376-파도반-수열">3376. 파도반 수열</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">wave</span>(n):
+    a <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>]
+    b <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>] <span style="color:#f92672">*</span> n
+    <span style="color:#66d9ef">if</span> n <span style="color:#f92672">&lt;=</span><span style="color:#ae81ff">3</span>:
+        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span>
+    <span style="color:#66d9ef">else</span>:
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">3</span>,n):
+            b[i] <span style="color:#f92672">=</span> b[i<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>] <span style="color:#f92672">+</span> b[i<span style="color:#f92672">-</span><span style="color:#ae81ff">3</span>]
+    <span style="color:#66d9ef">return</span> b[n<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+<span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> range(int(input())):
+    N <span style="color:#f92672">=</span> int(input())
+    <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;#{t+1} {wave(N)}&#34;</span>)
+</code></pre></div><h3 id="3408-세가지합">3408. 세가지합</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> range(int(input())):
+    N <span style="color:#f92672">=</span> int(input())
+    sum_1 <span style="color:#f92672">=</span> N<span style="color:#f92672">*</span>(N<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)<span style="color:#f92672">//</span><span style="color:#ae81ff">2</span>
+    sum_2 <span style="color:#f92672">=</span> N<span style="color:#f92672">*</span>(N<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span>)<span style="color:#f92672">//</span><span style="color:#ae81ff">2</span>
+    sum_3 <span style="color:#f92672">=</span> N<span style="color:#f92672">*</span>(N<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span><span style="color:#f92672">+</span><span style="color:#ae81ff">2</span>)<span style="color:#f92672">//</span><span style="color:#ae81ff">2</span>
+    <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;#{t+1} {sum_1} {sum_2} {sum_3}&#34;</span>)
+</code></pre></div><h3 id="3431-준환이의-운동관리">3431. 준환이의 운동관리</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> range(int(input())):
+    L, U, X <span style="color:#f92672">=</span> map(int, input()<span style="color:#f92672">.</span>split())
+    <span style="color:#66d9ef">if</span> U <span style="color:#f92672">&lt;</span> X:
+        <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;#{t+1} {-1}&#34;</span>)
+    <span style="color:#66d9ef">elif</span> L <span style="color:#f92672">&lt;=</span> X <span style="color:#f92672">&lt;=</span> U:
+        <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;#{t+1} {0}&#34;</span>)
+    <span style="color:#66d9ef">else</span>:
+        <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;#{t+1} {L-X}&#34;</span>)
+</code></pre></div><h3 id="3456-직사각형-길이-찾기">3456. 직사각형 길이 찾기</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> range(int(input())):
+    a <span style="color:#f92672">=</span> list(map(int, input()<span style="color:#f92672">.</span>split()))
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">3</span>):
+        <span style="color:#66d9ef">if</span> a<span style="color:#f92672">.</span>count(a[i])<span style="color:#f92672">%</span><span style="color:#ae81ff">2</span><span style="color:#f92672">==</span><span style="color:#ae81ff">1</span>:
+            <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;#{t+1} {a[i]}&#34;</span>)
+            <span style="color:#66d9ef">break</span>
+</code></pre></div><h3 id="3499-퍼펙트-셔플">3499. 퍼펙트 셔플</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> range(int(input())):
+    N <span style="color:#f92672">=</span> int(input())
+    card <span style="color:#f92672">=</span> list(map(str, input()<span style="color:#f92672">.</span>split()))
+    <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;#{t+1}&#34;</span>,end<span style="color:#f92672">=</span><span style="color:#e6db74">&#39; &#39;</span>)
+    <span style="color:#66d9ef">if</span> len(card) <span style="color:#f92672">%</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(N<span style="color:#f92672">//</span><span style="color:#ae81ff">2</span>):
+            <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;{card[i]} {card[N//2+i]}&#34;</span>,end<span style="color:#f92672">=</span><span style="color:#e6db74">&#34; &#34;</span>)
+        <span style="color:#66d9ef">print</span>()
+    <span style="color:#66d9ef">else</span>:
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(N<span style="color:#f92672">//</span><span style="color:#ae81ff">2</span>):
+            <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;{card[i]} {card[N//2+i+1]}&#34;</span>,end<span style="color:#f92672">=</span><span style="color:#e6db74">&#34; &#34;</span>)
+        <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;{card[N//2]}&#34;</span>,end<span style="color:#f92672">=</span><span style="color:#e6db74">&#34; &#34;</span>)
+        <span style="color:#66d9ef">print</span>()
+
+</code></pre></div><h3 id="3750-digit-sum">3750. Digit sum</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> range(int(input())):
+    <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;#{t+1} {(int(input())-1)%9+1}&#34;</span>)
+</code></pre></div><h3 id="3809-화섭이의-정수-나열">3809. 화섭이의 정수 나열</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> range(int(input())):
+    n <span style="color:#f92672">=</span> int(input())
+    a <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>
+    <span style="color:#66d9ef">while</span> True:
+        a <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#39;&#39;</span><span style="color:#f92672">.</span>join(map(str, input()<span style="color:#f92672">.</span>split()))
+        <span style="color:#66d9ef">if</span> len(a) <span style="color:#f92672">==</span> n:
+            <span style="color:#66d9ef">break</span>
+    <span style="color:#66d9ef">print</span>(a)
+    b <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+    c <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+    <span style="color:#66d9ef">while</span> True:
+        <span style="color:#66d9ef">if</span> str(b) <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> a:
+            c <span style="color:#f92672">=</span> b
+            <span style="color:#66d9ef">break</span>
+        b <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+    <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;#{t+1} {c}&#34;</span>)
+</code></pre></div><h3 id="3975-승률-비교하기">3975. 승률 비교하기</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">T <span style="color:#f92672">=</span> int(input())
+g <span style="color:#f92672">=</span> []
+<span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> range(T):
+    a,b,c,d <span style="color:#f92672">=</span> map(int, input()<span style="color:#f92672">.</span>split())
+    e <span style="color:#f92672">=</span> a <span style="color:#f92672">/</span> b
+    f <span style="color:#f92672">=</span> c <span style="color:#f92672">/</span> d
+    <span style="color:#66d9ef">if</span> e <span style="color:#f92672">&lt;</span> f:
+        g<span style="color:#f92672">.</span>append(<span style="color:#e6db74">&#34;BOB&#34;</span>)
+    <span style="color:#66d9ef">elif</span> e <span style="color:#f92672">&gt;</span> f:
+        g<span style="color:#f92672">.</span>append(<span style="color:#e6db74">&#34;ALICE&#34;</span>)
+    <span style="color:#66d9ef">else</span>:
+        g<span style="color:#f92672">.</span>append(<span style="color:#e6db74">&#34;DRAW&#34;</span>)
+    
+<span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> range(T):
+    <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;#{t+1} {g[t]}&#34;</span>)
+</code></pre></div><h3 id="4047-영준이의-카드-카운팅">4047. 영준이의 카드 카운팅</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> range(int(input())):
+    a<span style="color:#f92672">=</span>input()
+    b<span style="color:#f92672">=</span>[]
+    c<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
+    d<span style="color:#f92672">=</span>[a<span style="color:#f92672">.</span>count(<span style="color:#e6db74">&#34;S&#34;</span>),a<span style="color:#f92672">.</span>count(<span style="color:#e6db74">&#34;D&#34;</span>),a<span style="color:#f92672">.</span>count(<span style="color:#e6db74">&#34;H&#34;</span>),a<span style="color:#f92672">.</span>count(<span style="color:#e6db74">&#34;C&#34;</span>)]
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">0</span>,len(a),<span style="color:#ae81ff">3</span>):
+        b<span style="color:#f92672">.</span>append(a[i:i<span style="color:#f92672">+</span><span style="color:#ae81ff">3</span>])
+    <span style="color:#66d9ef">if</span> len(set(b))<span style="color:#f92672">&lt;</span>len(b):
+        c<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
+        <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;#{t+1} ERROR&#34;</span>)
+    <span style="color:#66d9ef">else</span>:
+        <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;#{t+1} {13-d[0]} {13-d[1]} {13-d[2]} {13-d[3]}&#34;</span>)
+</code></pre></div><h3 id="4299-태혁이의-사랑은-타이밍">4299. 태혁이의 사랑은 타이밍</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> range(int(input())):
+    d, h, m <span style="color:#f92672">=</span> map(int, input()<span style="color:#f92672">.</span>split())
+    a <span style="color:#f92672">=</span> [<span style="color:#ae81ff">11</span>, <span style="color:#ae81ff">11</span>, <span style="color:#ae81ff">11</span>]
+    result <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+    <span style="color:#66d9ef">if</span> d <span style="color:#f92672">-</span> a[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span>:
+        result <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+    <span style="color:#66d9ef">elif</span> a[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">==</span> d:
+        <span style="color:#66d9ef">if</span> h <span style="color:#f92672">-</span> a[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span>:
+            result <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+        <span style="color:#66d9ef">else</span>:
+            <span style="color:#66d9ef">if</span> m <span style="color:#f92672">-</span> a[<span style="color:#ae81ff">2</span>] <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span>:
+                result <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+            <span style="color:#66d9ef">else</span>:
+                result <span style="color:#f92672">+=</span> (d<span style="color:#f92672">-</span>a[<span style="color:#ae81ff">0</span>]) <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">24</span>
+                result <span style="color:#f92672">+=</span> (h<span style="color:#f92672">-</span>a[<span style="color:#ae81ff">1</span>]) <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span>
+                result <span style="color:#f92672">+=</span> (m<span style="color:#f92672">-</span>a[<span style="color:#ae81ff">2</span>])
+    <span style="color:#66d9ef">else</span>:
+        result <span style="color:#f92672">+=</span> (d<span style="color:#f92672">-</span>a[<span style="color:#ae81ff">0</span>]) <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">24</span>
+        result <span style="color:#f92672">+=</span> (h<span style="color:#f92672">-</span>a[<span style="color:#ae81ff">1</span>]) <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span>
+        result <span style="color:#f92672">+=</span> (m<span style="color:#f92672">-</span>a[<span style="color:#ae81ff">2</span>])
+    <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;#{t+1} {result}&#34;</span>)
+</code></pre></div><h3 id="4371-항구에-들어오는-배">4371. 항구에 들어오는 배</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> range(int(input())):
+    n <span style="color:#f92672">=</span> int(input())
+    happyday <span style="color:#f92672">=</span> []
+    <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(n):
+        happyday<span style="color:#f92672">.</span>append(int(input())<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
+    <span style="color:#66d9ef">del</span> happyday[<span style="color:#ae81ff">0</span>]
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> happyday:
+        happyday<span style="color:#f92672">=</span>set(happyday)
+        happyday <span style="color:#f92672">-=</span> set(range(i<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span>,max(happyday)<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, i))
+        <span style="color:#66d9ef">continue</span>
+    <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;#{t+1} {len(happyday)}&#34;</span>)
+</code></pre></div><h3 id="4406-모음이-보이지-않는-사람">4406. 모음이 보이지 않는 사람</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> range(int(input())):
+    a <span style="color:#f92672">=</span> list(input())
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> [<span style="color:#e6db74">&#39;a&#39;</span>,<span style="color:#e6db74">&#39;e&#39;</span>,<span style="color:#e6db74">&#39;i&#39;</span>,<span style="color:#e6db74">&#39;o&#39;</span>,<span style="color:#e6db74">&#39;u&#39;</span>]:
+        <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(len(a)):
+            <span style="color:#66d9ef">if</span> i <span style="color:#f92672">==</span> a[j]:
+                a[j]<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>
+    <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;#{t+1} {&#39;&#39;.join(map(str, a))}&#34;</span>)
+</code></pre></div><h3 id="4466-최대-성적표-만들기">4466. 최대 성적표 만들기</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> range(int(input())):
+    n, k <span style="color:#f92672">=</span> map(int, input()<span style="color:#f92672">.</span>split())
+    a <span style="color:#f92672">=</span> list(map(int, input()<span style="color:#f92672">.</span>split()))
+    b <span style="color:#f92672">=</span> sorted(a,reverse<span style="color:#f92672">=</span>True)
+    result <span style="color:#f92672">=</span> sum(b[:k])
+    <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;#{t+1} {result}&#34;</span>)
+</code></pre></div><h3 id="4522-세상의-모든-팰린드롬">4522. 세상의 모든 팰린드롬</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+</code></pre></div><h3 id="4579-세상의-모든-팰린드롬2">4579. 세상의 모든 팰린드롬2</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+</code></pre></div><h3 id="4615-재미있는-오셀로-게임">4615. 재미있는 오셀로 게임</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">limit</span>(a, b, n):
+    <span style="color:#66d9ef">if</span> a <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">and</span> a <span style="color:#f92672">&lt;</span> n <span style="color:#f92672">and</span> b <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">and</span> b <span style="color:#f92672">&lt;</span> n:
+        <span style="color:#66d9ef">return</span> True
+    <span style="color:#66d9ef">else</span>:
+        <span style="color:#66d9ef">return</span> False
+
+<span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> range(int(input())):
+    N, M <span style="color:#f92672">=</span> map(int, input()<span style="color:#f92672">.</span>split())
+    data <span style="color:#f92672">=</span> [[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">*</span> N <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(N)]
+    data[N <span style="color:#f92672">//</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>][N <span style="color:#f92672">//</span> <span style="color:#ae81ff">2</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+    data[N <span style="color:#f92672">//</span> <span style="color:#ae81ff">2</span>][N <span style="color:#f92672">//</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+    data[N <span style="color:#f92672">//</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>][N <span style="color:#f92672">//</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>
+    data[N <span style="color:#f92672">//</span> <span style="color:#ae81ff">2</span>][N <span style="color:#f92672">//</span> <span style="color:#ae81ff">2</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>
+  
+    dx <span style="color:#f92672">=</span> [<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+    dy <span style="color:#f92672">=</span> [<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>]
+  
+    <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(M):
+        a, b, stone <span style="color:#f92672">=</span> map(int, input()<span style="color:#f92672">.</span>split())
+        x <span style="color:#f92672">=</span> a <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>
+        y <span style="color:#f92672">=</span> b <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>
+        data[x][y] <span style="color:#f92672">=</span> stone
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">8</span>):
+            cnt <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+            next_x <span style="color:#f92672">=</span> x <span style="color:#f92672">+</span> dx[i]
+            next_y <span style="color:#f92672">=</span> y <span style="color:#f92672">+</span> dy[i]
+            <span style="color:#66d9ef">while</span> limit(next_x, next_y, N) <span style="color:#f92672">and</span> stone <span style="color:#f92672">!=</span> data[next_x][next_y] <span style="color:#f92672">and</span> data[next_x][next_y] <span style="color:#f92672">!=</span> <span style="color:#ae81ff">0</span>:
+                cnt <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+                next_x <span style="color:#f92672">=</span> next_x <span style="color:#f92672">+</span> dx[i]
+                next_y <span style="color:#f92672">=</span> next_y <span style="color:#f92672">+</span> dy[i]
+  
+            <span style="color:#66d9ef">if</span> limit(next_x, next_y, N) <span style="color:#f92672">and</span> data[next_x][next_y] <span style="color:#f92672">==</span> stone:
+                next_x <span style="color:#f92672">=</span> x <span style="color:#f92672">+</span> dx[i]
+                next_y <span style="color:#f92672">=</span> y <span style="color:#f92672">+</span> dy[i]
+                <span style="color:#66d9ef">for</span> f <span style="color:#f92672">in</span> range(cnt):
+                    data[next_x][next_y] <span style="color:#f92672">=</span> stone
+                    next_x <span style="color:#f92672">=</span> next_x <span style="color:#f92672">+</span> dx[i]
+                    next_y <span style="color:#f92672">=</span> next_y <span style="color:#f92672">+</span> dy[i]
+                      
+    cnt1 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+    cnt2 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(N):
+        <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(N):
+            <span style="color:#66d9ef">if</span> data[i][j] <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>:
+                cnt1 <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+            <span style="color:#66d9ef">elif</span> data[i][j] <span style="color:#f92672">==</span> <span style="color:#ae81ff">2</span>:
+                cnt2 <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+    <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;#{t+1} {cnt1} {cnt2}&#34;</span>)
+</code></pre></div><h3 id="4676-늘어지는-소리-만들기">4676. 늘어지는 소리 만들기</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> range(int(input())):
+    string <span style="color:#f92672">=</span> list(input())
+    h <span style="color:#f92672">=</span> int(input())
+    idx <span style="color:#f92672">=</span> list(map(int, input()<span style="color:#f92672">.</span>split()))
+    idx_sort <span style="color:#f92672">=</span>sorted(idx,reverse<span style="color:#f92672">=</span>True)
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(idx)):
+        string<span style="color:#f92672">.</span>insert(idx_sort[i],<span style="color:#e6db74">&#39;-&#39;</span>)
+    <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;#{t+1} {&#39;&#39;.join(map(str, string))}&#34;</span>)
+</code></pre></div><h3 id="4751-다솔이의-다이아몬드-장식">4751. 다솔이의 다이아몬드 장식</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> range(int(input())):
+    a <span style="color:#f92672">=</span> list(input())
+    n <span style="color:#f92672">=</span> (len(a) <span style="color:#f92672">*</span> <span style="color:#ae81ff">4</span>) <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+    b <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;.&#39;</span>,<span style="color:#e6db74">&#39;.&#39;</span>,<span style="color:#e6db74">&#39;#&#39;</span>,<span style="color:#e6db74">&#39;.&#39;</span>]<span style="color:#f92672">*</span>(n<span style="color:#f92672">//</span><span style="color:#ae81ff">4</span>)<span style="color:#f92672">+</span>[<span style="color:#e6db74">&#39;.&#39;</span>]
+    c <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;.&#39;</span>,<span style="color:#e6db74">&#39;#&#39;</span>]<span style="color:#f92672">*</span>(n<span style="color:#f92672">//</span><span style="color:#ae81ff">2</span>)<span style="color:#f92672">+</span>[<span style="color:#e6db74">&#39;.&#39;</span>]
+    d <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;#&#39;</span>,<span style="color:#e6db74">&#39;.&#39;</span>]<span style="color:#f92672">*</span>(n<span style="color:#f92672">//</span><span style="color:#ae81ff">2</span>)<span style="color:#f92672">+</span>[<span style="color:#e6db74">&#39;#&#39;</span>]
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;&#39;</span><span style="color:#f92672">.</span>join(b))
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;&#39;</span><span style="color:#f92672">.</span>join(c))
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(a)):
+        d[<span style="color:#ae81ff">4</span><span style="color:#f92672">*</span>i<span style="color:#f92672">+</span><span style="color:#ae81ff">2</span>]<span style="color:#f92672">=</span>a[i]
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;&#39;</span><span style="color:#f92672">.</span>join(d))
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;&#39;</span><span style="color:#f92672">.</span>join(c))
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;&#39;</span><span style="color:#f92672">.</span>join(b))
+</code></pre></div><h3 id="4789-성공적인-공연-기획">4789. 성공적인 공연 기획</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> range(int(input())):
+    a <span style="color:#f92672">=</span> list(map(int, input()))
+    cnt <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+    result <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(a)):
+        <span style="color:#66d9ef">while</span> True:
+            <span style="color:#66d9ef">if</span> cnt <span style="color:#f92672">&lt;</span> i:
+                cnt <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+                result <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+            <span style="color:#66d9ef">else</span>:
+                cnt <span style="color:#f92672">+=</span> a[i]
+                <span style="color:#66d9ef">break</span>
+    <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;#{t+1} {result}&#34;</span>)
+</code></pre></div><h3 id="5162-두가지-빵의-딜레마">5162. 두가지 빵의 딜레마</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> range(int(input())):
+    a, b, c <span style="color:#f92672">=</span> map(int, input()<span style="color:#f92672">.</span>split())
+    result <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+    <span style="color:#66d9ef">if</span> a <span style="color:#f92672">&lt;</span> b:
+        result <span style="color:#f92672">=</span> c <span style="color:#f92672">//</span> a
+    <span style="color:#66d9ef">else</span>:
+        result <span style="color:#f92672">=</span> c <span style="color:#f92672">//</span> b
+    <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;#{t+1} {result}&#34;</span>)
+</code></pre></div><h3 id="5215-햄버거-다이어트">5215. 햄버거 다이어트</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> range(int(input())):
+    n, l <span style="color:#f92672">=</span> map(int, input()<span style="color:#f92672">.</span>split())
+    hamb <span style="color:#f92672">=</span> [list(map(int, input()<span style="color:#f92672">.</span>split()))<span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(n)]
+    cal <span style="color:#f92672">=</span> []
+    score <span style="color:#f92672">=</span> []
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(n):
+        score<span style="color:#f92672">.</span>append(hamb[i][<span style="color:#ae81ff">0</span>])
+        cal<span style="color:#f92672">.</span>append(hamb[i][<span style="color:#ae81ff">1</span>])
+    board <span style="color:#f92672">=</span> [[<span style="color:#ae81ff">0</span> <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(l <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>)] <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(n <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>)]
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, n <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>):
+        <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, l <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>):
+            <span style="color:#66d9ef">if</span> cal[i <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>] <span style="color:#f92672">&gt;</span> j:
+                board[i][j] <span style="color:#f92672">=</span> board[i <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>][j]
+            <span style="color:#66d9ef">else</span>:
+                board[i][j] <span style="color:#f92672">=</span> max(score[i <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>] <span style="color:#f92672">+</span> board[i <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>][j <span style="color:#f92672">-</span> cal[i <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>]], board[i <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>][j])
+    <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;#{t+1} {board[n][l]}&#34;</span>)
+</code></pre></div><h3 id="5356-의석이의-세로로-말해요">5356. 의석이의 세로로 말해요</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">T<span style="color:#f92672">=</span>int(input())
+<span style="color:#66d9ef">for</span> tc <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, T<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>):
+    arr <span style="color:#f92672">=</span> [input() <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">5</span>)]
+    l <span style="color:#f92672">=</span> [len(i) <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> arr]  <span style="color:#75715e"># 각 문자열의 길이</span>
+    ml <span style="color:#f92672">=</span> max(l) <span style="color:#75715e"># 문자열 중 최대길이</span>
+ 
+    temp <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(ml):
+        <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">5</span>):
+            <span style="color:#66d9ef">if</span> l[j] <span style="color:#f92672">&gt;</span> i:  <span style="color:#75715e"># 자신의 문자열의 길이보다 열번호가 작으면 문자 추가하지 않음</span>
+                temp <span style="color:#f92672">+=</span> arr[j][i]
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;#</span><span style="color:#e6db74">%d</span><span style="color:#e6db74"> </span><span style="color:#e6db74">%s</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">%</span>(tc, temp))  
+</code></pre></div><h3 id="5431-민석이의-과제-체크하기">5431. 민석이의 과제 체크하기</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> range(int(input())):
+    n, k <span style="color:#f92672">=</span> map(int, input()<span style="color:#f92672">.</span>split())
+    a <span style="color:#f92672">=</span> list(map(int, input()<span style="color:#f92672">.</span>split()))
+    n_li <span style="color:#f92672">=</span> list(range(<span style="color:#ae81ff">1</span>,n<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>))
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> a:
+        <span style="color:#66d9ef">if</span> i <span style="color:#f92672">in</span> n_li:
+            n_li<span style="color:#f92672">.</span>remove(i)
+    <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;#{t+1} {&#39; &#39;.join(map(str, n_li))}&#34;</span>)
+</code></pre></div><h3 id="5515-2016년-요일-맞추기">5515. 2016년 요일 맞추기</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> range(int(input())):
+    m, d <span style="color:#f92672">=</span> map(int, input()<span style="color:#f92672">.</span>split())
+    day <span style="color:#f92672">=</span> [<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">31</span>,<span style="color:#ae81ff">29</span>,<span style="color:#ae81ff">31</span>,<span style="color:#ae81ff">30</span>,<span style="color:#ae81ff">31</span>,<span style="color:#ae81ff">30</span>,<span style="color:#ae81ff">31</span>,<span style="color:#ae81ff">31</span>,<span style="color:#ae81ff">30</span>,<span style="color:#ae81ff">31</span>,<span style="color:#ae81ff">30</span>,<span style="color:#ae81ff">31</span>]
+    days <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(m):
+        days <span style="color:#f92672">+=</span> day[i]
+    <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;#{t+1} {(days+d+3)%7}&#34;</span>)
+
+</code></pre></div><h3 id="5549-홀수일까-짝수일까">5549. 홀수일까 짝수일까</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> range(int(input())):
+    a <span style="color:#f92672">=</span> input()
+    <span style="color:#66d9ef">if</span> int(a[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>])<span style="color:#f92672">%</span><span style="color:#ae81ff">2</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+        <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;{t+1} Even&#34;</span>)
+    <span style="color:#66d9ef">else</span>:
+        <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;{t+1} Odd&#34;</span>)
+</code></pre></div><h3 id="5601-쥬스-나누기">5601. 쥬스 나누기</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> range(int(input())):
+    n <span style="color:#f92672">=</span> int(input())
+    <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;#{t+1}&#34;</span>,end<span style="color:#f92672">=</span><span style="color:#e6db74">&#39; &#39;</span>)
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(n):
+        <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;1/{n}&#34;</span>, end<span style="color:#f92672">=</span><span style="color:#e6db74">&#39; &#39;</span>)
+    <span style="color:#66d9ef">print</span>()
+</code></pre></div><h3 id="5603-건초더미">5603. 건초더미</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> range(int(input())):
+    n <span style="color:#f92672">=</span> int(input())
+    a <span style="color:#f92672">=</span> []
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(n):
+        a<span style="color:#f92672">.</span>append(int(input()))
+    avg <span style="color:#f92672">=</span> sum(a)<span style="color:#f92672">//</span>n
+    result <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(n):
+        result <span style="color:#f92672">+=</span> abs(a[i] <span style="color:#f92672">-</span> avg)
+    <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;#{t+1} {result//2}&#34;</span>)
+</code></pre></div><h3 id="5642-합">5642. 합</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> range(int(input())):
+    n <span style="color:#f92672">=</span> int(input())
+    a <span style="color:#f92672">=</span> list(map(int, input()<span style="color:#f92672">.</span>split()))
+    max_ <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">10000</span>
+    sum_ <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(n):
+        sum_ <span style="color:#f92672">+=</span> a[i]
+        <span style="color:#66d9ef">if</span> sum_ <span style="color:#f92672">&gt;</span> max_:
+            max_ <span style="color:#f92672">=</span> sum_
+        <span style="color:#66d9ef">if</span> sum_ <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span>:
+            sum_ <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+    <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;#{t+1} {max_}&#34;</span>)
+</code></pre></div><h3 id="5789-현주의-상자-바꾸기">5789. 현주의 상자 바꾸기</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> range(int(input())):
+    n, q <span style="color:#f92672">=</span> map(int, input()<span style="color:#f92672">.</span>split())
+    box <span style="color:#f92672">=</span> [<span style="color:#ae81ff">0</span> <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(n)]
+    <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>,q<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>):
+        l, r <span style="color:#f92672">=</span> map(int, input()<span style="color:#f92672">.</span>split())
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(l<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>,r):
+            box[i] <span style="color:#f92672">=</span> j
+    <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;#{t+1} {&#39; &#39;.join(map(str, box))}&#34;</span>)
+</code></pre></div><h3 id="5948-새샘이의-7-3-5-게임">5948. 새샘이의 7-3-5 게임</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> range(int(input())):
+    a <span style="color:#f92672">=</span> list(map(int, input()<span style="color:#f92672">.</span>split()))
+    b <span style="color:#f92672">=</span> sorted(a,reverse<span style="color:#f92672">=</span>True)
+    cnt <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+    result <span style="color:#f92672">=</span> []
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">7</span>):
+        <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">7</span>):
+            <span style="color:#66d9ef">for</span> k <span style="color:#f92672">in</span> range(j<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">7</span>):
+                result<span style="color:#f92672">.</span>append(b[i]<span style="color:#f92672">+</span>b[j]<span style="color:#f92672">+</span>b[k])
+    c <span style="color:#f92672">=</span> sorted(result,reverse<span style="color:#f92672">=</span>True)
+    v <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(c)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>):
+        <span style="color:#66d9ef">if</span> c[i] <span style="color:#f92672">!=</span> c[i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>]:
+            cnt <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+        <span style="color:#66d9ef">if</span> cnt <span style="color:#f92672">==</span> <span style="color:#ae81ff">5</span>:
+            v <span style="color:#f92672">=</span> c[i]
+            <span style="color:#66d9ef">break</span>
+    <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;#{t+1} {v}&#34;</span>)
+</code></pre></div><h3 id="5986-새샘이와-세-소수">5986. 새샘이와 세 소수</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">prime</span>(number):
+    a <span style="color:#f92672">=</span> [False, False] <span style="color:#f92672">+</span> [True] <span style="color:#f92672">*</span> (number<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
+    <span style="color:#66d9ef">for</span> (i, e) <span style="color:#f92672">in</span> enumerate(a):
+        <span style="color:#66d9ef">if</span> e:
+            k <span style="color:#f92672">=</span> i <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>
+            <span style="color:#66d9ef">while</span> k <span style="color:#f92672">&lt;=</span> n:
+                a[k] <span style="color:#f92672">=</span>False
+                k <span style="color:#f92672">+=</span> i
+    <span style="color:#66d9ef">return</span> [x <span style="color:#66d9ef">for</span> (x, y) <span style="color:#f92672">in</span> enumerate(a) <span style="color:#66d9ef">if</span> y]
+
+<span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> range(int(input())):
+    n <span style="color:#f92672">=</span> int(input())
+    a <span style="color:#f92672">=</span> prime(n)
+    cnt <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(a)):
+        <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(i,len(a)):
+            <span style="color:#66d9ef">for</span> k <span style="color:#f92672">in</span> range(j,len(a)):
+                <span style="color:#66d9ef">if</span> a[i] <span style="color:#f92672">+</span> a[j] <span style="color:#f92672">+</span> a[k] <span style="color:#f92672">==</span> n:
+                    cnt<span style="color:#f92672">+=</span><span style="color:#ae81ff">1</span>
+                <span style="color:#66d9ef">else</span>:
+                    <span style="color:#66d9ef">continue</span>
+           
+    <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;#{t+1} {cnt}&#34;</span>)
+</code></pre></div><h3 id="6019-기차-사이의-파리">6019. 기차 사이의 파리</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> range(int(input())):
+    d,a,b,f <span style="color:#f92672">=</span> map(int, input()<span style="color:#f92672">.</span>split())
+    result <span style="color:#f92672">=</span> (d <span style="color:#f92672">/</span> (a<span style="color:#f92672">+</span>b))<span style="color:#f92672">*</span>f
+    <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;#{t+1}&#34;</span>, <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">%.10f</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">%</span>result)
+</code></pre></div><h3 id="6190-정곤이의-단조-증가하는-수">6190. 정곤이의 단조 증가하는 수</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> range(int(input())):
+    n<span style="color:#f92672">=</span>int(input())
+    a<span style="color:#f92672">=</span>list(map(int,input()<span style="color:#f92672">.</span>split()))
+    f<span style="color:#f92672">=-</span><span style="color:#ae81ff">1</span>
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(n<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>):
+        <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>,n):
+            m<span style="color:#f92672">=</span>a[i]<span style="color:#f92672">*</span>a[j]
+            <span style="color:#66d9ef">if</span> f<span style="color:#f92672">&gt;</span>m:
+                <span style="color:#66d9ef">continue</span>
+            c<span style="color:#f92672">=</span>m
+            b<span style="color:#f92672">=</span>m<span style="color:#f92672">%</span><span style="color:#ae81ff">10</span>
+            c<span style="color:#f92672">=</span>c<span style="color:#f92672">//</span><span style="color:#ae81ff">10</span>
+            <span style="color:#66d9ef">while</span> c:
+                <span style="color:#66d9ef">if</span> c<span style="color:#f92672">%</span><span style="color:#ae81ff">10</span><span style="color:#f92672">&gt;</span>b:
+                    <span style="color:#66d9ef">break</span>
+                b<span style="color:#f92672">=</span>c<span style="color:#f92672">%</span><span style="color:#ae81ff">10</span>
+                c<span style="color:#f92672">=</span>c<span style="color:#f92672">//</span><span style="color:#ae81ff">10</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> c:
+                f<span style="color:#f92672">=</span>m
+    <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;#{t+1} {f}&#34;</span>)
+</code></pre></div><h3 id="6485-삼성시의-버스-노선">6485. 삼성시의 버스 노선</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> range(int(input())):
+    arr <span style="color:#f92672">=</span> [<span style="color:#ae81ff">0</span>]<span style="color:#f92672">*</span><span style="color:#ae81ff">5001</span>
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(int(input())):
+        a , b <span style="color:#f92672">=</span> map(int, input()<span style="color:#f92672">.</span>split())
+        <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(a,b<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>):
+            arr[j] <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+    p <span style="color:#f92672">=</span> int(input())
+    arr_1 <span style="color:#f92672">=</span> [<span style="color:#ae81ff">0</span>]<span style="color:#f92672">*</span>p
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(p):
+        c <span style="color:#f92672">=</span> int(input())
+        arr_1[i] <span style="color:#f92672">=</span> arr[c]
+    <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;#{t+1} {&#39; &#39;.join(map(str, arr_1))}&#34;</span>)
+</code></pre></div><h3 id="6485">6485.</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> range(int(input())):
+    arr <span style="color:#f92672">=</span> [<span style="color:#ae81ff">0</span>]<span style="color:#f92672">*</span><span style="color:#ae81ff">5001</span>
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(int(input())):
+        a , b <span style="color:#f92672">=</span> map(int, input()<span style="color:#f92672">.</span>split())
+        <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(a,b<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>):
+            arr[j] <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+    p <span style="color:#f92672">=</span> int(input())
+    arr_1 <span style="color:#f92672">=</span> [<span style="color:#ae81ff">0</span>]<span style="color:#f92672">*</span>p
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(p):
+        c <span style="color:#f92672">=</span> int(input())
+        arr_1[i] <span style="color:#f92672">=</span> arr[c]
+    <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;#{t+1} {&#39; &#39;.join(map(str, arr_1))}&#34;</span>)
+</code></pre></div><h3 id="6692-다솔이의-월급-상자">6692. 다솔이의 월급 상자</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> range(int(input())):
+    N <span style="color:#f92672">=</span> int(input())
+    result <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(N):
+        a, b <span style="color:#f92672">=</span> map(float, input()<span style="color:#f92672">.</span>split())
+        result <span style="color:#f92672">+=</span> a <span style="color:#f92672">*</span> b
+    <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;{t+1}&#34;</span>, <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">%.6f</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">%</span> result)
+</code></pre></div><h3 id="7675-통역사-성경이">7675. 통역사 성경이</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> range(int(input())):
+    n <span style="color:#f92672">=</span> int(input())
+    arr <span style="color:#f92672">=</span> [<span style="color:#ae81ff">0</span>]<span style="color:#f92672">*</span>n
+    cnt <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+    a <span style="color:#f92672">=</span> list(input()<span style="color:#f92672">.</span>split())
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> a:
+        flag <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+        <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> i:
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> flag <span style="color:#f92672">and</span> j<span style="color:#f92672">.</span>isupper():
+                flag <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+            <span style="color:#66d9ef">elif</span> j<span style="color:#f92672">.</span>isdigit() <span style="color:#f92672">or</span> (flag <span style="color:#f92672">and</span> j<span style="color:#f92672">.</span>isupper()):
+                flag <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+                <span style="color:#66d9ef">break</span>
+        <span style="color:#66d9ef">if</span> flag:
+            arr[cnt] <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+        <span style="color:#66d9ef">if</span> (<span style="color:#e6db74">&#39;.&#39;</span> <span style="color:#f92672">in</span> i) <span style="color:#f92672">or</span> (<span style="color:#e6db74">&#39;!&#39;</span> <span style="color:#f92672">in</span> i) <span style="color:#f92672">or</span> (<span style="color:#e6db74">&#39;?&#39;</span> <span style="color:#f92672">in</span> i):
+            cnt <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+    <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;#{t+1} {&#39; &#39;.join(map(str, arr))}&#34;</span>)
+</code></pre></div>
+
+<footer class="footline">
+	
+</footer>
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="../../js/clipboard.min.js?1586590106"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1586590106"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1586590106"></script>
+    <script src="../../js/jquery.sticky.js?1586590106"></script>
+    <script src="../../js/featherlight.min.js?1586590106"></script>
+    <script src="../../js/highlight.pack.js?1586590106"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1586590106"></script>
+    <script src="../../js/learn.js?1586590106"></script>
+    <script src="../../js/hugo-learn.js?1586590106"></script>
+
+    <link href="../../mermaid/mermaid.css?1586590106" rel="stylesheet" />
+    <script src="../../mermaid/mermaid.js?1586590106"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    
+
+  </body>
+</html>
+
