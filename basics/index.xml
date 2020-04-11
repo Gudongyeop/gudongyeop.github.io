@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>About on 여러가지</title>
+    <link>dognyeopgu.github.io/basics.html</link>
+    <description>Recent content in About on 여러가지</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 11 Apr 2020 13:34:40 +0900</lastBuildDate>
+    
+	<atom:link href="dognyeopgu.github.io/basics/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>
