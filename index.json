@@ -1,55 +1,55 @@
 [
 {
-	"uri": "http://dongyeopgu.github.io/basics.html",
+	"uri": "https://dongyeopgu.github.io/basics.html",
 	"title": "About",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "http://dongyeopgu.github.io/cont_2.html",
+	"uri": "https://dongyeopgu.github.io/cont_2.html",
 	"title": "SWEA 문제풀이",
 	"tags": [],
 	"description": "",
 	"content": "SW Expert Academy 문제 풀이 "
 },
 {
-	"uri": "http://dongyeopgu.github.io/cont.html",
+	"uri": "https://dongyeopgu.github.io/cont.html",
 	"title": "Django 학습",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "http://dongyeopgu.github.io/cont_2/d3.html",
+	"uri": "https://dongyeopgu.github.io/cont_2/d3.html",
 	"title": "D3 문제풀이",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "http://dongyeopgu.github.io/cont_2/d3/d3-1240-1289-1491.html",
+	"uri": "https://dongyeopgu.github.io/cont_2/d3/d3-1240-1289-1491.html",
 	"title": "D3. 1240, 1289, 1491",
 	"tags": [],
 	"description": "",
 	"content": "1240. 단순 2진 암호코드 for t in range(int(input())):\rn = int(input())\rarr = [0]*n\rcnt = 0\ra = list(input().split())\rfor i in a:\rflag = 0\rfor j in i:\rif not flag and j.isupper():\rflag = 1\relif j.isdigit() or (flag and j.isupper()):\rflag = 0\rbreak\rif flag:\rarr[cnt] += 1\rif (\u0026#39;.\u0026#39; in i) or (\u0026#39;!\u0026#39; in i) or (\u0026#39;?\u0026#39; in i):\rcnt += 1\rprint(f\u0026#34;#{t+1} {\u0026#39; \u0026#39;.join(map(str, arr))}\u0026#34;)\r1289. 원재의 메모리 복구 for test_case in range(int(input())):\rN = list(map(int, \u0026#39; \u0026#39;.join(input().split())))\rcnt = 0\ra = 0\rif N[0] == 1:\rcnt = 1\relse:\rcnt = 0\rfor i in range(1,len(N)):\rif N[i] != N[i-1]:\rcnt += 1\relse:\rcnt += 0\rprint(f\u0026#34;#{test_case + 1} {cnt}\u0026#34;)\r1491. 원재의 벽 꾸미기 for test_case in range(int(input())):\rN, A, B = map(int, input().split())\ra = []\rfor R in range(1, N):\rfor C in range(1, N):\rif R * C \u0026lt;= N:\rif A*abs(R-C) + B*(N-R*C) \u0026gt;= 0:\ra.append(A*abs(R-C) + B*(N-R*C))\rprint(f\u0026#34;#{test_case} {min(a)}\u0026#34;)\r"
 },
 {
-	"uri": "http://dongyeopgu.github.io/",
+	"uri": "https://dongyeopgu.github.io/",
 	"title": "여러가지",
 	"tags": [],
 	"description": "",
 	"content": "여러가지 해보는 중 "
 },
 {
-	"uri": "http://dongyeopgu.github.io/categories.html",
+	"uri": "https://dongyeopgu.github.io/categories.html",
 	"title": "Categories",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "http://dongyeopgu.github.io/tags.html",
+	"uri": "https://dongyeopgu.github.io/tags.html",
 	"title": "Tags",
 	"tags": [],
 	"description": "",
