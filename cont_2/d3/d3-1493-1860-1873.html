@@ -9,7 +9,7 @@
 
     <link rel="icon" href="../../images/favicon.png" type="image/png">
 
-    <title>D3. 1240, 1289, 1491 :: 여러가지</title>
+    <title>D3. 1493, 1860, 1873 :: 여러가지</title>
 
     
     <link href="../../css/nucleus.css?1586587983" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/cont_2/d3/d3-1240-1289-1491.html">
+  <body class="" data-url="/cont_2/d3/d3-1493-1860-1873.html">
     <nav id="sidebar" class="">
 
 
@@ -195,7 +195,7 @@
  
   
     
-      <li data-nav-id="/cont_2/d3/d3-1240-1289-1491.html" title="D3. 1240, 1289, 1491" class="dd-item active">
+      <li data-nav-id="/cont_2/d3/d3-1240-1289-1491.html" title="D3. 1240, 1289, 1491" class="dd-item ">
         <a href="../../cont_2/d3/d3-1240-1289-1491.html">
         D3. 1240, 1289, 1491
         
@@ -216,7 +216,7 @@
  
   
     
-      <li data-nav-id="/cont_2/d3/d3-1493-1860-1873.html" title="D3. 1493, 1860, 1873" class="dd-item ">
+      <li data-nav-id="/cont_2/d3/d3-1493-1860-1873.html" title="D3. 1493, 1860, 1873" class="dd-item active">
         <a href="../../cont_2/d3/d3-1493-1860-1873.html">
         D3. 1493, 1860, 1873
         
@@ -390,7 +390,7 @@
                   <span class="links">
                  
                  
-                   D3. 1240, 1289, 1491 
+                   D3. 1493, 1860, 1873 
                  
                   </span>
                 </div>
@@ -401,9 +401,9 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#1240-단순-2진-암호코드">1240. 단순 2진 암호코드</a></li>
-        <li><a href="#1289-원재의-메모리-복구">1289. 원재의 메모리 복구</a></li>
-        <li><a href="#1491-원재의-벽-꾸미기">1491. 원재의 벽 꾸미기</a></li>
+        <li><a href="#1493-수의-새로운-연산">1493. 수의 새로운 연산</a></li>
+        <li><a href="#1860-진기의-최고급-붕어빵">1860. 진기의 최고급 붕어빵</a></li>
+        <li><a href="#1873-상호의-배틀필드">1873. 상호의 배틀필드</a></li>
       </ul>
     </li>
   </ul>
@@ -423,7 +423,7 @@
           
             <h1>
               
-              D3. 1240, 1289, 1491
+              D3. 1493, 1860, 1873
             </h1>
           
 
@@ -431,50 +431,90 @@
 
 
 
-<h3 id="1240-단순-2진-암호코드">1240. 단순 2진 암호코드</h3>
+<h3 id="1493-수의-새로운-연산">1493. 수의 새로운 연산</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">for</span> test_case <span style="color:#f92672">in</span> range(int(input())):
+    p, q <span style="color:#f92672">=</span> map(int, input()<span style="color:#f92672">.</span>split())
+    mapping <span style="color:#f92672">=</span> [[<span style="color:#ae81ff">0</span> <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">300</span>)]<span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">300</span>)]
+    a <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+    p_x <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+    p_y <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+    q_x <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+    q_y <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">599</span>):
+        <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">300</span>):
+            <span style="color:#66d9ef">if</span> <span style="color:#ae81ff">300</span> <span style="color:#f92672">&gt;</span> i <span style="color:#f92672">-</span> j <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span>:
+                mapping[i<span style="color:#f92672">-</span>j][j] <span style="color:#f92672">=</span> a
+                a <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">300</span>):
+        <span style="color:#66d9ef">if</span> p <span style="color:#f92672">in</span> mapping[i]:
+            p_y <span style="color:#f92672">=</span> mapping[i]<span style="color:#f92672">.</span>index(p)
+            p_x <span style="color:#f92672">=</span> i
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">300</span>):
+        <span style="color:#66d9ef">if</span> q <span style="color:#f92672">in</span> mapping[i]:
+            q_y <span style="color:#f92672">=</span> mapping[i]<span style="color:#f92672">.</span>index(q)
+            q_x <span style="color:#f92672">=</span> i
+    
+    result <span style="color:#f92672">=</span> mapping[p_x<span style="color:#f92672">+</span>q_x<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>][p_y<span style="color:#f92672">+</span>q_y<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>]
+    <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;#{test_case + 1} {result}&#34;</span>)
+    
+</code></pre></div><h3 id="1860-진기의-최고급-붕어빵">1860. 진기의 최고급 붕어빵</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> range(int(input())):
-    n <span style="color:#f92672">=</span> int(input())
-    arr <span style="color:#f92672">=</span> [<span style="color:#ae81ff">0</span>]<span style="color:#f92672">*</span>n
-    cnt <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
-    a <span style="color:#f92672">=</span> list(input()<span style="color:#f92672">.</span>split())
-    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> a:
-        flag <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
-        <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> i:
-            <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> flag <span style="color:#f92672">and</span> j<span style="color:#f92672">.</span>isupper():
-                flag <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
-            <span style="color:#66d9ef">elif</span> j<span style="color:#f92672">.</span>isdigit() <span style="color:#f92672">or</span> (flag <span style="color:#f92672">and</span> j<span style="color:#f92672">.</span>isupper()):
-                flag <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
-                <span style="color:#66d9ef">break</span>
-        <span style="color:#66d9ef">if</span> flag:
-            arr[cnt] <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
-        <span style="color:#66d9ef">if</span> (<span style="color:#e6db74">&#39;.&#39;</span> <span style="color:#f92672">in</span> i) <span style="color:#f92672">or</span> (<span style="color:#e6db74">&#39;!&#39;</span> <span style="color:#f92672">in</span> i) <span style="color:#f92672">or</span> (<span style="color:#e6db74">&#39;?&#39;</span> <span style="color:#f92672">in</span> i):
-            cnt <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
-    <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;#{t+1} {&#39; &#39;.join(map(str, arr))}&#34;</span>)
-</code></pre></div><h3 id="1289-원재의-메모리-복구">1289. 원재의 메모리 복구</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">for</span> test_case <span style="color:#f92672">in</span> range(int(input())):
-    N <span style="color:#f92672">=</span> list(map(int, <span style="color:#e6db74">&#39; &#39;</span><span style="color:#f92672">.</span>join(input()<span style="color:#f92672">.</span>split())))
-    cnt <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
-    a <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
-    <span style="color:#66d9ef">if</span> N[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>:
-        cnt <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
-    <span style="color:#66d9ef">else</span>:
-        cnt <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
-    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>,len(N)):
-        <span style="color:#66d9ef">if</span> N[i] <span style="color:#f92672">!=</span> N[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]:
-            cnt <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+    N,M,K<span style="color:#f92672">=</span>map(int,input()<span style="color:#f92672">.</span>split())
+    a<span style="color:#f92672">=</span>list(map(int,input()<span style="color:#f92672">.</span>split()))
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(a)):
+        <span style="color:#66d9ef">if</span> sorted(a)[i]<span style="color:#f92672">//</span>M<span style="color:#f92672">*</span>K<span style="color:#f92672">&lt;</span>i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>:
+            result<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Impossible&#34;</span>
+            <span style="color:#66d9ef">break</span>
         <span style="color:#66d9ef">else</span>:
-            cnt <span style="color:#f92672">+=</span> <span style="color:#ae81ff">0</span>
-    <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;#{test_case + 1} {cnt}&#34;</span>)
-</code></pre></div><h3 id="1491-원재의-벽-꾸미기">1491. 원재의 벽 꾸미기</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">for</span> test_case <span style="color:#f92672">in</span> range(int(input())):
-    N, A, B <span style="color:#f92672">=</span> map(int, input()<span style="color:#f92672">.</span>split())
-    a <span style="color:#f92672">=</span> []
-    <span style="color:#66d9ef">for</span> R <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, N):
-        <span style="color:#66d9ef">for</span> C <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, N):
-            <span style="color:#66d9ef">if</span> R <span style="color:#f92672">*</span> C <span style="color:#f92672">&lt;=</span> N:
-                <span style="color:#66d9ef">if</span> A<span style="color:#f92672">*</span>abs(R<span style="color:#f92672">-</span>C) <span style="color:#f92672">+</span> B<span style="color:#f92672">*</span>(N<span style="color:#f92672">-</span>R<span style="color:#f92672">*</span>C) <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span>:
-                    a<span style="color:#f92672">.</span>append(A<span style="color:#f92672">*</span>abs(R<span style="color:#f92672">-</span>C) <span style="color:#f92672">+</span> B<span style="color:#f92672">*</span>(N<span style="color:#f92672">-</span>R<span style="color:#f92672">*</span>C))
-    <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;#{test_case} {min(a)}&#34;</span>)
+            result<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Possible&#34;</span>
+    <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;#{t+1} {result}&#34;</span>)
+</code></pre></div><h3 id="1873-상호의-배틀필드">1873. 상호의 배틀필드</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> range(int(input())):
+    H, W <span style="color:#f92672">=</span> map(int, input()<span style="color:#f92672">.</span>split())
+    move_symbol <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;^&#34;</span>, <span style="color:#e6db74">&#34;v&#34;</span>, <span style="color:#e6db74">&#34;&lt;&#34;</span>, <span style="color:#e6db74">&#34;&gt;&#34;</span>]
+    move_command <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;U&#34;</span>, <span style="color:#e6db74">&#34;D&#34;</span>, <span style="color:#e6db74">&#34;L&#34;</span>, <span style="color:#e6db74">&#34;R&#34;</span>, <span style="color:#e6db74">&#34;S&#34;</span>]
+    move_dir <span style="color:#f92672">=</span> [[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>], [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>], [<span style="color:#ae81ff">0</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>], [<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>]]
+    field <span style="color:#f92672">=</span> []
+    startpoint <span style="color:#f92672">=</span> [<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>]
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(H):
+        a <span style="color:#f92672">=</span> list(input())
+        field<span style="color:#f92672">.</span>append(a)
+        <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(len(a)):
+            <span style="color:#66d9ef">if</span> a[j] <span style="color:#f92672">in</span> move_symbol:
+                startpoint[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> i
+                startpoint[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> j
+                startpoint[<span style="color:#ae81ff">2</span>] <span style="color:#f92672">=</span> move_symbol<span style="color:#f92672">.</span>index(a[j])
+                field[i][j] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;.&#39;</span>
+    N <span style="color:#f92672">=</span> int(input())
+    commandline <span style="color:#f92672">=</span> list(input())
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> commandline:
+        move_index <span style="color:#f92672">=</span> move_command<span style="color:#f92672">.</span>index(i)
+        <span style="color:#66d9ef">if</span> move_index <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">4</span>:
+            i_idx <span style="color:#f92672">=</span> startpoint[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">+</span> move_dir[move_index][<span style="color:#ae81ff">0</span>]
+            j_idx <span style="color:#f92672">=</span> startpoint[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">+</span> move_dir[move_index][<span style="color:#ae81ff">1</span>]
+            <span style="color:#66d9ef">if</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&lt;=</span> i_idx <span style="color:#f92672">&lt;</span> H <span style="color:#f92672">and</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&lt;=</span> j_idx <span style="color:#f92672">&lt;</span> W:
+                <span style="color:#66d9ef">if</span> field[i_idx][j_idx] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;.&#39;</span>:
+                    startpoint[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> i_idx
+                    startpoint[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> j_idx
+            startpoint[<span style="color:#ae81ff">2</span>] <span style="color:#f92672">=</span> move_index
+        <span style="color:#66d9ef">else</span>:
+            n <span style="color:#f92672">=</span> startpoint[<span style="color:#ae81ff">0</span>]
+            m <span style="color:#f92672">=</span> startpoint[<span style="color:#ae81ff">1</span>]
+            <span style="color:#66d9ef">while</span> True:
+                n <span style="color:#f92672">+=</span> move_dir[startpoint[<span style="color:#ae81ff">2</span>]][<span style="color:#ae81ff">0</span>]
+                m <span style="color:#f92672">+=</span> move_dir[startpoint[<span style="color:#ae81ff">2</span>]][<span style="color:#ae81ff">1</span>]
+                <span style="color:#66d9ef">if</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&lt;=</span> n <span style="color:#f92672">&lt;</span> H <span style="color:#f92672">and</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&lt;=</span> m <span style="color:#f92672">&lt;</span> W:
+                    <span style="color:#66d9ef">if</span> field[n][m] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;#&#34;</span>:
+                        <span style="color:#66d9ef">break</span>
+                    <span style="color:#66d9ef">elif</span> field[n][m] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;*&#34;</span>:
+                        field[n][m] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;.&#34;</span>
+                        <span style="color:#66d9ef">break</span>
+                <span style="color:#66d9ef">else</span>:
+                    <span style="color:#66d9ef">break</span>
+    field[startpoint[<span style="color:#ae81ff">0</span>]][startpoint[<span style="color:#ae81ff">1</span>]] <span style="color:#f92672">=</span> move_symbol[startpoint[<span style="color:#ae81ff">2</span>]]
+    <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;#{t+1}&#34;</span>,end<span style="color:#f92672">=</span><span style="color:#e6db74">&#39; &#39;</span>)
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(H):
+        <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;{&#39;&#39;.join(field[i])}&#34;</span>)
 </code></pre></div>
 
 <footer class="footline">
@@ -559,6 +599,22 @@
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
                     
                 
                 
@@ -578,22 +634,6 @@
                     
                         
                         
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
