@@ -12,20 +12,20 @@
     <title>Django CRUD :: 여러가지</title>
 
     
-    <link href="../css/nucleus.css?1586598505" rel="stylesheet">
-    <link href="../css/fontawesome-all.min.css?1586598505" rel="stylesheet">
-    <link href="../css/hybrid.css?1586598505" rel="stylesheet">
-    <link href="../css/featherlight.min.css?1586598505" rel="stylesheet">
-    <link href="../css/perfect-scrollbar.min.css?1586598505" rel="stylesheet">
-    <link href="../css/auto-complete.css?1586598505" rel="stylesheet">
-    <link href="../css/atom-one-dark-reasonable.css?1586598505" rel="stylesheet">
-    <link href="../css/theme.css?1586598505" rel="stylesheet">
-    <link href="../css/hugo-theme.css?1586598505" rel="stylesheet">
+    <link href="../css/nucleus.css?1586605249" rel="stylesheet">
+    <link href="../css/fontawesome-all.min.css?1586605249" rel="stylesheet">
+    <link href="../css/hybrid.css?1586605249" rel="stylesheet">
+    <link href="../css/featherlight.min.css?1586605249" rel="stylesheet">
+    <link href="../css/perfect-scrollbar.min.css?1586605249" rel="stylesheet">
+    <link href="../css/auto-complete.css?1586605249" rel="stylesheet">
+    <link href="../css/atom-one-dark-reasonable.css?1586605249" rel="stylesheet">
+    <link href="../css/theme.css?1586605249" rel="stylesheet">
+    <link href="../css/hugo-theme.css?1586605249" rel="stylesheet">
     
-      <link href="../css/theme-red.css?1586598505" rel="stylesheet">
+      <link href="../css/theme-red.css?1586605249" rel="stylesheet">
     
 
-    <script src="../js/jquery-3.3.1.min.js?1586598505"></script>
+    <script src="../js/jquery-3.3.1.min.js?1586605249"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -90,14 +90,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../js/lunr.min.js?1586598505"></script>
-<script type="text/javascript" src="../js/auto-complete.js?1586598505"></script>
+<script type="text/javascript" src="../js/lunr.min.js?1586605249"></script>
+<script type="text/javascript" src="../js/auto-complete.js?1586605249"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/dongyeopgu.github.io\/";
     
 </script>
-<script type="text/javascript" src="../js/search.js?1586598505"></script>
+<script type="text/javascript" src="../js/search.js?1586605249"></script>
 
     
   </div>
@@ -415,6 +415,48 @@
  
   
     
+      <li data-nav-id="/cont/django_paginator.html" title="Django Paginator" class="dd-item ">
+        <a href="../cont/django_paginator.html">
+        Django Paginator
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/cont/django_login.html" title="Django User" class="dd-item ">
+        <a href="../cont/django_login.html">
+        Django User
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
       <li data-nav-id="/cont/django_start.html" title="Django 시작하기" class="dd-item ">
         <a href="../cont/django_start.html">
         Django 시작하기
@@ -484,6 +526,8 @@
     <li>
       <ul>
         <li><a href="#crud---create-read-update-delete">CRUD - Create, Read, Update, Delete</a></li>
+        <li><a href="#1-model-사용할-경우">1. Model 사용할 경우</a></li>
+        <li><a href="#2-form-사용할-경우">2. Form 사용할 경우</a></li>
       </ul>
     </li>
   </ul>
@@ -512,7 +556,9 @@
 
 
 <h3 id="crud---create-read-update-delete">CRUD - Create, Read, Update, Delete</h3>
-<h4 id="1-model-사용-ex-article이라는-모델을-만들경우">1. Model 사용 (ex: Article이라는 모델을 만들경우)</h4>
+<hr>
+<h3 id="1-model-사용할-경우">1. Model 사용할 경우</h3>
+<h4 id="1-model-만들기-ex-article이라는-모델을-만들경우">1. Model 만들기 (ex: Article이라는 모델을 만들경우)</h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># 프로젝트 명/App이름/models.py</span>
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Article</span>(models<span style="color:#f92672">.</span>Model):
     title <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>CharField(max_length<span style="color:#f92672">=</span><span style="color:#ae81ff">140</span>)
@@ -597,6 +643,128 @@ from django.contrib import admin
 <span style="color:#75715e"># Register your models here.</span>
 from .models import Article
 admin.site.register<span style="color:#f92672">(</span>Article<span style="color:#f92672">)</span>
+</code></pre></div><h4 id="4-create-만들기">4. Create 만들기</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># app이름/views.py</span>
+<span style="color:#f92672">from</span> django.shortcuts <span style="color:#f92672">import</span> render, redirect, get_object_or_404
+<span style="color:#f92672">from</span> .models <span style="color:#f92672">import</span> Article <span style="color:#75715e">#import뒤에 만든 model 클래스</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">create</span>(request):
+    article <span style="color:#f92672">=</span> Article()
+    article<span style="color:#f92672">.</span>title <span style="color:#f92672">=</span> request<span style="color:#f92672">.</span>POST<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;title&#39;</span>)
+    article<span style="color:#f92672">.</span>content <span style="color:#f92672">=</span> request<span style="color:#f92672">.</span>POST<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;content&#39;</span>)
+    article<span style="color:#f92672">.</span>save()
+    <span style="color:#66d9ef">return</span> redirect(<span style="color:#e6db74">&#39;articles:detail&#39;</span>, article<span style="color:#f92672">.</span>pk) <span style="color:#75715e">#redirect로 만들어 진 페이지로 이동하게</span>
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">detail</span>(request, pk):
+    <span style="color:#75715e"># article = Article.objects.get(pk=pk) </span>
+    article <span style="color:#f92672">=</span> get_object_or_404(Article, pk<span style="color:#f92672">=</span>pk)
+    <span style="color:#75715e"># Article.objects.get을 써도 되지만 get_object_or_404를 쓸 경우 pk값이 없을 경우 404 나오게</span>
+    context <span style="color:#f92672">=</span> {
+        <span style="color:#e6db74">&#39;article&#39;</span>: article
+    }
+    <span style="color:#66d9ef">return</span> render(request, <span style="color:#e6db74">&#39;articles/detail.html&#39;</span>, context)
+<span style="color:#75715e"># app 이름/urls.py</span>
+<span style="color:#f92672">from</span> django.urls <span style="color:#f92672">import</span> path
+<span style="color:#f92672">from</span> . <span style="color:#f92672">import</span> views
+
+app_name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;articles&#39;</span> <span style="color:#75715e"># app_name을 사용해 절대 경로를 사용 하지 않도록함.</span>
+urlpatterns <span style="color:#f92672">=</span> [
+    path(<span style="color:#e6db74">&#39;create/&#39;</span>, views<span style="color:#f92672">.</span>create, name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;create&#39;</span>),
+    path(<span style="color:#e6db74">&#39;&lt;int:pk&gt;/&#39;</span>, views<span style="color:#f92672">.</span>detail, name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;detail&#39;</span>),
+
+]
+</code></pre></div><h4 id="5-update-만들기">5. Update 만들기</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># views.py에 추가</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">update</span>(request, pk):
+    article <span style="color:#f92672">=</span> get_object_or_404(Article, pk<span style="color:#f92672">=</span>pk)
+    article<span style="color:#f92672">.</span>title <span style="color:#f92672">=</span> request<span style="color:#f92672">.</span>POST<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;title&#39;</span>)
+    article<span style="color:#f92672">.</span>content <span style="color:#f92672">=</span> request<span style="color:#f92672">.</span>POST<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;content&#39;</span>)
+    article<span style="color:#f92672">.</span>save()
+    <span style="color:#66d9ef">return</span> redirect(<span style="color:#e6db74">&#39;articles:detail&#39;</span>, article<span style="color:#f92672">.</span>pk)
+
+<span style="color:#75715e"># urls.py의 urlpatterns에 추가</span>
+path(<span style="color:#e6db74">&#39;&lt;int:pk&gt;/update/&#39;</span>, views<span style="color:#f92672">.</span>update, name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;update&#39;</span>),
+</code></pre></div><h4 id="6-delete-만들기">6. Delete 만들기</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># views.py에 추가</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">delete</span>(request, pk):
+    article <span style="color:#f92672">=</span> get_object_or_404(Article, pk<span style="color:#f92672">=</span>pk)
+    article<span style="color:#f92672">.</span>delete()
+    <span style="color:#66d9ef">return</span> redirect(<span style="color:#e6db74">&#39;articles:index&#39;</span>)
+
+<span style="color:#75715e"># urls.py의 urlpatterns에 추가</span>
+path(<span style="color:#e6db74">&#39;&lt;int:pk&gt;/delete/&#39;</span>, views<span style="color:#f92672">.</span>delete, name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;delete&#39;</span>),
+</code></pre></div><h3 id="2-form-사용할-경우">2. Form 사용할 경우</h3>
+<h4 id="1-app이름-폴더-내-formspy-추가">1. app이름 폴더 내 forms.py 추가</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># 간단한 예</span>
+<span style="color:#f92672">from</span> django <span style="color:#f92672">import</span> forms
+<span style="color:#f92672">from</span> .models <span style="color:#f92672">import</span> Article
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ArticleForm</span>(forms<span style="color:#f92672">.</span>ModelForm):
+    title <span style="color:#f92672">=</span> forms<span style="color:#f92672">.</span>CharField(
+                max_length<span style="color:#f92672">=</span><span style="color:#ae81ff">100</span>,
+                widget<span style="color:#f92672">=</span>forms<span style="color:#f92672">.</span>TextInput(
+                        attrs<span style="color:#f92672">=</span>{,
+                            <span style="color:#e6db74">&#39;placeholder&#39;</span>: <span style="color:#e6db74">&#39;제목 입력&#39;</span>
+                        }
+                    )
+            )
+    content <span style="color:#f92672">=</span> forms<span style="color:#f92672">.</span>CharField(
+                widget<span style="color:#f92672">=</span>forms<span style="color:#f92672">.</span>Textarea(
+                        attrs<span style="color:#f92672">=</span>{
+                            <span style="color:#e6db74">&#39;placeholder&#39;</span>: <span style="color:#e6db74">&#39;내용 입력&#39;</span>
+                        }
+                    )
+            )
+    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Meta</span>:
+        model <span style="color:#f92672">=</span> Article
+        fields <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;title&#39;</span>, <span style="color:#e6db74">&#39;content&#39;</span>]
+</code></pre></div><ul>
+<li><code>attrs</code>의 <code>placeholder</code>는 빈칸일 경우 나타내는 내용</li>
+</ul>
+<h4 id="2-viewspy에-내용-추가">2. views.py에 내용 추가</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> .forms <span style="color:#f92672">import</span> ArticleForm
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">create</span>(request):
+    <span style="color:#66d9ef">if</span> request<span style="color:#f92672">.</span>method <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;POST&#39;</span>:
+        form <span style="color:#f92672">=</span> ArticleForm(request<span style="color:#f92672">.</span>POST)
+        <span style="color:#66d9ef">if</span> form<span style="color:#f92672">.</span>is_valid():
+            article <span style="color:#f92672">=</span> form<span style="color:#f92672">.</span>save()
+            <span style="color:#66d9ef">return</span> redirect(<span style="color:#e6db74">&#39;articles:index&#39;</span>)
+    <span style="color:#66d9ef">else</span>:
+        form <span style="color:#f92672">=</span> ArticleForm()
+    context <span style="color:#f92672">=</span> {
+        <span style="color:#e6db74">&#39;form&#39;</span>: form
+    }
+    <span style="color:#66d9ef">return</span> render(request, <span style="color:#e6db74">&#39;articles/form.html&#39;</span>, context)
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">update</span>(request, pk):
+    <span style="color:#75715e"># 수정시에는 해당 article 인스턴스를 넘겨줘야한다!</span>
+    article <span style="color:#f92672">=</span> get_object_or_404(Article, pk<span style="color:#f92672">=</span>pk)
+    <span style="color:#66d9ef">if</span> request<span style="color:#f92672">.</span>method <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;POST&#39;</span>:
+        form <span style="color:#f92672">=</span> ArticleForm(request<span style="color:#f92672">.</span>POST, instance<span style="color:#f92672">=</span>article)
+        <span style="color:#66d9ef">if</span> form<span style="color:#f92672">.</span>is_valid():
+            article <span style="color:#f92672">=</span> form<span style="color:#f92672">.</span>save()
+            <span style="color:#66d9ef">return</span> redirect(<span style="color:#e6db74">&#39;articles:detail&#39;</span>, article<span style="color:#f92672">.</span>pk)
+    <span style="color:#66d9ef">else</span>:
+        form <span style="color:#f92672">=</span> ArticleForm(instance<span style="color:#f92672">=</span>article)
+    context <span style="color:#f92672">=</span> {
+        <span style="color:#e6db74">&#39;form&#39;</span>: form
+    }
+    <span style="color:#66d9ef">return</span> render(request, <span style="color:#e6db74">&#39;articles/form.html&#39;</span>, context)
+
+</code></pre></div><ul>
+<li>update에서 인스턴스를 넘겨주지 않으면 빈칸으로 update 페이지가 나오지만, 인스턴스를 넘겨주면 원래 글의 내용을 가지고 나타냄</li>
+<li>form.html 하나를 가지고 create와 update모두 사용하도록 함</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!-- form.html --&gt;</span>
+{% if request.resolver_match.url_name == &#39;create&#39; %}
+  &lt;<span style="color:#f92672">h2</span>&gt;새 글쓰기&lt;/<span style="color:#f92672">h2</span>&gt;
+{% else %}
+  &lt;<span style="color:#f92672">h2</span>&gt;수정하기&lt;/<span style="color:#f92672">h2</span>&gt;
+{% endif %}
+<span style="color:#75715e">&lt;!-- create로 접근했을 경우와 update로 접근했을 경우 다르게 보이도록 설정 --&gt;</span>
+&lt;<span style="color:#f92672">form</span> <span style="color:#a6e22e">action</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span> <span style="color:#a6e22e">method</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;POST&#34;</span>&gt; <span style="color:#75715e">&lt;!-- action이 비어있어도 작동함 views.py --&gt;</span>
+  {% csrf_token %} <span style="color:#75715e">&lt;!-- csrf_token 없이 만들 경우 작동하지 않음 --&gt;</span>
+  {% form %}
+  &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;submit&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;제출&#34;</span>&gt;
+&lt;/<span style="color:#f92672">form</span>&gt;
 </code></pre></div>
 
 <footer class="footline">
@@ -827,6 +995,38 @@ admin.site.register<span style="color:#f92672">(</span>Article<span style="color
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -845,19 +1045,19 @@ admin.site.register<span style="color:#f92672">(</span>Article<span style="color
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../js/clipboard.min.js?1586598506"></script>
-    <script src="../js/perfect-scrollbar.min.js?1586598506"></script>
-    <script src="../js/perfect-scrollbar.jquery.min.js?1586598506"></script>
-    <script src="../js/jquery.sticky.js?1586598506"></script>
-    <script src="../js/featherlight.min.js?1586598506"></script>
-    <script src="../js/highlight.pack.js?1586598506"></script>
+    <script src="../js/clipboard.min.js?1586605249"></script>
+    <script src="../js/perfect-scrollbar.min.js?1586605249"></script>
+    <script src="../js/perfect-scrollbar.jquery.min.js?1586605249"></script>
+    <script src="../js/jquery.sticky.js?1586605249"></script>
+    <script src="../js/featherlight.min.js?1586605249"></script>
+    <script src="../js/highlight.pack.js?1586605249"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../js/modernizr.custom-3.6.0.js?1586598506"></script>
-    <script src="../js/learn.js?1586598506"></script>
-    <script src="../js/hugo-learn.js?1586598506"></script>
+    <script src="../js/modernizr.custom-3.6.0.js?1586605249"></script>
+    <script src="../js/learn.js?1586605249"></script>
+    <script src="../js/hugo-learn.js?1586605249"></script>
 
-    <link href="../mermaid/mermaid.css?1586598506" rel="stylesheet" />
-    <script src="../mermaid/mermaid.js?1586598506"></script>
+    <link href="../mermaid/mermaid.css?1586605249" rel="stylesheet" />
+    <script src="../mermaid/mermaid.js?1586605249"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

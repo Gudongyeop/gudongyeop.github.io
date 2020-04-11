@@ -1,0 +1,1262 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.69.0" />
+    <meta name="description" content="여러가지 만들어 보는 중">
+<meta name="author" content="Dongyeop">
+
+    <link rel="icon" href="../images/favicon.png" type="image/png">
+
+    <title>Django User :: 여러가지</title>
+
+    
+    <link href="../css/nucleus.css?1586605249" rel="stylesheet">
+    <link href="../css/fontawesome-all.min.css?1586605249" rel="stylesheet">
+    <link href="../css/hybrid.css?1586605249" rel="stylesheet">
+    <link href="../css/featherlight.min.css?1586605249" rel="stylesheet">
+    <link href="../css/perfect-scrollbar.min.css?1586605249" rel="stylesheet">
+    <link href="../css/auto-complete.css?1586605249" rel="stylesheet">
+    <link href="../css/atom-one-dark-reasonable.css?1586605249" rel="stylesheet">
+    <link href="../css/theme.css?1586605249" rel="stylesheet">
+    <link href="../css/hugo-theme.css?1586605249" rel="stylesheet">
+    
+      <link href="../css/theme-red.css?1586605249" rel="stylesheet">
+    
+
+    <script src="../js/jquery-3.3.1.min.js?1586605249"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/cont/django_login.html">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="../">
+
+<svg id="grav-logo" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	width="100%" height="100%"  viewBox="0 0 285.1 69.9" xml:space="preserve">
+<g>
+	<path d="M35,0c9.6,0,17.9,3.4,24.7,10.3c6.8,6.8,10.3,15,10.3,24.7c0,9.7-3.4,17.9-10.3,24.7c-6.8,6.8-15,10.3-24.7,10.3
+		c-9.7,0-17.9-3.4-24.7-10.3C3.4,52.8,0,44.6,0,34.9c0-9.6,3.4-17.9,10.3-24.7C17.1,3.4,25.3,0,35,0z M22.3,63.7
+		c0.3-7.4,0.3-14.7,0-22.1c-2.1-0.4-4-0.4-5.9,0c-0.2,0.8-0.2,2.5-0.1,4.9c0.1,2.3,0,3.9-0.3,4.8c-1.7-0.6-2.7-2.1-3.1-4.6
+		c-0.1-0.7-0.1-3.3-0.1-8c0-14.5-0.1-23-0.3-25.6c-3.6,4.1-5.6,7-5.9,8.5v10.9c0,4.5,0.1,8.1,0.2,10.9c0,0.4,0,1.3-0.1,2.8
+		c-0.1,1.2,0,2.1,0.1,2.6c0.1,0.6,1.1,2.1,2.8,4.7C13.2,58.7,17.5,62.2,22.3,63.7z M44.6,65.4c0.3-5,0.2-12.9-0.1-23.6
+		c-2.1-0.3-4.1-0.3-5.9,0c-0.2,2-0.2,5.1-0.1,9.5c0.1,4.3,0,7.5-0.1,9.5c-2.9,0.4-5,0.3-6.2-0.1c-0.2-5.6-0.2-15.2-0.1-28.7
+		c0.1-12.4,0-21.8-0.3-28.3c-2.4,0.1-4.3,0.6-5.7,1.3c-0.1,7.7-0.2,17.7-0.1,30.1c0,16.5,0,26.6,0,30.3c2.3,1.1,5.4,1.7,9.4,1.7
+		C38.9,66.9,42.1,66.4,44.6,65.4z M48.1,64.1c9.7-4.6,15.7-12,18-22.2c-1.8-0.2-3.8-0.3-6.1-0.3c-1.6,3.9-2.6,6.3-3.2,7.2
+		c-1.1,1.7-2,2.5-2.7,2.5C54,46,54,39.1,54,30.5c0-11.5,0-18.4,0-20.9c-1.4-1.4-3.3-2.5-5.7-3.4C48.1,6.3,48,6.4,48,6.7
+		c0,3.5,0,13.1,0,28.8C47.9,47.2,48,56.8,48.1,64.1z"/>
+</g>
+<g>
+	<path d="M116.6,51.3h-29c-0.5,0-0.9-0.1-1.3-0.2c-0.4-0.2-0.7-0.4-1-0.7c-0.3-0.3-0.5-0.6-0.7-1c-0.2-0.4-0.2-0.8-0.2-1.3V16.3h6.3
+		V45h25.8V51.3z"/>
+	<path d="M154.8,51.3h-22.9c-0.9,0-1.8-0.2-2.9-0.5c-1-0.3-2-0.8-2.9-1.5c-0.9-0.7-1.6-1.6-2.2-2.8c-0.6-1.1-0.9-2.5-0.9-4.2V19.5
+		c0-0.4,0.1-0.9,0.2-1.2c0.2-0.4,0.4-0.7,0.7-1c0.3-0.3,0.6-0.5,1-0.7c0.4-0.2,0.8-0.2,1.3-0.2h28.6v6.3h-25.4v19.8
+		c0,0.8,0.2,1.5,0.7,1.9s1.1,0.7,1.9,0.7h22.9V51.3z M151.9,37h-20v-6.4h20V37z"/>
+	<path d="M197.3,51.3H191v-8.6h-22.3v8.6h-6.3V33.8c0-2.6,0.4-4.9,1.3-7.1s2.1-4,3.7-5.5c1.6-1.5,3.4-2.8,5.5-3.6
+		c2.1-0.9,4.5-1.3,7-1.3h14.3c0.4,0,0.9,0.1,1.2,0.2c0.4,0.2,0.7,0.4,1,0.7s0.5,0.6,0.7,1c0.2,0.4,0.2,0.8,0.2,1.2V51.3z
+		 M168.7,36.4H191V22.6h-11.2c-0.2,0-0.6,0-1.2,0.1c-0.6,0.1-1.4,0.2-2.2,0.4c-0.8,0.2-1.7,0.6-2.6,1c-0.9,0.5-1.8,1.1-2.5,2
+		c-0.8,0.8-1.4,1.9-1.9,3.1c-0.5,1.2-0.7,2.8-0.7,4.5V36.4z"/>
+	<path d="M241.7,28.1c0,1.4-0.2,2.7-0.5,3.9c-0.4,1.1-0.8,2.1-1.5,3c-0.6,0.9-1.3,1.6-2.1,2.2c-0.8,0.6-1.6,1.1-2.5,1.5
+		c-0.9,0.4-1.8,0.7-2.6,0.9c-0.9,0.2-1.7,0.3-2.5,0.3l13.3,11.5h-9.8l-13.2-11.5h-4.6v-6.3H230c0.8-0.1,1.5-0.2,2.2-0.5
+		c0.7-0.3,1.2-0.6,1.7-1.1c0.5-0.5,0.9-1,1.1-1.6c0.3-0.6,0.4-1.4,0.4-2.2v-4c0-0.4,0-0.6-0.1-0.8c-0.1-0.2-0.2-0.3-0.3-0.4
+		c-0.1-0.1-0.3-0.1-0.4-0.2c-0.2,0-0.3,0-0.4,0h-20.9v28.7h-6.3V19.5c0-0.4,0.1-0.9,0.2-1.2c0.2-0.4,0.4-0.7,0.7-1
+		c0.3-0.3,0.6-0.5,1-0.7c0.4-0.2,0.8-0.2,1.3-0.2H234c1.4,0,2.6,0.3,3.6,0.8s1.8,1.2,2.4,1.9c0.6,0.8,1,1.6,1.3,2.5
+		c0.3,0.9,0.4,1.7,0.4,2.5V28.1z"/>
+	<path d="M285.1,48.6c0,0.5-0.1,0.9-0.3,1.3c-0.2,0.4-0.4,0.7-0.7,1c-0.3,0.3-0.6,0.5-1,0.7c-0.4,0.2-0.8,0.2-1.2,0.2
+		c-0.4,0-0.8-0.1-1.2-0.2c-0.4-0.1-0.8-0.4-1.1-0.7l-23.2-24.2v24.7h-6.3V19c0-0.7,0.2-1.2,0.5-1.8c0.4-0.5,0.8-0.9,1.4-1.2
+		c0.6-0.2,1.2-0.3,1.9-0.2s1.2,0.4,1.6,0.9l23.2,24.2V16.3h6.3V48.6z"/>
+</g>
+</svg>
+
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="../js/lunr.min.js?1586605249"></script>
+<script type="text/javascript" src="../js/auto-complete.js?1586605249"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/dongyeopgu.github.io\/";
+    
+</script>
+<script type="text/javascript" src="../js/search.js?1586605249"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/basics.html" title="About Blog" class="dd-item 
+        
+        
+        
+        ">
+      <a href="../basics.html">
+          About Blog
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/cont_2.html" title="Algorithm 문제풀이" class="dd-item 
+        
+        
+        
+        ">
+      <a href="../cont_2.html">
+          <b>1. </b>Algorithm 문제풀이
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/cont_2/baekjoon.html" title="백준 문제풀이" class="dd-item 
+        
+        
+        
+        ">
+      <a href="../cont_2/baekjoon.html">
+          <b>1. </b>백준 문제풀이
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/cont_2/baekjoon/baekjoon.html" title="BAEKJOON - Python" class="dd-item ">
+        <a href="../cont_2/baekjoon/baekjoon.html">
+        BAEKJOON - Python
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/cont_2/d3.html" title="D3 문제풀이" class="dd-item 
+        
+        
+        
+        ">
+      <a href="../cont_2/d3.html">
+          <b>2. </b>D3 문제풀이
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/cont_2/d3/swea-d3.html" title="SWEA - Python - D3" class="dd-item ">
+        <a href="../cont_2/d3/swea-d3.html">
+        SWEA - Python - D3
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/cont_2/d4.html" title="D4 문제풀이" class="dd-item 
+        
+        
+        
+        ">
+      <a href="../cont_2/d4.html">
+          <b>3. </b>D4 문제풀이
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/cont_2/d4/swea_%EB%AA%A8%EC%9D%98-%ED%85%8C%EC%8A%A4%ED%8A%B8.html" title="SWEA - Python - 모의 테스트" class="dd-item ">
+        <a href="../cont_2/d4/swea_%EB%AA%A8%EC%9D%98-%ED%85%8C%EC%8A%A4%ED%8A%B8.html">
+        SWEA - Python - 모의 테스트
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/cont_2/d4/swea-d4.html" title="SWEA - Python - D4" class="dd-item ">
+        <a href="../cont_2/d4/swea-d4.html">
+        SWEA - Python - D4
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/cont.html" title="Django 학습" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="../cont.html">
+          <b>2. </b>Django 학습
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/cont/django_crud.html" title="Django CRUD" class="dd-item ">
+        <a href="../cont/django_crud.html">
+        Django CRUD
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/cont/django_paginator.html" title="Django Paginator" class="dd-item ">
+        <a href="../cont/django_paginator.html">
+        Django Paginator
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/cont/django_login.html" title="Django User" class="dd-item active">
+        <a href="../cont/django_login.html">
+        Django User
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/cont/django_start.html" title="Django 시작하기" class="dd-item ">
+        <a href="../cont/django_start.html">
+        Django 시작하기
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                   Django User 
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#user-관리sign-in-out-up">User 관리(sign in, out, up)</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Django User
+            </h1>
+          
+
+        
+
+
+
+<h3 id="user-관리sign-in-out-up">User 관리(sign in, out, up)</h3>
+<hr>
+<blockquote>
+<p>로그인 기능을 넣는 방법</p>
+<p>model을 만들 필요 없이 django에서 제공하는 user 모델을 사용함</p>
+<p>bootstrap 사용을 기반으로 작성함</p>
+</blockquote>
+<h4 id="1-accounts라는-새로운-app을-작성">1. accounts라는 새로운 app을 작성</h4>
+<h4 id="2-기본-제공되는-user-모델을-사용하기-때문에-formspy만-작성">2. 기본 제공되는 User 모델을 사용하기 때문에 forms.py만 작성</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> django.forms <span style="color:#f92672">import</span> ModelForm
+<span style="color:#f92672">from</span> django.contrib.auth.models <span style="color:#f92672">import</span> User     <span style="color:#75715e"># django에서 기본 제공하는 model이 있음.</span>
+<span style="color:#f92672">from</span> django <span style="color:#f92672">import</span> forms
+
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SignupForm</span>(ModelForm): <span style="color:#75715e">#회원가입을 제공하는 class이다.</span>
+    username <span style="color:#f92672">=</span> forms<span style="color:#f92672">.</span>CharField(
+            max_length<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>,
+            min_length<span style="color:#f92672">=</span><span style="color:#ae81ff">6</span>,
+            widget<span style="color:#f92672">=</span>forms<span style="color:#f92672">.</span>TextInput(
+                    attrs<span style="color:#f92672">=</span>{
+                        <span style="color:#e6db74">&#39;class&#39;</span>: <span style="color:#e6db74">&#39;form-control&#39;</span>
+                    }
+                )
+        )
+    password <span style="color:#f92672">=</span> forms<span style="color:#f92672">.</span>CharField(
+            max_length<span style="color:#f92672">=</span><span style="color:#ae81ff">16</span>,
+            min_length<span style="color:#f92672">=</span><span style="color:#ae81ff">8</span>,
+            widget<span style="color:#f92672">=</span>forms<span style="color:#f92672">.</span>PasswordInput(
+                    attrs<span style="color:#f92672">=</span>{
+                        <span style="color:#e6db74">&#39;class&#39;</span>: <span style="color:#e6db74">&#39;form-control&#39;</span>,
+                        <span style="color:#e6db74">&#39;placeholder&#39;</span>: <span style="color:#e6db74">&#39;8글자 이상, 16글자 이하로 작성해주세요.&#39;</span>
+                    }
+                )
+        )
+    password_confirm <span style="color:#f92672">=</span> forms<span style="color:#f92672">.</span>CharField(
+            max_length<span style="color:#f92672">=</span><span style="color:#ae81ff">16</span>,
+            min_length<span style="color:#f92672">=</span><span style="color:#ae81ff">8</span>,
+            widget<span style="color:#f92672">=</span>forms<span style="color:#f92672">.</span>PasswordInput(
+                    attrs<span style="color:#f92672">=</span>{
+                        <span style="color:#e6db74">&#39;class&#39;</span>: <span style="color:#e6db74">&#39;form-control&#39;</span>,
+                        <span style="color:#e6db74">&#39;placeholder&#39;</span>: <span style="color:#e6db74">&#39;8글자 이상, 16글자 이하로 작성해주세요.&#39;</span>
+                    }
+                )
+        )
+    last_name <span style="color:#f92672">=</span> forms<span style="color:#f92672">.</span>CharField(
+            widget<span style="color:#f92672">=</span>forms<span style="color:#f92672">.</span>TextInput(
+                    attrs<span style="color:#f92672">=</span>{
+                        <span style="color:#e6db74">&#39;class&#39;</span>: <span style="color:#e6db74">&#39;form-control&#39;</span>,
+                    }
+                )
+        )
+    first_name <span style="color:#f92672">=</span> forms<span style="color:#f92672">.</span>CharField(
+            widget<span style="color:#f92672">=</span>forms<span style="color:#f92672">.</span>TextInput(
+                    attrs<span style="color:#f92672">=</span>{
+                        <span style="color:#e6db74">&#39;class&#39;</span>: <span style="color:#e6db74">&#39;form-control&#39;</span>,
+                    }
+                )
+        )
+    email <span style="color:#f92672">=</span> forms<span style="color:#f92672">.</span>EmailField(
+            widget<span style="color:#f92672">=</span>forms<span style="color:#f92672">.</span>EmailInput(
+                    attrs<span style="color:#f92672">=</span>{
+                        <span style="color:#e6db74">&#39;class&#39;</span>: <span style="color:#e6db74">&#39;form-control&#39;</span>,
+                    }
+                )
+
+        )
+
+    field_order<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;username&#39;</span>,<span style="color:#e6db74">&#39;password&#39;</span>,<span style="color:#e6db74">&#39;password_confirm&#39;</span>,<span style="color:#e6db74">&#39;last_name&#39;</span>,<span style="color:#e6db74">&#39;first_name&#39;</span>,<span style="color:#e6db74">&#39;email&#39;</span>]
+    <span style="color:#75715e">#field_order는 만들어지는 입력양식의 순서, password 바로 밑에 password_check 양식을 추가하기 위해 사용</span>
+
+    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Meta</span>:
+        model<span style="color:#f92672">=</span>User
+        widgets <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;password&#39;</span>:forms<span style="color:#f92672">.</span>PasswordInput}
+        fields <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;username&#39;</span>,<span style="color:#e6db74">&#39;password&#39;</span>,<span style="color:#e6db74">&#39;last_name&#39;</span>,<span style="color:#e6db74">&#39;first_name&#39;</span>,<span style="color:#e6db74">&#39;email&#39;</span>]
+<span style="color:#75715e">#User model에 정의된 username, passwordm last_name, first_name, email을 입력양식으로</span>
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SigninForm</span>(ModelForm):
+    username <span style="color:#f92672">=</span> forms<span style="color:#f92672">.</span>CharField(
+            max_length<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>,
+            min_length<span style="color:#f92672">=</span><span style="color:#ae81ff">6</span>,
+            widget<span style="color:#f92672">=</span>forms<span style="color:#f92672">.</span>TextInput(
+                    attrs<span style="color:#f92672">=</span>{
+                        <span style="color:#e6db74">&#39;class&#39;</span>: <span style="color:#e6db74">&#39;form-control&#39;</span>
+                    }
+                )
+        )
+    password <span style="color:#f92672">=</span> forms<span style="color:#f92672">.</span>CharField(
+            max_length<span style="color:#f92672">=</span><span style="color:#ae81ff">16</span>,
+            min_length<span style="color:#f92672">=</span><span style="color:#ae81ff">8</span>,
+            widget<span style="color:#f92672">=</span>forms<span style="color:#f92672">.</span>PasswordInput(
+                    attrs<span style="color:#f92672">=</span>{
+                        <span style="color:#e6db74">&#39;class&#39;</span>: <span style="color:#e6db74">&#39;form-control&#39;</span>,
+                    }
+                )
+        )
+
+    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Meta</span>:
+        model <span style="color:#f92672">=</span> User
+        widgets <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;password&#39;</span>:forms<span style="color:#f92672">.</span>PasswordInput}
+        fields <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;username&#39;</span>,<span style="color:#e6db74">&#39;password&#39;</span>]
+
+</code></pre></div><h4 id="3-urlspy와-viewspy-작성">3. urls.py와 views.py 작성</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">### urls.py ###</span>
+<span style="color:#f92672">from</span> django.urls <span style="color:#f92672">import</span> path, include
+<span style="color:#f92672">from</span> . <span style="color:#f92672">import</span> views
+
+app_name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;accounts&#39;</span>
+
+urlpatterns <span style="color:#f92672">=</span> [
+    path(<span style="color:#e6db74">&#39;signup/&#39;</span>, views<span style="color:#f92672">.</span>signup, name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;signup&#34;</span>),
+    path(<span style="color:#e6db74">&#39;signin/&#39;</span>, views<span style="color:#f92672">.</span>signin, name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;signin&#34;</span>),
+    path(<span style="color:#e6db74">&#39;signout/&#39;</span>, views<span style="color:#f92672">.</span>signout, name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;signout&#34;</span>),
+    path(<span style="color:#e6db74">&#39;community/&#39;</span>, include(<span style="color:#e6db74">&#39;community.urls&#39;</span>)),
+]
+<span style="color:#75715e">### views.py ###</span>
+<span style="color:#f92672">from</span> django.shortcuts <span style="color:#f92672">import</span> render, redirect
+<span style="color:#f92672">from</span> django.urls.base <span style="color:#f92672">import</span> reverse
+<span style="color:#f92672">from</span> django.contrib.auth.models <span style="color:#f92672">import</span> User
+<span style="color:#f92672">from</span> django.contrib.auth <span style="color:#f92672">import</span> login, authenticate, logout
+<span style="color:#75715e">#login은 login처리를 해주며, authenticate는 아이디와 비밀번호가 모두 일치하는 User 객체를 추출</span>
+<span style="color:#f92672">from</span> .forms <span style="color:#f92672">import</span> SigninForm, SignupForm
+<span style="color:#75715e"># Create your views here.</span>
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">signup</span>(request):<span style="color:#75715e">#역시 GET/POST 방식을 사용하여 구현한다.</span>
+    <span style="color:#66d9ef">if</span> request<span style="color:#f92672">.</span>method <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;GET&#34;</span>:
+        form <span style="color:#f92672">=</span> SignupForm()
+        context <span style="color:#f92672">=</span> {
+            <span style="color:#e6db74">&#39;form&#39;</span>: form
+        }
+        <span style="color:#66d9ef">return</span> render(request, <span style="color:#e6db74">&#39;accounts/signup.html&#39;</span>, context)
+
+
+    <span style="color:#66d9ef">elif</span> request<span style="color:#f92672">.</span>method <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;POST&#34;</span>:
+        form <span style="color:#f92672">=</span> SignupForm(request<span style="color:#f92672">.</span>POST)
+        <span style="color:#66d9ef">if</span> form<span style="color:#f92672">.</span>is_valid():
+            <span style="color:#66d9ef">if</span> form<span style="color:#f92672">.</span>cleaned_data[<span style="color:#e6db74">&#39;password&#39;</span>]  <span style="color:#f92672">==</span> form<span style="color:#f92672">.</span>cleaned_data[<span style="color:#e6db74">&#39;password_confirm&#39;</span>]:
+        <span style="color:#75715e">#cleaned_data는 사용자가 입력한 데이터를 뜻한다.</span>
+        <span style="color:#75715e">#즉 사용자가 입력한 password와 password_check가 맞는지 확인하기위해 작성해주었다.</span>
+                new_user <span style="color:#f92672">=</span> User<span style="color:#f92672">.</span>objects<span style="color:#f92672">.</span>create_user(
+                    form<span style="color:#f92672">.</span>cleaned_data[<span style="color:#e6db74">&#39;username&#39;</span>],
+                    form<span style="color:#f92672">.</span>cleaned_data[<span style="color:#e6db74">&#39;email&#39;</span>],
+                    form<span style="color:#f92672">.</span>cleaned_data[<span style="color:#e6db74">&#39;password&#39;</span>]
+                )
+        <span style="color:#75715e">#User.object.create_user는 사용자가 입력한 name, email, password를 가지고 아이디를 만든다.</span>
+        <span style="color:#75715e">#바로 .save를 안해주는 이유는 User.object.create를 먼저 해주어야 비밀번호가 암호화되어 저장된다.</span>
+                new_user<span style="color:#f92672">.</span>last_name <span style="color:#f92672">=</span> form<span style="color:#f92672">.</span>cleaned_data[<span style="color:#e6db74">&#39;last_name&#39;</span>]
+                new_user<span style="color:#f92672">.</span>first_name <span style="color:#f92672">=</span> form<span style="color:#f92672">.</span>cleaned_data[<span style="color:#e6db74">&#39;first_name&#39;</span>]
+        <span style="color:#75715e">#나머지 입력하지 못한 last_name과, first_name은 따로 지정해준다.</span>
+                new_user<span style="color:#f92672">.</span>save()
+
+                <span style="color:#66d9ef">return</span> redirect(reverse(<span style="color:#e6db74">&#39;reviews:review_list&#39;</span>))
+            <span style="color:#66d9ef">else</span>:
+                context <span style="color:#f92672">=</span> {
+                    <span style="color:#e6db74">&#39;form&#39;</span>:form,
+                    <span style="color:#e6db74">&#39;error&#39;</span>:<span style="color:#e6db74">&#39;비밀번호와 비밀번호 확인이 다릅니다.&#39;</span>
+
+                }
+                <span style="color:#66d9ef">return</span> render(request, <span style="color:#e6db74">&#39;accounts/signup.html&#39;</span>,)
+                <span style="color:#75715e">#password와 password_check가 다를 것을 대비하여 error를 지정해준다.</span>
+        <span style="color:#66d9ef">else</span>: <span style="color:#75715e">#form.is_valid()가 아닐 경우, 즉 유효한 값이 들어오지 않았을 경우</span>
+            context <span style="color:#f92672">=</span> {
+                <span style="color:#e6db74">&#39;form&#39;</span>:form
+            }
+            <span style="color:#66d9ef">return</span> render(request, <span style="color:#e6db74">&#39;accounts/signup.html&#39;</span>, context)
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">signin</span>(request):
+    <span style="color:#66d9ef">if</span> request<span style="color:#f92672">.</span>method <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;GET&#34;</span>:
+        form <span style="color:#f92672">=</span> SigninForm()
+        context <span style="color:#f92672">=</span> {
+            <span style="color:#e6db74">&#39;form&#39;</span>: form,
+        }
+        <span style="color:#66d9ef">return</span> render(request, <span style="color:#e6db74">&#39;accounts/signin.html&#39;</span>, context)
+
+    <span style="color:#66d9ef">elif</span> request<span style="color:#f92672">.</span>method <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;POST&#34;</span>:
+        form <span style="color:#f92672">=</span> SigninForm(request<span style="color:#f92672">.</span>POST)
+        id <span style="color:#f92672">=</span> request<span style="color:#f92672">.</span>POST[<span style="color:#e6db74">&#39;username&#39;</span>]
+        pw <span style="color:#f92672">=</span> request<span style="color:#f92672">.</span>POST[<span style="color:#e6db74">&#39;password&#39;</span>]
+        user <span style="color:#f92672">=</span> authenticate(username<span style="color:#f92672">=</span>id, password<span style="color:#f92672">=</span>pw) <span style="color:#75715e"># username과 password를 비교, 같으면 해당객체 반환 아니면 none</span>
+
+        <span style="color:#66d9ef">if</span> user: <span style="color:#75715e"># user 값이 있으면</span>
+            login(request, user<span style="color:#f92672">=</span>user) <span style="color:#75715e"># user값으로 로그인</span>
+            <span style="color:#66d9ef">return</span> redirect(<span style="color:#e6db74">&#39;reviews:review_list&#39;</span>)
+        <span style="color:#66d9ef">else</span>:
+            context <span style="color:#f92672">=</span> {
+                <span style="color:#e6db74">&#39;form&#39;</span> : form,
+                <span style="color:#e6db74">&#39;error&#39;</span>: <span style="color:#e6db74">&#39;아이디나 비밀번호가 일치하지 않습니다.&#39;</span>
+            }
+            <span style="color:#66d9ef">return</span> render(request, <span style="color:#e6db74">&#39;accounts/signin.html&#39;</span>, context)
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">signout</span>(request):
+    logout(request)
+    <span style="color:#66d9ef">return</span> redirect(<span style="color:#e6db74">&#39;reviews:review_list&#39;</span>)
+</code></pre></div><h4 id="4-로그인-관련-html을-작성">4. 로그인 관련 html을 작성</h4>
+<blockquote>
+<p>bootstrap을 사용하여 네비게이션 바에 로그인 상태에 따라 다르게 표시함</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!-- base.html 일부 --&gt;</span>
+&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;collapse navbar-collapse justify-content-between&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;navbarNav&#34;</span>&gt;
+            &lt;<span style="color:#f92672">ul</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;navbar-nav&#34;</span>&gt;
+                {% if request.resolver_match.url_name == &#39;create&#39; %}
+                    &lt;<span style="color:#f92672">li</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;nav-item&#34;</span>&gt;
+                        &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;nav-link&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{% url &#39;reviews:review_list&#39; %}&#34;</span>&gt;List&lt;/<span style="color:#f92672">a</span>&gt;
+                    &lt;/<span style="color:#f92672">li</span>&gt;
+                    &lt;<span style="color:#f92672">li</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;nav-item active&#34;</span>&gt;
+                        &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;nav-link&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{% url &#39;reviews:create&#39; %}&#34;</span>&gt;New&lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sr-only&#34;</span>&gt;(current)&lt;/<span style="color:#f92672">span</span>&gt;&lt;/<span style="color:#f92672">a</span>&gt;
+                    &lt;/<span style="color:#f92672">li</span>&gt;
+                {% else %}
+                    &lt;<span style="color:#f92672">li</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;nav-item active&#34;</span>&gt;
+                        &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;nav-link&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{% url &#39;reviews:review_list&#39; %}&#34;</span>&gt;List&lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sr-only&#34;</span>&gt;(current)&lt;/<span style="color:#f92672">span</span>&gt;&lt;/<span style="color:#f92672">a</span>&gt;
+                    &lt;/<span style="color:#f92672">li</span>&gt;
+                    &lt;<span style="color:#f92672">li</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;nav-item&#34;</span>&gt;
+                        &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;nav-link&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{% url &#39;reviews:create&#39; %}&#34;</span>&gt;New&lt;/<span style="color:#f92672">a</span>&gt;
+                    &lt;/<span style="color:#f92672">li</span>&gt;
+                {% endif %}
+            &lt;/<span style="color:#f92672">ul</span>&gt;
+            &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;d-flex flex-row&#34;</span>&gt;
+            {% if user.is_authenticated %}<span style="color:#75715e">&lt;!-- login 된 상태일 경우 --&gt;</span>
+            &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;p-2&#34;</span>&gt;{{ user.username }}님 환영합니다.&lt;/<span style="color:#f92672">div</span>&gt;
+            &lt;<span style="color:#f92672">ul</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;navbar-nav&#34;</span>&gt;
+                &lt;<span style="color:#f92672">li</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;nav-item dropdown&#34;</span>&gt;
+                    &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;nav-link dropdown-toggle&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;#&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;navbarDropdownMenuLink&#34;</span> <span style="color:#a6e22e">role</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;button&#34;</span> <span style="color:#a6e22e">data-toggle</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;dropdown&#34;</span> <span style="color:#a6e22e">aria-haspopup</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;true&#34;</span> <span style="color:#a6e22e">aria-expanded</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;false&#34;</span>&gt;
+                    Sign out
+                    &lt;/<span style="color:#f92672">a</span>&gt;
+                    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;dropdown-menu&#34;</span> <span style="color:#a6e22e">aria-labelledby</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;navbarDropdownMenuLink&#34;</span>&gt;
+                        &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;dropdown-item&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{% url &#39;accounts:signout&#39; %}&#34;</span>&gt;Sign Out&lt;/<span style="color:#f92672">a</span>&gt;
+                    &lt;/<span style="color:#f92672">div</span>&gt;
+            {% else %}
+                &lt;<span style="color:#f92672">ul</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;navbar-nav&#34;</span>&gt;
+                    &lt;<span style="color:#f92672">li</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;nav-item dropdown&#34;</span>&gt;
+                        &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;nav-link dropdown-toggle&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;#&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;navbarDropdownMenuLink&#34;</span> <span style="color:#a6e22e">role</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;button&#34;</span> <span style="color:#a6e22e">data-toggle</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;dropdown&#34;</span> <span style="color:#a6e22e">aria-haspopup</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;true&#34;</span> <span style="color:#a6e22e">aria-expanded</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;false&#34;</span>&gt;
+                            Sign In
+                        &lt;/<span style="color:#f92672">a</span>&gt;
+                        &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;dropdown-menu&#34;</span> <span style="color:#a6e22e">aria-labelledby</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;navbarDropdownMenuLink&#34;</span>&gt;
+                            &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;dropdown-item&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{% url &#39;accounts:signup&#39; %}&#34;</span>&gt;Sign Up&lt;/<span style="color:#f92672">a</span>&gt;
+                            &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;dropdown-item&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{% url &#39;accounts:signin&#39; %}&#34;</span>&gt;Sign In&lt;/<span style="color:#f92672">a</span>&gt;
+                        &lt;/<span style="color:#f92672">div</span>&gt;
+            {% endif %}
+                &lt;/<span style="color:#f92672">li</span>&gt;
+            &lt;/<span style="color:#f92672">ul</span>&gt;
+            &lt;/<span style="color:#f92672">div</span>&gt;
+        &lt;/<span style="color:#f92672">div</span>&gt;
+</code></pre></div><h4 id="5-singuphtml-작성">5. singup.html 작성</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!-- signup.html --&gt;</span>
+{% extends &#39;base.html&#39; %}
+{% load static %}
+{% block body %}
+
+{% if error %}
+  &lt;<span style="color:#f92672">h3</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text-danger&#34;</span>&gt;{{ error }}&lt;/<span style="color:#f92672">h3</span>&gt;
+{% endif %}
+  &lt;<span style="color:#f92672">form</span> <span style="color:#a6e22e">action</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span> <span style="color:#a6e22e">method</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;POST&#34;</span>&gt;
+  {% csrf_token %}
+  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-row mb-3 mt-5&#34;</span>&gt;
+    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;col-12&#34;</span>&gt;
+      &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;username&#34;</span>&gt;Username&lt;/<span style="color:#f92672">label</span>&gt;
+      &lt;<span style="color:#f92672">div</span>&gt;{{ form.username }}&lt;/<span style="color:#f92672">div</span>&gt;
+    &lt;/<span style="color:#f92672">div</span>&gt;
+  &lt;/<span style="color:#f92672">div</span>&gt;
+  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-row mb-3&#34;</span>&gt;
+    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;col-6&#34;</span>&gt;
+      &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password&#34;</span>&gt;Password&lt;/<span style="color:#f92672">label</span>&gt;
+      &lt;<span style="color:#f92672">div</span>&gt;{{ form.password }}&lt;/<span style="color:#f92672">div</span>&gt;
+    &lt;/<span style="color:#f92672">div</span>&gt;
+    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;col-6&#34;</span>&gt;
+      &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password_confirm&#34;</span>&gt;Password Confirm&lt;/<span style="color:#f92672">label</span>&gt;
+      &lt;<span style="color:#f92672">div</span>&gt;{{ form.password_confirm }}&lt;/<span style="color:#f92672">div</span>&gt;
+    &lt;/<span style="color:#f92672">div</span>&gt;
+  &lt;/<span style="color:#f92672">div</span>&gt;
+  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-row mb-3&#34;</span>&gt;
+    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;col-6&#34;</span>&gt;
+      &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;last_name&#34;</span>&gt;Last name&lt;/<span style="color:#f92672">label</span>&gt;
+      &lt;<span style="color:#f92672">div</span>&gt;{{ form.last_name }}&lt;/<span style="color:#f92672">div</span>&gt;
+    &lt;/<span style="color:#f92672">div</span>&gt;
+    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;col-6&#34;</span>&gt;
+      &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;last_name&#34;</span>&gt;First name&lt;/<span style="color:#f92672">label</span>&gt;
+      &lt;<span style="color:#f92672">div</span>&gt;{{ form.first_name }}&lt;/<span style="color:#f92672">div</span>&gt;
+    &lt;/<span style="color:#f92672">div</span>&gt;
+  &lt;/<span style="color:#f92672">div</span>&gt;
+  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-row mb-3&#34;</span>&gt;
+    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;col-12&#34;</span>&gt;
+      &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;email&#34;</span>&gt;Email&lt;/<span style="color:#f92672">label</span>&gt;
+      &lt;<span style="color:#f92672">div</span>&gt;{{ form.email }}&lt;/<span style="color:#f92672">div</span>&gt;
+    &lt;/<span style="color:#f92672">div</span>&gt;
+  &lt;/<span style="color:#f92672">div</span>&gt;
+  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-row mb-3&#34;</span>&gt;
+    &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;submit&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;btn btn-info col-12&#34;</span>&gt;SIGN UP&lt;/<span style="color:#f92672">button</span>&gt;
+  &lt;/<span style="color:#f92672">div</span>&gt;
+  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-row mb-3&#34;</span>&gt;
+    &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/community/&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;btn btn-secondary col-12&#34;</span>&gt;CANCEL&lt;/<span style="color:#f92672">a</span>&gt;
+  &lt;/<span style="color:#f92672">div</span>&gt;
+&lt;/<span style="color:#f92672">form</span>&gt;
+{% endblock %}
+</code></pre></div><h4 id="6-signinhtml-작성">6. signin.html 작성</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!-- signin.html --&gt;</span>
+{% extends &#39;base.html&#39; %}
+{% load static %}
+{% block body %}
+    &lt;<span style="color:#f92672">form</span> <span style="color:#a6e22e">action</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span> <span style="color:#a6e22e">method</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;POST&#34;</span>&gt;
+    {% csrf_token %}
+    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-row mb-3 mt-5&#34;</span>&gt;
+        &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;col-12&#34;</span>&gt;
+            {% if error %}
+            &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;d-flex flex-row&#34;</span>&gt;
+                &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;username&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mr-3&#34;</span>&gt;Username&lt;/<span style="color:#f92672">label</span>&gt;
+                &lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text-danger p-0 m-0&#34;</span>&gt;{{ error }}&lt;/<span style="color:#f92672">p</span>&gt;
+            &lt;/<span style="color:#f92672">div</span>&gt;
+            {% else %}
+            &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;username&#34;</span>&gt;Username&lt;/<span style="color:#f92672">label</span>&gt;
+            {% endif %}
+            &lt;<span style="color:#f92672">div</span>&gt;{{ form.username }}&lt;/<span style="color:#f92672">div</span>&gt;
+        &lt;/<span style="color:#f92672">div</span>&gt;
+    &lt;/<span style="color:#f92672">div</span>&gt;
+    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-row mb-3&#34;</span>&gt;
+        &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;col-12&#34;</span>&gt;
+            &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password&#34;</span>&gt;Password&lt;/<span style="color:#f92672">label</span>&gt;
+            &lt;<span style="color:#f92672">div</span>&gt;{{ form.password }}&lt;/<span style="color:#f92672">div</span>&gt;
+        &lt;/<span style="color:#f92672">div</span>&gt;
+    &lt;/<span style="color:#f92672">div</span>&gt;
+    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-row mb-3&#34;</span>&gt;
+        &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;submit&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;btn btn-info col-12&#34;</span>&gt;SIGN IN&lt;/<span style="color:#f92672">button</span>&gt;
+    &lt;/<span style="color:#f92672">div</span>&gt;
+    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-row justify-content-between&#34;</span>&gt;
+        &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/accounts/signup/&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;btn btn-info col-5&#34;</span>&gt;SIGN UP&lt;/<span style="color:#f92672">a</span>&gt;
+        &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/community/&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;btn btn-secondary col-5&#34;</span>&gt;CANCEL&lt;/<span style="color:#f92672">a</span>&gt;
+    &lt;/<span style="color:#f92672">div</span>&gt;
+    &lt;/<span style="color:#f92672">form</span>&gt;
+
+{% endblock %}
+</code></pre></div><h4 id="7-로그인-페이지를-modal로-변경하기">7. 로그인 페이지를 modal로 변경하기</h4>
+<ul>
+<li>base.html에서 include를 사용하여 modal 부분을 적은 html을 불러온다.</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">ul</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;navbar-nav&#34;</span>&gt;
+                    &lt;<span style="color:#f92672">li</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;nav-item dropdown&#34;</span>&gt;
+                        &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;nav-link dropdown-toggle&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;#&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;navbarDropdownMenuLink&#34;</span> <span style="color:#a6e22e">role</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;button&#34;</span> <span style="color:#a6e22e">data-toggle</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;dropdown&#34;</span> <span style="color:#a6e22e">aria-haspopup</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;true&#34;</span> <span style="color:#a6e22e">aria-expanded</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;false&#34;</span>&gt;
+                            Sign Up / Sign In
+                        &lt;/<span style="color:#f92672">a</span>&gt;
+                        &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;dropdown-menu&#34;</span> <span style="color:#a6e22e">aria-labelledby</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;navbarDropdownMenuLink&#34;</span>&gt;
+                            &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;dropdown-item&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{% url &#39;accounts:signup&#39; %}&#34;</span>&gt;Sign Up&lt;/<span style="color:#f92672">a</span>&gt;
+                            &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;button&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;dropdown-item&#34;</span> <span style="color:#a6e22e">data-toggle</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;modal&#34;</span> <span style="color:#a6e22e">data-target</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;#SIGNIN&#34;</span>&gt;
+                                Sign In
+                            &lt;/<span style="color:#f92672">a</span>&gt;
+                        &lt;/<span style="color:#f92672">div</span>&gt;
+            {% endif %}
+                &lt;/<span style="color:#f92672">li</span>&gt;
+            &lt;/<span style="color:#f92672">ul</span>&gt;
+            &lt;/<span style="color:#f92672">div</span>&gt;
+        &lt;/<span style="color:#f92672">div</span>&gt;
+
+{% include &#39;modal.html&#39; %}
+</code></pre></div><ul>
+<li>modal.html을 작성 후 form action을 통해 만들어 놓은 sigin으로 보내어 로그인</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{% load static %}
+<span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span>&gt;
+&lt;<span style="color:#f92672">head</span>&gt;
+    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span>&gt;
+    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;viewport&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width=device-width, initial-scale=1.0&#34;</span>&gt;
+    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">http-equiv</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;X-UA-Compatible&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ie=edge&#34;</span>&gt;
+    &lt;<span style="color:#f92672">title</span>&gt;SIGN IN&lt;/<span style="color:#f92672">title</span>&gt;
+&lt;/<span style="color:#f92672">head</span>&gt;
+&lt;<span style="color:#f92672">body</span>&gt;
+    <span style="color:#75715e">&lt;!-- Modal --&gt;</span>
+&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;modal fade&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;SIGNIN&#34;</span> <span style="color:#a6e22e">tabindex</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;-1&#34;</span> <span style="color:#a6e22e">role</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;dialog&#34;</span> <span style="color:#a6e22e">aria-labelledby</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;SIGNINTitle&#34;</span> <span style="color:#a6e22e">aria-hidden</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;true&#34;</span>&gt;
+  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;modal-dialog modal-dialog-centered&#34;</span> <span style="color:#a6e22e">role</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;document&#34;</span>&gt;
+    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;modal-content&#34;</span>&gt;
+      &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;modal-header&#34;</span>&gt;
+        &lt;<span style="color:#f92672">h5</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;modal-title&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;SIGNINTitle&#34;</span>&gt;SIGN IN&lt;/<span style="color:#f92672">h5</span>&gt;
+        &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;button&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;close&#34;</span> <span style="color:#a6e22e">data-dismiss</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;modal&#34;</span> <span style="color:#a6e22e">aria-label</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Close&#34;</span>&gt;
+          &lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">aria-hidden</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;true&#34;</span>&gt;&amp;times;&lt;/<span style="color:#f92672">span</span>&gt;
+        &lt;/<span style="color:#f92672">button</span>&gt;
+      &lt;/<span style="color:#f92672">div</span>&gt;
+      &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;modal-body&#34;</span>&gt;
+            &lt;<span style="color:#f92672">form</span> <span style="color:#a6e22e">action</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{% url &#39;accounts:signin&#39; %}&#34;</span> <span style="color:#a6e22e">method</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;POST&#34;</span>&gt;
+            {% csrf_token %}
+            &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-row mb-3 mt-5&#34;</span>&gt;
+                &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;col-12&#34;</span>&gt;
+                    {% if error %}
+                    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;d-flex flex-row&#34;</span>&gt;
+                        &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;username&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mr-3&#34;</span>&gt;Username&lt;/<span style="color:#f92672">label</span>&gt;
+                        &lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text-danger p-0 m-0&#34;</span>&gt;{{ error }}&lt;/<span style="color:#f92672">p</span>&gt;
+                    &lt;/<span style="color:#f92672">div</span>&gt;
+                    {% else %}
+                    &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;username&#34;</span>&gt;Username&lt;/<span style="color:#f92672">label</span>&gt;
+                    {% endif %}
+                    &lt;<span style="color:#f92672">div</span>&gt;&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;text&#39;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;username&#39;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;username&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-control&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
+                &lt;/<span style="color:#f92672">div</span>&gt;
+            &lt;/<span style="color:#f92672">div</span>&gt;
+            &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-row mb-6&#34;</span>&gt;
+                &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;col-12&#34;</span>&gt;
+                    &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password&#34;</span>&gt;Password&lt;/<span style="color:#f92672">label</span>&gt;
+                    &lt;<span style="color:#f92672">div</span>&gt;&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;password&#39;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;password&#39;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-control&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
+                &lt;/<span style="color:#f92672">div</span>&gt;
+            &lt;/<span style="color:#f92672">div</span>&gt;
+            &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;modal-footer mt-5&#34;</span>&gt;
+                &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;button&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;btn btn-secondary&#34;</span> <span style="color:#a6e22e">data-dismiss</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;modal&#34;</span>&gt;Close&lt;/<span style="color:#f92672">button</span>&gt;
+                &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;submit&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;btn btn-primary&#34;</span>&gt;Sign In&lt;/<span style="color:#f92672">button</span>&gt;
+            &lt;/<span style="color:#f92672">div</span>&gt;
+            &lt;/<span style="color:#f92672">form</span>&gt;
+        &lt;/<span style="color:#f92672">div</span>&gt;
+    &lt;/<span style="color:#f92672">div</span>&gt;
+  &lt;/<span style="color:#f92672">div</span>&gt;
+&lt;/<span style="color:#f92672">div</span>&gt;
+&lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div>
+
+<footer class="footline">
+	
+</footer>
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="../js/clipboard.min.js?1586605249"></script>
+    <script src="../js/perfect-scrollbar.min.js?1586605249"></script>
+    <script src="../js/perfect-scrollbar.jquery.min.js?1586605249"></script>
+    <script src="../js/jquery.sticky.js?1586605249"></script>
+    <script src="../js/featherlight.min.js?1586605249"></script>
+    <script src="../js/highlight.pack.js?1586605249"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="../js/modernizr.custom-3.6.0.js?1586605249"></script>
+    <script src="../js/learn.js?1586605249"></script>
+    <script src="../js/hugo-learn.js?1586605249"></script>
+
+    <link href="../mermaid/mermaid.css?1586605249" rel="stylesheet" />
+    <script src="../mermaid/mermaid.js?1586605249"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    
+
+  </body>
+</html>
+
