@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>백준 문제풀이 on 여러가지</title>
+    <link>https://dongyeopgu.github.io/cont_2/baekjoon.html</link>
+    <description>Recent content in 백준 문제풀이 on 여러가지</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 11 Apr 2020 16:29:53 +0900</lastBuildDate>
+    
+	<atom:link href="https://dongyeopgu.github.io/cont_2/baekjoon/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>BAEKJOON - Python</title>
+      <link>https://dongyeopgu.github.io/cont_2/baekjoon/baekjoon.html</link>
+      <pubDate>Sat, 11 Apr 2020 14:29:53 +0900</pubDate>
+      
+      <guid>https://dongyeopgu.github.io/cont_2/baekjoon/baekjoon.html</guid>
+      <description>14890. 경사로 def slope(i, c):global anscnt = 1for j in range(0, N-1):d = a[i][j+1]-a[i][j] if c else a[j+1][i]-a[j][i]if d == 0:cnt += 1elif d == 1 and cnt &amp;gt;= L:cnt = 1elif d == -1 and cnt &amp;gt;= 0:cnt = -L+1else:returnif cnt &amp;gt;= 0:ans += 1def solve():for i in range(N):slope(i, 1)slope(i, 0)print(ans)N, L = map(int, input().</description>
+    </item>
+    
+  </channel>
+</rss>

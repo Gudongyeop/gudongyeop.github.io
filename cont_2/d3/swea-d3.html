@@ -12,20 +12,20 @@
     <title>SWEA - Python - D3 :: 여러가지</title>
 
     
-    <link href="../../css/nucleus.css?1586591096" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1586591096" rel="stylesheet">
-    <link href="../../css/hybrid.css?1586591096" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1586591096" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1586591096" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1586591096" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1586591096" rel="stylesheet">
-    <link href="../../css/theme.css?1586591096" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1586591096" rel="stylesheet">
+    <link href="../../css/nucleus.css?1586591824" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1586591824" rel="stylesheet">
+    <link href="../../css/hybrid.css?1586591824" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1586591824" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1586591824" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1586591824" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1586591824" rel="stylesheet">
+    <link href="../../css/theme.css?1586591824" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1586591824" rel="stylesheet">
     
-      <link href="../../css/theme-red.css?1586591096" rel="stylesheet">
+      <link href="../../css/theme-red.css?1586591824" rel="stylesheet">
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1586591096"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1586591824"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -90,14 +90,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1586591096"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1586591096"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1586591824"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1586591824"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/dongyeopgu.github.io\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1586591096"></script>
+<script type="text/javascript" src="../../js/search.js?1586591824"></script>
 
     
   </div>
@@ -158,6 +158,63 @@
           
           
         
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/cont_2/baekjoon.html" title="백준 문제풀이" class="dd-item 
+        
+        
+        
+        ">
+      <a href="../../cont_2/baekjoon.html">
+          백준 문제풀이
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/cont_2/baekjoon/baekjoon.html" title="BAEKJOON - Python" class="dd-item ">
+        <a href="../../cont_2/baekjoon/baekjoon.html">
+        BAEKJOON - Python
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
           
             
             
@@ -914,9 +971,29 @@ g <span style="color:#f92672">=</span> []
     result <span style="color:#f92672">=</span> sum(b[:k])
     <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;#{t+1} {result}&#34;</span>)
 </code></pre></div><h3 id="4522-세상의-모든-팰린드롬">4522. 세상의 모든 팰린드롬</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> range(int(input())):
+    a <span style="color:#f92672">=</span> list(input())
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(a)<span style="color:#f92672">//</span><span style="color:#ae81ff">2</span>):
+        <span style="color:#66d9ef">if</span> a[i] <span style="color:#f92672">!=</span> a[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span><span style="color:#f92672">-</span>i]:
+            <span style="color:#66d9ef">if</span> a[i] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;?&#39;</span> <span style="color:#f92672">or</span> a[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span><span style="color:#f92672">-</span>i] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;?&#39;</span>:
+                <span style="color:#66d9ef">continue</span>
+            <span style="color:#66d9ef">else</span>:
+                <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;#{t+1} Not exist&#34;</span>)
+                <span style="color:#66d9ef">break</span>
+    <span style="color:#66d9ef">else</span>:
+        <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;#{t+1} Exist&#34;</span>)
 </code></pre></div><h3 id="4579-세상의-모든-팰린드롬2">4579. 세상의 모든 팰린드롬2</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> range(int(input())):
+    a <span style="color:#f92672">=</span> list(input())
+    result <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Exist&#39;</span>
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(a)<span style="color:#f92672">//</span><span style="color:#ae81ff">2</span>):
+        <span style="color:#66d9ef">if</span> a[i] <span style="color:#f92672">!=</span> a[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span><span style="color:#f92672">-</span>i]:
+            <span style="color:#66d9ef">if</span> a[i] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;*&#39;</span> <span style="color:#f92672">or</span> a[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span><span style="color:#f92672">-</span>i] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;*&#39;</span>:
+                <span style="color:#66d9ef">break</span>
+            <span style="color:#66d9ef">else</span>:
+                result <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Not exist&#39;</span>
+                <span style="color:#66d9ef">break</span>
+    <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;#{t+1} {result}&#34;</span>)
 </code></pre></div><h3 id="4615-재미있는-오셀로-게임">4615. 재미있는 오셀로 게임</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">limit</span>(a, b, n):
     <span style="color:#66d9ef">if</span> a <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">and</span> a <span style="color:#f92672">&lt;</span> n <span style="color:#f92672">and</span> b <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">and</span> b <span style="color:#f92672">&lt;</span> n:
@@ -1313,6 +1390,38 @@ g <span style="color:#f92672">=</span> []
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
                     
                 
                 
@@ -1413,19 +1522,19 @@ g <span style="color:#f92672">=</span> []
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1586591096"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1586591096"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1586591096"></script>
-    <script src="../../js/jquery.sticky.js?1586591096"></script>
-    <script src="../../js/featherlight.min.js?1586591096"></script>
-    <script src="../../js/highlight.pack.js?1586591096"></script>
+    <script src="../../js/clipboard.min.js?1586591824"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1586591824"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1586591824"></script>
+    <script src="../../js/jquery.sticky.js?1586591824"></script>
+    <script src="../../js/featherlight.min.js?1586591824"></script>
+    <script src="../../js/highlight.pack.js?1586591824"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1586591096"></script>
-    <script src="../../js/learn.js?1586591096"></script>
-    <script src="../../js/hugo-learn.js?1586591096"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1586591824"></script>
+    <script src="../../js/learn.js?1586591824"></script>
+    <script src="../../js/hugo-learn.js?1586591824"></script>
 
-    <link href="../../mermaid/mermaid.css?1586591096" rel="stylesheet" />
-    <script src="../../mermaid/mermaid.js?1586591096"></script>
+    <link href="../../mermaid/mermaid.css?1586591824" rel="stylesheet" />
+    <script src="../../mermaid/mermaid.js?1586591824"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
