@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>D3 문제풀이 on 여러가지</title>
-    <link>dognyeopgu.github.io/cont_2/d3.html</link>
+    <link>dongyeopgu.github.io/cont_2/d3.html</link>
     <description>Recent content in D3 문제풀이 on 여러가지</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 11 Apr 2020 14:29:53 +0900</lastBuildDate>
     
-	<atom:link href="dognyeopgu.github.io/cont_2/d3/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="dongyeopgu.github.io/cont_2/d3/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>D3. 1240, 1289, 1491</title>
-      <link>dognyeopgu.github.io/cont_2/d3/d3-1240-1289-1491.html</link>
+      <link>dongyeopgu.github.io/cont_2/d3/d3-1240-1289-1491.html</link>
       <pubDate>Sat, 11 Apr 2020 14:29:53 +0900</pubDate>
       
-      <guid>dognyeopgu.github.io/cont_2/d3/d3-1240-1289-1491.html</guid>
+      <guid>dongyeopgu.github.io/cont_2/d3/d3-1240-1289-1491.html</guid>
       <description>1240. 단순 2진 암호코드 for t in range(int(input())):n = int(input())arr = [0]*ncnt = 0a = list(input().split())for i in a:flag = 0for j in i:if not flag and j.isupper():flag = 1elif j.isdigit() or (flag and j.isupper()):flag = 0breakif flag:arr[cnt] += 1if (&amp;#39;.&amp;#39; in i) or (&amp;#39;!&amp;#39; in i) or (&amp;#39;?&amp;#39; in i):cnt += 1print(f&amp;#34;#{t+1} {&amp;#39; &amp;#39;.</description>
     </item>
     
