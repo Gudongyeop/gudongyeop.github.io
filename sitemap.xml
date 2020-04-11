@@ -28,7 +28,6 @@
   
   <url>
     <loc>https://dongyeopgu.github.io/cont.html</loc>
-    <lastmod>2020-04-11T14:28:16+09:00</lastmod>
   </url>
   
   <url>
@@ -62,6 +61,14 @@
   
   <url>
     <loc>https://dongyeopgu.github.io/cont/django_crud.html</loc>
+  </url>
+  
+  <url>
+    <loc>https://dongyeopgu.github.io/cont/django_paginator.html</loc>
+  </url>
+  
+  <url>
+    <loc>https://dongyeopgu.github.io/cont/django_login.html</loc>
   </url>
   
   <url>
