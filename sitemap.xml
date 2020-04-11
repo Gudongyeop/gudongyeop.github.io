@@ -12,6 +12,10 @@
   </url>
   
   <url>
+    <loc>https://dongyeopgu.github.io/cont/django_start.html</loc>
+  </url>
+  
+  <url>
     <loc>https://dongyeopgu.github.io/cont_2.html</loc>
     <lastmod>2020-04-11T15:29:53+09:00</lastmod>
   </url>
@@ -22,12 +26,24 @@
   </url>
   
   <url>
+    <loc>https://dongyeopgu.github.io/cont/django_crud.html</loc>
+  </url>
+  
+  <url>
     <loc>https://dongyeopgu.github.io/cont_2/d4.html</loc>
     <lastmod>2020-04-11T15:29:53+09:00</lastmod>
   </url>
   
   <url>
+    <loc>https://dongyeopgu.github.io/cont/django_paginator.html</loc>
+  </url>
+  
+  <url>
     <loc>https://dongyeopgu.github.io/cont.html</loc>
+  </url>
+  
+  <url>
+    <loc>https://dongyeopgu.github.io/cont/django_login.html</loc>
   </url>
   
   <url>
@@ -57,22 +73,6 @@
   
   <url>
     <loc>https://dongyeopgu.github.io/categories.html</loc>
-  </url>
-  
-  <url>
-    <loc>https://dongyeopgu.github.io/cont/django_crud.html</loc>
-  </url>
-  
-  <url>
-    <loc>https://dongyeopgu.github.io/cont/django_paginator.html</loc>
-  </url>
-  
-  <url>
-    <loc>https://dongyeopgu.github.io/cont/django_login.html</loc>
-  </url>
-  
-  <url>
-    <loc>https://dongyeopgu.github.io/cont/django_start.html</loc>
   </url>
   
   <url>
