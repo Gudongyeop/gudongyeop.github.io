@@ -20,5 +20,50 @@
       <description>1240. 단순 2진 암호코드 for t in range(int(input())):n = int(input())arr = [0]*ncnt = 0a = list(input().split())for i in a:flag = 0for j in i:if not flag and j.isupper():flag = 1elif j.isdigit() or (flag and j.isupper()):flag = 0breakif flag:arr[cnt] += 1if (&amp;#39;.&amp;#39; in i) or (&amp;#39;!&amp;#39; in i) or (&amp;#39;?&amp;#39; in i):cnt += 1print(f&amp;#34;#{t+1} {&amp;#39; &amp;#39;.</description>
     </item>
     
+    <item>
+      <title>D3. 1493, 1860, 1873</title>
+      <link>https://dongyeopgu.github.io/cont_2/d3/d3-1493-1860-1873.html</link>
+      <pubDate>Sat, 11 Apr 2020 14:29:53 +0900</pubDate>
+      
+      <guid>https://dongyeopgu.github.io/cont_2/d3/d3-1493-1860-1873.html</guid>
+      <description>1493. 수의 새로운 연산 for test_case in range(int(input())):p, q = map(int, input().split())mapping = [[0 for i in range(300)]for j in range(300)]a = 1p_x = 0p_y = 0q_x = 0q_y = 0for i in range(599):for j in range(300):if 300 &amp;gt; i - j &amp;gt;= 0:mapping[i-j][j] = aa += 1for i in range(300):if p in mapping[i]:p_y = mapping[i].</description>
+    </item>
+    
+    <item>
+      <title>D3. 2805, 2814, 2817</title>
+      <link>https://dongyeopgu.github.io/cont_2/d3/d3-2805-2814-2817.html</link>
+      <pubDate>Sat, 11 Apr 2020 14:29:53 +0900</pubDate>
+      
+      <guid>https://dongyeopgu.github.io/cont_2/d3/d3-2805-2814-2817.html</guid>
+      <description>2805. 농작물 수확하기 for t in range(int(input())):N = int(input())farm = [list(map(int, input()))for i in range(N)]base_sum = sum(farm[N//2])for i in range(N//2):base_sum += sum(farm[i][N//2-i:N//2+i+1])for i in range(N//2+1,N):base_sum += sum(farm[i][i-N//2:N-(i-N//2)])print(f&amp;#34;#{t+1} {base_sum}&amp;#34;)2814. 최장 경로 def dfs(a,b):visit[a] = 1result.append(b)for i in node[a]:if visit[i] == 0:dfs(i,b+1)visit[i] = 0for t in range(int(input())):n, m = map(int, input().split())node = dict()for i in range(1,n+1):node[i] = []for i in range(m):a, b = map(int, input().</description>
+    </item>
+    
+    <item>
+      <title>D3. 2948, 3032, 3131, 3142, 3233</title>
+      <link>https://dongyeopgu.github.io/cont_2/d3/d3-2948-3032-3142.html</link>
+      <pubDate>Sat, 11 Apr 2020 14:29:53 +0900</pubDate>
+      
+      <guid>https://dongyeopgu.github.io/cont_2/d3/d3-2948-3032-3142.html</guid>
+      <description>2948. 문자열 교집합 for t in range(int(input())):N, M = map(int,input().split())set_1 = set(input().split())set_2 = set(input().split())result = set_1&amp;amp;set_2print(f&amp;#34;#{t+1} {len(result)}&amp;#34;)3032. 홍준이의 숫자 놀이 def gcd(a, b):x,y, u,v = 0,1, 1,0while a != 0:q, r = b//a, b%am, n = x-u*q, y-v*qb,a, x,y, u,v = a,r, u,v, m,nreturn [x, y]for t in range(int(input())):A, B = map(int, input().split())print(f&amp;#34;#{t+1} {&amp;#39; &amp;#39;.join(map(str, gcd(A,B)))}&amp;#34;)3131.</description>
+    </item>
+    
+    <item>
+      <title>D3. 3260, 3304, 3307</title>
+      <link>https://dongyeopgu.github.io/cont_2/d3/d3-3260-3282-3314.html</link>
+      <pubDate>Sat, 11 Apr 2020 14:29:53 +0900</pubDate>
+      
+      <guid>https://dongyeopgu.github.io/cont_2/d3/d3-3260-3282-3314.html</guid>
+      <description>3260. 두 수의 덧셈 for t in range(int(input())):N = int(input())farm = [list(map(int, input()))for i in range(N)]base_sum = sum(farm[N//2])for i in range(N//2):base_sum += sum(farm[i][N//2-i:N//2+i+1])for i in range(N//2+1,N):base_sum += sum(farm[i][i-N//2:N-(i-N//2)])print(f&amp;#34;#{t+1} {base_sum}&amp;#34;)3304. 최장 공통 부분 def lcs(a,b):arr = [[0 for _ in range(len(b)+2)]for _ in range(len(a)+2)]for i in range(1,len(a)+1):for j in range(1,len(b)+1):if a[i-1] == b[j-1]:arr[i][j] = arr[i-1][j-1]+1else:arr[i][j] = max(arr[i-1][j],arr[i][j-1])return arr[len(a)][len(b)]for t in range(int(input())):a, b = map(str, input().</description>
+    </item>
+    
+    <item>
+      <title>D3. 3282, 3314, 3376, 3408, 3431</title>
+      <link>https://dongyeopgu.github.io/cont_2/d3/d3-3282-3314-3376.html</link>
+      <pubDate>Sat, 11 Apr 2020 14:29:53 +0900</pubDate>
+      
+      <guid>https://dongyeopgu.github.io/cont_2/d3/d3-3282-3314-3376.html</guid>
+      <description>3282. 0/1 Knapsack def sol(k,n):a = [[0 for _ in range(k+2)]for _ in range(n+2)]for i in range(1,n+1):for j in range(1,k+1):if v_list[i-1] &amp;gt; j:a[i][j] = a[i-1][j]else:a[i][j] = max(c_list[i-1]+a[i-1][j-v_list[i-1]], a[i-1][j])return a[n][k]for t in range(int(input())):N, K = map(int, input().split())sack = [list(map(int, input().split()))for _ in range(N)]v_list = []c_list = []for i in range(N):v_list.append(sack[i][0])c_list.append(sack[i][1])print(f&amp;#34;#{t+1} {sol(K,N)}&amp;#34;)3314. 보충학습과 평균 for t in range(int(input())):score = list(map(int, input().</description>
+    </item>
+    
   </channel>
 </rss>
