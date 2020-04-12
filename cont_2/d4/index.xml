@@ -6,19 +6,9 @@
     <description>Recent content in D4 문제풀이 on 여러가지</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 11 Apr 2020 15:29:53 +0900</lastBuildDate>
     
 	<atom:link href="https://dongyeopgu.github.io/cont_2/d4/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>SWEA - Python - 모의 테스트</title>
-      <link>https://dongyeopgu.github.io/cont_2/d4/swea_%EB%AA%A8%EC%9D%98-%ED%85%8C%EC%8A%A4%ED%8A%B8.html</link>
-      <pubDate>Sat, 11 Apr 2020 15:29:53 +0900</pubDate>
-      
-      <guid>https://dongyeopgu.github.io/cont_2/d4/swea_%EB%AA%A8%EC%9D%98-%ED%85%8C%EC%8A%A4%ED%8A%B8.html</guid>
-      <description>1949. 등산로 조성 dt = [(1,0), (0,1), (-1,0), (0,-1)]def sol(x,y,b,cnt=1):global max_rif max_r &amp;lt; cnt:max_r = cntvisit[x][y] = 1for d in dt:dx, dy = x + d[0], y + d[1]if not (0 &amp;lt;= dx &amp;lt; n and 0 &amp;lt;= dy &amp;lt; n) or visit[dx][dy] == 1:continueif Map[x][y] &amp;gt; Map[dx][dy]:sol(dx,dy,b,cnt+1)elif b &amp;gt; 0 and Map[x][y] &amp;gt; Map[dx][dy] - k:temp = Map[dx][dy]Map[dx][dy] = Map[x][y] - 1sol(dx,dy,0,cnt+1)Map[dx][dy] = tempvisit[x][y] = 0for t in range(int(input())):n, k = map(int, input().</description>
-    </item>
     
     <item>
       <title>SWEA - Python - D4</title>
@@ -27,6 +17,15 @@
       
       <guid>https://dongyeopgu.github.io/cont_2/d4/swea-d4.html</guid>
       <description>1210. Ladder1 for _ in range(10):T = input()ladder = [list(map(int, input().split()))for _ in range(100)]j = 0for x in range(100):if ladder[99][x] == 2:j = xstart_p = 0i = 99while i &amp;gt;= 0:if j - 1 &amp;gt;= 0 and ladder[i][j-1] == 1:while 0 &amp;lt;= j - 1 &amp;lt; 100 and ladder[i][j-1] == 1:j -= 1elif j + 1 &amp;lt; 100 and ladder[i][j+1] == 1:while 0 &amp;lt;= j + 1 &amp;lt; 100 and ladder[i][j+1] == 1:j += 1i -= 1print(f&amp;#34;#{T} {j}&amp;#34;)1211.</description>
+    </item>
+    
+    <item>
+      <title>SWEA - Python - 모의 테스트</title>
+      <link>https://dongyeopgu.github.io/cont_2/d4/swea_%EB%AA%A8%EC%9D%98-%ED%85%8C%EC%8A%A4%ED%8A%B8.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dongyeopgu.github.io/cont_2/d4/swea_%EB%AA%A8%EC%9D%98-%ED%85%8C%EC%8A%A4%ED%8A%B8.html</guid>
+      <description>1949. 등산로 조성 dt = [(1,0), (0,1), (-1,0), (0,-1)]def sol(x,y,b,cnt=1):global max_rif max_r &amp;lt; cnt:max_r = cntvisit[x][y] = 1for d in dt:dx, dy = x + d[0], y + d[1]if not (0 &amp;lt;= dx &amp;lt; n and 0 &amp;lt;= dy &amp;lt; n) or visit[dx][dy] == 1:continueif Map[x][y] &amp;gt; Map[dx][dy]:sol(dx,dy,b,cnt+1)elif b &amp;gt; 0 and Map[x][y] &amp;gt; Map[dx][dy] - k:temp = Map[dx][dy]Map[dx][dy] = Map[x][y] - 1sol(dx,dy,0,cnt+1)Map[dx][dy] = tempvisit[x][y] = 0for t in range(int(input())):n, k = map(int, input().</description>
     </item>
     
   </channel>
