@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>pagination on 여러가지</title>
+    <link>https://dongyeopgu.github.io/tags/pagination.html</link>
+    <description>Recent content in pagination on 여러가지</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://dongyeopgu.github.io/tags/pagination/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Django Paginator</title>
+      <link>https://dongyeopgu.github.io/cont/django_paginator.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dongyeopgu.github.io/cont/django_paginator.html</guid>
+      <description>Paginator 사용하기   게시판 같은 곳에서 리스트의 양이 많아 질 경우 나누어 보여주기 위해서 사용
+여기 적힌 예에서 model은 Review 이고 forms는 ReviewForm이다.
+bootstrap을 사용했음.
+ 1. views.py에 내용 추가하기 from django.core.paginator import Paginatordef review_list(request):reviews = Review.objects.order_by(&amp;#39;-pk&amp;#39;)paginator = Paginator(reviews, 5) #한 페이지 당 몇개 씩 보여줄 지 지정 page_number = request.GET.get(&amp;#39;page&amp;#39;)page_obj = paginator.get_page(page_number)reviews_all = get_list_or_404(Review) #전체 개수를 보기 위해 total_count = len(reviews_all)	# 리뷰의 총 개수  total_page = total_count//5	# 리뷰 총 개수 / 한 페이지에 보여줄 수 page_range = range(1,total_page+1)context = {&amp;#39;reviews&amp;#39;: reviews,&amp;#39;page_obj&amp;#39;: page_obj,&amp;#39;page_range&amp;#39;: page_range,}return render(request, &amp;#39;앱이름/review_list.</description>
+    </item>
+    
+  </channel>
+</rss>
