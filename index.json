@@ -16,21 +16,21 @@
 {
 	"uri": "https://dongyeopgu.github.io/cont_2/baekjoon.html",
 	"title": "백준 문제풀이",
-	"tags": [],
+	"tags": ["백준", "baekjoon"],
 	"description": "",
 	"content": "BAEKJOON 의 알고리즘 문제  BAEKJOON 답  "
 },
 {
 	"uri": "https://dongyeopgu.github.io/cont_2.html",
 	"title": "Algorithm 문제풀이",
-	"tags": [],
+	"tags": ["백준", "baekjoon", "SWEA"],
 	"description": "",
 	"content": "여러가지 Algorithm 풀이 Python으로 푼 알고리즘 답 모음  SWEA D3 SWEA D4 백준  "
 },
 {
 	"uri": "https://dongyeopgu.github.io/cont_2/d3.html",
 	"title": "D3 문제풀이",
-	"tags": [],
+	"tags": ["SWEA"],
 	"description": "",
 	"content": "SW Expert Academy의 Python D3 문제  D3 답  "
 },
@@ -44,7 +44,7 @@
 {
 	"uri": "https://dongyeopgu.github.io/cont_2/d4.html",
 	"title": "D4 문제풀이",
-	"tags": [],
+	"tags": ["SWEA"],
 	"description": "",
 	"content": "SW Expert Academy의 Python D4 문제  D4 답 모의 테스트 답  "
 },
@@ -81,7 +81,7 @@
 	"title": "Hugo Blog",
 	"tags": ["hugo", "hugo-theme-learn", "blog"],
 	"description": "",
-	"content": "Hugo로 Github Blog 만들기   "
+	"content": "Hugo로 Github Blog 만들기   구글링을 하다보면 Github Page에 만든 블로그를 많이 접했고, 만들면 좋겠다고 생각. hugo를 사용한 이유는 Jekyll는 hugo에 비해 반응속도가 느리다는 글을 보았고 직접 느끼기에도 느렸기 때문이다.   "
 },
 {
 	"uri": "https://dongyeopgu.github.io/tags/blog.html",

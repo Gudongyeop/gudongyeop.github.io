@@ -11,6 +11,33 @@
     
     
     <item>
+      <title>Algorithm 문제풀이</title>
+      <link>https://dongyeopgu.github.io/cont_2.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dongyeopgu.github.io/cont_2.html</guid>
+      <description>여러가지 Algorithm 풀이 Python으로 푼 알고리즘 답 모음  SWEA D3 SWEA D4 백준  </description>
+    </item>
+    
+    <item>
+      <title>D3 문제풀이</title>
+      <link>https://dongyeopgu.github.io/cont_2/d3.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dongyeopgu.github.io/cont_2/d3.html</guid>
+      <description>SW Expert Academy의 Python D3 문제  D3 답  </description>
+    </item>
+    
+    <item>
+      <title>D4 문제풀이</title>
+      <link>https://dongyeopgu.github.io/cont_2/d4.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dongyeopgu.github.io/cont_2/d4.html</guid>
+      <description>SW Expert Academy의 Python D4 문제  D4 답 모의 테스트 답  </description>
+    </item>
+    
+    <item>
       <title>SWEA - Python - D3</title>
       <link>https://dongyeopgu.github.io/cont_2/d3/swea-d3.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
