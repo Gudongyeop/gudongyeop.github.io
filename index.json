@@ -77,6 +77,48 @@
 	"content": "Today I Learned - 단순 기록 "
 },
 {
+	"uri": "https://dongyeopgu.github.io/hugo-blog.html",
+	"title": "Hugo Blog",
+	"tags": ["hugo", "hugo-theme-learn", "blog"],
+	"description": "",
+	"content": "Hugo로 Github Blog 만들기   "
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/blog.html",
+	"title": "blog",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/",
+	"title": "Dongyeop&#39;s Blog",
+	"tags": [],
+	"description": "",
+	"content": "여러가지 해보는 중 "
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/hugo.html",
+	"title": "hugo",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/hugo-theme-learn.html",
+	"title": "hugo-theme-learn",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags.html",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "https://dongyeopgu.github.io/tags/20.04.13.html",
 	"title": "20.04.13",
 	"tags": [],
@@ -147,13 +189,6 @@
 	"content": ""
 },
 {
-	"uri": "https://dongyeopgu.github.io/",
-	"title": "Dongyeop&#39;s Blog",
-	"tags": [],
-	"description": "",
-	"content": "여러가지 해보는 중 "
-},
-{
 	"uri": "https://dongyeopgu.github.io/tags/pagination.html",
 	"title": "pagination",
 	"tags": [],
@@ -222,13 +257,6 @@
 	"tags": ["SWEA", "모의SW 테스트"],
 	"description": "",
 	"content": "1949. 등산로 조성 dt = [(1,0), (0,1), (-1,0), (0,-1)]\rdef sol(x,y,b,cnt=1):\rglobal max_r\rif max_r \u0026lt; cnt:\rmax_r = cnt\rvisit[x][y] = 1\rfor d in dt:\rdx, dy = x + d[0], y + d[1]\rif not (0 \u0026lt;= dx \u0026lt; n and 0 \u0026lt;= dy \u0026lt; n) or visit[dx][dy] == 1:\rcontinue\rif Map[x][y] \u0026gt; Map[dx][dy]:\rsol(dx,dy,b,cnt+1)\relif b \u0026gt; 0 and Map[x][y] \u0026gt; Map[dx][dy] - k:\rtemp = Map[dx][dy]\rMap[dx][dy] = Map[x][y] - 1\rsol(dx,dy,0,cnt+1)\rMap[dx][dy] = temp\rvisit[x][y] = 0\rfor t in range(int(input())):\rn, k = map(int, input().split())\rMap = [list(map(int, input().split()))for _ in range(n)]\rvisit = [[0 for _ in range(n)]for _ in range(n)]\rtop_height = 0\rtop_idx = []\rfor i in range(n):\rif top_height \u0026lt; max(Map[i]):\rtop_height = max(Map[i])\rfor i in range(n):\rfor j in range(n):\rif Map[i][j] == top_height:\rtop_idx.append((i,j))\rmax_r = 0\rfor top in top_idx:\rsol(top[0],top[1],1)\rprint(f\u0026#34;#{t+1} {max_r}\u0026#34;)\r1953. 탈주범 검거 dx = [0,0,-1,1]\rdy = [-1,1,0,0]\rtunnel_type = {\r1:[[1,3,4,5],[1,3,6,7],[1,2,5,6],[1,2,4,7]],\r2:[[],[],[1,2,5,6],[1,2,4,7]],\r3:[[1,3,4,5],[1,3,6,7],[],[]],\r4:[[],[1,3,6,7],[1,2,5,6],[]],\r5:[[],[1,3,6,7],[],[1,2,4,7]],\r6:[[1,3,4,5],[],[],[1,2,4,7]],\r7:[[1,3,4,5],[],[1,2,5,6],[]]\r}\rfor t in range(int(input())):\rn, m, r, c, l = map(int, input().split())\rtunnel = [list(map(int, input().split()))for _ in range(n)]\rcnt = 1\rstart = [(r,c)]\rtime = 1\rwhile True:\rif time == l:\rbreak\rfor i in range(len(start)):\ra = start.pop(0)\rfor j in range(4):\rif tunnel_type[tunnel[a[0]][a[1]]][j]:\rif 0 \u0026lt;= a[0]+dx[j] \u0026lt; n and 0 \u0026lt;= a[1]+dy[j] \u0026lt; m and tunnel[a[0]+dx[j]][a[1]+dy[j]] != 0:\rif tunnel[a[0]+dx[j]][a[1]+dy[j]] in tunnel_type[tunnel[a[0]][a[1]]][j]:\rif (a[0]+dx[j],a[1]+dy[j]) not in start:\rstart.append((a[0]+dx[j],a[1]+dy[j]))\rcnt += 1\rtunnel[a[0]][a[1]] = 0\rtime += 1\rprint(f\u0026#34;#{t+1} {cnt}\u0026#34;)\r4008. 숫자 만들기 def cal(i, numbs):\rglobal max_value, min_value\rif i == n:\rmax_value = max(max_value, numbs)\rmin_value = min(min_value, numbs)\relse:\rif operator[0] != 0:\roperator[0] -= 1\rcal(i+1, numbs + numbers[i])\roperator[0] += 1\rif operator[1] != 0:\roperator[1] -= 1\rcal(i+1, numbs - numbers[i])\roperator[1] += 1\rif operator[2] != 0:\roperator[2] -= 1\rcal(i+1, numbs * numbers[i])\roperator[2] += 1\rif operator[3] != 0:\roperator[3] -= 1\rif numbs \u0026lt; 0 and numbs%numbers[i]:\rcal(i+1, numbs//numbers[i]+1)\relse:\rcal(i+1, numbs//numbers[i])\roperator[3] += 1\rfor t in range(int(input())):\rn = int(input())\roperator = list(map(int, input().split()))\rnumbers = list(map(int, input().split()))\rmin_value = 100000000\rmax_value = -100000000\rcal(1,numbers[0])\rprint(f\u0026#34;#{t+1} {max_value - min_value}\u0026#34;)\r5650. 핀볼 게임 # 방향 상 좌 하 우\r dx = (-1, 0, 1, 0)\rdy = (0, -1, 0, 1)\r# 1번 블록 : 상 \u0026gt; 하, 좌 \u0026gt; 상, 하 \u0026gt; 우, 우 \u0026gt; 좌\r block = ((2, -1, 1, -2), (3, 1, -2, -2), (1, 2, -2, -1), (2, 2, -1, -3), (2, 2, -2, -2))\rdef sol(x,y,d):\rglobal result, n\rcnt = 0\rnx = x\rny = y\rwhile True:\rnx += dx[d]\rny += dy[d]\rif not (n \u0026gt; nx \u0026gt;= 0 and n \u0026gt; ny \u0026gt;= 0): # 벽 만났을 때 튕김(방향은 반대로)\r d = (d + 2) % 4\rcnt += 1\relse: if game_board[nx][ny] == -1 or (nx == x and ny == y):\rresult = max(cnt, result)\rreturn\relif game_board[nx][ny] == 0:\rcontinue\relif 0\u0026lt;game_board[nx][ny] \u0026lt; 6: # 블록 만났을 때\r d += block[game_board[nx][ny]-1][d]\rcnt += 1\relse:\rfor a, b in warmhole[game_board[nx][ny]]: # 웜홀 만났을때 인덱스 변경\r if nx != a or ny != b:\rnx = a\rny = b\rbreak\rfor t in range(int(input())):\rn = int(input())\rgame_board = [list(map(int, input().split()))for _ in range(n)]\rwarmhole = {6:[],7:[],8:[],9:[],10:[]}\rfor i in range(n):\rfor j in range(n):\rif game_board[i][j] \u0026gt; 5:\rwarmhole[game_board[i][j]].append((i,j))\rresult = 0\rfor i in range(n):\rfor j in range(n):\rif game_board[i][j] == 0:\rfor k in range(4):\rsol(i,j,k)\rprint(f\u0026#34;#{t+1} {result}\u0026#34;)\r"
-},
-{
-	"uri": "https://dongyeopgu.github.io/tags.html",
-	"title": "Tags",
-	"tags": [],
-	"description": "",
-	"content": ""
 },
 {
 	"uri": "https://dongyeopgu.github.io/tags/til.html",
