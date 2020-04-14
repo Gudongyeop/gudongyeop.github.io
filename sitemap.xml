@@ -27,15 +27,16 @@
   </url>
   
   <url>
+    <loc>https://dongyeopgu.github.io/cont.html</loc>
+    <lastmod>2020-04-14T16:15:29+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://dongyeopgu.github.io/cont_2/d4.html</loc>
   </url>
   
   <url>
     <loc>https://dongyeopgu.github.io/cont/django_paginator.html</loc>
-  </url>
-  
-  <url>
-    <loc>https://dongyeopgu.github.io/cont.html</loc>
   </url>
   
   <url>
@@ -47,17 +48,47 @@
   </url>
   
   <url>
+    <loc>https://dongyeopgu.github.io/cont/django_change_user.html</loc>
+    <lastmod>2020-04-14T16:15:29+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://dongyeopgu.github.io/hugo-blog.html</loc>
     <lastmod>2020-04-13T21:55:45+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dongyeopgu.github.io/tags/blog.html</loc>
-    <lastmod>2020-04-13T22:13:54+09:00</lastmod>
+    <loc>https://dongyeopgu.github.io/tags/django.html</loc>
+    <lastmod>2020-04-14T16:15:29+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://dongyeopgu.github.io/</loc>
+    <lastmod>2020-04-14T16:15:29+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dongyeopgu.github.io/tags/sign-in.html</loc>
+    <lastmod>2020-04-14T16:15:29+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dongyeopgu.github.io/tags/sign-out.html</loc>
+    <lastmod>2020-04-14T16:15:29+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dongyeopgu.github.io/tags/sign-up.html</loc>
+    <lastmod>2020-04-14T16:15:29+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dongyeopgu.github.io/tags.html</loc>
+    <lastmod>2020-04-14T16:15:29+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dongyeopgu.github.io/tags/blog.html</loc>
     <lastmod>2020-04-13T22:13:54+09:00</lastmod>
   </url>
   
@@ -68,11 +99,6 @@
   
   <url>
     <loc>https://dongyeopgu.github.io/hugo-blog/hugo-blog-start.html</loc>
-    <lastmod>2020-04-13T22:13:54+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://dongyeopgu.github.io/tags.html</loc>
     <lastmod>2020-04-13T22:13:54+09:00</lastmod>
   </url>
   
@@ -126,10 +152,6 @@
   </url>
   
   <url>
-    <loc>https://dongyeopgu.github.io/tags/django.html</loc>
-  </url>
-  
-  <url>
     <loc>https://dongyeopgu.github.io/tags/pagination.html</loc>
   </url>
   
@@ -139,18 +161,6 @@
   
   <url>
     <loc>https://dongyeopgu.github.io/tags/read.html</loc>
-  </url>
-  
-  <url>
-    <loc>https://dongyeopgu.github.io/tags/sign-in.html</loc>
-  </url>
-  
-  <url>
-    <loc>https://dongyeopgu.github.io/tags/sign-out.html</loc>
-  </url>
-  
-  <url>
-    <loc>https://dongyeopgu.github.io/tags/sign-up.html</loc>
   </url>
   
   <url>
