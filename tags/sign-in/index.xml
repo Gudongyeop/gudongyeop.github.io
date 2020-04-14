@@ -6,12 +6,13 @@
     <description>Recent content in sign in on 여러가지</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Tue, 14 Apr 2020 16:15:29 +0900</lastBuildDate>
     
 	<atom:link href="https://dongyeopgu.github.io/tags/sign-in/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Django User</title>
+      <title>Django User (1)</title>
       <link>https://dongyeopgu.github.io/cont/django_login.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -20,6 +21,18 @@
 model을 만들 필요 없이 django에서 제공하는 user 모델을 사용함
 bootstrap 사용을 기반으로 작성함
  1. accounts라는 새로운 app을 작성 2. 기본 제공되는 User 모델을 사용하기 때문에 forms.py만 작성 from django.forms import ModelFormfrom django.contrib.auth.models import User # django에서 기본 제공하는 model이 있음. from django import formsclass SignupForm(ModelForm): #회원가입을 제공하는 class이다. username = forms.CharField(max_length=20,min_length=6,widget=forms.TextInput(attrs={&amp;#39;class&amp;#39;: &amp;#39;form-control&amp;#39;}))password = forms.</description>
+    </item>
+    
+    <item>
+      <title>Django User (2)</title>
+      <link>https://dongyeopgu.github.io/cont/django_change_user.html</link>
+      <pubDate>Tue, 14 Apr 2020 16:15:29 +0900</pubDate>
+      
+      <guid>https://dongyeopgu.github.io/cont/django_change_user.html</guid>
+      <description>User 관리(change, customizing)   customizing 방법은 여러가지가 있지만, 앞서 사용했던 방법과 다르게 여기서는 AbstractUser를 상속 받아서 User를 customizing후 사용함
+UserChangeForm도 마찬가지로 ChangeForm을 상속받아 customizing 해서 사용함
+bootstrap을 사용하기 위해 widget에 attrs도 추가
+ 1. models.py에서 AbstractUser를 상속 from django.db import models from django.contrib.auth.models import AbstractUser # AbstractUser를 가져옴 # Create your models here. class User(AbstractUser): # User 모델을 AbstractUser 상속받음 # 추가할 내용을 작성 Korean_name = models.CharField(max_length=20, blank=True) address = models.</description>
     </item>
     
   </channel>
