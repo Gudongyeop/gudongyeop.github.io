@@ -70,7 +70,19 @@ bootstrap 사용을 기반으로 작성함
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://dongyeopgu.github.io/til/20.04.13.html</guid>
-      <description>  오늘 배운 것들  Django에서 기본 제공하는 User 모델을 이용 이를 이용하여 회원가입, 정보 수정하는 방법    </description>
+      <description>  오늘 배운 것들   Django에서 기본 제공하는 User 모델을 이용
+  이를 이용하여 회원가입, 정보 수정하는 방법
+  회원가입시 Django에서 제공하는 UserCreationForm을 사용
+ UserCreationForm은 기본적으로 username과 password1, 2를 입력받음      </description>
+    </item>
+    
+    <item>
+      <title>2020.04.14</title>
+      <link>https://dongyeopgu.github.io/til/20.04.14.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dongyeopgu.github.io/til/20.04.14.html</guid>
+      <description>오늘 배운 것들  Django  User 모델을 사용하는 것보다 get_user_model 메서드를 사용하는 것을 추천 get_user_model이 더 유연하게 사용할 수 있음. 커스터마이징을 했을 경우에도 쉽게 사용가능 로그인을위해 AuthenticationForm을 사용   HTTP는 connectless, stateless 그렇기 때문에 정보를 쿠키에 저장  </description>
     </item>
     
     <item>

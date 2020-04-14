@@ -133,11 +133,25 @@
 	"content": ""
 },
 {
+	"uri": "https://dongyeopgu.github.io/tags/20.04.14.html",
+	"title": "20.04.14",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "https://dongyeopgu.github.io/til/20.04.13.html",
 	"title": "2020.04.13 다시 기록 시작",
 	"tags": ["TIL", "20.04.13"],
 	"description": "",
-	"content": "  오늘 배운 것들  Django에서 기본 제공하는 User 모델을 이용 이를 이용하여 회원가입, 정보 수정하는 방법    "
+	"content": "  오늘 배운 것들   Django에서 기본 제공하는 User 모델을 이용\n  이를 이용하여 회원가입, 정보 수정하는 방법\n  회원가입시 Django에서 제공하는 UserCreationForm을 사용\n UserCreationForm은 기본적으로 username과 password1, 2를 입력받음      "
+},
+{
+	"uri": "https://dongyeopgu.github.io/til/20.04.14.html",
+	"title": "2020.04.14",
+	"tags": ["TIL", "20.04.14"],
+	"description": "",
+	"content": "오늘 배운 것들  Django  User 모델을 사용하는 것보다 get_user_model 메서드를 사용하는 것을 추천 get_user_model이 더 유연하게 사용할 수 있음. 커스터마이징을 했을 경우에도 쉽게 사용가능 로그인을위해 AuthenticationForm을 사용   HTTP는 connectless, stateless 그렇기 때문에 정보를 쿠키에 저장  "
 },
 {
 	"uri": "https://dongyeopgu.github.io/tags/baekjoon.html",
