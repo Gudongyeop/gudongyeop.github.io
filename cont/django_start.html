@@ -21,20 +21,20 @@
     <title>Django 시작하기 :: 여러가지</title>
 
     
-    <link href="../css/nucleus.css?1586938412" rel="stylesheet">
-    <link href="../css/fontawesome-all.min.css?1586938412" rel="stylesheet">
-    <link href="../css/hybrid.css?1586938412" rel="stylesheet">
-    <link href="../css/featherlight.min.css?1586938412" rel="stylesheet">
-    <link href="../css/perfect-scrollbar.min.css?1586938412" rel="stylesheet">
-    <link href="../css/auto-complete.css?1586938412" rel="stylesheet">
-    <link href="../css/atom-one-dark-reasonable.css?1586938412" rel="stylesheet">
-    <link href="../css/theme.css?1586938412" rel="stylesheet">
-    <link href="../css/hugo-theme.css?1586938412" rel="stylesheet">
+    <link href="../css/nucleus.css?1586938618" rel="stylesheet">
+    <link href="../css/fontawesome-all.min.css?1586938618" rel="stylesheet">
+    <link href="../css/hybrid.css?1586938618" rel="stylesheet">
+    <link href="../css/featherlight.min.css?1586938618" rel="stylesheet">
+    <link href="../css/perfect-scrollbar.min.css?1586938618" rel="stylesheet">
+    <link href="../css/auto-complete.css?1586938618" rel="stylesheet">
+    <link href="../css/atom-one-dark-reasonable.css?1586938618" rel="stylesheet">
+    <link href="../css/theme.css?1586938618" rel="stylesheet">
+    <link href="../css/hugo-theme.css?1586938618" rel="stylesheet">
     
-      <link href="../css/theme-red.css?1586938412" rel="stylesheet">
+      <link href="../css/theme-red.css?1586938618" rel="stylesheet">
     
 
-    <script src="../js/jquery-3.3.1.min.js?1586938412"></script>
+    <script src="../js/jquery-3.3.1.min.js?1586938618"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -75,14 +75,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../js/lunr.min.js?1586938412"></script>
-<script type="text/javascript" src="../js/auto-complete.js?1586938412"></script>
+<script type="text/javascript" src="../js/lunr.min.js?1586938618"></script>
+<script type="text/javascript" src="../js/auto-complete.js?1586938618"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/dongyeopgu.github.io\/";
     
 </script>
-<script type="text/javascript" src="../js/search.js?1586938412"></script>
+<script type="text/javascript" src="../js/search.js?1586938618"></script>
 
     
   </div>
@@ -726,38 +726,38 @@
 <pre><code>$ pip install django==2.1.15
 </code></pre><p>(2.1.15 기준으로 배웠기 때문에)</p>
 <h4 id="2-프로젝트-시작">2. 프로젝트 시작</h4>
-<pre><code>$ django-admin startproject {프로젝트 이름}
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ django-admin startproject <span style="color:#f92672">{</span>프로젝트 이름<span style="color:#f92672">}</span>
 그 후에 프로젝트 폴더의 settings.py에서 
-ALLOWED_HOST = ['*']로 수정
-</code></pre><h4 id="3-app-만들기">3. App 만들기</h4>
-<pre><code>manage.py 파일이 있는 폴더에서
-$ python manage.py startapp {앱 이름}
-그 후에 settings.py에서 
-INSTALLED_APPS = [
-	'{앱 이름}' 추가
+ALLOWED_HOST <span style="color:#f92672">=</span> <span style="color:#f92672">[</span><span style="color:#e6db74">&#39;*&#39;</span><span style="color:#f92672">]</span>로 수정
+</code></pre></div><h4 id="3-app-만들기">3. App 만들기</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># manage.py 파일이 있는 폴더에서</span>
+<span style="color:#75715e"># bash 에서 $ python manage.py startapp {앱 이름}</span>
+<span style="color:#75715e"># 그 후에 settings.py에서 </span>
+INSTALLED_APPS <span style="color:#f92672">=</span> [
+	<span style="color:#e6db74">&#39;{앱 이름}&#39;</span> <span style="color:#960050;background-color:#1e0010">추가</span>
 ]
-</code></pre><h4 id="4-urlspy-작성">4. urls.py 작성</h4>
-<pre><code># 프로젝트 이름/urls.py에서 예를 들어 index 페이지를 넣을 경우 
-from app이름 import views #추가
-urlpatterns =[
-	path('index/', views.index),
+</code></pre></div><h4 id="4-urlspy-작성">4. urls.py 작성</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># 프로젝트 이름/urls.py에서 예를 들어 index 페이지를 넣을 경우 </span>
+<span style="color:#f92672">from</span> app이름 <span style="color:#f92672">import</span> views <span style="color:#75715e">#추가</span>
+urlpatterns <span style="color:#f92672">=</span>[
+	path(<span style="color:#e6db74">&#39;index/&#39;</span>, views<span style="color:#f92672">.</span>index),
 ]
-## path의 url은 항상 /로 닫기 ##
-</code></pre><h4 id="5-viewspy-작성">5. views.py 작성</h4>
-<pre><code># app 이름/views.py 에서
-def index(request):
-	return render(request, 'index.html') #기본 형식
-# 만약 html파일에 넣고자 하는 내용이 있을 경우에는
-def index(request):
-	sample = '샘플'
-	context = {
-		'sample': sample,
+<span style="color:#75715e">## path의 url은 항상 /로 닫기 ##</span>
+</code></pre></div><h4 id="5-viewspy-작성">5. views.py 작성</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># app 이름/views.py 에서</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">index</span>(request):
+	<span style="color:#66d9ef">return</span> render(request, <span style="color:#e6db74">&#39;index.html&#39;</span>) <span style="color:#75715e">#기본 형식</span>
+<span style="color:#75715e"># 만약 html파일에 넣고자 하는 내용이 있을 경우에는</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">index</span>(request):
+	sample <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;샘플&#39;</span>
+	context <span style="color:#f92672">=</span> {
+		<span style="color:#e6db74">&#39;sample&#39;</span>: sample,
 	}
-	return render(request, 'index.html', context)
-# 이렇게 쓸 수 있음. 다른 방법으로,
-	context를 적지 않고 바로 
-	return render(request, 'index.html', {'sample':sample})로 쓸 수 있음.
-</code></pre><ul>
+	<span style="color:#66d9ef">return</span> render(request, <span style="color:#e6db74">&#39;index.html&#39;</span>, context)
+<span style="color:#75715e"># 이렇게 쓸 수 있음. 다른 방법으로,</span>
+	context를 <span style="color:#960050;background-color:#1e0010">적지</span> <span style="color:#960050;background-color:#1e0010">않고</span> <span style="color:#960050;background-color:#1e0010">바로</span> 
+	<span style="color:#66d9ef">return</span> render(request, <span style="color:#e6db74">&#39;index.html&#39;</span>, {<span style="color:#e6db74">&#39;sample&#39;</span>:sample})<span style="color:#960050;background-color:#1e0010">로</span> <span style="color:#960050;background-color:#1e0010">쓸</span> <span style="color:#960050;background-color:#1e0010">수</span> <span style="color:#960050;background-color:#1e0010">있음</span><span style="color:#f92672">.</span>
+</code></pre></div><ul>
 <li>함수 정의에서 첫번째 인자는 항상 request로</li>
 <li>render에서도 첫번째 인자는 항상 request</li>
 </ul>
@@ -1232,19 +1232,19 @@ TEMPLATES <span style="color:#f92672">=</span> [
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../js/clipboard.min.js?1586938412"></script>
-    <script src="../js/perfect-scrollbar.min.js?1586938412"></script>
-    <script src="../js/perfect-scrollbar.jquery.min.js?1586938412"></script>
-    <script src="../js/jquery.sticky.js?1586938412"></script>
-    <script src="../js/featherlight.min.js?1586938412"></script>
-    <script src="../js/highlight.pack.js?1586938412"></script>
+    <script src="../js/clipboard.min.js?1586938618"></script>
+    <script src="../js/perfect-scrollbar.min.js?1586938618"></script>
+    <script src="../js/perfect-scrollbar.jquery.min.js?1586938618"></script>
+    <script src="../js/jquery.sticky.js?1586938618"></script>
+    <script src="../js/featherlight.min.js?1586938618"></script>
+    <script src="../js/highlight.pack.js?1586938618"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../js/modernizr.custom-3.6.0.js?1586938412"></script>
-    <script src="../js/learn.js?1586938412"></script>
-    <script src="../js/hugo-learn.js?1586938412"></script>
+    <script src="../js/modernizr.custom-3.6.0.js?1586938618"></script>
+    <script src="../js/learn.js?1586938618"></script>
+    <script src="../js/hugo-learn.js?1586938618"></script>
 
-    <link href="../mermaid/mermaid.css?1586938412" rel="stylesheet" />
-    <script src="../mermaid/mermaid.js?1586938412"></script>
+    <link href="../mermaid/mermaid.css?1586938618" rel="stylesheet" />
+    <script src="../mermaid/mermaid.js?1586938618"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
