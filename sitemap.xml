@@ -15,6 +15,11 @@
   </url>
   
   <url>
+    <loc>https://dongyeopgu.github.io/project.html</loc>
+    <lastmod>2020-04-18T22:16:46+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://dongyeopgu.github.io/cont_2.html</loc>
   </url>
   
@@ -58,12 +63,12 @@
   </url>
   
   <url>
-    <loc>https://dongyeopgu.github.io/tags/django.html</loc>
-    <lastmod>2020-04-14T16:15:29+09:00</lastmod>
+    <loc>https://dongyeopgu.github.io/</loc>
+    <lastmod>2020-04-18T22:16:46+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dongyeopgu.github.io/</loc>
+    <loc>https://dongyeopgu.github.io/tags/django.html</loc>
     <lastmod>2020-04-14T16:15:29+09:00</lastmod>
   </url>
   
