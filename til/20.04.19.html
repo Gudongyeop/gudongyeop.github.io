@@ -18,7 +18,7 @@
 
     <link rel="icon" href="../images/favicon.png" type="image/png">
 
-    <title>모의SW 테스트 :: 여러가지</title>
+    <title>2020.04.19 :: 여러가지</title>
 
     
     <link href="../css/nucleus.css?1587303709" rel="stylesheet">
@@ -44,7 +44,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/tags/%EB%AA%A8%EC%9D%98sw-%ED%85%8C%EC%8A%A4%ED%8A%B8.html">
+  <body class="" data-url="/til/20.04.19.html">
     <nav id="sidebar" class="">
 
 
@@ -516,7 +516,7 @@
   
     
     <li data-nav-id="/til.html" title="TIL" class="dd-item 
-        
+        parent
         
         
         ">
@@ -668,7 +668,7 @@
  
   
     
-      <li data-nav-id="/til/20.04.19.html" title="2020.04.19" class="dd-item ">
+      <li data-nav-id="/til/20.04.19.html" title="2020.04.19" class="dd-item active">
         <a href="../til/20.04.19.html">
         2020.04.19
         
@@ -803,14 +803,18 @@
                   <span class="links">
                  
                  
-                   모의SW 테스트 
+                   2020.04.19 
                  
                   </span>
                 </div>
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#오늘-공부한-것">오늘 공부한 것</a></li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -820,15 +824,23 @@
             
         <div id="head-tags">
         
+<div class="tags">
+
+  <a class="tag-link" href="../tags/til">TIL</a>
+
+  <a class="tag-link" href="../tags/20.04.19">20.04.19</a>
+
+  <a class="tag-link" href="../tags/4%EC%9B%94">4월</a>
+
+</div>
+
         </div>
         
         <div id="body-inner">
           
             <h1>
               
-                taxonomy ::
-              
-              모의SW 테스트
+              2020.04.19
             </h1>
           
 
@@ -836,17 +848,32 @@
 
 
 
-
-
-
+<h2 id="오늘-공부한-것">오늘 공부한 것</h2>
 <ul>
-	
-		<li><a href="../cont_2/d4/swea_%EB%AA%A8%EC%9D%98-%ED%85%8C%EC%8A%A4%ED%8A%B8.html">SWEA - Python - 모의 테스트</a></li>
-	
+<li>어제에 이어서 신청 완료시 메일을 발송하게 만들려고 함</li>
+<li>django에서 email보내는 것도 지원을 하기때문에 아래 코드를 이용했음</li>
+<li>먼저 settings.py에서 아래 코드를 추가</li>
 </ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">EMAIL_HOST <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;smtp.gmail.com&#34;</span>
+EMAIL_HOST_USER <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;내 gmail 주소@gmail.com&#39;</span>
+EMAIL_HOST_PASSWORD <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;내 gmail 비밀번호&#39;</span>
+EMAIL_PORT <span style="color:#f92672">=</span> <span style="color:#ae81ff">587</span>
+EMAIL_USE_TLS <span style="color:#f92672">=</span> True
+</code></pre></div><ul>
+<li>views.py에서 아래 코드 이용(공식문서의 example) <a href="https://docs.djangoproject.com/en/2.1/topics/email/">여기</a> 참고</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> django.core.mail <span style="color:#f92672">import</span> send_mail
 
+send_mail(
+    <span style="color:#e6db74">&#39;Subject here&#39;</span>,
+    <span style="color:#e6db74">&#39;Here is the message.&#39;</span>,
+    <span style="color:#e6db74">&#39;from@example.com&#39;</span>,
+    [<span style="color:#e6db74">&#39;to@example.com&#39;</span>],
+    fail_silently<span style="color:#f92672">=</span>False,
+)
+</code></pre></div>
 
-<footer class=" footline" >
+<footer class="footline">
 	
 </footer>
 <div id="disqus_thread"></div>
@@ -857,7 +884,7 @@
     
     if (window.location.hostname == "localhost")
         return;
-    var logicalName = '';
+    var logicalName = '20.04.19.md';
     if (logicalName == "_index.md")
         return;
     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -1272,6 +1299,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1290,6 +1318,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1327,8 +1358,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="../til/20.04.18.html" title="2020.04.18"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="../basics.html" title="About Blog" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="../hugo-blog.html" title="Hugo Blog" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1358,3 +1391,4 @@
 
   </body>
 </html>
+

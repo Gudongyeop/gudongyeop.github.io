@@ -67,5 +67,14 @@
       <description>오늘 공부한 것  AuthenticationForm을 커스터 마이징할 때 class Meta를 통해 attr을 작성 할 경우 원하는 대로 동작하지 않는다. 그렇기 때문에 init을 통해 attr을 추가해야 한다. 아래의 코드는 오늘 사용한 예  class myAuthenticationForm(AuthenticationForm): def __init__(self, *args, **kwargs): super(myAuthenticationForm, self).__init__(*args, **kwargs) self.fields[&amp;#39;username&amp;#39;].widget = forms.TextInput( attrs={ &amp;#39;class&amp;#39;: &amp;#39;form-control&amp;#39; } ) self.fields[&amp;#39;password&amp;#39;].widget = forms.PasswordInput( attrs={ &amp;#39;class&amp;#39;: &amp;#39;form-control&amp;#39; } ) class Meta: model = User fields = [&amp;#39;username&amp;#39;,&amp;#39;password&amp;#39;] </description>
     </item>
     
+    <item>
+      <title>2020.04.19</title>
+      <link>https://dongyeopgu.github.io/til/20.04.19.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dongyeopgu.github.io/til/20.04.19.html</guid>
+      <description>오늘 공부한 것  어제에 이어서 신청 완료시 메일을 발송하게 만들려고 함 django에서 email보내는 것도 지원을 하기때문에 아래 코드를 이용했음 먼저 settings.py에서 아래 코드를 추가  EMAIL_HOST = &amp;#34;smtp.gmail.com&amp;#34; EMAIL_HOST_USER = &amp;#39;내 gmail 주소@gmail.com&amp;#39; EMAIL_HOST_PASSWORD = &amp;#39;내 gmail 비밀번호&amp;#39; EMAIL_PORT = 587 EMAIL_USE_TLS = True  views.py에서 아래 코드 이용(공식문서의 example) 여기 참고  from django.core.mail import send_mail send_mail( &amp;#39;Subject here&amp;#39;, &amp;#39;Here is the message.&amp;#39;, &amp;#39;from@example.com&amp;#39;, [&amp;#39;to@example.com&amp;#39;], fail_silently=False, ) </description>
+    </item>
+    
   </channel>
 </rss>
