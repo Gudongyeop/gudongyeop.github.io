@@ -18,7 +18,7 @@
 
     <link rel="icon" href="../images/favicon.png" type="image/png">
 
-    <title>sign in :: 여러가지</title>
+    <title>2020.04.20 :: 여러가지</title>
 
     
     <link href="../css/nucleus.css?1587372547" rel="stylesheet">
@@ -44,7 +44,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/tags/sign-in.html">
+  <body class="" data-url="/til/20.04.20.html">
     <nav id="sidebar" class="">
 
 
@@ -516,7 +516,7 @@
   
     
     <li data-nav-id="/til.html" title="TIL" class="dd-item 
-        
+        parent
         
         
         ">
@@ -689,7 +689,7 @@
  
   
     
-      <li data-nav-id="/til/20.04.20.html" title="2020.04.20" class="dd-item ">
+      <li data-nav-id="/til/20.04.20.html" title="2020.04.20" class="dd-item active">
         <a href="../til/20.04.20.html">
         2020.04.20
         
@@ -824,14 +824,22 @@
                   <span class="links">
                  
                  
-                   sign in 
+                   2020.04.20 
                  
                   </span>
                 </div>
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#오늘-배운-것">오늘 배운 것</a>
+      <ul>
+        <li><a href="#sql-관련">SQL 관련</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -841,15 +849,23 @@
             
         <div id="head-tags">
         
+<div class="tags">
+
+  <a class="tag-link" href="../tags/til">TIL</a>
+
+  <a class="tag-link" href="../tags/20.04.20">20.04.20</a>
+
+  <a class="tag-link" href="../tags/4%EC%9B%94">4월</a>
+
+</div>
+
         </div>
         
         <div id="body-inner">
           
             <h1>
               
-                taxonomy ::
-              
-              sign in
+              2020.04.20
             </h1>
           
 
@@ -857,19 +873,128 @@
 
 
 
-
-
-
+<h2 id="오늘-배운-것">오늘 배운 것</h2>
+<h3 id="sql-관련">SQL 관련</h3>
+<h4 id="1-database-기본">1. Database 기본</h4>
 <ul>
-	
-		<li><a href="../cont/django_login.html">Django User (1)</a></li>
-	
-		<li><a href="../cont/django_change_user.html">Django User (2)</a></li>
-	
+<li>RDBMS
+<ul>
+<li>데이터베이스를 관리하는 시스템
+<ul>
+<li>빠르고 효율적으로 관리하기 위해</li>
 </ul>
+</li>
+<li>RDBMS(Relational Database Management System)
+<ul>
+<li>관계형 데이버 베이스 관리 시스템</li>
+<li>table(relation) 활용</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>기본 용어
+<ul>
+<li>스키마: DB의 자료 구조와 제약 조건에 대한 전반적인 명세를 기술한 것</li>
+<li>테이블 : 열과 행을 사용해 조직한 데이터 요소들 집합</li>
+<li>열(column)/필드(field)/속성(attribute)</li>
+<li>행(row)/tuple/레코드(record)</li>
+<li>PK(Primary key):
+<ul>
+<li>각 행의 고유값으로 저장된 레코드를 고유하게 식별할 수 있는 값</li>
+<li>중복되는 값이 없으면 다 pk로 사용 가능 == unique한 값에 부여</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="2-sql">2. SQL</h4>
+<ul>
+<li>
+<p>RDBMS에서 데이터를 관리하기 위해 설계된 프로그래밍 언어</p>
+</li>
+<li>
+<p>자료의 검색, 관리, 데이터베이스 스키마 생성과 수정, 접근 관리</p>
+</li>
+<li>
+<p>기본 정의</p>
+<ul>
+<li>DDL(Data Definintion Language) 데이터 정의 언어
+<ul>
+<li>RDBMS의 구조를 정의</li>
+<li>CREATE(테이블 생성), DROP(테이블 삭제), ALTER(테이블 수정), TRUNCATE(테이블 초기화)</li>
+</ul>
+</li>
+<li>DML데이터 조작 언어
+<ul>
+<li>데이터를 저장,수정,삭제,조회</li>
+<li>INSERT, UPDATE, DELETE, SELECT</li>
+</ul>
+</li>
+<li>DCL 데이터 제어 언어
+<ul>
+<li>사용자의 권한 제어를 위해 사용</li>
+<li>GRANT, REVOKE, COMMIT, ROLLBACK</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="3-기본-활용">3. 기본 활용</h4>
+<ul>
+<li>Example</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#75715e">-- CREATE- TABLE 생성
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> classmates(
+    id INTEGER <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span> AUTOINCREMENT <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+    name TEXT <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+    age INTEGER <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>
+);
+
+<span style="color:#75715e">-- DROP - TABLE 삭제
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">DROP</span> <span style="color:#66d9ef">TABLE</span> classmates;
+
+<span style="color:#75715e">-- SELECT - 데이터 조회
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">SELECT</span> id <span style="color:#66d9ef">FROM</span> classmates;
+<span style="color:#66d9ef">SELECT</span> name <span style="color:#66d9ef">FROM</span> classmates;
+<span style="color:#66d9ef">SELECT</span> name, age <span style="color:#66d9ef">FROM</span> classmates;
+    <span style="color:#75715e">-- LIMIT 사용
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> classmates <span style="color:#66d9ef">LIMIT</span> <span style="color:#ae81ff">1</span>;
+    <span style="color:#75715e">-- OFFSET
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> classmates <span style="color:#66d9ef">LIMIT</span> <span style="color:#ae81ff">1</span> <span style="color:#66d9ef">OFFSET</span> <span style="color:#ae81ff">2</span>;
+    <span style="color:#75715e">-- DISTINCT 중복되지 않도록 출력
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">DISTINCT</span> name <span style="color:#66d9ef">FROM</span> classmates;
+
+<span style="color:#75715e">-- INSERT - 테이블 삽입
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> classmates (name, age) <span style="color:#66d9ef">VALUES</span>(<span style="color:#e6db74">&#39;구동엽&#39;</span>, <span style="color:#e6db74">&#39;30&#39;</span>);
 
 
-<footer class=" footline" >
+<span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> classmates <span style="color:#66d9ef">VALUES</span>(<span style="color:#ae81ff">2</span>,<span style="color:#e6db74">&#39;구동엽&#39;</span>,<span style="color:#ae81ff">20</span>); <span style="color:#75715e">-- 이렇게 넣어도 됨
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">-- DELETE
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">DELETE</span> <span style="color:#66d9ef">FROM</span> classmates <span style="color:#66d9ef">WHERE</span> id <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+
+<span style="color:#75715e">-- UPDATE
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">UPDATE</span> classmates <span style="color:#66d9ef">SET</span> name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;rrr&#39;</span> <span style="color:#66d9ef">WHERE</span> id<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>;
+
+<span style="color:#75715e">-- WHERE
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> classmates <span style="color:#66d9ef">WHERE</span> name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;dfdf&#39;</span> <span style="color:#66d9ef">AND</span> age<span style="color:#f92672">=</span><span style="color:#ae81ff">30</span>;
+
+<span style="color:#75715e">-- COUNT, AVG, MAX
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">COUNT</span>(<span style="color:#f92672">*</span>) <span style="color:#66d9ef">FROM</span> classmates;
+<span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">MAX</span>(age) <span style="color:#66d9ef">FROM</span> classmates;
+<span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">AVG</span>(age) <span style="color:#66d9ef">FROM</span> classmates;
+
+<span style="color:#75715e">--LIKE(%, _) %는 숫자 제한 없이 _는 개수 맞춰서 사용
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> classmates <span style="color:#66d9ef">WHERE</span> name <span style="color:#66d9ef">LIKE</span> <span style="color:#e6db74">&#39;김%&#39;</span>;
+<span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> classmates <span style="color:#66d9ef">WHERE</span> name <span style="color:#66d9ef">LIKE</span> <span style="color:#e6db74">&#39;%엽&#39;</span>;
+<span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> classmates <span style="color:#66d9ef">WHERE</span> age <span style="color:#66d9ef">LIKE</span> <span style="color:#e6db74">&#39;3_&#39;</span>;
+
+<span style="color:#75715e">-- ORDER BY
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> classmates <span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span> name <span style="color:#66d9ef">ASC</span>; <span style="color:#75715e">--오름차순
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> classmates <span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span> name <span style="color:#66d9ef">DESC</span>; <span style="color:#75715e">--내림차순
+</span></code></pre></div>
+
+<footer class="footline">
 	
 </footer>
 <div id="disqus_thread"></div>
@@ -880,7 +1005,7 @@
     
     if (window.location.hostname == "localhost")
         return;
-    var logicalName = '';
+    var logicalName = '20.04.20.md';
     if (logicalName == "_index.md")
         return;
     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -1311,6 +1436,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1329,6 +1455,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1366,8 +1495,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="../til/20.04.19.html" title="2020.04.19"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="../basics.html" title="About Blog" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="../hugo-blog.html" title="Hugo Blog" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1397,3 +1528,4 @@
 
   </body>
 </html>
+
