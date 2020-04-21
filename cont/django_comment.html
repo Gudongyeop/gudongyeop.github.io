@@ -18,23 +18,23 @@
 
     <link rel="icon" href="../images/favicon.png" type="image/png">
 
-    <title>Django_comment :: 여러가지</title>
+    <title>Django Comment :: 여러가지</title>
 
     
-    <link href="../css/nucleus.css?1587477315" rel="stylesheet">
-    <link href="../css/fontawesome-all.min.css?1587477315" rel="stylesheet">
-    <link href="../css/hybrid.css?1587477315" rel="stylesheet">
-    <link href="../css/featherlight.min.css?1587477315" rel="stylesheet">
-    <link href="../css/perfect-scrollbar.min.css?1587477315" rel="stylesheet">
-    <link href="../css/auto-complete.css?1587477315" rel="stylesheet">
-    <link href="../css/atom-one-dark-reasonable.css?1587477315" rel="stylesheet">
-    <link href="../css/theme.css?1587477315" rel="stylesheet">
-    <link href="../css/hugo-theme.css?1587477315" rel="stylesheet">
+    <link href="../css/nucleus.css?1587478012" rel="stylesheet">
+    <link href="../css/fontawesome-all.min.css?1587478012" rel="stylesheet">
+    <link href="../css/hybrid.css?1587478012" rel="stylesheet">
+    <link href="../css/featherlight.min.css?1587478012" rel="stylesheet">
+    <link href="../css/perfect-scrollbar.min.css?1587478012" rel="stylesheet">
+    <link href="../css/auto-complete.css?1587478012" rel="stylesheet">
+    <link href="../css/atom-one-dark-reasonable.css?1587478012" rel="stylesheet">
+    <link href="../css/theme.css?1587478012" rel="stylesheet">
+    <link href="../css/hugo-theme.css?1587478012" rel="stylesheet">
     
-      <link href="../css/theme-red.css?1587477315" rel="stylesheet">
+      <link href="../css/theme-red.css?1587478012" rel="stylesheet">
     
 
-    <script src="../js/jquery-3.3.1.min.js?1587477315"></script>
+    <script src="../js/jquery-3.3.1.min.js?1587478012"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -75,14 +75,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../js/lunr.min.js?1587477315"></script>
-<script type="text/javascript" src="../js/auto-complete.js?1587477315"></script>
+<script type="text/javascript" src="../js/lunr.min.js?1587478012"></script>
+<script type="text/javascript" src="../js/auto-complete.js?1587478012"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/dongyeopgu.github.io\/";
     
 </script>
-<script type="text/javascript" src="../js/search.js?1587477315"></script>
+<script type="text/javascript" src="../js/search.js?1587478012"></script>
 
     
   </div>
@@ -508,9 +508,9 @@
  
   
     
-      <li data-nav-id="/cont/django_comment.html" title="Django_comment" class="dd-item active">
+      <li data-nav-id="/cont/django_comment.html" title="Django Comment" class="dd-item active">
         <a href="../cont/django_comment.html">
-        <b>6. </b>Django_comment
+        <b>6. </b>Django Comment
         
         </a>
     </li>
@@ -864,7 +864,7 @@
                   <span class="links">
                  
                  
-                   Django_comment 
+                   Django Comment 
                  
                   </span>
                 </div>
@@ -897,9 +897,9 @@
 <blockquote>
 <p>게시글의 model은 Article로 만들었을 경우임. ForeignKey를 사용.</p>
 </blockquote>
-<ul>
-<li>
-<p>댓글 작성</p>
+<ol>
+<li>댓글 작성</li>
+</ol>
 <ul>
 <li>
 <p>models.py에서 댓글 설정을 위한 class를 만든다.(user 설정을 안했을 경우)</p>
@@ -912,7 +912,7 @@
 <p>forms.py에도 추가</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> django <span style="color:#f92672">import</span> forms
 <span style="color:#f92672">from</span> .models <span style="color:#f92672">import</span> Comment
-    
+  
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CommentForm</span>(forms<span style="color:#f92672">.</span>ModelForm):
     <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Meta</span>:
         model <span style="color:#f92672">=</span> Comment
@@ -926,7 +926,7 @@
 <p>views.py에서 댓글 작성하는 함수를 추가</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> .models <span style="color:#f92672">import</span> Article, Comment
 <span style="color:#f92672">from</span> .forms <span style="color:#f92672">import</span> ArticleForm, CommentForm
-    
+  
 <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">comments_create</span>(request, article_pk):
     article <span style="color:#f92672">=</span> get_object_or_404(Article, article_pk<span style="color:#f92672">=</span>pk)
     <span style="color:#66d9ef">if</span> request<span style="color:#f92672">.</span>method<span style="color:#f92672">==</span><span style="color:#e6db74">&#39;POST&#39;</span>:
@@ -954,7 +954,7 @@
 <p>html 작성</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!-- 먼저 게시글을 보여주는 html에서 댓글을 나오게 하기 위해 --&gt;</span>
 {% for comment in article.comment_set.all %}
-    &lt;<span style="color:#f92672">li</span>&gt;{{ comment.content }}&lt;/<span style="color:#f92672">li</span>&gt;
+  &lt;<span style="color:#f92672">li</span>&gt;{{ comment.content }}&lt;/<span style="color:#f92672">li</span>&gt;
 {% endfor %}
 <span style="color:#75715e">&lt;!-- 댓글을 작성하는 html을 만들경우 --&gt;</span>
 &lt;<span style="color:#f92672">form</span> <span style="color:#a6e22e">action</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span> <span style="color:#a6e22e">method</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;POST&#34;</span>&gt;
@@ -964,9 +964,9 @@
 &lt;/<span style="color:#f92672">form</span>&gt;
 </code></pre></div></li>
 </ul>
-</li>
-<li>
-<p>댓글 삭제</p>
+<ol start="2">
+<li>댓글 삭제</li>
+</ol>
 <ul>
 <li>
 <p>views.py에 삭제하는 함수 추가</p>
@@ -983,11 +983,9 @@
 <li>
 <p>댓글나오는 html</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{% for comment in article.comment_set.all %}
-    &lt;<span style="color:#f92672">li</span>&gt;{{ comment.content }}&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{% url &#39;articles:comments_delete&#39; article.pk comment.pk %}&#34;</span>&gt;삭제&lt;/<span style="color:#f92672">a</span>&gt;&lt;/<span style="color:#f92672">li</span>&gt;
+  &lt;<span style="color:#f92672">li</span>&gt;{{ comment.content }}&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{% url &#39;articles:comments_delete&#39; article.pk comment.pk %}&#34;</span>&gt;삭제&lt;/<span style="color:#f92672">a</span>&gt;&lt;/<span style="color:#f92672">li</span>&gt;
 {% endfor %}
 </code></pre></div></li>
-</ul>
-</li>
 </ul>
 
 
@@ -1539,19 +1537,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../js/clipboard.min.js?1587477315"></script>
-    <script src="../js/perfect-scrollbar.min.js?1587477315"></script>
-    <script src="../js/perfect-scrollbar.jquery.min.js?1587477315"></script>
-    <script src="../js/jquery.sticky.js?1587477315"></script>
-    <script src="../js/featherlight.min.js?1587477315"></script>
-    <script src="../js/highlight.pack.js?1587477315"></script>
+    <script src="../js/clipboard.min.js?1587478012"></script>
+    <script src="../js/perfect-scrollbar.min.js?1587478012"></script>
+    <script src="../js/perfect-scrollbar.jquery.min.js?1587478012"></script>
+    <script src="../js/jquery.sticky.js?1587478012"></script>
+    <script src="../js/featherlight.min.js?1587478012"></script>
+    <script src="../js/highlight.pack.js?1587478012"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../js/modernizr.custom-3.6.0.js?1587477315"></script>
-    <script src="../js/learn.js?1587477315"></script>
-    <script src="../js/hugo-learn.js?1587477315"></script>
+    <script src="../js/modernizr.custom-3.6.0.js?1587478012"></script>
+    <script src="../js/learn.js?1587478012"></script>
+    <script src="../js/hugo-learn.js?1587478012"></script>
 
-    <link href="../mermaid/mermaid.css?1587477315" rel="stylesheet" />
-    <script src="../mermaid/mermaid.js?1587477315"></script>
+    <link href="../mermaid/mermaid.css?1587478012" rel="stylesheet" />
+    <script src="../mermaid/mermaid.js?1587478012"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
