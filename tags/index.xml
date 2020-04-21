@@ -6,15 +6,24 @@
     <description>Recent content in Tags on 여러가지</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 14 Apr 2020 16:15:29 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 21 Apr 2020 22:54:07 +0900</lastBuildDate>
     
 	<atom:link href="https://dongyeopgu.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>comment</title>
+      <link>https://dongyeopgu.github.io/tags/comment.html</link>
+      <pubDate>Tue, 21 Apr 2020 22:54:07 +0900</pubDate>
+      
+      <guid>https://dongyeopgu.github.io/tags/comment.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>django</title>
       <link>https://dongyeopgu.github.io/tags/django.html</link>
-      <pubDate>Tue, 14 Apr 2020 16:15:29 +0900</pubDate>
+      <pubDate>Tue, 21 Apr 2020 22:54:07 +0900</pubDate>
       
       <guid>https://dongyeopgu.github.io/tags/django.html</guid>
       <description></description>
@@ -170,15 +179,6 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://dongyeopgu.github.io/tags/baekjoon.html</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>comment</title>
-      <link>https://dongyeopgu.github.io/tags/comment.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://dongyeopgu.github.io/tags/comment.html</guid>
       <description></description>
     </item>
     
