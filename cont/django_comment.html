@@ -18,23 +18,23 @@
 
     <link rel="icon" href="../images/favicon.png" type="image/png">
 
-    <title>Django Comment :: 여러가지</title>
+    <title>Django_comment :: 여러가지</title>
 
     
-    <link href="../css/nucleus.css?1587477086" rel="stylesheet">
-    <link href="../css/fontawesome-all.min.css?1587477086" rel="stylesheet">
-    <link href="../css/hybrid.css?1587477086" rel="stylesheet">
-    <link href="../css/featherlight.min.css?1587477086" rel="stylesheet">
-    <link href="../css/perfect-scrollbar.min.css?1587477086" rel="stylesheet">
-    <link href="../css/auto-complete.css?1587477086" rel="stylesheet">
-    <link href="../css/atom-one-dark-reasonable.css?1587477086" rel="stylesheet">
-    <link href="../css/theme.css?1587477086" rel="stylesheet">
-    <link href="../css/hugo-theme.css?1587477086" rel="stylesheet">
+    <link href="../css/nucleus.css?1587477315" rel="stylesheet">
+    <link href="../css/fontawesome-all.min.css?1587477315" rel="stylesheet">
+    <link href="../css/hybrid.css?1587477315" rel="stylesheet">
+    <link href="../css/featherlight.min.css?1587477315" rel="stylesheet">
+    <link href="../css/perfect-scrollbar.min.css?1587477315" rel="stylesheet">
+    <link href="../css/auto-complete.css?1587477315" rel="stylesheet">
+    <link href="../css/atom-one-dark-reasonable.css?1587477315" rel="stylesheet">
+    <link href="../css/theme.css?1587477315" rel="stylesheet">
+    <link href="../css/hugo-theme.css?1587477315" rel="stylesheet">
     
-      <link href="../css/theme-red.css?1587477086" rel="stylesheet">
+      <link href="../css/theme-red.css?1587477315" rel="stylesheet">
     
 
-    <script src="../js/jquery-3.3.1.min.js?1587477086"></script>
+    <script src="../js/jquery-3.3.1.min.js?1587477315"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -75,14 +75,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../js/lunr.min.js?1587477086"></script>
-<script type="text/javascript" src="../js/auto-complete.js?1587477086"></script>
+<script type="text/javascript" src="../js/lunr.min.js?1587477315"></script>
+<script type="text/javascript" src="../js/auto-complete.js?1587477315"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/dongyeopgu.github.io\/";
     
 </script>
-<script type="text/javascript" src="../js/search.js?1587477086"></script>
+<script type="text/javascript" src="../js/search.js?1587477315"></script>
 
     
   </div>
@@ -508,9 +508,9 @@
  
   
     
-      <li data-nav-id="/cont/django_comment.html" title="Django Comment" class="dd-item active">
+      <li data-nav-id="/cont/django_comment.html" title="Django_comment" class="dd-item active">
         <a href="../cont/django_comment.html">
-        <b>6. </b>Django Comment
+        <b>6. </b>Django_comment
         
         </a>
     </li>
@@ -864,7 +864,7 @@
                   <span class="links">
                  
                  
-                   Django Comment 
+                   Django_comment 
                  
                   </span>
                 </div>
@@ -905,7 +905,7 @@
 <p>models.py에서 댓글 설정을 위한 class를 만든다.(user 설정을 안했을 경우)</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Comment</span>(models<span style="color:#f92672">.</span>Model):
     article <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>ForeignKey(Article, on_delete<span style="color:#f92672">=</span>models<span style="color:#f92672">.</span>CASCADE)
-    <span style="color:#75715e">#on_delete=models.CASCADE는 ForeignKeyField가 삭제 될때 인스턴스도 같이 삭제</span>
+    <span style="color:#75715e">#on_delete=models.CASCADE는 ForeignKeyField가 삭제 될때 인스턴스도 같이 삭제</span>
     content <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>TextField()
 </code></pre></div></li>
 <li>
@@ -917,7 +917,7 @@
     <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Meta</span>:
         model <span style="color:#f92672">=</span> Comment
         fields <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;content&#39;</span>]
-        <span style="color:#75715e"># fields를 __all__로 해도 됨(all로 했을 경우에는 댓글 작성시 모든 값을 잘 입력 해야한다. *all로 하고 필요한 값을 입력 안했을 경우 저장이 되지 않음)</span>
+        <span style="color:#75715e"># fields를 __all__로 해도 됨(all로 했을 경우에는 댓글 작성시 모든 값을 잘 입력 해야한다. *all로 하고 필요한 값을 입력 안했을 경우 저장이 되지 않음)</span>
 </code></pre></div><ul>
 <li>makemigrations와 migrate를 해야함</li>
 </ul>
@@ -1539,19 +1539,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../js/clipboard.min.js?1587477086"></script>
-    <script src="../js/perfect-scrollbar.min.js?1587477086"></script>
-    <script src="../js/perfect-scrollbar.jquery.min.js?1587477086"></script>
-    <script src="../js/jquery.sticky.js?1587477086"></script>
-    <script src="../js/featherlight.min.js?1587477086"></script>
-    <script src="../js/highlight.pack.js?1587477086"></script>
+    <script src="../js/clipboard.min.js?1587477315"></script>
+    <script src="../js/perfect-scrollbar.min.js?1587477315"></script>
+    <script src="../js/perfect-scrollbar.jquery.min.js?1587477315"></script>
+    <script src="../js/jquery.sticky.js?1587477315"></script>
+    <script src="../js/featherlight.min.js?1587477315"></script>
+    <script src="../js/highlight.pack.js?1587477315"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../js/modernizr.custom-3.6.0.js?1587477086"></script>
-    <script src="../js/learn.js?1587477086"></script>
-    <script src="../js/hugo-learn.js?1587477086"></script>
+    <script src="../js/modernizr.custom-3.6.0.js?1587477315"></script>
+    <script src="../js/learn.js?1587477315"></script>
+    <script src="../js/hugo-learn.js?1587477315"></script>
 
-    <link href="../mermaid/mermaid.css?1587477086" rel="stylesheet" />
-    <script src="../mermaid/mermaid.js?1587477086"></script>
+    <link href="../mermaid/mermaid.css?1587477315" rel="stylesheet" />
+    <script src="../mermaid/mermaid.js?1587477315"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

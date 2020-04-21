@@ -6,7 +6,7 @@
     <description>Recent content in Dongyeop&#39;s Blog on 여러가지</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 18 Apr 2020 22:16:46 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 21 Apr 2020 22:54:07 +0900</lastBuildDate>
     
 	<atom:link href="https://dongyeopgu.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -67,16 +67,16 @@ bootstrap을 사용하기 위해 widget에 attrs도 추가
     </item>
     
     <item>
-      <title>Django Comment</title>
+      <title>Django_comment</title>
       <link>https://dongyeopgu.github.io/cont/django_comment.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 21 Apr 2020 22:54:07 +0900</pubDate>
       
       <guid>https://dongyeopgu.github.io/cont/django_comment.html</guid>
       <description>Django 댓글 작성 &amp;amp; 삭제  게시글의 model은 Article로 만들었을 경우임. ForeignKey를 사용.
    댓글 작성
   models.py에서 댓글 설정을 위한 class를 만든다.(user 설정을 안했을 경우)
-class Comment(models.Model):article = models.ForeignKey(Article, on_delete=models.CASCADE)#on_delete=models.CASCADE는 ForeignKeyField가 삭제 될때 인스턴스도 같이 삭제 content = models.TextField()  forms.py에도 추가
-from django import formsfrom .models import Commentclass CommentForm(forms.ModelForm):class Meta:model = Commentfields = [&amp;#39;content&amp;#39;]# fields를 __all__로 해도 됨(all로 했을 경우에는 댓글 작성시 모든 값을 잘 입력 해야한다.</description>
+class Comment(models.Model): article = models.ForeignKey(Article, on_delete=models.CASCADE) #on_delete=models.CASCADE는 ForeignKeyField가 삭제 될때 인스턴스도 같이 삭제 content = models.TextField()   forms.py에도 추가
+from django import forms from .models import Comment class CommentForm(forms.ModelForm): class Meta: model = Comment fields = [&amp;#39;content&amp;#39;] # fields를 __all__로 해도 됨(all로 했을 경우에는 댓글 작성시 모든 값을 잘 입력 해야한다.</description>
     </item>
     
     <item>
