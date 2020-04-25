@@ -210,6 +210,16 @@ from django import forms from .models import Comment class CommentForm(forms.Mod
     </item>
     
     <item>
+      <title>2020.04.25</title>
+      <link>https://dongyeopgu.github.io/til/20.04.25.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dongyeopgu.github.io/til/20.04.25.html</guid>
+      <description>오늘한 것 Django PJT 추가  혼자 만들어보는 웹 페이지에서 사용자들을 위한 Q&amp;amp;A 페이지 작성
+ </description>
+    </item>
+    
+    <item>
       <title>BAEKJOON - Python</title>
       <link>https://dongyeopgu.github.io/cont_2/baekjoon/baekjoon.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
