@@ -18,7 +18,7 @@
 
     <link rel="icon" href="../images/favicon.png" type="image/png">
 
-    <title>20.04.14 :: 여러가지</title>
+    <title>2020.04.27 :: 여러가지</title>
 
     
     <link href="../css/nucleus.css?1587995906" rel="stylesheet">
@@ -44,7 +44,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/tags/20.04.14.html">
+  <body class="" data-url="/til/20.04.27.html">
     <nav id="sidebar" class="">
 
 
@@ -537,7 +537,7 @@
   
     
     <li data-nav-id="/til.html" title="TIL" class="dd-item 
-        
+        parent
         
         
         ">
@@ -857,7 +857,7 @@
  
   
     
-      <li data-nav-id="/til/20.04.27.html" title="2020.04.27" class="dd-item ">
+      <li data-nav-id="/til/20.04.27.html" title="2020.04.27" class="dd-item active">
         <a href="../til/20.04.27.html">
         2020.04.27
         
@@ -992,14 +992,22 @@
                   <span class="links">
                  
                  
-                   20.04.14 
+                   2020.04.27 
                  
                   </span>
                 </div>
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#오늘-배운-것">오늘 배운 것</a>
+      <ul>
+        <li><a href="#이미지-업로드">이미지 업로드</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -1009,15 +1017,23 @@
             
         <div id="head-tags">
         
+<div class="tags">
+
+  <a class="tag-link" href="../tags/til">TIL</a>
+
+  <a class="tag-link" href="../tags/20.04.27">20.04.27</a>
+
+  <a class="tag-link" href="../tags/4%EC%9B%94">4월</a>
+
+</div>
+
         </div>
         
         <div id="body-inner">
           
             <h1>
               
-                taxonomy ::
-              
-              20.04.14
+              2020.04.27
             </h1>
           
 
@@ -1025,17 +1041,38 @@
 
 
 
-
-
-
+<h2 id="오늘-배운-것">오늘 배운 것</h2>
+<h3 id="이미지-업로드">이미지 업로드</h3>
+<blockquote>
+<p>ImageField를 활용하여 업로드</p>
+</blockquote>
 <ul>
-	
-		<li><a href="../til/20.04.14.html">2020.04.14</a></li>
-	
+<li>단순히 ImageField를 사용하기 위해서는 <code>pillow</code>패키지를 설치해야 한다.</li>
 </ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ pip install pillow
+</code></pre></div><ul>
+<li>Resizing 하기 위해서는 <code>pilkit</code>, <code>django-imagekit</code> 패키지를 설치</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ pip install pilkit django-imagekit
+</code></pre></div><ul>
+<li>ImageField를 사용할 app의 models.py를 수정</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#960050;background-color:#1e0010">&lt;사용할 모델&gt;:</span>
+    image <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>ImageField()    
+    <span style="color:#75715e"># 저장하지 않고 잘라서 표현할 때(ex. thumbnail)</span>
+    image_thumbnail <span style="color:#f92672">=</span>  ImageSpecField(source<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;image&#39;</span>,
+                          processors<span style="color:#f92672">=</span>[Thumbnail(<span style="color:#ae81ff">300</span>, <span style="color:#ae81ff">300</span>)],
+                          format<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;JPEG&#39;</span>,
+                          options<span style="color:#f92672">=</span>{<span style="color:#e6db74">&#39;quality&#39;</span>: <span style="color:#ae81ff">60</span>})   
+</code></pre></div><ul>
+<li>Image 파일을 저장할 경로 설정 settings.py</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># 미디어 파일을 저장하기 위한 루트 경로</span>
+MEDIA_ROOT <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>join(BASE_DIR, <span style="color:#e6db74">&#39;media&#39;</span>)
+MEDIA_URL <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;/media/&#39;</span>
+</code></pre></div>
 
-
-<footer class=" footline" >
+<footer class="footline">
 	
 </footer>
 <div id="disqus_thread"></div>
@@ -1046,7 +1083,7 @@
     
     if (window.location.hostname == "localhost")
         return;
-    var logicalName = '';
+    var logicalName = '20.04.27.md';
     if (logicalName == "_index.md")
         return;
     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -1605,6 +1642,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1623,6 +1661,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1660,8 +1701,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="../til/20.04.26.html" title="2020.04.26"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="../basics.html" title="About Blog" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="../hugo-blog.html" title="Hugo Blog" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1691,3 +1734,4 @@
 
   </body>
 </html>
+
