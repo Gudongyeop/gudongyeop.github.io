@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>20.04.27 on 여러가지</title>
+    <link>https://dongyeopgu.github.io/tags/20.04.27.html</link>
+    <description>Recent content in 20.04.27 on 여러가지</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://dongyeopgu.github.io/tags/20.04.27/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>2020.04.27</title>
+      <link>https://dongyeopgu.github.io/til/20.04.27.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dongyeopgu.github.io/til/20.04.27.html</guid>
+      <description>오늘 배운 것 이미지 업로드  ImageField를 활용하여 업로드
+  단순히 ImageField를 사용하기 위해서는 pillow패키지를 설치해야 한다.  $ pip install pillow  Resizing 하기 위해서는 pilkit, django-imagekit 패키지를 설치  $ pip install pilkit django-imagekit  ImageField를 사용할 app의 models.py를 수정  class &amp;lt;사용할 모델&amp;gt;: image = models.ImageField() # 저장하지 않고 잘라서 표현할 때(ex. thumbnail) image_thumbnail = ImageSpecField(source=&amp;#39;image&amp;#39;, processors=[Thumbnail(300, 300)], format=&amp;#39;JPEG&amp;#39;, options={&amp;#39;quality&amp;#39;: 60})  Image 파일을 저장할 경로 설정 settings.</description>
+    </item>
+    
+  </channel>
+</rss>
