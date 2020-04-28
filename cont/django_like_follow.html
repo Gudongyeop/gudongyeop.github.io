@@ -18,7 +18,7 @@
 
     <link rel="icon" href="../images/favicon.png" type="image/png">
 
-    <title>TIL :: 여러가지</title>
+    <title>Django M:N :: 여러가지</title>
 
     
     <link href="../css/nucleus.css?1588082733" rel="stylesheet">
@@ -44,7 +44,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/tags/til.html">
+  <body class="" data-url="/cont/django_like_follow.html">
     <nav id="sidebar" class="">
 
 
@@ -377,7 +377,7 @@
   
     
     <li data-nav-id="/cont.html" title="Django 학습" class="dd-item 
-        
+        parent
         
         
         ">
@@ -529,7 +529,7 @@
  
   
     
-      <li data-nav-id="/cont/django_like_follow.html" title="Django M:N" class="dd-item ">
+      <li data-nav-id="/cont/django_like_follow.html" title="Django M:N" class="dd-item active">
         <a href="../cont/django_like_follow.html">
         <b>7. </b>Django M:N
         
@@ -1029,85 +1029,148 @@
                         </a>
                     </span>
                   
-                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
-                  
                   <span class="links">
                  
                  
-                   TIL 
+                   Django M:N 
                  
                   </span>
                 </div>
-                
-                    <div class="progress">
-    <div class="wrapper">
-
-    </div>
-</div>
-
                 
               </div>
             </div>
             
         <div id="head-tags">
         
+<div class="tags">
+
+  <a class="tag-link" href="../tags/django">django</a>
+
+  <a class="tag-link" href="../tags/like">like</a>
+
+  <a class="tag-link" href="../tags/follow">follow</a>
+
+  <a class="tag-link" href="../tags/mn">M:N</a>
+
+</div>
+
         </div>
+        
+          <div id="chapter">
         
         <div id="body-inner">
           
-            <h1>
-              
-                taxonomy ::
-              
-              TIL
-            </h1>
-          
 
         
 
 
 
-
-
-
+<h2 id="django-mn-model">Django M:N model</h2>
+<blockquote>
+<p>Django에서 좋아요 기능이나 팔로우 기능처럼 M:N 관계 만들기</p>
+<p>ManyToManyField 이용</p>
+</blockquote>
 <ul>
-	
-		<li><a href="../til/20.04.13.html">2020.04.13 다시 기록 시작</a></li>
-	
-		<li><a href="../til/20.04.14.html">2020.04.14</a></li>
-	
-		<li><a href="../til/20.04.15.html">2020.04.15</a></li>
-	
-		<li><a href="../til/20.04.16.html">2020.04.16</a></li>
-	
-		<li><a href="../til/20.04.17.html">2020.04.17</a></li>
-	
-		<li><a href="../til/20.04.18.html">2020.04.18</a></li>
-	
-		<li><a href="../til/20.04.19.html">2020.04.19</a></li>
-	
-		<li><a href="../til/20.04.20.html">2020.04.20</a></li>
-	
-		<li><a href="../til/20.04.21.html">2020.04.21</a></li>
-	
-		<li><a href="../til/20.04.22.html">2020.04.22</a></li>
-	
-		<li><a href="../til/20.04.23.html">2020.04.23</a></li>
-	
-		<li><a href="../til/20.04.24.html">2020.04.24</a></li>
-	
-		<li><a href="../til/20.04.25.html">2020.04.25</a></li>
-	
-		<li><a href="../til/20.04.26.html">2020.04.26</a></li>
-	
-		<li><a href="../til/20.04.27.html">2020.04.27</a></li>
-	
-		<li><a href="../til/20.04.28.html">2020.04.28</a></li>
-	
+<li>좋아요 기능을 위한 model 추가(게시글 모델)</li>
 </ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"> <span style="color:#75715e"># 좋아요 기능을 위한 article_like_users 테이블 생성</span>
+<span style="color:#66d9ef">class</span> <span style="color:#960050;background-color:#1e0010">좋아요 기능을 추가할 클래스 명:</span>
+    like_users <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>ManyToManyField(settings<span style="color:#f92672">.</span>AUTH_USER_MODEL, related_name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;like_articles&#39;</span>)
+ <span style="color:#75715e"># 팔로우 기능을 위한 </span>
+</code></pre></div><ul>
+<li>팔로우 기능을 위한 model 추가(User 모델을 Customizing)</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">User</span>(AbstractUser):
+    followers <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>ManyToManyField(settings<span style="color:#f92672">.</span>AUTH_USER_MODEL, related_name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;followings&#39;</span>)
+</code></pre></div><ul>
+<li>게시글 app의 views.py에서 좋아요 기능 설정</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">like</span>(request, pk):
+    article <span style="color:#f92672">=</span> get_object_or_404(Article, pk<span style="color:#f92672">=</span>pk)
+    <span style="color:#75715e"># 좋아요를 누르면, &gt;&gt; DB에 존재할 경우</span>
+    <span style="color:#66d9ef">if</span> article<span style="color:#f92672">.</span>like_users<span style="color:#f92672">.</span>filter(id<span style="color:#f92672">=</span>request<span style="color:#f92672">.</span>user<span style="color:#f92672">.</span>pk)<span style="color:#f92672">.</span>exists():
+        article<span style="color:#f92672">.</span>like_users<span style="color:#f92672">.</span>remove(request<span style="color:#f92672">.</span>user) <span style="color:#75715e"># 좋아요 취소</span>
+    <span style="color:#66d9ef">else</span>:		<span style="color:#75715e">#좋아요 누르지 않았다면</span>
+        article<span style="color:#f92672">.</span>like_users<span style="color:#f92672">.</span>add(request<span style="color:#f92672">.</span>user)
+    <span style="color:#66d9ef">return</span> redirect(<span style="color:#e6db74">&#39;articles:detail&#39;</span>, article<span style="color:#f92672">.</span>pk)
+</code></pre></div><ul>
+<li>계정 관련 app의 views.py에서 팔로우 기능 설정</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">follow</span>(request, username):
+    User <span style="color:#f92672">=</span> get_user_model()
+    user <span style="color:#f92672">=</span> get_object_or_404(User, username<span style="color:#f92672">=</span>username)
+    <span style="color:#66d9ef">if</span> user <span style="color:#f92672">!=</span> request<span style="color:#f92672">.</span>user:
+        <span style="color:#66d9ef">if</span> user<span style="color:#f92672">.</span>followers<span style="color:#f92672">.</span>filter(username<span style="color:#f92672">=</span>request<span style="color:#f92672">.</span>user<span style="color:#f92672">.</span>username)<span style="color:#f92672">.</span>exists():
+            user<span style="color:#f92672">.</span>followers<span style="color:#f92672">.</span>remove(request<span style="color:#f92672">.</span>user)
+        <span style="color:#66d9ef">else</span>:
+            user<span style="color:#f92672">.</span>followers<span style="color:#f92672">.</span>add(request<span style="color:#f92672">.</span>user)
+    <span style="color:#66d9ef">return</span> redirect(<span style="color:#e6db74">&#39;accounts:profile&#39;</span>, user<span style="color:#f92672">.</span>username)
+</code></pre></div><ul>
+<li>html 작성</li>
+</ul>
+<blockquote>
+<p>좋아요를 위한 html</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">...
+  {% for article in articles %}
+    &lt;<span style="color:#f92672">ul</span>&gt;
+      &lt;<span style="color:#f92672">li</span>&gt;{{ article.title }}&lt;/<span style="color:#f92672">li</span>&gt;
+    &lt;/<span style="color:#f92672">ul</span>&gt;
+	<span style="color:#75715e">&lt;!-- 좋아요를 눌렀을 경우 --&gt;</span>
+    {% if request.user in article.like_users.all %}
+    &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{% url &#39;articles:like&#39; article.pk %}&#34;</span>&gt;
+		<span style="color:#75715e">&lt;!-- 좋아요 표시를 위한 아이콘이나 사진을 넣음 --&gt;</span>
+	&lt;/<span style="color:#f92672">a</span>&gt;
+	<span style="color:#75715e">&lt;!-- 좋아요를 다시 눌러 취소할 경우 --&gt;</span>
+    {% else %}
+    &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{% url &#39;articles:like&#39; article.pk %}&#34;</span>&gt;
+		<span style="color:#75715e">&lt;!-- 좋아요 표시를 위한 아이콘이나 사진을 넣음 --&gt;</span>
+    &lt;/<span style="color:#f92672">a</span>&gt;
+    {% endif %}
+	<span style="color:#75715e">&lt;!-- 좋아요를 누른 사람을 카운트하기 위해 --&gt;</span>
+    &lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;display: inline;&#34;</span>&gt;{{ article.like_users.count }}명이 좋아합니다.&lt;/<span style="color:#f92672">p</span>&gt;
+    &lt;<span style="color:#f92672">hr</span>&gt;
+  {% endfor %}
+...
+</code></pre></div><blockquote>
+<p>팔로우 기능을 위한 html</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">...
+<span style="color:#75715e">&lt;!-- 자기 자신을 팔로우 하지 않기 위해 request 유저가 팔로우할 user가 아닐 경우--&gt;</span>
+{% if request.user != user %} 
+    {% if request.user in user.followers.all %}<span style="color:#75715e">&lt;!--팔로우 상태일 경우 --&gt;</span>
+      &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{% url &#39;accounts:follow&#39; user.username %}&#34;</span>&gt;팔로우 취소&lt;/<span style="color:#f92672">a</span>&gt;
+    {% else %}
+      &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{% url &#39;accounts:follow&#39; user.username %}&#34;</span>&gt;팔로우&lt;/<span style="color:#f92672">a</span>&gt;
+    {% endif %}
+  {% endif %}
+  &lt;<span style="color:#f92672">p</span>&gt;팔로워: {{ user.followers.all.count }}명&lt;/<span style="color:#f92672">p</span>&gt;
+  &lt;<span style="color:#f92672">p</span>&gt;팔로잉: {{ user.followings.all.count }}명&lt;/<span style="color:#f92672">p</span>&gt;
+  &lt;<span style="color:#f92672">hr</span>&gt;
+  &lt;<span style="color:#f92672">h3</span>&gt;작성한 글 목록&lt;/<span style="color:#f92672">h3</span>&gt;
+  {% for article in user.article_set.all %}
+  	&lt;<span style="color:#f92672">p</span>&gt;{{ article.title }}&lt;/<span style="color:#f92672">p</span>&gt;
+  {% endfor %}
+  &lt;<span style="color:#f92672">h3</span>&gt;좋아요한 글 목록&lt;/<span style="color:#f92672">h3</span>&gt;
+  {% for article in user.like_articles.all %}
+    &lt;<span style="color:#f92672">p</span>&gt;{{ article.title }}&lt;/<span style="color:#f92672">p</span>&gt;
+  {% endfor %}
+...
+</code></pre></div><blockquote>
+<p>이 html에서 <code>template tag</code>인 <code>with</code>를 사용하면 <code>user.followers.all</code>을 조금더 간단하게 이름을 변경해 사용 가능하다</p>
+</blockquote>
+<hr>
+<ol>
+<li><a href="https://dongyeopgu.github.io/cont/django_start.html">Django 기초</a></li>
+<li><a href="https://dongyeopgu.github.io/cont/django_crud.html">Django CRUD</a></li>
+<li><a href="https://dongyeopgu.github.io/cont/django_paginator.html">Django Paginator</a></li>
+<li><a href="https://dongyeopgu.github.io/cont/django_login.html">Django User(1)</a></li>
+<li><a href="https://dongyeopgu.github.io/cont/django_change_user.html">Django User(2)</a></li>
+<li><a href="https://dongyeopgu.github.io/cont/django_comment.html">Django Comment</a></li>
+</ol>
 
 
-<footer class=" footline" >
+<footer class="footline">
 	
 </footer>
 <div id="disqus_thread"></div>
@@ -1118,7 +1181,7 @@
     
     if (window.location.hostname == "localhost")
         return;
-    var logicalName = '';
+    var logicalName = 'Django_like_follow.md';
     if (logicalName == "_index.md")
         return;
     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -1131,6 +1194,8 @@
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
+        
+            </div> 
         
         </div> 
         
@@ -1437,6 +1502,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1455,6 +1521,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1764,8 +1833,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="../cont/django_comment.html" title="Django Comment"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="../basics.html" title="About Blog" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="../til.html" title="TIL" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1795,3 +1866,4 @@
 
   </body>
 </html>
+
