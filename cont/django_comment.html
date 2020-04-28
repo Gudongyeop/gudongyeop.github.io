@@ -21,20 +21,20 @@
     <title>Django Comment :: 여러가지</title>
 
     
-    <link href="../css/nucleus.css?1588078551" rel="stylesheet">
-    <link href="../css/fontawesome-all.min.css?1588078551" rel="stylesheet">
-    <link href="../css/hybrid.css?1588078551" rel="stylesheet">
-    <link href="../css/featherlight.min.css?1588078551" rel="stylesheet">
-    <link href="../css/perfect-scrollbar.min.css?1588078551" rel="stylesheet">
-    <link href="../css/auto-complete.css?1588078551" rel="stylesheet">
-    <link href="../css/atom-one-dark-reasonable.css?1588078551" rel="stylesheet">
-    <link href="../css/theme.css?1588078551" rel="stylesheet">
-    <link href="../css/hugo-theme.css?1588078551" rel="stylesheet">
+    <link href="../css/nucleus.css?1588079966" rel="stylesheet">
+    <link href="../css/fontawesome-all.min.css?1588079966" rel="stylesheet">
+    <link href="../css/hybrid.css?1588079966" rel="stylesheet">
+    <link href="../css/featherlight.min.css?1588079966" rel="stylesheet">
+    <link href="../css/perfect-scrollbar.min.css?1588079966" rel="stylesheet">
+    <link href="../css/auto-complete.css?1588079966" rel="stylesheet">
+    <link href="../css/atom-one-dark-reasonable.css?1588079966" rel="stylesheet">
+    <link href="../css/theme.css?1588079966" rel="stylesheet">
+    <link href="../css/hugo-theme.css?1588079966" rel="stylesheet">
     
-      <link href="../css/theme-red.css?1588078551" rel="stylesheet">
+      <link href="../css/theme-red.css?1588079966" rel="stylesheet">
     
 
-    <script src="../js/jquery-3.3.1.min.js?1588078551"></script>
+    <script src="../js/jquery-3.3.1.min.js?1588079966"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -75,14 +75,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../js/lunr.min.js?1588078551"></script>
-<script type="text/javascript" src="../js/auto-complete.js?1588078551"></script>
+<script type="text/javascript" src="../js/lunr.min.js?1588079966"></script>
+<script type="text/javascript" src="../js/auto-complete.js?1588079966"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/dongyeopgu.github.io\/";
     
 </script>
-<script type="text/javascript" src="../js/search.js?1588078551"></script>
+<script type="text/javascript" src="../js/search.js?1588079966"></script>
 
     
   </div>
@@ -1027,6 +1027,8 @@
 
   <a class="tag-link" href="../tags/comment">comment</a>
 
+  <a class="tag-link" href="../tags/1n">1:N</a>
+
 </div>
 
         </div>
@@ -1126,7 +1128,15 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{% for comment in article.comment_set.all %}
 	&lt;<span style="color:#f92672">li</span>&gt;{{ comment.content }}&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{% url &#39;articles:comments_delete&#39; article.pk comment.pk %}&#34;</span>&gt;삭제&lt;/<span style="color:#f92672">a</span>&gt;&lt;/<span style="color:#f92672">li</span>&gt;
 {% endfor %}
-</code></pre></div>
+</code></pre></div><hr>
+<ol>
+<li><a href="https://dongyeopgu.github.io/cont/django_start.html">Django 기초</a></li>
+<li><a href="https://dongyeopgu.github.io/cont/django_crud.html">Django CRUD</a></li>
+<li><a href="https://dongyeopgu.github.io/cont/django_paginator.html">Django Paginator</a></li>
+<li><a href="https://dongyeopgu.github.io/cont/django_login.html">Django User(1)</a></li>
+<li><a href="https://dongyeopgu.github.io/cont/django_change_user.html">Django User(2)</a></li>
+</ol>
+
 
 <footer class="footline">
 	
@@ -1788,19 +1798,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../js/clipboard.min.js?1588078551"></script>
-    <script src="../js/perfect-scrollbar.min.js?1588078551"></script>
-    <script src="../js/perfect-scrollbar.jquery.min.js?1588078551"></script>
-    <script src="../js/jquery.sticky.js?1588078551"></script>
-    <script src="../js/featherlight.min.js?1588078551"></script>
-    <script src="../js/highlight.pack.js?1588078551"></script>
+    <script src="../js/clipboard.min.js?1588079966"></script>
+    <script src="../js/perfect-scrollbar.min.js?1588079966"></script>
+    <script src="../js/perfect-scrollbar.jquery.min.js?1588079966"></script>
+    <script src="../js/jquery.sticky.js?1588079966"></script>
+    <script src="../js/featherlight.min.js?1588079966"></script>
+    <script src="../js/highlight.pack.js?1588079966"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../js/modernizr.custom-3.6.0.js?1588078551"></script>
-    <script src="../js/learn.js?1588078551"></script>
-    <script src="../js/hugo-learn.js?1588078551"></script>
+    <script src="../js/modernizr.custom-3.6.0.js?1588079966"></script>
+    <script src="../js/learn.js?1588079966"></script>
+    <script src="../js/hugo-learn.js?1588079966"></script>
 
-    <link href="../mermaid/mermaid.css?1588078551" rel="stylesheet" />
-    <script src="../mermaid/mermaid.js?1588078551"></script>
+    <link href="../mermaid/mermaid.css?1588079966" rel="stylesheet" />
+    <script src="../mermaid/mermaid.js?1588079966"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
