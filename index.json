@@ -105,6 +105,13 @@
 	"content": "Django 댓글 작성 \u0026amp; 삭제  게시글의 model은 Article로 만들었을 경우임. ForeignKey를 사용.\n 1. 댓글 작성  models.py에서 댓글 설정을 위한 class를 만든다.(user 설정을 안했을 경우)  class Comment(models.Model): article = models.ForeignKey(Article, on_delete=models.CASCADE) #on_delete=models.CASCADE는 ForeignKeyField가 삭제 될때 인스턴스도 같이 삭제 content = models.TextField()  forms.py에도 추가  from django import forms from .models import Comment class CommentForm(forms.ModelForm): class Meta: model = Comment fields = [\u0026#39;content\u0026#39;] # fields를 __all__로 해도 됨(all로 했을 경우에는 댓글 작성시 모든 값을 잘 입력 해야한다. *all로 하고 필요한 값을 입력 안했을 경우 저장이 되지 않음)  makemigrations와 migrate를 해야함\n  views.py에서 댓글 작성하는 함수를 추가  from .models import Article, Comment from .forms import ArticleForm, CommentForm def comments_create(request, article_pk): article = get_object_or_404(Article, article_pk=pk) if request.method==\u0026#39;POST\u0026#39;: form = CommentForm(request.POST) if form.is_valid(): comment = form.save(commit=False) comment.article = article comment.save() return redirect(\u0026#39;articles:detail\u0026#39;, article.pk) else: form = CommentForm() context = { \u0026#39;form\u0026#39;: form } return render(request, \u0026#39;articles/comments_create.html\u0026#39;, context)  commit=False을 사용 하면 간단하게 db에 당장 저장하지 않고 지연시켜 중복 저장을 방지. 그렇기에 comment.article=article 을 통해 not null 에러가 발생하지 않게 해준다.\n  urls.py에도 추가  path(\u0026#39;\u0026lt;int:article_pk\u0026gt;/comments/\u0026#39;, views.comments_create, name=\u0026#39;comments_create\u0026#39;),  html 작성  \u0026lt;!-- 먼저 게시글을 보여주는 html에서 댓글을 나오게 하기 위해 --\u0026gt; {% for comment in article.comment_set.all %} \u0026lt;li\u0026gt;{{ comment.content }}\u0026lt;/li\u0026gt; {% endfor %} \u0026lt;!-- 댓글을 작성하는 html을 만들경우 --\u0026gt; \u0026lt;form action=\u0026#34;\u0026#34; method=\u0026#34;POST\u0026#34;\u0026gt; {% csrf_token %} {{ form.content }} \u0026lt;input type=\u0026#34;submit\u0026#34; value=\u0026#34;작성\u0026#34;\u0026gt; \u0026lt;/form\u0026gt; 2. 댓글 삭제  views.py에 삭제하는 함수 추가  def comments_delete(request, comment_pk,article_pk): comment = get_object_or_404(Comment, pk=comment_pk) article = get_object_or_404(Article, pk=article_pk) comment.delete() return redirect(\u0026#39;articles:detail\u0026#39;, article.pk)  urls.py  path(\u0026#39;\u0026lt;int:article_pk\u0026gt;/comments/\u0026lt;int:comment_pk\u0026gt;/delete\u0026#39;, views.comments_delete, name=\u0026#39;comments_delete\u0026#39;)  댓글나오는 html  {% for comment in article.comment_set.all %} \u0026lt;li\u0026gt;{{ comment.content }}\u0026lt;a href=\u0026#34;{% url \u0026#39;articles:comments_delete\u0026#39; article.pk comment.pk %}\u0026#34;\u0026gt;삭제\u0026lt;/a\u0026gt;\u0026lt;/li\u0026gt; {% endfor %}   Django 기초 Django CRUD Django Paginator Django User(1) Django User(2)  "
 },
 {
+	"uri": "https://dongyeopgu.github.io/cont/django_like_follow.html",
+	"title": "Django M:N",
+	"tags": ["django", "like", "follow", "M:N"],
+	"description": "",
+	"content": "Django M:N model  Django에서 좋아요 기능이나 팔로우 기능처럼 M:N 관계 만들기\nManyToManyField 이용\n  좋아요 기능을 위한 model 추가(게시글 모델)  # 좋아요 기능을 위한 article_like_users 테이블 생성 class 좋아요 기능을 추가할 클래스 명: like_users = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name=\u0026#39;like_articles\u0026#39;) # 팔로우 기능을 위한   팔로우 기능을 위한 model 추가(User 모델을 Customizing)  class User(AbstractUser): followers = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name=\u0026#39;followings\u0026#39;)  게시글 app의 views.py에서 좋아요 기능 설정  def like(request, pk): article = get_object_or_404(Article, pk=pk) # 좋아요를 누르면, \u0026gt;\u0026gt; DB에 존재할 경우 if article.like_users.filter(id=request.user.pk).exists(): article.like_users.remove(request.user) # 좋아요 취소 else:\t#좋아요 누르지 않았다면 article.like_users.add(request.user) return redirect(\u0026#39;articles:detail\u0026#39;, article.pk)  계정 관련 app의 views.py에서 팔로우 기능 설정  def follow(request, username): User = get_user_model() user = get_object_or_404(User, username=username) if user != request.user: if user.followers.filter(username=request.user.username).exists(): user.followers.remove(request.user) else: user.followers.add(request.user) return redirect(\u0026#39;accounts:profile\u0026#39;, user.username)  html 작성   좋아요를 위한 html\n ... {% for article in articles %} \u0026lt;ul\u0026gt; \u0026lt;li\u0026gt;{{ article.title }}\u0026lt;/li\u0026gt; \u0026lt;/ul\u0026gt; \u0026lt;!-- 좋아요를 눌렀을 경우 --\u0026gt; {% if request.user in article.like_users.all %} \u0026lt;a href=\u0026#34;{% url \u0026#39;articles:like\u0026#39; article.pk %}\u0026#34;\u0026gt; \u0026lt;!-- 좋아요 표시를 위한 아이콘이나 사진을 넣음 --\u0026gt; \u0026lt;/a\u0026gt; \u0026lt;!-- 좋아요를 다시 눌러 취소할 경우 --\u0026gt; {% else %} \u0026lt;a href=\u0026#34;{% url \u0026#39;articles:like\u0026#39; article.pk %}\u0026#34;\u0026gt; \u0026lt;!-- 좋아요 표시를 위한 아이콘이나 사진을 넣음 --\u0026gt; \u0026lt;/a\u0026gt; {% endif %} \u0026lt;!-- 좋아요를 누른 사람을 카운트하기 위해 --\u0026gt; \u0026lt;p style=\u0026#34;display: inline;\u0026#34;\u0026gt;{{ article.like_users.count }}명이 좋아합니다.\u0026lt;/p\u0026gt; \u0026lt;hr\u0026gt; {% endfor %} ...  팔로우 기능을 위한 html\n ... \u0026lt;!-- 자기 자신을 팔로우 하지 않기 위해 request 유저가 팔로우할 user가 아닐 경우--\u0026gt; {% if request.user != user %} {% if request.user in user.followers.all %}\u0026lt;!--팔로우 상태일 경우 --\u0026gt; \u0026lt;a href=\u0026#34;{% url \u0026#39;accounts:follow\u0026#39; user.username %}\u0026#34;\u0026gt;팔로우 취소\u0026lt;/a\u0026gt; {% else %} \u0026lt;a href=\u0026#34;{% url \u0026#39;accounts:follow\u0026#39; user.username %}\u0026#34;\u0026gt;팔로우\u0026lt;/a\u0026gt; {% endif %} {% endif %} \u0026lt;p\u0026gt;팔로워: {{ user.followers.all.count }}명\u0026lt;/p\u0026gt; \u0026lt;p\u0026gt;팔로잉: {{ user.followings.all.count }}명\u0026lt;/p\u0026gt; \u0026lt;hr\u0026gt; \u0026lt;h3\u0026gt;작성한 글 목록\u0026lt;/h3\u0026gt; {% for article in user.article_set.all %} \u0026lt;p\u0026gt;{{ article.title }}\u0026lt;/p\u0026gt; {% endfor %} \u0026lt;h3\u0026gt;좋아요한 글 목록\u0026lt;/h3\u0026gt; {% for article in user.like_articles.all %} \u0026lt;p\u0026gt;{{ article.title }}\u0026lt;/p\u0026gt; {% endfor %} ...  이 html에서 template tag인 with를 사용하면 user.followers.all을 조금더 간단하게 이름을 변경해 사용 가능하다\n   Django 기초 Django CRUD Django Paginator Django User(1) Django User(2) Django Comment  "
+},
+{
 	"uri": "https://dongyeopgu.github.io/tags/1n.html",
 	"title": "1:N",
 	"tags": [],
@@ -464,6 +471,27 @@
 {
 	"uri": "https://dongyeopgu.github.io/tags/delete.html",
 	"title": "delete",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/follow.html",
+	"title": "follow",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/like.html",
+	"title": "like",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/mn.html",
+	"title": "M:N",
 	"tags": [],
 	"description": "",
 	"content": ""
