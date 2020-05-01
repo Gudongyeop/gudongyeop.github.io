@@ -18,7 +18,7 @@
 
     <link rel="icon" href="../images/favicon.png" type="image/png">
 
-    <title>read :: 여러가지</title>
+    <title>2020.04.30 :: 여러가지</title>
 
     
     <link href="../css/nucleus.css?1588302558" rel="stylesheet">
@@ -44,7 +44,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/tags/read.html">
+  <body class="" data-url="/til/20.04.30.html">
     <nav id="sidebar" class="">
 
 
@@ -558,7 +558,7 @@
   
     
     <li data-nav-id="/til.html" title="TIL" class="dd-item 
-        
+        parent
         
         
         ">
@@ -941,7 +941,7 @@
  
   
     
-      <li data-nav-id="/til/20.04.30.html" title="2020.04.30" class="dd-item ">
+      <li data-nav-id="/til/20.04.30.html" title="2020.04.30" class="dd-item active">
         <a href="../til/20.04.30.html">
         2020.04.30
         
@@ -1076,14 +1076,18 @@
                   <span class="links">
                  
                  
-                   read 
+                   2020.04.30 
                  
                   </span>
                 </div>
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#오늘-한-것">오늘 한 것</a></li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -1093,15 +1097,23 @@
             
         <div id="head-tags">
         
+<div class="tags">
+
+  <a class="tag-link" href="../tags/til">TIL</a>
+
+  <a class="tag-link" href="../tags/20.04.30">20.04.30</a>
+
+  <a class="tag-link" href="../tags/4%EC%9B%94">4월</a>
+
+</div>
+
         </div>
         
         <div id="body-inner">
           
             <h1>
               
-                taxonomy ::
-              
-              read
+              2020.04.30
             </h1>
           
 
@@ -1109,17 +1121,48 @@
 
 
 
-
-
-
+<h2 id="오늘-한-것">오늘 한 것</h2>
+<blockquote>
+<p>혼자 해보는 PJT에서 paginator 추가 및 댓글 작성 시 발생한 오류 수정</p>
+</blockquote>
 <ul>
-	
-		<li><a href="../cont/django_crud.html">Django CRUD</a></li>
-	
+<li>views.py 에서</li>
 </ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#a6e22e">@require_POST</span>
+<span style="color:#a6e22e">@login_required</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">reply_create</span>(request, qanda_pk):
+    qanda <span style="color:#f92672">=</span> get_object_or_404(QandA, pk<span style="color:#f92672">=</span>qanda_pk)
+    form <span style="color:#f92672">=</span> ReplyForm(request<span style="color:#f92672">.</span>POST)
+    <span style="color:#66d9ef">if</span> form<span style="color:#f92672">.</span>is_valid():
+        reply<span style="color:#f92672">=</span>form<span style="color:#f92672">.</span>save(commit<span style="color:#f92672">=</span>False)
+        reply<span style="color:#f92672">.</span>user <span style="color:#f92672">=</span> request<span style="color:#f92672">.</span>user
+        reply<span style="color:#f92672">.</span>QandA <span style="color:#f92672">=</span> qanda
+        reply<span style="color:#f92672">.</span>save()
+    <span style="color:#66d9ef">return</span> redirect(<span style="color:#e6db74">&#39;reservation:QandA_detail&#39;</span>,qanda<span style="color:#f92672">.</span>pk)
+</code></pre></div><blockquote>
+<p><code>reply.QandA = qanda</code>에서 QandA 모델을 qanda로 불러와서 NOT NULL 오류 발생했었음.</p>
+</blockquote>
+<ul>
+<li>paginator 추가 코드</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">QandA_list</span>(request):
+    QandAs <span style="color:#f92672">=</span> QandA<span style="color:#f92672">.</span>objects<span style="color:#f92672">.</span>order_by(<span style="color:#e6db74">&#39;-pk&#39;</span>)    
+    paginator <span style="color:#f92672">=</span> Paginator(QandAs, <span style="color:#ae81ff">4</span>) <span style="color:#75715e">#한 페이지 당 몇개 씩 보여줄 지 지정</span>
+    page_number <span style="color:#f92672">=</span> request<span style="color:#f92672">.</span>GET<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;page&#39;</span>)
+    page_obj <span style="color:#f92672">=</span> paginator<span style="color:#f92672">.</span>get_page(page_number)
+    reviews_all <span style="color:#f92672">=</span> get_list_or_404(QandA)
+    total_count <span style="color:#f92672">=</span> len(reviews_all)
+    total_page <span style="color:#f92672">=</span> total_count<span style="color:#f92672">//</span><span style="color:#ae81ff">4</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+    page_range <span style="color:#f92672">=</span> range(<span style="color:#ae81ff">1</span>,total_page<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)
+    context <span style="color:#f92672">=</span> {
+        <span style="color:#e6db74">&#39;QandAs&#39;</span> : QandAs,
+        <span style="color:#e6db74">&#39;page_obj&#39;</span>: page_obj,
+        <span style="color:#e6db74">&#39;page_range&#39;</span>: page_range,
+    }
+    <span style="color:#66d9ef">return</span> render(request, <span style="color:#e6db74">&#39;reservation/QandA.html&#39;</span>, context)
+</code></pre></div>
 
-
-<footer class=" footline" >
+<footer class="footline">
 	
 </footer>
 <div id="disqus_thread"></div>
@@ -1130,7 +1173,7 @@
     
     if (window.location.hostname == "localhost")
         return;
-    var logicalName = '';
+    var logicalName = '20.04.30.md';
     if (logicalName == "_index.md")
         return;
     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -1753,6 +1796,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1771,6 +1815,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1808,8 +1855,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="../til/20.04.29.html" title="2020.04.29"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="../basics.html" title="About Blog" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="../hugo-blog.html" title="Hugo Blog" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1839,3 +1888,4 @@
 
   </body>
 </html>
+

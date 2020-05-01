@@ -185,5 +185,16 @@ ManyToManyField 이용
  알고리즘 풀이 for t in range(int(input())): n, num = map(str, input().split()) print(f&amp;#39;#{t+1}&amp;#39;,end=&amp;#34; &amp;#34;) for a in num: b = &amp;#39;0x&amp;#39;+ a.lower() hex_num = int(a, 16) # 16진수를 10진수로 print(&amp;#34;{0:b}&amp;#34;.format(hex_num).zfill(4), end=&amp;#34;&amp;#34;) # 10진수를 2진수로 바꾸면서 (4자리씩) print() </description>
     </item>
     
+    <item>
+      <title>2020.04.30</title>
+      <link>https://dongyeopgu.github.io/til/20.04.30.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dongyeopgu.github.io/til/20.04.30.html</guid>
+      <description>오늘 한 것  혼자 해보는 PJT에서 paginator 추가 및 댓글 작성 시 발생한 오류 수정
+  views.py 에서  @require_POST @login_required def reply_create(request, qanda_pk): qanda = get_object_or_404(QandA, pk=qanda_pk) form = ReplyForm(request.POST) if form.is_valid(): reply=form.save(commit=False) reply.user = request.user reply.QandA = qanda reply.save() return redirect(&amp;#39;reservation:QandA_detail&amp;#39;,qanda.pk)  reply.QandA = qanda에서 QandA 모델을 qanda로 불러와서 NOT NULL 오류 발생했었음.
+  paginator 추가 코드  def QandA_list(request): QandAs = QandA.objects.order_by(&amp;#39;-pk&amp;#39;) paginator = Paginator(QandAs, 4) #한 페이지 당 몇개 씩 보여줄 지 지정 page_number = request.</description>
+    </item>
+    
   </channel>
 </rss>
