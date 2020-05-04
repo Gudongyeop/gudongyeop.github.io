@@ -12,10 +12,10 @@
     
     <item>
       <title>2020.04.21</title>
-      <link>https://dongyeopgu.github.io/til/april/20.04.21.html</link>
+      <link>https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.21.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/april/20.04.21.html</guid>
+      <guid>https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.21.html</guid>
       <description>오늘 배운 것 Django 댓글 작성 &amp;amp; 삭제  게시글의 model은 Article로 만들었을 경우임. ForeignKey를 사용.
    댓글 작성
   models.py에서 댓글 설정을 위한 class를 만든다.(user 설정을 안했을 경우)
