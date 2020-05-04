@@ -12,10 +12,10 @@
     
     <item>
       <title>2020.04.18</title>
-      <link>https://dongyeopgu.github.io/til/april/20.04.18.html</link>
+      <link>https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.18.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/april/20.04.18.html</guid>
+      <guid>https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.18.html</guid>
       <description>오늘 공부한 것  AuthenticationForm을 커스터 마이징할 때 class Meta를 통해 attr을 작성 할 경우 원하는 대로 동작하지 않는다. 그렇기 때문에 init을 통해 attr을 추가해야 한다. 아래의 코드는 오늘 사용한 예  class myAuthenticationForm(AuthenticationForm): def __init__(self, *args, **kwargs): super(myAuthenticationForm, self).__init__(*args, **kwargs) self.fields[&amp;#39;username&amp;#39;].widget = forms.TextInput( attrs={ &amp;#39;class&amp;#39;: &amp;#39;form-control&amp;#39; } ) self.fields[&amp;#39;password&amp;#39;].widget = forms.PasswordInput( attrs={ &amp;#39;class&amp;#39;: &amp;#39;form-control&amp;#39; } ) class Meta: model = User fields = [&amp;#39;username&amp;#39;,&amp;#39;password&amp;#39;] </description>
     </item>
     
