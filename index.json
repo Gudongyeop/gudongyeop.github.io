@@ -364,6 +364,20 @@
 	"content": ""
 },
 {
+	"uri": "https://dongyeopgu.github.io/tags/20.05.05.html",
+	"title": "20.05.05",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/20.05.06.html",
+	"title": "20.05.06",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.13.html",
 	"title": "2020.04.13 다시 기록 시작",
 	"tags": ["TIL", "20.04.13", "4월"],
@@ -516,6 +530,20 @@
 	"tags": ["TIL", "20.05.04", "5월"],
 	"description": "",
 	"content": "오늘 한 것  ERD 이용하여 DB모델 구조 설정 erdcloud.com 이용 위 내용을 바탕으로 Django에서 model 만들기 Django query 개선  "
+},
+{
+	"uri": "https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.05.html",
+	"title": "2020.05.05",
+	"tags": ["TIL", "20.05.05", "5월"],
+	"description": "",
+	"content": "오늘 한 것  PJT 메인 화면 꾸미기 Heroku 사용법 익히기  "
+},
+{
+	"uri": "https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.06.html",
+	"title": "2020.05.06",
+	"tags": ["TIL", "20.05.06", "5월"],
+	"description": "",
+	"content": "오늘 한 것  SWEA 문제 풀이  # 최소합 dx, dy = [0,1], [1,0] def dfs(x,y): global min_num, result visit[x][y] = 1 if result \u0026lt; min_num: return if x == n-1 and y == n-1: result = min_num return for i in range(2): nx = x + dx[i] ny = y + dy[i] if 0 \u0026lt;= nx \u0026lt; n and 0 \u0026lt;= ny \u0026lt; n and visit[nx][ny] == 0: min_num += a[nx][ny] dfs(nx,ny) visit[nx][ny] = 0 min_num -= a[nx][ny] for t in range(int(input())): n = int(input()) a = [list(map(int, input().split()))for _ in range(n)] visit = [[0 for _ in range(n)]for _ in range(n)] min_num = a[0][0] result = 10000000 dfs(0,0) print(f\u0026#34;#{t+1} {result}\u0026#34;) # 전자카트 def sol(a,b,c): if b == n-1: c += arr[a][0] result.append(c) else: for i in range(1,n): if not visit[i]: c += arr[a][i] visit[i]=1 sol(i,b+1,c) visit[i]=0 c -= arr[a][i] for t in range(int(input())): n = int(input()) arr = [list(map(int, input().split()))for _ in range(n)] visit = [0]*n result = [] sol(0,0,0) print(f\u0026#34;#{t+1} {min(result)}\u0026#34;) "
 },
 {
 	"uri": "https://dongyeopgu.github.io/tags/4%EC%9B%94.html",
