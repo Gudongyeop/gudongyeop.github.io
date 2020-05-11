@@ -80,6 +80,10 @@
   </url>
   
   <url>
+    <loc>https://dongyeopgu.github.io/cont/django_rest_api.html</loc>
+  </url>
+  
+  <url>
     <loc>https://dongyeopgu.github.io/tags/1n.html</loc>
     <lastmod>2020-04-21T22:54:07+09:00</lastmod>
   </url>
@@ -429,6 +433,14 @@
   
   <url>
     <loc>https://dongyeopgu.github.io/tags/read.html</loc>
+  </url>
+  
+  <url>
+    <loc>https://dongyeopgu.github.io/tags/rest-api.html</loc>
+  </url>
+  
+  <url>
+    <loc>https://dongyeopgu.github.io/tags/rest-framework.html</loc>
   </url>
   
   <url>

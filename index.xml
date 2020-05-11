@@ -88,6 +88,19 @@ ManyToManyField 이용
     </item>
     
     <item>
+      <title>Django REST Framework</title>
+      <link>https://dongyeopgu.github.io/cont/django_rest_api.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dongyeopgu.github.io/cont/django_rest_api.html</guid>
+      <description>Django Rest Framework(DRF) 1. REST API(DRF: Django Rest Framework)   REST API를 활용하면 백 엔드와 프론트 엔드 분리가 쉽고 코드의 재활용성이 좋다.
+  REST API를 사용하기 위해서 먼저 설치가 필요
+$ pip install djangorestframework   settings.py에서 INSTALLED_APPS에 &#39;rest_framework&#39;추가
+  app 폴더에 serializers.py 파일을 만들고 내용 추가
+# serializers.py from rest_framework import serializers from .models import * #필요한 모델이름 넣어주기 class &amp;lt;모델명&amp;gt;Serializer(serializers.ModelSerializer): class Meta: model = &amp;lt;모델명&amp;gt; fields = [&amp;#39;필요한 필드&amp;#39;]   views.</description>
+    </item>
+    
+    <item>
       <title>Hugo를 이용해 Blog 만들기</title>
       <link>https://dongyeopgu.github.io/hugo-blog/hugo-blog-start.html</link>
       <pubDate>Mon, 13 Apr 2020 22:13:54 +0900</pubDate>
