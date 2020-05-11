@@ -126,6 +126,13 @@
 	"content": "Django M:N model  Django에서 좋아요 기능이나 팔로우 기능처럼 M:N 관계 만들기\nManyToManyField 이용\n  좋아요 기능을 위한 model 추가(게시글 모델)  # 좋아요 기능을 위한 article_like_users 테이블 생성 class 좋아요 기능을 추가할 클래스 명: like_users = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name=\u0026#39;like_articles\u0026#39;) # 팔로우 기능을 위한   팔로우 기능을 위한 model 추가(User 모델을 Customizing)  class User(AbstractUser): followers = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name=\u0026#39;followings\u0026#39;)  게시글 app의 views.py에서 좋아요 기능 설정  def like(request, pk): article = get_object_or_404(Article, pk=pk) # 좋아요를 누르면, \u0026gt;\u0026gt; DB에 존재할 경우 if article.like_users.filter(id=request.user.pk).exists(): article.like_users.remove(request.user) # 좋아요 취소 else:\t#좋아요 누르지 않았다면 article.like_users.add(request.user) return redirect(\u0026#39;articles:detail\u0026#39;, article.pk)  계정 관련 app의 views.py에서 팔로우 기능 설정  def follow(request, username): User = get_user_model() user = get_object_or_404(User, username=username) if user != request.user: if user.followers.filter(username=request.user.username).exists(): user.followers.remove(request.user) else: user.followers.add(request.user) return redirect(\u0026#39;accounts:profile\u0026#39;, user.username)  html 작성   좋아요를 위한 html\n ... {% for article in articles %} \u0026lt;ul\u0026gt; \u0026lt;li\u0026gt;{{ article.title }}\u0026lt;/li\u0026gt; \u0026lt;/ul\u0026gt; \u0026lt;!-- 좋아요를 눌렀을 경우 --\u0026gt; {% if request.user in article.like_users.all %} \u0026lt;a href=\u0026#34;{% url \u0026#39;articles:like\u0026#39; article.pk %}\u0026#34;\u0026gt; \u0026lt;!-- 좋아요 표시를 위한 아이콘이나 사진을 넣음 --\u0026gt; \u0026lt;/a\u0026gt; \u0026lt;!-- 좋아요를 다시 눌러 취소할 경우 --\u0026gt; {% else %} \u0026lt;a href=\u0026#34;{% url \u0026#39;articles:like\u0026#39; article.pk %}\u0026#34;\u0026gt; \u0026lt;!-- 좋아요 표시를 위한 아이콘이나 사진을 넣음 --\u0026gt; \u0026lt;/a\u0026gt; {% endif %} \u0026lt;!-- 좋아요를 누른 사람을 카운트하기 위해 --\u0026gt; \u0026lt;p style=\u0026#34;display: inline;\u0026#34;\u0026gt;{{ article.like_users.count }}명이 좋아합니다.\u0026lt;/p\u0026gt; \u0026lt;hr\u0026gt; {% endfor %} ...  팔로우 기능을 위한 html\n ... \u0026lt;!-- 자기 자신을 팔로우 하지 않기 위해 request 유저가 팔로우할 user가 아닐 경우--\u0026gt; {% if request.user != user %} {% if request.user in user.followers.all %}\u0026lt;!--팔로우 상태일 경우 --\u0026gt; \u0026lt;a href=\u0026#34;{% url \u0026#39;accounts:follow\u0026#39; user.username %}\u0026#34;\u0026gt;팔로우 취소\u0026lt;/a\u0026gt; {% else %} \u0026lt;a href=\u0026#34;{% url \u0026#39;accounts:follow\u0026#39; user.username %}\u0026#34;\u0026gt;팔로우\u0026lt;/a\u0026gt; {% endif %} {% endif %} \u0026lt;p\u0026gt;팔로워: {{ user.followers.all.count }}명\u0026lt;/p\u0026gt; \u0026lt;p\u0026gt;팔로잉: {{ user.followings.all.count }}명\u0026lt;/p\u0026gt; \u0026lt;hr\u0026gt; \u0026lt;h3\u0026gt;작성한 글 목록\u0026lt;/h3\u0026gt; {% for article in user.article_set.all %} \u0026lt;p\u0026gt;{{ article.title }}\u0026lt;/p\u0026gt; {% endfor %} \u0026lt;h3\u0026gt;좋아요한 글 목록\u0026lt;/h3\u0026gt; {% for article in user.like_articles.all %} \u0026lt;p\u0026gt;{{ article.title }}\u0026lt;/p\u0026gt; {% endfor %} ...  이 html에서 template tag인 with를 사용하면 user.followers.all을 조금더 간단하게 이름을 변경해 사용 가능하다\n   Django 기초 Django CRUD Django Paginator Django User(1) Django User(2) Django Comment  "
 },
 {
+	"uri": "https://dongyeopgu.github.io/cont/django_rest_api.html",
+	"title": "Django REST Framework",
+	"tags": ["django", "REST API", "REST Framework"],
+	"description": "",
+	"content": "Django Rest Framework(DRF) 1. REST API(DRF: Django Rest Framework)   REST API를 활용하면 백 엔드와 프론트 엔드 분리가 쉽고 코드의 재활용성이 좋다.\n  REST API를 사용하기 위해서 먼저 설치가 필요\n$ pip install djangorestframework   settings.py에서 INSTALLED_APPS에 'rest_framework'추가\n  app 폴더에 serializers.py 파일을 만들고 내용 추가\n# serializers.py from rest_framework import serializers from .models import * #필요한 모델이름 넣어주기 class \u0026lt;모델명\u0026gt;Serializer(serializers.ModelSerializer): class Meta: model = \u0026lt;모델명\u0026gt; fields = [\u0026#39;필요한 필드\u0026#39;]   views.py에 필요한 내용 추가\nfrom django.shortcuts import render, get_object_or_404 from rest_framework.response import Response from rest_framework.decorators import api_view from .models import * from .serializers import * @api_view([\u0026#39;GET\u0026#39;]) #method에 따라 다르게 적어주면 됨 (GET, POST 등) def list(request):\t#예를 들어 목록을 보여준다고 할때 변수명 = 모델명.objects.all()\t#queryset serializer = 모델명Serializer(변수명, many=True)\t#위에서 만든 이름임, many=True는 1:N 경우, queryset을 json으로 변환 return Response(serializer.data) @api_view([\u0026#39;GET\u0026#39;]) def detail(request, pk): 변수명 = get_object_or_404(모델명,pk=pk) serializer = 모델명DetailSerializer(변수명)\t#serializers.py에서 detail을 위한 모델명DetailSerializer를 만든 후 사용 return Response(serializer.data) # Create 경우 @api_view([\u0026#39;POST\u0026#39;]) def create(request): serializer = 모델명Serializer(data=request.data) if serializer.is_valid(): serializer.save() return Response(serializer.data) # Update, Delete @api_view([\u0026#39;PUT\u0026#39;, \u0026#39;DELETE\u0026#39;]) def comment_edit(request, pk): 변수명 = get_object_or_404(모델명, pk=pk) if request.method == \u0026#39;PUT\u0026#39;: serializer = 모델명Serializer(변수명, data=request.data) if serializer.is_valid(): serializer.save() return Response(\u0026#39;성공적으로 수정이 완료 되었습니다.\u0026#39;) return Response(status=status.HTTP_400_BAD_REQUEST) # 상태까지 나타내기 위함  if request.method == \u0026#39;DELETE\u0026#39;: comment.delete() return Response(\u0026#39;성공적으로 삭제 되었습니다.\u0026#39;, status=status.HTTP_204_NO_CONTENT)   views.py에서 작성한 이름대로 urls.py에 추가\n    Django 기초 Django CRUD Django Paginator Django User(1) Django User(2) Django Comment Django M:N  "
+},
+{
 	"uri": "https://dongyeopgu.github.io/tags/1n.html",
 	"title": "1:N",
 	"tags": [],
@@ -716,6 +723,20 @@
 {
 	"uri": "https://dongyeopgu.github.io/tags/read.html",
 	"title": "read",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/rest-api.html",
+	"title": "REST API",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/rest-framework.html",
+	"title": "REST Framework",
 	"tags": [],
 	"description": "",
 	"content": ""
