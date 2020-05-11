@@ -21,20 +21,20 @@
     <title>Django REST Framework :: 여러가지</title>
 
     
-    <link href="../css/nucleus.css?1589205689" rel="stylesheet">
-    <link href="../css/fontawesome-all.min.css?1589205689" rel="stylesheet">
-    <link href="../css/hybrid.css?1589205689" rel="stylesheet">
-    <link href="../css/featherlight.min.css?1589205689" rel="stylesheet">
-    <link href="../css/perfect-scrollbar.min.css?1589205689" rel="stylesheet">
-    <link href="../css/auto-complete.css?1589205689" rel="stylesheet">
-    <link href="../css/atom-one-dark-reasonable.css?1589205689" rel="stylesheet">
-    <link href="../css/theme.css?1589205689" rel="stylesheet">
-    <link href="../css/hugo-theme.css?1589205689" rel="stylesheet">
+    <link href="../css/nucleus.css?1589205867" rel="stylesheet">
+    <link href="../css/fontawesome-all.min.css?1589205867" rel="stylesheet">
+    <link href="../css/hybrid.css?1589205867" rel="stylesheet">
+    <link href="../css/featherlight.min.css?1589205867" rel="stylesheet">
+    <link href="../css/perfect-scrollbar.min.css?1589205867" rel="stylesheet">
+    <link href="../css/auto-complete.css?1589205867" rel="stylesheet">
+    <link href="../css/atom-one-dark-reasonable.css?1589205867" rel="stylesheet">
+    <link href="../css/theme.css?1589205867" rel="stylesheet">
+    <link href="../css/hugo-theme.css?1589205867" rel="stylesheet">
     
-      <link href="../css/theme-red.css?1589205689" rel="stylesheet">
+      <link href="../css/theme-red.css?1589205867" rel="stylesheet">
     
 
-    <script src="../js/jquery-3.3.1.min.js?1589205689"></script>
+    <script src="../js/jquery-3.3.1.min.js?1589205867"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -75,14 +75,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../js/lunr.min.js?1589205689"></script>
-<script type="text/javascript" src="../js/auto-complete.js?1589205689"></script>
+<script type="text/javascript" src="../js/lunr.min.js?1589205867"></script>
+<script type="text/javascript" src="../js/auto-complete.js?1589205867"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/dongyeopgu.github.io\/";
     
 </script>
-<script type="text/javascript" src="../js/search.js?1589205689"></script>
+<script type="text/javascript" src="../js/search.js?1589205868"></script>
 
     
   </div>
@@ -1439,32 +1439,36 @@
 </li>
 <li>
 <p>REST API를 사용하기 위해서 먼저 설치가 필요</p>
+</li>
+</ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ pip install djangorestframework
-</code></pre></div></li>
+</code></pre></div><ul>
 <li>
 <p>settings.py에서 <code>INSTALLED_APPS</code>에 <code>'rest_framework'</code>추가</p>
 </li>
 <li>
 <p>app 폴더에 serializers.py 파일을 만들고 내용 추가</p>
+</li>
+</ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># serializers.py</span>
 <span style="color:#f92672">from</span> rest_framework <span style="color:#f92672">import</span> serializers
 <span style="color:#f92672">from</span> .models <span style="color:#f92672">import</span> <span style="color:#f92672">*</span> <span style="color:#75715e">#필요한 모델이름 넣어주기</span>
-  
+
 <span style="color:#66d9ef">class</span> <span style="color:#960050;background-color:#1e0010">&lt;모델명&gt;</span><span style="color:#a6e22e">Serializer</span>(serializers<span style="color:#f92672">.</span>ModelSerializer):
     <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Meta</span>:
         model <span style="color:#f92672">=</span> <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">모델명</span><span style="color:#f92672">&gt;</span>
         fields <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;필요한 필드&#39;</span>]
-</code></pre></div></li>
-<li>
-<p>views.py에 필요한 내용 추가</p>
+</code></pre></div><ul>
+<li>views.py에 필요한 내용 추가</li>
+</ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> django.shortcuts <span style="color:#f92672">import</span> render, get_object_or_404
-  
+
 <span style="color:#f92672">from</span> rest_framework.response <span style="color:#f92672">import</span> Response
 <span style="color:#f92672">from</span> rest_framework.decorators <span style="color:#f92672">import</span> api_view
-  
+
 <span style="color:#f92672">from</span> .models <span style="color:#f92672">import</span> <span style="color:#f92672">*</span>
 <span style="color:#f92672">from</span> .serializers <span style="color:#f92672">import</span> <span style="color:#f92672">*</span>
-  
+
 <span style="color:#a6e22e">@api_view</span>([<span style="color:#e6db74">&#39;GET&#39;</span>]) <span style="color:#75715e">#method에 따라 다르게 적어주면 됨 (GET, POST 등)</span>
 <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">list</span>(request):	<span style="color:#75715e">#예를 들어 목록을 보여준다고 할때</span>
     <span style="color:#960050;background-color:#1e0010">변수명</span> <span style="color:#f92672">=</span> <span style="color:#960050;background-color:#1e0010">모델명</span><span style="color:#f92672">.</span>objects<span style="color:#f92672">.</span>all()	<span style="color:#75715e">#queryset</span>
@@ -1482,7 +1486,7 @@
     <span style="color:#66d9ef">if</span> serializer<span style="color:#f92672">.</span>is_valid():
         serializer<span style="color:#f92672">.</span>save()
         <span style="color:#66d9ef">return</span> Response(serializer<span style="color:#f92672">.</span>data)
-      
+    
 <span style="color:#75715e"># Update, Delete</span>
 <span style="color:#a6e22e">@api_view</span>([<span style="color:#e6db74">&#39;PUT&#39;</span>, <span style="color:#e6db74">&#39;DELETE&#39;</span>])
 <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">comment_edit</span>(request, pk):
@@ -1496,10 +1500,8 @@
     <span style="color:#66d9ef">if</span> request<span style="color:#f92672">.</span>method <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;DELETE&#39;</span>:
         comment<span style="color:#f92672">.</span>delete()
         <span style="color:#66d9ef">return</span> Response(<span style="color:#e6db74">&#39;성공적으로 삭제 되었습니다.&#39;</span>, status<span style="color:#f92672">=</span>status<span style="color:#f92672">.</span>HTTP_204_NO_CONTENT)
-</code></pre></div></li>
-<li>
-<p>views.py에서 작성한 이름대로 urls.py에 추가</p>
-</li>
+</code></pre></div><ul>
+<li>views.py에서 작성한 이름대로 urls.py에 추가</li>
 </ul>
 <hr>
 <ol>
@@ -2447,19 +2449,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../js/clipboard.min.js?1589205689"></script>
-    <script src="../js/perfect-scrollbar.min.js?1589205689"></script>
-    <script src="../js/perfect-scrollbar.jquery.min.js?1589205689"></script>
-    <script src="../js/jquery.sticky.js?1589205689"></script>
-    <script src="../js/featherlight.min.js?1589205689"></script>
-    <script src="../js/highlight.pack.js?1589205689"></script>
+    <script src="../js/clipboard.min.js?1589205868"></script>
+    <script src="../js/perfect-scrollbar.min.js?1589205868"></script>
+    <script src="../js/perfect-scrollbar.jquery.min.js?1589205868"></script>
+    <script src="../js/jquery.sticky.js?1589205868"></script>
+    <script src="../js/featherlight.min.js?1589205868"></script>
+    <script src="../js/highlight.pack.js?1589205868"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../js/modernizr.custom-3.6.0.js?1589205689"></script>
-    <script src="../js/learn.js?1589205689"></script>
-    <script src="../js/hugo-learn.js?1589205689"></script>
+    <script src="../js/modernizr.custom-3.6.0.js?1589205868"></script>
+    <script src="../js/learn.js?1589205868"></script>
+    <script src="../js/hugo-learn.js?1589205868"></script>
 
-    <link href="../mermaid/mermaid.css?1589205689" rel="stylesheet" />
-    <script src="../mermaid/mermaid.js?1589205689"></script>
+    <link href="../mermaid/mermaid.css?1589205868" rel="stylesheet" />
+    <script src="../mermaid/mermaid.js?1589205868"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
