@@ -311,5 +311,17 @@ $ pip install djangorestframework   settings.py에서 INSTALLED_APPS에 &#39;res
 # serializers.py from rest_framework import serializers from .models import * #필요한 모델이름 넣어주기 class &amp;lt;모델명&amp;gt;Serializer(serializers.ModelSerializer): class Meta: model = &amp;lt;모델명&amp;gt; fields = [&amp;#39;필요한 필드&amp;#39;]   views.</description>
     </item>
     
+    <item>
+      <title>2020.05.12</title>
+      <link>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.12.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.12.html</guid>
+      <description>오늘 배운 것 Javascript   Type
+ Primitive Type(원시 타입) : 변수에 저장할 때 실제 메모리에 저장된 값을 담는다.
+  Number String  ES6+ 부터 String-Template Literal 지원, Backtik(`)을 이용하여 여러 줄에 걸쳐 문자를 정의 가능, JS의 변수를 문자열 안에 바로 넣을 수 있음(Python에서 f&amp;rdquo; &amp;ldquo;와 비슷)   Boolean Empty value (null, undefined)    Operators
+ 할당 연산자 (+=, -=, ++, &amp;ndash;) 비교 연산자(부등호) 동등 연산자(==) : 메모리의 같은 객체를 가리키거나 같은 값을 갖도록 type변환 할 수 있다면 서로 같다고 판단.</description>
+    </item>
+    
   </channel>
 </rss>
