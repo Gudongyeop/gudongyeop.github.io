@@ -96,5 +96,82 @@ ManyToManyField 이용
       <description>Django Rest Framework(DRF) 1. REST API(DRF: Django Rest Framework)  REST API를 활용하면 백 엔드와 프론트 엔드 분리가 쉽고 코드의 재활용성이 좋다. REST API를 사용하기 위해서 먼저 설치가 필요  $ pip install djangorestframework  settings.py에서 INSTALLED_APPS에 &#39;rest_framework&#39;추가 app 폴더에 serializers.py 파일을 만들고 내용 추가  # serializers.py from rest_framework import serializers from .models import * #필요한 모델이름 넣어주기 class &amp;lt;모델명&amp;gt;Serializer(serializers.ModelSerializer): class Meta: model = &amp;lt;모델명&amp;gt; fields = [&amp;#39;필요한 필드&amp;#39;]  views.</description>
     </item>
     
+    <item>
+      <title>2020.04.14</title>
+      <link>https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.14.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.14.html</guid>
+      <description>오늘 배운 것들  Django  User 모델을 사용하는 것보다 get_user_model 메서드를 사용하는 것을 추천 get_user_model이 더 유연하게 사용할 수 있음. 커스터마이징을 했을 경우에도 쉽게 사용가능 로그인을위해 AuthenticationForm을 사용 회원 탈퇴는 views.py에서 request.user.delete() 이용 Form / ModelForm  Form 제공 GET  context를 넘겨줌   데이터 양식 처리 POST  양식데이터(request.POST) &amp;gt; ModelForm으로 넘겨줌 그 후, 검증       HTTP는 connectless, stateless 그렇기 때문에 정보를 쿠키에 저장  User가 서버로 요청을 보냄 서버가 쿠키와 같이 응답을 보내줌 User가 서버로 요청을 보낼 때 쿠키와 함께 보내줌    </description>
+    </item>
+    
+    <item>
+      <title>2020.04.18</title>
+      <link>https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.18.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.18.html</guid>
+      <description>오늘 공부한 것  AuthenticationForm을 커스터 마이징할 때 class Meta를 통해 attr을 작성 할 경우 원하는 대로 동작하지 않는다. 그렇기 때문에 init을 통해 attr을 추가해야 한다. 아래의 코드는 오늘 사용한 예  class myAuthenticationForm(AuthenticationForm): def __init__(self, *args, **kwargs): super(myAuthenticationForm, self).__init__(*args, **kwargs) self.fields[&amp;#39;username&amp;#39;].widget = forms.TextInput( attrs={ &amp;#39;class&amp;#39;: &amp;#39;form-control&amp;#39; } ) self.fields[&amp;#39;password&amp;#39;].widget = forms.PasswordInput( attrs={ &amp;#39;class&amp;#39;: &amp;#39;form-control&amp;#39; } ) class Meta: model = User fields = [&amp;#39;username&amp;#39;,&amp;#39;password&amp;#39;] </description>
+    </item>
+    
+    <item>
+      <title>2020.04.21</title>
+      <link>https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.21.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.21.html</guid>
+      <description>오늘 배운 것 Django 댓글 작성 &amp;amp; 삭제  게시글의 model은 Article로 만들었을 경우임. ForeignKey를 사용.
+   댓글 작성
+  models.py에서 댓글 설정을 위한 class를 만든다.(user 설정을 안했을 경우)
+class Comment(models.Model): article = models.ForeignKey(Article, on_delete=models.CASCADE) #on_delete=models.CASCADE는 ForeignKeyField가 삭제 될때 인스턴스도 같이 삭제 content = models.TextField()   forms.py에도 추가
+from django import forms from .models import Comment class CommentForm(forms.ModelForm): class Meta: model = Comment fields = [&amp;#39;content&amp;#39;] # fields를 __all__로 해도 됨(all로 했을 경우에는 댓글 작성시 모든 값을 잘 입력 해야한다.</description>
+    </item>
+    
+    <item>
+      <title>2020.04.26</title>
+      <link>https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.26.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.26.html</guid>
+      <description>오늘한 것 Django PJT 추가  Q&amp;amp;A 페이지에서 댓글 추가
+  댓글 작성 위해 1:N 관계 모델 작성  from django.db import models from django.conf import settings # 사진 및 정보를 업로드 하기 위한 모델 정의 class QandA(models.Model): title = models.CharField(max_length=100) user =models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE) content = models.TextField() class Reply(models.Model): content = models.TextField() QandA = models.ForeignKey(QandA, on_delete=models.CASCADE) user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)  ForeignKey를 이용하여 1:N관계 설정 후 migration
+ </description>
+    </item>
+    
+    <item>
+      <title>2020.04.28</title>
+      <link>https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.28.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.28.html</guid>
+      <description>오늘 배운 것 M:N 모델  Django에서 좋아요 기능이나 팔로우 기능처럼 M:N 관계 만들기
+ManyToManyField 이용
+  좋아요 기능을 위한 model 추가(게시글 모델)  # 좋아요 기능을 위한 article_like_users 테이블 생성 class 좋아요 기능을 추가할 클래스 명: like_users = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name=&amp;#39;like_articles&amp;#39;) # 팔로우 기능을 위한   팔로우 기능을 위한 model 추가(User 모델을 Customizing)  class User(AbstractUser): followers = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name=&amp;#39;followings&amp;#39;)  게시글 app의 views.py에서 좋아요 기능 설정  def like(request, pk): article = get_object_or_404(Article, pk=pk) # 좋아요를 누르면, &amp;gt;&amp;gt; DB에 존재할 경우 if article.</description>
+    </item>
+    
+    <item>
+      <title>2020.04.30</title>
+      <link>https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.30.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.30.html</guid>
+      <description>오늘 한 것  혼자 해보는 PJT에서 paginator 추가 및 댓글 작성 시 발생한 오류 수정
+  views.py 에서  @require_POST @login_required def reply_create(request, qanda_pk): qanda = get_object_or_404(QandA, pk=qanda_pk) form = ReplyForm(request.POST) if form.is_valid(): reply=form.save(commit=False) reply.user = request.user reply.QandA = qanda reply.save() return redirect(&amp;#39;reservation:QandA_detail&amp;#39;,qanda.pk)  reply.QandA = qanda에서 QandA 모델을 qanda로 불러와서 NOT NULL 오류 발생했었음.
+  paginator 추가 코드  def QandA_list(request): QandAs = QandA.objects.order_by(&amp;#39;-pk&amp;#39;) paginator = Paginator(QandAs, 4) #한 페이지 당 몇개 씩 보여줄 지 지정 page_number = request.</description>
+    </item>
+    
+    <item>
+      <title>2020.05.11</title>
+      <link>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.11.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.11.html</guid>
+      <description>오늘 배운 것 1. REST API(DRF: Django Rest Framework)   REST API를 활용하면 백 엔드와 프론트 엔드 분리가 쉽고 코드의 재활용성이 좋다.
+  REST API를 사용하기 위해서 먼저 설치가 필요
+$ pip install djangorestframework   settings.py에서 INSTALLED_APPS에 &#39;rest_framework&#39;추가
+  app 폴더에 serializers.py 파일을 만들고 내용 추가
+# serializers.py from rest_framework import serializers from .models import * #필요한 모델이름 넣어주기 class &amp;lt;모델명&amp;gt;Serializer(serializers.ModelSerializer): class Meta: model = &amp;lt;모델명&amp;gt; fields = [&amp;#39;필요한 필드&amp;#39;]   views.</description>
+    </item>
+    
   </channel>
 </rss>
