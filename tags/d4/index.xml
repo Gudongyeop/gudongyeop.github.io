@@ -12,10 +12,10 @@
     
     <item>
       <title>SWEA - Python - D4</title>
-      <link>https://dongyeopgu.github.io/cont_2/d4/swea-d4.html</link>
+      <link>https://dongyeopgu.github.io/algorithm/d4/swea-d4.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/cont_2/d4/swea-d4.html</guid>
+      <guid>https://dongyeopgu.github.io/algorithm/d4/swea-d4.html</guid>
       <description>1210. Ladder1 for _ in range(10):T = input()ladder = [list(map(int, input().split()))for _ in range(100)]j = 0for x in range(100):if ladder[99][x] == 2:j = xstart_p = 0i = 99while i &amp;gt;= 0:if j - 1 &amp;gt;= 0 and ladder[i][j-1] == 1:while 0 &amp;lt;= j - 1 &amp;lt; 100 and ladder[i][j-1] == 1:j -= 1elif j + 1 &amp;lt; 100 and ladder[i][j+1] == 1:while 0 &amp;lt;= j + 1 &amp;lt; 100 and ladder[i][j+1] == 1:j += 1i -= 1print(f&amp;#34;#{T} {j}&amp;#34;)1211.</description>
     </item>
     

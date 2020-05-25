@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Django 학습 on 여러가지</title>
+    <link>https://dongyeopgu.github.io/django.html</link>
+    <description>Recent content in Django 학습 on 여러가지</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 21 Apr 2020 22:54:07 +0900</lastBuildDate>
+    
+	<atom:link href="https://dongyeopgu.github.io/django/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Django 시작하기</title>
+      <link>https://dongyeopgu.github.io/django/django_start.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dongyeopgu.github.io/django/django_start.html</guid>
+      <description>기초  1. django 설치 $ pip install django==2.1.15(2.1.15 기준으로 배웠기 때문에)
+2. 프로젝트 시작 $ django-admin startproject {프로젝트 이름}그 후에 프로젝트 폴더의 settings.py에서 ALLOWED_HOST = [&amp;#39;*&amp;#39;]로 수정3. App 만들기 # manage.py 파일이 있는 폴더에서 터미널 진입 후 bash 에 $ python manage.py startapp {앱 이름} # 그 후에 settings.py에서  INSTALLED_APPS = [&amp;#39;{앱 이름}&amp;#39; 추가]4. urls.py 작성 # 프로젝트 이름/urls.py에서 예를 들어 index 페이지를 넣을 경우  from app이름 import views #추가 urlpatterns =[path(&amp;#39;index/&amp;#39;, views.</description>
+    </item>
+    
+    <item>
+      <title>Django CRUD</title>
+      <link>https://dongyeopgu.github.io/django/django_crud.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dongyeopgu.github.io/django/django_crud.html</guid>
+      <description>CRUD - Create, Read, Update, Delete  1. Model 사용할 경우 1. Model 만들기 (ex: Article이라는 모델을 만들경우) # 프로젝트 명/App이름/models.py class Article(models.Model):title = models.CharField(max_length=140)content = models.TextField()created_at = models.DateTimeField(auto_now_add=True)updated_at = models.DateTimeField(auto_now=True) models.Model 을 상속받은 클래스를 생성한다. 속성은 내가 구성하고 싶은 테이블의 컬럼의 이름을 지정하고, 데이터 타입에 맞춰서 필드를 정의한다. 위에서 정의된 필드 정보  CharField :  max_length : 필수   DateTimeField  auto_now_add : (선택) 생성시에만 자동으로 해당 시간 값 설정 auto_now : (선택) 수정시마다 자동으로 해당 시간 값 설정   이외의 필드는 https://docs.</description>
+    </item>
+    
+    <item>
+      <title>Django Paginator</title>
+      <link>https://dongyeopgu.github.io/django/django_paginator.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dongyeopgu.github.io/django/django_paginator.html</guid>
+      <description>Paginator 사용하기   게시판 같은 곳에서 리스트의 양이 많아 질 경우 나누어 보여주기 위해서 사용
+여기 적힌 예에서 model은 Review 이고 forms는 ReviewForm이다.
+bootstrap을 사용했음.
+ 1. views.py에 내용 추가하기 from django.core.paginator import Paginatordef review_list(request):reviews = Review.objects.order_by(&amp;#39;-pk&amp;#39;)paginator = Paginator(reviews, 5) #한 페이지 당 몇개 씩 보여줄 지 지정 page_number = request.GET.get(&amp;#39;page&amp;#39;)page_obj = paginator.get_page(page_number)reviews_all = get_list_or_404(Review) #전체 개수를 보기 위해 total_count = len(reviews_all)	# 리뷰의 총 개수  total_page = total_count//5	# 리뷰 총 개수 / 한 페이지에 보여줄 수 page_range = range(1,total_page+1)context = {&amp;#39;reviews&amp;#39;: reviews,&amp;#39;page_obj&amp;#39;: page_obj,&amp;#39;page_range&amp;#39;: page_range,}return render(request, &amp;#39;앱이름/review_list.</description>
+    </item>
+    
+    <item>
+      <title>Django User (1)</title>
+      <link>https://dongyeopgu.github.io/django/django_login.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dongyeopgu.github.io/django/django_login.html</guid>
+      <description>User 관리(sign in, out, up)   로그인 기능을 넣는 방법
+model을 만들 필요 없이 django에서 제공하는 user 모델을 사용함
+bootstrap 사용을 기반으로 작성함
+ 1. accounts라는 새로운 app을 작성 2. 기본 제공되는 User 모델을 사용하기 때문에 forms.py만 작성 from django.forms import ModelFormfrom django.contrib.auth.models import User # django에서 기본 제공하는 model이 있음. from django import formsclass SignupForm(ModelForm): #회원가입을 제공하는 class이다. username = forms.CharField(max_length=20,min_length=6,widget=forms.TextInput(attrs={&amp;#39;class&amp;#39;: &amp;#39;form-control&amp;#39;}))password = forms.</description>
+    </item>
+    
+    <item>
+      <title>Django User (2)</title>
+      <link>https://dongyeopgu.github.io/django/django_change_user.html</link>
+      <pubDate>Tue, 14 Apr 2020 16:15:29 +0900</pubDate>
+      
+      <guid>https://dongyeopgu.github.io/django/django_change_user.html</guid>
+      <description>User 관리(change, customizing)   customizing 방법은 여러가지가 있지만, 앞서 사용했던 방법과 다르게 여기서는 AbstractUser를 상속 받아서 User를 customizing후 사용함
+UserChangeForm도 마찬가지로 ChangeForm을 상속받아 customizing 해서 사용함
+bootstrap을 사용하기 위해 widget에 attrs도 추가
+ 1. models.py에서 AbstractUser를 상속 from django.db import models from django.contrib.auth.models import AbstractUser # AbstractUser를 가져옴 # Create your models here. class User(AbstractUser): # User 모델을 AbstractUser 상속받음 # 추가할 내용을 작성 Korean_name = models.CharField(max_length=20, blank=True) address = models.</description>
+    </item>
+    
+    <item>
+      <title>Django Comment</title>
+      <link>https://dongyeopgu.github.io/django/django_comment.html</link>
+      <pubDate>Tue, 21 Apr 2020 22:54:07 +0900</pubDate>
+      
+      <guid>https://dongyeopgu.github.io/django/django_comment.html</guid>
+      <description>Django 댓글 작성 &amp;amp; 삭제  게시글의 model은 Article로 만들었을 경우임. ForeignKey를 사용.
+ 1. 댓글 작성  models.py에서 댓글 설정을 위한 class를 만든다.(user 설정을 안했을 경우)  class Comment(models.Model): article = models.ForeignKey(Article, on_delete=models.CASCADE) #on_delete=models.CASCADE는 ForeignKeyField가 삭제 될때 인스턴스도 같이 삭제 content = models.TextField()  forms.py에도 추가  from django import forms from .models import Comment class CommentForm(forms.ModelForm): class Meta: model = Comment fields = [&amp;#39;content&amp;#39;] # fields를 __all__로 해도 됨(all로 했을 경우에는 댓글 작성시 모든 값을 잘 입력 해야한다.</description>
+    </item>
+    
+    <item>
+      <title>Django M:N</title>
+      <link>https://dongyeopgu.github.io/django/django_like_follow.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dongyeopgu.github.io/django/django_like_follow.html</guid>
+      <description>Django M:N model  Django에서 좋아요 기능이나 팔로우 기능처럼 M:N 관계 만들기
+ManyToManyField 이용
+  좋아요 기능을 위한 model 추가(게시글 모델)  # 좋아요 기능을 위한 article_like_users 테이블 생성 class 좋아요 기능을 추가할 클래스 명: like_users = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name=&amp;#39;like_articles&amp;#39;) # 팔로우 기능을 위한   팔로우 기능을 위한 model 추가(User 모델을 Customizing)  class User(AbstractUser): followers = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name=&amp;#39;followings&amp;#39;)  게시글 app의 views.py에서 좋아요 기능 설정  def like(request, pk): article = get_object_or_404(Article, pk=pk) # 좋아요를 누르면, &amp;gt;&amp;gt; DB에 존재할 경우 if article.</description>
+    </item>
+    
+    <item>
+      <title>Django REST Framework</title>
+      <link>https://dongyeopgu.github.io/django/django_rest_api.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dongyeopgu.github.io/django/django_rest_api.html</guid>
+      <description>Django Rest Framework(DRF) 1. REST API(DRF: Django Rest Framework)  REST API를 활용하면 백 엔드와 프론트 엔드 분리가 쉽고 코드의 재활용성이 좋다. REST API를 사용하기 위해서 먼저 설치가 필요  $ pip install djangorestframework  settings.py에서 INSTALLED_APPS에 &#39;rest_framework&#39;추가 app 폴더에 serializers.py 파일을 만들고 내용 추가  # serializers.py from rest_framework import serializers from .models import * #필요한 모델이름 넣어주기 class &amp;lt;모델명&amp;gt;Serializer(serializers.ModelSerializer): class Meta: model = &amp;lt;모델명&amp;gt; fields = [&amp;#39;필요한 필드&amp;#39;]  views.</description>
+    </item>
+    
+  </channel>
+</rss>

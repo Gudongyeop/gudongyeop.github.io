@@ -12,10 +12,10 @@
     
     <item>
       <title>Django M:N</title>
-      <link>https://dongyeopgu.github.io/cont/django_like_follow.html</link>
+      <link>https://dongyeopgu.github.io/django/django_like_follow.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/cont/django_like_follow.html</guid>
+      <guid>https://dongyeopgu.github.io/django/django_like_follow.html</guid>
       <description>Django M:N model  Django에서 좋아요 기능이나 팔로우 기능처럼 M:N 관계 만들기
 ManyToManyField 이용
   좋아요 기능을 위한 model 추가(게시글 모델)  # 좋아요 기능을 위한 article_like_users 테이블 생성 class 좋아요 기능을 추가할 클래스 명: like_users = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name=&amp;#39;like_articles&amp;#39;) # 팔로우 기능을 위한   팔로우 기능을 위한 model 추가(User 모델을 Customizing)  class User(AbstractUser): followers = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name=&amp;#39;followings&amp;#39;)  게시글 app의 views.py에서 좋아요 기능 설정  def like(request, pk): article = get_object_or_404(Article, pk=pk) # 좋아요를 누르면, &amp;gt;&amp;gt; DB에 존재할 경우 if article.</description>
