@@ -1,0 +1,3382 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163429895-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-163429895-1');
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.69.0" />
+    <meta name="description" content="여러가지">
+<meta name="author" content="Dongyeop">
+
+    <link rel="icon" href="../images/favicon.png" type="image/png">
+
+    <title>Django User (1) :: 여러가지</title>
+
+    
+    <link href="../css/nucleus.css?1590413614" rel="stylesheet">
+    <link href="../css/fontawesome-all.min.css?1590413614" rel="stylesheet">
+    <link href="../css/hybrid.css?1590413614" rel="stylesheet">
+    <link href="../css/featherlight.min.css?1590413614" rel="stylesheet">
+    <link href="../css/perfect-scrollbar.min.css?1590413614" rel="stylesheet">
+    <link href="../css/auto-complete.css?1590413614" rel="stylesheet">
+    <link href="../css/atom-one-dark-reasonable.css?1590413614" rel="stylesheet">
+    <link href="../css/theme.css?1590413614" rel="stylesheet">
+    <link href="../css/hugo-theme.css?1590413614" rel="stylesheet">
+    
+      <link href="../css/theme-red.css?1590413614" rel="stylesheet">
+    
+
+    <script src="../js/jquery-3.3.1.min.js?1590413614"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/django/django_login.html">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="../">
+
+	<img src="../images/20190325_184216.jpg" style="
+	border: 3px solid rgb(179, 130, 130);
+	border-radius: 140px;
+	-moz-border-radius: 140px;
+	-khtml-border-radius: 140px;
+	-webkit-border-radius: 140px;
+	">
+	<div>
+		<h4>Dongyeop</h4>
+		<p>여러가지 배우는거 해보는 중.</p>
+	</div>
+
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="../js/lunr.min.js?1590413614"></script>
+<script type="text/javascript" src="../js/auto-complete.js?1590413614"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/dongyeopgu.github.io\/";
+    
+</script>
+<script type="text/javascript" src="../js/search.js?1590413614"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/basics.html" title="About Blog" class="dd-item 
+        
+        
+        
+        ">
+      <a href="../basics.html">
+          About Blog
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/project.html" title="Project" class="dd-item 
+        
+        
+        
+        ">
+      <a href="../project.html">
+          Project
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/algorithm.html" title="Algorithm 문제풀이" class="dd-item 
+        
+        
+        
+        ">
+      <a href="../algorithm.html">
+          <b>1. </b>Algorithm 문제풀이
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/algorithm/baekjoon.html" title="백준 문제풀이" class="dd-item 
+        
+        
+        
+        ">
+      <a href="../algorithm/baekjoon.html">
+          <b>1. </b>백준 문제풀이
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/algorithm/baekjoon/baekjoon.html" title="BAEKJOON - Python" class="dd-item ">
+        <a href="../algorithm/baekjoon/baekjoon.html">
+        BAEKJOON - Python
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/algorithm/d3.html" title="D3 문제풀이" class="dd-item 
+        
+        
+        
+        ">
+      <a href="../algorithm/d3.html">
+          <b>2. </b>D3 문제풀이
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/algorithm/d3/swea-d3.html" title="SWEA - Python - D3" class="dd-item ">
+        <a href="../algorithm/d3/swea-d3.html">
+        SWEA - Python - D3
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/algorithm/d4.html" title="D4 문제풀이" class="dd-item 
+        
+        
+        
+        ">
+      <a href="../algorithm/d4.html">
+          <b>3. </b>D4 문제풀이
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/algorithm/d4/swea-d4.html" title="SWEA - Python - D4" class="dd-item ">
+        <a href="../algorithm/d4/swea-d4.html">
+        SWEA - Python - D4
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/algorithm/d4/swea_%EB%AA%A8%EC%9D%98-%ED%85%8C%EC%8A%A4%ED%8A%B8.html" title="SWEA - Python - 모의 테스트" class="dd-item ">
+        <a href="../algorithm/d4/swea_%EB%AA%A8%EC%9D%98-%ED%85%8C%EC%8A%A4%ED%8A%B8.html">
+        SWEA - Python - 모의 테스트
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/django.html" title="Django 학습" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="../django.html">
+          <b>2. </b>Django 학습
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/django/django_start.html" title="Django 시작하기" class="dd-item ">
+        <a href="../django/django_start.html">
+        <b>1. </b>Django 시작하기
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/django/django_crud.html" title="Django CRUD" class="dd-item ">
+        <a href="../django/django_crud.html">
+        <b>2. </b>Django CRUD
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/django/django_paginator.html" title="Django Paginator" class="dd-item ">
+        <a href="../django/django_paginator.html">
+        <b>3. </b>Django Paginator
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/django/django_login.html" title="Django User (1)" class="dd-item active">
+        <a href="../django/django_login.html">
+        <b>4. </b>Django User (1)
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/django/django_change_user.html" title="Django User (2)" class="dd-item ">
+        <a href="../django/django_change_user.html">
+        <b>5. </b>Django User (2)
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/django/django_comment.html" title="Django Comment" class="dd-item ">
+        <a href="../django/django_comment.html">
+        <b>6. </b>Django Comment
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/django/django_like_follow.html" title="Django M:N" class="dd-item ">
+        <a href="../django/django_like_follow.html">
+        <b>7. </b>Django M:N
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/django/django_rest_api.html" title="Django REST Framework" class="dd-item ">
+        <a href="../django/django_rest_api.html">
+        <b>8. </b>Django REST Framework
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/til.html" title="TIL" class="dd-item 
+        
+        
+        
+        ">
+      <a href="../til.html">
+          <b>3. </b>TIL
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/til/4%EC%9B%94.html" title="4월" class="dd-item 
+        
+        
+        
+        ">
+      <a href="../til/4%EC%9B%94.html">
+          4월
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/til/4%EC%9B%94/20.04.13.html" title="2020.04.13 다시 기록 시작" class="dd-item ">
+        <a href="../til/4%EC%9B%94/20.04.13.html">
+        2020.04.13 다시 기록 시작
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/til/4%EC%9B%94/20.04.14.html" title="2020.04.14" class="dd-item ">
+        <a href="../til/4%EC%9B%94/20.04.14.html">
+        2020.04.14
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/til/4%EC%9B%94/20.04.15.html" title="2020.04.15" class="dd-item ">
+        <a href="../til/4%EC%9B%94/20.04.15.html">
+        2020.04.15
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/til/4%EC%9B%94/20.04.16.html" title="2020.04.16" class="dd-item ">
+        <a href="../til/4%EC%9B%94/20.04.16.html">
+        2020.04.16
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/til/4%EC%9B%94/20.04.17.html" title="2020.04.17" class="dd-item ">
+        <a href="../til/4%EC%9B%94/20.04.17.html">
+        2020.04.17
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/til/4%EC%9B%94/20.04.18.html" title="2020.04.18" class="dd-item ">
+        <a href="../til/4%EC%9B%94/20.04.18.html">
+        2020.04.18
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/til/4%EC%9B%94/20.04.19.html" title="2020.04.19" class="dd-item ">
+        <a href="../til/4%EC%9B%94/20.04.19.html">
+        2020.04.19
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/til/4%EC%9B%94/20.04.20.html" title="2020.04.20" class="dd-item ">
+        <a href="../til/4%EC%9B%94/20.04.20.html">
+        2020.04.20
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/til/4%EC%9B%94/20.04.21.html" title="2020.04.21" class="dd-item ">
+        <a href="../til/4%EC%9B%94/20.04.21.html">
+        2020.04.21
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/til/4%EC%9B%94/20.04.22.html" title="2020.04.22" class="dd-item ">
+        <a href="../til/4%EC%9B%94/20.04.22.html">
+        2020.04.22
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/til/4%EC%9B%94/20.04.23.html" title="2020.04.23" class="dd-item ">
+        <a href="../til/4%EC%9B%94/20.04.23.html">
+        2020.04.23
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/til/4%EC%9B%94/20.04.24.html" title="2020.04.24" class="dd-item ">
+        <a href="../til/4%EC%9B%94/20.04.24.html">
+        2020.04.24
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/til/4%EC%9B%94/20.04.25.html" title="2020.04.25" class="dd-item ">
+        <a href="../til/4%EC%9B%94/20.04.25.html">
+        2020.04.25
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/til/4%EC%9B%94/20.04.26.html" title="2020.04.26" class="dd-item ">
+        <a href="../til/4%EC%9B%94/20.04.26.html">
+        2020.04.26
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/til/4%EC%9B%94/20.04.27.html" title="2020.04.27" class="dd-item ">
+        <a href="../til/4%EC%9B%94/20.04.27.html">
+        2020.04.27
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/til/4%EC%9B%94/20.04.28.html" title="2020.04.28" class="dd-item ">
+        <a href="../til/4%EC%9B%94/20.04.28.html">
+        2020.04.28
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/til/4%EC%9B%94/20.04.29.html" title="2020.04.29" class="dd-item ">
+        <a href="../til/4%EC%9B%94/20.04.29.html">
+        2020.04.29
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/til/4%EC%9B%94/20.04.30.html" title="2020.04.30" class="dd-item ">
+        <a href="../til/4%EC%9B%94/20.04.30.html">
+        2020.04.30
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/til/5%EC%9B%94.html" title="5월" class="dd-item 
+        
+        
+        
+        ">
+      <a href="../til/5%EC%9B%94.html">
+          5월
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/til/5%EC%9B%94/20.05.01.html" title="2020.05.01" class="dd-item ">
+        <a href="../til/5%EC%9B%94/20.05.01.html">
+        2020.05.01
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/til/5%EC%9B%94/20.05.02.html" title="2020.05.02" class="dd-item ">
+        <a href="../til/5%EC%9B%94/20.05.02.html">
+        2020.05.02
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/til/5%EC%9B%94/20.05.03.html" title="2020.05.03" class="dd-item ">
+        <a href="../til/5%EC%9B%94/20.05.03.html">
+        2020.05.03
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/til/5%EC%9B%94/20.05.04.html" title="2020.05.04" class="dd-item ">
+        <a href="../til/5%EC%9B%94/20.05.04.html">
+        2020.05.04
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/til/5%EC%9B%94/20.05.05.html" title="2020.05.05" class="dd-item ">
+        <a href="../til/5%EC%9B%94/20.05.05.html">
+        2020.05.05
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/til/5%EC%9B%94/20.05.06.html" title="2020.05.06" class="dd-item ">
+        <a href="../til/5%EC%9B%94/20.05.06.html">
+        2020.05.06
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/til/5%EC%9B%94/20.05.07.html" title="2020.05.07" class="dd-item ">
+        <a href="../til/5%EC%9B%94/20.05.07.html">
+        2020.05.07
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/til/5%EC%9B%94/20.05.08.html" title="2020.05.08" class="dd-item ">
+        <a href="../til/5%EC%9B%94/20.05.08.html">
+        2020.05.08
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/til/5%EC%9B%94/20.05.09.html" title="2020.05.09" class="dd-item ">
+        <a href="../til/5%EC%9B%94/20.05.09.html">
+        2020.05.09
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/til/5%EC%9B%94/20.05.10.html" title="2020.05.10" class="dd-item ">
+        <a href="../til/5%EC%9B%94/20.05.10.html">
+        2020.05.10
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/til/5%EC%9B%94/20.05.11.html" title="2020.05.11" class="dd-item ">
+        <a href="../til/5%EC%9B%94/20.05.11.html">
+        2020.05.11
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/til/5%EC%9B%94/20.05.12.html" title="2020.05.12" class="dd-item ">
+        <a href="../til/5%EC%9B%94/20.05.12.html">
+        2020.05.12
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/til/5%EC%9B%94/20.05.13.html" title="2020.05.13" class="dd-item ">
+        <a href="../til/5%EC%9B%94/20.05.13.html">
+        2020.05.13
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/til/5%EC%9B%94/20.05.14.html" title="2020.05.14" class="dd-item ">
+        <a href="../til/5%EC%9B%94/20.05.14.html">
+        2020.05.14
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/til/5%EC%9B%94/20.05.15.html" title="2020.05.15" class="dd-item ">
+        <a href="../til/5%EC%9B%94/20.05.15.html">
+        2020.05.15
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/til/5%EC%9B%94/20.05.17.html" title="2020.05.17" class="dd-item ">
+        <a href="../til/5%EC%9B%94/20.05.17.html">
+        2020.05.17
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/til/5%EC%9B%94/20.05.18.html" title="2020.05.18" class="dd-item ">
+        <a href="../til/5%EC%9B%94/20.05.18.html">
+        2020.05.18
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/til/5%EC%9B%94/20.05.19.html" title="2020.05.19" class="dd-item ">
+        <a href="../til/5%EC%9B%94/20.05.19.html">
+        2020.05.19
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/til/5%EC%9B%94/20.05.20.html" title="2020.05.20" class="dd-item ">
+        <a href="../til/5%EC%9B%94/20.05.20.html">
+        2020.05.20
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/til/5%EC%9B%94/20.05.21.html" title="2020.05.21" class="dd-item ">
+        <a href="../til/5%EC%9B%94/20.05.21.html">
+        2020.05.21
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/til/5%EC%9B%94/20.05.22.html" title="2020.05.22" class="dd-item ">
+        <a href="../til/5%EC%9B%94/20.05.22.html">
+        2020.05.22
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/til/5%EC%9B%94/20.05.23.html" title="2020.05.23" class="dd-item ">
+        <a href="../til/5%EC%9B%94/20.05.23.html">
+        2020.05.23
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/til/5%EC%9B%94/20.05.24.html" title="2020.05.24" class="dd-item ">
+        <a href="../til/5%EC%9B%94/20.05.24.html">
+        2020.05.24
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/til/5%EC%9B%94/20.05.25.html" title="2020.05.25" class="dd-item ">
+        <a href="../til/5%EC%9B%94/20.05.25.html">
+        2020.05.25
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/hugo-blog.html" title="Hugo Blog" class="dd-item 
+        
+        
+        
+        ">
+      <a href="../hugo-blog.html">
+          <b>4. </b>Hugo Blog
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hugo-blog/hugo-blog-start.html" title="Hugo를 이용해 Blog 만들기" class="dd-item ">
+        <a href="../hugo-blog/hugo-blog-start.html">
+        Hugo를 이용해 Blog 만들기
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vue.js.html" title="Vue.js" class="dd-item 
+        
+        
+        
+        ">
+      <a href="../vue.js.html">
+          <b>5. </b>Vue.js
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/vue.js/vue.js-%EA%B8%B0%EC%B4%88.html" title="Vue.js 기초" class="dd-item ">
+        <a href="../vue.js/vue.js-%EA%B8%B0%EC%B4%88.html">
+        <br>1. </b>Vue.js 기초
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li> 
+                  <a class="padding" href="https://github.com/DongyeopGu"><i class='fab fa-fw fa-github'></i> GitHub</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="mailto:gdy6650@gmail.com"><i class='fab fa-fw fa-bookmark'></i> Email</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://www.instagram.com/gu_daeng/"><i class='fas fa-fw fa-camera'></i> Instagram</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://dongyeopgu.github.io/tags"><i class='fas fa-tags'></i> Tags</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="footer">
+      <p>Dongyeop's Blog</p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span class="links">
+                 
+                 
+                   Django User (1) 
+                 
+                  </span>
+                </div>
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+<div class="tags">
+
+  <a class="tag-link" href="../tags/django">django</a>
+
+  <a class="tag-link" href="../tags/sign-in">sign in</a>
+
+  <a class="tag-link" href="../tags/sign-out">sign out</a>
+
+  <a class="tag-link" href="../tags/sign-up">sign up</a>
+
+</div>
+
+        </div>
+        
+          <div id="chapter">
+        
+        <div id="body-inner">
+          
+
+        
+
+
+
+<h3 id="user-관리sign-in-out-up">User 관리(sign in, out, up)</h3>
+<hr>
+<blockquote>
+<p>로그인 기능을 넣는 방법</p>
+<p>model을 만들 필요 없이 django에서 제공하는 user 모델을 사용함</p>
+<p>bootstrap 사용을 기반으로 작성함</p>
+</blockquote>
+<h4 id="1-accounts라는-새로운-app을-작성">1. accounts라는 새로운 app을 작성</h4>
+<h4 id="2-기본-제공되는-user-모델을-사용하기-때문에-formspy만-작성">2. 기본 제공되는 User 모델을 사용하기 때문에 forms.py만 작성</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> django.forms <span style="color:#f92672">import</span> ModelForm
+<span style="color:#f92672">from</span> django.contrib.auth.models <span style="color:#f92672">import</span> User     <span style="color:#75715e"># django에서 기본 제공하는 model이 있음.</span>
+<span style="color:#f92672">from</span> django <span style="color:#f92672">import</span> forms
+
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SignupForm</span>(ModelForm): <span style="color:#75715e">#회원가입을 제공하는 class이다.</span>
+    username <span style="color:#f92672">=</span> forms<span style="color:#f92672">.</span>CharField(
+            max_length<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>,
+            min_length<span style="color:#f92672">=</span><span style="color:#ae81ff">6</span>,
+            widget<span style="color:#f92672">=</span>forms<span style="color:#f92672">.</span>TextInput(
+                    attrs<span style="color:#f92672">=</span>{
+                        <span style="color:#e6db74">&#39;class&#39;</span>: <span style="color:#e6db74">&#39;form-control&#39;</span>
+                    }
+                )
+        )
+    password <span style="color:#f92672">=</span> forms<span style="color:#f92672">.</span>CharField(
+            max_length<span style="color:#f92672">=</span><span style="color:#ae81ff">16</span>,
+            min_length<span style="color:#f92672">=</span><span style="color:#ae81ff">8</span>,
+            widget<span style="color:#f92672">=</span>forms<span style="color:#f92672">.</span>PasswordInput(
+                    attrs<span style="color:#f92672">=</span>{
+                        <span style="color:#e6db74">&#39;class&#39;</span>: <span style="color:#e6db74">&#39;form-control&#39;</span>,
+                        <span style="color:#e6db74">&#39;placeholder&#39;</span>: <span style="color:#e6db74">&#39;8글자 이상, 16글자 이하로 작성해주세요.&#39;</span>
+                    }
+                )
+        )
+    password_confirm <span style="color:#f92672">=</span> forms<span style="color:#f92672">.</span>CharField(
+            max_length<span style="color:#f92672">=</span><span style="color:#ae81ff">16</span>,
+            min_length<span style="color:#f92672">=</span><span style="color:#ae81ff">8</span>,
+            widget<span style="color:#f92672">=</span>forms<span style="color:#f92672">.</span>PasswordInput(
+                    attrs<span style="color:#f92672">=</span>{
+                        <span style="color:#e6db74">&#39;class&#39;</span>: <span style="color:#e6db74">&#39;form-control&#39;</span>,
+                        <span style="color:#e6db74">&#39;placeholder&#39;</span>: <span style="color:#e6db74">&#39;8글자 이상, 16글자 이하로 작성해주세요.&#39;</span>
+                    }
+                )
+        )
+    last_name <span style="color:#f92672">=</span> forms<span style="color:#f92672">.</span>CharField(
+            widget<span style="color:#f92672">=</span>forms<span style="color:#f92672">.</span>TextInput(
+                    attrs<span style="color:#f92672">=</span>{
+                        <span style="color:#e6db74">&#39;class&#39;</span>: <span style="color:#e6db74">&#39;form-control&#39;</span>,
+                    }
+                )
+        )
+    first_name <span style="color:#f92672">=</span> forms<span style="color:#f92672">.</span>CharField(
+            widget<span style="color:#f92672">=</span>forms<span style="color:#f92672">.</span>TextInput(
+                    attrs<span style="color:#f92672">=</span>{
+                        <span style="color:#e6db74">&#39;class&#39;</span>: <span style="color:#e6db74">&#39;form-control&#39;</span>,
+                    }
+                )
+        )
+    email <span style="color:#f92672">=</span> forms<span style="color:#f92672">.</span>EmailField(
+            widget<span style="color:#f92672">=</span>forms<span style="color:#f92672">.</span>EmailInput(
+                    attrs<span style="color:#f92672">=</span>{
+                        <span style="color:#e6db74">&#39;class&#39;</span>: <span style="color:#e6db74">&#39;form-control&#39;</span>,
+                    }
+                )
+
+        )
+
+    field_order<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;username&#39;</span>,<span style="color:#e6db74">&#39;password&#39;</span>,<span style="color:#e6db74">&#39;password_confirm&#39;</span>,<span style="color:#e6db74">&#39;last_name&#39;</span>,<span style="color:#e6db74">&#39;first_name&#39;</span>,<span style="color:#e6db74">&#39;email&#39;</span>]
+    <span style="color:#75715e">#field_order는 만들어지는 입력양식의 순서, password 바로 밑에 password_check 양식을 추가하기 위해 사용</span>
+
+    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Meta</span>:
+        model<span style="color:#f92672">=</span>User
+        widgets <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;password&#39;</span>:forms<span style="color:#f92672">.</span>PasswordInput}
+        fields <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;username&#39;</span>,<span style="color:#e6db74">&#39;password&#39;</span>,<span style="color:#e6db74">&#39;last_name&#39;</span>,<span style="color:#e6db74">&#39;first_name&#39;</span>,<span style="color:#e6db74">&#39;email&#39;</span>]
+<span style="color:#75715e">#User model에 정의된 username, passwordm last_name, first_name, email을 입력양식으로</span>
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SigninForm</span>(ModelForm):
+    username <span style="color:#f92672">=</span> forms<span style="color:#f92672">.</span>CharField(
+            max_length<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>,
+            min_length<span style="color:#f92672">=</span><span style="color:#ae81ff">6</span>,
+            widget<span style="color:#f92672">=</span>forms<span style="color:#f92672">.</span>TextInput(
+                    attrs<span style="color:#f92672">=</span>{
+                        <span style="color:#e6db74">&#39;class&#39;</span>: <span style="color:#e6db74">&#39;form-control&#39;</span>
+                    }
+                )
+        )
+    password <span style="color:#f92672">=</span> forms<span style="color:#f92672">.</span>CharField(
+            max_length<span style="color:#f92672">=</span><span style="color:#ae81ff">16</span>,
+            min_length<span style="color:#f92672">=</span><span style="color:#ae81ff">8</span>,
+            widget<span style="color:#f92672">=</span>forms<span style="color:#f92672">.</span>PasswordInput(
+                    attrs<span style="color:#f92672">=</span>{
+                        <span style="color:#e6db74">&#39;class&#39;</span>: <span style="color:#e6db74">&#39;form-control&#39;</span>,
+                    }
+                )
+        )
+
+    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Meta</span>:
+        model <span style="color:#f92672">=</span> User
+        widgets <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;password&#39;</span>:forms<span style="color:#f92672">.</span>PasswordInput}
+        fields <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;username&#39;</span>,<span style="color:#e6db74">&#39;password&#39;</span>]
+
+</code></pre></div><h4 id="3-urlspy와-viewspy-작성">3. urls.py와 views.py 작성</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">### urls.py ###</span>
+<span style="color:#f92672">from</span> django.urls <span style="color:#f92672">import</span> path, include
+<span style="color:#f92672">from</span> . <span style="color:#f92672">import</span> views
+
+app_name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;accounts&#39;</span>
+
+urlpatterns <span style="color:#f92672">=</span> [
+    path(<span style="color:#e6db74">&#39;signup/&#39;</span>, views<span style="color:#f92672">.</span>signup, name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;signup&#34;</span>),
+    path(<span style="color:#e6db74">&#39;signin/&#39;</span>, views<span style="color:#f92672">.</span>signin, name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;signin&#34;</span>),
+    path(<span style="color:#e6db74">&#39;signout/&#39;</span>, views<span style="color:#f92672">.</span>signout, name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;signout&#34;</span>),
+    path(<span style="color:#e6db74">&#39;community/&#39;</span>, include(<span style="color:#e6db74">&#39;community.urls&#39;</span>)),
+]
+<span style="color:#75715e">### views.py ###</span>
+<span style="color:#f92672">from</span> django.shortcuts <span style="color:#f92672">import</span> render, redirect
+<span style="color:#f92672">from</span> django.urls.base <span style="color:#f92672">import</span> reverse
+<span style="color:#f92672">from</span> django.contrib.auth.models <span style="color:#f92672">import</span> User
+<span style="color:#f92672">from</span> django.contrib.auth <span style="color:#f92672">import</span> login, authenticate, logout
+<span style="color:#75715e">#login은 login처리를 해주며, authenticate는 아이디와 비밀번호가 모두 일치하는 User 객체를 추출</span>
+<span style="color:#f92672">from</span> .forms <span style="color:#f92672">import</span> SigninForm, SignupForm
+<span style="color:#75715e"># Create your views here.</span>
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">signup</span>(request):<span style="color:#75715e">#역시 GET/POST 방식을 사용하여 구현한다.</span>
+    <span style="color:#66d9ef">if</span> request<span style="color:#f92672">.</span>method <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;GET&#34;</span>:
+        form <span style="color:#f92672">=</span> SignupForm()
+        context <span style="color:#f92672">=</span> {
+            <span style="color:#e6db74">&#39;form&#39;</span>: form
+        }
+        <span style="color:#66d9ef">return</span> render(request, <span style="color:#e6db74">&#39;accounts/signup.html&#39;</span>, context)
+
+
+    <span style="color:#66d9ef">elif</span> request<span style="color:#f92672">.</span>method <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;POST&#34;</span>:
+        form <span style="color:#f92672">=</span> SignupForm(request<span style="color:#f92672">.</span>POST)
+        <span style="color:#66d9ef">if</span> form<span style="color:#f92672">.</span>is_valid():
+            <span style="color:#66d9ef">if</span> form<span style="color:#f92672">.</span>cleaned_data[<span style="color:#e6db74">&#39;password&#39;</span>]  <span style="color:#f92672">==</span> form<span style="color:#f92672">.</span>cleaned_data[<span style="color:#e6db74">&#39;password_confirm&#39;</span>]:
+        <span style="color:#75715e">#cleaned_data는 사용자가 입력한 데이터를 뜻한다.</span>
+        <span style="color:#75715e">#즉 사용자가 입력한 password와 password_check가 맞는지 확인하기위해 작성해주었다.</span>
+                new_user <span style="color:#f92672">=</span> User<span style="color:#f92672">.</span>objects<span style="color:#f92672">.</span>create_user(
+                    form<span style="color:#f92672">.</span>cleaned_data[<span style="color:#e6db74">&#39;username&#39;</span>],
+                    form<span style="color:#f92672">.</span>cleaned_data[<span style="color:#e6db74">&#39;email&#39;</span>],
+                    form<span style="color:#f92672">.</span>cleaned_data[<span style="color:#e6db74">&#39;password&#39;</span>]
+                )
+        <span style="color:#75715e">#User.object.create_user는 사용자가 입력한 name, email, password를 가지고 아이디를 만든다.</span>
+        <span style="color:#75715e">#바로 .save를 안해주는 이유는 User.object.create를 먼저 해주어야 비밀번호가 암호화되어 저장된다.</span>
+                new_user<span style="color:#f92672">.</span>last_name <span style="color:#f92672">=</span> form<span style="color:#f92672">.</span>cleaned_data[<span style="color:#e6db74">&#39;last_name&#39;</span>]
+                new_user<span style="color:#f92672">.</span>first_name <span style="color:#f92672">=</span> form<span style="color:#f92672">.</span>cleaned_data[<span style="color:#e6db74">&#39;first_name&#39;</span>]
+        <span style="color:#75715e">#나머지 입력하지 못한 last_name과, first_name은 따로 지정해준다.</span>
+                new_user<span style="color:#f92672">.</span>save()
+
+                <span style="color:#66d9ef">return</span> redirect(reverse(<span style="color:#e6db74">&#39;reviews:review_list&#39;</span>))
+            <span style="color:#66d9ef">else</span>:
+                context <span style="color:#f92672">=</span> {
+                    <span style="color:#e6db74">&#39;form&#39;</span>:form,
+                    <span style="color:#e6db74">&#39;error&#39;</span>:<span style="color:#e6db74">&#39;비밀번호와 비밀번호 확인이 다릅니다.&#39;</span>
+
+                }
+                <span style="color:#66d9ef">return</span> render(request, <span style="color:#e6db74">&#39;accounts/signup.html&#39;</span>,)
+                <span style="color:#75715e">#password와 password_check가 다를 것을 대비하여 error를 지정해준다.</span>
+        <span style="color:#66d9ef">else</span>: <span style="color:#75715e">#form.is_valid()가 아닐 경우, 즉 유효한 값이 들어오지 않았을 경우</span>
+            context <span style="color:#f92672">=</span> {
+                <span style="color:#e6db74">&#39;form&#39;</span>:form
+            }
+            <span style="color:#66d9ef">return</span> render(request, <span style="color:#e6db74">&#39;accounts/signup.html&#39;</span>, context)
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">signin</span>(request):
+    <span style="color:#66d9ef">if</span> request<span style="color:#f92672">.</span>method <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;GET&#34;</span>:
+        form <span style="color:#f92672">=</span> SigninForm()
+        context <span style="color:#f92672">=</span> {
+            <span style="color:#e6db74">&#39;form&#39;</span>: form,
+        }
+        <span style="color:#66d9ef">return</span> render(request, <span style="color:#e6db74">&#39;accounts/signin.html&#39;</span>, context)
+
+    <span style="color:#66d9ef">elif</span> request<span style="color:#f92672">.</span>method <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;POST&#34;</span>:
+        form <span style="color:#f92672">=</span> SigninForm(request<span style="color:#f92672">.</span>POST)
+        id <span style="color:#f92672">=</span> request<span style="color:#f92672">.</span>POST[<span style="color:#e6db74">&#39;username&#39;</span>]
+        pw <span style="color:#f92672">=</span> request<span style="color:#f92672">.</span>POST[<span style="color:#e6db74">&#39;password&#39;</span>]
+        user <span style="color:#f92672">=</span> authenticate(username<span style="color:#f92672">=</span>id, password<span style="color:#f92672">=</span>pw) <span style="color:#75715e"># username과 password를 비교, 같으면 해당객체 반환 아니면 none</span>
+
+        <span style="color:#66d9ef">if</span> user: <span style="color:#75715e"># user 값이 있으면</span>
+            login(request, user<span style="color:#f92672">=</span>user) <span style="color:#75715e"># user값으로 로그인</span>
+            <span style="color:#66d9ef">return</span> redirect(<span style="color:#e6db74">&#39;reviews:review_list&#39;</span>)
+        <span style="color:#66d9ef">else</span>:
+            context <span style="color:#f92672">=</span> {
+                <span style="color:#e6db74">&#39;form&#39;</span> : form,
+                <span style="color:#e6db74">&#39;error&#39;</span>: <span style="color:#e6db74">&#39;아이디나 비밀번호가 일치하지 않습니다.&#39;</span>
+            }
+            <span style="color:#66d9ef">return</span> render(request, <span style="color:#e6db74">&#39;accounts/signin.html&#39;</span>, context)
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">signout</span>(request):
+    logout(request)
+    <span style="color:#66d9ef">return</span> redirect(<span style="color:#e6db74">&#39;reviews:review_list&#39;</span>)
+</code></pre></div><h4 id="4-로그인-관련-html을-작성">4. 로그인 관련 html을 작성</h4>
+<blockquote>
+<p>bootstrap을 사용하여 네비게이션 바에 로그인 상태에 따라 다르게 표시함</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!-- base.html 일부 --&gt;</span>
+&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;collapse navbar-collapse justify-content-between&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;navbarNav&#34;</span>&gt;
+            &lt;<span style="color:#f92672">ul</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;navbar-nav&#34;</span>&gt;
+                {% if request.resolver_match.url_name == &#39;create&#39; %}
+                    &lt;<span style="color:#f92672">li</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;nav-item&#34;</span>&gt;
+                        &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;nav-link&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{% url &#39;reviews:review_list&#39; %}&#34;</span>&gt;List&lt;/<span style="color:#f92672">a</span>&gt;
+                    &lt;/<span style="color:#f92672">li</span>&gt;
+                    &lt;<span style="color:#f92672">li</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;nav-item active&#34;</span>&gt;
+                        &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;nav-link&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{% url &#39;reviews:create&#39; %}&#34;</span>&gt;New&lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sr-only&#34;</span>&gt;(current)&lt;/<span style="color:#f92672">span</span>&gt;&lt;/<span style="color:#f92672">a</span>&gt;
+                    &lt;/<span style="color:#f92672">li</span>&gt;
+                {% else %}
+                    &lt;<span style="color:#f92672">li</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;nav-item active&#34;</span>&gt;
+                        &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;nav-link&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{% url &#39;reviews:review_list&#39; %}&#34;</span>&gt;List&lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sr-only&#34;</span>&gt;(current)&lt;/<span style="color:#f92672">span</span>&gt;&lt;/<span style="color:#f92672">a</span>&gt;
+                    &lt;/<span style="color:#f92672">li</span>&gt;
+                    &lt;<span style="color:#f92672">li</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;nav-item&#34;</span>&gt;
+                        &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;nav-link&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{% url &#39;reviews:create&#39; %}&#34;</span>&gt;New&lt;/<span style="color:#f92672">a</span>&gt;
+                    &lt;/<span style="color:#f92672">li</span>&gt;
+                {% endif %}
+            &lt;/<span style="color:#f92672">ul</span>&gt;
+            &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;d-flex flex-row&#34;</span>&gt;
+            {% if user.is_authenticated %}<span style="color:#75715e">&lt;!-- login 된 상태일 경우 --&gt;</span>
+            &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;p-2&#34;</span>&gt;{{ user.username }}님 환영합니다.&lt;/<span style="color:#f92672">div</span>&gt;
+            &lt;<span style="color:#f92672">ul</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;navbar-nav&#34;</span>&gt;
+                &lt;<span style="color:#f92672">li</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;nav-item dropdown&#34;</span>&gt;
+                    &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;nav-link dropdown-toggle&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;#&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;navbarDropdownMenuLink&#34;</span> <span style="color:#a6e22e">role</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;button&#34;</span> <span style="color:#a6e22e">data-toggle</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;dropdown&#34;</span> <span style="color:#a6e22e">aria-haspopup</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;true&#34;</span> <span style="color:#a6e22e">aria-expanded</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;false&#34;</span>&gt;
+                    Sign out
+                    &lt;/<span style="color:#f92672">a</span>&gt;
+                    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;dropdown-menu&#34;</span> <span style="color:#a6e22e">aria-labelledby</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;navbarDropdownMenuLink&#34;</span>&gt;
+                        &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;dropdown-item&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{% url &#39;accounts:signout&#39; %}&#34;</span>&gt;Sign Out&lt;/<span style="color:#f92672">a</span>&gt;
+                    &lt;/<span style="color:#f92672">div</span>&gt;
+            {% else %}
+                &lt;<span style="color:#f92672">ul</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;navbar-nav&#34;</span>&gt;
+                    &lt;<span style="color:#f92672">li</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;nav-item dropdown&#34;</span>&gt;
+                        &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;nav-link dropdown-toggle&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;#&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;navbarDropdownMenuLink&#34;</span> <span style="color:#a6e22e">role</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;button&#34;</span> <span style="color:#a6e22e">data-toggle</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;dropdown&#34;</span> <span style="color:#a6e22e">aria-haspopup</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;true&#34;</span> <span style="color:#a6e22e">aria-expanded</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;false&#34;</span>&gt;
+                            Sign In
+                        &lt;/<span style="color:#f92672">a</span>&gt;
+                        &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;dropdown-menu&#34;</span> <span style="color:#a6e22e">aria-labelledby</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;navbarDropdownMenuLink&#34;</span>&gt;
+                            &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;dropdown-item&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{% url &#39;accounts:signup&#39; %}&#34;</span>&gt;Sign Up&lt;/<span style="color:#f92672">a</span>&gt;
+                            &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;dropdown-item&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{% url &#39;accounts:signin&#39; %}&#34;</span>&gt;Sign In&lt;/<span style="color:#f92672">a</span>&gt;
+                        &lt;/<span style="color:#f92672">div</span>&gt;
+            {% endif %}
+                &lt;/<span style="color:#f92672">li</span>&gt;
+            &lt;/<span style="color:#f92672">ul</span>&gt;
+            &lt;/<span style="color:#f92672">div</span>&gt;
+        &lt;/<span style="color:#f92672">div</span>&gt;
+</code></pre></div><h4 id="5-singuphtml-작성">5. singup.html 작성</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!-- signup.html --&gt;</span>
+{% extends &#39;base.html&#39; %}
+{% load static %}
+{% block body %}
+
+{% if error %}
+  &lt;<span style="color:#f92672">h3</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text-danger&#34;</span>&gt;{{ error }}&lt;/<span style="color:#f92672">h3</span>&gt;
+{% endif %}
+  &lt;<span style="color:#f92672">form</span> <span style="color:#a6e22e">action</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span> <span style="color:#a6e22e">method</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;POST&#34;</span>&gt;
+  {% csrf_token %}
+  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-row mb-3 mt-5&#34;</span>&gt;
+    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;col-12&#34;</span>&gt;
+      &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;username&#34;</span>&gt;Username&lt;/<span style="color:#f92672">label</span>&gt;
+      &lt;<span style="color:#f92672">div</span>&gt;{{ form.username }}&lt;/<span style="color:#f92672">div</span>&gt;
+    &lt;/<span style="color:#f92672">div</span>&gt;
+  &lt;/<span style="color:#f92672">div</span>&gt;
+  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-row mb-3&#34;</span>&gt;
+    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;col-6&#34;</span>&gt;
+      &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password&#34;</span>&gt;Password&lt;/<span style="color:#f92672">label</span>&gt;
+      &lt;<span style="color:#f92672">div</span>&gt;{{ form.password }}&lt;/<span style="color:#f92672">div</span>&gt;
+    &lt;/<span style="color:#f92672">div</span>&gt;
+    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;col-6&#34;</span>&gt;
+      &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password_confirm&#34;</span>&gt;Password Confirm&lt;/<span style="color:#f92672">label</span>&gt;
+      &lt;<span style="color:#f92672">div</span>&gt;{{ form.password_confirm }}&lt;/<span style="color:#f92672">div</span>&gt;
+    &lt;/<span style="color:#f92672">div</span>&gt;
+  &lt;/<span style="color:#f92672">div</span>&gt;
+  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-row mb-3&#34;</span>&gt;
+    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;col-6&#34;</span>&gt;
+      &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;last_name&#34;</span>&gt;Last name&lt;/<span style="color:#f92672">label</span>&gt;
+      &lt;<span style="color:#f92672">div</span>&gt;{{ form.last_name }}&lt;/<span style="color:#f92672">div</span>&gt;
+    &lt;/<span style="color:#f92672">div</span>&gt;
+    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;col-6&#34;</span>&gt;
+      &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;last_name&#34;</span>&gt;First name&lt;/<span style="color:#f92672">label</span>&gt;
+      &lt;<span style="color:#f92672">div</span>&gt;{{ form.first_name }}&lt;/<span style="color:#f92672">div</span>&gt;
+    &lt;/<span style="color:#f92672">div</span>&gt;
+  &lt;/<span style="color:#f92672">div</span>&gt;
+  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-row mb-3&#34;</span>&gt;
+    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;col-12&#34;</span>&gt;
+      &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;email&#34;</span>&gt;Email&lt;/<span style="color:#f92672">label</span>&gt;
+      &lt;<span style="color:#f92672">div</span>&gt;{{ form.email }}&lt;/<span style="color:#f92672">div</span>&gt;
+    &lt;/<span style="color:#f92672">div</span>&gt;
+  &lt;/<span style="color:#f92672">div</span>&gt;
+  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-row mb-3&#34;</span>&gt;
+    &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;submit&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;btn btn-info col-12&#34;</span>&gt;SIGN UP&lt;/<span style="color:#f92672">button</span>&gt;
+  &lt;/<span style="color:#f92672">div</span>&gt;
+  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-row mb-3&#34;</span>&gt;
+    &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/community/&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;btn btn-secondary col-12&#34;</span>&gt;CANCEL&lt;/<span style="color:#f92672">a</span>&gt;
+  &lt;/<span style="color:#f92672">div</span>&gt;
+&lt;/<span style="color:#f92672">form</span>&gt;
+{% endblock %}
+</code></pre></div><h4 id="6-signinhtml-작성">6. signin.html 작성</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!-- signin.html --&gt;</span>
+{% extends &#39;base.html&#39; %}
+{% load static %}
+{% block body %}
+    &lt;<span style="color:#f92672">form</span> <span style="color:#a6e22e">action</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span> <span style="color:#a6e22e">method</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;POST&#34;</span>&gt;
+    {% csrf_token %}
+    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-row mb-3 mt-5&#34;</span>&gt;
+        &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;col-12&#34;</span>&gt;
+            {% if error %}
+            &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;d-flex flex-row&#34;</span>&gt;
+                &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;username&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mr-3&#34;</span>&gt;Username&lt;/<span style="color:#f92672">label</span>&gt;
+                &lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text-danger p-0 m-0&#34;</span>&gt;{{ error }}&lt;/<span style="color:#f92672">p</span>&gt;
+            &lt;/<span style="color:#f92672">div</span>&gt;
+            {% else %}
+            &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;username&#34;</span>&gt;Username&lt;/<span style="color:#f92672">label</span>&gt;
+            {% endif %}
+            &lt;<span style="color:#f92672">div</span>&gt;{{ form.username }}&lt;/<span style="color:#f92672">div</span>&gt;
+        &lt;/<span style="color:#f92672">div</span>&gt;
+    &lt;/<span style="color:#f92672">div</span>&gt;
+    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-row mb-3&#34;</span>&gt;
+        &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;col-12&#34;</span>&gt;
+            &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password&#34;</span>&gt;Password&lt;/<span style="color:#f92672">label</span>&gt;
+            &lt;<span style="color:#f92672">div</span>&gt;{{ form.password }}&lt;/<span style="color:#f92672">div</span>&gt;
+        &lt;/<span style="color:#f92672">div</span>&gt;
+    &lt;/<span style="color:#f92672">div</span>&gt;
+    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-row mb-3&#34;</span>&gt;
+        &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;submit&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;btn btn-info col-12&#34;</span>&gt;SIGN IN&lt;/<span style="color:#f92672">button</span>&gt;
+    &lt;/<span style="color:#f92672">div</span>&gt;
+    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-row justify-content-between&#34;</span>&gt;
+        &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/accounts/signup/&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;btn btn-info col-5&#34;</span>&gt;SIGN UP&lt;/<span style="color:#f92672">a</span>&gt;
+        &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/community/&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;btn btn-secondary col-5&#34;</span>&gt;CANCEL&lt;/<span style="color:#f92672">a</span>&gt;
+    &lt;/<span style="color:#f92672">div</span>&gt;
+    &lt;/<span style="color:#f92672">form</span>&gt;
+
+{% endblock %}
+</code></pre></div><h4 id="7-로그인-페이지를-modal로-변경하기">7. 로그인 페이지를 modal로 변경하기</h4>
+<ul>
+<li>base.html에서 include를 사용하여 modal 부분을 적은 html을 불러온다.</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">ul</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;navbar-nav&#34;</span>&gt;
+                    &lt;<span style="color:#f92672">li</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;nav-item dropdown&#34;</span>&gt;
+                        &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;nav-link dropdown-toggle&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;#&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;navbarDropdownMenuLink&#34;</span> <span style="color:#a6e22e">role</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;button&#34;</span> <span style="color:#a6e22e">data-toggle</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;dropdown&#34;</span> <span style="color:#a6e22e">aria-haspopup</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;true&#34;</span> <span style="color:#a6e22e">aria-expanded</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;false&#34;</span>&gt;
+                            Sign Up / Sign In
+                        &lt;/<span style="color:#f92672">a</span>&gt;
+                        &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;dropdown-menu&#34;</span> <span style="color:#a6e22e">aria-labelledby</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;navbarDropdownMenuLink&#34;</span>&gt;
+                            &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;dropdown-item&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{% url &#39;accounts:signup&#39; %}&#34;</span>&gt;Sign Up&lt;/<span style="color:#f92672">a</span>&gt;
+                            &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;button&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;dropdown-item&#34;</span> <span style="color:#a6e22e">data-toggle</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;modal&#34;</span> <span style="color:#a6e22e">data-target</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;#SIGNIN&#34;</span>&gt;
+                                Sign In
+                            &lt;/<span style="color:#f92672">a</span>&gt;
+                        &lt;/<span style="color:#f92672">div</span>&gt;
+            {% endif %}
+                &lt;/<span style="color:#f92672">li</span>&gt;
+            &lt;/<span style="color:#f92672">ul</span>&gt;
+            &lt;/<span style="color:#f92672">div</span>&gt;
+        &lt;/<span style="color:#f92672">div</span>&gt;
+
+{% include &#39;modal.html&#39; %}
+</code></pre></div><ul>
+<li>modal.html을 작성 후 form action을 통해 만들어 놓은 sigin으로 보내어 로그인</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{% load static %}
+<span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span>&gt;
+&lt;<span style="color:#f92672">head</span>&gt;
+    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span>&gt;
+    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;viewport&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width=device-width, initial-scale=1.0&#34;</span>&gt;
+    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">http-equiv</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;X-UA-Compatible&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ie=edge&#34;</span>&gt;
+    &lt;<span style="color:#f92672">title</span>&gt;SIGN IN&lt;/<span style="color:#f92672">title</span>&gt;
+&lt;/<span style="color:#f92672">head</span>&gt;
+&lt;<span style="color:#f92672">body</span>&gt;
+    <span style="color:#75715e">&lt;!-- Modal --&gt;</span>
+&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;modal fade&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;SIGNIN&#34;</span> <span style="color:#a6e22e">tabindex</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;-1&#34;</span> <span style="color:#a6e22e">role</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;dialog&#34;</span> <span style="color:#a6e22e">aria-labelledby</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;SIGNINTitle&#34;</span> <span style="color:#a6e22e">aria-hidden</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;true&#34;</span>&gt;
+  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;modal-dialog modal-dialog-centered&#34;</span> <span style="color:#a6e22e">role</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;document&#34;</span>&gt;
+    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;modal-content&#34;</span>&gt;
+      &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;modal-header&#34;</span>&gt;
+        &lt;<span style="color:#f92672">h5</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;modal-title&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;SIGNINTitle&#34;</span>&gt;SIGN IN&lt;/<span style="color:#f92672">h5</span>&gt;
+        &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;button&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;close&#34;</span> <span style="color:#a6e22e">data-dismiss</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;modal&#34;</span> <span style="color:#a6e22e">aria-label</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Close&#34;</span>&gt;
+          &lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">aria-hidden</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;true&#34;</span>&gt;&amp;times;&lt;/<span style="color:#f92672">span</span>&gt;
+        &lt;/<span style="color:#f92672">button</span>&gt;
+      &lt;/<span style="color:#f92672">div</span>&gt;
+      &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;modal-body&#34;</span>&gt;
+            &lt;<span style="color:#f92672">form</span> <span style="color:#a6e22e">action</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{% url &#39;accounts:signin&#39; %}&#34;</span> <span style="color:#a6e22e">method</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;POST&#34;</span>&gt;
+            {% csrf_token %}
+            &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-row mb-3 mt-5&#34;</span>&gt;
+                &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;col-12&#34;</span>&gt;
+                    {% if error %}
+                    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;d-flex flex-row&#34;</span>&gt;
+                        &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;username&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mr-3&#34;</span>&gt;Username&lt;/<span style="color:#f92672">label</span>&gt;
+                        &lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text-danger p-0 m-0&#34;</span>&gt;{{ error }}&lt;/<span style="color:#f92672">p</span>&gt;
+                    &lt;/<span style="color:#f92672">div</span>&gt;
+                    {% else %}
+                    &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;username&#34;</span>&gt;Username&lt;/<span style="color:#f92672">label</span>&gt;
+                    {% endif %}
+                    &lt;<span style="color:#f92672">div</span>&gt;&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;text&#39;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;username&#39;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;username&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-control&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
+                &lt;/<span style="color:#f92672">div</span>&gt;
+            &lt;/<span style="color:#f92672">div</span>&gt;
+            &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-row mb-6&#34;</span>&gt;
+                &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;col-12&#34;</span>&gt;
+                    &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password&#34;</span>&gt;Password&lt;/<span style="color:#f92672">label</span>&gt;
+                    &lt;<span style="color:#f92672">div</span>&gt;&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;password&#39;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;password&#39;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-control&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
+                &lt;/<span style="color:#f92672">div</span>&gt;
+            &lt;/<span style="color:#f92672">div</span>&gt;
+            &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;modal-footer mt-5&#34;</span>&gt;
+                &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;button&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;btn btn-secondary&#34;</span> <span style="color:#a6e22e">data-dismiss</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;modal&#34;</span>&gt;Close&lt;/<span style="color:#f92672">button</span>&gt;
+                &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;submit&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;btn btn-primary&#34;</span>&gt;Sign In&lt;/<span style="color:#f92672">button</span>&gt;
+            &lt;/<span style="color:#f92672">div</span>&gt;
+            &lt;/<span style="color:#f92672">form</span>&gt;
+        &lt;/<span style="color:#f92672">div</span>&gt;
+    &lt;/<span style="color:#f92672">div</span>&gt;
+  &lt;/<span style="color:#f92672">div</span>&gt;
+&lt;/<span style="color:#f92672">div</span>&gt;
+&lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div><h4 id="참고">참고</h4>
+<hr>
+<ul>
+<li>내가 여기서 사용한 것은 django에서 기본으로 제공하는 user 모델만 사용했음.</li>
+<li>하지만 django에서는 UserCreationForm 이라는 ModelForm도 제공함. 다만, UserCreationForm은 username과 password1, 2만 입력받음.</li>
+</ul>
+<hr>
+<ol>
+<li><a href="https://dongyeopgu.github.io/cont/django_start.html">Django 기초</a></li>
+<li><a href="https://dongyeopgu.github.io/cont/django_crud.html">Django CRUD</a></li>
+<li><a href="https://dongyeopgu.github.io/cont/django_paginator.html">Django Paginator</a></li>
+<li><a href="https://dongyeopgu.github.io/cont/django_change_user.html">Django User(2)</a></li>
+<li><a href="https://dongyeopgu.github.io/cont/django_comment.html">Django Comment</a></li>
+<li><a href="https://dongyeopgu.github.io/cont/django_like_follow.html">Django M:N</a></li>
+<li><a href="https://dongyeopgu.github.io/cont/django_rest_api.html">Django REST Framework</a></li>
+</ol>
+
+
+<footer class="footline">
+	
+</footer>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+    var logicalName = 'Django_login.md';
+    if (logicalName == "_index.md")
+        return;
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'dongyeopgu-github-io';
+    dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    
+    
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+        
+            </div> 
+        
+        </div> 
+        
+
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="../django/django_paginator.html" title="Django Paginator"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="../django/django_change_user.html" title="Django User (2)" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="../js/clipboard.min.js?1590413614"></script>
+    <script src="../js/perfect-scrollbar.min.js?1590413614"></script>
+    <script src="../js/perfect-scrollbar.jquery.min.js?1590413614"></script>
+    <script src="../js/jquery.sticky.js?1590413614"></script>
+    <script src="../js/featherlight.min.js?1590413614"></script>
+    <script src="../js/highlight.pack.js?1590413614"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="../js/modernizr.custom-3.6.0.js?1590413614"></script>
+    <script src="../js/learn.js?1590413614"></script>
+    <script src="../js/hugo-learn.js?1590413614"></script>
+
+    <link href="../mermaid/mermaid.css?1590413614" rel="stylesheet" />
+    <script src="../mermaid/mermaid.js?1590413614"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    
+
+  </body>
+</html>
+

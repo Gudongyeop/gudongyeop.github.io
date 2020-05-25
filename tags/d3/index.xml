@@ -12,10 +12,10 @@
     
     <item>
       <title>SWEA - Python - D3</title>
-      <link>https://dongyeopgu.github.io/cont_2/d3/swea-d3.html</link>
+      <link>https://dongyeopgu.github.io/algorithm/d3/swea-d3.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/cont_2/d3/swea-d3.html</guid>
+      <guid>https://dongyeopgu.github.io/algorithm/d3/swea-d3.html</guid>
       <description>1240. 단순 2진 암호코드 for t in range(int(input())):n = int(input())arr = [0]*ncnt = 0a = list(input().split())for i in a:flag = 0for j in i:if not flag and j.isupper():flag = 1elif j.isdigit() or (flag and j.isupper()):flag = 0breakif flag:arr[cnt] += 1if (&amp;#39;.&amp;#39; in i) or (&amp;#39;!&amp;#39; in i) or (&amp;#39;?&amp;#39; in i):cnt += 1print(f&amp;#34;#{t+1} {&amp;#39; &amp;#39;.</description>
     </item>
     

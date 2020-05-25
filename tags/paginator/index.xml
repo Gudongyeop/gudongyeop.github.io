@@ -12,10 +12,10 @@
     
     <item>
       <title>Django Paginator</title>
-      <link>https://dongyeopgu.github.io/cont/django_paginator.html</link>
+      <link>https://dongyeopgu.github.io/django/django_paginator.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/cont/django_paginator.html</guid>
+      <guid>https://dongyeopgu.github.io/django/django_paginator.html</guid>
       <description>Paginator 사용하기   게시판 같은 곳에서 리스트의 양이 많아 질 경우 나누어 보여주기 위해서 사용
 여기 적힌 예에서 model은 Review 이고 forms는 ReviewForm이다.
 bootstrap을 사용했음.
