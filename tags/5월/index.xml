@@ -254,5 +254,15 @@ def prim(a): key = [float(&amp;#39;inf&amp;#39;)for _ in range(v+1)] pi = [None 
 #include &amp;lt;stdio.h&amp;gt; char arr[100001]; int n; bool solution(char* a, int* length) { int l = *length; if (a[l] == &amp;#39;)&amp;#39;) { if (a[l - 1] == &amp;#39;(&amp;#39;) { a[l - 1] = NULL; a[l] = NULL; *length -= 2; return true; } else return false; } if (a[l] == &amp;#39;]&amp;#39;) { if (a[l - 1] == &amp;#39;[&amp;#39;) { a[l - 1] = NULL; a[l] = NULL; *length -= 2; return true; } else return false; } if (a[l] == &amp;#39;}&amp;#39;) { if (a[l - 1] == &amp;#39;{&amp;#39;) { a[l - 1] = NULL; a[l] = NULL; *length -= 2; return true; } else return false; } if (a[l] == &amp;#39;&amp;gt;&amp;#39;) { if (a[l - 1] == &amp;#39;&amp;lt;&amp;#39;) { a[l - 1] = NULL; a[l] = NULL; *length -= 2; return true; } else return false; } return true; } int main() { for (int t = 1; t &amp;lt;= 10; t++) { int result = 1; int length = 0; scanf(&amp;#34;%d&amp;#34;, &amp;amp;n); for (int i = 1; i &amp;lt;= n; i++) { length++; scanf(&amp;#34; %1c&amp;#34;, &amp;amp;arr[length]); if (solution(arr, &amp;amp;length) == false) { result = 0; } } printf(&amp;#34;#%d %d\n&amp;#34;, t, result); } }   </description>
     </item>
     
+    <item>
+      <title>2020.05.25</title>
+      <link>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.25.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.25.html</guid>
+      <description>오늘 배운 것 Vue.js  body태그에 &amp;lt;script src=&amp;quot;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt; Vue.js cdn을 추가하여 사용
+ 1. Declarative Rendering(선언적 렌더링) &amp;lt;div id=&amp;#34;app&amp;#34;&amp;gt; {{ message }} &amp;lt;/div&amp;gt; &amp;lt;!-- vue cdn --&amp;gt; &amp;lt;script src=&amp;#34;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script&amp;gt; const app = new Vue({ el: &amp;#39;#app&amp;#39;, data: { message: &amp;#39;message&amp;#39; } }) &amp;lt;/script&amp;gt; 2. 조건문(if) &amp;lt;div id=&amp;#34;using-if&amp;#34;&amp;gt; &amp;lt;p v-if=&amp;#34;check&amp;#34;&amp;gt;안녕&amp;lt;/p&amp;gt; &amp;lt;!-- 기본적인 자바스크립트 표현 가능 --&amp;gt; &amp;lt;p v-if=&amp;#34;check===&amp;#39;안녕&amp;#39;&amp;#34;&amp;gt;안녕&amp;lt;/p&amp;gt; &amp;lt;p v-else-if=&amp;#34;check===&amp;#39;반가워&amp;#39;&amp;#34;&amp;gt;반가워&amp;lt;/p&amp;gt; &amp;lt;p v-else&amp;gt;안녕 반가워&amp;lt;/p&amp;gt; &amp;lt;!-- false일 때만 보여주기 --&amp;gt; &amp;lt;p v-if=&amp;#34;!check&amp;#34;&amp;gt;False일때 나타내기&amp;lt;/p&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;!</description>
+    </item>
+    
   </channel>
 </rss>
