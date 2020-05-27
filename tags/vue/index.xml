@@ -22,6 +22,18 @@
     </item>
     
     <item>
+      <title>Vue CLI</title>
+      <link>https://dongyeopgu.github.io/vue.js/vue-cli3.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dongyeopgu.github.io/vue.js/vue-cli3.html</guid>
+      <description>Vue CLI3 설치   공식 문서
+   설치 순서 (Windows10)
+$ npm install -g @vue/cli$ vue --version # 버젼확인  프로젝트 생성 및 실행  $ vue create &amp;lt;프로젝트 명&amp;gt;$ cd &amp;lt;프로젝트명&amp;gt; # 프로젝트 폴더로 이동$ npm run serve프로젝트 정리    src/App.vue에서 필요없는 기본코드 삭제(아래처럼)
+&amp;lt;template&amp;gt;&amp;lt;div id=&amp;#34;app&amp;#34;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/template&amp;gt;&amp;lt;script&amp;gt;export default {name: &amp;#39;App&amp;#39;,components: {},//여기에 data, methods 등 넣으면 됨 }&amp;lt;/script&amp;gt;&amp;lt;style&amp;gt;&amp;lt;/style&amp;gt;  컴포넌트 사용 방법   컴포넌트 생성 : components폴더에 .</description>
+    </item>
+    
+    <item>
       <title>Vue.js</title>
       <link>https://dongyeopgu.github.io/vue.js.html</link>
       <pubDate>Mon, 25 May 2020 21:55:45 +0900</pubDate>
