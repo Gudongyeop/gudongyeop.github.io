@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>20.06.01 on 여러가지</title>
+    <link>https://dongyeopgu.github.io/tags/20.06.01.html</link>
+    <description>Recent content in 20.06.01 on 여러가지</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://dongyeopgu.github.io/tags/20.06.01/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>2020.06.01</title>
+      <link>https://dongyeopgu.github.io/til/6%EC%9B%94/20.06.01.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dongyeopgu.github.io/til/6%EC%9B%94/20.06.01.html</guid>
+      <description>오늘 배운 것  Vue로 Todo List작성
+   App.vue
+&amp;lt;template&amp;gt; &amp;lt;div id=&amp;#34;app&amp;#34;&amp;gt; &amp;lt;div id=&amp;#34;nav&amp;#34;&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;router-view/&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;/template&amp;gt;   TodoView.vue
+&amp;lt;template&amp;gt; &amp;lt;div&amp;gt; &amp;lt;TodoList :todos=&amp;#34;todos&amp;#34; @checked=&amp;#34;updatedTodo&amp;#34;/&amp;gt; &amp;lt;TodoInput @create-todo=&amp;#34;createTodo&amp;#34;/&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;/template&amp;gt; &amp;lt;script&amp;gt; import TodoList from &amp;#39;@/components/TodoList.vue&amp;#39; import TodoInput from &amp;#39;@/components/TodoInput.vue&amp;#39; export default { name: &amp;#39;TodoView&amp;#39;, components: { TodoList, TodoInput, }, data() { return { todos: [ { id: 1, content: &amp;#39;Django 복습&amp;#39;, isCompleted: true, }, { id: 2, content: &amp;#39;Vue 복습&amp;#39;, isCompleted: false, }, { id: 3, content: &amp;#39;저녁&amp;#39;, isCompleted: false, }, ] } }, methods: { updatedTodo(todo) { todo.</description>
+    </item>
+    
+  </channel>
+</rss>

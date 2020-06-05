@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>20.06.02 on 여러가지</title>
+    <link>https://dongyeopgu.github.io/tags/20.06.02.html</link>
+    <description>Recent content in 20.06.02 on 여러가지</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://dongyeopgu.github.io/tags/20.06.02/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>2020.06.02</title>
+      <link>https://dongyeopgu.github.io/til/6%EC%9B%94/20.06.02.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dongyeopgu.github.io/til/6%EC%9B%94/20.06.02.html</guid>
+      <description>오늘 배운 것  Vue로 Youtube API를 이용해 영상 찾기 및 재생
+   npm i axios로 axios 패키지 설치하여 이용
+  App.vue를 작성
+&amp;lt;template&amp;gt; &amp;lt;div id=&amp;#34;app&amp;#34;&amp;gt; &amp;lt;SearchBar @input-change=&amp;#34;onInputChange&amp;#34;/&amp;gt; &amp;lt;VideoList :videos=&amp;#34;videos&amp;#34;/&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;/template&amp;gt; &amp;lt;script&amp;gt; import axios from &amp;#39;axios&amp;#39; import SearchBar from &amp;#39;@/components/SearchBar.vue&amp;#39; import VideoList from &amp;#39;@/components/VideoList.vue&amp;#39; const YOUTUBE_API_KEY = process.env.VUE_APP_YOUTUBE_API_KEY const YOUTUBE_API_URL = &amp;#39;https://www.googleapis.com/youtube/v3/search&amp;#39; export default { name: &amp;#39;App&amp;#39;, components: { SearchBar, VideoList }, data() { return { videos: [], } }, methods: { onInputChange(userInput) { const config = { params: { key: YOUTUBE_API_KEY, part: &amp;#39;snippet&amp;#39;, type: &amp;#39;video&amp;#39;, q: userInput, } } axios.</description>
+    </item>
+    
+  </channel>
+</rss>
