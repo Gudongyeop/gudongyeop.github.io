@@ -28,6 +28,13 @@
 	"content": "Vue CLI3 설치   공식 문서\n   설치 순서 (Windows10)\n$ npm install -g @vue/cli\r$ vue --version # 버젼확인\r  프로젝트 생성 및 실행  $ vue create \u0026lt;프로젝트 명\u0026gt;\r$ cd \u0026lt;프로젝트명\u0026gt; # 프로젝트 폴더로 이동\r$ npm run serve\r프로젝트 정리    src/App.vue에서 필요없는 기본코드 삭제(아래처럼)\n\u0026lt;template\u0026gt;\r\u0026lt;div id=\u0026#34;app\u0026#34;\u0026gt;\r\u0026lt;/div\u0026gt;\r\u0026lt;/template\u0026gt;\r\u0026lt;script\u0026gt;\rexport default {\rname: \u0026#39;App\u0026#39;,\rcomponents: {},\r//여기에 data, methods 등 넣으면 됨\r }\r\u0026lt;/script\u0026gt;\r\u0026lt;style\u0026gt;\r\u0026lt;/style\u0026gt;\r  컴포넌트 사용 방법   컴포넌트 생성 : components폴더에 .vue만들기(PascalCase로 이름만들기) 불러오기 : import 컴포넌트이름 from 경로 등록하기 : components 속성에 등록 사용하기 : \u0026lt;template\u0026gt; 내부에 html 태그처럼 추가  컴포넌트 기초 만들기    .vue파일 만들고 vue + tab 또는 \u0026lt; + tab으로 기초 작성\n  \u0026lt;template\u0026gt; 태그 안에 \u0026lt;div\u0026gt;안에 넣어줘야함\n  App.vue에서 연결\n\u0026lt;template\u0026gt;\r\u0026lt;div id=\u0026#34;app\u0026#34;\u0026gt;\r\u0026lt;Index/\u0026gt;\r\u0026lt;/div\u0026gt;\r\u0026lt;/template\u0026gt;\r\u0026lt;script\u0026gt;\rimport Index from \u0026#39;./components/Index.vue\u0026#39;\rexport default {\rname: \u0026#39;App\u0026#39;,\rcomponents: {\rIndex,\r}\r}\r\u0026lt;/script\u0026gt;\r\u0026lt;style\u0026gt;\r\u0026lt;/style\u0026gt;\r  components에서 data 작성 시 data: function () {}으로 작성\n  lodash 사용하여 샘플링 기능 추가\n$ npm i lodash\r  Vue-Router  공식 문서 참조\n 설치  $ vue add router\r컴포넌트 사용하기   컴포넌트를 만든다. 컴포넌트를 가져온다. 컴포넌트를 등록. 컴포넌트 사용. views폴더에 .vue파일 작성  router 폴더   index를 만들었을 때\n import Vue from \u0026#39;vue\u0026#39;\rimport VueRouter from \u0026#39;vue-router\u0026#39;\rimport Index from \u0026#39;../views/Index.vue\u0026#39;\rVue.use(VueRouter)\rconst routes = [\r{\rpath: \u0026#39;/\u0026#39;,\rname: \u0026#39;Index\u0026#39;,\rcomponents: Index\r},\r]\rconst router = new VueRouter({\rmode: \u0026#39;history\u0026#39;,\rbase: process.env.BASE_URL,\rroutes\r})\rexport default router\rHistory Mode   SPA의 단점은 주소가 바뀌지 않는다는 것. 주소가 바뀌지 않는다는 것은 사용자가 어떤 페이지에 요청을 보내 응답을 받았는지에 대한 history 관리를 할 수 없다는 뜻. 초창기에는 주소 뒤에 #(해쉬)또는 #!(해쉬뱅)을 붙이고 뒤에 하위 주소를 넣었다 (history mode off 하면 확인 가능) 브라우저에서 제공하는 주소 API를 사용해 주소를 바꾼다. 이를 위해 사용하는 것이 history API다.  "
 },
 {
+	"uri": "https://dongyeopgu.github.io/til/6%EC%9B%94.html",
+	"title": "6월",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "https://dongyeopgu.github.io/basics.html",
 	"title": "About Blog",
 	"tags": [],
@@ -574,6 +581,55 @@
 	"content": ""
 },
 {
+	"uri": "https://dongyeopgu.github.io/tags/20.05.30.html",
+	"title": "20.05.30",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/20.05.31.html",
+	"title": "20.05.31",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/20.06.01.html",
+	"title": "20.06.01",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/20.06.02.html",
+	"title": "20.06.02",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/20.06.03.html",
+	"title": "20.06.03",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/20.06.04.html",
+	"title": "20.06.04",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/20.06.05.html",
+	"title": "20.06.05",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.13.html",
 	"title": "2020.04.13 다시 기록 시작",
 	"tags": ["TIL", "20.04.13", "4월"],
@@ -896,6 +952,55 @@
 	"content": "SWEA 문제풀이   공통조상\ndef sol(n):\rq = [n]\rcnt =0\rwhile q:\rcnt += 1\ra = q.pop()\rfor i in v_1[a]:\rq.append(i)\rreturn cnt\rfor t in range(int(input())):\rv, e, n1, n2 = map(int, input().split())\rn3 = 9**9\rv_1 = [[]for _ in range(v+1)]\rv_2 = [[]for _ in range(v+1)]\rdata = [*map(int, input().split())]\rfor i in range(e):\rv_1[data[2*i]].append(data[2*i+1])\rv_2[data[2*i+1]].append(data[2*i])\rwhile n1 != n3:\rn1 = v_2[n1][0]\rn3 = n2\rwhile n3\u0026gt;1 and n1 != n3:\rn3=v_2[n3][0]\rresult = sol(n1)\rprint(f\u0026#34;#{t+1} {n1} {result}\u0026#34;)\r  "
 },
 {
+	"uri": "https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.30.html",
+	"title": "2020.05.30",
+	"tags": ["TIL", "20.05.30", "5월", "Algorithm"],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.31.html",
+	"title": "2020.05.31",
+	"tags": ["TIL", "20.05.31", "5월", "Algorithm"],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/til/6%EC%9B%94/20.06.01.html",
+	"title": "2020.06.01",
+	"tags": ["TIL", "20.06.01", "6월", "Vue"],
+	"description": "",
+	"content": "오늘 배운 것  Vue로 Todo List작성\n   App.vue\n\u0026lt;template\u0026gt; \u0026lt;div id=\u0026#34;app\u0026#34;\u0026gt; \u0026lt;div id=\u0026#34;nav\u0026#34;\u0026gt; \u0026lt;/div\u0026gt; \u0026lt;router-view/\u0026gt; \u0026lt;/div\u0026gt; \u0026lt;/template\u0026gt;   TodoView.vue\n\u0026lt;template\u0026gt; \u0026lt;div\u0026gt; \u0026lt;TodoList :todos=\u0026#34;todos\u0026#34; @checked=\u0026#34;updatedTodo\u0026#34;/\u0026gt; \u0026lt;TodoInput @create-todo=\u0026#34;createTodo\u0026#34;/\u0026gt; \u0026lt;/div\u0026gt; \u0026lt;/template\u0026gt; \u0026lt;script\u0026gt; import TodoList from \u0026#39;@/components/TodoList.vue\u0026#39; import TodoInput from \u0026#39;@/components/TodoInput.vue\u0026#39; export default { name: \u0026#39;TodoView\u0026#39;, components: { TodoList, TodoInput, }, data() { return { todos: [ { id: 1, content: \u0026#39;Django 복습\u0026#39;, isCompleted: true, }, { id: 2, content: \u0026#39;Vue 복습\u0026#39;, isCompleted: false, }, { id: 3, content: \u0026#39;저녁\u0026#39;, isCompleted: false, }, ] } }, methods: { updatedTodo(todo) { todo.isCompleted = !todo.isCompleted }, createTodo(todo) { this.todos.push(todo) } } } \u0026lt;/script\u0026gt; \u0026lt;style\u0026gt; \u0026lt;/style\u0026gt;   TodoInput.vue\n\u0026lt;template\u0026gt; \u0026lt;div\u0026gt; \u0026lt;input type=\u0026#34;text\u0026#34; v-model=\u0026#34;userInput\u0026#34; @keyup.enter=\u0026#34;createTodo\u0026#34;\u0026gt; \u0026lt;button @click=\u0026#34;createTodo\u0026#34;\u0026gt;등록\u0026lt;/button\u0026gt; \u0026lt;/div\u0026gt; \u0026lt;/template\u0026gt; \u0026lt;script\u0026gt; export default { name: \u0026#39;TodoInput\u0026#39;, data() { return { userInput: \u0026#39;\u0026#39;, } }, methods: { createTodo() { const newTodo = { id: Date.now(), content: this.userInput, isCompleted: false, } this.$emit(\u0026#39;create-todo\u0026#39;, newTodo) this.userInput = \u0026#39;\u0026#39; }, } } \u0026lt;/script\u0026gt; \u0026lt;style\u0026gt; \u0026lt;/style\u0026gt;   TodoList.vue\n\u0026lt;template\u0026gt; \u0026lt;div\u0026gt; \u0026lt;h1\u0026gt;Todo List\u0026lt;/h1\u0026gt; \u0026lt;ul\u0026gt; \u0026lt;li v-for=\u0026#34;todo in todos\u0026#34; :key=\u0026#34;todo.id\u0026#34; :class=\u0026#34;{ completed: todo.isCompleted }\u0026#34;\u0026gt; \u0026lt;!-- \u0026lt;input type=\u0026#34;checkbox\u0026#34; v-model=\u0026#34;todo.isCompleted\u0026#34;\u0026gt; --\u0026gt; \u0026lt;input type=\u0026#34;checkbox\u0026#34; :checked=\u0026#34;todo.isCompleted\u0026#34; @click=\u0026#34;$emit(\u0026#39;checked\u0026#39;, todo)\u0026#34; \u0026gt; {{ todo.content }} \u0026lt;/li\u0026gt; \u0026lt;/ul\u0026gt; \u0026lt;/div\u0026gt; \u0026lt;/template\u0026gt; \u0026lt;script\u0026gt; export default { name: \u0026#39;TodoList\u0026#39;, props: { todos: { type: Array, required: true, }, }, } \u0026lt;/script\u0026gt; \u0026lt;style scoped\u0026gt; .completed { text-decoration: line-through; } \u0026lt;/style\u0026gt;   index.js\nimport Vue from \u0026#39;vue\u0026#39; import VueRouter from \u0026#39;vue-router\u0026#39; import TodoView from \u0026#39;@/views/TodoView.vue\u0026#39; Vue.use(VueRouter) const routes = [ { path: \u0026#39;/\u0026#39;, name: \u0026#39;TodoView\u0026#39;, component: TodoView } ] const router = new VueRouter({ mode: \u0026#39;history\u0026#39;, base: process.env.BASE_URL, routes }) export default router   "
+},
+{
+	"uri": "https://dongyeopgu.github.io/til/6%EC%9B%94/20.06.02.html",
+	"title": "2020.06.02",
+	"tags": ["TIL", "20.06.02", "6월", "Vue"],
+	"description": "",
+	"content": "오늘 배운 것  Vue로 Youtube API를 이용해 영상 찾기 및 재생\n   npm i axios로 axios 패키지 설치하여 이용\n  App.vue를 작성\n\u0026lt;template\u0026gt; \u0026lt;div id=\u0026#34;app\u0026#34;\u0026gt; \u0026lt;SearchBar @input-change=\u0026#34;onInputChange\u0026#34;/\u0026gt; \u0026lt;VideoList :videos=\u0026#34;videos\u0026#34;/\u0026gt; \u0026lt;/div\u0026gt; \u0026lt;/template\u0026gt; \u0026lt;script\u0026gt; import axios from \u0026#39;axios\u0026#39; import SearchBar from \u0026#39;@/components/SearchBar.vue\u0026#39; import VideoList from \u0026#39;@/components/VideoList.vue\u0026#39; const YOUTUBE_API_KEY = process.env.VUE_APP_YOUTUBE_API_KEY const YOUTUBE_API_URL = \u0026#39;https://www.googleapis.com/youtube/v3/search\u0026#39; export default { name: \u0026#39;App\u0026#39;, components: { SearchBar, VideoList }, data() { return { videos: [], } }, methods: { onInputChange(userInput) { const config = { params: { key: YOUTUBE_API_KEY, part: \u0026#39;snippet\u0026#39;, type: \u0026#39;video\u0026#39;, q: userInput, } } axios.get(YOUTUBE_API_URL, config) .then(res =\u0026gt; { console.log(res) this.videos = res.data.items }) .catch(err =\u0026gt; { console.log(err) }) } } } \u0026lt;/script\u0026gt;   영상 목록과 검색창 컴포넌트\n\u0026lt;template\u0026gt; \u0026lt;div\u0026gt; \u0026lt;h1\u0026gt;Video List\u0026lt;/h1\u0026gt; \u0026lt;ul\u0026gt; \u0026lt;li v-for=\u0026#34;video in videos\u0026#34; :key=\u0026#34;video.etag\u0026#34;\u0026gt; \u0026lt;img :src=\u0026#34;video.snippet.thumbnails.default.url\u0026#34; style=\u0026#34;height: 300px;\u0026#34;\u0026gt; \u0026lt;/li\u0026gt; \u0026lt;/ul\u0026gt; \u0026lt;/div\u0026gt; \u0026lt;/template\u0026gt; \u0026lt;script\u0026gt; export default { name: \u0026#39;VideoList\u0026#39;, props: { videos: { type: Array, } } } \u0026lt;/script\u0026gt; \u0026lt;style\u0026gt; \u0026lt;/style\u0026gt; \u0026lt;template\u0026gt; \u0026lt;div\u0026gt; \u0026lt;input type=\u0026#34;text\u0026#34; @keypress.enter=\u0026#34;onInput\u0026#34;\u0026gt; \u0026lt;/div\u0026gt; \u0026lt;/template\u0026gt; \u0026lt;script\u0026gt; export default { name: \u0026#39;SearchBar\u0026#39;, methods: { onInput(e) { this.$emit(\u0026#39;input-change\u0026#39;, e.target.value) }, }, } \u0026lt;/script\u0026gt; \u0026lt;style\u0026gt; \u0026lt;/style\u0026gt;   "
+},
+{
+	"uri": "https://dongyeopgu.github.io/til/6%EC%9B%94/20.06.03.html",
+	"title": "2020.06.03",
+	"tags": ["TIL", "20.06.03", "6월", "Vue"],
+	"description": "",
+	"content": "오늘 한 것  Vue Project\n 구현과정   vue 프로젝트 생성 기본 구조 설정 필요 기능 추가   1. vue 프로젝트 생성  vue create project명 을 bash에서 실행 router 사용을 위한 vue add router cd project명으로 폴더 이동 후 필요한 axios와 같은 패키지 설치  ex) npm i axios , npm i lodash    2. 기본 구조 설정   영화 목록을 가져오고 보여 주는 MovieView.vue와 예고편 검색을 위한 VideoView.vue를 views폴더에 생성\n  public의 index.html에 bootstrap사용을 위한 cdn 추가\n  router 폴더에 있는 index.js와 연결\n  import MovieView from \u0026#39;@/views/MovieView.vue\u0026#39; import MainView from \u0026#39;@/views/MainView.vue\u0026#39; import VideoView from \u0026#39;@/views/VideoView.vue\u0026#39; Vue.use(VueRouter) const routes = [ { path: \u0026#39;/movie\u0026#39;, name: \u0026#39;MovieView\u0026#39;, component: MovieView }, { path: \u0026#39;/\u0026#39;, name: \u0026#39;MainView\u0026#39;, component: MainView }, { path: \u0026#39;/video\u0026#39;, name: \u0026#39;VideoView\u0026#39;, component: VideoView },     components폴더에 필요한 컴포넌트 생성\n 여기선 총 6가지 사용    App.vue 파일과 router, view 연결\n  3. 필요 기능 추가   axios를 이용하여 데이터 가져오기(Movie에서는 영화 목록, Video에서는 Youtube API를 통해 필요 데이터 가져옴)\n  Bootstrap에서 지원하는 Modal 이용\n Modal사용시 data-target, id 값이 숫자로만 이뤄질 경우 동작하지 않음.    클래스 바인딩으로 평점이 7점 넘을 경우 빨갛게 표시, 아닐경우 노랗게 표시\n\u0026lt;p class=\u0026#34;btn\u0026#34; :class=\u0026#34;[ highAndLow() ? \u0026#39;btn-danger\u0026#39; : \u0026#39;btn-warning\u0026#39; ]\u0026#34;\u0026gt;{{ movie.user_rating }}\u0026lt;/p\u0026gt; \u0026lt;scirpt\u0026gt; .... methods: { highAndLow() { if (this.movie.user_rating \u0026gt; 7) { return true } else { return false } } ..... } \u0026lt;/scirpt\u0026gt;   "
+},
+{
+	"uri": "https://dongyeopgu.github.io/til/6%EC%9B%94/20.06.04.html",
+	"title": "2020.06.04",
+	"tags": ["TIL", "20.06.04", "6월", "Vue"],
+	"description": "",
+	"content": "오늘 한 것  SWEA 문제풀이\n   생일파티\n python  for t in range(int(input())): n, m = map(int, input().split()) a = [[]for _ in range(n+1)] for i in range(m): n1, n2 = map(int,input().split()) a[n1].append(n2) a[n2].append(n1) result = set() result.update(a[1]) for i in a[1]: result.update(a[i]) if 1 in result: result.remove(1) print(f\u0026#34;#{t+1} {len(result)}\u0026#34;)   보급로\n C++  #include \u0026lt;cstdio\u0026gt;#include \u0026lt;cstring\u0026gt;#include \u0026lt;algorithm\u0026gt;#include \u0026lt;queue\u0026gt;using namespace std; int map[100][100]; int dis[100][100]; int dx[4] = {0, 0, -1, 1}; int dy[4] = {-1, 1, 0, 0}; int n; bool border(int x, int y) { return (0 \u0026lt;= x \u0026amp;\u0026amp; x \u0026lt; n \u0026amp;\u0026amp; 0 \u0026lt;= y \u0026amp;\u0026amp; y \u0026lt; n); } void solv() { queue\u0026lt;pair\u0026lt;int, int\u0026gt;\u0026gt; q; q.push(make_pair(0,0)); while (!q.empty()) { int x = q.front().first; int y = q.front().second; q.pop(); for (int i=0; i\u0026lt;4; i++) { int nx = x+dx[i]; int ny = y+dy[i]; if (border(nx,ny)) { int dist = map[nx][ny] + dis[x][y]; if (dist \u0026lt; dis[nx][ny]) { q.push(make_pair(nx, ny)); dis[nx][ny] = dist; } } } } return; } int main() { int test_case; scanf(\u0026#34;%d\u0026#34;, \u0026amp;test_case); for (int t=1; t\u0026lt;=test_case; t++) { scanf(\u0026#34;%d\u0026#34;, \u0026amp;n); for (int i=0; i\u0026lt;n;i++) { for (int j=0;j\u0026lt;n;j++) { scanf(\u0026#34;%1d\u0026#34;, \u0026amp;map[i][j]); dis[i][j] = 9999999; } } dis[0][0] = 0; solv(); printf(\u0026#34;#%d %d\\n\u0026#34;, t, dis[n-1][n-1]); } return 0; }   "
+},
+{
+	"uri": "https://dongyeopgu.github.io/til/6%EC%9B%94/20.06.05.html",
+	"title": "2020.06.05",
+	"tags": ["TIL", "20.06.05", "6월", "Algorithm"],
+	"description": "",
+	"content": "오늘 한 것  SWEA, 백준 문제풀이\n   하나로\n#include \u0026lt;cstdio\u0026gt; int test_case, n; long long x[1000], y[1000], dis[1000]; bool visit[1000]; double E; long long result; long long dist(long long x1, long long y1, long long x2, long long y2) { return (x1 - x2)*(x1 - x2) + (y1 - y2)*(y1 - y2); } int main() { scanf(\u0026#34;%d\u0026#34;, \u0026amp;test_case); for (int t = 1; t \u0026lt;= test_case; t++) { result = 0; scanf(\u0026#34;%d\u0026#34;, \u0026amp;n); for (int i = 0; i \u0026lt;n; i++) { scanf(\u0026#34;%lld\u0026#34;, \u0026amp;x[i]); } for (int i = 0; i \u0026lt;n; i++) { scanf(\u0026#34;%lld\u0026#34;, \u0026amp;y[i]); } for (int i = 0; i \u0026lt;n; i++) { dis[i] = 1e16; visit[i] = 0; } scanf(\u0026#34;%lf\u0026#34;, \u0026amp;E); dis[0] = 0; for (int i = 0; i \u0026lt; n; i++) { long long a = 1e16; long long b = i; for (int j=0;j\u0026lt;n;j++) { if (!visit[j] \u0026amp;\u0026amp; dis[j] \u0026lt; a) { a = dis[j]; b = j; } } visit[b] = true; result += a; for (int j = 0; j \u0026lt;n; j++) { if (!visit[j]) { a = dist(x[b], y[b], x[j], y[j]); if (dis[j] \u0026gt; a) { dis[j] = a; } } } } printf(\u0026#34;#%d %.0lf\\n\u0026#34;, t, E*result); } return 0; }   색종이 붙이기(백준)\n#include \u0026lt;iostream\u0026gt; #include \u0026lt;algorithm\u0026gt; using namespace std; const int INF = 987654321; int arr[10][10]; int cnt = 0; int result; int paper[6] = { 0, 5, 5, 5, 5, 5 }; void sol(int y, int x) { // 해당 줄은 다 확인했으므로 다음 줄 확인  if (x == 10) { sol(y + 1, 0); return; } // 마지막 줄까지 다 확인했으므로 현재 색종이 개수 확인  if (y == 10) { result = min(result, cnt); return; } // 덮을 필요 없으므로 다음 칸 확인  if (arr[y][x] == 0) { sol(y, x + 1); return; } // 모든 경우의 수 다 확인  for (int len = 5; len \u0026gt;= 1; len--) { // 현재 len 크기 색종이가 없거나 덮었을 때 범위를 벗어날 경우  if (paper[len] == 0 || y + len \u0026gt; 10 || x + len \u0026gt; 20) { continue; } bool flag = true; // len 길이만한 정사각형이 존재하는지 확인  for (int j = 0; j \u0026lt; len; j++) { for (int k = 0; k \u0026lt; len; k++) { if (arr[y + j][x + k] == 0) { flag = false; break; } } if (flag == false) { break; } } // 존재하지 않으면 확인할 필요 없음  if (flag == false) { continue; } // 덮었다고 치고  for (int j = 0; j \u0026lt; len; j++) { for (int k = 0; k \u0026lt; len; k++) { arr[y + j][x + k] = 0; } } paper[len]--; cnt++; // 다음 칸 확인  sol(y, x + len); // 덮었던 색종이를 치운다  for (int j = 0; j \u0026lt; len; j++) { for (int k = 0; k \u0026lt; len; k++) { arr[y + j][x + k] = 1; } } paper[len]++; cnt--; } } int main(void) { for (int i = 0; i \u0026lt; 10; i++) { for (int j = 0; j \u0026lt; 10; j++) { scanf(\u0026#34;%d\u0026#34;, \u0026amp;arr[i][j]); } } result = INF; sol(0, 0); if (result == INF) { result = -1; } printf(\u0026#34;%d\u0026#34;, result); return 0; }   "
+},
+{
 	"uri": "https://dongyeopgu.github.io/tags/4%EC%9B%94.html",
 	"title": "4월",
 	"tags": [],
@@ -905,6 +1010,13 @@
 {
 	"uri": "https://dongyeopgu.github.io/tags/5%EC%9B%94.html",
 	"title": "5월",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/6%EC%9B%94.html",
+	"title": "6월",
 	"tags": [],
 	"description": "",
 	"content": ""
