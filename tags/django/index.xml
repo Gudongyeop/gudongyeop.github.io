@@ -196,5 +196,23 @@ def movie_list(request): # 영화 목록 naver_client_id = &amp;#34;발급받은
  2. JSON 파일의 Data 가져오기  JSON 파일을 DB에 저장하기 위해서 python manage.py loaddata moviedata.json 이용.</description>
     </item>
     
+    <item>
+      <title>2020.06.08</title>
+      <link>https://dongyeopgu.github.io/til/6%EC%9B%94/20.06.08.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dongyeopgu.github.io/til/6%EC%9B%94/20.06.08.html</guid>
+      <description>오늘 배운 것 </description>
+    </item>
+    
+    <item>
+      <title>2020.06.09</title>
+      <link>https://dongyeopgu.github.io/til/6%EC%9B%94/20.06.09.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dongyeopgu.github.io/til/6%EC%9B%94/20.06.09.html</guid>
+      <description>오늘 배운 것 </description>
+    </item>
+    
   </channel>
 </rss>
