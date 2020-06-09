@@ -95,7 +95,12 @@ $ npm install -g @vue/cli$ vue --version # 버젼확인  프로젝트 생성 �
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://dongyeopgu.github.io/til/6%EC%9B%94/20.06.08.html</guid>
-      <description>오늘 배운 것 </description>
+      <description>오늘 배운 것 Django &amp;amp; Vue  Django를 백엔드로 Vue를 프론트엔드
+Django Rest Framework를 사용
+ Django 설정   전에 했던 Django Rest Framework를 사용하여 Serializers를 이용.
+  따로 Templates를 만들지 않고 JSON 정보를 가지고 vue를 이용.
+  settings.py의 INSTALLED_APP에서 아래 추가 후 사용.
+  INSTALLED_APPS = [ ... &amp;#39;django.contrib.sites&amp;#39;, &amp;#39;rest_framework&amp;#39;, &amp;#39;rest_framework.authtoken&amp;#39;, &amp;#39;rest_auth&amp;#39;, &amp;#39;rest_auth.registration&amp;#39;, &amp;#39;allauth&amp;#39;, &amp;#39;allauth.account&amp;#39;, ... ] REST_FRAMEWORK = { &amp;#39;DEFAULT_AUTHENTICATION_CLASSES&amp;#39;: [ &amp;#39;rest_framework.authentication.TokenAuthentication&amp;#39;, ] } </description>
     </item>
     
     <item>
@@ -104,7 +109,9 @@ $ npm install -g @vue/cli$ vue --version # 버젼확인  프로젝트 생성 �
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://dongyeopgu.github.io/til/6%EC%9B%94/20.06.09.html</guid>
-      <description>오늘 배운 것 </description>
+      <description>오늘 배운 것 VUE 설정  vue router를 사용하여 Django와 연결하여 data가져옴.
+axios, cookies 사용
+  accounts와 관련된 기능을 사용하기 위해 Token을 쿠키로 저장하기 위해 cookies 사용  </description>
     </item>
     
   </channel>
