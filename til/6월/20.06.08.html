@@ -21,20 +21,20 @@
     <title>2020.06.08 :: 여러가지</title>
 
     
-    <link href="../../css/nucleus.css?1591710664" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1591710664" rel="stylesheet">
-    <link href="../../css/hybrid.css?1591710664" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1591710664" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1591710664" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1591710664" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1591710664" rel="stylesheet">
-    <link href="../../css/theme.css?1591710664" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1591710664" rel="stylesheet">
+    <link href="../../css/nucleus.css?1591712879" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1591712879" rel="stylesheet">
+    <link href="../../css/hybrid.css?1591712879" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1591712879" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1591712879" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1591712879" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1591712879" rel="stylesheet">
+    <link href="../../css/theme.css?1591712879" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1591712879" rel="stylesheet">
     
-      <link href="../../css/theme-red.css?1591710664" rel="stylesheet">
+      <link href="../../css/theme-red.css?1591712879" rel="stylesheet">
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1591710664"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1591712879"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -75,14 +75,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1591710664"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1591710664"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1591712879"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1591712879"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/dongyeopgu.github.io\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1591710664"></script>
+<script type="text/javascript" src="../../js/search.js?1591712879"></script>
 
     
   </div>
@@ -2111,7 +2111,11 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#오늘-배운-것">오늘 배운 것</a></li>
+    <li><a href="#오늘-배운-것">오늘 배운 것</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
   </ul>
 </nav>
     </div>
@@ -2152,7 +2156,40 @@
 
 
 <h2 id="오늘-배운-것">오늘 배운 것</h2>
-
+<h4 id="django--vue">Django &amp; Vue</h4>
+<blockquote>
+<p>Django를 백엔드로 Vue를 프론트엔드</p>
+<p>Django Rest Framework를 사용</p>
+</blockquote>
+<h4 id="django-설정">Django 설정</h4>
+<ul>
+<li>
+<p>전에 했던 Django Rest Framework를 사용하여 Serializers를 이용.</p>
+</li>
+<li>
+<p>따로 Templates를 만들지 않고 JSON 정보를 가지고 vue를 이용.</p>
+</li>
+<li>
+<p>settings.py의 INSTALLED_APP에서 아래 추가 후 사용.</p>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">INSTALLED_APPS <span style="color:#f92672">=</span> [
+	<span style="color:#f92672">...</span>
+	<span style="color:#e6db74">&#39;django.contrib.sites&#39;</span>,
+    <span style="color:#e6db74">&#39;rest_framework&#39;</span>,    
+    <span style="color:#e6db74">&#39;rest_framework.authtoken&#39;</span>,
+    <span style="color:#e6db74">&#39;rest_auth&#39;</span>,
+    <span style="color:#e6db74">&#39;rest_auth.registration&#39;</span>,
+    <span style="color:#e6db74">&#39;allauth&#39;</span>,
+    <span style="color:#e6db74">&#39;allauth.account&#39;</span>,
+    <span style="color:#f92672">...</span>
+]
+REST_FRAMEWORK <span style="color:#f92672">=</span> {
+    <span style="color:#e6db74">&#39;DEFAULT_AUTHENTICATION_CLASSES&#39;</span>: [
+        <span style="color:#e6db74">&#39;rest_framework.authentication.TokenAuthentication&#39;</span>,
+    ]
+}
+</code></pre></div>
 
 <footer class="footline">
 	
@@ -3598,19 +3635,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1591710664"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1591710664"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1591710664"></script>
-    <script src="../../js/jquery.sticky.js?1591710664"></script>
-    <script src="../../js/featherlight.min.js?1591710664"></script>
-    <script src="../../js/highlight.pack.js?1591710664"></script>
+    <script src="../../js/clipboard.min.js?1591712879"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1591712879"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1591712879"></script>
+    <script src="../../js/jquery.sticky.js?1591712879"></script>
+    <script src="../../js/featherlight.min.js?1591712879"></script>
+    <script src="../../js/highlight.pack.js?1591712879"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1591710664"></script>
-    <script src="../../js/learn.js?1591710664"></script>
-    <script src="../../js/hugo-learn.js?1591710664"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1591712879"></script>
+    <script src="../../js/learn.js?1591712879"></script>
+    <script src="../../js/hugo-learn.js?1591712879"></script>
 
-    <link href="../../mermaid/mermaid.css?1591710664" rel="stylesheet" />
-    <script src="../../mermaid/mermaid.js?1591710664"></script>
+    <link href="../../mermaid/mermaid.css?1591712879" rel="stylesheet" />
+    <script src="../../mermaid/mermaid.js?1591712879"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
