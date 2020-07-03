@@ -19,7 +19,7 @@
 
     <link rel="icon" href="../../images/favicon.png" type="image/png">
 
-    <title>2020.06.03 :: 여러가지</title>
+    <title>2020.07.03 :: 여러가지</title>
 
     
     <link href="../../css/nucleus.css?1593780906" rel="stylesheet">
@@ -45,7 +45,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/til/6%EC%9B%94/20.06.03.html">
+  <body class="" data-url="/til/7%EC%9B%94/20.07.03.html">
     <nav id="sidebar" class="">
 
 
@@ -1689,7 +1689,7 @@
   
     
     <li data-nav-id="/til/6%EC%9B%94.html" title="6월" class="dd-item 
-        parent
+        
         
         
         ">
@@ -1757,7 +1757,7 @@
  
   
     
-      <li data-nav-id="/til/6%EC%9B%94/20.06.03.html" title="2020.06.03" class="dd-item active">
+      <li data-nav-id="/til/6%EC%9B%94/20.06.03.html" title="2020.06.03" class="dd-item ">
         <a href="../../til/6%EC%9B%94/20.06.03.html">
         2020.06.03
         
@@ -1935,7 +1935,7 @@
   
     
     <li data-nav-id="/til/7%EC%9B%94.html" title="7월" class="dd-item 
-        
+        parent
         
         
         ">
@@ -2003,7 +2003,7 @@
  
   
     
-      <li data-nav-id="/til/7%EC%9B%94/20.07.03.html" title="2020.07.03" class="dd-item ">
+      <li data-nav-id="/til/7%EC%9B%94/20.07.03.html" title="2020.07.03" class="dd-item active">
         <a href="../../til/7%EC%9B%94/20.07.03.html">
         2020.07.03
         
@@ -2223,7 +2223,7 @@
                   <span class="links">
                  
                  
-                   2020.06.03 
+                   2020.07.03 
                  
                   </span>
                 </div>
@@ -2232,11 +2232,7 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#오늘-한-것">오늘 한 것</a>
-      <ul>
-        <li><a href="#구현과정">구현과정</a></li>
-      </ul>
-    </li>
+    <li><a href="#오늘-한것">오늘 한것</a></li>
   </ul>
 </nav>
     </div>
@@ -2252,11 +2248,9 @@
 
   <a class="tag-link" href="../../tags/til">TIL</a>
 
-  <a class="tag-link" href="../../tags/20.06.03">20.06.03</a>
+  <a class="tag-link" href="../../tags/20.07.03">20.07.03</a>
 
-  <a class="tag-link" href="../../tags/6%EC%9B%94">6월</a>
-
-  <a class="tag-link" href="../../tags/vue">Vue</a>
+  <a class="tag-link" href="../../tags/7%EC%9B%94">7월</a>
 
 </div>
 
@@ -2266,7 +2260,7 @@
           
             <h1>
               
-              2020.06.03
+              2020.07.03
             </h1>
           
 
@@ -2274,105 +2268,8 @@
 
 
 
-<h2 id="오늘-한-것">오늘 한 것</h2>
-<blockquote>
-<p>Vue Project</p>
-</blockquote>
-<h3 id="구현과정">구현과정</h3>
-<blockquote>
-<ol>
-<li>vue 프로젝트 생성</li>
-<li>기본 구조 설정</li>
-<li>필요 기능 추가</li>
-</ol>
-</blockquote>
-<h4 id="1-vue-프로젝트-생성">1. vue 프로젝트 생성</h4>
-<ul>
-<li><code>vue create project명</code> 을 bash에서 실행</li>
-<li>router 사용을 위한 <code>vue add router</code></li>
-<li><code>cd project명</code>으로 폴더 이동 후 필요한 axios와 같은 패키지 설치
-<ul>
-<li>ex) <code>npm i axios</code> , <code>npm i lodash</code></li>
-</ul>
-</li>
-</ul>
-<h4 id="2-기본-구조-설정">2. 기본 구조 설정</h4>
-<ul>
-<li>
-<p>영화 목록을 가져오고 보여 주는 <code>MovieView.vue</code>와 예고편 검색을 위한 <code>VideoView.vue</code>를 views폴더에 생성</p>
-</li>
-<li>
-<p>public의 index.html에 bootstrap사용을 위한 cdn 추가</p>
-</li>
-<li>
-<p>router 폴더에 있는 index.js와 연결</p>
-<ul>
-<li>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">MovieView</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;@/views/MovieView.vue&#39;</span>
-<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">MainView</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;@/views/MainView.vue&#39;</span>
-<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">VideoView</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;@/views/VideoView.vue&#39;</span>
-    
-<span style="color:#a6e22e">Vue</span>.<span style="color:#a6e22e">use</span>(<span style="color:#a6e22e">VueRouter</span>)
-    
-  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">routes</span> <span style="color:#f92672">=</span> [
-  {
-    <span style="color:#a6e22e">path</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;/movie&#39;</span>,
-    <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;MovieView&#39;</span>,
-    <span style="color:#a6e22e">component</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">MovieView</span>
-  },
-  {
-    <span style="color:#a6e22e">path</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;/&#39;</span>,
-    <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;MainView&#39;</span>,
-    <span style="color:#a6e22e">component</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">MainView</span>
-  },
-  {
-    <span style="color:#a6e22e">path</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;/video&#39;</span>,
-    <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;VideoView&#39;</span>,
-    <span style="color:#a6e22e">component</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">VideoView</span>
-  },
-</code></pre></div></li>
-</ul>
-</li>
-<li>
-<p>components폴더에 필요한 컴포넌트 생성</p>
-<ul>
-<li>여기선 총 6가지 사용</li>
-</ul>
-</li>
-<li>
-<p>App.vue 파일과 router, view 연결</p>
-</li>
-</ul>
-<h4 id="3-필요-기능-추가">3. 필요 기능 추가</h4>
-<ul>
-<li>
-<p>axios를 이용하여 데이터 가져오기(Movie에서는 영화 목록, Video에서는 Youtube API를 통해 필요 데이터 가져옴)</p>
-</li>
-<li>
-<p>Bootstrap에서 지원하는 Modal 이용</p>
-<ul>
-<li>Modal사용시 data-target, id 값이 숫자로만 이뤄질 경우 동작하지 않음.</li>
-</ul>
-</li>
-<li>
-<p>클래스 바인딩으로 평점이 7점 넘을 경우 빨갛게 표시, 아닐경우 노랗게 표시</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vue" data-lang="vue">&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;btn&#34;</span> <span style="color:#f92672">:</span><span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;[ highAndLow() ? &#39;btn-danger&#39; : &#39;btn-warning&#39; ]&#34;</span>&gt;{{ <span style="color:#a6e22e">movie</span>.<span style="color:#a6e22e">user_rating</span> }}&lt;/<span style="color:#f92672">p</span>&gt;
-&lt;<span style="color:#f92672">scirpt</span>&gt;
-    ....
-      
-<span style="color:#a6e22e">methods</span><span style="color:#f92672">:</span> {
-    <span style="color:#a6e22e">highAndLow</span>() {
-      <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">movie</span>.<span style="color:#a6e22e">user_rating</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">7</span>) {
-        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>
-      } <span style="color:#66d9ef">else</span> {
-        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>
-      }
-    }
-    .....
-  }
-&lt;/<span style="color:#f92672">scirpt</span>&gt;
-</code></pre></div></li>
-</ul>
+<h2 id="오늘-한것">오늘 한것</h2>
+<p>Python 데이터 분석 입문 책 보기</p>
 
 
 <footer class="footline">
@@ -2386,7 +2283,7 @@
     
     if (window.location.hostname == "localhost")
         return;
-    var logicalName = '20.06.03.md';
+    var logicalName = '20.07.03.md';
     if (logicalName == "_index.md")
         return;
     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -3600,26 +3497,6 @@
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
                 
                 
 
@@ -3727,6 +3604,22 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -3780,6 +3673,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -3801,6 +3695,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -3886,10 +3783,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="../../til/6%EC%9B%94/20.06.02.html" title="2020.06.02"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="../../til/7%EC%9B%94/20.07.02.html" title="2020.07.02"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="../../til/6%EC%9B%94/20.06.04.html" title="2020.06.04" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="../../hugo-blog.html" title="Hugo Blog" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
