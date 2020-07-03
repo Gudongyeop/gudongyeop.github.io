@@ -679,6 +679,13 @@
 	"content": ""
 },
 {
+	"uri": "https://dongyeopgu.github.io/tags/20.07.03.html",
+	"title": "20.07.03",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.13.html",
 	"title": "2020.04.13 다시 기록 시작",
 	"tags": ["TIL", "20.04.13", "4월"],
@@ -1095,6 +1102,13 @@
 	"uri": "https://dongyeopgu.github.io/til/7%EC%9B%94/20.07.02.html",
 	"title": "2020.07.02",
 	"tags": ["TIL", "20.07.02", "7월"],
+	"description": "",
+	"content": "오늘 한것 Python 데이터 분석 입문 책 보기\n"
+},
+{
+	"uri": "https://dongyeopgu.github.io/til/7%EC%9B%94/20.07.03.html",
+	"title": "2020.07.03",
+	"tags": ["TIL", "20.07.03", "7월"],
 	"description": "",
 	"content": "오늘 한것 Python 데이터 분석 입문 책 보기\n"
 },
