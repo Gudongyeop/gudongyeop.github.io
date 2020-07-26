@@ -12,10 +12,10 @@
     
     <item>
       <title>2020.05.28</title>
-      <link>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.28.html</link>
+      <link>https://dongyeopgu.github.io/algorithm/d4~6/20.05.28.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.28.html</guid>
+      <guid>https://dongyeopgu.github.io/algorithm/d4~6/20.05.28.html</guid>
       <description>SWEA 문제풀이   최대상금
 #include &amp;lt;stdio.h&amp;gt;#include &amp;lt;algorithm&amp;gt;#include &amp;lt;string.h&amp;gt;#include &amp;lt;string&amp;gt; using namespace std;int change, result;char arr[6];string str;bool visit[1000000][11];void sol(int cnt) {if (cnt == change) {result = max(result, stoi(str));return;}for (int i = 0; i &amp;lt; str.size(); i++) {for (int j = i; j &amp;lt; str.size(); j++) {if (i==j) { continue; }swap(str[i], str[j]);if (visit[stoi(str)][cnt+1] == false) {visit[stoi(str)][cnt+1] = true;sol(cnt + 1);}swap(str[i], str[j]);}}}int main() {int t;scanf(&amp;#34;%d&amp;#34;, &amp;amp;t);for (int test_case = 1; test_case &amp;lt;= t; test_case++) {scanf(&amp;#34;%s&amp;#34;, arr);str = arr;scanf(&amp;#34;%d&amp;#34;, &amp;amp;change);result = 0;memset(visit, false, sizeof(visit));sol(0);printf(&amp;#34;#%d %d\n&amp;#34;, test_case, result);}return 0;}  최적경로</description>
     </item>

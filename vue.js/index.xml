@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Vue.js on 여러가지</title>
+    <title>Vue on 여러가지</title>
     <link>https://dongyeopgu.github.io/vue.js.html</link>
-    <description>Recent content in Vue.js on 여러가지</description>
+    <description>Recent content in Vue on 여러가지</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 25 May 2020 21:55:45 +0900</lastBuildDate>
