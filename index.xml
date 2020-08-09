@@ -12,6 +12,18 @@
     
     
     <item>
+      <title>Express를 이용한 백엔드 구축</title>
+      <link>https://dongyeopgu.github.io/node.js/node.js-%EC%8B%9C%EC%9E%91.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dongyeopgu.github.io/node.js/node.js-%EC%8B%9C%EC%9E%91.html</guid>
+      <description>Express 시작  백엔드에서 사용할 Nodejs Express 공부한 내용 정리.
+ 1. Express 설치 및 Generator 사용  express generator를 사용하면 스켈레톤 코드 생성됨(Django에서 startproject와 유사함.)  $ npm install express --save $ npx express-generator $ express --view=pug 사용할 이름  npx command (available in Node.js 8.2.0)
+--view=pug를 사용안하면 jade파일로 구성됨.
+ 2. Routes 이용하기  app.js 기본 구조  var indexRouter = require(&amp;#39;./routes/index&amp;#39;); ... app.use(&amp;#39;/&amp;#39;, indexRouter); ...  미리 만들어져 있는 index와 같이 새로 만들 route를 routes폴더에 생성 후 app.</description>
+    </item>
+    
+    <item>
       <title>Vue.js 기초</title>
       <link>https://dongyeopgu.github.io/vue.js/vue.js-%EA%B8%B0%EC%B4%88.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -19,6 +31,16 @@
       <guid>https://dongyeopgu.github.io/vue.js/vue.js-%EA%B8%B0%EC%B4%88.html</guid>
       <description>Vue.js 기초  body태그에 &amp;lt;script src=&amp;quot;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt; Vue.js cdn을 추가하여 사용
  1. Declarative Rendering(선언적 렌더링) &amp;lt;div id=&amp;#34;app&amp;#34;&amp;gt; {{ message }} &amp;lt;/div&amp;gt; &amp;lt;!-- vue cdn --&amp;gt; &amp;lt;script src=&amp;#34;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script&amp;gt; const app = new Vue({ el: &amp;#39;#app&amp;#39;, data: { message: &amp;#39;message&amp;#39; } }) &amp;lt;/script&amp;gt; 2. 조건문(if) &amp;lt;div id=&amp;#34;using-if&amp;#34;&amp;gt; &amp;lt;p v-if=&amp;#34;check&amp;#34;&amp;gt;안녕&amp;lt;/p&amp;gt; &amp;lt;!-- 기본적인 자바스크립트 표현 가능 --&amp;gt; &amp;lt;p v-if=&amp;#34;check===&amp;#39;안녕&amp;#39;&amp;#34;&amp;gt;안녕&amp;lt;/p&amp;gt; &amp;lt;p v-else-if=&amp;#34;check===&amp;#39;반가워&amp;#39;&amp;#34;&amp;gt;반가워&amp;lt;/p&amp;gt; &amp;lt;p v-else&amp;gt;안녕 반가워&amp;lt;/p&amp;gt; &amp;lt;!-- false일 때만 보여주기 --&amp;gt; &amp;lt;p v-if=&amp;#34;!check&amp;#34;&amp;gt;False일때 나타내기&amp;lt;/p&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;!</description>
+    </item>
+    
+    <item>
+      <title>Express와 MySQL</title>
+      <link>https://dongyeopgu.github.io/node.js/express-mysql.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dongyeopgu.github.io/node.js/express-mysql.html</guid>
+      <description>Express &amp;amp; MySQL  프로젝트 진행하며 찾은 내용들 정리
+ 1. MySQL 사용  npm install mysql 으로 mysql모듈 설치  var mysql = require(&amp;#39;mysql&amp;#39;); // 기본적으로 이렇게 사용 let client = mysql.createConnection({ user: &amp;#39;&amp;#39;, password: &amp;#39;&amp;#39;, database: &amp;#39;&amp;#39;, })  프로젝트를 진행하며 사용한 코드 샘플  router.post(&amp;#39;/measure&amp;#39;, function(req, res, next) { let info = req.body let temp = info.temp let datetime = info.datetime let serial = info.serial let studentNumber = null client.</description>
     </item>
     
     <item>
