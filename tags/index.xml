@@ -300,6 +300,15 @@
     </item>
     
     <item>
+      <title>AWS</title>
+      <link>https://dongyeopgu.github.io/tags/aws.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dongyeopgu.github.io/tags/aws.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>baekjoon</title>
       <link>https://dongyeopgu.github.io/tags/baekjoon.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -350,6 +359,15 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://dongyeopgu.github.io/tags/delete.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Docker</title>
+      <link>https://dongyeopgu.github.io/tags/docker.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dongyeopgu.github.io/tags/docker.html</guid>
       <description></description>
     </item>
     
@@ -471,11 +489,29 @@
     </item>
     
     <item>
+      <title>Server</title>
+      <link>https://dongyeopgu.github.io/tags/server.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dongyeopgu.github.io/tags/server.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>SWEA</title>
       <link>https://dongyeopgu.github.io/tags/swea.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://dongyeopgu.github.io/tags/swea.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ubuntu</title>
+      <link>https://dongyeopgu.github.io/tags/ubuntu.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dongyeopgu.github.io/tags/ubuntu.html</guid>
       <description></description>
     </item>
     

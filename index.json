@@ -1,5 +1,12 @@
 [
 {
+	"uri": "https://dongyeopgu.github.io/server/docker-compose-%EC%9D%B4%EC%9A%A9%ED%95%98%EA%B8%B0.html",
+	"title": "Docker-compose 이용하기",
+	"tags": ["Docker"],
+	"description": "",
+	"content": "Docker-compose를 이용한 배포  Docker compose를 이용하여 배포했던 것 정리.\n혼자 찾아보고 진행했던 내용이기 때문에 정확하지 않을 수 있음.\n 1. docker-compose.yml 파일 만들기  docker 실행 옵션을 미리 작성하고 편하게 사용하기 위함 frontend, backend, database, webserver를 각각 컨테이너로 사용했음 frontend는 vue cli로 backend는 node.js, 웹서버는 nginx, db는 mysql 이용 아래 docker-compose.yml파일은 내가 사용했던 것. 루트 폴더에 작성  version: \u0026#39;3\u0026#39;\rservices:\rfrontend:\rbuild:\rcontext: ./frontend\rdockerfile: Dockerfile\rvolumes:\r- \u0026#39;./frontend:/app\u0026#39;\r- \u0026#39;/app/node_modules\u0026#39;\rports:\r- \u0026#39;8080:8080\u0026#39;\rnginx:\rbuild:\rdockerfile: Dockerfile\rcontext: ./nginx ports:\r- \u0026#39;80:80\u0026#39;\rdepends_on:\r- frontend\rbackend:\rbuild:\rcontext: ./backend\rdockerfile: Dockerfile\rports:\r- \u0026#39;3000:3000\u0026#39;\rvolumes:\r- \u0026#39;./backend/:/app\u0026#39;\r- \u0026#39;/app/node_modules\u0026#39;\rdb:\rimage: mysql:5.7 # docker에서 제공하는 이미지 사용\r restart: always\renvironment:\rMYSQL_DATABASE: \u0026#39;사용할 DB\u0026#39;\r# Password for root access\r MYSQL_ROOT_PASSWORD: \u0026#39;비밀번호\u0026#39;\rports:\r# \u0026lt;Port exposed\u0026gt; : \u0026lt; MySQL Port running inside container\u0026gt;\r - \u0026#39;3306:3306\u0026#39;\rexpose:\r# Opens port 3306 on the container\r - \u0026#39;3306\u0026#39;\r# Where our data will be persisted\r volumes:\r- my-db:/var/lib/mysql\rvolumes:\rmy-db:\r1.1 frontend 부분  build 에 있는 context는 build를 실행할 경로이고 그 경로에 Dockerfile을 작성해 도커 이미지를 지정 아래는 /frontend에 만드는 Dockerfile 예  FROMnode:12.18.2\r\r# set working directory\rWORKDIR/app\r\r# add `/app/node_modules/.bin` to $PATH\rENV PATH /app/node_modules/.bin:$PATH\r\r# install and cache app dependencies\rCOPY package.json /app/package.json\rRUN npm install\r\r# start app\rCMD npm run serve\r volume 부분에서/frontend: /app은 컨테이너 안의 app directory와 연결시킬 루트폴더의 폴더 의미 port는 사용할 포트 지정  1.2 nginx 부분  docker에 있는 nginx 이미지를 사용 /nginx에 default.conf를 생성  upstream frontend {\rserver 내가 사용하는 url or ip:8080;\r}\rserver {\rlisten 80;\rlocation / {\rproxy_pass http://frontend;\rproxy_http_version 1.1;\rproxy_set_header Upgrade $http_upgrade;\rproxy_set_header Connection \u0026quot;Upgrade\u0026quot;;\r}\r}\r /nginx 에 있는 Dockerfile  FROMnginx\rCOPY ./default.conf /etc/nginx/conf.d/default.conf\r1.3 backend 부분  사용한 Dockerfile  FROMnode:12.18.2\r #어플리케이션 폴더를 Workdir로 지정\rWORKDIR/app\r #서버 파일 복사 ADD [어플리케이션파일 위치] [컨테이너내부의 어플리케이션 파일위치]\rADD ./ /app\r #패키지파일들 받기\rCOPY package.json /app/package.json\rRUN npm install\r #배포버젼으로 설정 - 이 설정으로 환경을 나눌 수 있습니다.\rENV NODE_ENV=production\r#서버실행\rCMD npm start\r1.4 DB부분  mysql 이미지 사용  2. 실행하기  docker-compoer build를 먼저 한 후에 docker-compose up을 한다 docker-compose up -d를 하면 실행 후, 콘솔로 나옴 한줄로 바꾸면 docker-compose up -d --build  해결해야할 문제점   docker를 사용할 경우 iptables에서 백엔드로 들어오는 것을 drop시킨 것들이 작동 안함. 그래서 누구나 백엔드 접근이 가능해졌음.\n  docker를 사용하지 않고 백엔드만 npm start 하면 문제없이 drop시킴\n  iptables DOCKER USER에 추가를 해도 안되고, ufw를 사용해도 다 접근 가능했음\n  조금 더 정확한 정보를 확인해야함\n  "
+},
+{
 	"uri": "https://dongyeopgu.github.io/node.js/node.js-%EC%8B%9C%EC%9E%91.html",
 	"title": "Express를 이용한 백엔드 구축",
 	"tags": ["Nodejs", "Node.js", "Express"],
@@ -159,6 +166,13 @@
 	"tags": ["django", "REST API", "REST Framework"],
 	"description": "",
 	"content": "Django Rest Framework(DRF) 1. REST API(DRF: Django Rest Framework)  REST API를 활용하면 백 엔드와 프론트 엔드 분리가 쉽고 코드의 재활용성이 좋다. REST API를 사용하기 위해서 먼저 설치가 필요  $ pip install djangorestframework  settings.py에서 INSTALLED_APPS에 'rest_framework'추가 app 폴더에 serializers.py 파일을 만들고 내용 추가  # serializers.py from rest_framework import serializers from .models import * #필요한 모델이름 넣어주기 class \u0026lt;모델명\u0026gt;Serializer(serializers.ModelSerializer): class Meta: model = \u0026lt;모델명\u0026gt; fields = [\u0026#39;필요한 필드\u0026#39;]  views.py에 필요한 내용 추가  from django.shortcuts import render, get_object_or_404 from rest_framework.response import Response from rest_framework.decorators import api_view from .models import * from .serializers import * @api_view([\u0026#39;GET\u0026#39;]) #method에 따라 다르게 적어주면 됨 (GET, POST 등) def list(request):\t#예를 들어 목록을 보여준다고 할때 변수명 = 모델명.objects.all()\t#queryset serializer = 모델명Serializer(변수명, many=True)\t#위에서 만든 이름임, many=True는 1:N 경우, queryset을 json으로 변환 return Response(serializer.data) @api_view([\u0026#39;GET\u0026#39;]) def detail(request, pk): 변수명 = get_object_or_404(모델명,pk=pk) serializer = 모델명DetailSerializer(변수명)\t#serializers.py에서 detail을 위한 모델명DetailSerializer를 만든 후 사용 return Response(serializer.data) # Create 경우 @api_view([\u0026#39;POST\u0026#39;]) def create(request): serializer = 모델명Serializer(data=request.data) if serializer.is_valid(): serializer.save() return Response(serializer.data) # Update, Delete @api_view([\u0026#39;PUT\u0026#39;, \u0026#39;DELETE\u0026#39;]) def comment_edit(request, pk): 변수명 = get_object_or_404(모델명, pk=pk) if request.method == \u0026#39;PUT\u0026#39;: serializer = 모델명Serializer(변수명, data=request.data) if serializer.is_valid(): serializer.save() return Response(\u0026#39;성공적으로 수정이 완료 되었습니다.\u0026#39;) return Response(status=status.HTTP_400_BAD_REQUEST) # 상태까지 나타내기 위함  if request.method == \u0026#39;DELETE\u0026#39;: comment.delete() return Response(\u0026#39;성공적으로 삭제 되었습니다.\u0026#39;, status=status.HTTP_204_NO_CONTENT)  views.py에서 작성한 이름대로 urls.py에 추가    Django 기초 Django CRUD Django Paginator Django User(1) Django User(2) Django Comment Django M:N  "
+},
+{
+	"uri": "https://dongyeopgu.github.io/server.html",
+	"title": "Server 관련",
+	"tags": ["Server", "AWS", "Ubuntu"],
+	"description": "",
+	"content": "Node.js, Express 학습 내용 Server 관련 내용  Ubuntu로 웹 사이트 배포 관련 내용\n "
 },
 {
 	"uri": "https://dongyeopgu.github.io/",
@@ -525,6 +539,13 @@
 	"content": ""
 },
 {
+	"uri": "https://dongyeopgu.github.io/tags/aws.html",
+	"title": "AWS",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "https://dongyeopgu.github.io/tags/baekjoon.html",
 	"title": "baekjoon",
 	"tags": [],
@@ -569,6 +590,13 @@
 {
 	"uri": "https://dongyeopgu.github.io/tags/delete.html",
 	"title": "delete",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/docker.html",
+	"title": "Docker",
 	"tags": [],
 	"description": "",
 	"content": ""
@@ -665,6 +693,13 @@
 	"content": ""
 },
 {
+	"uri": "https://dongyeopgu.github.io/tags/server.html",
+	"title": "Server",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "https://dongyeopgu.github.io/tags/swea.html",
 	"title": "SWEA",
 	"tags": [],
@@ -691,6 +726,13 @@
 	"tags": ["SWEA", "모의SW 테스트"],
 	"description": "",
 	"content": "1949. 등산로 조성 dt = [(1,0), (0,1), (-1,0), (0,-1)]\rdef sol(x,y,b,cnt=1):\rglobal max_r\rif max_r \u0026lt; cnt:\rmax_r = cnt\rvisit[x][y] = 1\rfor d in dt:\rdx, dy = x + d[0], y + d[1]\rif not (0 \u0026lt;= dx \u0026lt; n and 0 \u0026lt;= dy \u0026lt; n) or visit[dx][dy] == 1:\rcontinue\rif Map[x][y] \u0026gt; Map[dx][dy]:\rsol(dx,dy,b,cnt+1)\relif b \u0026gt; 0 and Map[x][y] \u0026gt; Map[dx][dy] - k:\rtemp = Map[dx][dy]\rMap[dx][dy] = Map[x][y] - 1\rsol(dx,dy,0,cnt+1)\rMap[dx][dy] = temp\rvisit[x][y] = 0\rfor t in range(int(input())):\rn, k = map(int, input().split())\rMap = [list(map(int, input().split()))for _ in range(n)]\rvisit = [[0 for _ in range(n)]for _ in range(n)]\rtop_height = 0\rtop_idx = []\rfor i in range(n):\rif top_height \u0026lt; max(Map[i]):\rtop_height = max(Map[i])\rfor i in range(n):\rfor j in range(n):\rif Map[i][j] == top_height:\rtop_idx.append((i,j))\rmax_r = 0\rfor top in top_idx:\rsol(top[0],top[1],1)\rprint(f\u0026#34;#{t+1} {max_r}\u0026#34;)\r1953. 탈주범 검거 dx = [0,0,-1,1]\rdy = [-1,1,0,0]\rtunnel_type = {\r1:[[1,3,4,5],[1,3,6,7],[1,2,5,6],[1,2,4,7]],\r2:[[],[],[1,2,5,6],[1,2,4,7]],\r3:[[1,3,4,5],[1,3,6,7],[],[]],\r4:[[],[1,3,6,7],[1,2,5,6],[]],\r5:[[],[1,3,6,7],[],[1,2,4,7]],\r6:[[1,3,4,5],[],[],[1,2,4,7]],\r7:[[1,3,4,5],[],[1,2,5,6],[]]\r}\rfor t in range(int(input())):\rn, m, r, c, l = map(int, input().split())\rtunnel = [list(map(int, input().split()))for _ in range(n)]\rcnt = 1\rstart = [(r,c)]\rtime = 1\rwhile True:\rif time == l:\rbreak\rfor i in range(len(start)):\ra = start.pop(0)\rfor j in range(4):\rif tunnel_type[tunnel[a[0]][a[1]]][j]:\rif 0 \u0026lt;= a[0]+dx[j] \u0026lt; n and 0 \u0026lt;= a[1]+dy[j] \u0026lt; m and tunnel[a[0]+dx[j]][a[1]+dy[j]] != 0:\rif tunnel[a[0]+dx[j]][a[1]+dy[j]] in tunnel_type[tunnel[a[0]][a[1]]][j]:\rif (a[0]+dx[j],a[1]+dy[j]) not in start:\rstart.append((a[0]+dx[j],a[1]+dy[j]))\rcnt += 1\rtunnel[a[0]][a[1]] = 0\rtime += 1\rprint(f\u0026#34;#{t+1} {cnt}\u0026#34;)\r4008. 숫자 만들기 def cal(i, numbs):\rglobal max_value, min_value\rif i == n:\rmax_value = max(max_value, numbs)\rmin_value = min(min_value, numbs)\relse:\rif operator[0] != 0:\roperator[0] -= 1\rcal(i+1, numbs + numbers[i])\roperator[0] += 1\rif operator[1] != 0:\roperator[1] -= 1\rcal(i+1, numbs - numbers[i])\roperator[1] += 1\rif operator[2] != 0:\roperator[2] -= 1\rcal(i+1, numbs * numbers[i])\roperator[2] += 1\rif operator[3] != 0:\roperator[3] -= 1\rif numbs \u0026lt; 0 and numbs%numbers[i]:\rcal(i+1, numbs//numbers[i]+1)\relse:\rcal(i+1, numbs//numbers[i])\roperator[3] += 1\rfor t in range(int(input())):\rn = int(input())\roperator = list(map(int, input().split()))\rnumbers = list(map(int, input().split()))\rmin_value = 100000000\rmax_value = -100000000\rcal(1,numbers[0])\rprint(f\u0026#34;#{t+1} {max_value - min_value}\u0026#34;)\r5650. 핀볼 게임 # 방향 상 좌 하 우\r dx = (-1, 0, 1, 0)\rdy = (0, -1, 0, 1)\r# 1번 블록 : 상 \u0026gt; 하, 좌 \u0026gt; 상, 하 \u0026gt; 우, 우 \u0026gt; 좌\r block = ((2, -1, 1, -2), (3, 1, -2, -2), (1, 2, -2, -1), (2, 2, -1, -3), (2, 2, -2, -2))\rdef sol(x,y,d):\rglobal result, n\rcnt = 0\rnx = x\rny = y\rwhile True:\rnx += dx[d]\rny += dy[d]\rif not (n \u0026gt; nx \u0026gt;= 0 and n \u0026gt; ny \u0026gt;= 0): # 벽 만났을 때 튕김(방향은 반대로)\r d = (d + 2) % 4\rcnt += 1\relse: if game_board[nx][ny] == -1 or (nx == x and ny == y):\rresult = max(cnt, result)\rreturn\relif game_board[nx][ny] == 0:\rcontinue\relif 0\u0026lt;game_board[nx][ny] \u0026lt; 6: # 블록 만났을 때\r d += block[game_board[nx][ny]-1][d]\rcnt += 1\relse:\rfor a, b in warmhole[game_board[nx][ny]]: # 웜홀 만났을때 인덱스 변경\r if nx != a or ny != b:\rnx = a\rny = b\rbreak\rfor t in range(int(input())):\rn = int(input())\rgame_board = [list(map(int, input().split()))for _ in range(n)]\rwarmhole = {6:[],7:[],8:[],9:[],10:[]}\rfor i in range(n):\rfor j in range(n):\rif game_board[i][j] \u0026gt; 5:\rwarmhole[game_board[i][j]].append((i,j))\rresult = 0\rfor i in range(n):\rfor j in range(n):\rif game_board[i][j] == 0:\rfor k in range(4):\rsol(i,j,k)\rprint(f\u0026#34;#{t+1} {result}\u0026#34;)\r"
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/ubuntu.html",
+	"title": "Ubuntu",
+	"tags": [],
+	"description": "",
+	"content": ""
 },
 {
 	"uri": "https://dongyeopgu.github.io/tags/update.html",
