@@ -19,7 +19,7 @@
 
     <link rel="icon" href="../images/favicon.png" type="image/png">
 
-    <title>5월 :: 여러가지</title>
+    <title>많이 사용한 Ubuntu 명령어 :: 여러가지</title>
 
     
     <link href="../css/nucleus.css?1597063441" rel="stylesheet">
@@ -45,7 +45,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/tags/5%EC%9B%94.html">
+  <body class="" data-url="/server/%EB%A7%8E%EC%9D%B4-%EC%82%AC%EC%9A%A9%ED%95%9C-ubuntu-%EB%AA%85%EB%A0%B9%EC%96%B4.html">
     <nav id="sidebar" class="">
 
 
@@ -1180,7 +1180,7 @@
   
     
     <li data-nav-id="/server.html" title="Server 관련" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1227,7 +1227,7 @@
  
   
     
-      <li data-nav-id="/server/%EB%A7%8E%EC%9D%B4-%EC%82%AC%EC%9A%A9%ED%95%9C-ubuntu-%EB%AA%85%EB%A0%B9%EC%96%B4.html" title="많이 사용한 Ubuntu 명령어" class="dd-item ">
+      <li data-nav-id="/server/%EB%A7%8E%EC%9D%B4-%EC%82%AC%EC%9A%A9%ED%95%9C-ubuntu-%EB%AA%85%EB%A0%B9%EC%96%B4.html" title="많이 사용한 Ubuntu 명령어" class="dd-item active">
         <a href="../server/%EB%A7%8E%EC%9D%B4-%EC%82%AC%EC%9A%A9%ED%95%9C-ubuntu-%EB%AA%85%EB%A0%B9%EC%96%B4.html">
         <b>2. </b>많이 사용한 Ubuntu 명령어
         
@@ -1307,14 +1307,14 @@
                   <span class="links">
                  
                  
-                   5월 
+                   많이 사용한 Ubuntu 명령어 
                  
                   </span>
                 </div>
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents"></nav>
     </div>
 </div>
 
@@ -1324,15 +1324,19 @@
             
         <div id="head-tags">
         
+<div class="tags">
+
+  <a class="tag-link" href="../tags/ubuntu">Ubuntu</a>
+
+</div>
+
         </div>
         
         <div id="body-inner">
           
             <h1>
               
-                taxonomy ::
-              
-              5월
+              많이 사용한 Ubuntu 명령어
             </h1>
           
 
@@ -1340,43 +1344,46 @@
 
 
 
-
-
-
+<h1 id="많이-사용한-ubuntu--linux-명령어">많이 사용한 Ubuntu / Linux 명령어</h1>
+<blockquote>
+<p>나중에 생각안날때 보려고 만든 Ubuntu 18.04 에서 배포시 많이 사용했던 명령어들</p>
+</blockquote>
 <ul>
-	
-		<li><a href="../algorithm/d4~6/20.05.01.html">2020.05.01</a></li>
-	
-		<li><a href="../algorithm/d4~6/20.05.06.html">2020.05.06</a></li>
-	
-		<li><a href="../algorithm/d4~6/20.05.07.html">2020.05.07</a></li>
-	
-		<li><a href="../algorithm/d4~6/20.05.09.html">2020.05.09</a></li>
-	
-		<li><a href="../algorithm/d4~6/20.05.14.html">2020.05.14</a></li>
-	
-		<li><a href="../algorithm/d4~6/20.05.15.html">2020.05.15</a></li>
-	
-		<li><a href="../algorithm/d4~6/20.05.21.html">2020.05.21</a></li>
-	
-		<li><a href="../algorithm/d4~6/20.05.22.html">2020.05.22</a></li>
-	
-		<li><a href="../algorithm/d4~6/20.05.23.html">2020.05.23</a></li>
-	
-		<li><a href="../algorithm/d4~6/20.05.24.html">2020.05.24</a></li>
-	
-		<li><a href="../algorithm/d4~6/20.05.28.html">2020.05.28</a></li>
-	
-		<li><a href="../algorithm/d4~6/20.05.29.html">2020.05.29</a></li>
-	
-		<li><a href="../algorithm/d4~6/20.05.30.html">2020.05.30</a></li>
-	
-		<li><a href="../algorithm/d4~6/20.05.31.html">2020.05.31</a></li>
-	
+<li>
+<p><code>netstat -nlpt</code>  현재 listen 중인 포트 확인 <code>netstat -nat</code>로도 확인 가능</p>
+</li>
+<li>
+<p><code>netstat -nap | grep 포트 번호</code> 특정 포트 확인</p>
+</li>
+<li>
+<p><code>fuser -k -n tcp 포트번호</code> 포트번호에서 사용중인 프로세스 죽이기</p>
+</li>
+<li>
+<p><code>vi</code>로 파일을 읽고 수정했을 때 <code>:wq</code>저장후 닫기 <code>:qa</code> 저장안하고 닫기 <code>:qa!</code> qa안될때</p>
+</li>
+<li>
+<p><code>docker ps</code> 현재 켜져있는 docker 확인</p>
+</li>
+<li>
+<p><code>docker stop</code>  뒤에 <code>docker ps</code>  `으로 감싸면 실행중인 docker 파일들 종료</p>
+</li>
+<li>
+<p><code>docker-compose build --no-cache</code> 캐시 이용 안하고 build</p>
+</li>
+<li>
+<p><code>iptables -L --line-numbers</code> iptable 룰 번호 확인</p>
+</li>
+<li>
+<p><code>iptables -D chain이름  숫자</code> 위에서 확인한 번호 룰 삭제할 때</p>
+</li>
+<li>
+<p><code>iptables -I chain이름 -p tcp -s 허용할 ip --dport 포트번호 -j ACCEPT</code> 지정한 포트 번호 특정 IP 허용 맨 윗줄에 룰 삽입</p>
+</li>
+<li></li>
 </ul>
 
 
-<footer class=" footline" >
+<footer class="footline">
 	
 </footer>
 <div id="disqus_thread"></div>
@@ -1387,7 +1394,7 @@
     
     if (window.location.hostname == "localhost")
         return;
-    var logicalName = '';
+    var logicalName = '많이 사용한 Ubuntu 명령어.md';
     if (logicalName == "_index.md")
         return;
     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -2186,6 +2193,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -2208,6 +2216,8 @@
 
 	 
 	 
+		
+			<a class="nav nav-prev" href="../server/docker-compose-%EC%9D%B4%EC%9A%A9%ED%95%98%EA%B8%B0.html" title="Docker-compose 이용하기"> <i class="fa fa-chevron-left"></i></a>
 		
 		
 			<a class="nav nav-next" href="../basics.html" title="About Blog" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
@@ -2240,3 +2250,4 @@
 
   </body>
 </html>
+
