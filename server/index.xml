@@ -21,5 +21,19 @@
  1. docker-compose.yml 파일 만들기  docker 실행 옵션을 미리 작성하고 편하게 사용하기 위함 frontend, backend, database, webserver를 각각 컨테이너로 사용했음 frontend는 vue cli로 backend는 node.js, 웹서버는 nginx, db는 mysql 이용 아래 docker-compose.yml파일은 내가 사용했던 것. 루트 폴더에 작성  version: &amp;#39;3&amp;#39;services:frontend:build:context: ./frontenddockerfile: Dockerfilevolumes:- &amp;#39;.</description>
     </item>
     
+    <item>
+      <title>많이 사용한 Ubuntu 명령어</title>
+      <link>https://dongyeopgu.github.io/server/%EB%A7%8E%EC%9D%B4-%EC%82%AC%EC%9A%A9%ED%95%9C-ubuntu-%EB%AA%85%EB%A0%B9%EC%96%B4.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dongyeopgu.github.io/server/%EB%A7%8E%EC%9D%B4-%EC%82%AC%EC%9A%A9%ED%95%9C-ubuntu-%EB%AA%85%EB%A0%B9%EC%96%B4.html</guid>
+      <description>많이 사용한 Ubuntu / Linux 명령어  나중에 생각안날때 보려고 만든 Ubuntu 18.04 에서 배포시 많이 사용했던 명령어들
+   netstat -nlpt 현재 listen 중인 포트 확인 netstat -nat로도 확인 가능
+  netstat -nap | grep 포트 번호 특정 포트 확인
+  fuser -k -n tcp 포트번호 포트번호에서 사용중인 프로세스 죽이기
+  vi로 파일을 읽고 수정했을 때 :wq저장후 닫기 :qa 저장안하고 닫기 :qa! qa안될때
+  docker ps 현재 켜져있는 docker 확인</description>
+    </item>
+    
   </channel>
 </rss>
