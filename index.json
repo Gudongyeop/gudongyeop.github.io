@@ -1,5 +1,12 @@
 [
 {
+	"uri": "https://dongyeopgu.github.io/til/4%EC%9B%94.html",
+	"title": "4월",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "https://dongyeopgu.github.io/server/docker-compose-%EC%9D%B4%EC%9A%A9%ED%95%98%EA%B8%B0.html",
 	"title": "Docker-compose 이용하기",
 	"tags": ["Docker"],
@@ -21,6 +28,13 @@
 	"content": "Vue.js 기초  body태그에 \u0026lt;script src=\u0026quot;https://cdn.jsdelivr.net/npm/vue/dist/vue.js\u0026quot;\u0026gt;\u0026lt;/script\u0026gt; Vue.js cdn을 추가하여 사용\n 1. Declarative Rendering(선언적 렌더링) \u0026lt;div id=\u0026#34;app\u0026#34;\u0026gt; {{ message }} \u0026lt;/div\u0026gt; \u0026lt;!-- vue cdn --\u0026gt; \u0026lt;script src=\u0026#34;https://cdn.jsdelivr.net/npm/vue/dist/vue.js\u0026#34;\u0026gt;\u0026lt;/script\u0026gt; \u0026lt;script\u0026gt; const app = new Vue({ el: \u0026#39;#app\u0026#39;, data: { message: \u0026#39;message\u0026#39; } }) \u0026lt;/script\u0026gt; 2. 조건문(if) \u0026lt;div id=\u0026#34;using-if\u0026#34;\u0026gt; \u0026lt;p v-if=\u0026#34;check\u0026#34;\u0026gt;안녕\u0026lt;/p\u0026gt; \u0026lt;!-- 기본적인 자바스크립트 표현 가능 --\u0026gt; \u0026lt;p v-if=\u0026#34;check===\u0026#39;안녕\u0026#39;\u0026#34;\u0026gt;안녕\u0026lt;/p\u0026gt; \u0026lt;p v-else-if=\u0026#34;check===\u0026#39;반가워\u0026#39;\u0026#34;\u0026gt;반가워\u0026lt;/p\u0026gt; \u0026lt;p v-else\u0026gt;안녕 반가워\u0026lt;/p\u0026gt; \u0026lt;!-- false일 때만 보여주기 --\u0026gt; \u0026lt;p v-if=\u0026#34;!check\u0026#34;\u0026gt;False일때 나타내기\u0026lt;/p\u0026gt; \u0026lt;/div\u0026gt; \u0026lt;!-- vue cdn --\u0026gt; \u0026lt;script src=\u0026#34;https://cdn.jsdelivr.net/npm/vue/dist/vue.js\u0026#34;\u0026gt;\u0026lt;/script\u0026gt; \u0026lt;script\u0026gt; const app = new Vue({ el: \u0026#39;#using-if\u0026#39;, data: { check: \u0026#39;안녕\u0026#39;, }, }) \u0026lt;/script\u0026gt; 3. 반복문(for) \u0026lt;div id=\u0026#34;using-for\u0026#34;\u0026gt; \u0026lt;ol class=\u0026#34;check-list\u0026#34;\u0026gt; \u0026lt;!-- class는 지금 여기서 의미 없음--\u0026gt; \u0026lt;li v-for=\u0026#34;check in checkList\u0026#34;\u0026gt;{{check}}\u0026lt;/li\u0026gt; \u0026lt;/ol\u0026gt; \u0026lt;ol\u0026gt; \u0026lt;!-- 배열안의 객체를 사용 --\u0026gt; \u0026lt;li v-for=\u0026#34;check in checkList2\u0026#34;\u0026gt;{{check.content}}\u0026lt;/li\u0026gt; \u0026lt;/ol\u0026gt; \u0026lt;/div\u0026gt; \u0026lt;!-- vue cdn --\u0026gt; \u0026lt;script src=\u0026#34;https://cdn.jsdelivr.net/npm/vue/dist/vue.js\u0026#34;\u0026gt;\u0026lt;/script\u0026gt; \u0026lt;script\u0026gt; const app = new Vue({ el: \u0026#39;#using-for\u0026#39;, data: { checkList: [\u0026#39;첫번째\u0026#39;,\u0026#39;두번째\u0026#39;,\u0026#39;세번째\u0026#39;], checkList2: [ {content: \u0026#39;첫번째\u0026#39;}, {content: \u0026#39;두번째\u0026#39;}, {content: \u0026#39;세번째\u0026#39;}, ], }, }) \u0026lt;/script\u0026gt; 4. v-on 사용  v-on은 이벤트 발동시, methods에 정의된 함수를 호출  \u0026lt;div id=\u0026#39;vue-directive-practice\u0026#39;\u0026gt; \u0026lt;button v-on:click=\u0026#34;reversedMessage\u0026#34;\u0026gt;메세지 뒤집기\u0026lt;/button\u0026gt; \u0026lt;br\u0026gt; \u0026lt;!-- 자바스크립트에서 사용 가능한 모든 이벤트도 가능 --\u0026gt; \u0026lt;!-- event 객체가 필요한 경우, $event로 받아올 수 있다. --\u0026gt; \u0026lt;br\u0026gt; \u0026lt;!-- v-on 축약형 --\u0026gt; \u0026lt;!-- ex) @click, @mouseover, @keydown --\u0026gt; {{ message }} \u0026lt;button @click=\u0026#34;reversedMessage\u0026#34;\u0026gt;메세지 뒤집기2\u0026lt;/button\u0026gt; \u0026lt;br\u0026gt; \u0026lt;/div\u0026gt; \u0026lt;!-- vue cdn --\u0026gt; \u0026lt;script src=\u0026#34;https://cdn.jsdelivr.net/npm/vue/dist/vue.js\u0026#34;\u0026gt;\u0026lt;/script\u0026gt; \u0026lt;script\u0026gt; const app = new Vue({ el: \u0026#39;#vue-directive-practice\u0026#39;, data: { message: \u0026#39;Click!!\u0026#39;, }, methods: { // arrow function 사용 X  reversedMessage: function(){ this.message = this.message.split(\u0026#39;\u0026#39;).reverse().join(\u0026#39;\u0026#39;) }, }, }) \u0026lt;/script\u0026gt; 5. v-bind 사용 \u0026lt;div id=\u0026#34;bind\u0026#34;\u0026gt; \u0026lt;a v-bind:href=\u0026#34;google\u0026#34;\u0026gt;Google Link\u0026lt;/a\u0026gt; \u0026lt;!--축약형--\u0026gt; \u0026lt;a :href=\u0026#34;google\u0026#34;\u0026gt;Google Link\u0026lt;/a\u0026gt; \u0026lt;/div\u0026gt; \u0026lt;!-- vue cdn --\u0026gt; \u0026lt;script src=\u0026#34;https://cdn.jsdelivr.net/npm/vue/dist/vue.js\u0026#34;\u0026gt;\u0026lt;/script\u0026gt; \u0026lt;script\u0026gt; const app = new Vue({ el: \u0026#39;#bind\u0026#39;, data: { google: \u0026#39;https://www.google.com\u0026#39;, }, }) \u0026lt;/script\u0026gt; 6. v-model 양방향 바인딩 \u0026lt;div id=\u0026#34;using-v-model\u0026#34;\u0026gt; {{ userInput }} \u0026lt;input type=\u0026#34;text\u0026#34; v-model=\u0026#34;userInput\u0026#34;\u0026gt; \u0026lt;br\u0026gt; \u0026lt;!-- v-model 아시안 문자 입력 이슈 --\u0026gt; {{ userInput }} \u0026lt;input type=\u0026#34;text\u0026#34; @input=\u0026#34;setMessage\u0026#34;\u0026gt; \u0026lt;/div\u0026gt; \u0026lt;!-- vue cdn --\u0026gt; \u0026lt;script src=\u0026#34;https://cdn.jsdelivr.net/npm/vue/dist/vue.js\u0026#34;\u0026gt;\u0026lt;/script\u0026gt; \u0026lt;script\u0026gt; const app = new Vue({ el: \u0026#39;#using-v-model\u0026#39;, data: { userInput: \u0026#39;\u0026#39;, }, methods: { setMessage: function(event){ this.userInput = event.target.value }, } }) \u0026lt;/script\u0026gt; "
 },
 {
+	"uri": "https://dongyeopgu.github.io/til/5%EC%9B%94.html",
+	"title": "5월",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "https://dongyeopgu.github.io/node.js/express-mysql.html",
 	"title": "Express와 MySQL",
 	"tags": ["Nodejs", "Node.js", "Express", "Mysql"],
@@ -40,6 +54,20 @@
 	"tags": ["Ubuntu"],
 	"description": "",
 	"content": "많이 사용한 Ubuntu / Linux 명령어  나중에 생각안날때 보려고 만든 Ubuntu 18.04 에서 배포시 많이 사용했던 명령어들\n   netstat -nlpt 현재 listen 중인 포트 확인 netstat -nat로도 확인 가능\n  netstat -nap | grep 포트 번호 특정 포트 확인\n  fuser -k -n tcp 포트번호 포트번호에서 사용중인 프로세스 죽이기\n  vi로 파일을 읽고 수정했을 때 :wq저장후 닫기 :qa 저장안하고 닫기 :qa! qa안될때\n  docker ps 현재 켜져있는 docker 확인\n  docker stop 뒤에 docker ps `으로 감싸면 실행중인 docker 파일들 종료\n  docker-compose build --no-cache 캐시 이용 안하고 build\n  iptables -L --line-numbers iptable 룰 번호 확인\n  iptables -D chain이름 숫자 위에서 확인한 번호 룰 삭제할 때\n  iptables -I chain이름 -p tcp -s 허용할 ip --dport 포트번호 -j ACCEPT 지정한 포트 번호 특정 IP 허용 맨 윗줄에 룰 삽입\n   "
+},
+{
+	"uri": "https://dongyeopgu.github.io/til/6%EC%9B%94.html",
+	"title": "6월",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/til/7%EC%9B%94.html",
+	"title": "7월",
+	"tags": [],
+	"description": "",
+	"content": ""
 },
 {
 	"uri": "https://dongyeopgu.github.io/basics.html",
@@ -182,6 +210,13 @@
 	"content": "Node.js, Express 학습 내용 Server 관련 내용  Ubuntu로 웹 사이트 배포 관련 내용\n "
 },
 {
+	"uri": "https://dongyeopgu.github.io/til.html",
+	"title": "I Learned",
+	"tags": [],
+	"description": "",
+	"content": "I Learned - 단순 기록  수업들었던 내용들 정리.\n "
+},
+{
 	"uri": "https://dongyeopgu.github.io/",
 	"title": "Dongyeop&#39;s Blog",
 	"tags": [],
@@ -280,8 +315,113 @@
 	"content": ""
 },
 {
+	"uri": "https://dongyeopgu.github.io/tags/20.04.13.html",
+	"title": "20.04.13",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/20.04.14.html",
+	"title": "20.04.14",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/20.04.15.html",
+	"title": "20.04.15",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "https://dongyeopgu.github.io/tags/20.04.16.html",
 	"title": "20.04.16",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/20.04.17.html",
+	"title": "20.04.17",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/20.04.18.html",
+	"title": "20.04.18",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/20.04.19.html",
+	"title": "20.04.19",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/20.04.20.html",
+	"title": "20.04.20",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/20.04.21.html",
+	"title": "20.04.21",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/20.04.22.html",
+	"title": "20.04.22",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/20.04.23.html",
+	"title": "20.04.23",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/20.04.24.html",
+	"title": "20.04.24",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/20.04.25.html",
+	"title": "20.04.25",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/20.04.26.html",
+	"title": "20.04.26",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/20.04.27.html",
+	"title": "20.04.27",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/20.04.28.html",
+	"title": "20.04.28",
 	"tags": [],
 	"description": "",
 	"content": ""
@@ -294,8 +434,43 @@
 	"content": ""
 },
 {
+	"uri": "https://dongyeopgu.github.io/tags/20.04.30.html",
+	"title": "20.04.30",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "https://dongyeopgu.github.io/tags/20.05.01.html",
 	"title": "20.05.01",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/20.05.02.html",
+	"title": "20.05.02",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/20.05.03.html",
+	"title": "20.05.03",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/20.05.04.html",
+	"title": "20.05.04",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/20.05.05.html",
+	"title": "20.05.05",
 	"tags": [],
 	"description": "",
 	"content": ""
@@ -315,8 +490,43 @@
 	"content": ""
 },
 {
+	"uri": "https://dongyeopgu.github.io/tags/20.05.08.html",
+	"title": "20.05.08",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "https://dongyeopgu.github.io/tags/20.05.09.html",
 	"title": "20.05.09",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/20.05.10.html",
+	"title": "20.05.10",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/20.05.11.html",
+	"title": "20.05.11",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/20.05.12.html",
+	"title": "20.05.12",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/20.05.13.html",
+	"title": "20.05.13",
 	"tags": [],
 	"description": "",
 	"content": ""
@@ -331,6 +541,34 @@
 {
 	"uri": "https://dongyeopgu.github.io/tags/20.05.15.html",
 	"title": "20.05.15",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/20.05.17.html",
+	"title": "20.05.17",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/20.05.18.html",
+	"title": "20.05.18",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/20.05.19.html",
+	"title": "20.05.19",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/20.05.20.html",
+	"title": "20.05.20",
 	"tags": [],
 	"description": "",
 	"content": ""
@@ -364,6 +602,27 @@
 	"content": ""
 },
 {
+	"uri": "https://dongyeopgu.github.io/tags/20.05.25.html",
+	"title": "20.05.25",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/20.05.26.html",
+	"title": "20.05.26",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/20.05.27.html",
+	"title": "20.05.27",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "https://dongyeopgu.github.io/tags/20.05.28.html",
 	"title": "20.05.28",
 	"tags": [],
@@ -392,11 +651,109 @@
 	"content": ""
 },
 {
+	"uri": "https://dongyeopgu.github.io/tags/20.06.01.html",
+	"title": "20.06.01",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/20.06.02.html",
+	"title": "20.06.02",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/20.06.03.html",
+	"title": "20.06.03",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/20.06.04.html",
+	"title": "20.06.04",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "https://dongyeopgu.github.io/tags/20.06.05.html",
 	"title": "20.06.05",
 	"tags": [],
 	"description": "",
 	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/20.06.06.html",
+	"title": "20.06.06",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/20.06.07.html",
+	"title": "20.06.07",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/20.06.08.html",
+	"title": "20.06.08",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/20.06.09.html",
+	"title": "20.06.09",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/20.07.01.html",
+	"title": "20.07.01",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/20.07.02.html",
+	"title": "20.07.02",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/20.07.03.html",
+	"title": "20.07.03",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.13.html",
+	"title": "2020.04.13 다시 기록 시작",
+	"tags": ["TIL", "20.04.13", "4월"],
+	"description": "",
+	"content": "오늘 배운 것들   Django에서 기본 제공하는 User 모델을 이용\n  이를 이용하여 회원가입, 정보 수정하는 방법\n  회원가입시 Django에서 제공하는 UserCreationForm을 사용\n UserCreationForm은 기본적으로 username과 password1, 2를 입력받음    "
+},
+{
+	"uri": "https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.14.html",
+	"title": "2020.04.14",
+	"tags": ["TIL", "20.04.14", "4월", "Django"],
+	"description": "",
+	"content": "오늘 배운 것들  Django  User 모델을 사용하는 것보다 get_user_model 메서드를 사용하는 것을 추천 get_user_model이 더 유연하게 사용할 수 있음. 커스터마이징을 했을 경우에도 쉽게 사용가능 로그인을위해 AuthenticationForm을 사용 회원 탈퇴는 views.py에서 request.user.delete() 이용 Form / ModelForm  Form 제공 GET  context를 넘겨줌   데이터 양식 처리 POST  양식데이터(request.POST) \u0026gt; ModelForm으로 넘겨줌 그 후, 검증       HTTP는 connectless, stateless 그렇기 때문에 정보를 쿠키에 저장  User가 서버로 요청을 보냄 서버가 쿠키와 같이 응답을 보내줌 User가 서버로 요청을 보낼 때 쿠키와 함께 보내줌    "
+},
+{
+	"uri": "https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.15.html",
+	"title": "2020.04.15",
+	"tags": ["TIL", "20.04.15", "4월"],
+	"description": "",
+	"content": "오늘 공부한 것들 \u0026amp; 생각한 것 - 생각  간단한 웹 서비스 ? 만들며, 배우고 공부한 것을 활용해보자 회원가입을 안해도 이용가능 하도록 (회원가입의 귀찮음\u0026hellip;) 자세한건 프로젝트 repo를 따로 만들어 관리해보자는 생각  - 공부한것  Django QuerySet API 관련. (참고 : Django 공식문서) - 생각한 웹 페이지에서 필요한 것을 넣기 위해(어디서 관련 정보를 봐야하는지 기록정도, 다 외우는것은 힘들기에) Image를 넣기 위한 ImageField 관련 (Django 공식문서)  "
 },
 {
 	"uri": "https://dongyeopgu.github.io/algorithm/d4~6/20.04.16.html",
@@ -406,11 +763,116 @@
 	"content": "오늘 공부한 것  Algorithm 문제 풀이 (Tree) SWEA-노드의 합  class BinaryTree: def __init__(self, n): self.n = n self.node_list = [0] *(n+1) def insert(self, num1, num2): self.node_list[num1] = num2 def leaf(self, node): if node * 2 \u0026gt; n: self.sum += self.node_list[node] else: self.leaf(node * 2) if node * 2 != n: self.leaf(node * 2 + 1) def result(self, l): self.sum = 0 self.leaf(l) return self.sum for t in range(int(input())): n, m, l = map(int, input().split()) bin_tree = BinaryTree(n) for i in range(m): num1, num2 = map(int, input().split()) bin_tree.insert(num1, num2) print(f\u0026#34;#{t+1} {bin_tree.result(l)}\u0026#34;)  subtree  class Node: def __init__(self, data): self.data = data self.left = None self.right = None class BinaryTree: def __init__(self, cnt): self.node_list = [None] for i in range(e+1): self.node_list.append(Node(i)) def insert(self, node, data): if self.node_list[node].left == None: self.node_list[node].left = self.node_list[data] else: self.node_list[node].right = self.node_list[data] def count(self, node): self.cnt += 1 if node.left != None: self.count(node.left) elif node.right != None: self.count(node.right) def result(self, num): self.cnt = 0 self.count(self.node_list[num]) return self.cnt for t in range(int(input())): e, n = map(int, input().split()) numbers = list(map(int, input().split())) bin_tree = BinaryTree(e) for i in range(e): bin_tree.insert(numbers[2*i], numbers[2*i+1]) print(f\u0026#34;#{t+1} {bin_tree.result(n)}\u0026#34;) "
 },
 {
+	"uri": "https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.16.html",
+	"title": "2020.04.16",
+	"tags": ["TIL", "20.04.16", "4월", "Algorithm"],
+	"description": "",
+	"content": "오늘 공부한 것  Algorithm 문제 풀이 (Tree) SWEA-노드의 합  class BinaryTree: def __init__(self, n): self.n = n self.node_list = [0] *(n+1) def insert(self, num1, num2): self.node_list[num1] = num2 def leaf(self, node): if node * 2 \u0026gt; n: self.sum += self.node_list[node] else: self.leaf(node * 2) if node * 2 != n: self.leaf(node * 2 + 1) def result(self, l): self.sum = 0 self.leaf(l) return self.sum for t in range(int(input())): n, m, l = map(int, input().split()) bin_tree = BinaryTree(n) for i in range(m): num1, num2 = map(int, input().split()) bin_tree.insert(num1, num2) print(f\u0026#34;#{t+1} {bin_tree.result(l)}\u0026#34;)  subtree  class Node: def __init__(self, data): self.data = data self.left = None self.right = None class BinaryTree: def __init__(self, cnt): self.node_list = [None] for i in range(e+1): self.node_list.append(Node(i)) def insert(self, node, data): if self.node_list[node].left == None: self.node_list[node].left = self.node_list[data] else: self.node_list[node].right = self.node_list[data] def count(self, node): self.cnt += 1 if node.left != None: self.count(node.left) elif node.right != None: self.count(node.right) def result(self, num): self.cnt = 0 self.count(self.node_list[num]) return self.cnt for t in range(int(input())): e, n = map(int, input().split()) numbers = list(map(int, input().split())) bin_tree = BinaryTree(e) for i in range(e): bin_tree.insert(numbers[2*i], numbers[2*i+1]) print(f\u0026#34;#{t+1} {bin_tree.result(n)}\u0026#34;) "
+},
+{
+	"uri": "https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.17.html",
+	"title": "2020.04.17",
+	"tags": ["TIL", "20.04.17", "4월"],
+	"description": "",
+	"content": "오늘 생각한 것(혼자해보는 프로젝트)  지금 까지 배운 django로 간단한 물건 예약신청 웹페이지를 만들려 하다보니 필요한게 많았음 회원가입인듯 아닌듯 만들기 위한 생각이 필요했음 신청과 동시에 회원가입을 하는 방향으로 생각했음 관련 파일은 따로 project로 올릴 예정  "
+},
+{
+	"uri": "https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.18.html",
+	"title": "2020.04.18",
+	"tags": ["TIL", "20.04.18", "4월", "Django"],
+	"description": "",
+	"content": "오늘 공부한 것  AuthenticationForm을 커스터 마이징할 때 class Meta를 통해 attr을 작성 할 경우 원하는 대로 동작하지 않는다. 그렇기 때문에 init을 통해 attr을 추가해야 한다. 아래의 코드는 오늘 사용한 예  class myAuthenticationForm(AuthenticationForm): def __init__(self, *args, **kwargs): super(myAuthenticationForm, self).__init__(*args, **kwargs) self.fields[\u0026#39;username\u0026#39;].widget = forms.TextInput( attrs={ \u0026#39;class\u0026#39;: \u0026#39;form-control\u0026#39; } ) self.fields[\u0026#39;password\u0026#39;].widget = forms.PasswordInput( attrs={ \u0026#39;class\u0026#39;: \u0026#39;form-control\u0026#39; } ) class Meta: model = User fields = [\u0026#39;username\u0026#39;,\u0026#39;password\u0026#39;] "
+},
+{
+	"uri": "https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.19.html",
+	"title": "2020.04.19",
+	"tags": ["TIL", "20.04.19", "4월"],
+	"description": "",
+	"content": "오늘 공부한 것  어제에 이어서 신청 완료시 메일을 발송하게 만들려고 함 django에서 email보내는 것도 지원을 하기때문에 아래 코드를 이용했음 먼저 settings.py에서 아래 코드를 추가  EMAIL_HOST = \u0026#34;smtp.gmail.com\u0026#34; EMAIL_HOST_USER = \u0026#39;내 gmail 주소@gmail.com\u0026#39; EMAIL_HOST_PASSWORD = \u0026#39;내 gmail 비밀번호\u0026#39; EMAIL_PORT = 587 EMAIL_USE_TLS = True  views.py에서 아래 코드 이용(공식문서의 example) 여기 참고  from django.core.mail import send_mail send_mail( \u0026#39;Subject here\u0026#39;, \u0026#39;Here is the message.\u0026#39;, \u0026#39;from@example.com\u0026#39;, [\u0026#39;to@example.com\u0026#39;], fail_silently=False, ) "
+},
+{
+	"uri": "https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.20.html",
+	"title": "2020.04.20",
+	"tags": ["TIL", "20.04.20", "4월", "DB", "SQL"],
+	"description": "",
+	"content": "오늘 배운 것 SQL 관련 1. Database 기본  RDBMS  데이터베이스를 관리하는 시스템  빠르고 효율적으로 관리하기 위해   RDBMS(Relational Database Management System)  관계형 데이버 베이스 관리 시스템 table(relation) 활용     기본 용어  스키마: DB의 자료 구조와 제약 조건에 대한 전반적인 명세를 기술한 것 테이블 : 열과 행을 사용해 조직한 데이터 요소들 집합 열(column)/필드(field)/속성(attribute) 행(row)/tuple/레코드(record) PK(Primary key):  각 행의 고유값으로 저장된 레코드를 고유하게 식별할 수 있는 값 중복되는 값이 없으면 다 pk로 사용 가능 == unique한 값에 부여      2. SQL   RDBMS에서 데이터를 관리하기 위해 설계된 프로그래밍 언어\n  자료의 검색, 관리, 데이터베이스 스키마 생성과 수정, 접근 관리\n  기본 정의\n DDL(Data Definintion Language) 데이터 정의 언어  RDBMS의 구조를 정의 CREATE(테이블 생성), DROP(테이블 삭제), ALTER(테이블 수정), TRUNCATE(테이블 초기화)   DML데이터 조작 언어  데이터를 저장,수정,삭제,조회 INSERT, UPDATE, DELETE, SELECT   DCL 데이터 제어 언어  사용자의 권한 제어를 위해 사용 GRANT, REVOKE, COMMIT, ROLLBACK      3. 기본 활용  Example  -- CREATE- TABLE 생성 CREATE TABLE classmates( id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, name TEXT NOT NULL, age INTEGER NOT NULL ); -- DROP - TABLE 삭제 DROP TABLE classmates; -- SELECT - 데이터 조회 SELECT id FROM classmates; SELECT name FROM classmates; SELECT name, age FROM classmates; -- LIMIT 사용 SELECT * FROM classmates LIMIT 1; -- OFFSET SELECT * FROM classmates LIMIT 1 OFFSET 2; -- DISTINCT 중복되지 않도록 출력 SELECT DISTINCT name FROM classmates; -- INSERT - 테이블 삽입 INSERT INTO classmates (name, age) VALUES(\u0026#39;구동엽\u0026#39;, \u0026#39;30\u0026#39;); INSERT INTO classmates VALUES(2,\u0026#39;구동엽\u0026#39;,20); -- 이렇게 넣어도 됨  -- DELETE DELETE FROM classmates WHERE id = 1; -- UPDATE UPDATE classmates SET name = \u0026#39;rrr\u0026#39; WHERE id=2; -- WHERE SELECT * FROM classmates WHERE name=\u0026#39;dfdf\u0026#39; AND age=30; -- COUNT, AVG, MAX SELECT COUNT(*) FROM classmates; SELECT MAX(age) FROM classmates; SELECT AVG(age) FROM classmates; --LIKE(%, _) %는 숫자 제한 없이 _는 개수 맞춰서 사용 SELECT * FROM classmates WHERE name LIKE \u0026#39;김%\u0026#39;; SELECT * FROM classmates WHERE name LIKE \u0026#39;%엽\u0026#39;; SELECT * FROM classmates WHERE age LIKE \u0026#39;3_\u0026#39;; -- ORDER BY SELECT * FROM classmates ORDER BY name ASC; --오름차순 SELECT * FROM classmates ORDER BY name DESC; --내림차순 "
+},
+{
+	"uri": "https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.21.html",
+	"title": "2020.04.21",
+	"tags": ["TIL", "20.04.21", "4월", "Django"],
+	"description": "",
+	"content": "오늘 배운 것 Django 댓글 작성 \u0026amp; 삭제  게시글의 model은 Article로 만들었을 경우임. ForeignKey를 사용.\n   댓글 작성\n  models.py에서 댓글 설정을 위한 class를 만든다.(user 설정을 안했을 경우)\nclass Comment(models.Model): article = models.ForeignKey(Article, on_delete=models.CASCADE) #on_delete=models.CASCADE는 ForeignKeyField가 삭제 될때 인스턴스도 같이 삭제 content = models.TextField()   forms.py에도 추가\nfrom django import forms from .models import Comment class CommentForm(forms.ModelForm): class Meta: model = Comment fields = [\u0026#39;content\u0026#39;] # fields를 __all__로 해도 됨(all로 했을 경우에는 댓글 작성시 모든 값을 잘 입력 해야한다. *all로 하고 필요한 값을 입력 안했을 경우 저장이 되지 않음)  makemigrations와 migrate를 해야함    views.py에서 댓글 작성하는 함수를 추가\nfrom .models import Article, Comment from .forms import ArticleForm, CommentForm def comments_create(request, article_pk): article = get_object_or_404(Article, article_pk=pk) if request.method==\u0026#39;POST\u0026#39;: form = CommentForm(request.POST) if form.is_valid(): comment = form.save(commit=False) comment.article = article comment.save() return redirect(\u0026#39;articles:detail\u0026#39;, article.pk) else: form = CommentForm() context = { \u0026#39;form\u0026#39;: form } return render(request, \u0026#39;articles/comments_create.html\u0026#39;, context)  commit=False을 사용 하면 간단하게 db에 당장 저장하지 않고 지연시켜 중복 저장을 방지. 그렇기에 comment.article=article 을 통해 not null 에러가 발생하지 않게 해준다.\n   urls.py에도 추가\npath(\u0026#39;\u0026lt;int:article_pk\u0026gt;/comments/\u0026#39;, views.comments_create, name=\u0026#39;comments_create\u0026#39;),   html 작성\n\u0026lt;!-- 먼저 게시글을 보여주는 html에서 댓글을 나오게 하기 위해 --\u0026gt; {% for comment in article.comment_set.all %} \u0026lt;li\u0026gt;{{ comment.content }}\u0026lt;/li\u0026gt; {% endfor %} \u0026lt;!-- 댓글을 작성하는 html을 만들경우 --\u0026gt; \u0026lt;form action=\u0026#34;\u0026#34; method=\u0026#34;POST\u0026#34;\u0026gt; {% csrf_token %} {{ form.content }} \u0026lt;input type=\u0026#34;submit\u0026#34; value=\u0026#34;작성\u0026#34;\u0026gt; \u0026lt;/form\u0026gt;     댓글 삭제\n  views.py에 삭제하는 함수 추가\ndef comments_delete(request, comment_pk,article_pk): comment = get_object_or_404(Comment, pk=comment_pk) article = get_object_or_404(Article, pk=article_pk) comment.delete() return redirect(\u0026#39;articles:detail\u0026#39;, article.pk)   urls.py\npath(\u0026#39;\u0026lt;int:article_pk\u0026gt;/comments/\u0026lt;int:comment_pk\u0026gt;/delete\u0026#39;, views.comments_delete, name=\u0026#39;comments_delete\u0026#39;)   댓글나오는 html\n{% for comment in article.comment_set.all %} \u0026lt;li\u0026gt;{{ comment.content }}\u0026lt;a href=\u0026#34;{% url \u0026#39;articles:comments_delete\u0026#39; article.pk comment.pk %}\u0026#34;\u0026gt;삭제\u0026lt;/a\u0026gt;\u0026lt;/li\u0026gt; {% endfor %}     "
+},
+{
+	"uri": "https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.22.html",
+	"title": "2020.04.22",
+	"tags": ["TIL", "20.04.22", "4월"],
+	"description": "",
+	"content": "오늘 한 것 간단한 Django 프로젝트  페어프로그래밍으로 간단하게 로그인 후 게시글을 작성하고 댓글을 작성할 수 있는 페이지를 만들었음\n "
+},
+{
+	"uri": "https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.23.html",
+	"title": "2020.04.23",
+	"tags": ["TIL", "20.04.23", "4월"],
+	"description": "",
+	"content": "오늘 배운 것 Computational Thinking  SW Expert Academy에 있는 Computational Thinking 학습\n   수와 표현\n 명제 관련 예)   문제 12 : n^2 이 3의 배수이면 n은 3의 배수이다.\n\u0026ndash;\u0026gt; 대우 : n이 3의 배수가 아니면 n^2도 3의 배수가 아니다.\n  n = 3m + 1 일경우 n^2 = 9m^2 + 6m + 1 = 3(3m^2 + 2m) + 1\n  n = 3m + 2 일경우 n^2 = 9m^2 + 12m +4 = 3(3m^2 + 4m + 1) + 1\n대우가 참이기 때문에 기존 명제도 참\n     집합과 조합\n 집합 조합    "
+},
+{
+	"uri": "https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.24.html",
+	"title": "2020.04.24",
+	"tags": ["TIL", "20.04.24", "4월"],
+	"description": "",
+	"content": "오늘한 것 Django 복습  Django에서 간단한 User 생성, 로그인, 로그아웃 구현 복습\n댓글 위한 모델 작성 복습\n  댓글 작성을 위해 ForeignKey 사용 (1:N 관계)  "
+},
+{
+	"uri": "https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.25.html",
+	"title": "2020.04.25",
+	"tags": ["TIL", "20.04.25", "4월"],
+	"description": "",
+	"content": "오늘한 것 Django PJT 추가  혼자 만들어보는 웹 페이지에서 사용자들을 위한 Q\u0026amp;A 페이지 작성\n "
+},
+{
+	"uri": "https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.26.html",
+	"title": "2020.04.26",
+	"tags": ["TIL", "20.04.26", "4월", "Django"],
+	"description": "",
+	"content": "오늘한 것 Django PJT 추가  Q\u0026amp;A 페이지에서 댓글 추가\n  댓글 작성 위해 1:N 관계 모델 작성  from django.db import models from django.conf import settings # 사진 및 정보를 업로드 하기 위한 모델 정의 class QandA(models.Model): title = models.CharField(max_length=100) user =models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE) content = models.TextField() class Reply(models.Model): content = models.TextField() QandA = models.ForeignKey(QandA, on_delete=models.CASCADE) user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)  ForeignKey를 이용하여 1:N관계 설정 후 migration\n "
+},
+{
+	"uri": "https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.27.html",
+	"title": "2020.04.27",
+	"tags": ["TIL", "20.04.27", "4월"],
+	"description": "",
+	"content": "오늘 배운 것 이미지 업로드  ImageField를 활용하여 업로드\n  단순히 ImageField를 사용하기 위해서는 pillow패키지를 설치해야 한다.  $ pip install pillow  Resizing 하기 위해서는 pilkit, django-imagekit 패키지를 설치  $ pip install pilkit django-imagekit  ImageField를 사용할 app의 models.py를 수정  class \u0026lt;사용할 모델\u0026gt;: image = models.ImageField() # 저장하지 않고 잘라서 표현할 때(ex. thumbnail) image_thumbnail = ImageSpecField(source=\u0026#39;image\u0026#39;, processors=[Thumbnail(300, 300)], format=\u0026#39;JPEG\u0026#39;, options={\u0026#39;quality\u0026#39;: 60})  Image 파일을 저장할 경로 설정 settings.py  # 미디어 파일을 저장하기 위한 루트 경로 MEDIA_ROOT = os.path.join(BASE_DIR, \u0026#39;media\u0026#39;) MEDIA_URL = \u0026#39;/media/\u0026#39; "
+},
+{
+	"uri": "https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.28.html",
+	"title": "2020.04.28",
+	"tags": ["TIL", "20.04.28", "4월", "Django"],
+	"description": "",
+	"content": "오늘 배운 것 M:N 모델  Django에서 좋아요 기능이나 팔로우 기능처럼 M:N 관계 만들기\nManyToManyField 이용\n  좋아요 기능을 위한 model 추가(게시글 모델)  # 좋아요 기능을 위한 article_like_users 테이블 생성 class 좋아요 기능을 추가할 클래스 명: like_users = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name=\u0026#39;like_articles\u0026#39;) # 팔로우 기능을 위한   팔로우 기능을 위한 model 추가(User 모델을 Customizing)  class User(AbstractUser): followers = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name=\u0026#39;followings\u0026#39;)  게시글 app의 views.py에서 좋아요 기능 설정  def like(request, pk): article = get_object_or_404(Article, pk=pk) # 좋아요를 누르면, \u0026gt;\u0026gt; DB에 존재할 경우 if article.like_users.filter(id=request.user.pk).exists(): article.like_users.remove(request.user) # 좋아요 취소 else:\t#좋아요 누르지 않았다면 article.like_users.add(request.user) return redirect(\u0026#39;articles:detail\u0026#39;, article.pk)  계정 관련 app의 views.py에서 팔로우 기능 설정  def follow(request, pk): User = get_user_model() # 팔로우 당하는 사람 user = get_object_or_404(User, pk=pk) if user != request.user: # 팔로우를 요청한 사람 =\u0026gt; request.user # 팔로우가 되어 있다면, if user.followers.filter(pk=request.user.pk).exists(): # 삭제 user.followers.remove(request.user) else: # 추가 user.followers.add(request.user) return redirect(\u0026#39;accounts:detail\u0026#39;, user.pk) "
+},
+{
 	"uri": "https://dongyeopgu.github.io/algorithm/d4~6/20.04.29.html",
 	"title": "2020.04.29",
 	"tags": ["20.04.29", "4월", "Algorithm"],
 	"description": "",
 	"content": "오늘 한 것  SWEA. 5185 [파이썬 S/W 문제해결 구현] 1일차 - 이진수\n 알고리즘 풀이 for t in range(int(input())): n, num = map(str, input().split()) print(f\u0026#39;#{t+1}\u0026#39;,end=\u0026#34; \u0026#34;) for a in num: b = \u0026#39;0x\u0026#39;+ a.lower() hex_num = int(a, 16) # 16진수를 10진수로 print(\u0026#34;{0:b}\u0026#34;.format(hex_num).zfill(4), end=\u0026#34;\u0026#34;) # 10진수를 2진수로 바꾸면서 (4자리씩) print() "
+},
+{
+	"uri": "https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.29.html",
+	"title": "2020.04.29",
+	"tags": ["TIL", "20.04.29", "4월", "Algorithm"],
+	"description": "",
+	"content": "오늘 한 것  SWEA. 5185 [파이썬 S/W 문제해결 구현] 1일차 - 이진수\n 알고리즘 풀이 for t in range(int(input())): n, num = map(str, input().split()) print(f\u0026#39;#{t+1}\u0026#39;,end=\u0026#34; \u0026#34;) for a in num: b = \u0026#39;0x\u0026#39;+ a.lower() hex_num = int(a, 16) # 16진수를 10진수로 print(\u0026#34;{0:b}\u0026#34;.format(hex_num).zfill(4), end=\u0026#34;\u0026#34;) # 10진수를 2진수로 바꾸면서 (4자리씩) print() "
+},
+{
+	"uri": "https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.30.html",
+	"title": "2020.04.30",
+	"tags": ["TIL", "20.04.30", "4월", "Django"],
+	"description": "",
+	"content": "오늘 한 것  혼자 해보는 PJT에서 paginator 추가 및 댓글 작성 시 발생한 오류 수정\n  views.py 에서  @require_POST @login_required def reply_create(request, qanda_pk): qanda = get_object_or_404(QandA, pk=qanda_pk) form = ReplyForm(request.POST) if form.is_valid(): reply=form.save(commit=False) reply.user = request.user reply.QandA = qanda reply.save() return redirect(\u0026#39;reservation:QandA_detail\u0026#39;,qanda.pk)  reply.QandA = qanda에서 QandA 모델을 qanda로 불러와서 NOT NULL 오류 발생했었음.\n  paginator 추가 코드  def QandA_list(request): QandAs = QandA.objects.order_by(\u0026#39;-pk\u0026#39;) paginator = Paginator(QandAs, 4) #한 페이지 당 몇개 씩 보여줄 지 지정 page_number = request.GET.get(\u0026#39;page\u0026#39;) page_obj = paginator.get_page(page_number) reviews_all = get_list_or_404(QandA) total_count = len(reviews_all) total_page = total_count//4 + 1 page_range = range(1,total_page+1) context = { \u0026#39;QandAs\u0026#39; : QandAs, \u0026#39;page_obj\u0026#39;: page_obj, \u0026#39;page_range\u0026#39;: page_range, } return render(request, \u0026#39;reservation/QandA.html\u0026#39;, context) "
 },
 {
 	"uri": "https://dongyeopgu.github.io/algorithm/d4~6/20.05.01.html",
@@ -420,9 +882,51 @@
 	"content": "오늘 한 것  SWEA 알고리즘 문제풀이\n  [파이썬 S/W 문제해결 구현] 1일차 - 이진수2  for t in range(int(input())): n = float(input()) result = \u0026#39;\u0026#39; cnt = 0 while True: a = n * 2 result += str(int(a)) n = a - int(a) cnt += 1 if n == 0.0: break if cnt \u0026gt; 13: break if cnt \u0026gt; 13: print(f\u0026#34;#{t+1} overflow\u0026#34;) else: print(f\u0026#34;#{t+1} {result}\u0026#34;) "
 },
 {
+	"uri": "https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.01.html",
+	"title": "2020.05.01",
+	"tags": ["TIL", "20.05.01", "5월", "Algorithm"],
+	"description": "",
+	"content": "오늘 한 것  SWEA 알고리즘 문제풀이\n  [파이썬 S/W 문제해결 구현] 1일차 - 이진수2  for t in range(int(input())): n = float(input()) result = \u0026#39;\u0026#39; cnt = 0 while True: a = n * 2 result += str(int(a)) n = a - int(a) cnt += 1 if n == 0.0: break if cnt \u0026gt; 13: break if cnt \u0026gt; 13: print(f\u0026#34;#{t+1} overflow\u0026#34;) else: print(f\u0026#34;#{t+1} {result}\u0026#34;) "
+},
+{
+	"uri": "https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.02.html",
+	"title": "2020.05.02",
+	"tags": ["TIL", "20.05.02", "5월"],
+	"description": "",
+	"content": "오늘 한 것  프로젝트를 PythonAnywhere를 통해 올릴 것인지 고민.\nC/C++ 혼자 공부하기(일단 알고리즘을 푸는 위주로 할 생각)\n  Django로 만든 것을 PythonAnywhere에 올리기 위해 \u0026ldquo;파이썬 웹 프로그래밍\u0026rdquo; 책을 봄  "
+},
+{
+	"uri": "https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.03.html",
+	"title": "2020.05.03",
+	"tags": ["TIL", "20.05.03", "5월", "DB"],
+	"description": "",
+	"content": "오늘 한 것  sqlite3 DB파일을 csv로 변환하기\n  혼자 하는 PJT의 User를 포함한 db가 있는 폴더에서 sqlite3 실행  $ sqlite3 db.sqlite3 sqlite\u0026gt; .table # 테이블 확인하면 accounts_user가 있음 accounts_user django_admin_log accounts_user_groups django_content_type  여기 있는 accounts_user에서 필요한 정보만 csv로 만들기 위해 아래 명령어 입력  sqlite\u0026gt; .headers on sqlite\u0026gt; .mode csv sqlite\u0026gt; .output dataout.csv sqlite\u0026gt; select * from accounts_user;  원하는 정보를 csv파일로 만들 수 있음.   하지만 엑셀에서 바로 csv파일을 열면 인코딩이 UTF-8이기때문에 한글이 깨지는 문제가 발생한다.\n쉽게 변경하는 방법 중 하나는 csv파일을 notepad로 열고 인코딩을 ANSI로 바꿔 저장하면 된다.\n "
+},
+{
+	"uri": "https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.04.html",
+	"title": "2020.05.04",
+	"tags": ["TIL", "20.05.04", "5월"],
+	"description": "",
+	"content": "오늘 한 것  ERD 이용하여 DB모델 구조 설정 erdcloud.com 이용 위 내용을 바탕으로 Django에서 model 만들기 Django query 개선  "
+},
+{
+	"uri": "https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.05.html",
+	"title": "2020.05.05",
+	"tags": ["TIL", "20.05.05", "5월"],
+	"description": "",
+	"content": "오늘 한 것  PJT 메인 화면 꾸미기 Heroku 사용법 익히기  "
+},
+{
 	"uri": "https://dongyeopgu.github.io/algorithm/d4~6/20.05.06.html",
 	"title": "2020.05.06",
 	"tags": ["20.05.06", "5월", "Algorithm"],
+	"description": "",
+	"content": "오늘 한 것  SWEA 문제 풀이  # 최소합 dx, dy = [0,1], [1,0] def dfs(x,y): global min_num, result visit[x][y] = 1 if result \u0026lt; min_num: return if x == n-1 and y == n-1: result = min_num return for i in range(2): nx = x + dx[i] ny = y + dy[i] if 0 \u0026lt;= nx \u0026lt; n and 0 \u0026lt;= ny \u0026lt; n and visit[nx][ny] == 0: min_num += a[nx][ny] dfs(nx,ny) visit[nx][ny] = 0 min_num -= a[nx][ny] for t in range(int(input())): n = int(input()) a = [list(map(int, input().split()))for _ in range(n)] visit = [[0 for _ in range(n)]for _ in range(n)] min_num = a[0][0] result = 10000000 dfs(0,0) print(f\u0026#34;#{t+1} {result}\u0026#34;) # 전자카트 def sol(a,b,c): if b == n-1: c += arr[a][0] result.append(c) else: for i in range(1,n): if not visit[i]: c += arr[a][i] visit[i]=1 sol(i,b+1,c) visit[i]=0 c -= arr[a][i] for t in range(int(input())): n = int(input()) arr = [list(map(int, input().split()))for _ in range(n)] visit = [0]*n result = [] sol(0,0,0) print(f\u0026#34;#{t+1} {min(result)}\u0026#34;) "
+},
+{
+	"uri": "https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.06.html",
+	"title": "2020.05.06",
+	"tags": ["TIL", "20.05.06", "5월", "Algorithm"],
 	"description": "",
 	"content": "오늘 한 것  SWEA 문제 풀이  # 최소합 dx, dy = [0,1], [1,0] def dfs(x,y): global min_num, result visit[x][y] = 1 if result \u0026lt; min_num: return if x == n-1 and y == n-1: result = min_num return for i in range(2): nx = x + dx[i] ny = y + dy[i] if 0 \u0026lt;= nx \u0026lt; n and 0 \u0026lt;= ny \u0026lt; n and visit[nx][ny] == 0: min_num += a[nx][ny] dfs(nx,ny) visit[nx][ny] = 0 min_num -= a[nx][ny] for t in range(int(input())): n = int(input()) a = [list(map(int, input().split()))for _ in range(n)] visit = [[0 for _ in range(n)]for _ in range(n)] min_num = a[0][0] result = 10000000 dfs(0,0) print(f\u0026#34;#{t+1} {result}\u0026#34;) # 전자카트 def sol(a,b,c): if b == n-1: c += arr[a][0] result.append(c) else: for i in range(1,n): if not visit[i]: c += arr[a][i] visit[i]=1 sol(i,b+1,c) visit[i]=0 c -= arr[a][i] for t in range(int(input())): n = int(input()) arr = [list(map(int, input().split()))for _ in range(n)] visit = [0]*n result = [] sol(0,0,0) print(f\u0026#34;#{t+1} {min(result)}\u0026#34;) "
 },
@@ -434,6 +938,20 @@
 	"content": "오늘 한 것  SWEA 문제 풀이  # 컨테이너 운반 for t in range(int(input())): n,m = map(int, input().split()) weight = list(map(int, input().split())) truck = list(map(int, input().split())) result = 0 for i in range(m): a = 0 for j in weight: if truck[i] \u0026gt;= j \u0026gt;= a: a = j if a != 0: weight.remove(a) result += a print(f\u0026#34;#{t+1} {result}\u0026#34;) # 화물 도크 for t in range(int(input())): n = int(input()) a = [list(map(int, input().split()))for _ in range(n)] for i in range(n): for j in range(i, n): if a[i][1] \u0026gt; a[j][1]: a[i], a[j] = a[j], a[i] result = [a[0]] visit = [0]*n visit[0] = 1 while True: for i in range(n): if result[-1][-1] \u0026gt; a[i][0]: visit[i] = 1 if not 0 in visit: break idx = 0 max_value = 100000000 for i in range(n): if visit[i] == 0 and result[-1][-1] \u0026lt;= a[i][0] and a[i][1] \u0026lt; max_value: idx = i max_value = a[i][0] result.append(a[idx]) print(f\u0026#34;#{t+1} {len(result)}\u0026#34;) # 베이비진 for t in range(int(input())): a = list(map(int, input().split())) cnt = 0 flag = False for i in range(6, 13, 2): result = [] for j in range(2): deck = [a[k]for k in range(j, i, 2)] cnt_list = [0]*12 for m in range(len(deck)): cnt_list[deck[m]] += 1 n = 0 tri = Run = 0 while n \u0026lt; 10: if cnt_list[n] \u0026gt;= 3: cnt_list[n] -= 3 tri += 1 continue if cnt_list[n] \u0026gt;= 1 and cnt_list[n+1] \u0026gt;= 1 and cnt_list[n+2] \u0026gt;= 1: cnt_list[n] -= 1 cnt_list[n+1] -= 1 cnt_list[n+2] -= 1 Run += 1 continue n += 1 cnt += 1 if tri \u0026gt; 0 or Run \u0026gt; 0: result.append(1) else: result.append(0) if result[0] \u0026lt; result[1]: flag = True print(f\u0026#34;#{t+1} 2\u0026#34;) break elif result[0] \u0026gt; result[1] or ((result[0] == 1 and result[1] == 1) or (result[0] == 2 and result[1] == 2)): flag = True print(f\u0026#34;#{t+1} 1\u0026#34;) break if flag: continue else: print(f\u0026#34;#{t+1} 0\u0026#34;) "
 },
 {
+	"uri": "https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.07.html",
+	"title": "2020.05.07",
+	"tags": ["TIL", "20.05.07", "5월", "Algorithm"],
+	"description": "",
+	"content": "오늘 한 것  SWEA 문제 풀이  # 컨테이너 운반 for t in range(int(input())): n,m = map(int, input().split()) weight = list(map(int, input().split())) truck = list(map(int, input().split())) result = 0 for i in range(m): a = 0 for j in weight: if truck[i] \u0026gt;= j \u0026gt;= a: a = j if a != 0: weight.remove(a) result += a print(f\u0026#34;#{t+1} {result}\u0026#34;) # 화물 도크 for t in range(int(input())): n = int(input()) a = [list(map(int, input().split()))for _ in range(n)] for i in range(n): for j in range(i, n): if a[i][1] \u0026gt; a[j][1]: a[i], a[j] = a[j], a[i] result = [a[0]] visit = [0]*n visit[0] = 1 while True: for i in range(n): if result[-1][-1] \u0026gt; a[i][0]: visit[i] = 1 if not 0 in visit: break idx = 0 max_value = 100000000 for i in range(n): if visit[i] == 0 and result[-1][-1] \u0026lt;= a[i][0] and a[i][1] \u0026lt; max_value: idx = i max_value = a[i][0] result.append(a[idx]) print(f\u0026#34;#{t+1} {len(result)}\u0026#34;) # 베이비진 for t in range(int(input())): a = list(map(int, input().split())) cnt = 0 flag = False for i in range(6, 13, 2): result = [] for j in range(2): deck = [a[k]for k in range(j, i, 2)] cnt_list = [0]*12 for m in range(len(deck)): cnt_list[deck[m]] += 1 n = 0 tri = Run = 0 while n \u0026lt; 10: if cnt_list[n] \u0026gt;= 3: cnt_list[n] -= 3 tri += 1 continue if cnt_list[n] \u0026gt;= 1 and cnt_list[n+1] \u0026gt;= 1 and cnt_list[n+2] \u0026gt;= 1: cnt_list[n] -= 1 cnt_list[n+1] -= 1 cnt_list[n+2] -= 1 Run += 1 continue n += 1 cnt += 1 if tri \u0026gt; 0 or Run \u0026gt; 0: result.append(1) else: result.append(0) if result[0] \u0026lt; result[1]: flag = True print(f\u0026#34;#{t+1} 2\u0026#34;) break elif result[0] \u0026gt; result[1] or ((result[0] == 1 and result[1] == 1) or (result[0] == 2 and result[1] == 2)): flag = True print(f\u0026#34;#{t+1} 1\u0026#34;) break if flag: continue else: print(f\u0026#34;#{t+1} 0\u0026#34;) "
+},
+{
+	"uri": "https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.08.html",
+	"title": "2020.05.08",
+	"tags": ["TIL", "20.05.08", "5월"],
+	"description": "",
+	"content": "오늘 한 것  오늘은 휴식 ~  "
+},
+{
 	"uri": "https://dongyeopgu.github.io/algorithm/d4~6/20.05.09.html",
 	"title": "2020.05.09",
 	"tags": ["20.05.09", "5월", "Algorithm"],
@@ -441,9 +959,51 @@
 	"content": "오늘 한 것  SWEA 문제 풀이  C 사용    #include \u0026lt;stdio.h\u0026gt; int test_case; long long sol(int x, int y) { if (y == 0) return 1; return x * sol(x, y - 1); } int main(void) { for (int i = 0; i \u0026lt; 10; i++) { scanf(\u0026#34;%d\u0026#34;, \u0026amp;test_case); int x = 0; int y = 0; scanf(\u0026#34;%d %d\u0026#34;, \u0026amp;x, \u0026amp;y); long long result = 0; result = sol(x, y); printf(\u0026#34;#%d %11d\\n\u0026#34;, i + 1, result); } return 0; } "
 },
 {
+	"uri": "https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.09.html",
+	"title": "2020.05.09",
+	"tags": ["TIL", "20.05.09", "5월", "Algorithm"],
+	"description": "",
+	"content": "오늘 한 것  SWEA 문제 풀이  C 사용    #include \u0026lt;stdio.h\u0026gt; int test_case; long long sol(int x, int y) { if (y == 0) return 1; return x * sol(x, y - 1); } int main(void) { for (int i = 0; i \u0026lt; 10; i++) { scanf(\u0026#34;%d\u0026#34;, \u0026amp;test_case); int x = 0; int y = 0; scanf(\u0026#34;%d %d\u0026#34;, \u0026amp;x, \u0026amp;y); long long result = 0; result = sol(x, y); printf(\u0026#34;#%d %11d\\n\u0026#34;, i + 1, result); } return 0; } "
+},
+{
+	"uri": "https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.10.html",
+	"title": "2020.05.10",
+	"tags": ["TIL", "20.05.10", "5월"],
+	"description": "",
+	"content": "오늘 한 것 vector   vector\u0026lt;int\u0026gt; v; vector v 생성\n  vector\u0026lt;int\u0026gt; v(10); 0으로 초기화된 원소 10개 가진 vector 생성\n  vector\u0026lt;int\u0026gt; v(10,1); 1로 초기화된 원소 10개 가진 vector 생성\n  v.assign(10,2); 2로 10개 원소 할당\n  v.at(index); index번째 원소 참조, v[index]보다 속도는 느림, 범위를 점검\n  v[index]; 범위 점검 없이 index번째 원소 참조\n  v.front;첫번재 원소\n  v.back();마지막 원소\n  v.clear;모든 원소 제거, 메모리는 그대로\n  v.push_back(5); 마지막 원소 뒤에 5삽입\n  v.pop_back;마지막 원소 제거\n  v.begin(); 첫번째 원소를 가리킴\n  v.end(); 마지막의 \u0026lsquo;다음을 가리킴\u0026rsquo;\n  v.rbegin();reverse begin\n  v.rend(); reverse end\n  v.reserve(n); n개의 원소를 저장할 위치를 예약(동적할당)\n  v.resize(n); 크기를 n으로 변경, 더 커질경우 default값으로 초기화\n  v.resize(n,2); 크기를 n으로 터 커질 경우 2로 초기화\n  v.size(); 원소 개수 리턴\n  v.capacity(); 할당된 공간의 크기\n  v.insert(2,3,4);2번째 위치에 3개의 4를 삽입\n  v.insert(2,3);2번째 위치에 3 삽입\n  v.erase(iter);iter가 가리키는 원소 제거, size만 줄고 capacity는 그대로\n  "
+},
+{
+	"uri": "https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.11.html",
+	"title": "2020.05.11",
+	"tags": ["TIL", "20.05.11", "5월", "Django", "REST Framework"],
+	"description": "",
+	"content": "오늘 배운 것 1. REST API(DRF: Django Rest Framework)   REST API를 활용하면 백 엔드와 프론트 엔드 분리가 쉽고 코드의 재활용성이 좋다.\n  REST API를 사용하기 위해서 먼저 설치가 필요\n$ pip install djangorestframework   settings.py에서 INSTALLED_APPS에 'rest_framework'추가\n  app 폴더에 serializers.py 파일을 만들고 내용 추가\n# serializers.py from rest_framework import serializers from .models import * #필요한 모델이름 넣어주기 class \u0026lt;모델명\u0026gt;Serializer(serializers.ModelSerializer): class Meta: model = \u0026lt;모델명\u0026gt; fields = [\u0026#39;필요한 필드\u0026#39;]   views.py에 필요한 내용 추가\nfrom django.shortcuts import render, get_object_or_404 from rest_framework.response import Response from rest_framework.decorators import api_view from .models import * from .serializers import * @api_view([\u0026#39;GET\u0026#39;]) #method에 따라 다르게 적어주면 됨 (GET, POST 등) def list(request):\t#예를 들어 목록을 보여준다고 할때 변수명 = 모델명.objects.all()\t#queryset serializer = 모델명Serializer(변수명, many=True)\t#위에서 만든 이름임, many=True는 1:N 경우, queryset을 json으로 변환 return Response(serializer.data) @api_view([\u0026#39;GET\u0026#39;]) def detail(request, pk): 변수명 = get_object_or_404(모델명,pk=pk) serializer = 모델명DetailSerializer(변수명)\t#serializers.py에서 detail을 위한 모델명DetailSerializer를 만든 후 사용 return Response(serializer.data) # Create 경우 @api_view([\u0026#39;POST\u0026#39;]) def create(request): serializer = 모델명Serializer(data=request.data) if serializer.is_valid(): serializer.save() return Response(serializer.data) # Update, Delete @api_view([\u0026#39;PUT\u0026#39;, \u0026#39;DELETE\u0026#39;]) def comment_edit(request, pk): 변수명 = get_object_or_404(모델명, pk=pk) if request.method == \u0026#39;PUT\u0026#39;: serializer = 모델명Serializer(변수명, data=request.data) if serializer.is_valid(): serializer.save() return Response(\u0026#39;성공적으로 수정이 완료 되었습니다.\u0026#39;) return Response(status=status.HTTP_400_BAD_REQUEST) # 상태까지 나타내기 위함  if request.method == \u0026#39;DELETE\u0026#39;: comment.delete() return Response(\u0026#39;성공적으로 삭제 되었습니다.\u0026#39;, status=status.HTTP_204_NO_CONTENT)   views.py에서 작성한 이름대로 urls.py에 추가\n  "
+},
+{
+	"uri": "https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.12.html",
+	"title": "2020.05.12",
+	"tags": ["TIL", "20.05.12", "5월", "Javascript"],
+	"description": "",
+	"content": "오늘 배운 것 Javascript   Type\n Primitive Type(원시 타입) : 변수에 저장할 때 실제 메모리에 저장된 값을 담는다.\n  Number String  ES6+ 부터 String-Template Literal 지원, Backtik(`)을 이용하여 여러 줄에 걸쳐 문자를 정의 가능, JS의 변수를 문자열 안에 바로 넣을 수 있음(Python에서 f\u0026rdquo; \u0026ldquo;와 비슷)   Boolean Empty value (null, undefined)    Operators\n 할당 연산자 (+=, -=, ++, \u0026ndash;) 비교 연산자(부등호) 동등 연산자(==) : 메모리의 같은 객체를 가리키거나 같은 값을 갖도록 type변환 할 수 있다면 서로 같다고 판단. 일치 연산자(===) : 흔히 사용하는 == 논리 연산자(\u0026amp;\u0026amp; : and , || : or, ! : not) 삼항 연산자(Tenary Operator) : ? a : b    조건문\n if, else if, else switch    반복문\n  while\n  for\n  for of : 배열에서 요소를 하나씩 순회하며 반복\nconst numbers = [0, 1, 2, 3] for (const number of numbers){ console.log(number) }   for in : Object의 key를 순회하며 반복하는 반복문, Array의 경우 index 순회\nconst fruits = {a: \u0026#39;apple\u0026#39;, b: \u0026#39;banana\u0026#39;} for (const key in fruits){ console.log(key) console.log(fruits[key]) } const fruits1 = [\u0026#39;apple\u0026#39;, \u0026#39;banana\u0026#39;] for (const idx in fruits1){ console.log(idx) console.log(fruits[idx]) }   forEach\nconst arr = [\u0026#39;a\u0026#39;,\u0026#39;b\u0026#39;,\u0026#39;c\u0026#39;] arr.forEach(function(name){ console.log(name) })     Function\n  선언식(Declaration)\nfunction add(num1, num2){ return num1 + num2 }   표현식(Expression)\nconst sub = function namedSub(num1, num2){ return num1 - num2 }   기본 인자(Default Arguments)\nconst greeting = function(name=\u0026#39;noBody\u0026#39;){ console.log(`${name}`) }   Arrow Function : Function에 비해 구문이 짧고, 항상 익명. 메소드 함수가 아닌 곳에서 가장 적합\nconst arrow = function(name){ return `hello ${name}` } // 1. function 키워드 삭제 const arrow = (name) =\u0026gt; {return `hello ${name}`} // 2. ()생략, 함수 매개변수가 하나일 경우 const arrow = name =\u0026gt; {return `hello ${name}`} // 3. {}, return 생략, 표현식이 하나일 경우 const arrow = name =\u0026gt; `hello ${name}` // 4. 인자가 없다면 () or _로 표현 가능 const noArgs = _ =\u0026gt; \u0026#39;No Args\u0026#39; // 5. object 리턴 const returnedObject = () =\u0026gt; {return {key: \u0026#39;value\u0026#39;}} // 6. const returnedObject = () =\u0026gt; ({key: \u0026#39;value\u0026#39;})   IIFE(즉시실행 함수)\n(function(num){ return num**3 })(2) // 결과 \u0026gt;\u0026gt; 8     Array\n JS에선 Index를 양의 정수만 사용 가능(python에서 처럼 arr[-1] 불가능) arr.reverse() : 원본 배열의 요소 순서를 반대로 arr.push('a') : 요소를 배열의 가장 뒤에 추가 arr.pop(): 가장 뒤 요소를 제거후 반환 arr.unshift('a'): 요소를 배열의 가장 앞에 추가 arr.shift(): 가장 앞에 있는 요소 제거 arr.includes(요소): 특정 요소가 있는지 여부 판단 후 boolean 반환 arr.indexOf(요소): 특정 요소가 있는지 여부 판단 후, 가장 첫번째로 찾은 요소 index반환, 만약 없다면 -1반환    Object\n Object의 key는 문자열 타입, value는 모든 타입 가능\n const me = { name: \u0026#39;홍길동\u0026#39;, //key가 한 단어일때  \u0026#39;phone number\u0026#39;: \u0026#39;01011111111\u0026#39;, //key가 여러 단어일때  samsungProducts: { galaxyWatch: \u0026#39;2019\u0026#39;, galaxyPhone: \u0026#39;galaxy s9\u0026#39;, galaxyBuds: \u0026#39;Buds plus\u0026#39;, } } me.name // \u0026#39;홍길동\u0026#39; (dot notation) me[\u0026#34;phone number\u0026#34;] //\u0026#39;01011111111\u0026#39; me.samsungProducts me.samsungProducts.galaxyBuds // Object.keys const fruits = {a:\u0026#39;apple\u0026#39;, b:\u0026#39;banana\u0026#39;} Object.keys(fruits) // [\u0026#34;a\u0026#34;, \u0026#34;b\u0026#34;]  // Object.values() Object.values(fruits) // [\u0026#34;apple\u0026#34;, \u0026#34;banana\u0026#34;]  // Object.entires() Object.entries(fruits) // [\u0026#34;a\u0026#34;,\u0026#34;apple\u0026#34;], [\u0026#34;b\u0026#34;,\u0026#34;banana\u0026#34;]  // Object Literal (ES6+) const books = [\u0026#34;Learing JS\u0026#34;, \u0026#34;Eloquent JS\u0026#34;] const comics = { DC: [\u0026#39;Aquaman\u0026#39;, \u0026#39;Superman\u0026#39;], Marvel: [\u0026#39;Captain America\u0026#39;, \u0026#39;Avengers\u0026#39;], } const magazines = null const bookstore = { books, // == books: books  comics, // comics: comics  magazines, // == magazines:magazines }   JSON(Javascript Object Notation : JS 객체 표기법)\n key-value 형태로 js object와 유사한 모습으로 데이터 표기.\nobject처럼 사용하기 위해서는 parsing 필요\nJSON 형식의 파일을 다루기 위해 JS에서 JSON 내장 객체 제공\n // Object \u0026gt;\u0026gt; JSON const cafe = { coffee: \u0026#39;latte\u0026#39;, icecream: \u0026#39;mint choco\u0026#39;, } const jsonData = JSON.stringify(cafe) console.log(typeof jsonData) // JSON \u0026gt;\u0026gt; Object  const parsedData = JSON.parse(jsonData) console.log(parsedData) console.log(typeof parsedData) // primitive type vs reference type // const myNumber = 5 // myNumber = 10 // error  const myNumbers = [1,2,3,4,5] myNumbers[0] = 100 // [100,2,3,4,5]  const myObject = { a:\u0026#39;a\u0026#39;, b:\u0026#39;b\u0026#39;, c:\u0026#39;c\u0026#39;, } myObject.a = \u0026#39;hello\u0026#39; console.log(myObject) // {a: \u0026#34;hello\u0026#34;, b: \u0026#34;b\u0026#34;, c: \u0026#34;c\u0026#34;}   "
+},
+{
+	"uri": "https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.13.html",
+	"title": "2020.05.13",
+	"tags": ["TIL", "20.05.13", "5월", "Django"],
+	"description": "",
+	"content": "오늘 배운 것 Django   API를 이용해 DB에 저장\n 네이버 영화 검색 API를 이용해 영화 목록을 검색한 후, 클릭한 영화를 DB에 저장\nget_or_create를 사용\n   views.py\ndef movie_list(request): # 영화 목록 naver_client_id = \u0026#34;발급받은 id\u0026#34; naver_client_secret = \u0026#34;발급받은 secret\u0026#34; if request.method == \u0026#39;GET\u0026#39;: client_id = naver_client_id client_secret = naver_client_secret q = request.GET.get(\u0026#39;q\u0026#39;) Text = urllib.parse.quote(f\u0026#34;{q}\u0026#34;) url = \u0026#34;https://openapi.naver.com/v1/search/movie?query=\u0026#34; + Text # json 결과 movie_api_request = urllib.request.Request(url) movie_api_request.add_header(\u0026#34;X-Naver-Client-Id\u0026#34;, client_id) movie_api_request.add_header(\u0026#34;X-Naver-Client-Secret\u0026#34;, client_secret) response = urllib.request.urlopen(movie_api_request) rescode = response.getcode() if rescode == 200: response_body = response.read() result = json.loads(response_body.decode(\u0026#39;utf-8\u0026#39;)) items = result.get(\u0026#39;items\u0026#39;) context = { \u0026#39;items\u0026#39;: items } return render(request, \u0026#39;reviews/movie_list.html\u0026#39;, context)  검색한 후, DB에 저장되어 있지 않은 영화는 저장 후 바로 detail 페이지로 넘어가도록 만들기 위해 get_or_create 를 사용\n   views.py\ndef movie_save(request): poster_URL = request.GET.get(\u0026#39;poster_url\u0026#39;) title = request.GET.get(\u0026#39;title\u0026#39;) content = request.GET.get(\u0026#39;content\u0026#39;) movie, created = Movie.objects.get_or_create(title=title, poster_URL=poster_URL, content=content) return redirect(\u0026#39;reviews:movie_detail\u0026#39;, movie.pk)  새로 movie_save 함수를 만들어서 GET으로 넘어온 url query에서 필요한 정보를 가지고 db에 저장.\nget_or_create는 tuple형식으로 created에 boolean값으로 저장됨.\n   html\n\u0026#34;{% url \u0026#39;reviews:movie_save\u0026#39; %}?poster_url={{item.image}}\u0026amp;title={{item.title|safe}}\u0026amp;content={{item.userRating}}\u0026#34;  바로 query를 추가하여 넘겨주기 위해 위 코드를 사용했다.\n     "
+},
+{
 	"uri": "https://dongyeopgu.github.io/algorithm/d4~6/20.05.14.html",
 	"title": "2020.05.14",
 	"tags": ["20.05.14", "5월", "Algorithm"],
+	"description": "",
+	"content": "오늘 한 것 SWEA 문제풀이   병합정렬\ndef m_sort(a): if len(a) \u0026lt;= 1: return a center = len(a) // 2 right = m_sort(a[center:]) left = m_sort(a[:center]) return merge(left, right) def merge(left,right): global cnt n_right = len(right) n_left = len(left) i = 0 i_right = 0 i_left = 0 result = [0] * (n_right+n_left) if left[-1] \u0026gt; right[-1]: cnt += 1 while i_right != n_right and i_left != n_left: if right[i_right] \u0026gt;= left[i_left]: result[i] += left[i_left] i += 1 i_left += 1 else: result[i] += right[i_right] i += 1 i_right += 1 if i_left != n_left: while i_left != n_left: result[i] += left[i_left] i += 1 i_left += 1 if i_right != n_right: while i_right != n_right: result[i] += right[i_right] i += 1 i_right += 1 return result for t in range(int(input())): n = int(input()) a = list(map(int, input().split())) cnt = 0 result_ = m_sort(a) print(f\u0026#34;#{t+1} {result_[n//2]} {cnt}\u0026#34;)   퀵 정렬\n# def quick_sort(a): # if len(a) \u0026lt;= 1: # return a # pivot = a[len(a)//2] # left, right, equal =[],[],[] # for i in a: # if i \u0026lt; pivot: # left.append(i) # elif i \u0026gt; pivot: # right.append(i) # else: # equal.append(i) # return quick_sort(left) + equal + quick_sort(right) def quick_sort(a, l, r): if l \u0026lt; r: p = partition(a, l, r) quick_sort(a, l, p - 1) quick_sort(a, p + 1, r) def partition(a, l, r): pivot = (l + r) // 2 while l \u0026lt; r : while(a[l] \u0026lt; a[pivot] and l \u0026lt; r): l += 1 while(a[r] \u0026gt;= a[pivot] and l \u0026lt; r): r -= 1 if l \u0026lt; r: if l == pivot: pivot = r a[l], a[r] = a[r], a[l] A[pivot], a[r] = a[r], a[pivot] return r for t in range(int(input())): n = int(input()) a = list(map(int, input().split())) quick_sort(a, 0, n-1) print(f\u0026#34;#{t+1} {a[n//2]}\u0026#34;)  주석 처리 된 방법을 사용하면 10개중 9개 맞고 런타임에러\n   이진 탐색\nfor t in range(int(input())): n, m = map(int, input().split()) arr1 = sorted(list(map(int, input().split()))) arr2 = list(map(int, input().split())) cnt = 0 for i in arr2: a = 0 b = n-1 check = 0 while a \u0026lt;= b: c = (a+b)//2 if i \u0026gt;= arr1[c]: if i == arr1[c]: cnt+=1 break a = c + 1 if check == 1: break check = 1 elif i \u0026lt; arr1[c]: b = c - 1 if check == 2: break check = 2 print(f\u0026#34;#{t+1} {cnt}\u0026#34;)   "
+},
+{
+	"uri": "https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.14.html",
+	"title": "2020.05.14",
+	"tags": ["TIL", "20.05.14", "5월", "Algorithm"],
 	"description": "",
 	"content": "오늘 한 것 SWEA 문제풀이   병합정렬\ndef m_sort(a): if len(a) \u0026lt;= 1: return a center = len(a) // 2 right = m_sort(a[center:]) left = m_sort(a[:center]) return merge(left, right) def merge(left,right): global cnt n_right = len(right) n_left = len(left) i = 0 i_right = 0 i_left = 0 result = [0] * (n_right+n_left) if left[-1] \u0026gt; right[-1]: cnt += 1 while i_right != n_right and i_left != n_left: if right[i_right] \u0026gt;= left[i_left]: result[i] += left[i_left] i += 1 i_left += 1 else: result[i] += right[i_right] i += 1 i_right += 1 if i_left != n_left: while i_left != n_left: result[i] += left[i_left] i += 1 i_left += 1 if i_right != n_right: while i_right != n_right: result[i] += right[i_right] i += 1 i_right += 1 return result for t in range(int(input())): n = int(input()) a = list(map(int, input().split())) cnt = 0 result_ = m_sort(a) print(f\u0026#34;#{t+1} {result_[n//2]} {cnt}\u0026#34;)   퀵 정렬\n# def quick_sort(a): # if len(a) \u0026lt;= 1: # return a # pivot = a[len(a)//2] # left, right, equal =[],[],[] # for i in a: # if i \u0026lt; pivot: # left.append(i) # elif i \u0026gt; pivot: # right.append(i) # else: # equal.append(i) # return quick_sort(left) + equal + quick_sort(right) def quick_sort(a, l, r): if l \u0026lt; r: p = partition(a, l, r) quick_sort(a, l, p - 1) quick_sort(a, p + 1, r) def partition(a, l, r): pivot = (l + r) // 2 while l \u0026lt; r : while(a[l] \u0026lt; a[pivot] and l \u0026lt; r): l += 1 while(a[r] \u0026gt;= a[pivot] and l \u0026lt; r): r -= 1 if l \u0026lt; r: if l == pivot: pivot = r a[l], a[r] = a[r], a[l] A[pivot], a[r] = a[r], a[pivot] return r for t in range(int(input())): n = int(input()) a = list(map(int, input().split())) quick_sort(a, 0, n-1) print(f\u0026#34;#{t+1} {a[n//2]}\u0026#34;)  주석 처리 된 방법을 사용하면 10개중 9개 맞고 런타임에러\n   이진 탐색\nfor t in range(int(input())): n, m = map(int, input().split()) arr1 = sorted(list(map(int, input().split()))) arr2 = list(map(int, input().split())) cnt = 0 for i in arr2: a = 0 b = n-1 check = 0 while a \u0026lt;= b: c = (a+b)//2 if i \u0026gt;= arr1[c]: if i == arr1[c]: cnt+=1 break a = c + 1 if check == 1: break check = 1 elif i \u0026lt; arr1[c]: b = c - 1 if check == 2: break check = 2 print(f\u0026#34;#{t+1} {cnt}\u0026#34;)   "
 },
@@ -455,9 +1015,51 @@
 	"content": "오늘 한 것 SWEA 문제풀이   전기버스2\ndef sol(a): global cnt, result if a \u0026gt;= n: if result \u0026gt; cnt: result = cnt return if result \u0026lt; cnt: return b = a c = arr[b] for i in range(b+c, b, -1): cnt += 1 sol(i) cnt -= 1 for t in range(int(input())): arr = list(map(int, input().split())) n = arr[0] result = 987654321 cnt = 0 sol(1) print(f\u0026#34;#{t+1} {result-1}\u0026#34;)   최소생산비용\ndef sol(a, s): global result if a == n: if result \u0026gt; s: result = s return if result \u0026lt; s: return for i in range(n): if visit[i] == 0: visit[i] = 1 sol(a+1, s + arr[a][i]) visit[i] = 0 for t in range(int(input())): n = int(input()) arr = [list(map(int, input().split()))for _ in range(n)] result = 1111111111111 visit = [0] * n sol(0,0) print(f\u0026#34;#{t+1} {result}\u0026#34;)   "
 },
 {
+	"uri": "https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.15.html",
+	"title": "2020.05.15",
+	"tags": ["TIL", "20.05.15", "5월", "Algorithm"],
+	"description": "",
+	"content": "오늘 한 것 SWEA 문제풀이   전기버스2\ndef sol(a): global cnt, result if a \u0026gt;= n: if result \u0026gt; cnt: result = cnt return if result \u0026lt; cnt: return b = a c = arr[b] for i in range(b+c, b, -1): cnt += 1 sol(i) cnt -= 1 for t in range(int(input())): arr = list(map(int, input().split())) n = arr[0] result = 987654321 cnt = 0 sol(1) print(f\u0026#34;#{t+1} {result-1}\u0026#34;)   최소생산비용\ndef sol(a, s): global result if a == n: if result \u0026gt; s: result = s return if result \u0026lt; s: return for i in range(n): if visit[i] == 0: visit[i] = 1 sol(a+1, s + arr[a][i]) visit[i] = 0 for t in range(int(input())): n = int(input()) arr = [list(map(int, input().split()))for _ in range(n)] result = 1111111111111 visit = [0] * n sol(0,0) print(f\u0026#34;#{t+1} {result}\u0026#34;)   "
+},
+{
+	"uri": "https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.17.html",
+	"title": "2020.05.17",
+	"tags": ["TIL", "20.05.17", "5월", "Project"],
+	"description": "",
+	"content": "오늘 한 것 Project 구상  Q\u0026amp;A 페이지 세부 사항 조정  작성자 본인만 글 확인, 수정, 삭제를 할 수 있도록 수정 댓글 작성 가능하도록   Home 화면 구상  예쁘게 꾸미기 불가능\u0026hellip;. 디자인 도움을 받아야 함    "
+},
+{
+	"uri": "https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.18.html",
+	"title": "2020.05.18",
+	"tags": ["TIL", "20.05.18", "5월", "javascript"],
+	"description": "",
+	"content": "오늘 배운 것 Javascript   eventlistener\n예)\n\u0026lt;script\u0026gt; const myButton = document.querySelector(\u0026#39;#myButton\u0026#39;) // 요소.addEventListener(\u0026#39;이벤트\u0026#39;, 이벤트 발생시 실행할 함수)  myButton.addEventListener(\u0026#39;click\u0026#39;, confirmMessage) myButton.addEventListener(\u0026#39;click\u0026#39;, function(event) { console.log(event) }) ) \u0026lt;/script\u0026gt;   이벤트 요소 예\n click: 마우스 클릭 mouseover: 마우스 포인터가 요소 위에 mouseout: 마우스 포인터가 요소 밖으로 keypress: 누른 키의 문자가 입력됐을 때 keydown: 키를 처음 눌렀을 때 keyup: 키를 뗄 때 load: 페이지 로드가 완료 되었을 때 scroll: 페이지를 위아래로 스크롤 할 때 change: 선택 상자, 체크박스, 라디오 버튼의 상태가 변경되었을 때    "
+},
+{
+	"uri": "https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.19.html",
+	"title": "2020.05.19",
+	"tags": ["TIL", "20.05.19", "5월", "Javascript"],
+	"description": "",
+	"content": "오늘 배운 것 AJAX   axios\n\u0026lt;script src=\u0026quot;https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js\u0026quot;\u0026gt;\u0026lt;/script\u0026gt; 추가\n\u0026lt;script\u0026gt; axios.get(\u0026#39;주소\u0026#39;) .then(function(response){ // 성공했을 때  return response.data }) .then(response =\u0026gt; {\t// arrow함수로 표현  console.log(response) }) .catch(function(error){ // 실패했을 때  return error }) \u0026lt;/script\u0026gt;   Django와 연결해서   Django Template에서 좋아요와 같은 기능에서 필요없는 반복을 줄일 수 있음\n  먼저 수정이 필요한 html에서 반복되는 부분을 js로 처리\n{% for article in articles %} \u0026lt;h4\u0026gt;제목: {{ article.title }}\u0026lt;/h4\u0026gt; \u0026lt;p\u0026gt;내용: {{ article.content }}\u0026lt;/p\u0026gt; {% if user in article.like_users.all %} \u0026lt;i class=\u0026#34;fas fa-heart fa-lg like-button\u0026#34; style=\u0026#34;color:crimson\u0026#34; data-id=\u0026#34;{{ article.pk }}\u0026#34;\u0026gt;\u0026lt;/i\u0026gt; {% else %} \u0026lt;i class=\u0026#34;fas fa-heart fa-lg like-button\u0026#34; style=\u0026#34;color:black\u0026#34; data-id=\u0026#34;{{ article.pk }}\u0026#34;\u0026gt;\u0026lt;/i\u0026gt; {% endif %} \u0026lt;span id=\u0026#34;like-count-{{ article.pk }}\u0026#34;\u0026gt;{{ article.like_users.all|length }} 명이 이 글을 좋아합니다.\u0026lt;/span\u0026gt; \u0026lt;hr\u0026gt; {% endfor %} \u0026lt;a href=\u0026#34;{% url \u0026#39;articles:create\u0026#39; %}\u0026#34;\u0026gt;CREATE\u0026lt;/a\u0026gt; \u0026lt;script\u0026gt; // 좋아요 버튼 모두 가져오기  const likeButtonList = document.querySelectorAll(\u0026#39;.like-button\u0026#39;) // 좋아요 버튼 이벤트리스너 달기  likeButtonList.forEach(likeButton =\u0026gt; { likeButton.addEventListener(\u0026#39;click\u0026#39;, function(e) { // 좋아요 버튼 구분하기 위해 Article ID(data-id) 가져오기  const articleId = e.target.dataset.id // 좋아요 변경  axios.get(`/articles/${articleId}/like/`) .then(response =\u0026gt; { const likeCount = response.data.count document.querySelector(`#like-count-${articleId}`).innerText = `${likeCount}명이 이 글을 좋아합니다.` if (response.data.liked === true){ e.target.style.color = \u0026#39;crimson\u0026#39; } else { e.target.style.color = \u0026#39;black\u0026#39; } }) .catch(err =\u0026gt; { console.log(err) }) }) }) \u0026lt;/script\u0026gt;   views.py 도 수정\nfrom django.http import JsonResponse def like(request, article_pk): user = request.user article = get_object_or_404(Article, pk=article_pk) if article.like_users.filter(pk=user.pk).exists(): article.like_users.remove(user) liked = False else: article.like_users.add(user) liked = True data = { \u0026#39;liked\u0026#39;: liked, \u0026#39;count\u0026#39;: article.like_users.count() } return JsonResponse(data)   "
+},
+{
+	"uri": "https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.20.html",
+	"title": "2020.05.20",
+	"tags": ["TIL", "20.05.20", "5월", "Project", "Javascript", "Django"],
+	"description": "",
+	"content": "오늘 한 것 간단한 PJT 구현 과정   Project 기본 설정 및 Model 작성 Data 가져오기 Javascript를 이용한 목록 구성 목록 랜덤 추천   1. Project 기본 설정 및 Model 작성  App의 이름을 accounts와 movies로 설정 한 후, 기본 setting을 변경 하고, 제공된 명세에 따라 Model 작성 후 migrations와 migrate를 했음.\n 2. JSON 파일의 Data 가져오기  JSON 파일을 DB에 저장하기 위해서 python manage.py loaddata moviedata.json 이용.\n위에서 만든 모델의 필드와 json파일의 필드가 같아야 완료 가능함.\n 3. Javascript를 이용하여 목록 구성  추천 목록과 500개가 넘는 전체 목록을 구성할 때 Javascript를 이용.\n영화 포스터가 나오도록 for 문을 돌리고 클릭시 modal로 영화 정보를 볼 수 있도록 만들었음.\n  전체 영화 목록의 html  {% extends \u0026#39;base.html\u0026#39; %} {% block content %} \u0026lt;!-- 영화 포스터로 목록을 만들기 위한 for문 --\u0026gt; \u0026lt;div class=\u0026#34;container poster-block\u0026#34;\u0026gt; {% for movie in movies %} \u0026lt;img src=\u0026#34;https://image.tmdb.org/t/p/w92/{{ movie.poster_path }}\u0026#34; class=\u0026#34;movie-poster\u0026#34; data-id=\u0026#34;{{movie.pk}}\u0026#34; data-toggle=\u0026#34;modal\u0026#34; data-target=\u0026#34;#ModalCenter\u0026#34;\u0026gt; {% endfor %} \u0026lt;/div\u0026gt; \u0026lt;span id=\u0026#34;user_id\u0026#34; class=\u0026#34;text-dark\u0026#34;\u0026gt;{{ user.pk }}\u0026lt;/span\u0026gt; \u0026lt;!-- Modal 부분 --\u0026gt; \u0026lt;div class=\u0026#34;modal fade\u0026#34; id=\u0026#34;ModalCenter\u0026#34; tabindex=\u0026#34;-1\u0026#34; role=\u0026#34;dialog\u0026#34; aria-labelledby=\u0026#34;ModalCenterTitle\u0026#34; aria-hidden=\u0026#34;true\u0026#34;\u0026gt; \u0026lt;div class=\u0026#34;modal-dialog modal-dialog-centered\u0026#34; role=\u0026#34;document\u0026#34;\u0026gt; \u0026lt;div class=\u0026#34;modal-content\u0026#34; style=\u0026#34;opacity: 0.95\u0026#34;\u0026gt; \u0026lt;div class=\u0026#34;modal-header d-flex\u0026#34;\u0026gt; \u0026lt;h5 class=\u0026#34;modal-title titletitle\u0026#34; id=\u0026#34;ModalCenterTitle\u0026#34;\u0026gt;\u0026lt;/h5\u0026gt; \u0026lt;button type=\u0026#34;button\u0026#34; class=\u0026#34;close ml-0\u0026#34; data-dismiss=\u0026#34;modal\u0026#34; aria-label=\u0026#34;Close\u0026#34;\u0026gt; \u0026lt;span aria-hidden=\u0026#34;true\u0026#34;\u0026gt;\u0026amp;times;\u0026lt;/span\u0026gt; \u0026lt;/button\u0026gt; \u0026lt;/div\u0026gt; \u0026lt;div class=\u0026#34;modal-body bodybody container justify-content-center\u0026#34;\u0026gt; \u0026lt;/div\u0026gt; \u0026lt;div class=\u0026#34;modal-footer\u0026#34;\u0026gt; \u0026lt;i class=\u0026#34;fas fa-heart fa-lg like-button\u0026#34; style=\u0026#34;color: black;\u0026#34;\u0026gt;\u0026lt;/i\u0026gt; \u0026lt;span id=\u0026#34;like-count-span\u0026#34;\u0026gt;\u0026lt;/span\u0026gt; \u0026lt;button type=\u0026#34;button\u0026#34; class=\u0026#34;btn btn-secondary\u0026#34; data-dismiss=\u0026#34;modal\u0026#34;\u0026gt;Close\u0026lt;/button\u0026gt; \u0026lt;/div\u0026gt; \u0026lt;/div\u0026gt; \u0026lt;/div\u0026gt; \u0026lt;/div\u0026gt; \u0026lt;script\u0026gt; // 번호로 저장되어 있는 장르를 영어로 가져오기 위해 리스트 작성  const movieGenreList = { 12:\u0026#34;Adventure\u0026#34;, 14:\u0026#34;Fantasy\u0026#34;, 16:\u0026#34;Animation\u0026#34;, 18:\u0026#34;Drama\u0026#34;, 27:\u0026#34;Horror\u0026#34;, 28:\u0026#34;Action\u0026#34;, 35:\u0026#34;Comedy\u0026#34;, 36:\u0026#34;History\u0026#34;, 37:\u0026#34;Western\u0026#34;, 53:\u0026#34;Thriller\u0026#34;, 80:\u0026#34;Crime\u0026#34;, 99:\u0026#34;Documentary\u0026#34;, 878:\u0026#34;Science Fiction\u0026#34;, 9648:\u0026#34;Mystery\u0026#34;, 10402:\u0026#34;Music\u0026#34;, 10749:\u0026#34;Romance\u0026#34;, 10751:\u0026#34;Family\u0026#34;, 10752:\u0026#34;War\u0026#34;, 10770:\u0026#34;TV Movie\u0026#34; } const userIdSpan = document.querySelector(\u0026#34;#user_id\u0026#34;) // 좋아요 기능에서 유저 판별을 통해 빨간색, 검은색을 넣기 위해 Userid를 가져오는 queryselector  const userId = userIdSpan.innerText // 가져온 queryselector에서 필요한 id만 추출  const moviePosterList = document.querySelectorAll(\u0026#34;.movie-poster\u0026#34;) // 영화 포스터를 넣기 위해 모든 .movie-poster를 select  const movieTitleH5 = document.querySelector(\u0026#34;.titletitle\u0026#34;) // 영화 제목을 넣기 위해  const likeButton = document.querySelector(\u0026#34;.like-button\u0026#34;) const imgSection = document.createElement(\u0026#39;img\u0026#39;) const posterBlock = document.querySelector(\u0026#34;.poster-block\u0026#34;) const overView = document.createElement(\u0026#39;p\u0026#39;) const makingHr = document.createElement(\u0026#39;hr\u0026#39;) const makingHr1 = document.createElement(\u0026#39;hr\u0026#39;) const movieGenre = document.createElement(\u0026#39;p\u0026#39;) moviePosterList.forEach(moviePoster =\u0026gt; { moviePoster.addEventListener(\u0026#39;click\u0026#39;, function(e) { const posterData = e.target.dataset.id axios.get(`/movies/${posterData}`) .then(res =\u0026gt; { likeButton.style.color = \u0026#34;black\u0026#34; const movieTitle = res.data.title const movieRealTitle = res.data.original_title const backGround = document.querySelector(\u0026#34;.modal-backdrop\u0026#34;) //뒷 배경  const movieBackground = res.data.backdrop_path const movieRank = res.data.vote_average const overViewContent = res.data.overview const genre = res.data.genres movieGenre.innerText = \u0026#34;장르: \u0026#34; genre.forEach(aGenre =\u0026gt; { if (aGenre in movieGenreList){ movieGenre.innerText += `${movieGenreList[aGenre]}/ ` } }) overView.innerText = `${overViewContent}` backGround.style.backgroundImage = `url(\u0026#39;https://image.tmdb.org/t/p/original${movieBackground}\u0026#39;)` backGround.style.backgroundSize = \u0026#34;cover\u0026#34; backGround.style.opacity=\u0026#34;0.9\u0026#34; const likeUsers = res.data.like_users movieTitleH5.innerText = `${movieTitle}(${movieRealTitle})` const modalBody = document.querySelector(\u0026#34;.bodybody\u0026#34;) modalBody.appendChild(movieGenre) const moviePoster = res.data.poster_path imgSection.setAttribute(\u0026#39;src\u0026#39;, `https://image.tmdb.org/t/p/w342/${moviePoster}`) modalBody.appendChild(imgSection) imgSection.setAttribute(\u0026#39;class\u0026#39;, \u0026#39;mb-2 col-12\u0026#39;) modalBody.appendChild(makingHr) modalBody.appendChild(overView) modalBody.appendChild(makingHr1) const likeCount = res.data.like_users.length const likePeople = document.querySelector(\u0026#34;#like-count-span\u0026#34;) likePeople.innerText = `${likeCount}` for (let i = 0; i \u0026lt; likeCount; i++){ if (likeUsers[i] == userId){ likeButton.style.color = \u0026#34;crimson\u0026#34; break } else { likeButton.style.color = \u0026#34;black\u0026#34; } } // 좋아요 버튼  likeButton.addEventListener(\u0026#39;click\u0026#39;, function(e) { e.stopImmediatePropagation() axios.get(`${posterData}/like/`) .then(response =\u0026gt; { const likeCount1 = response.data.count const likePeople1 = document.querySelector(\u0026#34;#like-count-span\u0026#34;) likePeople1.innerText = `${likeCount1}` if (response.data.liked){ likeButton.style.color=\u0026#34;crimson\u0026#34; } else { likeButton.style.color=\u0026#34;black\u0026#34; } }) .catch(err =\u0026gt; { console.log(err) }) }) }) }) }) \u0026lt;/script\u0026gt; {% endblock %} views.py  from django.shortcuts import render, redirect, get_object_or_404 from django.http import JsonResponse from django.contrib.auth.decorators import login_required from .models import Movie, Genre from .serializers import * from rest_framework.response import Response from rest_framework.decorators import api_view # Create your views here. def movie_list(request): genres = Genre.objects.all() movies = Movie.objects.order_by(\u0026#39;-popularity\u0026#39;) context = { \u0026#39;movies\u0026#39;: movies, \u0026#39;genres\u0026#39;: genres, } return render(request, \u0026#39;movies/movie_list.html\u0026#39;, context) @api_view([\u0026#39;GET\u0026#39;]) def movie_detail(request, movie_pk): movie = get_object_or_404(Movie, pk=movie_pk) serializer = MovieSerializer(movie) return Response(serializer.data) # modal에서 가져올 data를 json으로 받기 위해 serializer 이용  @login_required @api_view([\u0026#39;GET\u0026#39;]) def like(request, movie_pk): user = request.user movie = get_object_or_404(Movie, pk=movie_pk) serializer =MovieSerializer(movie) if movie.like_users.filter(pk=user.pk).exists(): movie.like_users.remove(user) liked = False else: movie.like_users.add(user) liked = True data = { \u0026#39;liked\u0026#39;: liked, \u0026#39;count\u0026#39;: movie.like_users.count(), \u0026#39;movie\u0026#39;: serializer.data } return JsonResponse(data) # 랜덤으로 영화를 가져오기 위해 def recommend(request): movies = Movie.objects.order_by(\u0026#39;?\u0026#39;)[:12] context = { \u0026#39;movies\u0026#39;:movies } return render(request,\u0026#39;movies/movie_recommend.html\u0026#39;, context) "
+},
+{
 	"uri": "https://dongyeopgu.github.io/algorithm/d4~6/20.05.21.html",
 	"title": "2020.05.21",
 	"tags": ["20.05.21", "5월", "Algorithm"],
+	"description": "",
+	"content": "오늘 한 것 SWEA 문제풀이   연산\nfrom collections import deque def sol(start, end): check = {} check[start] = end while q: num, cnt = q.popleft() if num == end: return cnt if num \u0026gt; 1000000 or num \u0026lt;= 0: continue for i in range(4): a = 0 if i == 0: a = num + 1 if a not in check: q.append((a, cnt+1)) check[a] = 1 elif i == 1: a = num - 1 if a not in check: q.append((a, cnt+1)) check[a] = 1 elif i == 2: a = num * 2 if a not in check: q.append((a, cnt+1)) check[a] = 1 elif i == 3: a = num - 10 if a not in check: q.append((a, cnt+1)) check[a] = 1 for t in range(int(input())): n, m = map(int, input().split()) q = deque() q.append([n, 0]) # 시작과 카운트 입력 result = sol(n, m) print(f\u0026#34;#{t+1} {result}\u0026#34;)   그룹나누기\ndef search(a): if a == group[a]: return a else: return search(group[a]) def sol(a, b): group[search(b)] = search(a) for t in range(int(input())): n, m = map(int, input().split()) arr = list(map(int, input().split())) group = [] for i in range(1, n+1): group.append(i) group.insert(0,0) # print(group) for i in range(m): start = arr[2*i] end = arr[2*i+1] sol(start, end) result = [] for i in range(len(group)): result.append(search(i)) print(f\u0026#34;#{t+1} {len(set(result))-1}\u0026#34;)   "
+},
+{
+	"uri": "https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.21.html",
+	"title": "2020.05.21",
+	"tags": ["TIL", "20.05.21", "5월", "Algorithm"],
 	"description": "",
 	"content": "오늘 한 것 SWEA 문제풀이   연산\nfrom collections import deque def sol(start, end): check = {} check[start] = end while q: num, cnt = q.popleft() if num == end: return cnt if num \u0026gt; 1000000 or num \u0026lt;= 0: continue for i in range(4): a = 0 if i == 0: a = num + 1 if a not in check: q.append((a, cnt+1)) check[a] = 1 elif i == 1: a = num - 1 if a not in check: q.append((a, cnt+1)) check[a] = 1 elif i == 2: a = num * 2 if a not in check: q.append((a, cnt+1)) check[a] = 1 elif i == 3: a = num - 10 if a not in check: q.append((a, cnt+1)) check[a] = 1 for t in range(int(input())): n, m = map(int, input().split()) q = deque() q.append([n, 0]) # 시작과 카운트 입력 result = sol(n, m) print(f\u0026#34;#{t+1} {result}\u0026#34;)   그룹나누기\ndef search(a): if a == group[a]: return a else: return search(group[a]) def sol(a, b): group[search(b)] = search(a) for t in range(int(input())): n, m = map(int, input().split()) arr = list(map(int, input().split())) group = [] for i in range(1, n+1): group.append(i) group.insert(0,0) # print(group) for i in range(m): start = arr[2*i] end = arr[2*i+1] sol(start, end) result = [] for i in range(len(group)): result.append(search(i)) print(f\u0026#34;#{t+1} {len(set(result))-1}\u0026#34;)   "
 },
@@ -469,9 +1071,23 @@
 	"content": "오늘 한 것 SWEA 문제풀이   최소 신장 트리\ndef prim(a): key = [float(\u0026#39;inf\u0026#39;)for _ in range(v+1)] pi = [None for _ in range(v+1)] visit = [0 for _ in range(v+1)] key[0] = 0 for _ in range(v+1): min_key =float(\u0026#39;inf\u0026#39;) start = -1 for i in range(v+1): if key[i] \u0026lt; min_key and not visit[i]: min_key = key[i] start = i visit[start] = 1 for V, W in a[start]: if W \u0026lt; key[V] and not visit[V]: key[V] = W pi[V] = start return sum(key) for t in range(int(input())): v, e = map(int, input().split()) graph = {} for _ in range(e): n1, n2, weight = map(int, input().split()) if n1 not in graph: graph[n1] = set() if n2 not in graph: graph[n2] = set() graph[n1].add((n2, weight)) graph[n2].add((n1, weight)) print(f\u0026#34;#{t+1} {prim(graph)}\u0026#34;)   최소 이동 거리\ndef dis(): key = [float(\u0026#39;inf\u0026#39;)for _ in range(n+1)] visit = [0 for _ in range(n+1)] check = set() check.add(0) key[0] = 0 while True: min_key = float(\u0026#39;inf\u0026#39;) s = -1 for i in check: if key[i] \u0026lt; min_key: min_key = key[i] s = i visit[s] = 1 check.remove(s) if s == n: return key[s] for e, w in l[s]: if key[e] \u0026gt; key[s] + w and not visit[e]: key[e] = key[s] + w check.add(e) for t in range(int(input())): n, e = map(int, input().split()) l = {} for _ in range(e): s, e, w = map(int, input().split()) if s not in l: l[s] = [(e, w)] else: l[s] += [(e, w)] result = dis() print(f\u0026#34;#{t+1} {result}\u0026#34;)   "
 },
 {
+	"uri": "https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.22.html",
+	"title": "2020.05.22",
+	"tags": ["TIL", "20.05.22", "5월", "Algorithm"],
+	"description": "",
+	"content": "오늘 한 것 SWEA 문제풀이   최소 신장 트리\ndef prim(a): key = [float(\u0026#39;inf\u0026#39;)for _ in range(v+1)] pi = [None for _ in range(v+1)] visit = [0 for _ in range(v+1)] key[0] = 0 for _ in range(v+1): min_key =float(\u0026#39;inf\u0026#39;) start = -1 for i in range(v+1): if key[i] \u0026lt; min_key and not visit[i]: min_key = key[i] start = i visit[start] = 1 for V, W in a[start]: if W \u0026lt; key[V] and not visit[V]: key[V] = W pi[V] = start return sum(key) for t in range(int(input())): v, e = map(int, input().split()) graph = {} for _ in range(e): n1, n2, weight = map(int, input().split()) if n1 not in graph: graph[n1] = set() if n2 not in graph: graph[n2] = set() graph[n1].add((n2, weight)) graph[n2].add((n1, weight)) print(f\u0026#34;#{t+1} {prim(graph)}\u0026#34;)   최소 이동 거리\ndef dis(): key = [float(\u0026#39;inf\u0026#39;)for _ in range(n+1)] visit = [0 for _ in range(n+1)] check = set() check.add(0) key[0] = 0 while True: min_key = float(\u0026#39;inf\u0026#39;) s = -1 for i in check: if key[i] \u0026lt; min_key: min_key = key[i] s = i visit[s] = 1 check.remove(s) if s == n: return key[s] for e, w in l[s]: if key[e] \u0026gt; key[s] + w and not visit[e]: key[e] = key[s] + w check.add(e) for t in range(int(input())): n, e = map(int, input().split()) l = {} for _ in range(e): s, e, w = map(int, input().split()) if s not in l: l[s] = [(e, w)] else: l[s] += [(e, w)] result = dis() print(f\u0026#34;#{t+1} {result}\u0026#34;)   "
+},
+{
 	"uri": "https://dongyeopgu.github.io/algorithm/d4~6/20.05.23.html",
 	"title": "2020.05.23",
 	"tags": ["20.05.23", "5월", "Algorithm"],
+	"description": "",
+	"content": "오늘 한 것 SWEA 문제풀이   7829 보물왕 태혁\n#include \u0026lt;stdio.h\u0026gt; int main(void) { int test_case; scanf(\u0026#34;%d\u0026#34;, \u0026amp;test_case); for (int t = 1; t \u0026lt;= test_case; t++){ int n, x; int max = -1, min = 100001; scanf(\u0026#34;%d\u0026#34;, \u0026amp;n); for (int i = 0; i \u0026lt; n; i++) { scanf(\u0026#34;%d\u0026#34;, \u0026amp;x); if (max \u0026lt; x) { max = x; } if (min \u0026gt; x) { min = x; } } printf(\u0026#34;#%d %d\\n\u0026#34;, t, min * max); } return 0; }    "
+},
+{
+	"uri": "https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.23.html",
+	"title": "2020.05.23",
+	"tags": ["TIL", "20.05.23", "5월", "Algorithm"],
 	"description": "",
 	"content": "오늘 한 것 SWEA 문제풀이   7829 보물왕 태혁\n#include \u0026lt;stdio.h\u0026gt; int main(void) { int test_case; scanf(\u0026#34;%d\u0026#34;, \u0026amp;test_case); for (int t = 1; t \u0026lt;= test_case; t++){ int n, x; int max = -1, min = 100001; scanf(\u0026#34;%d\u0026#34;, \u0026amp;n); for (int i = 0; i \u0026lt; n; i++) { scanf(\u0026#34;%d\u0026#34;, \u0026amp;x); if (max \u0026lt; x) { max = x; } if (min \u0026gt; x) { min = x; } } printf(\u0026#34;#%d %d\\n\u0026#34;, t, min * max); } return 0; }    "
 },
@@ -483,9 +1099,44 @@
 	"content": "오늘 한 것 SWEA 문제풀이   괄호 짝짓기\n#include \u0026lt;stdio.h\u0026gt; char arr[100001]; int n; bool solution(char* a, int* length) { int l = *length; if (a[l] == \u0026#39;)\u0026#39;) { if (a[l - 1] == \u0026#39;(\u0026#39;) { a[l - 1] = NULL; a[l] = NULL; *length -= 2; return true; } else return false; } if (a[l] == \u0026#39;]\u0026#39;) { if (a[l - 1] == \u0026#39;[\u0026#39;) { a[l - 1] = NULL; a[l] = NULL; *length -= 2; return true; } else return false; } if (a[l] == \u0026#39;}\u0026#39;) { if (a[l - 1] == \u0026#39;{\u0026#39;) { a[l - 1] = NULL; a[l] = NULL; *length -= 2; return true; } else return false; } if (a[l] == \u0026#39;\u0026gt;\u0026#39;) { if (a[l - 1] == \u0026#39;\u0026lt;\u0026#39;) { a[l - 1] = NULL; a[l] = NULL; *length -= 2; return true; } else return false; } return true; } int main() { for (int t = 1; t \u0026lt;= 10; t++) { int result = 1; int length = 0; scanf(\u0026#34;%d\u0026#34;, \u0026amp;n); for (int i = 1; i \u0026lt;= n; i++) { length++; scanf(\u0026#34; %1c\u0026#34;, \u0026amp;arr[length]); if (solution(arr, \u0026amp;length) == false) { result = 0; } } printf(\u0026#34;#%d %d\\n\u0026#34;, t, result); } }   "
 },
 {
+	"uri": "https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.24.html",
+	"title": "2020.05.24",
+	"tags": ["TIL", "20.05.24", "5월", "Algorithm"],
+	"description": "",
+	"content": "오늘 한 것 SWEA 문제풀이   괄호 짝짓기\n#include \u0026lt;stdio.h\u0026gt; char arr[100001]; int n; bool solution(char* a, int* length) { int l = *length; if (a[l] == \u0026#39;)\u0026#39;) { if (a[l - 1] == \u0026#39;(\u0026#39;) { a[l - 1] = NULL; a[l] = NULL; *length -= 2; return true; } else return false; } if (a[l] == \u0026#39;]\u0026#39;) { if (a[l - 1] == \u0026#39;[\u0026#39;) { a[l - 1] = NULL; a[l] = NULL; *length -= 2; return true; } else return false; } if (a[l] == \u0026#39;}\u0026#39;) { if (a[l - 1] == \u0026#39;{\u0026#39;) { a[l - 1] = NULL; a[l] = NULL; *length -= 2; return true; } else return false; } if (a[l] == \u0026#39;\u0026gt;\u0026#39;) { if (a[l - 1] == \u0026#39;\u0026lt;\u0026#39;) { a[l - 1] = NULL; a[l] = NULL; *length -= 2; return true; } else return false; } return true; } int main() { for (int t = 1; t \u0026lt;= 10; t++) { int result = 1; int length = 0; scanf(\u0026#34;%d\u0026#34;, \u0026amp;n); for (int i = 1; i \u0026lt;= n; i++) { length++; scanf(\u0026#34; %1c\u0026#34;, \u0026amp;arr[length]); if (solution(arr, \u0026amp;length) == false) { result = 0; } } printf(\u0026#34;#%d %d\\n\u0026#34;, t, result); } }   "
+},
+{
+	"uri": "https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.25.html",
+	"title": "2020.05.25",
+	"tags": ["TIL", "20.05.25", "5월", "Vue.js"],
+	"description": "",
+	"content": "오늘 배운 것 Vue.js  body태그에 \u0026lt;script src=\u0026quot;https://cdn.jsdelivr.net/npm/vue/dist/vue.js\u0026quot;\u0026gt;\u0026lt;/script\u0026gt; Vue.js cdn을 추가하여 사용\n 1. Declarative Rendering(선언적 렌더링) \u0026lt;div id=\u0026#34;app\u0026#34;\u0026gt; {{ message }} \u0026lt;/div\u0026gt; \u0026lt;!-- vue cdn --\u0026gt; \u0026lt;script src=\u0026#34;https://cdn.jsdelivr.net/npm/vue/dist/vue.js\u0026#34;\u0026gt;\u0026lt;/script\u0026gt; \u0026lt;script\u0026gt; const app = new Vue({ el: \u0026#39;#app\u0026#39;, data: { message: \u0026#39;message\u0026#39; } }) \u0026lt;/script\u0026gt; 2. 조건문(if) \u0026lt;div id=\u0026#34;using-if\u0026#34;\u0026gt; \u0026lt;p v-if=\u0026#34;check\u0026#34;\u0026gt;안녕\u0026lt;/p\u0026gt; \u0026lt;!-- 기본적인 자바스크립트 표현 가능 --\u0026gt; \u0026lt;p v-if=\u0026#34;check===\u0026#39;안녕\u0026#39;\u0026#34;\u0026gt;안녕\u0026lt;/p\u0026gt; \u0026lt;p v-else-if=\u0026#34;check===\u0026#39;반가워\u0026#39;\u0026#34;\u0026gt;반가워\u0026lt;/p\u0026gt; \u0026lt;p v-else\u0026gt;안녕 반가워\u0026lt;/p\u0026gt; \u0026lt;!-- false일 때만 보여주기 --\u0026gt; \u0026lt;p v-if=\u0026#34;!check\u0026#34;\u0026gt;False일때 나타내기\u0026lt;/p\u0026gt; \u0026lt;/div\u0026gt; \u0026lt;!-- vue cdn --\u0026gt; \u0026lt;script src=\u0026#34;https://cdn.jsdelivr.net/npm/vue/dist/vue.js\u0026#34;\u0026gt;\u0026lt;/script\u0026gt; \u0026lt;script\u0026gt; const app = new Vue({ el: \u0026#39;#using-if\u0026#39;, data: { check: \u0026#39;안녕\u0026#39;, }, }) \u0026lt;/script\u0026gt; 3. 반복문(for) \u0026lt;div id=\u0026#34;using-for\u0026#34;\u0026gt; \u0026lt;ol class=\u0026#34;check-list\u0026#34;\u0026gt; \u0026lt;!-- class는 지금 여기서 의미 없음--\u0026gt; \u0026lt;li v-for=\u0026#34;check in checkList\u0026#34;\u0026gt;{{check}}\u0026lt;/li\u0026gt; \u0026lt;/ol\u0026gt; \u0026lt;ol\u0026gt; \u0026lt;!-- 배열안의 객체를 사용 --\u0026gt; \u0026lt;li v-for=\u0026#34;check in checkList2\u0026#34;\u0026gt;{{check.content}}\u0026lt;/li\u0026gt; \u0026lt;/ol\u0026gt; \u0026lt;/div\u0026gt; \u0026lt;!-- vue cdn --\u0026gt; \u0026lt;script src=\u0026#34;https://cdn.jsdelivr.net/npm/vue/dist/vue.js\u0026#34;\u0026gt;\u0026lt;/script\u0026gt; \u0026lt;script\u0026gt; const app = new Vue({ el: \u0026#39;#using-for\u0026#39;, data: { checkList: [\u0026#39;첫번째\u0026#39;,\u0026#39;두번째\u0026#39;,\u0026#39;세번째\u0026#39;], checkList2: [ {content: \u0026#39;첫번째\u0026#39;}, {content: \u0026#39;두번째\u0026#39;}, {content: \u0026#39;세번째\u0026#39;}, ], }, }) \u0026lt;/script\u0026gt; 4. v-on 사용  v-on은 이벤트 발동시, methods에 정의된 함수를 호출  \u0026lt;div id=\u0026#39;vue-directive-practice\u0026#39;\u0026gt; \u0026lt;button v-on:click=\u0026#34;reversedMessage\u0026#34;\u0026gt;메세지 뒤집기\u0026lt;/button\u0026gt; \u0026lt;br\u0026gt; \u0026lt;!-- 자바스크립트에서 사용 가능한 모든 이벤트도 가능 --\u0026gt; \u0026lt;!-- event 객체가 필요한 경우, $event로 받아올 수 있다. --\u0026gt; \u0026lt;br\u0026gt; \u0026lt;!-- v-on 축약형 --\u0026gt; \u0026lt;!-- ex) @click, @mouseover, @keydown --\u0026gt; {{ message }} \u0026lt;button @click=\u0026#34;reversedMessage\u0026#34;\u0026gt;메세지 뒤집기2\u0026lt;/button\u0026gt; \u0026lt;br\u0026gt; \u0026lt;/div\u0026gt; \u0026lt;!-- vue cdn --\u0026gt; \u0026lt;script src=\u0026#34;https://cdn.jsdelivr.net/npm/vue/dist/vue.js\u0026#34;\u0026gt;\u0026lt;/script\u0026gt; \u0026lt;script\u0026gt; const app = new Vue({ el: \u0026#39;#vue-directive-practice\u0026#39;, data: { message: \u0026#39;Click!!\u0026#39;, }, methods: { // arrow function 사용 X  reversedMessage: function(){ this.message = this.message.split(\u0026#39;\u0026#39;).reverse().join(\u0026#39;\u0026#39;) }, }, }) \u0026lt;/script\u0026gt; 5. v-bind 사용 \u0026lt;div id=\u0026#34;bind\u0026#34;\u0026gt; \u0026lt;a v-bind:href=\u0026#34;google\u0026#34;\u0026gt;Google Link\u0026lt;/a\u0026gt; \u0026lt;!--축약형--\u0026gt; \u0026lt;a :href=\u0026#34;google\u0026#34;\u0026gt;Google Link\u0026lt;/a\u0026gt; \u0026lt;/div\u0026gt; \u0026lt;!-- vue cdn --\u0026gt; \u0026lt;script src=\u0026#34;https://cdn.jsdelivr.net/npm/vue/dist/vue.js\u0026#34;\u0026gt;\u0026lt;/script\u0026gt; \u0026lt;script\u0026gt; const app = new Vue({ el: \u0026#39;#bind\u0026#39;, data: { google: \u0026#39;https://www.google.com\u0026#39;, }, }) \u0026lt;/script\u0026gt; 6. v-model 양방향 바인딩 \u0026lt;div id=\u0026#34;using-v-model\u0026#34;\u0026gt; {{ userInput }} \u0026lt;input type=\u0026#34;text\u0026#34; v-model=\u0026#34;userInput\u0026#34;\u0026gt; \u0026lt;br\u0026gt; \u0026lt;!-- v-model 아시안 문자 입력 이슈 --\u0026gt; {{ userInput }} \u0026lt;input type=\u0026#34;text\u0026#34; @input=\u0026#34;setMessage\u0026#34;\u0026gt; \u0026lt;/div\u0026gt; \u0026lt;!-- vue cdn --\u0026gt; \u0026lt;script src=\u0026#34;https://cdn.jsdelivr.net/npm/vue/dist/vue.js\u0026#34;\u0026gt;\u0026lt;/script\u0026gt; \u0026lt;script\u0026gt; const app = new Vue({ el: \u0026#39;#using-v-model\u0026#39;, data: { userInput: \u0026#39;\u0026#39;, }, methods: { setMessage: function(event){ this.userInput = event.target.value }, } }) \u0026lt;/script\u0026gt; "
+},
+{
+	"uri": "https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.26.html",
+	"title": "2020.05.26",
+	"tags": ["TIL", "20.05.26", "5월", "Vue.js"],
+	"description": "",
+	"content": "오늘 배운 것 Vue.js   computed와 watched 비교\n computed  단순히 data로부터 계산된 값을 출력하기 위한 속성 계산해야 하는 목표 데이터를 정의하는 방식으로 해당 속성이 종속된 대상이 변경될 때만 함수를 실행 소프트웨어 공학에서 얘기하는 \u0026lsquo;선언형(무엇을 할 지) 프로그래밍\u0026rsquo; 방식   watched  특정한 데이터의 변경을 관찰하고 이어서 일어날 동작(로직)을 설정하기 위한 속성 감시할 데이터를 지정하고 그 데이터가 바뀌면 이런 함수를 실행하라는 방식 소프트웨어 공학에서 얘기하는 \u0026lsquo;명령형(어떻게 할 지) 프로그래밍\u0026rsquo; 방식 비동기 로직을 수행할 때 사용한다.      로딩 화면 띄우기\n https://projects.lukehaas.me/css-loaders/ 에서 css 가져와 사용\n   html\n\u0026lt;style\u0026gt; ...복사한 코드... \u0026lt;/style\u0026gt; \u0026lt;body\u0026gt; \u0026lt;div id=\u0026#34;app\u0026#34;\u0026gt; \u0026lt;!--예를 들어 이미지 클릭할 때 --\u0026gt; \u0026lt;img src=\u0026#34;\u0026#34; @click=\u0026#34;\u0026lt;function이름\u0026gt;\u0026#34;\u0026gt; \u0026lt;/div\u0026gt; \u0026lt;div class=\u0026#34;loader\u0026#34; v-if=\u0026#34;isLoading\u0026#34;\u0026gt;\u0026lt;/div\u0026gt; \u0026lt;!--vue cdn--\u0026gt; \u0026lt;script src=\u0026#34;https://cdn.jsdelivr.net/npm/vue/dist/vue.js\u0026#34;\u0026gt;\u0026lt;/script\u0026gt; \u0026lt;!--axios cdn--\u0026gt; \u0026lt;script src=\u0026#34;https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js\u0026#34;\u0026gt;\u0026lt;/script\u0026gt; \u0026lt;script\u0026gt; const app = new Vue({ el: \u0026#39;#app\u0026#39;, data: { advice: \u0026#39;\u0026#39;, isLoading: false, }, methods: { getAdvice: function () { this.isLoading = true axios.get(\u0026#39;https://api.adviceslip.com/advice\u0026#39;) .then(res =\u0026gt; { this.advice = res.data.slip.advice this.isLoading = false }) } } }) \u0026lt;/script\u0026gt; \u0026lt;/body\u0026gt;     "
+},
+{
+	"uri": "https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.27.html",
+	"title": "2020.05.27",
+	"tags": ["TIL", "20.05.27", "5월", "Vue.js", "Vue cli"],
+	"description": "",
+	"content": "Vue CLI3 설치   공식 문서\n   설치 순서 (Windows10)\n$ npm install -g @vue/cli\r$ vue --version # 버젼확인\r  프로젝트 생성 및 실행  $ vue create \u0026lt;프로젝트 명\u0026gt;\r$ cd \u0026lt;프로젝트명\u0026gt; # 프로젝트 폴더로 이동\r$ npm run serve\r프로젝트 정리    src/App.vue에서 필요없는 기본코드 삭제(아래처럼)\n\u0026lt;template\u0026gt;\r\u0026lt;div id=\u0026#34;app\u0026#34;\u0026gt;\r\u0026lt;/div\u0026gt;\r\u0026lt;/template\u0026gt;\r\u0026lt;script\u0026gt;\rexport default {\rname: \u0026#39;App\u0026#39;,\rcomponents: {},\r//여기에 data, methods 등 넣으면 됨\r }\r\u0026lt;/script\u0026gt;\r\u0026lt;style\u0026gt;\r\u0026lt;/style\u0026gt;\r  컴포넌트 사용 방법   컴포넌트 생성 : components폴더에 .vue만들기(PascalCase로 이름만들기) 불러오기 : import 컴포넌트이름 from 경로 등록하기 : components 속성에 등록 사용하기 : \u0026lt;template\u0026gt; 내부에 html 태그처럼 추가  컴포넌트 기초 만들기    .vue파일 만들고 vue + tab 또는 \u0026lt; + tab으로 기초 작성\n  \u0026lt;template\u0026gt; 태그 안에 \u0026lt;div\u0026gt;안에 넣어줘야함\n  App.vue에서 연결\n\u0026lt;template\u0026gt;\r\u0026lt;div id=\u0026#34;app\u0026#34;\u0026gt;\r\u0026lt;Index/\u0026gt;\r\u0026lt;/div\u0026gt;\r\u0026lt;/template\u0026gt;\r\u0026lt;script\u0026gt;\rimport Index from \u0026#39;./components/Index.vue\u0026#39;\rexport default {\rname: \u0026#39;App\u0026#39;,\rcomponents: {\rIndex,\r}\r}\r\u0026lt;/script\u0026gt;\r\u0026lt;style\u0026gt;\r\u0026lt;/style\u0026gt;\r  components에서 data 작성 시 data: function () {}으로 작성\n  lodash 사용하여 샘플링 기능 추가\n$ npm i lodash\r  Vue-Router  공식 문서 참조\n 설치  $ vue add router\r컴포넌트 사용하기   컴포넌트를 만든다. 컴포넌트를 가져온다. 컴포넌트를 등록. 컴포넌트 사용. views폴더에 .vue파일 작성  router 폴더   index를 만들었을 때\n import Vue from \u0026#39;vue\u0026#39;\rimport VueRouter from \u0026#39;vue-router\u0026#39;\rimport Index from \u0026#39;../views/Index.vue\u0026#39;\rVue.use(VueRouter)\rconst routes = [\r{\rpath: \u0026#39;/\u0026#39;,\rname: \u0026#39;Index\u0026#39;,\rcomponents: Index\r},\r]\rconst router = new VueRouter({\rmode: \u0026#39;history\u0026#39;,\rbase: process.env.BASE_URL,\rroutes\r})\rexport default router\rHistory Mode   SPA의 단점은 주소가 바뀌지 않는다는 것. 주소가 바뀌지 않는다는 것은 사용자가 어떤 페이지에 요청을 보내 응답을 받았는지에 대한 history 관리를 할 수 없다는 뜻. 초창기에는 주소 뒤에 #(해쉬)또는 #!(해쉬뱅)을 붙이고 뒤에 하위 주소를 넣었다 (history mode off 하면 확인 가능) 브라우저에서 제공하는 주소 API를 사용해 주소를 바꾼다. 이를 위해 사용하는 것이 history API다.  "
+},
+{
 	"uri": "https://dongyeopgu.github.io/algorithm/d4~6/20.05.28.html",
 	"title": "2020.05.28",
 	"tags": ["20.05.28", "5월", "Algorithm"],
+	"description": "",
+	"content": "SWEA 문제풀이   최대상금\n#include \u0026lt;stdio.h\u0026gt;\r#include \u0026lt;algorithm\u0026gt;\r#include \u0026lt;string.h\u0026gt;\r#include \u0026lt;string\u0026gt;\r using namespace std;\rint change, result;\rchar arr[6];\rstring str;\rbool visit[1000000][11];\rvoid sol(int cnt) {\rif (cnt == change) {\rresult = max(result, stoi(str));\rreturn;\r}\rfor (int i = 0; i \u0026lt; str.size(); i++) {\rfor (int j = i; j \u0026lt; str.size(); j++) {\rif (i==j) { continue; }\rswap(str[i], str[j]);\rif (visit[stoi(str)][cnt+1] == false) {\rvisit[stoi(str)][cnt+1] = true;\rsol(cnt + 1);\r}\rswap(str[i], str[j]);\r}\r}\r}\rint main() {\rint t;\rscanf(\u0026#34;%d\u0026#34;, \u0026amp;t);\rfor (int test_case = 1; test_case \u0026lt;= t; test_case++) {\rscanf(\u0026#34;%s\u0026#34;, arr);\rstr = arr;\rscanf(\u0026#34;%d\u0026#34;, \u0026amp;change);\rresult = 0;\rmemset(visit, false, sizeof(visit));\rsol(0);\rprintf(\u0026#34;#%d %d\\n\u0026#34;, test_case, result);\r}\rreturn 0;\r}\r  최적경로\n// 순열\r#include \u0026lt;iostream\u0026gt;\r#include \u0026lt;algorithm\u0026gt;\r using namespace std;\rstruct po {\rint x, y;\r};\rint t, n;\rint visit[12];\rpo a[12];\rint main() {\rscanf(\u0026#34;%d\u0026#34;, \u0026amp;t);\rfor (int test_case = 1; test_case \u0026lt;= t; test_case++) {\rscanf(\u0026#34;%d\u0026#34;, \u0026amp;n);\rint result = 987654321;\rscanf(\u0026#34;%d %d\u0026#34;, \u0026amp;a[0].x, \u0026amp;a[0].y);\rscanf(\u0026#34;%d %d\u0026#34;, \u0026amp;a[n+1].x, \u0026amp;a[n+1].y);\rfor (int i=1;i\u0026lt;=n;i++) {\rscanf(\u0026#34;%d %d\u0026#34;, \u0026amp;a[i].x, \u0026amp;a[i].y);\rvisit[i] = i;\r}\rvisit[n+1] = n+1;\rdo {\rint sum = 0;\rfor (int i = 1; i \u0026lt;= n + 1; ++i) sum += abs(a[visit[i]].x - a[visit[i - 1]].x) + abs(a[visit[i]].y - a[visit[i - 1]].y);\rresult = min(result, sum);\r} while (next_permutation(visit+1,visit+1+n));\rprintf(\u0026#34;#%d %d\\n\u0026#34;, test_case, result);\r}\rreturn 0;\r}\r  "
+},
+{
+	"uri": "https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.28.html",
+	"title": "2020.05.28",
+	"tags": ["TIL", "20.05.28", "5월", "Algorithm"],
 	"description": "",
 	"content": "SWEA 문제풀이   최대상금\n#include \u0026lt;stdio.h\u0026gt;\r#include \u0026lt;algorithm\u0026gt;\r#include \u0026lt;string.h\u0026gt;\r#include \u0026lt;string\u0026gt;\r using namespace std;\rint change, result;\rchar arr[6];\rstring str;\rbool visit[1000000][11];\rvoid sol(int cnt) {\rif (cnt == change) {\rresult = max(result, stoi(str));\rreturn;\r}\rfor (int i = 0; i \u0026lt; str.size(); i++) {\rfor (int j = i; j \u0026lt; str.size(); j++) {\rif (i==j) { continue; }\rswap(str[i], str[j]);\rif (visit[stoi(str)][cnt+1] == false) {\rvisit[stoi(str)][cnt+1] = true;\rsol(cnt + 1);\r}\rswap(str[i], str[j]);\r}\r}\r}\rint main() {\rint t;\rscanf(\u0026#34;%d\u0026#34;, \u0026amp;t);\rfor (int test_case = 1; test_case \u0026lt;= t; test_case++) {\rscanf(\u0026#34;%s\u0026#34;, arr);\rstr = arr;\rscanf(\u0026#34;%d\u0026#34;, \u0026amp;change);\rresult = 0;\rmemset(visit, false, sizeof(visit));\rsol(0);\rprintf(\u0026#34;#%d %d\\n\u0026#34;, test_case, result);\r}\rreturn 0;\r}\r  최적경로\n// 순열\r#include \u0026lt;iostream\u0026gt;\r#include \u0026lt;algorithm\u0026gt;\r using namespace std;\rstruct po {\rint x, y;\r};\rint t, n;\rint visit[12];\rpo a[12];\rint main() {\rscanf(\u0026#34;%d\u0026#34;, \u0026amp;t);\rfor (int test_case = 1; test_case \u0026lt;= t; test_case++) {\rscanf(\u0026#34;%d\u0026#34;, \u0026amp;n);\rint result = 987654321;\rscanf(\u0026#34;%d %d\u0026#34;, \u0026amp;a[0].x, \u0026amp;a[0].y);\rscanf(\u0026#34;%d %d\u0026#34;, \u0026amp;a[n+1].x, \u0026amp;a[n+1].y);\rfor (int i=1;i\u0026lt;=n;i++) {\rscanf(\u0026#34;%d %d\u0026#34;, \u0026amp;a[i].x, \u0026amp;a[i].y);\rvisit[i] = i;\r}\rvisit[n+1] = n+1;\rdo {\rint sum = 0;\rfor (int i = 1; i \u0026lt;= n + 1; ++i) sum += abs(a[visit[i]].x - a[visit[i - 1]].x) + abs(a[visit[i]].y - a[visit[i - 1]].y);\rresult = min(result, sum);\r} while (next_permutation(visit+1,visit+1+n));\rprintf(\u0026#34;#%d %d\\n\u0026#34;, test_case, result);\r}\rreturn 0;\r}\r  "
 },
@@ -497,9 +1148,23 @@
 	"content": "SWEA 문제풀이   공통조상\ndef sol(n):\rq = [n]\rcnt =0\rwhile q:\rcnt += 1\ra = q.pop()\rfor i in v_1[a]:\rq.append(i)\rreturn cnt\rfor t in range(int(input())):\rv, e, n1, n2 = map(int, input().split())\rn3 = 9**9\rv_1 = [[]for _ in range(v+1)]\rv_2 = [[]for _ in range(v+1)]\rdata = [*map(int, input().split())]\rfor i in range(e):\rv_1[data[2*i]].append(data[2*i+1])\rv_2[data[2*i+1]].append(data[2*i])\rwhile n1 != n3:\rn1 = v_2[n1][0]\rn3 = n2\rwhile n3\u0026gt;1 and n1 != n3:\rn3=v_2[n3][0]\rresult = sol(n1)\rprint(f\u0026#34;#{t+1} {n1} {result}\u0026#34;)\r  "
 },
 {
+	"uri": "https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.29.html",
+	"title": "2020.05.29",
+	"tags": ["TIL", "20.05.29", "5월", "Algorithm"],
+	"description": "",
+	"content": "SWEA 문제풀이   공통조상\ndef sol(n):\rq = [n]\rcnt =0\rwhile q:\rcnt += 1\ra = q.pop()\rfor i in v_1[a]:\rq.append(i)\rreturn cnt\rfor t in range(int(input())):\rv, e, n1, n2 = map(int, input().split())\rn3 = 9**9\rv_1 = [[]for _ in range(v+1)]\rv_2 = [[]for _ in range(v+1)]\rdata = [*map(int, input().split())]\rfor i in range(e):\rv_1[data[2*i]].append(data[2*i+1])\rv_2[data[2*i+1]].append(data[2*i])\rwhile n1 != n3:\rn1 = v_2[n1][0]\rn3 = n2\rwhile n3\u0026gt;1 and n1 != n3:\rn3=v_2[n3][0]\rresult = sol(n1)\rprint(f\u0026#34;#{t+1} {n1} {result}\u0026#34;)\r  "
+},
+{
 	"uri": "https://dongyeopgu.github.io/algorithm/d4~6/20.05.30.html",
 	"title": "2020.05.30",
 	"tags": ["20.05.30", "5월", "Algorithm"],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.30.html",
+	"title": "2020.05.30",
+	"tags": ["TIL", "20.05.30", "5월", "Algorithm"],
 	"description": "",
 	"content": ""
 },
@@ -511,11 +1176,109 @@
 	"content": ""
 },
 {
+	"uri": "https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.31.html",
+	"title": "2020.05.31",
+	"tags": ["TIL", "20.05.31", "5월", "Algorithm"],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/til/6%EC%9B%94/20.06.01.html",
+	"title": "2020.06.01",
+	"tags": ["TIL", "20.06.01", "6월", "Vue"],
+	"description": "",
+	"content": "오늘 배운 것  Vue로 Todo List작성\n   App.vue\n\u0026lt;template\u0026gt; \u0026lt;div id=\u0026#34;app\u0026#34;\u0026gt; \u0026lt;div id=\u0026#34;nav\u0026#34;\u0026gt; \u0026lt;/div\u0026gt; \u0026lt;router-view/\u0026gt; \u0026lt;/div\u0026gt; \u0026lt;/template\u0026gt;   TodoView.vue\n\u0026lt;template\u0026gt; \u0026lt;div\u0026gt; \u0026lt;TodoList :todos=\u0026#34;todos\u0026#34; @checked=\u0026#34;updatedTodo\u0026#34;/\u0026gt; \u0026lt;TodoInput @create-todo=\u0026#34;createTodo\u0026#34;/\u0026gt; \u0026lt;/div\u0026gt; \u0026lt;/template\u0026gt; \u0026lt;script\u0026gt; import TodoList from \u0026#39;@/components/TodoList.vue\u0026#39; import TodoInput from \u0026#39;@/components/TodoInput.vue\u0026#39; export default { name: \u0026#39;TodoView\u0026#39;, components: { TodoList, TodoInput, }, data() { return { todos: [ { id: 1, content: \u0026#39;Django 복습\u0026#39;, isCompleted: true, }, { id: 2, content: \u0026#39;Vue 복습\u0026#39;, isCompleted: false, }, { id: 3, content: \u0026#39;저녁\u0026#39;, isCompleted: false, }, ] } }, methods: { updatedTodo(todo) { todo.isCompleted = !todo.isCompleted }, createTodo(todo) { this.todos.push(todo) } } } \u0026lt;/script\u0026gt; \u0026lt;style\u0026gt; \u0026lt;/style\u0026gt;   TodoInput.vue\n\u0026lt;template\u0026gt; \u0026lt;div\u0026gt; \u0026lt;input type=\u0026#34;text\u0026#34; v-model=\u0026#34;userInput\u0026#34; @keyup.enter=\u0026#34;createTodo\u0026#34;\u0026gt; \u0026lt;button @click=\u0026#34;createTodo\u0026#34;\u0026gt;등록\u0026lt;/button\u0026gt; \u0026lt;/div\u0026gt; \u0026lt;/template\u0026gt; \u0026lt;script\u0026gt; export default { name: \u0026#39;TodoInput\u0026#39;, data() { return { userInput: \u0026#39;\u0026#39;, } }, methods: { createTodo() { const newTodo = { id: Date.now(), content: this.userInput, isCompleted: false, } this.$emit(\u0026#39;create-todo\u0026#39;, newTodo) this.userInput = \u0026#39;\u0026#39; }, } } \u0026lt;/script\u0026gt; \u0026lt;style\u0026gt; \u0026lt;/style\u0026gt;   TodoList.vue\n\u0026lt;template\u0026gt; \u0026lt;div\u0026gt; \u0026lt;h1\u0026gt;Todo List\u0026lt;/h1\u0026gt; \u0026lt;ul\u0026gt; \u0026lt;li v-for=\u0026#34;todo in todos\u0026#34; :key=\u0026#34;todo.id\u0026#34; :class=\u0026#34;{ completed: todo.isCompleted }\u0026#34;\u0026gt; \u0026lt;!-- \u0026lt;input type=\u0026#34;checkbox\u0026#34; v-model=\u0026#34;todo.isCompleted\u0026#34;\u0026gt; --\u0026gt; \u0026lt;input type=\u0026#34;checkbox\u0026#34; :checked=\u0026#34;todo.isCompleted\u0026#34; @click=\u0026#34;$emit(\u0026#39;checked\u0026#39;, todo)\u0026#34; \u0026gt; {{ todo.content }} \u0026lt;/li\u0026gt; \u0026lt;/ul\u0026gt; \u0026lt;/div\u0026gt; \u0026lt;/template\u0026gt; \u0026lt;script\u0026gt; export default { name: \u0026#39;TodoList\u0026#39;, props: { todos: { type: Array, required: true, }, }, } \u0026lt;/script\u0026gt; \u0026lt;style scoped\u0026gt; .completed { text-decoration: line-through; } \u0026lt;/style\u0026gt;   index.js\nimport Vue from \u0026#39;vue\u0026#39; import VueRouter from \u0026#39;vue-router\u0026#39; import TodoView from \u0026#39;@/views/TodoView.vue\u0026#39; Vue.use(VueRouter) const routes = [ { path: \u0026#39;/\u0026#39;, name: \u0026#39;TodoView\u0026#39;, component: TodoView } ] const router = new VueRouter({ mode: \u0026#39;history\u0026#39;, base: process.env.BASE_URL, routes }) export default router   "
+},
+{
+	"uri": "https://dongyeopgu.github.io/til/6%EC%9B%94/20.06.02.html",
+	"title": "2020.06.02",
+	"tags": ["TIL", "20.06.02", "6월", "Vue"],
+	"description": "",
+	"content": "오늘 배운 것  Vue로 Youtube API를 이용해 영상 찾기 및 재생\n   npm i axios로 axios 패키지 설치하여 이용\n  App.vue를 작성\n\u0026lt;template\u0026gt; \u0026lt;div id=\u0026#34;app\u0026#34;\u0026gt; \u0026lt;SearchBar @input-change=\u0026#34;onInputChange\u0026#34;/\u0026gt; \u0026lt;VideoList :videos=\u0026#34;videos\u0026#34;/\u0026gt; \u0026lt;/div\u0026gt; \u0026lt;/template\u0026gt; \u0026lt;script\u0026gt; import axios from \u0026#39;axios\u0026#39; import SearchBar from \u0026#39;@/components/SearchBar.vue\u0026#39; import VideoList from \u0026#39;@/components/VideoList.vue\u0026#39; const YOUTUBE_API_KEY = process.env.VUE_APP_YOUTUBE_API_KEY const YOUTUBE_API_URL = \u0026#39;https://www.googleapis.com/youtube/v3/search\u0026#39; export default { name: \u0026#39;App\u0026#39;, components: { SearchBar, VideoList }, data() { return { videos: [], } }, methods: { onInputChange(userInput) { const config = { params: { key: YOUTUBE_API_KEY, part: \u0026#39;snippet\u0026#39;, type: \u0026#39;video\u0026#39;, q: userInput, } } axios.get(YOUTUBE_API_URL, config) .then(res =\u0026gt; { console.log(res) this.videos = res.data.items }) .catch(err =\u0026gt; { console.log(err) }) } } } \u0026lt;/script\u0026gt;   영상 목록과 검색창 컴포넌트\n\u0026lt;template\u0026gt; \u0026lt;div\u0026gt; \u0026lt;h1\u0026gt;Video List\u0026lt;/h1\u0026gt; \u0026lt;ul\u0026gt; \u0026lt;li v-for=\u0026#34;video in videos\u0026#34; :key=\u0026#34;video.etag\u0026#34;\u0026gt; \u0026lt;img :src=\u0026#34;video.snippet.thumbnails.default.url\u0026#34; style=\u0026#34;height: 300px;\u0026#34;\u0026gt; \u0026lt;/li\u0026gt; \u0026lt;/ul\u0026gt; \u0026lt;/div\u0026gt; \u0026lt;/template\u0026gt; \u0026lt;script\u0026gt; export default { name: \u0026#39;VideoList\u0026#39;, props: { videos: { type: Array, } } } \u0026lt;/script\u0026gt; \u0026lt;style\u0026gt; \u0026lt;/style\u0026gt; \u0026lt;template\u0026gt; \u0026lt;div\u0026gt; \u0026lt;input type=\u0026#34;text\u0026#34; @keypress.enter=\u0026#34;onInput\u0026#34;\u0026gt; \u0026lt;/div\u0026gt; \u0026lt;/template\u0026gt; \u0026lt;script\u0026gt; export default { name: \u0026#39;SearchBar\u0026#39;, methods: { onInput(e) { this.$emit(\u0026#39;input-change\u0026#39;, e.target.value) }, }, } \u0026lt;/script\u0026gt; \u0026lt;style\u0026gt; \u0026lt;/style\u0026gt;   "
+},
+{
+	"uri": "https://dongyeopgu.github.io/til/6%EC%9B%94/20.06.03.html",
+	"title": "2020.06.03",
+	"tags": ["TIL", "20.06.03", "6월", "Vue"],
+	"description": "",
+	"content": "오늘 한 것  Vue Project\n 구현과정   vue 프로젝트 생성 기본 구조 설정 필요 기능 추가   1. vue 프로젝트 생성  vue create project명 을 bash에서 실행 router 사용을 위한 vue add router cd project명으로 폴더 이동 후 필요한 axios와 같은 패키지 설치  ex) npm i axios , npm i lodash    2. 기본 구조 설정   영화 목록을 가져오고 보여 주는 MovieView.vue와 예고편 검색을 위한 VideoView.vue를 views폴더에 생성\n  public의 index.html에 bootstrap사용을 위한 cdn 추가\n  router 폴더에 있는 index.js와 연결\n  import MovieView from \u0026#39;@/views/MovieView.vue\u0026#39; import MainView from \u0026#39;@/views/MainView.vue\u0026#39; import VideoView from \u0026#39;@/views/VideoView.vue\u0026#39; Vue.use(VueRouter) const routes = [ { path: \u0026#39;/movie\u0026#39;, name: \u0026#39;MovieView\u0026#39;, component: MovieView }, { path: \u0026#39;/\u0026#39;, name: \u0026#39;MainView\u0026#39;, component: MainView }, { path: \u0026#39;/video\u0026#39;, name: \u0026#39;VideoView\u0026#39;, component: VideoView },     components폴더에 필요한 컴포넌트 생성\n 여기선 총 6가지 사용    App.vue 파일과 router, view 연결\n  3. 필요 기능 추가   axios를 이용하여 데이터 가져오기(Movie에서는 영화 목록, Video에서는 Youtube API를 통해 필요 데이터 가져옴)\n  Bootstrap에서 지원하는 Modal 이용\n Modal사용시 data-target, id 값이 숫자로만 이뤄질 경우 동작하지 않음.    클래스 바인딩으로 평점이 7점 넘을 경우 빨갛게 표시, 아닐경우 노랗게 표시\n\u0026lt;p class=\u0026#34;btn\u0026#34; :class=\u0026#34;[ highAndLow() ? \u0026#39;btn-danger\u0026#39; : \u0026#39;btn-warning\u0026#39; ]\u0026#34;\u0026gt;{{ movie.user_rating }}\u0026lt;/p\u0026gt; \u0026lt;scirpt\u0026gt; .... methods: { highAndLow() { if (this.movie.user_rating \u0026gt; 7) { return true } else { return false } } ..... } \u0026lt;/scirpt\u0026gt;   "
+},
+{
+	"uri": "https://dongyeopgu.github.io/til/6%EC%9B%94/20.06.04.html",
+	"title": "2020.06.04",
+	"tags": ["TIL", "20.06.04", "6월", "Vue"],
+	"description": "",
+	"content": "오늘 한 것  SWEA 문제풀이\n   생일파티\n python  for t in range(int(input())): n, m = map(int, input().split()) a = [[]for _ in range(n+1)] for i in range(m): n1, n2 = map(int,input().split()) a[n1].append(n2) a[n2].append(n1) result = set() result.update(a[1]) for i in a[1]: result.update(a[i]) if 1 in result: result.remove(1) print(f\u0026#34;#{t+1} {len(result)}\u0026#34;)   보급로\n C++  #include \u0026lt;cstdio\u0026gt;#include \u0026lt;cstring\u0026gt;#include \u0026lt;algorithm\u0026gt;#include \u0026lt;queue\u0026gt;using namespace std; int map[100][100]; int dis[100][100]; int dx[4] = {0, 0, -1, 1}; int dy[4] = {-1, 1, 0, 0}; int n; bool border(int x, int y) { return (0 \u0026lt;= x \u0026amp;\u0026amp; x \u0026lt; n \u0026amp;\u0026amp; 0 \u0026lt;= y \u0026amp;\u0026amp; y \u0026lt; n); } void solv() { queue\u0026lt;pair\u0026lt;int, int\u0026gt;\u0026gt; q; q.push(make_pair(0,0)); while (!q.empty()) { int x = q.front().first; int y = q.front().second; q.pop(); for (int i=0; i\u0026lt;4; i++) { int nx = x+dx[i]; int ny = y+dy[i]; if (border(nx,ny)) { int dist = map[nx][ny] + dis[x][y]; if (dist \u0026lt; dis[nx][ny]) { q.push(make_pair(nx, ny)); dis[nx][ny] = dist; } } } } return; } int main() { int test_case; scanf(\u0026#34;%d\u0026#34;, \u0026amp;test_case); for (int t=1; t\u0026lt;=test_case; t++) { scanf(\u0026#34;%d\u0026#34;, \u0026amp;n); for (int i=0; i\u0026lt;n;i++) { for (int j=0;j\u0026lt;n;j++) { scanf(\u0026#34;%1d\u0026#34;, \u0026amp;map[i][j]); dis[i][j] = 9999999; } } dis[0][0] = 0; solv(); printf(\u0026#34;#%d %d\\n\u0026#34;, t, dis[n-1][n-1]); } return 0; }   "
+},
+{
 	"uri": "https://dongyeopgu.github.io/algorithm/d4~6/20.06.05.html",
 	"title": "2020.06.05",
 	"tags": ["20.06.05", "6월", "Algorithm"],
 	"description": "",
 	"content": "오늘 한 것  SWEA, 백준 문제풀이\n   하나로\n#include \u0026lt;cstdio\u0026gt; int test_case, n; long long x[1000], y[1000], dis[1000]; bool visit[1000]; double E; long long result; long long dist(long long x1, long long y1, long long x2, long long y2) { return (x1 - x2)*(x1 - x2) + (y1 - y2)*(y1 - y2); } int main() { scanf(\u0026#34;%d\u0026#34;, \u0026amp;test_case); for (int t = 1; t \u0026lt;= test_case; t++) { result = 0; scanf(\u0026#34;%d\u0026#34;, \u0026amp;n); for (int i = 0; i \u0026lt;n; i++) { scanf(\u0026#34;%lld\u0026#34;, \u0026amp;x[i]); } for (int i = 0; i \u0026lt;n; i++) { scanf(\u0026#34;%lld\u0026#34;, \u0026amp;y[i]); } for (int i = 0; i \u0026lt;n; i++) { dis[i] = 1e16; visit[i] = 0; } scanf(\u0026#34;%lf\u0026#34;, \u0026amp;E); dis[0] = 0; for (int i = 0; i \u0026lt; n; i++) { long long a = 1e16; long long b = i; for (int j=0;j\u0026lt;n;j++) { if (!visit[j] \u0026amp;\u0026amp; dis[j] \u0026lt; a) { a = dis[j]; b = j; } } visit[b] = true; result += a; for (int j = 0; j \u0026lt;n; j++) { if (!visit[j]) { a = dist(x[b], y[b], x[j], y[j]); if (dis[j] \u0026gt; a) { dis[j] = a; } } } } printf(\u0026#34;#%d %.0lf\\n\u0026#34;, t, E*result); } return 0; }   색종이 붙이기(백준)\n#include \u0026lt;iostream\u0026gt; #include \u0026lt;algorithm\u0026gt; using namespace std; const int INF = 987654321; int arr[10][10]; int cnt = 0; int result; int paper[6] = { 0, 5, 5, 5, 5, 5 }; void sol(int y, int x) { // 해당 줄은 다 확인했으므로 다음 줄 확인  if (x == 10) { sol(y + 1, 0); return; } // 마지막 줄까지 다 확인했으므로 현재 색종이 개수 확인  if (y == 10) { result = min(result, cnt); return; } // 덮을 필요 없으므로 다음 칸 확인  if (arr[y][x] == 0) { sol(y, x + 1); return; } // 모든 경우의 수 다 확인  for (int len = 5; len \u0026gt;= 1; len--) { // 현재 len 크기 색종이가 없거나 덮었을 때 범위를 벗어날 경우  if (paper[len] == 0 || y + len \u0026gt; 10 || x + len \u0026gt; 20) { continue; } bool flag = true; // len 길이만한 정사각형이 존재하는지 확인  for (int j = 0; j \u0026lt; len; j++) { for (int k = 0; k \u0026lt; len; k++) { if (arr[y + j][x + k] == 0) { flag = false; break; } } if (flag == false) { break; } } // 존재하지 않으면 확인할 필요 없음  if (flag == false) { continue; } // 덮었다고 치고  for (int j = 0; j \u0026lt; len; j++) { for (int k = 0; k \u0026lt; len; k++) { arr[y + j][x + k] = 0; } } paper[len]--; cnt++; // 다음 칸 확인  sol(y, x + len); // 덮었던 색종이를 치운다  for (int j = 0; j \u0026lt; len; j++) { for (int k = 0; k \u0026lt; len; k++) { arr[y + j][x + k] = 1; } } paper[len]++; cnt--; } } int main(void) { for (int i = 0; i \u0026lt; 10; i++) { for (int j = 0; j \u0026lt; 10; j++) { scanf(\u0026#34;%d\u0026#34;, \u0026amp;arr[i][j]); } } result = INF; sol(0, 0); if (result == INF) { result = -1; } printf(\u0026#34;%d\u0026#34;, result); return 0; }   "
+},
+{
+	"uri": "https://dongyeopgu.github.io/til/6%EC%9B%94/20.06.05.html",
+	"title": "2020.06.05",
+	"tags": ["TIL", "20.06.05", "6월", "Algorithm"],
+	"description": "",
+	"content": "오늘 한 것  SWEA, 백준 문제풀이\n   하나로\n#include \u0026lt;cstdio\u0026gt; int test_case, n; long long x[1000], y[1000], dis[1000]; bool visit[1000]; double E; long long result; long long dist(long long x1, long long y1, long long x2, long long y2) { return (x1 - x2)*(x1 - x2) + (y1 - y2)*(y1 - y2); } int main() { scanf(\u0026#34;%d\u0026#34;, \u0026amp;test_case); for (int t = 1; t \u0026lt;= test_case; t++) { result = 0; scanf(\u0026#34;%d\u0026#34;, \u0026amp;n); for (int i = 0; i \u0026lt;n; i++) { scanf(\u0026#34;%lld\u0026#34;, \u0026amp;x[i]); } for (int i = 0; i \u0026lt;n; i++) { scanf(\u0026#34;%lld\u0026#34;, \u0026amp;y[i]); } for (int i = 0; i \u0026lt;n; i++) { dis[i] = 1e16; visit[i] = 0; } scanf(\u0026#34;%lf\u0026#34;, \u0026amp;E); dis[0] = 0; for (int i = 0; i \u0026lt; n; i++) { long long a = 1e16; long long b = i; for (int j=0;j\u0026lt;n;j++) { if (!visit[j] \u0026amp;\u0026amp; dis[j] \u0026lt; a) { a = dis[j]; b = j; } } visit[b] = true; result += a; for (int j = 0; j \u0026lt;n; j++) { if (!visit[j]) { a = dist(x[b], y[b], x[j], y[j]); if (dis[j] \u0026gt; a) { dis[j] = a; } } } } printf(\u0026#34;#%d %.0lf\\n\u0026#34;, t, E*result); } return 0; }   색종이 붙이기(백준)\n#include \u0026lt;iostream\u0026gt; #include \u0026lt;algorithm\u0026gt; using namespace std; const int INF = 987654321; int arr[10][10]; int cnt = 0; int result; int paper[6] = { 0, 5, 5, 5, 5, 5 }; void sol(int y, int x) { // 해당 줄은 다 확인했으므로 다음 줄 확인  if (x == 10) { sol(y + 1, 0); return; } // 마지막 줄까지 다 확인했으므로 현재 색종이 개수 확인  if (y == 10) { result = min(result, cnt); return; } // 덮을 필요 없으므로 다음 칸 확인  if (arr[y][x] == 0) { sol(y, x + 1); return; } // 모든 경우의 수 다 확인  for (int len = 5; len \u0026gt;= 1; len--) { // 현재 len 크기 색종이가 없거나 덮었을 때 범위를 벗어날 경우  if (paper[len] == 0 || y + len \u0026gt; 10 || x + len \u0026gt; 20) { continue; } bool flag = true; // len 길이만한 정사각형이 존재하는지 확인  for (int j = 0; j \u0026lt; len; j++) { for (int k = 0; k \u0026lt; len; k++) { if (arr[y + j][x + k] == 0) { flag = false; break; } } if (flag == false) { break; } } // 존재하지 않으면 확인할 필요 없음  if (flag == false) { continue; } // 덮었다고 치고  for (int j = 0; j \u0026lt; len; j++) { for (int k = 0; k \u0026lt; len; k++) { arr[y + j][x + k] = 0; } } paper[len]--; cnt++; // 다음 칸 확인  sol(y, x + len); // 덮었던 색종이를 치운다  for (int j = 0; j \u0026lt; len; j++) { for (int k = 0; k \u0026lt; len; k++) { arr[y + j][x + k] = 1; } } paper[len]++; cnt--; } } int main(void) { for (int i = 0; i \u0026lt; 10; i++) { for (int j = 0; j \u0026lt; 10; j++) { scanf(\u0026#34;%d\u0026#34;, \u0026amp;arr[i][j]); } } result = INF; sol(0, 0); if (result == INF) { result = -1; } printf(\u0026#34;%d\u0026#34;, result); return 0; }   "
+},
+{
+	"uri": "https://dongyeopgu.github.io/til/6%EC%9B%94/20.06.06.html",
+	"title": "2020.06.06",
+	"tags": ["TIL", "20.06.06", "6월"],
+	"description": "",
+	"content": "오늘 한 것 "
+},
+{
+	"uri": "https://dongyeopgu.github.io/til/6%EC%9B%94/20.06.07.html",
+	"title": "2020.06.07",
+	"tags": ["TIL", "20.06.07", "6월"],
+	"description": "",
+	"content": "오늘 한 것 "
+},
+{
+	"uri": "https://dongyeopgu.github.io/til/6%EC%9B%94/20.06.08.html",
+	"title": "2020.06.08",
+	"tags": ["TIL", "20.06.08", "6월", "Vue", "Django"],
+	"description": "",
+	"content": "오늘 배운 것 Django \u0026amp; Vue  Django를 백엔드로 Vue를 프론트엔드\nDjango Rest Framework를 사용\n Django 설정   전에 했던 Django Rest Framework를 사용하여 Serializers를 이용.\n  따로 Templates를 만들지 않고 JSON 정보를 가지고 vue를 이용.\n  settings.py의 INSTALLED_APP에서 아래 추가 후 사용.\n  INSTALLED_APPS = [ ... \u0026#39;django.contrib.sites\u0026#39;, \u0026#39;rest_framework\u0026#39;, \u0026#39;rest_framework.authtoken\u0026#39;, \u0026#39;rest_auth\u0026#39;, \u0026#39;rest_auth.registration\u0026#39;, \u0026#39;allauth\u0026#39;, \u0026#39;allauth.account\u0026#39;, ... ] REST_FRAMEWORK = { \u0026#39;DEFAULT_AUTHENTICATION_CLASSES\u0026#39;: [ \u0026#39;rest_framework.authentication.TokenAuthentication\u0026#39;, ] } "
+},
+{
+	"uri": "https://dongyeopgu.github.io/til/6%EC%9B%94/20.06.09.html",
+	"title": "2020.06.09",
+	"tags": ["TIL", "20.06.09", "6월", "Vue", "Django"],
+	"description": "",
+	"content": "오늘 배운 것 VUE 설정  vue router를 사용하여 Django와 연결하여 data가져옴.\naxios, cookies 사용\n  accounts와 관련된 기능을 사용하기 위해 Token을 쿠키로 저장하기 위해 cookies 사용  "
+},
+{
+	"uri": "https://dongyeopgu.github.io/til/6%EC%9B%94/20.06.10-~-30-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EA%B3%BC%EC%A0%9C%EB%A1%9C-%EC%9D%B8%ED%95%9C-til-%EB%AF%B8%EC%97%85%EB%A1%9C%EB%93%9C.html",
+	"title": "2020.06.10 ~ ",
+	"tags": ["TIL", "프로젝트기간", "6월", "Vue", "Django"],
+	"description": "",
+	"content": "프로젝트 기간으로 TIL 없음  Django와 Vue 이용한 프로젝트  "
+},
+{
+	"uri": "https://dongyeopgu.github.io/til/7%EC%9B%94/20.07.01.html",
+	"title": "2020.07.01",
+	"tags": ["TIL", "20.07.01", "7월"],
+	"description": "",
+	"content": "오늘 한것 Python 데이터 분석 입문 책 보기\n"
+},
+{
+	"uri": "https://dongyeopgu.github.io/til/7%EC%9B%94/20.07.02.html",
+	"title": "2020.07.02",
+	"tags": ["TIL", "20.07.02", "7월"],
+	"description": "",
+	"content": "오늘 한것 Python 데이터 분석 입문 책 보기\n"
+},
+{
+	"uri": "https://dongyeopgu.github.io/til/7%EC%9B%94/20.07.03.html",
+	"title": "2020.07.03",
+	"tags": ["TIL", "20.07.03", "7월"],
+	"description": "",
+	"content": "오늘 한것 Python 데이터 분석 입문 책 보기\n"
 },
 {
 	"uri": "https://dongyeopgu.github.io/tags/4%EC%9B%94.html",
@@ -534,6 +1297,13 @@
 {
 	"uri": "https://dongyeopgu.github.io/tags/6%EC%9B%94.html",
 	"title": "6월",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/7%EC%9B%94.html",
+	"title": "7월",
 	"tags": [],
 	"description": "",
 	"content": ""
@@ -595,6 +1365,13 @@
 	"content": ""
 },
 {
+	"uri": "https://dongyeopgu.github.io/tags/db.html",
+	"title": "DB",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "https://dongyeopgu.github.io/tags/delete.html",
 	"title": "delete",
 	"tags": [],
@@ -618,6 +1395,13 @@
 {
 	"uri": "https://dongyeopgu.github.io/tags/follow.html",
 	"title": "follow",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/javascript.html",
+	"title": "Javascript",
 	"tags": [],
 	"description": "",
 	"content": ""
@@ -679,6 +1463,13 @@
 	"content": ""
 },
 {
+	"uri": "https://dongyeopgu.github.io/tags/project.html",
+	"title": "Project",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "https://dongyeopgu.github.io/tags/read.html",
 	"title": "read",
 	"tags": [],
@@ -702,6 +1493,13 @@
 {
 	"uri": "https://dongyeopgu.github.io/tags/server.html",
 	"title": "Server",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/sql.html",
+	"title": "SQL",
 	"tags": [],
 	"description": "",
 	"content": ""
@@ -735,6 +1533,13 @@
 	"content": "1949. 등산로 조성 dt = [(1,0), (0,1), (-1,0), (0,-1)]\rdef sol(x,y,b,cnt=1):\rglobal max_r\rif max_r \u0026lt; cnt:\rmax_r = cnt\rvisit[x][y] = 1\rfor d in dt:\rdx, dy = x + d[0], y + d[1]\rif not (0 \u0026lt;= dx \u0026lt; n and 0 \u0026lt;= dy \u0026lt; n) or visit[dx][dy] == 1:\rcontinue\rif Map[x][y] \u0026gt; Map[dx][dy]:\rsol(dx,dy,b,cnt+1)\relif b \u0026gt; 0 and Map[x][y] \u0026gt; Map[dx][dy] - k:\rtemp = Map[dx][dy]\rMap[dx][dy] = Map[x][y] - 1\rsol(dx,dy,0,cnt+1)\rMap[dx][dy] = temp\rvisit[x][y] = 0\rfor t in range(int(input())):\rn, k = map(int, input().split())\rMap = [list(map(int, input().split()))for _ in range(n)]\rvisit = [[0 for _ in range(n)]for _ in range(n)]\rtop_height = 0\rtop_idx = []\rfor i in range(n):\rif top_height \u0026lt; max(Map[i]):\rtop_height = max(Map[i])\rfor i in range(n):\rfor j in range(n):\rif Map[i][j] == top_height:\rtop_idx.append((i,j))\rmax_r = 0\rfor top in top_idx:\rsol(top[0],top[1],1)\rprint(f\u0026#34;#{t+1} {max_r}\u0026#34;)\r1953. 탈주범 검거 dx = [0,0,-1,1]\rdy = [-1,1,0,0]\rtunnel_type = {\r1:[[1,3,4,5],[1,3,6,7],[1,2,5,6],[1,2,4,7]],\r2:[[],[],[1,2,5,6],[1,2,4,7]],\r3:[[1,3,4,5],[1,3,6,7],[],[]],\r4:[[],[1,3,6,7],[1,2,5,6],[]],\r5:[[],[1,3,6,7],[],[1,2,4,7]],\r6:[[1,3,4,5],[],[],[1,2,4,7]],\r7:[[1,3,4,5],[],[1,2,5,6],[]]\r}\rfor t in range(int(input())):\rn, m, r, c, l = map(int, input().split())\rtunnel = [list(map(int, input().split()))for _ in range(n)]\rcnt = 1\rstart = [(r,c)]\rtime = 1\rwhile True:\rif time == l:\rbreak\rfor i in range(len(start)):\ra = start.pop(0)\rfor j in range(4):\rif tunnel_type[tunnel[a[0]][a[1]]][j]:\rif 0 \u0026lt;= a[0]+dx[j] \u0026lt; n and 0 \u0026lt;= a[1]+dy[j] \u0026lt; m and tunnel[a[0]+dx[j]][a[1]+dy[j]] != 0:\rif tunnel[a[0]+dx[j]][a[1]+dy[j]] in tunnel_type[tunnel[a[0]][a[1]]][j]:\rif (a[0]+dx[j],a[1]+dy[j]) not in start:\rstart.append((a[0]+dx[j],a[1]+dy[j]))\rcnt += 1\rtunnel[a[0]][a[1]] = 0\rtime += 1\rprint(f\u0026#34;#{t+1} {cnt}\u0026#34;)\r4008. 숫자 만들기 def cal(i, numbs):\rglobal max_value, min_value\rif i == n:\rmax_value = max(max_value, numbs)\rmin_value = min(min_value, numbs)\relse:\rif operator[0] != 0:\roperator[0] -= 1\rcal(i+1, numbs + numbers[i])\roperator[0] += 1\rif operator[1] != 0:\roperator[1] -= 1\rcal(i+1, numbs - numbers[i])\roperator[1] += 1\rif operator[2] != 0:\roperator[2] -= 1\rcal(i+1, numbs * numbers[i])\roperator[2] += 1\rif operator[3] != 0:\roperator[3] -= 1\rif numbs \u0026lt; 0 and numbs%numbers[i]:\rcal(i+1, numbs//numbers[i]+1)\relse:\rcal(i+1, numbs//numbers[i])\roperator[3] += 1\rfor t in range(int(input())):\rn = int(input())\roperator = list(map(int, input().split()))\rnumbers = list(map(int, input().split()))\rmin_value = 100000000\rmax_value = -100000000\rcal(1,numbers[0])\rprint(f\u0026#34;#{t+1} {max_value - min_value}\u0026#34;)\r5650. 핀볼 게임 # 방향 상 좌 하 우\r dx = (-1, 0, 1, 0)\rdy = (0, -1, 0, 1)\r# 1번 블록 : 상 \u0026gt; 하, 좌 \u0026gt; 상, 하 \u0026gt; 우, 우 \u0026gt; 좌\r block = ((2, -1, 1, -2), (3, 1, -2, -2), (1, 2, -2, -1), (2, 2, -1, -3), (2, 2, -2, -2))\rdef sol(x,y,d):\rglobal result, n\rcnt = 0\rnx = x\rny = y\rwhile True:\rnx += dx[d]\rny += dy[d]\rif not (n \u0026gt; nx \u0026gt;= 0 and n \u0026gt; ny \u0026gt;= 0): # 벽 만났을 때 튕김(방향은 반대로)\r d = (d + 2) % 4\rcnt += 1\relse: if game_board[nx][ny] == -1 or (nx == x and ny == y):\rresult = max(cnt, result)\rreturn\relif game_board[nx][ny] == 0:\rcontinue\relif 0\u0026lt;game_board[nx][ny] \u0026lt; 6: # 블록 만났을 때\r d += block[game_board[nx][ny]-1][d]\rcnt += 1\relse:\rfor a, b in warmhole[game_board[nx][ny]]: # 웜홀 만났을때 인덱스 변경\r if nx != a or ny != b:\rnx = a\rny = b\rbreak\rfor t in range(int(input())):\rn = int(input())\rgame_board = [list(map(int, input().split()))for _ in range(n)]\rwarmhole = {6:[],7:[],8:[],9:[],10:[]}\rfor i in range(n):\rfor j in range(n):\rif game_board[i][j] \u0026gt; 5:\rwarmhole[game_board[i][j]].append((i,j))\rresult = 0\rfor i in range(n):\rfor j in range(n):\rif game_board[i][j] == 0:\rfor k in range(4):\rsol(i,j,k)\rprint(f\u0026#34;#{t+1} {result}\u0026#34;)\r"
 },
 {
+	"uri": "https://dongyeopgu.github.io/tags/til.html",
+	"title": "TIL",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "https://dongyeopgu.github.io/tags/ubuntu.html",
 	"title": "Ubuntu",
 	"tags": [],
@@ -749,6 +1554,13 @@
 	"content": ""
 },
 {
+	"uri": "https://dongyeopgu.github.io/tags/vue-cli.html",
+	"title": "Vue cli",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "https://dongyeopgu.github.io/tags/%EB%AA%A8%EC%9D%98sw-%ED%85%8C%EC%8A%A4%ED%8A%B8.html",
 	"title": "모의SW 테스트",
 	"tags": [],
@@ -758,6 +1570,13 @@
 {
 	"uri": "https://dongyeopgu.github.io/tags/%EB%B0%B1%EC%A4%80.html",
 	"title": "백준",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EA%B8%B0%EA%B0%84.html",
+	"title": "프로젝트기간",
 	"tags": [],
 	"description": "",
 	"content": ""

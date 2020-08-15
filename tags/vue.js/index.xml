@@ -43,5 +43,37 @@ $ npm install -g @vue/cli$ vue --version # 버젼확인  프로젝트 생성 �
  </description>
     </item>
     
+    <item>
+      <title>2020.05.25</title>
+      <link>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.25.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.25.html</guid>
+      <description>오늘 배운 것 Vue.js  body태그에 &amp;lt;script src=&amp;quot;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt; Vue.js cdn을 추가하여 사용
+ 1. Declarative Rendering(선언적 렌더링) &amp;lt;div id=&amp;#34;app&amp;#34;&amp;gt; {{ message }} &amp;lt;/div&amp;gt; &amp;lt;!-- vue cdn --&amp;gt; &amp;lt;script src=&amp;#34;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script&amp;gt; const app = new Vue({ el: &amp;#39;#app&amp;#39;, data: { message: &amp;#39;message&amp;#39; } }) &amp;lt;/script&amp;gt; 2. 조건문(if) &amp;lt;div id=&amp;#34;using-if&amp;#34;&amp;gt; &amp;lt;p v-if=&amp;#34;check&amp;#34;&amp;gt;안녕&amp;lt;/p&amp;gt; &amp;lt;!-- 기본적인 자바스크립트 표현 가능 --&amp;gt; &amp;lt;p v-if=&amp;#34;check===&amp;#39;안녕&amp;#39;&amp;#34;&amp;gt;안녕&amp;lt;/p&amp;gt; &amp;lt;p v-else-if=&amp;#34;check===&amp;#39;반가워&amp;#39;&amp;#34;&amp;gt;반가워&amp;lt;/p&amp;gt; &amp;lt;p v-else&amp;gt;안녕 반가워&amp;lt;/p&amp;gt; &amp;lt;!-- false일 때만 보여주기 --&amp;gt; &amp;lt;p v-if=&amp;#34;!check&amp;#34;&amp;gt;False일때 나타내기&amp;lt;/p&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;!</description>
+    </item>
+    
+    <item>
+      <title>2020.05.26</title>
+      <link>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.26.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.26.html</guid>
+      <description>오늘 배운 것 Vue.js   computed와 watched 비교
+ computed  단순히 data로부터 계산된 값을 출력하기 위한 속성 계산해야 하는 목표 데이터를 정의하는 방식으로 해당 속성이 종속된 대상이 변경될 때만 함수를 실행 소프트웨어 공학에서 얘기하는 &amp;lsquo;선언형(무엇을 할 지) 프로그래밍&amp;rsquo; 방식   watched  특정한 데이터의 변경을 관찰하고 이어서 일어날 동작(로직)을 설정하기 위한 속성 감시할 데이터를 지정하고 그 데이터가 바뀌면 이런 함수를 실행하라는 방식 소프트웨어 공학에서 얘기하는 &amp;lsquo;명령형(어떻게 할 지) 프로그래밍&amp;rsquo; 방식 비동기 로직을 수행할 때 사용한다.</description>
+    </item>
+    
+    <item>
+      <title>2020.05.27</title>
+      <link>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.27.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.27.html</guid>
+      <description>Vue CLI3 설치   공식 문서
+   설치 순서 (Windows10)
+$ npm install -g @vue/cli$ vue --version # 버젼확인  프로젝트 생성 및 실행  $ vue create &amp;lt;프로젝트 명&amp;gt;$ cd &amp;lt;프로젝트명&amp;gt; # 프로젝트 폴더로 이동$ npm run serve프로젝트 정리    src/App.vue에서 필요없는 기본코드 삭제(아래처럼)
+&amp;lt;template&amp;gt;&amp;lt;div id=&amp;#34;app&amp;#34;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/template&amp;gt;&amp;lt;script&amp;gt;export default {name: &amp;#39;App&amp;#39;,components: {},//여기에 data, methods 등 넣으면 됨 }&amp;lt;/script&amp;gt;&amp;lt;style&amp;gt;&amp;lt;/style&amp;gt;  컴포넌트 사용 방법   컴포넌트 생성 : components폴더에 .</description>
+    </item>
+    
   </channel>
 </rss>
