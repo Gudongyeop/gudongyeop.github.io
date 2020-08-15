@@ -190,10 +190,10 @@
 },
 {
 	"uri": "https://dongyeopgu.github.io/node.js.html",
-	"title": "Node js Express",
-	"tags": ["Node", "Node.js", "Express"],
+	"title": "Node.js / Express.js",
+	"tags": ["Node", "Node.js", "Express", "Express.js"],
 	"description": "",
-	"content": "Node.js, Express 학습 내용  Node.js, Express 내용 정리\n "
+	"content": "Node.js, Express.js  Node.js, Express.js 내용 정리\n "
 },
 {
 	"uri": "https://dongyeopgu.github.io/django/django_rest_api.html",
@@ -221,7 +221,7 @@
 	"title": "Dongyeop&#39;s Blog",
 	"tags": [],
 	"description": "",
-	"content": "여러가지 해보는 중 Algorithm   SWEA D3 SWEA D4 백준   Django   Django 기초 Django CRUD Django Paginator Django User(1) Django User(2) Django Comment Django M:N Model Django REST Framework   Hugo-blog   Hugo로 Blog만들기   Vue   Vue.js 기초 Vue CLI   "
+	"content": "여러가지 해보는 중 Algorithm   SWEA D3 SWEA D4 백준   Django   Django 기초 Django CRUD Django Paginator Django User(1) Django User(2) Django Comment Django M:N Model Django REST Framework   Hugo-blog   Hugo로 Blog만들기   Vue   Vue.js 기초 Vue CLI   Node.js/Express.js   Express.js를 이용한 백엔드 Express.js MySQL   Server 관련   Docker-compose 이용하여 배포 많이 사용한 명령어들   "
 },
 {
 	"uri": "https://dongyeopgu.github.io/tags.html",
@@ -1388,6 +1388,13 @@
 {
 	"uri": "https://dongyeopgu.github.io/tags/express.html",
 	"title": "Express",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/express.js.html",
+	"title": "Express.js",
 	"tags": [],
 	"description": "",
 	"content": ""
