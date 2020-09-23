@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>9월 on 여러가지</title>
+    <link>https://dongyeopgu.github.io/tags/9%EC%9B%94.html</link>
+    <description>Recent content in 9월 on 여러가지</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://dongyeopgu.github.io/tags/9%EC%9B%94/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Server 관련 용어</title>
+      <link>https://dongyeopgu.github.io/til/9%EC%9B%94/%EC%9A%A9%EC%96%B4-%EC%A0%95%EB%A6%AC.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dongyeopgu.github.io/til/9%EC%9B%94/%EC%9A%A9%EC%96%B4-%EC%A0%95%EB%A6%AC.html</guid>
+      <description>관련 용어들  확인 할 용어 생길 때 추가.
+  CDN(Content Delivery Network): 콘텐츠를 전송하기 위한 네트워크 시스템. 전송 성능향상과 가용성 향상을 목적으로 함. 가용성(Availability): 시스템을 정지시키지 않음을 뜻함. 다중화(Redundancy): 시스템의 구성요소를 여러 개 배치해서 하나가 고장 나서 정지해도 바로 교체해서 서비스가 멈추지 않도록 하는 것. 데몬(Daemon): 백그라운드에서 지속적으로 실행되면서 특정 작업을 수행하는 프로그램. ex) httpd, bind .. 리소스(Resource): CPU, 메모리, 하드디스크 등, 하드웨어적인 자원  </description>
+    </item>
+    
+  </channel>
+</rss>
