@@ -63,6 +63,10 @@
   </url>
   
   <url>
+    <loc>https://dongyeopgu.github.io/server/docker-compose%EB%A1%9C-django-%EC%82%AC%EC%9A%A9.html</loc>
+  </url>
+  
+  <url>
     <loc>https://dongyeopgu.github.io/algorithm/baekjoon.html</loc>
   </url>
   
@@ -843,6 +847,10 @@
   </url>
   
   <url>
+    <loc>https://dongyeopgu.github.io/tags/docker-compose.html</loc>
+  </url>
+  
+  <url>
     <loc>https://dongyeopgu.github.io/tags/express.html</loc>
   </url>
   
@@ -852,6 +860,10 @@
   
   <url>
     <loc>https://dongyeopgu.github.io/tags/follow.html</loc>
+  </url>
+  
+  <url>
+    <loc>https://dongyeopgu.github.io/tags/gunicorn.html</loc>
   </url>
   
   <url>
