@@ -47,6 +47,10 @@
   </url>
   
   <url>
+    <loc>https://dongyeopgu.github.io/server/nginx-%ED%8C%8C%EC%9D%BC-%EC%97%85%EB%A1%9C%EB%93%9C-%EC%9A%A9%EB%9F%89-%EC%84%A4%EC%A0%95.html</loc>
+  </url>
+  
+  <url>
     <loc>https://dongyeopgu.github.io/til/8%EC%9B%94.html</loc>
   </url>
   
@@ -868,6 +872,10 @@
   
   <url>
     <loc>https://dongyeopgu.github.io/tags/mysql.html</loc>
+  </url>
+  
+  <url>
+    <loc>https://dongyeopgu.github.io/tags/nginx.html</loc>
   </url>
   
   <url>
