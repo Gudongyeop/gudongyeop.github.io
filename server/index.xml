@@ -41,5 +41,17 @@
  1. certbot 이용하여 키 발급  certbot certonly --standalone -d 도메인이름 으로 키 발급 발급이 완료되면 /etc/letsencrypt/live/도메인이름 경로에 cert.pem chain.pem fullchain.pem privkey.pem 파일들이 생김  2. Nginx 설정  나는 default.conf에서 설정하여 실행시켰음 생성된 파일을 다른 폴더에 넣어서 사용했음  upstream client {server 도메인이름;}server {listen 80;server_name 도메인이름;return 301 https://$host$request_uri;}server {listen 443 ssl;server_name 도메인이름; ssl_certificate /ssl/fullchain1.</description>
     </item>
     
+    <item>
+      <title>Nginx 파일 업로드 용량 설정</title>
+      <link>https://dongyeopgu.github.io/server/nginx-%ED%8C%8C%EC%9D%BC-%EC%97%85%EB%A1%9C%EB%93%9C-%EC%9A%A9%EB%9F%89-%EC%84%A4%EC%A0%95.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dongyeopgu.github.io/server/nginx-%ED%8C%8C%EC%9D%BC-%EC%97%85%EB%A1%9C%EB%93%9C-%EC%9A%A9%EB%9F%89-%EC%84%A4%EC%A0%95.html</guid>
+      <description>Docker-compose &amp;amp; Nginx  Docker-compose와 Nginx 사용하며 파일 업로드시 용량이 클 경우 해결하기 위한 방법
+   default.conf 파일
+....server {listen 443 ssl;server_name frontend;ssl on; ssl_certificate /ssl/fullchain.pem;ssl_certificate_key /ssl/privkey.pem; access_log /var/log/nginx/data-access.log combined;location / {proxy_pass http://frontend;proxy_set_header Host $host;proxy_http_version 1.1;proxy_set_header Upgrade $http_upgrade;client_max_body_size 20M;......  default.conf 에서 location 부분에 client_max_body_size &amp;lt;용량&amp;gt;; 추가
+  </description>
+    </item>
+    
   </channel>
 </rss>

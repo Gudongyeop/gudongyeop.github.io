@@ -77,6 +77,13 @@
 	"content": ""
 },
 {
+	"uri": "https://dongyeopgu.github.io/server/nginx-%ED%8C%8C%EC%9D%BC-%EC%97%85%EB%A1%9C%EB%93%9C-%EC%9A%A9%EB%9F%89-%EC%84%A4%EC%A0%95.html",
+	"title": "Nginx 파일 업로드 용량 설정",
+	"tags": ["Nginx"],
+	"description": "",
+	"content": "Docker-compose \u0026amp; Nginx  Docker-compose와 Nginx 사용하며 파일 업로드시 용량이 클 경우 해결하기 위한 방법\n   default.conf 파일\n....\rserver {\rlisten 443 ssl;\rserver_name frontend;\rssl on; ssl_certificate /ssl/fullchain.pem;\rssl_certificate_key /ssl/privkey.pem; access_log /var/log/nginx/data-access.log combined;\rlocation / {\rproxy_pass http://frontend;\rproxy_set_header Host $host;\rproxy_http_version 1.1;\rproxy_set_header Upgrade $http_upgrade;\rclient_max_body_size 20M;\r......\r  default.conf 에서 location 부분에 client_max_body_size \u0026lt;용량\u0026gt;; 추가\n  "
+},
+{
 	"uri": "https://dongyeopgu.github.io/til/8%EC%9B%94.html",
 	"title": "8월",
 	"tags": [],
@@ -1479,6 +1486,13 @@
 {
 	"uri": "https://dongyeopgu.github.io/tags/mysql.html",
 	"title": "Mysql",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/nginx.html",
+	"title": "Nginx",
 	"tags": [],
 	"description": "",
 	"content": ""
