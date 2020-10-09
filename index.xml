@@ -109,6 +109,18 @@ $ npm install -g @vue/cli$ vue --version # 버젼확인  프로젝트 생성 �
     </item>
     
     <item>
+      <title>Docker-compose로 Django 사용</title>
+      <link>https://dongyeopgu.github.io/server/docker-compose%EB%A1%9C-django-%EC%82%AC%EC%9A%A9.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dongyeopgu.github.io/server/docker-compose%EB%A1%9C-django-%EC%82%AC%EC%9A%A9.html</guid>
+      <description>Docker-compose &amp;amp; Django &amp;amp; Gunicorn  Docker-compose로 Django &amp;amp; Gunicorn 사용하기
+   Dockerfile
+FROMpython:3.6.9ENV PYTHONUNBUFFERED 1RUN mkdir /backendWORKDIR/backendADD requirements.txt /backend/RUN pip install --upgrade pipRUN pip install -r requirements.txtADD . /backend/  docker-compose.yml
+backend:build: context: ./backenddockerfile: Dockerfilerestart: alwaysenv_file:- ./backend/.envexpose:- &amp;#34;8001&amp;#34;volumes:- &amp;#39;./backend:/backend&amp;#39;command:&amp;#34;gunicorn --workers=2 --bind=0.0.0.0:8001 backend.wsgi:application&amp;#34; 내부 접속만 열기위한 설정  backend-dev:build: context: .</description>
+    </item>
+    
+    <item>
       <title>Django CRUD</title>
       <link>https://dongyeopgu.github.io/django/django_crud.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

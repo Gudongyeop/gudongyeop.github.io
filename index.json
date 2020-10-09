@@ -105,6 +105,13 @@
 	"content": "기초  1. django 설치 $ pip install django==2.1.15\r(2.1.15 기준으로 배웠기 때문에)\n2. 프로젝트 시작 $ django-admin startproject {프로젝트 이름}\r그 후에 프로젝트 폴더의 settings.py에서 ALLOWED_HOST = [\u0026#39;*\u0026#39;]로 수정\r3. App 만들기 # manage.py 파일이 있는 폴더에서 터미널 진입 후 bash 에 $ python manage.py startapp {앱 이름}\r # 그 후에 settings.py에서  INSTALLED_APPS = [\r\u0026#39;{앱 이름}\u0026#39; 추가\r]\r4. urls.py 작성 # 프로젝트 이름/urls.py에서 예를 들어 index 페이지를 넣을 경우  from app이름 import views #추가\r urlpatterns =[\rpath(\u0026#39;index/\u0026#39;, views.index),\r]\r## path의 url은 항상 /로 닫기 ##\r 5. views.py 작성 # app 이름/views.py 에서\r def index(request):\rreturn render(request, \u0026#39;index.html\u0026#39;) #기본 형식\r # 만약 html파일에 넣고자 하는 내용이 있을 경우에는\r def index(request):\rsample = \u0026#39;샘플\u0026#39;\rcontext = {\r\u0026#39;sample\u0026#39;: sample,\r}\rreturn render(request, \u0026#39;index.html\u0026#39;, context)\r# 이렇게 쓸 수 있음. 다른 방법으로,\r context를 적지 않고 바로 return render(request, \u0026#39;index.html\u0026#39;, {\u0026#39;sample\u0026#39;:sample})로 쓸 수 있음.\r 함수 정의에서 첫번째 인자는 항상 request로 render에서도 첫번째 인자는 항상 request  6. templates 폴더 만들기  필요한 html 파일을 app이름 폴더 안에 templates 폴더를 만든후 저장. django template language는 https://docs.djangoproject.com/en/3.0/를 이용해서 확인  7. base.html 만들 경우 # 프로젝트명 폴더에 templates 폴더를 만든 후\r # settings.py에서\r TEMPLATES = [\r{\r...\r\u0026#39;DIRS\u0026#39;: [\ros.path.join(BASE_DIR, \u0026#39;templates\u0026#39;)\r], # 추가\r ...\r}\r]\r base.html 작성  \u0026lt;!DOCTYPE html\u0026gt;\r\u0026lt;html lang=\u0026#34;ko\u0026#34;\u0026gt;\r\u0026lt;head\u0026gt;\r\u0026lt;meta charset=\u0026#34;UTF-8\u0026#34;\u0026gt;\r\u0026lt;meta name=\u0026#34;viewport\u0026#34; content=\u0026#34;width=device-width, initial-scale=1.0\u0026#34;\u0026gt;\r\u0026lt;meta http-equiv=\u0026#34;X-UA-Compatible\u0026#34; content=\u0026#34;ie=edge\u0026#34;\u0026gt;\r\u0026lt;title\u0026gt;Document\u0026lt;/title\u0026gt;\r\u0026lt;/head\u0026gt;\r\u0026lt;body\u0026gt;\r{% block body %}\r{% endblock %}\r\u0026lt;/body\u0026gt;\r\u0026lt;/html\u0026gt;\r 그리고 app이름 폴더에 있는 templates 안에 있는 html 파일들에 내용 추가  {% extends \u0026#39;base.html\u0026#39; %}\r{% block body %}\r\u0026lt;!-- html 작성 --\u0026gt;\r{% endblock %}\r  Django CRUD Django Paginator Django User(1) Django User(2) Django Comment Django M:N Django REST Framework  "
 },
 {
+	"uri": "https://dongyeopgu.github.io/server/docker-compose%EB%A1%9C-django-%EC%82%AC%EC%9A%A9.html",
+	"title": "Docker-compose로 Django 사용",
+	"tags": ["Django", "Docker-compose", "Gunicorn"],
+	"description": "",
+	"content": "Docker-compose \u0026amp; Django \u0026amp; Gunicorn  Docker-compose로 Django \u0026amp; Gunicorn 사용하기\n   Dockerfile\nFROMpython:3.6.9\rENV PYTHONUNBUFFERED 1\rRUN mkdir /backend\rWORKDIR/backend\rADD requirements.txt /backend/\rRUN pip install --upgrade pip\rRUN pip install -r requirements.txt\rADD . /backend/\r  docker-compose.yml\nbackend:\rbuild: context: ./backend\rdockerfile: Dockerfile\rrestart: always\renv_file:\r- ./backend/.env\rexpose:\r- \u0026#34;8001\u0026#34;\rvolumes:\r- \u0026#39;./backend:/backend\u0026#39;\rcommand:\r\u0026#34;gunicorn --workers=2 --bind=0.0.0.0:8001 backend.wsgi:application\u0026#34;\r 내부 접속만 열기위한 설정  backend-dev:\rbuild: context: ./backend\rdockerfile: Dockerfile\rrestart: always\renv_file:\r- ./backend/.env\rports:\r- \u0026#34;8000:8000\u0026#34;\rvolumes:\r- \u0026#39;./backend:/backend\u0026#39;\rcommand:\r\u0026#34;gunicorn --workers=2 --bind=0.0.0.0:8000 backend.wsgi:application\u0026#34;\r 포트 8000은 외부 접속을 할 수 있도록 하여 개발 중 서버에 있는 DB를 사용    expose를 사용하여 컨테이너 내부의 포트만 사용해 컨테이너 내부 IP 172.xxxxx로 서버에서만 접속 가능하도록 했음\n  명령어 docker inspect \u0026lt;컨테이너 id\u0026gt; 로 내부 IP 를 확인 후 vue.config.js에서 proxy를 사용하여 프록시 설정까지 해줌.\n 사용 예)  module.exports = {\rdevServer: {\rdisableHostCheck: true,\rproxy: {\r\u0026#39;/api\u0026#39; : {\rtarget: \u0026#39;http://172.19.0.4:8001\u0026#39;,\r.......\r 컨테이너 중지 후 다시 킬 경우 내부 IP가 변동될 수 있기 때문에 확인하여 수정하거나 내부 IP를 고정시키는 방법을 봐야함.    "
+},
+{
 	"uri": "https://dongyeopgu.github.io/algorithm/baekjoon.html",
 	"title": "백준 문제풀이",
 	"tags": ["백준", "baekjoon"],
@@ -1435,6 +1442,13 @@
 	"content": ""
 },
 {
+	"uri": "https://dongyeopgu.github.io/tags/docker-compose.html",
+	"title": "Docker-compose",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "https://dongyeopgu.github.io/tags/express.html",
 	"title": "Express",
 	"tags": [],
@@ -1451,6 +1465,13 @@
 {
 	"uri": "https://dongyeopgu.github.io/tags/follow.html",
 	"title": "follow",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/gunicorn.html",
+	"title": "Gunicorn",
 	"tags": [],
 	"description": "",
 	"content": ""
