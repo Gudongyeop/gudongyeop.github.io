@@ -149,6 +149,10 @@
   </url>
   
   <url>
+    <loc>https://dongyeopgu.github.io/django/django_image_upload.html</loc>
+  </url>
+  
+  <url>
     <loc>https://dongyeopgu.github.io/til.html</loc>
   </url>
   
@@ -871,6 +875,10 @@
   </url>
   
   <url>
+    <loc>https://dongyeopgu.github.io/tags/image.html</loc>
+  </url>
+  
+  <url>
     <loc>https://dongyeopgu.github.io/tags/javascript.html</loc>
   </url>
   
@@ -972,6 +980,10 @@
   
   <url>
     <loc>https://dongyeopgu.github.io/tags/update.html</loc>
+  </url>
+  
+  <url>
+    <loc>https://dongyeopgu.github.io/tags/upload.html</loc>
   </url>
   
   <url>

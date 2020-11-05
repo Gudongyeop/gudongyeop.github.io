@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Image on 여러가지</title>
+    <link>https://dongyeopgu.github.io/tags/image.html</link>
+    <description>Recent content in Image on 여러가지</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://dongyeopgu.github.io/tags/image/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Django Image Upload</title>
+      <link>https://dongyeopgu.github.io/django/django_image_upload.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dongyeopgu.github.io/django/django_image_upload.html</guid>
+      <description>Django에서 Image Upload  POST요청을 통해 Vue.js에서 Django로 이미지 전송.
+ 기본 세팅  settings.py에서 아래 추가  MEDIA_URL = &amp;#39;/api/&amp;#39; # 기본 api url을 통일 시켜 번거로움을 줄이기 위해 /api/로 설정했음 MEDIA_ROOT = os.path.join(BASE_DIR, &amp;#39;media&amp;#39;) # 이미지 파일이 저장되는 기본 위치를 media폴더로 설정  이미지 url도 다른 application과 같이 api로 시작하게 만들기 위해 MEDIA_URL을 /api/로 설정
+  urls.py  from django.contrib import admin from django.urls import path, include from django.</description>
+    </item>
+    
+  </channel>
+</rss>
