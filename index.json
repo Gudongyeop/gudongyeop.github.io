@@ -245,6 +245,13 @@
 	"content": "Node.js, Express 학습 내용 Server 관련 내용  Ubuntu로 웹 사이트 배포 관련 내용\n "
 },
 {
+	"uri": "https://dongyeopgu.github.io/django/django_image_upload.html",
+	"title": "Django Image Upload",
+	"tags": ["django", "Image", "Upload"],
+	"description": "",
+	"content": "Django에서 Image Upload  POST요청을 통해 Vue.js에서 Django로 이미지 전송.\n 기본 세팅  settings.py에서 아래 추가  MEDIA_URL = \u0026#39;/api/\u0026#39; # 기본 api url을 통일 시켜 번거로움을 줄이기 위해 /api/로 설정했음 MEDIA_ROOT = os.path.join(BASE_DIR, \u0026#39;media\u0026#39;) # 이미지 파일이 저장되는 기본 위치를 media폴더로 설정  이미지 url도 다른 application과 같이 api로 시작하게 만들기 위해 MEDIA_URL을 /api/로 설정\n  urls.py  from django.contrib import admin from django.urls import path, include from django.conf.urls.static import static from django.conf import settings urlpatterns = [ path(\u0026#39;admin/\u0026#39;, admin.site.urls), path(\u0026#39;api/accounts/\u0026#39;, include(\u0026#39;accounts.urls\u0026#39;)), path(\u0026#39;api/articles/\u0026#39;, include(\u0026#39;articles.urls\u0026#39;)), path(\u0026#39;api/images/\u0026#39;, include(\u0026#39;images.urls\u0026#39;)), ] urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)  urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) 을 추가함\n 1. Image를 Base64로 받아서 저장하는 방법  순서  Vue 에서 Image를 base64로 인코딩 인코딩한 정보를 django로 보냄 django에서 디코딩하여 저장   views.py  import base64 import os from datetime import datetime @api_view([\u0026#39;POST\u0026#39;]) def upload_image(request): img_string = request.data[\u0026#39;img_base64\u0026#39;] # POST요청을 통해 받은 base64정보 imgdata = base64.b64decode(img_string) # 디코딩 now = datetime.now() now = datetime.timestamp(now) filename = f\u0026#39;temp_image_{request.user}.jpg\u0026#39; # DB에 저장하지 않고 사용한다음 지우기 위해 with open(filename, \u0026#39;wb\u0026#39;) as f: f.write(imgdata)\t# 디코딩한 이미지를 사용하기 위해 잠시 저장 #### 이미지를 사용하는 코드 ##### os.remove(filename) # 이미지를 사용한 후 삭제 return Response({\u0026#39;result\u0026#39; : result}) @api_view([\u0026#39;POST\u0026#39;]) @permission_classes([IsAuthenticated]) def save_image(request): img_string = request.data[\u0026#39;img_base64\u0026#39;] img_result = request.data[\u0026#39;result\u0026#39;] imgdata = base64.b64decode(img_string) now = datetime.now() now = datetime.timestamp(now) filename = f\u0026#39;{img_result}_{request.user}_{now}.jpg\u0026#39; dir_list = os.listdir(settings.MEDIA_ROOT+\u0026#39;/users/\u0026#39;) if str(request.user) not in dir_list: os.makedirs(settings.MEDIA_ROOT+\u0026#39;/users/\u0026#39;+f\u0026#39;{request.user}/\u0026#39;) media_root = settings.MEDIA_ROOT+\u0026#39;/users/\u0026#39;+f\u0026#39;{request.user}/\u0026#39;+filename # 각각 user이름의 폴더에 이미지 저장한 후 db에 저장하기 위해 with open(media_root, \u0026#39;wb\u0026#39;) as f: f.write(imgdata) animal = get_object_or_404(Animal, english_name=img_result) animal_image = AnimalImage.objects.create( upload_image=f\u0026#39;users/{request.user}/{filename}\u0026#39;, animal=animal, upload_user=request.user )  이미지 경로를 설정하지 않은 경우 BASE_DIR에 저장됨\n 2. Image를 파일로 받아서 저장하는 방법  순서  vue에서 formData로 보낼 파일을 넣어줌 django에서 파일정보를 받아 저장   vue(vuetify 사용했음)  \u0026lt;v-file-input v-model=\u0026#34;files\u0026#34; multiple name=\u0026#34;files\u0026#34; \u0026gt;\u0026lt;/v-file-input\u0026gt; \u0026lt;!-- 여러파일 보낼경우 multiple 사용 --\u0026gt; \u0026lt;script\u0026gt; import axios from \u0026#39;axios\u0026#39; export default { data() { return { files: null } }, methods: { sendImages() { let info = new formData() info.append(\u0026#39;files\u0026#39;, this.files) if (this.files===null) { // 파일을 보내지 않을 경우  info.append(\u0026#39;files\u0026#39;, []) } else { for (let i = 0; i \u0026lt; this.files.length; i++) { // 파일이 하나 이상인 경우  info.append(\u0026#39;files\u0026#39;, this.files[i]); } } const token = sessionStorage.getItem(\u0026#34;token\u0026#34;) // token을 세션에 저장시켜 사용했기 때문에  let config = { headers: { \u0026#39;Content-Type\u0026#39;: \u0026#39;multipart/form-data\u0026#39;, // Content-Type을 변경해야 파일이 전송됨  \u0026#39;Authorization\u0026#39;: `token ${token}` } } axios.post( `${process.env.VUE_APP_BACKEND_URL}요청 보낼 URL`, info, config) .then((res) =\u0026gt; { console.log(res) // 필요한 것 넣어서 쓰면됨  }) } } } \u0026lt;/script\u0026gt;  models.py(위에서 한 방법과 다르게 바로 models.py에서 사용자별 폴더를 생성해 저장하는 방법)  def user_directory_path(instance, filename): return \u0026#39;users/{0}/{1}\u0026#39;.format(instance.upload_user.username, filename) # user를 upload_user로 저장했기 때문에 instance.upload_user로 사용함 def user_path(instance): return \u0026#39;users/{0}\u0026#39;.format(instance.upload_user.username) class HairImage(models.Model): upload_date = models.DateTimeField(auto_now_add=True) # 업로드 시간 upload_user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE) # 업로드 유저 upload_image = models.ImageField(upload_to=user_directory_path, blank=True) # 이미지 경로 def delete(self, *args, **kargs): # DB 를 삭제하면 저장한 이미지도 삭제되도록 하기 위해 if self.upload_image: img_path = f\u0026#39;{settings.MEDIA_ROOT}/{user_path}\u0026#39; os.remove(os.path.join(img_path, self.upload_image.path)) super(HairImage, self).delete(*args, **kargs)  views.py  @api_view([\u0026#39;POST\u0026#39;]) @permission_classes([IsAuthenticated]) def analyze_image(request): src = request.FILES[\u0026#39;files\u0026#39;] # 파일이 하나일 경우 #for img in request.FILES.getlist(\u0026#39;files\u0026#39;): # 파일이 여러개일 경우 # upload_img = UploadImage.objects.create(image=img, .....) ######## ######## uploaded_image = HairImage.objects.create(upload_image=src, upload_user=request.user) ######## ######## return Response(\u0026#39;response할 내용\u0026#39;)   Django 기초 Django CRUD Django Paginator Django User(1) Django User(2) Django Comment Django M:N  "
+},
+{
 	"uri": "https://dongyeopgu.github.io/til.html",
 	"title": "I Learned",
 	"tags": [],
@@ -256,7 +263,7 @@
 	"title": "Dongyeop&#39;s Blog",
 	"tags": [],
 	"description": "",
-	"content": " Project    Django를 이용한 간단한 웹페이지 구현\nGithub repo 주소\n  Django와 vue를 이용한 영화 추천 사이트\nGithub repo 주소\n[배포중단]\n  비접촉 체온 측정(IoT 프로젝트)\nGithub repo 주소\n[배포 중단]\n  수상한 동물 사전(AI 이용한 동물 판단)\nGithub repo 주소\n[배포 중단]\n   Algorithm   SWEA D3 SWEA D4 백준   Django   Django 기초 Django CRUD Django Paginator Django User(1) Django User(2) Django Comment Django M:N Model Django REST Framework   Hugo-blog   Hugo로 Blog만들기   Vue   Vue.js 기초 Vue CLI   Node.js/Express.js   Express.js를 이용한 백엔드 Express.js MySQL   Server 관련   Docker-compose 이용하여 배포 많이 사용한 명령어들   "
+	"content": "Project    Django를 이용한 간단한 웹페이지 구현\nGithub repo 주소\n  Django와 vue를 이용한 영화 추천 사이트\nGithub repo 주소\n[배포중단]\n  비접촉 체온 측정(IoT 프로젝트)\nGithub repo 주소\n[배포 중단]\n  수상한 동물 사전(AI 이용한 동물 판단)\nGithub repo 주소\n[배포 중단]\n   Algorithm  바로 가기\n Django  바로가기\n Hugo-blog  Hugo로 Blog만들기\n Vue  바로가기\n Node.js/Express.js  바로가기\n Server 관련  바로가기\n "
 },
 {
 	"uri": "https://dongyeopgu.github.io/tags.html",
@@ -1484,6 +1491,13 @@
 	"content": ""
 },
 {
+	"uri": "https://dongyeopgu.github.io/tags/image.html",
+	"title": "Image",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "https://dongyeopgu.github.io/tags/javascript.html",
 	"title": "Javascript",
 	"tags": [],
@@ -1661,6 +1675,13 @@
 {
 	"uri": "https://dongyeopgu.github.io/tags/update.html",
 	"title": "update",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/upload.html",
+	"title": "Upload",
 	"tags": [],
 	"description": "",
 	"content": ""
