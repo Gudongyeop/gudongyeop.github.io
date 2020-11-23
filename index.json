@@ -277,7 +277,7 @@
 	"title": "Server 관련",
 	"tags": ["Server", "AWS", "Ubuntu"],
 	"description": "",
-	"content": "Node.js, Express 학습 내용 Server 관련 내용  Ubuntu로 웹 사이트 배포 관련 내용\n "
+	"content": "Server 관련 내용  Ubuntu로 웹 사이트 배포 관련 내용\n "
 },
 {
 	"uri": "https://dongyeopgu.github.io/django/django_image_upload.html",
