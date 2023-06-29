@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Node.js / Express.js on 여러가지</title>
+    <link>https://dongyeopgu.github.io/node.js.html</link>
+    <description>Recent content in Node.js / Express.js on 여러가지</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://dongyeopgu.github.io/node.js/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Express를 이용한 백엔드 구축</title>
+      <link>https://dongyeopgu.github.io/node.js/node.js-%EC%8B%9C%EC%9E%91.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dongyeopgu.github.io/node.js/node.js-%EC%8B%9C%EC%9E%91.html</guid>
+      <description>Express 시작  백엔드에서 사용할 Nodejs Express 공부한 내용 정리.
+ 1. Express 설치 및 Generator 사용  express generator를 사용하면 스켈레톤 코드 생성됨(Django에서 startproject와 유사함.)  $ npm install express --save $ npx express-generator $ express --view=pug 사용할 이름  npx command (available in Node.js 8.2.0)
+--view=pug를 사용안하면 jade파일로 구성됨.
+ 2. Routes 이용하기  app.js 기본 구조  var indexRouter = require(&amp;#39;./routes/index&amp;#39;); ... app.use(&amp;#39;/&amp;#39;, indexRouter); ...  미리 만들어져 있는 index와 같이 새로 만들 route를 routes폴더에 생성 후 app.</description>
+    </item>
+    
+    <item>
+      <title>Express와 MySQL</title>
+      <link>https://dongyeopgu.github.io/node.js/express-mysql.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dongyeopgu.github.io/node.js/express-mysql.html</guid>
+      <description>Express &amp;amp; MySQL  프로젝트 진행하며 찾은 내용들 정리
+ 1. MySQL 사용  npm install mysql 으로 mysql모듈 설치  var mysql = require(&amp;#39;mysql&amp;#39;); // 기본적으로 이렇게 사용 let client = mysql.createConnection({ user: &amp;#39;&amp;#39;, password: &amp;#39;&amp;#39;, database: &amp;#39;&amp;#39;, })  프로젝트를 진행하며 사용한 코드 샘플  router.post(&amp;#39;/measure&amp;#39;, function(req, res, next) { let info = req.body let temp = info.temp let datetime = info.datetime let serial = info.serial let studentNumber = null client.</description>
+    </item>
+    
+  </channel>
+</rss>

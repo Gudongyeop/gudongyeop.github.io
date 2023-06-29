@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>8월 on 여러가지</title>
+    <link>https://dongyeopgu.github.io/til/8%EC%9B%94.html</link>
+    <description>Recent content in 8월 on 여러가지</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://dongyeopgu.github.io/til/8%EC%9B%94/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>OpenStack Horizon: Create New Plugin</title>
+      <link>https://dongyeopgu.github.io/til/8%EC%9B%94/create-new-plugin.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dongyeopgu.github.io/til/8%EC%9B%94/create-new-plugin.html</guid>
+      <description>Create New Plugin 폴더 구조   enabled 폴더
+  Plugin을 등록하는 configuration 파일ex)_31000_myplugin.py
+  _31000 은 load 순서를 정하는 번호
+  ex)_31000_myplugin.py 파일
+# The name of the panel to be added to HORIZON_CONFIG. Required. PANEL = &amp;#39;mypanel&amp;#39;# The name of the dashboard the PANEL associated with. Required. PANEL_DASHBOARD = &amp;#39;identity&amp;#39;# Python panel class of the PANEL to be added. ADD_PANEL = &amp;#39;myplugin.</description>
+    </item>
+    
+  </channel>
+</rss>

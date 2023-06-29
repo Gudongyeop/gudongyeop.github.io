@@ -34,12 +34,12 @@ $ npm install -g @vue/cli$ vue --version # 버젼확인  프로젝트 생성 �
     </item>
     
     <item>
-      <title>Vue.js</title>
+      <title>Vue</title>
       <link>https://dongyeopgu.github.io/vue.js.html</link>
       <pubDate>Mon, 25 May 2020 21:55:45 +0900</pubDate>
       
       <guid>https://dongyeopgu.github.io/vue.js.html</guid>
-      <description>Vue.js 학습 내용  학습한 Vue.js 내용 정리
+      <description>Vue 학습 내용  학습한 Vue 내용 정리
  </description>
     </item>
     
@@ -116,10 +116,10 @@ axios, cookies 사용
     
     <item>
       <title>2020.06.10 ~ </title>
-      <link>https://dongyeopgu.github.io/til/6%EC%9B%94/20.06.10-~-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EA%B3%BC%EC%A0%9C%EB%A1%9C-%EC%9D%B8%ED%95%9C-til-%EB%AF%B8%EC%97%85%EB%A1%9C%EB%93%9C.html</link>
+      <link>https://dongyeopgu.github.io/til/6%EC%9B%94/20.06.10-~-30-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EA%B3%BC%EC%A0%9C%EB%A1%9C-%EC%9D%B8%ED%95%9C-til-%EB%AF%B8%EC%97%85%EB%A1%9C%EB%93%9C.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/6%EC%9B%94/20.06.10-~-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EA%B3%BC%EC%A0%9C%EB%A1%9C-%EC%9D%B8%ED%95%9C-til-%EB%AF%B8%EC%97%85%EB%A1%9C%EB%93%9C.html</guid>
+      <guid>https://dongyeopgu.github.io/til/6%EC%9B%94/20.06.10-~-30-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EA%B3%BC%EC%A0%9C%EB%A1%9C-%EC%9D%B8%ED%95%9C-til-%EB%AF%B8%EC%97%85%EB%A1%9C%EB%93%9C.html</guid>
       <description>프로젝트 기간으로 TIL 없음  Django와 Vue 이용한 프로젝트  </description>
     </item>
     
