@@ -22,20 +22,20 @@
     <title>Django User (2) :: 여러가지</title>
 
     
-    <link href="../css/nucleus.css?1608129544" rel="stylesheet">
-    <link href="../css/fontawesome-all.min.css?1608129544" rel="stylesheet">
-    <link href="../css/hybrid.css?1608129544" rel="stylesheet">
-    <link href="../css/featherlight.min.css?1608129544" rel="stylesheet">
-    <link href="../css/perfect-scrollbar.min.css?1608129544" rel="stylesheet">
-    <link href="../css/auto-complete.css?1608129544" rel="stylesheet">
-    <link href="../css/atom-one-dark-reasonable.css?1608129544" rel="stylesheet">
-    <link href="../css/theme.css?1608129544" rel="stylesheet">
-    <link href="../css/hugo-theme.css?1608129544" rel="stylesheet">
+    <link href="../css/nucleus.css?1688058728" rel="stylesheet">
+    <link href="../css/fontawesome-all.min.css?1688058728" rel="stylesheet">
+    <link href="../css/hybrid.css?1688058728" rel="stylesheet">
+    <link href="../css/featherlight.min.css?1688058728" rel="stylesheet">
+    <link href="../css/perfect-scrollbar.min.css?1688058728" rel="stylesheet">
+    <link href="../css/auto-complete.css?1688058728" rel="stylesheet">
+    <link href="../css/atom-one-dark-reasonable.css?1688058728" rel="stylesheet">
+    <link href="../css/theme.css?1688058728" rel="stylesheet">
+    <link href="../css/hugo-theme.css?1688058728" rel="stylesheet">
     
-      <link href="../css/theme-red.css?1608129544" rel="stylesheet">
+      <link href="../css/theme-red.css?1688058728" rel="stylesheet">
     
 
-    <script src="../js/jquery-3.3.1.min.js?1608129544"></script>
+    <script src="../js/jquery-3.3.1.min.js?1688058728"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -76,14 +76,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../js/lunr.min.js?1608129544"></script>
-<script type="text/javascript" src="../js/auto-complete.js?1608129544"></script>
+<script type="text/javascript" src="../js/lunr.min.js?1688058728"></script>
+<script type="text/javascript" src="../js/auto-complete.js?1688058728"></script>
 <script type="text/javascript">
     
-        var baseurl = "https:\/\/dongyeopgu.github.io\/";
+        var baseurl = "https:\/\/gudongyeop.github.io\/";
     
 </script>
-<script type="text/javascript" src="../js/search.js?1608129544"></script>
+<script type="text/javascript" src="../js/search.js?1688058728"></script>
 
     
   </div>
@@ -947,6 +947,27 @@
       <li data-nav-id="/django/django_rest_api.html" title="Django REST Framework" class="dd-item ">
         <a href="../django/django_rest_api.html">
         <b>8. </b>Django REST Framework
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/django/django_fbv_cbv.html" title="Django FBV vs CBV" class="dd-item ">
+        <a href="../django/django_fbv_cbv.html">
+        <b>10. </b>Django FBV vs CBV
         
         </a>
     </li>
@@ -3055,7 +3076,7 @@
         <ul>
           
               <li> 
-                  <a class="padding" href="https://github.com/DongyeopGu"><i class='fab fa-fw fa-github'></i> GitHub</a>
+                  <a class="padding" href="https://github.com/Gudongyeop"><i class='fab fa-fw fa-github'></i> GitHub</a>
               </li>
           
               <li> 
@@ -3067,7 +3088,7 @@
               </li>
           
               <li> 
-                  <a class="padding" href="https://dongyeopgu.github.io/tags"><i class='fas fa-tags'></i> Tags</a>
+                  <a class="padding" href="https://gudongyeop.github.io/tags"><i class='fas fa-tags'></i> Tags</a>
               </li>
           
         </ul>
@@ -3145,26 +3166,26 @@
 </blockquote>
 <h4 id="1-modelspy에서-abstractuser를-상속">1. models.py에서 AbstractUser를 상속</h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> django.db <span style="color:#f92672">import</span> models
-<span style="color:#f92672">from</span> django.contrib.auth.models <span style="color:#f92672">import</span> AbstractUser <span style="color:#75715e"># AbstractUser를 가져옴</span>
-<span style="color:#75715e"># Create your models here.</span>
+<span style="color:#f92672">from</span> django.contrib.auth.models <span style="color:#f92672">import</span> AbstractUser <span style="color:#75715e"># AbstractUser를 가져옴</span>
+<span style="color:#75715e"># Create your models here.</span>
 
-<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">User</span>(AbstractUser): <span style="color:#75715e"># User 모델을 AbstractUser 상속받음</span>
-    <span style="color:#75715e"># 추가할 내용을 작성</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">User</span>(AbstractUser): <span style="color:#75715e"># User 모델을 AbstractUser 상속받음</span>
+    <span style="color:#75715e"># 추가할 내용을 작성</span>
     Korean_name <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>CharField(max_length<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>, blank<span style="color:#f92672">=</span>True)
     address <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>CharField(max_length<span style="color:#f92672">=</span><span style="color:#ae81ff">100</span>, blank<span style="color:#f92672">=</span>True)
     phone_number <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>CharField(max_length<span style="color:#f92672">=</span><span style="color:#ae81ff">11</span>, blank<span style="color:#f92672">=</span>True)
 </code></pre></div><h4 id="2-settingspy-에서-auth_user_model-추가공식문서-참조">2. settings.py 에서 AUTH_USER_MODEL 추가(공식문서 참조)</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># settings.py 에 AUTH_USER_MODEL = &#39;app 이름.User&#39;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># settings.py 에 AUTH_USER_MODEL = &#39;app 이름.User&#39;</span>
 AUTH_USER_MODEL <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;accounts.User&#39;</span>
 </code></pre></div><h4 id="3-bootstrap을-위한-class--form-control-추가를-위하여-formspy-작성">3. bootstrap을 위한 class:  form-control 추가를 위하여 forms.py 작성</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> django.contrib.auth.forms <span style="color:#f92672">import</span> UserCreationForm <span style="color:#75715e"># 기본 제공하는 modelForm을 사용하기 위해</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> django.contrib.auth.forms <span style="color:#f92672">import</span> UserCreationForm <span style="color:#75715e"># 기본 제공하는 modelForm을 사용하기 위해</span>
 <span style="color:#f92672">from</span> django <span style="color:#f92672">import</span> forms
-<span style="color:#f92672">from</span> .models <span style="color:#f92672">import</span> User		<span style="color:#75715e"># 커스터마이징한 User 모델을 불러옴</span>
-<span style="color:#f92672">from</span> django.contrib.auth.forms <span style="color:#f92672">import</span> UserChangeForm  <span style="color:#75715e"># User 정보를 수정하기 위해</span>
-<span style="color:#f92672">from</span> django.contrib.auth <span style="color:#f92672">import</span> get_user_model		<span style="color:#75715e"># User 정보를 수정할 때 정보를 가져오기 위해</span>
+<span style="color:#f92672">from</span> .models <span style="color:#f92672">import</span> User		<span style="color:#75715e"># 커스터마이징한 User 모델을 불러옴</span>
+<span style="color:#f92672">from</span> django.contrib.auth.forms <span style="color:#f92672">import</span> UserChangeForm  <span style="color:#75715e"># User 정보를 수정하기 위해</span>
+<span style="color:#f92672">from</span> django.contrib.auth <span style="color:#f92672">import</span> get_user_model		<span style="color:#75715e"># User 정보를 수정할 때 정보를 가져오기 위해</span>
 
-<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SignupForm</span>(UserCreationForm):		<span style="color:#75715e"># 상속받아 사용할 클래스 선언</span>
-    <span style="color:#66d9ef">def</span> __init__(self, <span style="color:#f92672">*</span>args, <span style="color:#f92672">**</span>kwargs):	<span style="color:#75715e"># init을 통해 존재하던 필드의 정보를 수정</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SignupForm</span>(UserCreationForm):		<span style="color:#75715e"># 상속받아 사용할 클래스 선언</span>
+    <span style="color:#66d9ef">def</span> __init__(self, <span style="color:#f92672">*</span>args, <span style="color:#f92672">**</span>kwargs):	<span style="color:#75715e"># init을 통해 존재하던 필드의 정보를 수정</span>
         super()<span style="color:#f92672">.</span>__init__(<span style="color:#f92672">*</span>args, <span style="color:#f92672">**</span>kwargs)
         class_update_fields <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;password1&#39;</span>, <span style="color:#e6db74">&#39;password2&#39;</span>]
         <span style="color:#66d9ef">for</span> field_name <span style="color:#f92672">in</span> class_update_fields:
@@ -3172,8 +3193,8 @@ AUTH_USER_MODEL <span style="color:#f92672">=</span> <span style="color:#e6db74"
                 <span style="color:#e6db74">&#39;class&#39;</span>: <span style="color:#e6db74">&#39;form-control&#39;</span>
             })
 
-    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Meta</span>:					 <span style="color:#75715e"># Meta 클래스를 통해 새로 추가한 필드의 attrs에서 form-control 추가</span>
-        model <span style="color:#f92672">=</span> User			 <span style="color:#75715e"># Bootstrap을 사용하기 위해서 추가했음</span>
+    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Meta</span>:					 <span style="color:#75715e"># Meta 클래스를 통해 새로 추가한 필드의 attrs에서 form-control 추가</span>
+        model <span style="color:#f92672">=</span> User			 <span style="color:#75715e"># Bootstrap을 사용하기 위해서 추가했음</span>
         fields <span style="color:#f92672">=</span> (
             <span style="color:#e6db74">&#39;username&#39;</span>,
             <span style="color:#e6db74">&#39;Korean_name&#39;</span>,
@@ -3202,7 +3223,7 @@ AUTH_USER_MODEL <span style="color:#f92672">=</span> <span style="color:#e6db74"
                 }
             )
         }
-<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CustomUserChangeForm</span>(UserChangeForm):		<span style="color:#75715e"># User 정보를 update하기 위하여 </span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CustomUserChangeForm</span>(UserChangeForm):		<span style="color:#75715e"># User 정보를 update하기 위하여 </span>
     <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Meta</span>:
         model <span style="color:#f92672">=</span> get_user_model()
         fields <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;username&#39;</span>, <span style="color:#e6db74">&#39;Korean_name&#39;</span>, <span style="color:#e6db74">&#39;address&#39;</span>, <span style="color:#e6db74">&#39;phone_number&#39;</span>]
@@ -3219,16 +3240,16 @@ $ python manage.py migrate
 </code></pre></div></li>
 </ul>
 <h4 id="5-viewspy와-urlspy에-update를-추가">5. views.py와 urls.py에 Update를 추가</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#### views.py</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#### views.py</span>
 <span style="color:#f92672">from</span> django.shortcuts <span style="color:#f92672">import</span> render, redirect
-<span style="color:#f92672">from</span> .forms <span style="color:#f92672">import</span> CustomUserChangeForm   <span style="color:#75715e"># customizing 한 changeform을 불러옴</span>
+<span style="color:#f92672">from</span> .forms <span style="color:#f92672">import</span> CustomUserChangeForm   <span style="color:#75715e"># customizing 한 changeform을 불러옴</span>
 
-<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">update</span>(request, pk):   <span style="color:#75715e"># 각각의 유저 정보를 얻고 수정하기 위해 pk값을 받아옴</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">update</span>(request, pk):   <span style="color:#75715e"># 각각의 유저 정보를 얻고 수정하기 위해 pk값을 받아옴</span>
     <span style="color:#66d9ef">if</span> request<span style="color:#f92672">.</span>method <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;POST&#39;</span>:
-        form <span style="color:#f92672">=</span> CustomUserChangeForm(request<span style="color:#f92672">.</span>POST, instance<span style="color:#f92672">=</span>request<span style="color:#f92672">.</span>user)   <span style="color:#75715e"># instance를 가져와야 기존에 있던 정보를 토대로 수정할 수 있음, 없을경우 빈칸으로 시작됨</span>
+        form <span style="color:#f92672">=</span> CustomUserChangeForm(request<span style="color:#f92672">.</span>POST, instance<span style="color:#f92672">=</span>request<span style="color:#f92672">.</span>user)   <span style="color:#75715e"># instance를 가져와야 기존에 있던 정보를 토대로 수정할 수 있음, 없을경우 빈칸으로 시작됨</span>
         <span style="color:#66d9ef">if</span> form<span style="color:#f92672">.</span>is_valid():
             form<span style="color:#f92672">.</span>save()
-            <span style="color:#66d9ef">return</span> redirect(<span style="color:#e6db74">&#39;accounts:index&#39;</span>)   <span style="color:#75715e"># 수정을 완료하면 저장 후 인덱스 페이지로 redirect</span>
+            <span style="color:#66d9ef">return</span> redirect(<span style="color:#e6db74">&#39;accounts:index&#39;</span>)   <span style="color:#75715e"># 수정을 완료하면 저장 후 인덱스 페이지로 redirect</span>
     <span style="color:#66d9ef">else</span>:
         form <span style="color:#f92672">=</span> CustomUserChangeForm(instance<span style="color:#f92672">=</span>request<span style="color:#f92672">.</span>user)
     context <span style="color:#f92672">=</span> {
@@ -3237,13 +3258,13 @@ $ python manage.py migrate
     <span style="color:#66d9ef">return</span> render(request, <span style="color:#e6db74">&#39;accounts/update.html&#39;</span>, context)
 
 </code></pre></div><ol>
-<li><a href="https://dongyeopgu.github.io/cont/django_start.html">Django 기초</a></li>
-<li><a href="https://dongyeopgu.github.io/cont/django_crud.html">Django CRUD</a></li>
-<li><a href="https://dongyeopgu.github.io/cont/django_paginator.html">Django Paginator</a></li>
-<li><a href="https://dongyeopgu.github.io/cont/django_login.html">Django User(1)</a></li>
-<li><a href="https://dongyeopgu.github.io/cont/django_comment.html">Django Comment</a></li>
-<li><a href="https://dongyeopgu.github.io/cont/django_like_follow.html">Django M:N</a></li>
-<li><a href="https://dongyeopgu.github.io/cont/django_rest_api.html">Django REST Framework</a></li>
+<li><a href="https://gudongyeop.github.io/cont/django_start.html">Django 기초</a></li>
+<li><a href="https://gudongyeop.github.io/cont/django_crud.html">Django CRUD</a></li>
+<li><a href="https://gudongyeop.github.io/cont/django_paginator.html">Django Paginator</a></li>
+<li><a href="https://gudongyeop.github.io/cont/django_login.html">Django User(1)</a></li>
+<li><a href="https://gudongyeop.github.io/cont/django_comment.html">Django Comment</a></li>
+<li><a href="https://gudongyeop.github.io/cont/django_like_follow.html">Django M:N</a></li>
+<li><a href="https://gudongyeop.github.io/cont/django_rest_api.html">Django REST Framework</a></li>
 </ol>
 
 
@@ -3274,7 +3295,7 @@ $ python manage.py migrate
         
             </div> 
         
-        </div> 
+        </div>
         
 
 
@@ -3283,7 +3304,7 @@ $ python manage.py migrate
     <div id="navigation">
         
         
-        
+
         
             
             
@@ -3853,7 +3874,23 @@ $ python manage.py migrate
                 
                     
                         
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
+            
+            
+                
                     
                 
                 
@@ -5361,7 +5398,7 @@ $ python manage.py migrate
                     
             
         
-        
+
         
 
 
@@ -5377,26 +5414,28 @@ $ python manage.py migrate
     </div>
 
     </section>
-    
+
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../js/clipboard.min.js?1608129544"></script>
-    <script src="../js/perfect-scrollbar.min.js?1608129544"></script>
-    <script src="../js/perfect-scrollbar.jquery.min.js?1608129544"></script>
-    <script src="../js/jquery.sticky.js?1608129544"></script>
-    <script src="../js/featherlight.min.js?1608129544"></script>
-    <script src="../js/highlight.pack.js?1608129544"></script>
+    <script src="../js/clipboard.min.js?1688058728"></script>
+    <script src="../js/perfect-scrollbar.min.js?1688058728"></script>
+    <script src="../js/perfect-scrollbar.jquery.min.js?1688058728"></script>
+    <script src="../js/jquery.sticky.js?1688058728"></script>
+    <script src="../js/featherlight.min.js?1688058728"></script>
+    <script src="../js/highlight.pack.js?1688058728"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../js/modernizr.custom-3.6.0.js?1608129544"></script>
-    <script src="../js/learn.js?1608129544"></script>
-    <script src="../js/hugo-learn.js?1608129544"></script>
-
-    <link href="../mermaid/mermaid.css?1608129544" rel="stylesheet" />
-    <script src="../mermaid/mermaid.js?1608129544"></script>
-    <script>
-        mermaid.initialize({ startOnLoad: true });
-    </script>
+    <script src="../js/modernizr.custom-3.6.0.js?1688058728"></script>
+    <script src="../js/learn.js?1688058728"></script>
+    <script src="../js/hugo-learn.js?1688058728"></script>
+    
+        
+            <script src="../mermaid/mermaid.js?1688058728"></script>
+        
+        <script>
+            mermaid.initialize({ startOnLoad: true });
+        </script>
+    
     
 
   </body>

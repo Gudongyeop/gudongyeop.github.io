@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>20.05.03 on 여러가지</title>
-    <link>https://dongyeopgu.github.io/tags/20.05.03.html</link>
+    <link>https://gudongyeop.github.io/tags/20.05.03.html</link>
     <description>Recent content in 20.05.03 on 여러가지</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="https://dongyeopgu.github.io/tags/20.05.03/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://gudongyeop.github.io/tags/20.05.03/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>2020.05.03</title>
-      <link>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.03.html</link>
+      <link>https://gudongyeop.github.io/til/5%EC%9B%94/20.05.03.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.03.html</guid>
+      <guid>https://gudongyeop.github.io/til/5%EC%9B%94/20.05.03.html</guid>
       <description>오늘 한 것  sqlite3 DB파일을 csv로 변환하기
-  혼자 하는 PJT의 User를 포함한 db가 있는 폴더에서 sqlite3 실행  $ sqlite3 db.sqlite3 sqlite&amp;gt; .table # 테이블 확인하면 accounts_user가 있음 accounts_user django_admin_log accounts_user_groups django_content_type  여기 있는 accounts_user에서 필요한 정보만 csv로 만들기 위해 아래 명령어 입력  sqlite&amp;gt; .headers on sqlite&amp;gt; .mode csv sqlite&amp;gt; .output dataout.csv sqlite&amp;gt; select * from accounts_user;  원하는 정보를 csv파일로 만들 수 있음.   하지만 엑셀에서 바로 csv파일을 열면 인코딩이 UTF-8이기때문에 한글이 깨지는 문제가 발생한다.</description>
+  혼자 하는 PJT의 User를 포함한 db가 있는 폴더에서 sqlite3 실행  $ sqlite3 db.sqlite3sqlite&amp;gt; .table # 테이블 확인하면 accounts_user가 있음accounts_user django_admin_logaccounts_user_groups django_content_type 여기 있는 accounts_user에서 필요한 정보만 csv로 만들기 위해 아래 명령어 입력  sqlite&amp;gt; .headers onsqlite&amp;gt; .mode csvsqlite&amp;gt; .output dataout.csvsqlite&amp;gt; select * from accounts_user; 원하는 정보를 csv파일로 만들 수 있음.   하지만 엑셀에서 바로 csv파일을 열면 인코딩이 UTF-8이기때문에 한글이 깨지는 문제가 발생한다.</description>
     </item>
     
   </channel>

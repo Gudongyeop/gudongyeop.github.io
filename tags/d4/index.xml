@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>D4 on 여러가지</title>
-    <link>https://dongyeopgu.github.io/tags/d4.html</link>
+    <link>https://gudongyeop.github.io/tags/d4.html</link>
     <description>Recent content in D4 on 여러가지</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="https://dongyeopgu.github.io/tags/d4/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://gudongyeop.github.io/tags/d4/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>SWEA - Python - D4</title>
-      <link>https://dongyeopgu.github.io/algorithm/d4/swea-d4.html</link>
+      <link>https://gudongyeop.github.io/algorithm/d4/swea-d4.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/algorithm/d4/swea-d4.html</guid>
+      <guid>https://gudongyeop.github.io/algorithm/d4/swea-d4.html</guid>
       <description>1210. Ladder1 for _ in range(10):T = input()ladder = [list(map(int, input().split()))for _ in range(100)]j = 0for x in range(100):if ladder[99][x] == 2:j = xstart_p = 0i = 99while i &amp;gt;= 0:if j - 1 &amp;gt;= 0 and ladder[i][j-1] == 1:while 0 &amp;lt;= j - 1 &amp;lt; 100 and ladder[i][j-1] == 1:j -= 1elif j + 1 &amp;lt; 100 and ladder[i][j+1] == 1:while 0 &amp;lt;= j + 1 &amp;lt; 100 and ladder[i][j+1] == 1:j += 1i -= 1print(f&amp;#34;#{T} {j}&amp;#34;)1211.</description>
     </item>
     

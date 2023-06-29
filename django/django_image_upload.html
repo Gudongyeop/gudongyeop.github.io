@@ -22,20 +22,20 @@
     <title>Django Image Upload :: 여러가지</title>
 
     
-    <link href="../css/nucleus.css?1608129544" rel="stylesheet">
-    <link href="../css/fontawesome-all.min.css?1608129544" rel="stylesheet">
-    <link href="../css/hybrid.css?1608129544" rel="stylesheet">
-    <link href="../css/featherlight.min.css?1608129544" rel="stylesheet">
-    <link href="../css/perfect-scrollbar.min.css?1608129544" rel="stylesheet">
-    <link href="../css/auto-complete.css?1608129544" rel="stylesheet">
-    <link href="../css/atom-one-dark-reasonable.css?1608129544" rel="stylesheet">
-    <link href="../css/theme.css?1608129544" rel="stylesheet">
-    <link href="../css/hugo-theme.css?1608129544" rel="stylesheet">
+    <link href="../css/nucleus.css?1688058728" rel="stylesheet">
+    <link href="../css/fontawesome-all.min.css?1688058728" rel="stylesheet">
+    <link href="../css/hybrid.css?1688058728" rel="stylesheet">
+    <link href="../css/featherlight.min.css?1688058728" rel="stylesheet">
+    <link href="../css/perfect-scrollbar.min.css?1688058728" rel="stylesheet">
+    <link href="../css/auto-complete.css?1688058728" rel="stylesheet">
+    <link href="../css/atom-one-dark-reasonable.css?1688058728" rel="stylesheet">
+    <link href="../css/theme.css?1688058728" rel="stylesheet">
+    <link href="../css/hugo-theme.css?1688058728" rel="stylesheet">
     
-      <link href="../css/theme-red.css?1608129544" rel="stylesheet">
+      <link href="../css/theme-red.css?1688058728" rel="stylesheet">
     
 
-    <script src="../js/jquery-3.3.1.min.js?1608129544"></script>
+    <script src="../js/jquery-3.3.1.min.js?1688058728"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -76,14 +76,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../js/lunr.min.js?1608129544"></script>
-<script type="text/javascript" src="../js/auto-complete.js?1608129544"></script>
+<script type="text/javascript" src="../js/lunr.min.js?1688058728"></script>
+<script type="text/javascript" src="../js/auto-complete.js?1688058728"></script>
 <script type="text/javascript">
     
-        var baseurl = "https:\/\/dongyeopgu.github.io\/";
+        var baseurl = "https:\/\/gudongyeop.github.io\/";
     
 </script>
-<script type="text/javascript" src="../js/search.js?1608129544"></script>
+<script type="text/javascript" src="../js/search.js?1688058728"></script>
 
     
   </div>
@@ -947,6 +947,27 @@
       <li data-nav-id="/django/django_rest_api.html" title="Django REST Framework" class="dd-item ">
         <a href="../django/django_rest_api.html">
         <b>8. </b>Django REST Framework
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/django/django_fbv_cbv.html" title="Django FBV vs CBV" class="dd-item ">
+        <a href="../django/django_fbv_cbv.html">
+        <b>10. </b>Django FBV vs CBV
         
         </a>
     </li>
@@ -3055,7 +3076,7 @@
         <ul>
           
               <li> 
-                  <a class="padding" href="https://github.com/DongyeopGu"><i class='fab fa-fw fa-github'></i> GitHub</a>
+                  <a class="padding" href="https://github.com/Gudongyeop"><i class='fab fa-fw fa-github'></i> GitHub</a>
               </li>
           
               <li> 
@@ -3067,7 +3088,7 @@
               </li>
           
               <li> 
-                  <a class="padding" href="https://dongyeopgu.github.io/tags"><i class='fas fa-tags'></i> Tags</a>
+                  <a class="padding" href="https://gudongyeop.github.io/tags"><i class='fas fa-tags'></i> Tags</a>
               </li>
           
         </ul>
@@ -3142,8 +3163,8 @@
 <ul>
 <li>settings.py에서 아래 추가</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">MEDIA_URL <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;/api/&#39;</span> <span style="color:#75715e"># 기본 api url을 통일 시켜 번거로움을 줄이기 위해 /api/로 설정했음</span>
-MEDIA_ROOT <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>join(BASE_DIR, <span style="color:#e6db74">&#39;media&#39;</span>) <span style="color:#75715e"># 이미지 파일이 저장되는 기본 위치를 media폴더로 설정</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">MEDIA_URL <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;/api/&#39;</span> <span style="color:#75715e"># 기본 api url을 통일 시켜 번거로움을 줄이기 위해 /api/로 설정했음</span>
+MEDIA_ROOT <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>join(BASE_DIR, <span style="color:#e6db74">&#39;media&#39;</span>) <span style="color:#75715e"># 이미지 파일이 저장되는 기본 위치를 media폴더로 설정</span>
 </code></pre></div><blockquote>
 <p>이미지 url도 다른 application과 같이 api로 시작하게 만들기 위해 MEDIA_URL을 /api/로 설정</p>
 </blockquote>
@@ -3182,15 +3203,15 @@ urlpatterns <span style="color:#f92672">+=</span> static(settings<span style="co
 
 <span style="color:#a6e22e">@api_view</span>([<span style="color:#e6db74">&#39;POST&#39;</span>])
 <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">upload_image</span>(request):
-    img_string <span style="color:#f92672">=</span> request<span style="color:#f92672">.</span>data[<span style="color:#e6db74">&#39;img_base64&#39;</span>] <span style="color:#75715e"># POST요청을 통해 받은 base64정보</span>
-    imgdata <span style="color:#f92672">=</span> base64<span style="color:#f92672">.</span>b64decode(img_string) <span style="color:#75715e"># 디코딩</span>
+    img_string <span style="color:#f92672">=</span> request<span style="color:#f92672">.</span>data[<span style="color:#e6db74">&#39;img_base64&#39;</span>] <span style="color:#75715e"># POST요청을 통해 받은 base64정보</span>
+    imgdata <span style="color:#f92672">=</span> base64<span style="color:#f92672">.</span>b64decode(img_string) <span style="color:#75715e"># 디코딩</span>
     now <span style="color:#f92672">=</span> datetime<span style="color:#f92672">.</span>now()
     now <span style="color:#f92672">=</span> datetime<span style="color:#f92672">.</span>timestamp(now)
-    filename <span style="color:#f92672">=</span> f<span style="color:#e6db74">&#39;temp_image_{request.user}.jpg&#39;</span> <span style="color:#75715e"># DB에 저장하지 않고 사용한다음 지우기 위해</span>
+    filename <span style="color:#f92672">=</span> f<span style="color:#e6db74">&#39;temp_image_{request.user}.jpg&#39;</span> <span style="color:#75715e"># DB에 저장하지 않고 사용한다음 지우기 위해</span>
     <span style="color:#66d9ef">with</span> open(filename, <span style="color:#e6db74">&#39;wb&#39;</span>) <span style="color:#66d9ef">as</span> f:
-        f<span style="color:#f92672">.</span>write(imgdata)				<span style="color:#75715e"># 디코딩한 이미지를 사용하기 위해 잠시 저장</span>
- 	<span style="color:#75715e">#### 이미지를 사용하는 코드 #####</span>
-    os<span style="color:#f92672">.</span>remove(filename)    				<span style="color:#75715e"># 이미지를 사용한 후 삭제</span>
+        f<span style="color:#f92672">.</span>write(imgdata)				<span style="color:#75715e"># 디코딩한 이미지를 사용하기 위해 잠시 저장</span>
+ 	<span style="color:#75715e">#### 이미지를 사용하는 코드 #####</span>
+    os<span style="color:#f92672">.</span>remove(filename)    				<span style="color:#75715e"># 이미지를 사용한 후 삭제</span>
     <span style="color:#66d9ef">return</span> Response({<span style="color:#e6db74">&#39;result&#39;</span> : result})
 
 <span style="color:#a6e22e">@api_view</span>([<span style="color:#e6db74">&#39;POST&#39;</span>])
@@ -3205,7 +3226,7 @@ urlpatterns <span style="color:#f92672">+=</span> static(settings<span style="co
     dir_list <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>listdir(settings<span style="color:#f92672">.</span>MEDIA_ROOT<span style="color:#f92672">+</span><span style="color:#e6db74">&#39;/users/&#39;</span>)     
     <span style="color:#66d9ef">if</span> str(request<span style="color:#f92672">.</span>user) <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> dir_list:
         os<span style="color:#f92672">.</span>makedirs(settings<span style="color:#f92672">.</span>MEDIA_ROOT<span style="color:#f92672">+</span><span style="color:#e6db74">&#39;/users/&#39;</span><span style="color:#f92672">+</span>f<span style="color:#e6db74">&#39;{request.user}/&#39;</span>)
-    media_root <span style="color:#f92672">=</span> settings<span style="color:#f92672">.</span>MEDIA_ROOT<span style="color:#f92672">+</span><span style="color:#e6db74">&#39;/users/&#39;</span><span style="color:#f92672">+</span>f<span style="color:#e6db74">&#39;{request.user}/&#39;</span><span style="color:#f92672">+</span>filename  <span style="color:#75715e"># 각각 user이름의 폴더에 이미지 저장한 후 db에 저장하기 위해</span>
+    media_root <span style="color:#f92672">=</span> settings<span style="color:#f92672">.</span>MEDIA_ROOT<span style="color:#f92672">+</span><span style="color:#e6db74">&#39;/users/&#39;</span><span style="color:#f92672">+</span>f<span style="color:#e6db74">&#39;{request.user}/&#39;</span><span style="color:#f92672">+</span>filename  <span style="color:#75715e"># 각각 user이름의 폴더에 이미지 저장한 후 db에 저장하기 위해</span>
     <span style="color:#66d9ef">with</span> open(media_root, <span style="color:#e6db74">&#39;wb&#39;</span>) <span style="color:#66d9ef">as</span> f:
         f<span style="color:#f92672">.</span>write(imgdata)
     animal <span style="color:#f92672">=</span> get_object_or_404(Animal, english_name<span style="color:#f92672">=</span>img_result)
@@ -3270,15 +3291,15 @@ urlpatterns <span style="color:#f92672">+=</span> static(settings<span style="co
 <li>models.py(위에서 한 방법과 다르게 바로 models.py에서 사용자별 폴더를 생성해 저장하는 방법)</li>
 </ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">user_directory_path</span>(instance, filename):
-    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;users/{0}/{1}&#39;</span><span style="color:#f92672">.</span>format(instance<span style="color:#f92672">.</span>upload_user<span style="color:#f92672">.</span>username, filename)  <span style="color:#75715e"># user를 upload_user로 저장했기 때문에 instance.upload_user로 사용함</span>
+    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;users/{0}/{1}&#39;</span><span style="color:#f92672">.</span>format(instance<span style="color:#f92672">.</span>upload_user<span style="color:#f92672">.</span>username, filename)  <span style="color:#75715e"># user를 upload_user로 저장했기 때문에 instance.upload_user로 사용함</span>
 <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">user_path</span>(instance):
     <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;users/{0}&#39;</span><span style="color:#f92672">.</span>format(instance<span style="color:#f92672">.</span>upload_user<span style="color:#f92672">.</span>username)
 
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">HairImage</span>(models<span style="color:#f92672">.</span>Model):
-    upload_date <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>DateTimeField(auto_now_add<span style="color:#f92672">=</span>True) <span style="color:#75715e"># 업로드 시간</span>
-    upload_user <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>ForeignKey(settings<span style="color:#f92672">.</span>AUTH_USER_MODEL, on_delete<span style="color:#f92672">=</span>models<span style="color:#f92672">.</span>CASCADE) <span style="color:#75715e"># 업로드 유저</span>
-    upload_image <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>ImageField(upload_to<span style="color:#f92672">=</span>user_directory_path, blank<span style="color:#f92672">=</span>True) <span style="color:#75715e"># 이미지 경로</span>
-    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">delete</span>(self, <span style="color:#f92672">*</span>args, <span style="color:#f92672">**</span>kargs):   <span style="color:#75715e"># DB 를 삭제하면 저장한 이미지도 삭제되도록 하기 위해</span>
+    upload_date <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>DateTimeField(auto_now_add<span style="color:#f92672">=</span>True) <span style="color:#75715e"># 업로드 시간</span>
+    upload_user <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>ForeignKey(settings<span style="color:#f92672">.</span>AUTH_USER_MODEL, on_delete<span style="color:#f92672">=</span>models<span style="color:#f92672">.</span>CASCADE) <span style="color:#75715e"># 업로드 유저</span>
+    upload_image <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>ImageField(upload_to<span style="color:#f92672">=</span>user_directory_path, blank<span style="color:#f92672">=</span>True) <span style="color:#75715e"># 이미지 경로</span>
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">delete</span>(self, <span style="color:#f92672">*</span>args, <span style="color:#f92672">**</span>kargs):   <span style="color:#75715e"># DB 를 삭제하면 저장한 이미지도 삭제되도록 하기 위해</span>
         <span style="color:#66d9ef">if</span> self<span style="color:#f92672">.</span>upload_image:
             img_path <span style="color:#f92672">=</span> f<span style="color:#e6db74">&#39;{settings.MEDIA_ROOT}/{user_path}&#39;</span>
             os<span style="color:#f92672">.</span>remove(os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>join(img_path, self<span style="color:#f92672">.</span>upload_image<span style="color:#f92672">.</span>path))
@@ -3289,24 +3310,24 @@ urlpatterns <span style="color:#f92672">+=</span> static(settings<span style="co
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#a6e22e">@api_view</span>([<span style="color:#e6db74">&#39;POST&#39;</span>])
 <span style="color:#a6e22e">@permission_classes</span>([IsAuthenticated])
 <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">analyze_image</span>(request):
-    src <span style="color:#f92672">=</span> request<span style="color:#f92672">.</span>FILES[<span style="color:#e6db74">&#39;files&#39;</span>] <span style="color:#75715e"># 파일이 하나일 경우</span>
-    <span style="color:#75715e">#for img in request.FILES.getlist(&#39;files&#39;):   # 파일이 여러개일 경우</span>
-    <span style="color:#75715e">#    upload_img = UploadImage.objects.create(image=img, .....)</span>
-    <span style="color:#75715e">########</span>
-    <span style="color:#75715e">########</span>
+    src <span style="color:#f92672">=</span> request<span style="color:#f92672">.</span>FILES[<span style="color:#e6db74">&#39;files&#39;</span>] <span style="color:#75715e"># 파일이 하나일 경우</span>
+    <span style="color:#75715e">#for img in request.FILES.getlist(&#39;files&#39;):   # 파일이 여러개일 경우</span>
+    <span style="color:#75715e">#    upload_img = UploadImage.objects.create(image=img, .....)</span>
+    <span style="color:#75715e">########</span>
+    <span style="color:#75715e">########</span>
     uploaded_image <span style="color:#f92672">=</span> HairImage<span style="color:#f92672">.</span>objects<span style="color:#f92672">.</span>create(upload_image<span style="color:#f92672">=</span>src, upload_user<span style="color:#f92672">=</span>request<span style="color:#f92672">.</span>user)
-	<span style="color:#75715e">########</span>
-    <span style="color:#75715e">########</span>
+	<span style="color:#75715e">########</span>
+    <span style="color:#75715e">########</span>
     <span style="color:#66d9ef">return</span> Response(<span style="color:#e6db74">&#39;response할 내용&#39;</span>)
 </code></pre></div><hr>
 <ol>
-<li><a href="https://dongyeopgu.github.io/cont/django_start.html">Django 기초</a></li>
-<li><a href="https://dongyeopgu.github.io/cont/django_crud.html">Django CRUD</a></li>
-<li><a href="https://dongyeopgu.github.io/cont/django_paginator.html">Django Paginator</a></li>
-<li><a href="https://dongyeopgu.github.io/cont/django_login.html">Django User(1)</a></li>
-<li><a href="https://dongyeopgu.github.io/cont/django_change_user.html">Django User(2)</a></li>
-<li><a href="https://dongyeopgu.github.io/cont/django_comment.html">Django Comment</a></li>
-<li><a href="https://dongyeopgu.github.io/cont/django_like_follow.html">Django M:N</a></li>
+<li><a href="https://gudongyeop.github.io/cont/django_start.html">Django 기초</a></li>
+<li><a href="https://gudongyeop.github.io/cont/django_crud.html">Django CRUD</a></li>
+<li><a href="https://gudongyeop.github.io/cont/django_paginator.html">Django Paginator</a></li>
+<li><a href="https://gudongyeop.github.io/cont/django_login.html">Django User(1)</a></li>
+<li><a href="https://gudongyeop.github.io/cont/django_change_user.html">Django User(2)</a></li>
+<li><a href="https://gudongyeop.github.io/cont/django_comment.html">Django Comment</a></li>
+<li><a href="https://gudongyeop.github.io/cont/django_like_follow.html">Django M:N</a></li>
 </ol>
 
 
@@ -3337,7 +3358,7 @@ urlpatterns <span style="color:#f92672">+=</span> static(settings<span style="co
         
             </div> 
         
-        </div> 
+        </div>
         
 
 
@@ -3346,7 +3367,7 @@ urlpatterns <span style="color:#f92672">+=</span> static(settings<span style="co
     <div id="navigation">
         
         
-        
+
         
             
             
@@ -3815,6 +3836,19 @@ urlpatterns <span style="color:#f92672">+=</span> static(settings<span style="co
                     
             
         
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
                     
                         
             
@@ -3829,6 +3863,9 @@ urlpatterns <span style="color:#f92672">+=</span> static(settings<span style="co
                     
 
                     
+            
+        
+                    
                         
             
             
@@ -5424,14 +5461,14 @@ urlpatterns <span style="color:#f92672">+=</span> static(settings<span style="co
                     
             
         
-        
+
         
 
 
 	 
 	 
 		
-			<a class="nav nav-prev" href="../django/django_rest_api.html" title="Django REST Framework"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="../django/django_fbv_cbv.html" title="Django FBV vs CBV"> <i class="fa fa-chevron-left"></i></a>
 		
 		
 			<a class="nav nav-next" href="../hugo-blog.html" title="Hugo Blog" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
@@ -5440,26 +5477,28 @@ urlpatterns <span style="color:#f92672">+=</span> static(settings<span style="co
     </div>
 
     </section>
-    
+
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../js/clipboard.min.js?1608129544"></script>
-    <script src="../js/perfect-scrollbar.min.js?1608129544"></script>
-    <script src="../js/perfect-scrollbar.jquery.min.js?1608129544"></script>
-    <script src="../js/jquery.sticky.js?1608129544"></script>
-    <script src="../js/featherlight.min.js?1608129544"></script>
-    <script src="../js/highlight.pack.js?1608129544"></script>
+    <script src="../js/clipboard.min.js?1688058728"></script>
+    <script src="../js/perfect-scrollbar.min.js?1688058728"></script>
+    <script src="../js/perfect-scrollbar.jquery.min.js?1688058728"></script>
+    <script src="../js/jquery.sticky.js?1688058728"></script>
+    <script src="../js/featherlight.min.js?1688058728"></script>
+    <script src="../js/highlight.pack.js?1688058728"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../js/modernizr.custom-3.6.0.js?1608129544"></script>
-    <script src="../js/learn.js?1608129544"></script>
-    <script src="../js/hugo-learn.js?1608129544"></script>
-
-    <link href="../mermaid/mermaid.css?1608129544" rel="stylesheet" />
-    <script src="../mermaid/mermaid.js?1608129544"></script>
-    <script>
-        mermaid.initialize({ startOnLoad: true });
-    </script>
+    <script src="../js/modernizr.custom-3.6.0.js?1688058728"></script>
+    <script src="../js/learn.js?1688058728"></script>
+    <script src="../js/hugo-learn.js?1688058728"></script>
+    
+        
+            <script src="../mermaid/mermaid.js?1688058728"></script>
+        
+        <script>
+            mermaid.initialize({ startOnLoad: true });
+        </script>
+    
     
 
   </body>

@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>paginator on 여러가지</title>
-    <link>https://dongyeopgu.github.io/tags/paginator.html</link>
+    <link>https://gudongyeop.github.io/tags/paginator.html</link>
     <description>Recent content in paginator on 여러가지</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="https://dongyeopgu.github.io/tags/paginator/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://gudongyeop.github.io/tags/paginator/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Django Paginator</title>
-      <link>https://dongyeopgu.github.io/django/django_paginator.html</link>
+      <link>https://gudongyeop.github.io/django/django_paginator.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/django/django_paginator.html</guid>
+      <guid>https://gudongyeop.github.io/django/django_paginator.html</guid>
       <description>Paginator 사용하기   게시판 같은 곳에서 리스트의 양이 많아 질 경우 나누어 보여주기 위해서 사용
 여기 적힌 예에서 model은 Review 이고 forms는 ReviewForm이다.
 bootstrap을 사용했음.

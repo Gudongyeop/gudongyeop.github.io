@@ -22,20 +22,20 @@
     <title>Django REST Framework :: 여러가지</title>
 
     
-    <link href="../css/nucleus.css?1608129544" rel="stylesheet">
-    <link href="../css/fontawesome-all.min.css?1608129544" rel="stylesheet">
-    <link href="../css/hybrid.css?1608129544" rel="stylesheet">
-    <link href="../css/featherlight.min.css?1608129544" rel="stylesheet">
-    <link href="../css/perfect-scrollbar.min.css?1608129544" rel="stylesheet">
-    <link href="../css/auto-complete.css?1608129544" rel="stylesheet">
-    <link href="../css/atom-one-dark-reasonable.css?1608129544" rel="stylesheet">
-    <link href="../css/theme.css?1608129544" rel="stylesheet">
-    <link href="../css/hugo-theme.css?1608129544" rel="stylesheet">
+    <link href="../css/nucleus.css?1688058728" rel="stylesheet">
+    <link href="../css/fontawesome-all.min.css?1688058728" rel="stylesheet">
+    <link href="../css/hybrid.css?1688058728" rel="stylesheet">
+    <link href="../css/featherlight.min.css?1688058728" rel="stylesheet">
+    <link href="../css/perfect-scrollbar.min.css?1688058728" rel="stylesheet">
+    <link href="../css/auto-complete.css?1688058728" rel="stylesheet">
+    <link href="../css/atom-one-dark-reasonable.css?1688058728" rel="stylesheet">
+    <link href="../css/theme.css?1688058728" rel="stylesheet">
+    <link href="../css/hugo-theme.css?1688058728" rel="stylesheet">
     
-      <link href="../css/theme-red.css?1608129544" rel="stylesheet">
+      <link href="../css/theme-red.css?1688058728" rel="stylesheet">
     
 
-    <script src="../js/jquery-3.3.1.min.js?1608129544"></script>
+    <script src="../js/jquery-3.3.1.min.js?1688058728"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -76,14 +76,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../js/lunr.min.js?1608129544"></script>
-<script type="text/javascript" src="../js/auto-complete.js?1608129544"></script>
+<script type="text/javascript" src="../js/lunr.min.js?1688058728"></script>
+<script type="text/javascript" src="../js/auto-complete.js?1688058728"></script>
 <script type="text/javascript">
     
-        var baseurl = "https:\/\/dongyeopgu.github.io\/";
+        var baseurl = "https:\/\/gudongyeop.github.io\/";
     
 </script>
-<script type="text/javascript" src="../js/search.js?1608129544"></script>
+<script type="text/javascript" src="../js/search.js?1688058728"></script>
 
     
   </div>
@@ -947,6 +947,27 @@
       <li data-nav-id="/django/django_rest_api.html" title="Django REST Framework" class="dd-item active">
         <a href="../django/django_rest_api.html">
         <b>8. </b>Django REST Framework
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/django/django_fbv_cbv.html" title="Django FBV vs CBV" class="dd-item ">
+        <a href="../django/django_fbv_cbv.html">
+        <b>10. </b>Django FBV vs CBV
         
         </a>
     </li>
@@ -3055,7 +3076,7 @@
         <ul>
           
               <li> 
-                  <a class="padding" href="https://github.com/DongyeopGu"><i class='fab fa-fw fa-github'></i> GitHub</a>
+                  <a class="padding" href="https://github.com/Gudongyeop"><i class='fab fa-fw fa-github'></i> GitHub</a>
               </li>
           
               <li> 
@@ -3067,7 +3088,7 @@
               </li>
           
               <li> 
-                  <a class="padding" href="https://dongyeopgu.github.io/tags"><i class='fas fa-tags'></i> Tags</a>
+                  <a class="padding" href="https://gudongyeop.github.io/tags"><i class='fas fa-tags'></i> Tags</a>
               </li>
           
         </ul>
@@ -3145,9 +3166,9 @@
 <li>settings.py에서 <code>INSTALLED_APPS</code>에 <code>'rest_framework'</code>추가</li>
 <li>app 폴더에 serializers.py 파일을 만들고 내용 추가</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># serializers.py</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># serializers.py</span>
 <span style="color:#f92672">from</span> rest_framework <span style="color:#f92672">import</span> serializers
-<span style="color:#f92672">from</span> .models <span style="color:#f92672">import</span> <span style="color:#f92672">*</span> <span style="color:#75715e">#필요한 모델이름 넣어주기</span>
+<span style="color:#f92672">from</span> .models <span style="color:#f92672">import</span> <span style="color:#f92672">*</span> <span style="color:#75715e">#필요한 모델이름 넣어주기</span>
 
 <span style="color:#66d9ef">class</span> <span style="color:#960050;background-color:#1e0010">&lt;모델명&gt;</span><span style="color:#a6e22e">Serializer</span>(serializers<span style="color:#f92672">.</span>ModelSerializer):
     <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Meta</span>:
@@ -3164,17 +3185,17 @@
 <span style="color:#f92672">from</span> .models <span style="color:#f92672">import</span> <span style="color:#f92672">*</span>
 <span style="color:#f92672">from</span> .serializers <span style="color:#f92672">import</span> <span style="color:#f92672">*</span>
 
-<span style="color:#a6e22e">@api_view</span>([<span style="color:#e6db74">&#39;GET&#39;</span>]) <span style="color:#75715e">#method에 따라 다르게 적어주면 됨 (GET, POST 등)</span>
-<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">list</span>(request):	<span style="color:#75715e">#예를 들어 목록을 보여준다고 할때</span>
-    <span style="color:#960050;background-color:#1e0010">변수명</span> <span style="color:#f92672">=</span> <span style="color:#960050;background-color:#1e0010">모델명</span><span style="color:#f92672">.</span>objects<span style="color:#f92672">.</span>all()	<span style="color:#75715e">#queryset</span>
-    serializer <span style="color:#f92672">=</span> <span style="color:#960050;background-color:#1e0010">모델명</span>Serializer(<span style="color:#960050;background-color:#1e0010">변수명</span>, many<span style="color:#f92672">=</span>True)	<span style="color:#75715e">#위에서 만든 이름임, many=True는 1:N 경우, queryset을 json으로 변환</span>
+<span style="color:#a6e22e">@api_view</span>([<span style="color:#e6db74">&#39;GET&#39;</span>]) <span style="color:#75715e">#method에 따라 다르게 적어주면 됨 (GET, POST 등)</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">list</span>(request):	<span style="color:#75715e">#예를 들어 목록을 보여준다고 할때</span>
+    <span style="color:#960050;background-color:#1e0010">변수명</span> <span style="color:#f92672">=</span> <span style="color:#960050;background-color:#1e0010">모델명</span><span style="color:#f92672">.</span>objects<span style="color:#f92672">.</span>all()	<span style="color:#75715e">#queryset</span>
+    serializer <span style="color:#f92672">=</span> <span style="color:#960050;background-color:#1e0010">모델명</span>Serializer(<span style="color:#960050;background-color:#1e0010">변수명</span>, many<span style="color:#f92672">=</span>True)	<span style="color:#75715e">#위에서 만든 이름임, many=True는 1:N 경우, queryset을 json으로 변환</span>
     <span style="color:#66d9ef">return</span> Response(serializer<span style="color:#f92672">.</span>data)
 <span style="color:#a6e22e">@api_view</span>([<span style="color:#e6db74">&#39;GET&#39;</span>])
 <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">detail</span>(request, pk):
     <span style="color:#960050;background-color:#1e0010">변수명</span> <span style="color:#f92672">=</span> get_object_or_404(<span style="color:#960050;background-color:#1e0010">모델명</span>,pk<span style="color:#f92672">=</span>pk)
-    serializer <span style="color:#f92672">=</span> <span style="color:#960050;background-color:#1e0010">모델명</span>DetailSerializer(<span style="color:#960050;background-color:#1e0010">변수명</span>)	<span style="color:#75715e">#serializers.py에서 detail을 위한 모델명DetailSerializer를 만든 후 사용</span>
+    serializer <span style="color:#f92672">=</span> <span style="color:#960050;background-color:#1e0010">모델명</span>DetailSerializer(<span style="color:#960050;background-color:#1e0010">변수명</span>)	<span style="color:#75715e">#serializers.py에서 detail을 위한 모델명DetailSerializer를 만든 후 사용</span>
     <span style="color:#66d9ef">return</span> Response(serializer<span style="color:#f92672">.</span>data)
-<span style="color:#75715e"># Create 경우</span>
+<span style="color:#75715e"># Create 경우</span>
 <span style="color:#a6e22e">@api_view</span>([<span style="color:#e6db74">&#39;POST&#39;</span>])
 <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">create</span>(request):
     serializer <span style="color:#f92672">=</span> <span style="color:#960050;background-color:#1e0010">모델명</span>Serializer(data<span style="color:#f92672">=</span>request<span style="color:#f92672">.</span>data)
@@ -3182,7 +3203,7 @@
         serializer<span style="color:#f92672">.</span>save()
         <span style="color:#66d9ef">return</span> Response(serializer<span style="color:#f92672">.</span>data)
     
-<span style="color:#75715e"># Update, Delete</span>
+<span style="color:#75715e"># Update, Delete</span>
 <span style="color:#a6e22e">@api_view</span>([<span style="color:#e6db74">&#39;PUT&#39;</span>, <span style="color:#e6db74">&#39;DELETE&#39;</span>])
 <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">comment_edit</span>(request, pk):
     <span style="color:#960050;background-color:#1e0010">변수명</span> <span style="color:#f92672">=</span> get_object_or_404(<span style="color:#960050;background-color:#1e0010">모델명</span>, pk<span style="color:#f92672">=</span>pk)
@@ -3191,7 +3212,7 @@
         <span style="color:#66d9ef">if</span> serializer<span style="color:#f92672">.</span>is_valid():
             serializer<span style="color:#f92672">.</span>save()
             <span style="color:#66d9ef">return</span> Response(<span style="color:#e6db74">&#39;성공적으로 수정이 완료 되었습니다.&#39;</span>)
-        <span style="color:#66d9ef">return</span> Response(status<span style="color:#f92672">=</span>status<span style="color:#f92672">.</span>HTTP_400_BAD_REQUEST) <span style="color:#75715e"># 상태까지 나타내기 위함   </span>
+        <span style="color:#66d9ef">return</span> Response(status<span style="color:#f92672">=</span>status<span style="color:#f92672">.</span>HTTP_400_BAD_REQUEST) <span style="color:#75715e"># 상태까지 나타내기 위함   </span>
     <span style="color:#66d9ef">if</span> request<span style="color:#f92672">.</span>method <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;DELETE&#39;</span>:
         comment<span style="color:#f92672">.</span>delete()
         <span style="color:#66d9ef">return</span> Response(<span style="color:#e6db74">&#39;성공적으로 삭제 되었습니다.&#39;</span>, status<span style="color:#f92672">=</span>status<span style="color:#f92672">.</span>HTTP_204_NO_CONTENT)
@@ -3200,13 +3221,13 @@
 </ul>
 <hr>
 <ol>
-<li><a href="https://dongyeopgu.github.io/cont/django_start.html">Django 기초</a></li>
-<li><a href="https://dongyeopgu.github.io/cont/django_crud.html">Django CRUD</a></li>
-<li><a href="https://dongyeopgu.github.io/cont/django_paginator.html">Django Paginator</a></li>
-<li><a href="https://dongyeopgu.github.io/cont/django_login.html">Django User(1)</a></li>
-<li><a href="https://dongyeopgu.github.io/cont/django_change_user.html">Django User(2)</a></li>
-<li><a href="https://dongyeopgu.github.io/cont/django_comment.html">Django Comment</a></li>
-<li><a href="https://dongyeopgu.github.io/cont/django_like_follow.html">Django M:N</a></li>
+<li><a href="https://gudongyeop.github.io/cont/django_start.html">Django 기초</a></li>
+<li><a href="https://gudongyeop.github.io/cont/django_crud.html">Django CRUD</a></li>
+<li><a href="https://gudongyeop.github.io/cont/django_paginator.html">Django Paginator</a></li>
+<li><a href="https://gudongyeop.github.io/cont/django_login.html">Django User(1)</a></li>
+<li><a href="https://gudongyeop.github.io/cont/django_change_user.html">Django User(2)</a></li>
+<li><a href="https://gudongyeop.github.io/cont/django_comment.html">Django Comment</a></li>
+<li><a href="https://gudongyeop.github.io/cont/django_like_follow.html">Django M:N</a></li>
 </ol>
 
 
@@ -3237,7 +3258,7 @@
         
             </div> 
         
-        </div> 
+        </div>
         
 
 
@@ -3246,7 +3267,7 @@
     <div id="navigation">
         
         
-        
+
         
             
             
@@ -3864,7 +3885,23 @@
                 
                     
                         
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
+            
+            
+                
                     
                 
                 
@@ -5324,7 +5361,7 @@
                     
             
         
-        
+
         
 
 
@@ -5334,32 +5371,34 @@
 			<a class="nav nav-prev" href="../django/django_like_follow.html" title="Django M:N"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="../django/django_image_upload.html" title="Django Image Upload" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="../django/django_fbv_cbv.html" title="Django FBV vs CBV" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
 
     </section>
-    
+
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../js/clipboard.min.js?1608129544"></script>
-    <script src="../js/perfect-scrollbar.min.js?1608129544"></script>
-    <script src="../js/perfect-scrollbar.jquery.min.js?1608129544"></script>
-    <script src="../js/jquery.sticky.js?1608129544"></script>
-    <script src="../js/featherlight.min.js?1608129544"></script>
-    <script src="../js/highlight.pack.js?1608129544"></script>
+    <script src="../js/clipboard.min.js?1688058728"></script>
+    <script src="../js/perfect-scrollbar.min.js?1688058728"></script>
+    <script src="../js/perfect-scrollbar.jquery.min.js?1688058728"></script>
+    <script src="../js/jquery.sticky.js?1688058728"></script>
+    <script src="../js/featherlight.min.js?1688058728"></script>
+    <script src="../js/highlight.pack.js?1688058728"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../js/modernizr.custom-3.6.0.js?1608129544"></script>
-    <script src="../js/learn.js?1608129544"></script>
-    <script src="../js/hugo-learn.js?1608129544"></script>
-
-    <link href="../mermaid/mermaid.css?1608129544" rel="stylesheet" />
-    <script src="../mermaid/mermaid.js?1608129544"></script>
-    <script>
-        mermaid.initialize({ startOnLoad: true });
-    </script>
+    <script src="../js/modernizr.custom-3.6.0.js?1688058728"></script>
+    <script src="../js/learn.js?1688058728"></script>
+    <script src="../js/hugo-learn.js?1688058728"></script>
+    
+        
+            <script src="../mermaid/mermaid.js?1688058728"></script>
+        
+        <script>
+            mermaid.initialize({ startOnLoad: true });
+        </script>
+    
     
 
   </body>

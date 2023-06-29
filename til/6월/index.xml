@@ -2,109 +2,109 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>6월 on 여러가지</title>
-    <link>https://dongyeopgu.github.io/til/6%EC%9B%94.html</link>
+    <link>https://gudongyeop.github.io/til/6%EC%9B%94.html</link>
     <description>Recent content in 6월 on 여러가지</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="https://dongyeopgu.github.io/til/6%EC%9B%94/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://gudongyeop.github.io/til/6%EC%9B%94/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>2020.06.01</title>
-      <link>https://dongyeopgu.github.io/til/6%EC%9B%94/20.06.01.html</link>
+      <link>https://gudongyeop.github.io/til/6%EC%9B%94/20.06.01.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/6%EC%9B%94/20.06.01.html</guid>
+      <guid>https://gudongyeop.github.io/til/6%EC%9B%94/20.06.01.html</guid>
       <description>오늘 배운 것  Vue로 Todo List작성
    App.vue
-&amp;lt;template&amp;gt; &amp;lt;div id=&amp;#34;app&amp;#34;&amp;gt; &amp;lt;div id=&amp;#34;nav&amp;#34;&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;router-view/&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;/template&amp;gt;   TodoView.vue
-&amp;lt;template&amp;gt; &amp;lt;div&amp;gt; &amp;lt;TodoList :todos=&amp;#34;todos&amp;#34; @checked=&amp;#34;updatedTodo&amp;#34;/&amp;gt; &amp;lt;TodoInput @create-todo=&amp;#34;createTodo&amp;#34;/&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;/template&amp;gt; &amp;lt;script&amp;gt; import TodoList from &amp;#39;@/components/TodoList.vue&amp;#39; import TodoInput from &amp;#39;@/components/TodoInput.vue&amp;#39; export default { name: &amp;#39;TodoView&amp;#39;, components: { TodoList, TodoInput, }, data() { return { todos: [ { id: 1, content: &amp;#39;Django 복습&amp;#39;, isCompleted: true, }, { id: 2, content: &amp;#39;Vue 복습&amp;#39;, isCompleted: false, }, { id: 3, content: &amp;#39;저녁&amp;#39;, isCompleted: false, }, ] } }, methods: { updatedTodo(todo) { todo.</description>
+&amp;lt;template&amp;gt;&amp;lt;div id=&amp;#34;app&amp;#34;&amp;gt;&amp;lt;div id=&amp;#34;nav&amp;#34;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;router-view/&amp;gt; &amp;lt;/div&amp;gt;&amp;lt;/template&amp;gt;  TodoView.vue
+&amp;lt;template&amp;gt;&amp;lt;div&amp;gt;&amp;lt;TodoList :todos=&amp;#34;todos&amp;#34; @checked=&amp;#34;updatedTodo&amp;#34;/&amp;gt;&amp;lt;TodoInput @create-todo=&amp;#34;createTodo&amp;#34;/&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/template&amp;gt;&amp;lt;script&amp;gt;import TodoList from &amp;#39;@/components/TodoList.vue&amp;#39;import TodoInput from &amp;#39;@/components/TodoInput.vue&amp;#39;export default {name: &amp;#39;TodoView&amp;#39;,components: {TodoList,TodoInput,},data() {return {todos: [{id: 1,content: &amp;#39;Django 복습&amp;#39;,isCompleted: true,},{id: 2,content: &amp;#39;Vue 복습&amp;#39;,isCompleted: false,},{id: 3,content: &amp;#39;저녁&amp;#39;,isCompleted: false,},]}},methods: {updatedTodo(todo) {todo.</description>
     </item>
     
     <item>
       <title>2020.06.02</title>
-      <link>https://dongyeopgu.github.io/til/6%EC%9B%94/20.06.02.html</link>
+      <link>https://gudongyeop.github.io/til/6%EC%9B%94/20.06.02.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/6%EC%9B%94/20.06.02.html</guid>
+      <guid>https://gudongyeop.github.io/til/6%EC%9B%94/20.06.02.html</guid>
       <description>오늘 배운 것  Vue로 Youtube API를 이용해 영상 찾기 및 재생
    npm i axios로 axios 패키지 설치하여 이용
   App.vue를 작성
-&amp;lt;template&amp;gt; &amp;lt;div id=&amp;#34;app&amp;#34;&amp;gt; &amp;lt;SearchBar @input-change=&amp;#34;onInputChange&amp;#34;/&amp;gt; &amp;lt;VideoList :videos=&amp;#34;videos&amp;#34;/&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;/template&amp;gt; &amp;lt;script&amp;gt; import axios from &amp;#39;axios&amp;#39; import SearchBar from &amp;#39;@/components/SearchBar.vue&amp;#39; import VideoList from &amp;#39;@/components/VideoList.vue&amp;#39; const YOUTUBE_API_KEY = process.env.VUE_APP_YOUTUBE_API_KEY const YOUTUBE_API_URL = &amp;#39;https://www.googleapis.com/youtube/v3/search&amp;#39; export default { name: &amp;#39;App&amp;#39;, components: { SearchBar, VideoList }, data() { return { videos: [], } }, methods: { onInputChange(userInput) { const config = { params: { key: YOUTUBE_API_KEY, part: &amp;#39;snippet&amp;#39;, type: &amp;#39;video&amp;#39;, q: userInput, } } axios.</description>
+&amp;lt;template&amp;gt;&amp;lt;div id=&amp;#34;app&amp;#34;&amp;gt;&amp;lt;SearchBar @input-change=&amp;#34;onInputChange&amp;#34;/&amp;gt;&amp;lt;VideoList :videos=&amp;#34;videos&amp;#34;/&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/template&amp;gt;&amp;lt;script&amp;gt;import axios from &amp;#39;axios&amp;#39;import SearchBar from &amp;#39;@/components/SearchBar.vue&amp;#39;import VideoList from &amp;#39;@/components/VideoList.vue&amp;#39;const YOUTUBE_API_KEY = process.env.VUE_APP_YOUTUBE_API_KEYconst YOUTUBE_API_URL = &amp;#39;https://www.googleapis.com/youtube/v3/search&amp;#39;export default {name: &amp;#39;App&amp;#39;,components: {SearchBar,VideoList},data() {return {videos: [],}},methods: {onInputChange(userInput) {const config = {params: {key: YOUTUBE_API_KEY,part: &amp;#39;snippet&amp;#39;,type: &amp;#39;video&amp;#39;,q: userInput,}}axios.</description>
     </item>
     
     <item>
       <title>2020.06.03</title>
-      <link>https://dongyeopgu.github.io/til/6%EC%9B%94/20.06.03.html</link>
+      <link>https://gudongyeop.github.io/til/6%EC%9B%94/20.06.03.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/6%EC%9B%94/20.06.03.html</guid>
+      <guid>https://gudongyeop.github.io/til/6%EC%9B%94/20.06.03.html</guid>
       <description>오늘 한 것  Vue Project
  구현과정   vue 프로젝트 생성 기본 구조 설정 필요 기능 추가   1. vue 프로젝트 생성  vue create project명 을 bash에서 실행 router 사용을 위한 vue add router cd project명으로 폴더 이동 후 필요한 axios와 같은 패키지 설치  ex) npm i axios , npm i lodash    2. 기본 구조 설정   영화 목록을 가져오고 보여 주는 MovieView.</description>
     </item>
     
     <item>
       <title>2020.06.04</title>
-      <link>https://dongyeopgu.github.io/til/6%EC%9B%94/20.06.04.html</link>
+      <link>https://gudongyeop.github.io/til/6%EC%9B%94/20.06.04.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/6%EC%9B%94/20.06.04.html</guid>
+      <guid>https://gudongyeop.github.io/til/6%EC%9B%94/20.06.04.html</guid>
       <description>오늘 한 것  SWEA 문제풀이
    생일파티
- python  for t in range(int(input())): n, m = map(int, input().split()) a = [[]for _ in range(n+1)] for i in range(m): n1, n2 = map(int,input().split()) a[n1].append(n2) a[n2].append(n1) result = set() result.update(a[1]) for i in a[1]: result.update(a[i]) if 1 in result: result.remove(1) print(f&amp;#34;#{t+1} {len(result)}&amp;#34;)   보급로
- C++  #include &amp;lt;cstdio&amp;gt;#include &amp;lt;cstring&amp;gt;#include &amp;lt;algorithm&amp;gt;#include &amp;lt;queue&amp;gt;using namespace std; int map[100][100]; int dis[100][100]; int dx[4] = {0, 0, -1, 1}; int dy[4] = {-1, 1, 0, 0}; int n; bool border(int x, int y) { return (0 &amp;lt;= x &amp;amp;&amp;amp; x &amp;lt; n &amp;amp;&amp;amp; 0 &amp;lt;= y &amp;amp;&amp;amp; y &amp;lt; n); } void solv() { queue&amp;lt;pair&amp;lt;int, int&amp;gt;&amp;gt; q; q.</description>
+ python  for t in range(int(input())):n, m = map(int, input().split())a = [[]for _ in range(n+1)]for i in range(m):n1, n2 = map(int,input().split())a[n1].append(n2)a[n2].append(n1)result = set()result.update(a[1])for i in a[1]:result.update(a[i])if 1 in result:result.remove(1)print(f&amp;#34;#{t+1} {len(result)}&amp;#34;)  보급로
+ C++  #include &amp;lt;cstdio&amp;gt;#include &amp;lt;cstring&amp;gt;#include &amp;lt;algorithm&amp;gt;#include &amp;lt;queue&amp;gt;using namespace std;int map[100][100];int dis[100][100];int dx[4] = {0, 0, -1, 1};int dy[4] = {-1, 1, 0, 0};int n;bool border(int x, int y) {return (0 &amp;lt;= x &amp;amp;&amp;amp; x &amp;lt; n &amp;amp;&amp;amp; 0 &amp;lt;= y &amp;amp;&amp;amp; y &amp;lt; n);}void solv() {queue&amp;lt;pair&amp;lt;int, int&amp;gt;&amp;gt; q;q.</description>
     </item>
     
     <item>
       <title>2020.06.05</title>
-      <link>https://dongyeopgu.github.io/til/6%EC%9B%94/20.06.05.html</link>
+      <link>https://gudongyeop.github.io/til/6%EC%9B%94/20.06.05.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/6%EC%9B%94/20.06.05.html</guid>
+      <guid>https://gudongyeop.github.io/til/6%EC%9B%94/20.06.05.html</guid>
       <description>오늘 한 것  SWEA, 백준 문제풀이
    하나로
-#include &amp;lt;cstdio&amp;gt; int test_case, n; long long x[1000], y[1000], dis[1000]; bool visit[1000]; double E; long long result; long long dist(long long x1, long long y1, long long x2, long long y2) { return (x1 - x2)*(x1 - x2) + (y1 - y2)*(y1 - y2); } int main() { scanf(&amp;#34;%d&amp;#34;, &amp;amp;test_case); for (int t = 1; t &amp;lt;= test_case; t++) { result = 0; scanf(&amp;#34;%d&amp;#34;, &amp;amp;n); for (int i = 0; i &amp;lt;n; i++) { scanf(&amp;#34;%lld&amp;#34;, &amp;amp;x[i]); } for (int i = 0; i &amp;lt;n; i++) { scanf(&amp;#34;%lld&amp;#34;, &amp;amp;y[i]); } for (int i = 0; i &amp;lt;n; i++) { dis[i] = 1e16; visit[i] = 0; } scanf(&amp;#34;%lf&amp;#34;, &amp;amp;E); dis[0] = 0; for (int i = 0; i &amp;lt; n; i++) { long long a = 1e16; long long b = i; for (int j=0;j&amp;lt;n;j++) { if (!</description>
+#include &amp;lt;cstdio&amp;gt; int test_case, n;long long x[1000], y[1000], dis[1000];bool visit[1000];double E;long long result;long long dist(long long x1, long long y1, long long x2, long long y2) {return (x1 - x2)*(x1 - x2) + (y1 - y2)*(y1 - y2);}int main() {scanf(&amp;#34;%d&amp;#34;, &amp;amp;test_case);for (int t = 1; t &amp;lt;= test_case; t++) {result = 0;scanf(&amp;#34;%d&amp;#34;, &amp;amp;n);for (int i = 0; i &amp;lt;n; i++) {scanf(&amp;#34;%lld&amp;#34;, &amp;amp;x[i]);}for (int i = 0; i &amp;lt;n; i++) {scanf(&amp;#34;%lld&amp;#34;, &amp;amp;y[i]);}for (int i = 0; i &amp;lt;n; i++) {dis[i] = 1e16;visit[i] = 0;}scanf(&amp;#34;%lf&amp;#34;, &amp;amp;E);dis[0] = 0;for (int i = 0; i &amp;lt; n; i++) {long long a = 1e16;long long b = i;for (int j=0;j&amp;lt;n;j++) {if (!</description>
     </item>
     
     <item>
       <title>2020.06.06</title>
-      <link>https://dongyeopgu.github.io/til/6%EC%9B%94/20.06.06.html</link>
+      <link>https://gudongyeop.github.io/til/6%EC%9B%94/20.06.06.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/6%EC%9B%94/20.06.06.html</guid>
+      <guid>https://gudongyeop.github.io/til/6%EC%9B%94/20.06.06.html</guid>
       <description>오늘 한 것 </description>
     </item>
     
     <item>
       <title>2020.06.07</title>
-      <link>https://dongyeopgu.github.io/til/6%EC%9B%94/20.06.07.html</link>
+      <link>https://gudongyeop.github.io/til/6%EC%9B%94/20.06.07.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/6%EC%9B%94/20.06.07.html</guid>
+      <guid>https://gudongyeop.github.io/til/6%EC%9B%94/20.06.07.html</guid>
       <description>오늘 한 것 </description>
     </item>
     
     <item>
       <title>2020.06.08</title>
-      <link>https://dongyeopgu.github.io/til/6%EC%9B%94/20.06.08.html</link>
+      <link>https://gudongyeop.github.io/til/6%EC%9B%94/20.06.08.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/6%EC%9B%94/20.06.08.html</guid>
+      <guid>https://gudongyeop.github.io/til/6%EC%9B%94/20.06.08.html</guid>
       <description>오늘 배운 것 Django &amp;amp; Vue  Django를 백엔드로 Vue를 프론트엔드
 Django Rest Framework를 사용
  Django 설정   전에 했던 Django Rest Framework를 사용하여 Serializers를 이용.
   따로 Templates를 만들지 않고 JSON 정보를 가지고 vue를 이용.
   settings.py의 INSTALLED_APP에서 아래 추가 후 사용.
-  INSTALLED_APPS = [ ... &amp;#39;django.contrib.sites&amp;#39;, &amp;#39;rest_framework&amp;#39;, &amp;#39;rest_framework.authtoken&amp;#39;, &amp;#39;rest_auth&amp;#39;, &amp;#39;rest_auth.registration&amp;#39;, &amp;#39;allauth&amp;#39;, &amp;#39;allauth.account&amp;#39;, ... ] REST_FRAMEWORK = { &amp;#39;DEFAULT_AUTHENTICATION_CLASSES&amp;#39;: [ &amp;#39;rest_framework.authentication.TokenAuthentication&amp;#39;, ] } </description>
+  INSTALLED_APPS = [...&amp;#39;django.contrib.sites&amp;#39;,&amp;#39;rest_framework&amp;#39;, &amp;#39;rest_framework.authtoken&amp;#39;,&amp;#39;rest_auth&amp;#39;,&amp;#39;rest_auth.registration&amp;#39;,&amp;#39;allauth&amp;#39;,&amp;#39;allauth.account&amp;#39;,...]REST_FRAMEWORK = {&amp;#39;DEFAULT_AUTHENTICATION_CLASSES&amp;#39;: [&amp;#39;rest_framework.authentication.TokenAuthentication&amp;#39;,]}</description>
     </item>
     
     <item>
       <title>2020.06.09</title>
-      <link>https://dongyeopgu.github.io/til/6%EC%9B%94/20.06.09.html</link>
+      <link>https://gudongyeop.github.io/til/6%EC%9B%94/20.06.09.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/6%EC%9B%94/20.06.09.html</guid>
+      <guid>https://gudongyeop.github.io/til/6%EC%9B%94/20.06.09.html</guid>
       <description>오늘 배운 것 VUE 설정  vue router를 사용하여 Django와 연결하여 data가져옴.
 axios, cookies 사용
   accounts와 관련된 기능을 사용하기 위해 Token을 쿠키로 저장하기 위해 cookies 사용  </description>
@@ -112,10 +112,10 @@ axios, cookies 사용
     
     <item>
       <title>2020.06.10 ~ </title>
-      <link>https://dongyeopgu.github.io/til/6%EC%9B%94/20.06.10-~-30-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EA%B3%BC%EC%A0%9C%EB%A1%9C-%EC%9D%B8%ED%95%9C-til-%EB%AF%B8%EC%97%85%EB%A1%9C%EB%93%9C.html</link>
+      <link>https://gudongyeop.github.io/til/6%EC%9B%94/20.06.10-~-30-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EA%B3%BC%EC%A0%9C%EB%A1%9C-%EC%9D%B8%ED%95%9C-til-%EB%AF%B8%EC%97%85%EB%A1%9C%EB%93%9C.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/6%EC%9B%94/20.06.10-~-30-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EA%B3%BC%EC%A0%9C%EB%A1%9C-%EC%9D%B8%ED%95%9C-til-%EB%AF%B8%EC%97%85%EB%A1%9C%EB%93%9C.html</guid>
+      <guid>https://gudongyeop.github.io/til/6%EC%9B%94/20.06.10-~-30-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EA%B3%BC%EC%A0%9C%EB%A1%9C-%EC%9D%B8%ED%95%9C-til-%EB%AF%B8%EC%97%85%EB%A1%9C%EB%93%9C.html</guid>
       <description>프로젝트 기간으로 TIL 없음  Django와 Vue 이용한 프로젝트  </description>
     </item>
     

@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>1:N on 여러가지</title>
-    <link>https://dongyeopgu.github.io/tags/1n.html</link>
+    <link>https://gudongyeop.github.io/tags/1n.html</link>
     <description>Recent content in 1:N on 여러가지</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 21 Apr 2020 22:54:07 +0900</lastBuildDate>
     
-	<atom:link href="https://dongyeopgu.github.io/tags/1n/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://gudongyeop.github.io/tags/1n/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Django Comment</title>
-      <link>https://dongyeopgu.github.io/django/django_comment.html</link>
+      <link>https://gudongyeop.github.io/django/django_comment.html</link>
       <pubDate>Tue, 21 Apr 2020 22:54:07 +0900</pubDate>
       
-      <guid>https://dongyeopgu.github.io/django/django_comment.html</guid>
+      <guid>https://gudongyeop.github.io/django/django_comment.html</guid>
       <description>Django 댓글 작성 &amp;amp; 삭제  게시글의 model은 Article로 만들었을 경우임. ForeignKey를 사용.
- 1. 댓글 작성  models.py에서 댓글 설정을 위한 class를 만든다.(user 설정을 안했을 경우)  class Comment(models.Model): article = models.ForeignKey(Article, on_delete=models.CASCADE) #on_delete=models.CASCADE는 ForeignKeyField가 삭제 될때 인스턴스도 같이 삭제 content = models.TextField()  forms.py에도 추가  from django import forms from .models import Comment class CommentForm(forms.ModelForm): class Meta: model = Comment fields = [&amp;#39;content&amp;#39;] # fields를 __all__로 해도 됨(all로 했을 경우에는 댓글 작성시 모든 값을 잘 입력 해야한다.</description>
+ 1. 댓글 작성  models.py에서 댓글 설정을 위한 class를 만든다.(user 설정을 안했을 경우)  class Comment(models.Model):article = models.ForeignKey(Article, on_delete=models.CASCADE)#on_delete=models.CASCADE는 ForeignKeyField가 삭제 될때 인스턴스도 같이 삭제 content = models.TextField() forms.py에도 추가  from django import formsfrom .models import Commentclass CommentForm(forms.ModelForm):class Meta:model = Commentfields = [&amp;#39;content&amp;#39;]# fields를 __all__로 해도 됨(all로 했을 경우에는 댓글 작성시 모든 값을 잘 입력 해야한다.</description>
     </item>
     
   </channel>

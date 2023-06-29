@@ -2,1137 +2,1155 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on 여러가지</title>
-    <link>https://dongyeopgu.github.io/tags.html</link>
+    <link>https://gudongyeop.github.io/tags.html</link>
     <description>Recent content in Tags on 여러가지</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 25 May 2020 21:55:45 +0900</lastBuildDate>
     
-	<atom:link href="https://dongyeopgu.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://gudongyeop.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Vue</title>
-      <link>https://dongyeopgu.github.io/tags/vue.html</link>
+      <link>https://gudongyeop.github.io/tags/vue.html</link>
       <pubDate>Mon, 25 May 2020 21:55:45 +0900</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/vue.html</guid>
+      <guid>https://gudongyeop.github.io/tags/vue.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Vue.js</title>
-      <link>https://dongyeopgu.github.io/tags/vue.js.html</link>
+      <link>https://gudongyeop.github.io/tags/vue.js.html</link>
       <pubDate>Mon, 25 May 2020 21:55:45 +0900</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/vue.js.html</guid>
+      <guid>https://gudongyeop.github.io/tags/vue.js.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>1:N</title>
-      <link>https://dongyeopgu.github.io/tags/1n.html</link>
+      <link>https://gudongyeop.github.io/tags/1n.html</link>
       <pubDate>Tue, 21 Apr 2020 22:54:07 +0900</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/1n.html</guid>
+      <guid>https://gudongyeop.github.io/tags/1n.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>comment</title>
-      <link>https://dongyeopgu.github.io/tags/comment.html</link>
+      <link>https://gudongyeop.github.io/tags/comment.html</link>
       <pubDate>Tue, 21 Apr 2020 22:54:07 +0900</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/comment.html</guid>
+      <guid>https://gudongyeop.github.io/tags/comment.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>django</title>
-      <link>https://dongyeopgu.github.io/tags/django.html</link>
+      <link>https://gudongyeop.github.io/tags/django.html</link>
       <pubDate>Tue, 21 Apr 2020 22:54:07 +0900</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/django.html</guid>
+      <guid>https://gudongyeop.github.io/tags/django.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>sign in</title>
-      <link>https://dongyeopgu.github.io/tags/sign-in.html</link>
+      <link>https://gudongyeop.github.io/tags/sign-in.html</link>
       <pubDate>Tue, 14 Apr 2020 16:15:29 +0900</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/sign-in.html</guid>
+      <guid>https://gudongyeop.github.io/tags/sign-in.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>sign out</title>
-      <link>https://dongyeopgu.github.io/tags/sign-out.html</link>
+      <link>https://gudongyeop.github.io/tags/sign-out.html</link>
       <pubDate>Tue, 14 Apr 2020 16:15:29 +0900</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/sign-out.html</guid>
+      <guid>https://gudongyeop.github.io/tags/sign-out.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>sign up</title>
-      <link>https://dongyeopgu.github.io/tags/sign-up.html</link>
+      <link>https://gudongyeop.github.io/tags/sign-up.html</link>
       <pubDate>Tue, 14 Apr 2020 16:15:29 +0900</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/sign-up.html</guid>
+      <guid>https://gudongyeop.github.io/tags/sign-up.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>blog</title>
-      <link>https://dongyeopgu.github.io/tags/blog.html</link>
+      <link>https://gudongyeop.github.io/tags/blog.html</link>
       <pubDate>Mon, 13 Apr 2020 22:13:54 +0900</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/blog.html</guid>
+      <guid>https://gudongyeop.github.io/tags/blog.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>hugo</title>
-      <link>https://dongyeopgu.github.io/tags/hugo.html</link>
+      <link>https://gudongyeop.github.io/tags/hugo.html</link>
       <pubDate>Mon, 13 Apr 2020 22:13:54 +0900</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/hugo.html</guid>
+      <guid>https://gudongyeop.github.io/tags/hugo.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>hugo-theme-learn</title>
-      <link>https://dongyeopgu.github.io/tags/hugo-theme-learn.html</link>
+      <link>https://gudongyeop.github.io/tags/hugo-theme-learn.html</link>
       <pubDate>Mon, 13 Apr 2020 21:55:45 +0900</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/hugo-theme-learn.html</guid>
+      <guid>https://gudongyeop.github.io/tags/hugo-theme-learn.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>20.04.13</title>
-      <link>https://dongyeopgu.github.io/tags/20.04.13.html</link>
+      <link>https://gudongyeop.github.io/tags/20.04.13.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/20.04.13.html</guid>
+      <guid>https://gudongyeop.github.io/tags/20.04.13.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>20.04.14</title>
-      <link>https://dongyeopgu.github.io/tags/20.04.14.html</link>
+      <link>https://gudongyeop.github.io/tags/20.04.14.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/20.04.14.html</guid>
+      <guid>https://gudongyeop.github.io/tags/20.04.14.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>20.04.15</title>
-      <link>https://dongyeopgu.github.io/tags/20.04.15.html</link>
+      <link>https://gudongyeop.github.io/tags/20.04.15.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/20.04.15.html</guid>
+      <guid>https://gudongyeop.github.io/tags/20.04.15.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>20.04.16</title>
-      <link>https://dongyeopgu.github.io/tags/20.04.16.html</link>
+      <link>https://gudongyeop.github.io/tags/20.04.16.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/20.04.16.html</guid>
+      <guid>https://gudongyeop.github.io/tags/20.04.16.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>20.04.17</title>
-      <link>https://dongyeopgu.github.io/tags/20.04.17.html</link>
+      <link>https://gudongyeop.github.io/tags/20.04.17.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/20.04.17.html</guid>
+      <guid>https://gudongyeop.github.io/tags/20.04.17.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>20.04.18</title>
-      <link>https://dongyeopgu.github.io/tags/20.04.18.html</link>
+      <link>https://gudongyeop.github.io/tags/20.04.18.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/20.04.18.html</guid>
+      <guid>https://gudongyeop.github.io/tags/20.04.18.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>20.04.19</title>
-      <link>https://dongyeopgu.github.io/tags/20.04.19.html</link>
+      <link>https://gudongyeop.github.io/tags/20.04.19.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/20.04.19.html</guid>
+      <guid>https://gudongyeop.github.io/tags/20.04.19.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>20.04.20</title>
-      <link>https://dongyeopgu.github.io/tags/20.04.20.html</link>
+      <link>https://gudongyeop.github.io/tags/20.04.20.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/20.04.20.html</guid>
+      <guid>https://gudongyeop.github.io/tags/20.04.20.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>20.04.21</title>
-      <link>https://dongyeopgu.github.io/tags/20.04.21.html</link>
+      <link>https://gudongyeop.github.io/tags/20.04.21.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/20.04.21.html</guid>
+      <guid>https://gudongyeop.github.io/tags/20.04.21.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>20.04.22</title>
-      <link>https://dongyeopgu.github.io/tags/20.04.22.html</link>
+      <link>https://gudongyeop.github.io/tags/20.04.22.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/20.04.22.html</guid>
+      <guid>https://gudongyeop.github.io/tags/20.04.22.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>20.04.23</title>
-      <link>https://dongyeopgu.github.io/tags/20.04.23.html</link>
+      <link>https://gudongyeop.github.io/tags/20.04.23.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/20.04.23.html</guid>
+      <guid>https://gudongyeop.github.io/tags/20.04.23.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>20.04.24</title>
-      <link>https://dongyeopgu.github.io/tags/20.04.24.html</link>
+      <link>https://gudongyeop.github.io/tags/20.04.24.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/20.04.24.html</guid>
+      <guid>https://gudongyeop.github.io/tags/20.04.24.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>20.04.25</title>
-      <link>https://dongyeopgu.github.io/tags/20.04.25.html</link>
+      <link>https://gudongyeop.github.io/tags/20.04.25.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/20.04.25.html</guid>
+      <guid>https://gudongyeop.github.io/tags/20.04.25.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>20.04.26</title>
-      <link>https://dongyeopgu.github.io/tags/20.04.26.html</link>
+      <link>https://gudongyeop.github.io/tags/20.04.26.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/20.04.26.html</guid>
+      <guid>https://gudongyeop.github.io/tags/20.04.26.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>20.04.27</title>
-      <link>https://dongyeopgu.github.io/tags/20.04.27.html</link>
+      <link>https://gudongyeop.github.io/tags/20.04.27.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/20.04.27.html</guid>
+      <guid>https://gudongyeop.github.io/tags/20.04.27.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>20.04.28</title>
-      <link>https://dongyeopgu.github.io/tags/20.04.28.html</link>
+      <link>https://gudongyeop.github.io/tags/20.04.28.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/20.04.28.html</guid>
+      <guid>https://gudongyeop.github.io/tags/20.04.28.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>20.04.29</title>
-      <link>https://dongyeopgu.github.io/tags/20.04.29.html</link>
+      <link>https://gudongyeop.github.io/tags/20.04.29.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/20.04.29.html</guid>
+      <guid>https://gudongyeop.github.io/tags/20.04.29.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>20.04.30</title>
-      <link>https://dongyeopgu.github.io/tags/20.04.30.html</link>
+      <link>https://gudongyeop.github.io/tags/20.04.30.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/20.04.30.html</guid>
+      <guid>https://gudongyeop.github.io/tags/20.04.30.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>20.05.01</title>
-      <link>https://dongyeopgu.github.io/tags/20.05.01.html</link>
+      <link>https://gudongyeop.github.io/tags/20.05.01.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/20.05.01.html</guid>
+      <guid>https://gudongyeop.github.io/tags/20.05.01.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>20.05.02</title>
-      <link>https://dongyeopgu.github.io/tags/20.05.02.html</link>
+      <link>https://gudongyeop.github.io/tags/20.05.02.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/20.05.02.html</guid>
+      <guid>https://gudongyeop.github.io/tags/20.05.02.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>20.05.03</title>
-      <link>https://dongyeopgu.github.io/tags/20.05.03.html</link>
+      <link>https://gudongyeop.github.io/tags/20.05.03.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/20.05.03.html</guid>
+      <guid>https://gudongyeop.github.io/tags/20.05.03.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>20.05.04</title>
-      <link>https://dongyeopgu.github.io/tags/20.05.04.html</link>
+      <link>https://gudongyeop.github.io/tags/20.05.04.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/20.05.04.html</guid>
+      <guid>https://gudongyeop.github.io/tags/20.05.04.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>20.05.05</title>
-      <link>https://dongyeopgu.github.io/tags/20.05.05.html</link>
+      <link>https://gudongyeop.github.io/tags/20.05.05.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/20.05.05.html</guid>
+      <guid>https://gudongyeop.github.io/tags/20.05.05.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>20.05.06</title>
-      <link>https://dongyeopgu.github.io/tags/20.05.06.html</link>
+      <link>https://gudongyeop.github.io/tags/20.05.06.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/20.05.06.html</guid>
+      <guid>https://gudongyeop.github.io/tags/20.05.06.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>20.05.07</title>
-      <link>https://dongyeopgu.github.io/tags/20.05.07.html</link>
+      <link>https://gudongyeop.github.io/tags/20.05.07.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/20.05.07.html</guid>
+      <guid>https://gudongyeop.github.io/tags/20.05.07.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>20.05.08</title>
-      <link>https://dongyeopgu.github.io/tags/20.05.08.html</link>
+      <link>https://gudongyeop.github.io/tags/20.05.08.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/20.05.08.html</guid>
+      <guid>https://gudongyeop.github.io/tags/20.05.08.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>20.05.09</title>
-      <link>https://dongyeopgu.github.io/tags/20.05.09.html</link>
+      <link>https://gudongyeop.github.io/tags/20.05.09.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/20.05.09.html</guid>
+      <guid>https://gudongyeop.github.io/tags/20.05.09.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>20.05.10</title>
-      <link>https://dongyeopgu.github.io/tags/20.05.10.html</link>
+      <link>https://gudongyeop.github.io/tags/20.05.10.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/20.05.10.html</guid>
+      <guid>https://gudongyeop.github.io/tags/20.05.10.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>20.05.11</title>
-      <link>https://dongyeopgu.github.io/tags/20.05.11.html</link>
+      <link>https://gudongyeop.github.io/tags/20.05.11.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/20.05.11.html</guid>
+      <guid>https://gudongyeop.github.io/tags/20.05.11.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>20.05.12</title>
-      <link>https://dongyeopgu.github.io/tags/20.05.12.html</link>
+      <link>https://gudongyeop.github.io/tags/20.05.12.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/20.05.12.html</guid>
+      <guid>https://gudongyeop.github.io/tags/20.05.12.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>20.05.13</title>
-      <link>https://dongyeopgu.github.io/tags/20.05.13.html</link>
+      <link>https://gudongyeop.github.io/tags/20.05.13.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/20.05.13.html</guid>
+      <guid>https://gudongyeop.github.io/tags/20.05.13.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>20.05.14</title>
-      <link>https://dongyeopgu.github.io/tags/20.05.14.html</link>
+      <link>https://gudongyeop.github.io/tags/20.05.14.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/20.05.14.html</guid>
+      <guid>https://gudongyeop.github.io/tags/20.05.14.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>20.05.15</title>
-      <link>https://dongyeopgu.github.io/tags/20.05.15.html</link>
+      <link>https://gudongyeop.github.io/tags/20.05.15.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/20.05.15.html</guid>
+      <guid>https://gudongyeop.github.io/tags/20.05.15.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>20.05.17</title>
-      <link>https://dongyeopgu.github.io/tags/20.05.17.html</link>
+      <link>https://gudongyeop.github.io/tags/20.05.17.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/20.05.17.html</guid>
+      <guid>https://gudongyeop.github.io/tags/20.05.17.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>20.05.18</title>
-      <link>https://dongyeopgu.github.io/tags/20.05.18.html</link>
+      <link>https://gudongyeop.github.io/tags/20.05.18.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/20.05.18.html</guid>
+      <guid>https://gudongyeop.github.io/tags/20.05.18.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>20.05.19</title>
-      <link>https://dongyeopgu.github.io/tags/20.05.19.html</link>
+      <link>https://gudongyeop.github.io/tags/20.05.19.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/20.05.19.html</guid>
+      <guid>https://gudongyeop.github.io/tags/20.05.19.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>20.05.20</title>
-      <link>https://dongyeopgu.github.io/tags/20.05.20.html</link>
+      <link>https://gudongyeop.github.io/tags/20.05.20.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/20.05.20.html</guid>
+      <guid>https://gudongyeop.github.io/tags/20.05.20.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>20.05.21</title>
-      <link>https://dongyeopgu.github.io/tags/20.05.21.html</link>
+      <link>https://gudongyeop.github.io/tags/20.05.21.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/20.05.21.html</guid>
+      <guid>https://gudongyeop.github.io/tags/20.05.21.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>20.05.22</title>
-      <link>https://dongyeopgu.github.io/tags/20.05.22.html</link>
+      <link>https://gudongyeop.github.io/tags/20.05.22.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/20.05.22.html</guid>
+      <guid>https://gudongyeop.github.io/tags/20.05.22.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>20.05.23</title>
-      <link>https://dongyeopgu.github.io/tags/20.05.23.html</link>
+      <link>https://gudongyeop.github.io/tags/20.05.23.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/20.05.23.html</guid>
+      <guid>https://gudongyeop.github.io/tags/20.05.23.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>20.05.24</title>
-      <link>https://dongyeopgu.github.io/tags/20.05.24.html</link>
+      <link>https://gudongyeop.github.io/tags/20.05.24.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/20.05.24.html</guid>
+      <guid>https://gudongyeop.github.io/tags/20.05.24.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>20.05.25</title>
-      <link>https://dongyeopgu.github.io/tags/20.05.25.html</link>
+      <link>https://gudongyeop.github.io/tags/20.05.25.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/20.05.25.html</guid>
+      <guid>https://gudongyeop.github.io/tags/20.05.25.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>20.05.26</title>
-      <link>https://dongyeopgu.github.io/tags/20.05.26.html</link>
+      <link>https://gudongyeop.github.io/tags/20.05.26.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/20.05.26.html</guid>
+      <guid>https://gudongyeop.github.io/tags/20.05.26.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>20.05.27</title>
-      <link>https://dongyeopgu.github.io/tags/20.05.27.html</link>
+      <link>https://gudongyeop.github.io/tags/20.05.27.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/20.05.27.html</guid>
+      <guid>https://gudongyeop.github.io/tags/20.05.27.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>20.05.28</title>
-      <link>https://dongyeopgu.github.io/tags/20.05.28.html</link>
+      <link>https://gudongyeop.github.io/tags/20.05.28.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/20.05.28.html</guid>
+      <guid>https://gudongyeop.github.io/tags/20.05.28.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>20.05.29</title>
-      <link>https://dongyeopgu.github.io/tags/20.05.29.html</link>
+      <link>https://gudongyeop.github.io/tags/20.05.29.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/20.05.29.html</guid>
+      <guid>https://gudongyeop.github.io/tags/20.05.29.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>20.05.30</title>
-      <link>https://dongyeopgu.github.io/tags/20.05.30.html</link>
+      <link>https://gudongyeop.github.io/tags/20.05.30.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/20.05.30.html</guid>
+      <guid>https://gudongyeop.github.io/tags/20.05.30.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>20.05.31</title>
-      <link>https://dongyeopgu.github.io/tags/20.05.31.html</link>
+      <link>https://gudongyeop.github.io/tags/20.05.31.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/20.05.31.html</guid>
+      <guid>https://gudongyeop.github.io/tags/20.05.31.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>20.06.01</title>
-      <link>https://dongyeopgu.github.io/tags/20.06.01.html</link>
+      <link>https://gudongyeop.github.io/tags/20.06.01.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/20.06.01.html</guid>
+      <guid>https://gudongyeop.github.io/tags/20.06.01.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>20.06.02</title>
-      <link>https://dongyeopgu.github.io/tags/20.06.02.html</link>
+      <link>https://gudongyeop.github.io/tags/20.06.02.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/20.06.02.html</guid>
+      <guid>https://gudongyeop.github.io/tags/20.06.02.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>20.06.03</title>
-      <link>https://dongyeopgu.github.io/tags/20.06.03.html</link>
+      <link>https://gudongyeop.github.io/tags/20.06.03.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/20.06.03.html</guid>
+      <guid>https://gudongyeop.github.io/tags/20.06.03.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>20.06.04</title>
-      <link>https://dongyeopgu.github.io/tags/20.06.04.html</link>
+      <link>https://gudongyeop.github.io/tags/20.06.04.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/20.06.04.html</guid>
+      <guid>https://gudongyeop.github.io/tags/20.06.04.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>20.06.05</title>
-      <link>https://dongyeopgu.github.io/tags/20.06.05.html</link>
+      <link>https://gudongyeop.github.io/tags/20.06.05.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/20.06.05.html</guid>
+      <guid>https://gudongyeop.github.io/tags/20.06.05.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>20.06.06</title>
-      <link>https://dongyeopgu.github.io/tags/20.06.06.html</link>
+      <link>https://gudongyeop.github.io/tags/20.06.06.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/20.06.06.html</guid>
+      <guid>https://gudongyeop.github.io/tags/20.06.06.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>20.06.07</title>
-      <link>https://dongyeopgu.github.io/tags/20.06.07.html</link>
+      <link>https://gudongyeop.github.io/tags/20.06.07.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/20.06.07.html</guid>
+      <guid>https://gudongyeop.github.io/tags/20.06.07.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>20.06.08</title>
-      <link>https://dongyeopgu.github.io/tags/20.06.08.html</link>
+      <link>https://gudongyeop.github.io/tags/20.06.08.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/20.06.08.html</guid>
+      <guid>https://gudongyeop.github.io/tags/20.06.08.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>20.06.09</title>
-      <link>https://dongyeopgu.github.io/tags/20.06.09.html</link>
+      <link>https://gudongyeop.github.io/tags/20.06.09.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/20.06.09.html</guid>
+      <guid>https://gudongyeop.github.io/tags/20.06.09.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>20.07.01</title>
-      <link>https://dongyeopgu.github.io/tags/20.07.01.html</link>
+      <link>https://gudongyeop.github.io/tags/20.07.01.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/20.07.01.html</guid>
+      <guid>https://gudongyeop.github.io/tags/20.07.01.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>20.07.02</title>
-      <link>https://dongyeopgu.github.io/tags/20.07.02.html</link>
+      <link>https://gudongyeop.github.io/tags/20.07.02.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/20.07.02.html</guid>
+      <guid>https://gudongyeop.github.io/tags/20.07.02.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>20.07.03</title>
-      <link>https://dongyeopgu.github.io/tags/20.07.03.html</link>
+      <link>https://gudongyeop.github.io/tags/20.07.03.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/20.07.03.html</guid>
+      <guid>https://gudongyeop.github.io/tags/20.07.03.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>4월</title>
-      <link>https://dongyeopgu.github.io/tags/4%EC%9B%94.html</link>
+      <link>https://gudongyeop.github.io/tags/4%EC%9B%94.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/4%EC%9B%94.html</guid>
+      <guid>https://gudongyeop.github.io/tags/4%EC%9B%94.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>5월</title>
-      <link>https://dongyeopgu.github.io/tags/5%EC%9B%94.html</link>
+      <link>https://gudongyeop.github.io/tags/5%EC%9B%94.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/5%EC%9B%94.html</guid>
+      <guid>https://gudongyeop.github.io/tags/5%EC%9B%94.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>6월</title>
-      <link>https://dongyeopgu.github.io/tags/6%EC%9B%94.html</link>
+      <link>https://gudongyeop.github.io/tags/6%EC%9B%94.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/6%EC%9B%94.html</guid>
+      <guid>https://gudongyeop.github.io/tags/6%EC%9B%94.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>7월</title>
-      <link>https://dongyeopgu.github.io/tags/7%EC%9B%94.html</link>
+      <link>https://gudongyeop.github.io/tags/7%EC%9B%94.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/7%EC%9B%94.html</guid>
+      <guid>https://gudongyeop.github.io/tags/7%EC%9B%94.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>8월</title>
-      <link>https://dongyeopgu.github.io/tags/8%EC%9B%94.html</link>
+      <link>https://gudongyeop.github.io/tags/8%EC%9B%94.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/8%EC%9B%94.html</guid>
+      <guid>https://gudongyeop.github.io/tags/8%EC%9B%94.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>9월</title>
-      <link>https://dongyeopgu.github.io/tags/9%EC%9B%94.html</link>
+      <link>https://gudongyeop.github.io/tags/9%EC%9B%94.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/9%EC%9B%94.html</guid>
+      <guid>https://gudongyeop.github.io/tags/9%EC%9B%94.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Algorithm</title>
-      <link>https://dongyeopgu.github.io/tags/algorithm.html</link>
+      <link>https://gudongyeop.github.io/tags/algorithm.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/algorithm.html</guid>
+      <guid>https://gudongyeop.github.io/tags/algorithm.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>AWS</title>
-      <link>https://dongyeopgu.github.io/tags/aws.html</link>
+      <link>https://gudongyeop.github.io/tags/aws.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/aws.html</guid>
+      <guid>https://gudongyeop.github.io/tags/aws.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>baekjoon</title>
-      <link>https://dongyeopgu.github.io/tags/baekjoon.html</link>
+      <link>https://gudongyeop.github.io/tags/baekjoon.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/baekjoon.html</guid>
+      <guid>https://gudongyeop.github.io/tags/baekjoon.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CBV</title>
+      <link>https://gudongyeop.github.io/tags/cbv.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gudongyeop.github.io/tags/cbv.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>certbot</title>
-      <link>https://dongyeopgu.github.io/tags/certbot.html</link>
+      <link>https://gudongyeop.github.io/tags/certbot.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/certbot.html</guid>
+      <guid>https://gudongyeop.github.io/tags/certbot.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>create</title>
-      <link>https://dongyeopgu.github.io/tags/create.html</link>
+      <link>https://gudongyeop.github.io/tags/create.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/create.html</guid>
+      <guid>https://gudongyeop.github.io/tags/create.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>crud</title>
-      <link>https://dongyeopgu.github.io/tags/crud.html</link>
+      <link>https://gudongyeop.github.io/tags/crud.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/crud.html</guid>
+      <guid>https://gudongyeop.github.io/tags/crud.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>D3</title>
-      <link>https://dongyeopgu.github.io/tags/d3.html</link>
+      <link>https://gudongyeop.github.io/tags/d3.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/d3.html</guid>
+      <guid>https://gudongyeop.github.io/tags/d3.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>D4</title>
-      <link>https://dongyeopgu.github.io/tags/d4.html</link>
+      <link>https://gudongyeop.github.io/tags/d4.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/d4.html</guid>
+      <guid>https://gudongyeop.github.io/tags/d4.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>DB</title>
-      <link>https://dongyeopgu.github.io/tags/db.html</link>
+      <link>https://gudongyeop.github.io/tags/db.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/db.html</guid>
+      <guid>https://gudongyeop.github.io/tags/db.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>delete</title>
-      <link>https://dongyeopgu.github.io/tags/delete.html</link>
+      <link>https://gudongyeop.github.io/tags/delete.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/delete.html</guid>
+      <guid>https://gudongyeop.github.io/tags/delete.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Docker</title>
-      <link>https://dongyeopgu.github.io/tags/docker.html</link>
+      <link>https://gudongyeop.github.io/tags/docker.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/docker.html</guid>
+      <guid>https://gudongyeop.github.io/tags/docker.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Docker-compose</title>
-      <link>https://dongyeopgu.github.io/tags/docker-compose.html</link>
+      <link>https://gudongyeop.github.io/tags/docker-compose.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/docker-compose.html</guid>
+      <guid>https://gudongyeop.github.io/tags/docker-compose.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Express</title>
-      <link>https://dongyeopgu.github.io/tags/express.html</link>
+      <link>https://gudongyeop.github.io/tags/express.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/express.html</guid>
+      <guid>https://gudongyeop.github.io/tags/express.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Express.js</title>
-      <link>https://dongyeopgu.github.io/tags/express.js.html</link>
+      <link>https://gudongyeop.github.io/tags/express.js.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/express.js.html</guid>
+      <guid>https://gudongyeop.github.io/tags/express.js.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>FBV</title>
+      <link>https://gudongyeop.github.io/tags/fbv.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gudongyeop.github.io/tags/fbv.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>follow</title>
-      <link>https://dongyeopgu.github.io/tags/follow.html</link>
+      <link>https://gudongyeop.github.io/tags/follow.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/follow.html</guid>
+      <guid>https://gudongyeop.github.io/tags/follow.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Gunicorn</title>
-      <link>https://dongyeopgu.github.io/tags/gunicorn.html</link>
+      <link>https://gudongyeop.github.io/tags/gunicorn.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/gunicorn.html</guid>
+      <guid>https://gudongyeop.github.io/tags/gunicorn.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>https</title>
-      <link>https://dongyeopgu.github.io/tags/https.html</link>
+      <link>https://gudongyeop.github.io/tags/https.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/https.html</guid>
+      <guid>https://gudongyeop.github.io/tags/https.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Image</title>
-      <link>https://dongyeopgu.github.io/tags/image.html</link>
+      <link>https://gudongyeop.github.io/tags/image.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/image.html</guid>
+      <guid>https://gudongyeop.github.io/tags/image.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Javascript</title>
-      <link>https://dongyeopgu.github.io/tags/javascript.html</link>
+      <link>https://gudongyeop.github.io/tags/javascript.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/javascript.html</guid>
+      <guid>https://gudongyeop.github.io/tags/javascript.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>like</title>
-      <link>https://dongyeopgu.github.io/tags/like.html</link>
+      <link>https://gudongyeop.github.io/tags/like.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/like.html</guid>
+      <guid>https://gudongyeop.github.io/tags/like.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>M:N</title>
-      <link>https://dongyeopgu.github.io/tags/mn.html</link>
+      <link>https://gudongyeop.github.io/tags/mn.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/mn.html</guid>
+      <guid>https://gudongyeop.github.io/tags/mn.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Mysql</title>
-      <link>https://dongyeopgu.github.io/tags/mysql.html</link>
+      <link>https://gudongyeop.github.io/tags/mysql.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/mysql.html</guid>
+      <guid>https://gudongyeop.github.io/tags/mysql.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Nginx</title>
-      <link>https://dongyeopgu.github.io/tags/nginx.html</link>
+      <link>https://gudongyeop.github.io/tags/nginx.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/nginx.html</guid>
+      <guid>https://gudongyeop.github.io/tags/nginx.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Node</title>
-      <link>https://dongyeopgu.github.io/tags/node.html</link>
+      <link>https://gudongyeop.github.io/tags/node.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/node.html</guid>
+      <guid>https://gudongyeop.github.io/tags/node.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Node.js</title>
-      <link>https://dongyeopgu.github.io/tags/node.js.html</link>
+      <link>https://gudongyeop.github.io/tags/node.js.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/node.js.html</guid>
+      <guid>https://gudongyeop.github.io/tags/node.js.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Nodejs</title>
-      <link>https://dongyeopgu.github.io/tags/nodejs.html</link>
+      <link>https://gudongyeop.github.io/tags/nodejs.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/nodejs.html</guid>
+      <guid>https://gudongyeop.github.io/tags/nodejs.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>pagination</title>
-      <link>https://dongyeopgu.github.io/tags/pagination.html</link>
+      <link>https://gudongyeop.github.io/tags/pagination.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/pagination.html</guid>
+      <guid>https://gudongyeop.github.io/tags/pagination.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>paginator</title>
-      <link>https://dongyeopgu.github.io/tags/paginator.html</link>
+      <link>https://gudongyeop.github.io/tags/paginator.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/paginator.html</guid>
+      <guid>https://gudongyeop.github.io/tags/paginator.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Project</title>
-      <link>https://dongyeopgu.github.io/tags/project.html</link>
+      <link>https://gudongyeop.github.io/tags/project.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/project.html</guid>
+      <guid>https://gudongyeop.github.io/tags/project.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>read</title>
-      <link>https://dongyeopgu.github.io/tags/read.html</link>
+      <link>https://gudongyeop.github.io/tags/read.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/read.html</guid>
+      <guid>https://gudongyeop.github.io/tags/read.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>REST API</title>
-      <link>https://dongyeopgu.github.io/tags/rest-api.html</link>
+      <link>https://gudongyeop.github.io/tags/rest-api.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/rest-api.html</guid>
+      <guid>https://gudongyeop.github.io/tags/rest-api.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>REST Framework</title>
-      <link>https://dongyeopgu.github.io/tags/rest-framework.html</link>
+      <link>https://gudongyeop.github.io/tags/rest-framework.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/rest-framework.html</guid>
+      <guid>https://gudongyeop.github.io/tags/rest-framework.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Server</title>
-      <link>https://dongyeopgu.github.io/tags/server.html</link>
+      <link>https://gudongyeop.github.io/tags/server.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/server.html</guid>
+      <guid>https://gudongyeop.github.io/tags/server.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>SQL</title>
-      <link>https://dongyeopgu.github.io/tags/sql.html</link>
+      <link>https://gudongyeop.github.io/tags/sql.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/sql.html</guid>
+      <guid>https://gudongyeop.github.io/tags/sql.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>SSAFY</title>
-      <link>https://dongyeopgu.github.io/tags/ssafy.html</link>
+      <link>https://gudongyeop.github.io/tags/ssafy.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/ssafy.html</guid>
+      <guid>https://gudongyeop.github.io/tags/ssafy.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>SSAFY 2학기</title>
-      <link>https://dongyeopgu.github.io/tags/ssafy-2%ED%95%99%EA%B8%B0.html</link>
+      <link>https://gudongyeop.github.io/tags/ssafy-2%ED%95%99%EA%B8%B0.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/ssafy-2%ED%95%99%EA%B8%B0.html</guid>
+      <guid>https://gudongyeop.github.io/tags/ssafy-2%ED%95%99%EA%B8%B0.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>SSAFY3기</title>
-      <link>https://dongyeopgu.github.io/tags/ssafy3%EA%B8%B0.html</link>
+      <link>https://gudongyeop.github.io/tags/ssafy3%EA%B8%B0.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/ssafy3%EA%B8%B0.html</guid>
+      <guid>https://gudongyeop.github.io/tags/ssafy3%EA%B8%B0.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>ssl</title>
-      <link>https://dongyeopgu.github.io/tags/ssl.html</link>
+      <link>https://gudongyeop.github.io/tags/ssl.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/ssl.html</guid>
+      <guid>https://gudongyeop.github.io/tags/ssl.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>SWEA</title>
-      <link>https://dongyeopgu.github.io/tags/swea.html</link>
+      <link>https://gudongyeop.github.io/tags/swea.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/swea.html</guid>
+      <guid>https://gudongyeop.github.io/tags/swea.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>TIL</title>
-      <link>https://dongyeopgu.github.io/tags/til.html</link>
+      <link>https://gudongyeop.github.io/tags/til.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/til.html</guid>
+      <guid>https://gudongyeop.github.io/tags/til.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ubuntu</title>
-      <link>https://dongyeopgu.github.io/tags/ubuntu.html</link>
+      <link>https://gudongyeop.github.io/tags/ubuntu.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/ubuntu.html</guid>
+      <guid>https://gudongyeop.github.io/tags/ubuntu.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>update</title>
-      <link>https://dongyeopgu.github.io/tags/update.html</link>
+      <link>https://gudongyeop.github.io/tags/update.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/update.html</guid>
+      <guid>https://gudongyeop.github.io/tags/update.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Upload</title>
-      <link>https://dongyeopgu.github.io/tags/upload.html</link>
+      <link>https://gudongyeop.github.io/tags/upload.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/upload.html</guid>
+      <guid>https://gudongyeop.github.io/tags/upload.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Vue cli</title>
-      <link>https://dongyeopgu.github.io/tags/vue-cli.html</link>
+      <link>https://gudongyeop.github.io/tags/vue-cli.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/vue-cli.html</guid>
+      <guid>https://gudongyeop.github.io/tags/vue-cli.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>망할코로나</title>
-      <link>https://dongyeopgu.github.io/tags/%EB%A7%9D%ED%95%A0%EC%BD%94%EB%A1%9C%EB%82%98.html</link>
+      <link>https://gudongyeop.github.io/tags/%EB%A7%9D%ED%95%A0%EC%BD%94%EB%A1%9C%EB%82%98.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/%EB%A7%9D%ED%95%A0%EC%BD%94%EB%A1%9C%EB%82%98.html</guid>
+      <guid>https://gudongyeop.github.io/tags/%EB%A7%9D%ED%95%A0%EC%BD%94%EB%A1%9C%EB%82%98.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>모의SW 테스트</title>
-      <link>https://dongyeopgu.github.io/tags/%EB%AA%A8%EC%9D%98sw-%ED%85%8C%EC%8A%A4%ED%8A%B8.html</link>
+      <link>https://gudongyeop.github.io/tags/%EB%AA%A8%EC%9D%98sw-%ED%85%8C%EC%8A%A4%ED%8A%B8.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/%EB%AA%A8%EC%9D%98sw-%ED%85%8C%EC%8A%A4%ED%8A%B8.html</guid>
+      <guid>https://gudongyeop.github.io/tags/%EB%AA%A8%EC%9D%98sw-%ED%85%8C%EC%8A%A4%ED%8A%B8.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>백준</title>
-      <link>https://dongyeopgu.github.io/tags/%EB%B0%B1%EC%A4%80.html</link>
+      <link>https://gudongyeop.github.io/tags/%EB%B0%B1%EC%A4%80.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/%EB%B0%B1%EC%A4%80.html</guid>
+      <guid>https://gudongyeop.github.io/tags/%EB%B0%B1%EC%A4%80.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>프로젝트기간</title>
-      <link>https://dongyeopgu.github.io/tags/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EA%B8%B0%EA%B0%84.html</link>
+      <link>https://gudongyeop.github.io/tags/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EA%B8%B0%EA%B0%84.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/tags/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EA%B8%B0%EA%B0%84.html</guid>
+      <guid>https://gudongyeop.github.io/tags/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EA%B8%B0%EA%B0%84.html</guid>
       <description></description>
     </item>
     

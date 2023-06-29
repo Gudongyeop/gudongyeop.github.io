@@ -22,20 +22,20 @@
     <title>Django M:N :: 여러가지</title>
 
     
-    <link href="../css/nucleus.css?1608129544" rel="stylesheet">
-    <link href="../css/fontawesome-all.min.css?1608129544" rel="stylesheet">
-    <link href="../css/hybrid.css?1608129544" rel="stylesheet">
-    <link href="../css/featherlight.min.css?1608129544" rel="stylesheet">
-    <link href="../css/perfect-scrollbar.min.css?1608129544" rel="stylesheet">
-    <link href="../css/auto-complete.css?1608129544" rel="stylesheet">
-    <link href="../css/atom-one-dark-reasonable.css?1608129544" rel="stylesheet">
-    <link href="../css/theme.css?1608129544" rel="stylesheet">
-    <link href="../css/hugo-theme.css?1608129544" rel="stylesheet">
+    <link href="../css/nucleus.css?1688058728" rel="stylesheet">
+    <link href="../css/fontawesome-all.min.css?1688058728" rel="stylesheet">
+    <link href="../css/hybrid.css?1688058728" rel="stylesheet">
+    <link href="../css/featherlight.min.css?1688058728" rel="stylesheet">
+    <link href="../css/perfect-scrollbar.min.css?1688058728" rel="stylesheet">
+    <link href="../css/auto-complete.css?1688058728" rel="stylesheet">
+    <link href="../css/atom-one-dark-reasonable.css?1688058728" rel="stylesheet">
+    <link href="../css/theme.css?1688058728" rel="stylesheet">
+    <link href="../css/hugo-theme.css?1688058728" rel="stylesheet">
     
-      <link href="../css/theme-red.css?1608129544" rel="stylesheet">
+      <link href="../css/theme-red.css?1688058728" rel="stylesheet">
     
 
-    <script src="../js/jquery-3.3.1.min.js?1608129544"></script>
+    <script src="../js/jquery-3.3.1.min.js?1688058728"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -76,14 +76,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../js/lunr.min.js?1608129544"></script>
-<script type="text/javascript" src="../js/auto-complete.js?1608129544"></script>
+<script type="text/javascript" src="../js/lunr.min.js?1688058728"></script>
+<script type="text/javascript" src="../js/auto-complete.js?1688058728"></script>
 <script type="text/javascript">
     
-        var baseurl = "https:\/\/dongyeopgu.github.io\/";
+        var baseurl = "https:\/\/gudongyeop.github.io\/";
     
 </script>
-<script type="text/javascript" src="../js/search.js?1608129544"></script>
+<script type="text/javascript" src="../js/search.js?1688058728"></script>
 
     
   </div>
@@ -947,6 +947,27 @@
       <li data-nav-id="/django/django_rest_api.html" title="Django REST Framework" class="dd-item ">
         <a href="../django/django_rest_api.html">
         <b>8. </b>Django REST Framework
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/django/django_fbv_cbv.html" title="Django FBV vs CBV" class="dd-item ">
+        <a href="../django/django_fbv_cbv.html">
+        <b>10. </b>Django FBV vs CBV
         
         </a>
     </li>
@@ -3055,7 +3076,7 @@
         <ul>
           
               <li> 
-                  <a class="padding" href="https://github.com/DongyeopGu"><i class='fab fa-fw fa-github'></i> GitHub</a>
+                  <a class="padding" href="https://github.com/Gudongyeop"><i class='fab fa-fw fa-github'></i> GitHub</a>
               </li>
           
               <li> 
@@ -3067,7 +3088,7 @@
               </li>
           
               <li> 
-                  <a class="padding" href="https://dongyeopgu.github.io/tags"><i class='fas fa-tags'></i> Tags</a>
+                  <a class="padding" href="https://gudongyeop.github.io/tags"><i class='fas fa-tags'></i> Tags</a>
               </li>
           
         </ul>
@@ -3144,10 +3165,10 @@
 <ul>
 <li>좋아요 기능을 위한 model 추가(게시글 모델)</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"> <span style="color:#75715e"># 좋아요 기능을 위한 article_like_users 테이블 생성</span>
-<span style="color:#66d9ef">class</span> <span style="color:#960050;background-color:#1e0010">좋아요 기능을 추가할 클래스 명:</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"> <span style="color:#75715e"># 좋아요 기능을 위한 article_like_users 테이블 생성</span>
+<span style="color:#66d9ef">class</span> <span style="color:#960050;background-color:#1e0010">좋아요 기능을 추가할 클래스 명:</span>
     like_users <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>ManyToManyField(settings<span style="color:#f92672">.</span>AUTH_USER_MODEL, related_name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;like_articles&#39;</span>)
- <span style="color:#75715e"># 팔로우 기능을 위한 </span>
+ <span style="color:#75715e"># 팔로우 기능을 위한 </span>
 </code></pre></div><ul>
 <li>팔로우 기능을 위한 model 추가(User 모델을 Customizing)</li>
 </ul>
@@ -3158,10 +3179,10 @@
 </ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">like</span>(request, pk):
     article <span style="color:#f92672">=</span> get_object_or_404(Article, pk<span style="color:#f92672">=</span>pk)
-    <span style="color:#75715e"># 좋아요를 누르면, &gt;&gt; DB에 존재할 경우</span>
+    <span style="color:#75715e"># 좋아요를 누르면, &gt;&gt; DB에 존재할 경우</span>
     <span style="color:#66d9ef">if</span> article<span style="color:#f92672">.</span>like_users<span style="color:#f92672">.</span>filter(id<span style="color:#f92672">=</span>request<span style="color:#f92672">.</span>user<span style="color:#f92672">.</span>pk)<span style="color:#f92672">.</span>exists():
-        article<span style="color:#f92672">.</span>like_users<span style="color:#f92672">.</span>remove(request<span style="color:#f92672">.</span>user) <span style="color:#75715e"># 좋아요 취소</span>
-    <span style="color:#66d9ef">else</span>:		<span style="color:#75715e">#좋아요 누르지 않았다면</span>
+        article<span style="color:#f92672">.</span>like_users<span style="color:#f92672">.</span>remove(request<span style="color:#f92672">.</span>user) <span style="color:#75715e"># 좋아요 취소</span>
+    <span style="color:#66d9ef">else</span>:		<span style="color:#75715e">#좋아요 누르지 않았다면</span>
         article<span style="color:#f92672">.</span>like_users<span style="color:#f92672">.</span>add(request<span style="color:#f92672">.</span>user)
     <span style="color:#66d9ef">return</span> redirect(<span style="color:#e6db74">&#39;articles:detail&#39;</span>, article<span style="color:#f92672">.</span>pk)
 </code></pre></div><ul>
@@ -3232,13 +3253,13 @@
 </blockquote>
 <hr>
 <ol>
-<li><a href="https://dongyeopgu.github.io/cont/django_start.html">Django 기초</a></li>
-<li><a href="https://dongyeopgu.github.io/cont/django_crud.html">Django CRUD</a></li>
-<li><a href="https://dongyeopgu.github.io/cont/django_paginator.html">Django Paginator</a></li>
-<li><a href="https://dongyeopgu.github.io/cont/django_login.html">Django User(1)</a></li>
-<li><a href="https://dongyeopgu.github.io/cont/django_change_user.html">Django User(2)</a></li>
-<li><a href="https://dongyeopgu.github.io/cont/django_comment.html">Django Comment</a></li>
-<li><a href="https://dongyeopgu.github.io/cont/django_rest_api.html">Django REST Framework</a></li>
+<li><a href="https://gudongyeop.github.io/cont/django_start.html">Django 기초</a></li>
+<li><a href="https://gudongyeop.github.io/cont/django_crud.html">Django CRUD</a></li>
+<li><a href="https://gudongyeop.github.io/cont/django_paginator.html">Django Paginator</a></li>
+<li><a href="https://gudongyeop.github.io/cont/django_login.html">Django User(1)</a></li>
+<li><a href="https://gudongyeop.github.io/cont/django_change_user.html">Django User(2)</a></li>
+<li><a href="https://gudongyeop.github.io/cont/django_comment.html">Django Comment</a></li>
+<li><a href="https://gudongyeop.github.io/cont/django_rest_api.html">Django REST Framework</a></li>
 </ol>
 
 
@@ -3269,7 +3290,7 @@
         
             </div> 
         
-        </div> 
+        </div>
         
 
 
@@ -3278,7 +3299,7 @@
     <div id="navigation">
         
         
-        
+
         
             
             
@@ -3880,7 +3901,23 @@
                 
                     
                         
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
+            
+            
+                
                     
                 
                 
@@ -5356,7 +5393,7 @@
                     
             
         
-        
+
         
 
 
@@ -5372,26 +5409,28 @@
     </div>
 
     </section>
-    
+
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../js/clipboard.min.js?1608129544"></script>
-    <script src="../js/perfect-scrollbar.min.js?1608129544"></script>
-    <script src="../js/perfect-scrollbar.jquery.min.js?1608129544"></script>
-    <script src="../js/jquery.sticky.js?1608129544"></script>
-    <script src="../js/featherlight.min.js?1608129544"></script>
-    <script src="../js/highlight.pack.js?1608129544"></script>
+    <script src="../js/clipboard.min.js?1688058728"></script>
+    <script src="../js/perfect-scrollbar.min.js?1688058728"></script>
+    <script src="../js/perfect-scrollbar.jquery.min.js?1688058728"></script>
+    <script src="../js/jquery.sticky.js?1688058728"></script>
+    <script src="../js/featherlight.min.js?1688058728"></script>
+    <script src="../js/highlight.pack.js?1688058728"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../js/modernizr.custom-3.6.0.js?1608129544"></script>
-    <script src="../js/learn.js?1608129544"></script>
-    <script src="../js/hugo-learn.js?1608129544"></script>
-
-    <link href="../mermaid/mermaid.css?1608129544" rel="stylesheet" />
-    <script src="../mermaid/mermaid.js?1608129544"></script>
-    <script>
-        mermaid.initialize({ startOnLoad: true });
-    </script>
+    <script src="../js/modernizr.custom-3.6.0.js?1688058728"></script>
+    <script src="../js/learn.js?1688058728"></script>
+    <script src="../js/hugo-learn.js?1688058728"></script>
+    
+        
+            <script src="../mermaid/mermaid.js?1688058728"></script>
+        
+        <script>
+            mermaid.initialize({ startOnLoad: true });
+        </script>
+    
     
 
   </body>

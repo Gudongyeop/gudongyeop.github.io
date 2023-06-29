@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>read on 여러가지</title>
-    <link>https://dongyeopgu.github.io/tags/read.html</link>
+    <link>https://gudongyeop.github.io/tags/read.html</link>
     <description>Recent content in read on 여러가지</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="https://dongyeopgu.github.io/tags/read/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://gudongyeop.github.io/tags/read/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Django CRUD</title>
-      <link>https://dongyeopgu.github.io/django/django_crud.html</link>
+      <link>https://gudongyeop.github.io/django/django_crud.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/django/django_crud.html</guid>
+      <guid>https://gudongyeop.github.io/django/django_crud.html</guid>
       <description>CRUD - Create, Read, Update, Delete  1. Model 사용할 경우 1. Model 만들기 (ex: Article이라는 모델을 만들경우) # 프로젝트 명/App이름/models.py class Article(models.Model):title = models.CharField(max_length=140)content = models.TextField()created_at = models.DateTimeField(auto_now_add=True)updated_at = models.DateTimeField(auto_now=True) models.Model 을 상속받은 클래스를 생성한다. 속성은 내가 구성하고 싶은 테이블의 컬럼의 이름을 지정하고, 데이터 타입에 맞춰서 필드를 정의한다. 위에서 정의된 필드 정보  CharField :  max_length : 필수   DateTimeField  auto_now_add : (선택) 생성시에만 자동으로 해당 시간 값 설정 auto_now : (선택) 수정시마다 자동으로 해당 시간 값 설정   이외의 필드는 https://docs.</description>
     </item>
     

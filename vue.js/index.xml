@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Vue on 여러가지</title>
-    <link>https://dongyeopgu.github.io/vue.js.html</link>
+    <link>https://gudongyeop.github.io/vue.js.html</link>
     <description>Recent content in Vue on 여러가지</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 25 May 2020 21:55:45 +0900</lastBuildDate>
     
-	<atom:link href="https://dongyeopgu.github.io/vue.js/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://gudongyeop.github.io/vue.js/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Vue.js 기초</title>
-      <link>https://dongyeopgu.github.io/vue.js/vue.js-%EA%B8%B0%EC%B4%88.html</link>
+      <link>https://gudongyeop.github.io/vue.js/vue.js-%EA%B8%B0%EC%B4%88.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/vue.js/vue.js-%EA%B8%B0%EC%B4%88.html</guid>
+      <guid>https://gudongyeop.github.io/vue.js/vue.js-%EA%B8%B0%EC%B4%88.html</guid>
       <description>Vue.js 기초  body태그에 &amp;lt;script src=&amp;quot;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt; Vue.js cdn을 추가하여 사용
- 1. Declarative Rendering(선언적 렌더링) &amp;lt;div id=&amp;#34;app&amp;#34;&amp;gt; {{ message }} &amp;lt;/div&amp;gt; &amp;lt;!-- vue cdn --&amp;gt; &amp;lt;script src=&amp;#34;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script&amp;gt; const app = new Vue({ el: &amp;#39;#app&amp;#39;, data: { message: &amp;#39;message&amp;#39; } }) &amp;lt;/script&amp;gt; 2. 조건문(if) &amp;lt;div id=&amp;#34;using-if&amp;#34;&amp;gt; &amp;lt;p v-if=&amp;#34;check&amp;#34;&amp;gt;안녕&amp;lt;/p&amp;gt; &amp;lt;!-- 기본적인 자바스크립트 표현 가능 --&amp;gt; &amp;lt;p v-if=&amp;#34;check===&amp;#39;안녕&amp;#39;&amp;#34;&amp;gt;안녕&amp;lt;/p&amp;gt; &amp;lt;p v-else-if=&amp;#34;check===&amp;#39;반가워&amp;#39;&amp;#34;&amp;gt;반가워&amp;lt;/p&amp;gt; &amp;lt;p v-else&amp;gt;안녕 반가워&amp;lt;/p&amp;gt; &amp;lt;!-- false일 때만 보여주기 --&amp;gt; &amp;lt;p v-if=&amp;#34;!check&amp;#34;&amp;gt;False일때 나타내기&amp;lt;/p&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;!</description>
+ 1. Declarative Rendering(선언적 렌더링) &amp;lt;div id=&amp;#34;app&amp;#34;&amp;gt;{{ message }}&amp;lt;/div&amp;gt;&amp;lt;!-- vue cdn --&amp;gt;&amp;lt;script src=&amp;#34;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt;&amp;lt;script&amp;gt;const app = new Vue({el: &amp;#39;#app&amp;#39;,data: {message: &amp;#39;message&amp;#39;}})&amp;lt;/script&amp;gt;2. 조건문(if) &amp;lt;div id=&amp;#34;using-if&amp;#34;&amp;gt;&amp;lt;p v-if=&amp;#34;check&amp;#34;&amp;gt;안녕&amp;lt;/p&amp;gt;&amp;lt;!-- 기본적인 자바스크립트 표현 가능 --&amp;gt;&amp;lt;p v-if=&amp;#34;check===&amp;#39;안녕&amp;#39;&amp;#34;&amp;gt;안녕&amp;lt;/p&amp;gt;&amp;lt;p v-else-if=&amp;#34;check===&amp;#39;반가워&amp;#39;&amp;#34;&amp;gt;반가워&amp;lt;/p&amp;gt;&amp;lt;p v-else&amp;gt;안녕 반가워&amp;lt;/p&amp;gt;&amp;lt;!-- false일 때만 보여주기 --&amp;gt;&amp;lt;p v-if=&amp;#34;!check&amp;#34;&amp;gt;False일때 나타내기&amp;lt;/p&amp;gt; &amp;lt;/div&amp;gt;&amp;lt;!</description>
     </item>
     
     <item>
       <title>Vue CLI</title>
-      <link>https://dongyeopgu.github.io/vue.js/vue-cli3.html</link>
+      <link>https://gudongyeop.github.io/vue.js/vue-cli3.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/vue.js/vue-cli3.html</guid>
+      <guid>https://gudongyeop.github.io/vue.js/vue-cli3.html</guid>
       <description>Vue CLI3 설치   공식 문서
    설치 순서 (Windows10)
 $ npm install -g @vue/cli$ vue --version # 버젼확인  프로젝트 생성 및 실행  $ vue create &amp;lt;프로젝트 명&amp;gt;$ cd &amp;lt;프로젝트명&amp;gt; # 프로젝트 폴더로 이동$ npm run serve프로젝트 정리    src/App.vue에서 필요없는 기본코드 삭제(아래처럼)

@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Nginx on 여러가지</title>
-    <link>https://dongyeopgu.github.io/tags/nginx.html</link>
+    <link>https://gudongyeop.github.io/tags/nginx.html</link>
     <description>Recent content in Nginx on 여러가지</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="https://dongyeopgu.github.io/tags/nginx/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://gudongyeop.github.io/tags/nginx/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Nginx 파일 업로드 용량 설정</title>
-      <link>https://dongyeopgu.github.io/server/nginx-%ED%8C%8C%EC%9D%BC-%EC%97%85%EB%A1%9C%EB%93%9C-%EC%9A%A9%EB%9F%89-%EC%84%A4%EC%A0%95.html</link>
+      <link>https://gudongyeop.github.io/server/nginx-%ED%8C%8C%EC%9D%BC-%EC%97%85%EB%A1%9C%EB%93%9C-%EC%9A%A9%EB%9F%89-%EC%84%A4%EC%A0%95.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/server/nginx-%ED%8C%8C%EC%9D%BC-%EC%97%85%EB%A1%9C%EB%93%9C-%EC%9A%A9%EB%9F%89-%EC%84%A4%EC%A0%95.html</guid>
+      <guid>https://gudongyeop.github.io/server/nginx-%ED%8C%8C%EC%9D%BC-%EC%97%85%EB%A1%9C%EB%93%9C-%EC%9A%A9%EB%9F%89-%EC%84%A4%EC%A0%95.html</guid>
       <description>Docker-compose &amp;amp; Nginx  Docker-compose와 Nginx 사용하며 파일 업로드시 용량이 클 경우 해결하기 위한 방법
    default.conf 파일
 ....server {listen 443 ssl;server_name frontend;ssl on; ssl_certificate /ssl/fullchain.pem;ssl_certificate_key /ssl/privkey.pem; access_log /var/log/nginx/data-access.log combined;location / {proxy_pass http://frontend;proxy_set_header Host $host;proxy_http_version 1.1;proxy_set_header Upgrade $http_upgrade;client_max_body_size 20M;......  default.conf 에서 location 부분에 client_max_body_size &amp;lt;용량&amp;gt;; 추가

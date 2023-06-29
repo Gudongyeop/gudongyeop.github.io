@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Dongyeop&#39;s Blog on 여러가지</title>
-    <link>https://dongyeopgu.github.io/</link>
+    <link>https://gudongyeop.github.io/</link>
     <description>Recent content in Dongyeop&#39;s Blog on 여러가지</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 25 May 2020 21:55:45 +0900</lastBuildDate>
     
-	<atom:link href="https://dongyeopgu.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://gudongyeop.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Docker-compose 이용하기</title>
-      <link>https://dongyeopgu.github.io/server/docker-compose-%EC%9D%B4%EC%9A%A9%ED%95%98%EA%B8%B0.html</link>
+      <link>https://gudongyeop.github.io/server/docker-compose-%EC%9D%B4%EC%9A%A9%ED%95%98%EA%B8%B0.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/server/docker-compose-%EC%9D%B4%EC%9A%A9%ED%95%98%EA%B8%B0.html</guid>
+      <guid>https://gudongyeop.github.io/server/docker-compose-%EC%9D%B4%EC%9A%A9%ED%95%98%EA%B8%B0.html</guid>
       <description>Docker-compose를 이용한 배포  Docker compose를 이용하여 배포했던 것 정리.
 혼자 찾아보고 진행했던 내용이기 때문에 정확하지 않을 수 있음.
  1. docker-compose.yml 파일 만들기  docker 실행 옵션을 미리 작성하고 편하게 사용하기 위함 frontend, backend, database, webserver를 각각 컨테이너로 사용했음 frontend는 vue cli로 backend는 node.js, 웹서버는 nginx, db는 mysql 이용 아래 docker-compose.yml파일은 내가 사용했던 것. 루트 폴더에 작성  version: &amp;#39;3&amp;#39;services:frontend:build:context: ./frontenddockerfile: Dockerfilevolumes:- &amp;#39;.</description>
@@ -24,22 +24,22 @@
     
     <item>
       <title>Express를 이용한 백엔드 구축</title>
-      <link>https://dongyeopgu.github.io/node.js/node.js-%EC%8B%9C%EC%9E%91.html</link>
+      <link>https://gudongyeop.github.io/node.js/node.js-%EC%8B%9C%EC%9E%91.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/node.js/node.js-%EC%8B%9C%EC%9E%91.html</guid>
+      <guid>https://gudongyeop.github.io/node.js/node.js-%EC%8B%9C%EC%9E%91.html</guid>
       <description>Express 시작  백엔드에서 사용할 Nodejs Express 공부한 내용 정리.
- 1. Express 설치 및 Generator 사용  express generator를 사용하면 스켈레톤 코드 생성됨(Django에서 startproject와 유사함.)  $ npm install express --save $ npx express-generator $ express --view=pug 사용할 이름  npx command (available in Node.js 8.2.0)
+ 1. Express 설치 및 Generator 사용  express generator를 사용하면 스켈레톤 코드 생성됨(Django에서 startproject와 유사함.)  $ npm install express --save$ npx express-generator$ express --view=pug 사용할 이름 npx command (available in Node.js 8.2.0)
 --view=pug를 사용안하면 jade파일로 구성됨.
- 2. Routes 이용하기  app.js 기본 구조  var indexRouter = require(&amp;#39;./routes/index&amp;#39;); ... app.use(&amp;#39;/&amp;#39;, indexRouter); ...  미리 만들어져 있는 index와 같이 새로 만들 route를 routes폴더에 생성 후 app.</description>
+ 2. Routes 이용하기  app.js 기본 구조  var indexRouter = require(&amp;#39;./routes/index&amp;#39;);...app.use(&amp;#39;/&amp;#39;, indexRouter);... 미리 만들어져 있는 index와 같이 새로 만들 route를 routes폴더에 생성 후 app.</description>
     </item>
     
     <item>
       <title>SSAFY 3기 지원</title>
-      <link>https://dongyeopgu.github.io/%EB%8B%A8%EC%88%9C%EA%B8%B0%EB%A1%9D/ssafy-3%EA%B8%B0-%EC%A7%80%EC%9B%90.html</link>
+      <link>https://gudongyeop.github.io/%EB%8B%A8%EC%88%9C%EA%B8%B0%EB%A1%9D/ssafy-3%EA%B8%B0-%EC%A7%80%EC%9B%90.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/%EB%8B%A8%EC%88%9C%EA%B8%B0%EB%A1%9D/ssafy-3%EA%B8%B0-%EC%A7%80%EC%9B%90.html</guid>
+      <guid>https://gudongyeop.github.io/%EB%8B%A8%EC%88%9C%EA%B8%B0%EB%A1%9D/ssafy-3%EA%B8%B0-%EC%A7%80%EC%9B%90.html</guid>
       <description>SSAFY 3기 지원 2017~2018년에 다니던 회사를 그만 두고 재취업을 하기 위해 1년 이상 시간을 보내며 많은 생각을 했고, 고등학교때 부터 생각만 해보았던 개발자를 해야겠다는 결론을 내렸다.
 이미 나이가 30살이 되었기에 독학으로 하기에는 부담이 되었고 SSAFY를 통해 조금이나마 빠르게 배워야겠다는 생각을 했고, 그렇게 2020년 SSAFY 3기로 시작하게 되었다.
 첫 시작은 나름 성공적이었고, 매일매일 멀티캠퍼스로 수업들으러 가는 일이 재밌었다.</description>
@@ -47,30 +47,30 @@
     
     <item>
       <title>Vue.js 기초</title>
-      <link>https://dongyeopgu.github.io/vue.js/vue.js-%EA%B8%B0%EC%B4%88.html</link>
+      <link>https://gudongyeop.github.io/vue.js/vue.js-%EA%B8%B0%EC%B4%88.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/vue.js/vue.js-%EA%B8%B0%EC%B4%88.html</guid>
+      <guid>https://gudongyeop.github.io/vue.js/vue.js-%EA%B8%B0%EC%B4%88.html</guid>
       <description>Vue.js 기초  body태그에 &amp;lt;script src=&amp;quot;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt; Vue.js cdn을 추가하여 사용
- 1. Declarative Rendering(선언적 렌더링) &amp;lt;div id=&amp;#34;app&amp;#34;&amp;gt; {{ message }} &amp;lt;/div&amp;gt; &amp;lt;!-- vue cdn --&amp;gt; &amp;lt;script src=&amp;#34;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script&amp;gt; const app = new Vue({ el: &amp;#39;#app&amp;#39;, data: { message: &amp;#39;message&amp;#39; } }) &amp;lt;/script&amp;gt; 2. 조건문(if) &amp;lt;div id=&amp;#34;using-if&amp;#34;&amp;gt; &amp;lt;p v-if=&amp;#34;check&amp;#34;&amp;gt;안녕&amp;lt;/p&amp;gt; &amp;lt;!-- 기본적인 자바스크립트 표현 가능 --&amp;gt; &amp;lt;p v-if=&amp;#34;check===&amp;#39;안녕&amp;#39;&amp;#34;&amp;gt;안녕&amp;lt;/p&amp;gt; &amp;lt;p v-else-if=&amp;#34;check===&amp;#39;반가워&amp;#39;&amp;#34;&amp;gt;반가워&amp;lt;/p&amp;gt; &amp;lt;p v-else&amp;gt;안녕 반가워&amp;lt;/p&amp;gt; &amp;lt;!-- false일 때만 보여주기 --&amp;gt; &amp;lt;p v-if=&amp;#34;!check&amp;#34;&amp;gt;False일때 나타내기&amp;lt;/p&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;!</description>
+ 1. Declarative Rendering(선언적 렌더링) &amp;lt;div id=&amp;#34;app&amp;#34;&amp;gt;{{ message }}&amp;lt;/div&amp;gt;&amp;lt;!-- vue cdn --&amp;gt;&amp;lt;script src=&amp;#34;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt;&amp;lt;script&amp;gt;const app = new Vue({el: &amp;#39;#app&amp;#39;,data: {message: &amp;#39;message&amp;#39;}})&amp;lt;/script&amp;gt;2. 조건문(if) &amp;lt;div id=&amp;#34;using-if&amp;#34;&amp;gt;&amp;lt;p v-if=&amp;#34;check&amp;#34;&amp;gt;안녕&amp;lt;/p&amp;gt;&amp;lt;!-- 기본적인 자바스크립트 표현 가능 --&amp;gt;&amp;lt;p v-if=&amp;#34;check===&amp;#39;안녕&amp;#39;&amp;#34;&amp;gt;안녕&amp;lt;/p&amp;gt;&amp;lt;p v-else-if=&amp;#34;check===&amp;#39;반가워&amp;#39;&amp;#34;&amp;gt;반가워&amp;lt;/p&amp;gt;&amp;lt;p v-else&amp;gt;안녕 반가워&amp;lt;/p&amp;gt;&amp;lt;!-- false일 때만 보여주기 --&amp;gt;&amp;lt;p v-if=&amp;#34;!check&amp;#34;&amp;gt;False일때 나타내기&amp;lt;/p&amp;gt; &amp;lt;/div&amp;gt;&amp;lt;!</description>
     </item>
     
     <item>
       <title>Express와 MySQL</title>
-      <link>https://dongyeopgu.github.io/node.js/express-mysql.html</link>
+      <link>https://gudongyeop.github.io/node.js/express-mysql.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/node.js/express-mysql.html</guid>
+      <guid>https://gudongyeop.github.io/node.js/express-mysql.html</guid>
       <description>Express &amp;amp; MySQL  프로젝트 진행하며 찾은 내용들 정리
- 1. MySQL 사용  npm install mysql 으로 mysql모듈 설치  var mysql = require(&amp;#39;mysql&amp;#39;); // 기본적으로 이렇게 사용 let client = mysql.createConnection({ user: &amp;#39;&amp;#39;, password: &amp;#39;&amp;#39;, database: &amp;#39;&amp;#39;, })  프로젝트를 진행하며 사용한 코드 샘플  router.post(&amp;#39;/measure&amp;#39;, function(req, res, next) { let info = req.body let temp = info.temp let datetime = info.datetime let serial = info.serial let studentNumber = null client.</description>
+ 1. MySQL 사용  npm install mysql 으로 mysql모듈 설치  var mysql = require(&amp;#39;mysql&amp;#39;);// 기본적으로 이렇게 사용let client = mysql.createConnection({user: &amp;#39;&amp;#39;,password: &amp;#39;&amp;#39;,database: &amp;#39;&amp;#39;,}) 프로젝트를 진행하며 사용한 코드 샘플  router.post(&amp;#39;/measure&amp;#39;, function(req, res, next) {let info = req.bodylet temp = info.templet datetime = info.datetimelet serial = info.seriallet studentNumber = nullclient.</description>
     </item>
     
     <item>
       <title>Vue CLI</title>
-      <link>https://dongyeopgu.github.io/vue.js/vue-cli3.html</link>
+      <link>https://gudongyeop.github.io/vue.js/vue-cli3.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/vue.js/vue-cli3.html</guid>
+      <guid>https://gudongyeop.github.io/vue.js/vue-cli3.html</guid>
       <description>Vue CLI3 설치   공식 문서
    설치 순서 (Windows10)
 $ npm install -g @vue/cli$ vue --version # 버젼확인  프로젝트 생성 및 실행  $ vue create &amp;lt;프로젝트 명&amp;gt;$ cd &amp;lt;프로젝트명&amp;gt; # 프로젝트 폴더로 이동$ npm run serve프로젝트 정리    src/App.vue에서 필요없는 기본코드 삭제(아래처럼)
@@ -79,20 +79,20 @@ $ npm install -g @vue/cli$ vue --version # 버젼확인  프로젝트 생성 �
     
     <item>
       <title>많이 사용한 Ubuntu 명령어</title>
-      <link>https://dongyeopgu.github.io/server/%EB%A7%8E%EC%9D%B4-%EC%82%AC%EC%9A%A9%ED%95%9C-ubuntu-%EB%AA%85%EB%A0%B9%EC%96%B4.html</link>
+      <link>https://gudongyeop.github.io/server/%EB%A7%8E%EC%9D%B4-%EC%82%AC%EC%9A%A9%ED%95%9C-ubuntu-%EB%AA%85%EB%A0%B9%EC%96%B4.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/server/%EB%A7%8E%EC%9D%B4-%EC%82%AC%EC%9A%A9%ED%95%9C-ubuntu-%EB%AA%85%EB%A0%B9%EC%96%B4.html</guid>
+      <guid>https://gudongyeop.github.io/server/%EB%A7%8E%EC%9D%B4-%EC%82%AC%EC%9A%A9%ED%95%9C-ubuntu-%EB%AA%85%EB%A0%B9%EC%96%B4.html</guid>
       <description>명령어  나중에 생각안날때 보려고 만든 Ubuntu 18.04 에서 배포시 많이 사용했던 명령어들
   netstat -nlpt 현재 listen 중인 포트 확인 netstat -nat로도 확인 가능 netstat -nap | grep 포트 번호 특정 포트 확인 fuser -k -n tcp 포트번호 포트번호에서 사용중인 프로세스 죽이기 vi로 파일을 읽고 수정했을 때 :wq저장후 닫기 :qa 저장안하고 닫기 :qa! qa안될때 docker ps 현재 켜져있는 docker 확인 docker stop 뒤에 docker ps `으로 감싸면 실행중인 docker 파일들 종료 docker-compose build --no-cache 캐시 이용 안하고 build iptables -L --line-numbers iptable 룰 번호 확인 iptables -D chain이름 숫자 위에서 확인한 번호 룰 삭제할 때 iptables -I chain이름 -p tcp -s 허용할 ip --dport 포트번호 -j ACCEPT 지정한 포트 번호 특정 IP 허용 맨 윗줄에 룰 삽입  SSH 접속 느릴 때  vi /etc/ssh/sshd_config로 sshd_config 파일 수정  GSSAPIAuthentication no 주석 해제 UseDNS no주석 해제 $ service sshd restart 로 재시작    </description>
     </item>
     
     <item>
       <title>코로나...</title>
-      <link>https://dongyeopgu.github.io/%EB%8B%A8%EC%88%9C%EA%B8%B0%EB%A1%9D/%EC%BD%94%EB%A1%9C%EB%82%98...html</link>
+      <link>https://gudongyeop.github.io/%EB%8B%A8%EC%88%9C%EA%B8%B0%EB%A1%9D/%EC%BD%94%EB%A1%9C%EB%82%98...html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/%EB%8B%A8%EC%88%9C%EA%B8%B0%EB%A1%9D/%EC%BD%94%EB%A1%9C%EB%82%98...html</guid>
+      <guid>https://gudongyeop.github.io/%EB%8B%A8%EC%88%9C%EA%B8%B0%EB%A1%9D/%EC%BD%94%EB%A1%9C%EB%82%98...html</guid>
       <description>코로나로 인한 온라인 수업  갑자기 터진 코로나로 인해 모든 수업이 온라인으로 변경됨.
  코로나로 인해 오프라인으로 열심히 참석하던 수업들이 모두 온라인 수업으로 변경되었고, 알고리즘 스터디 등 열정적으로 시작하던 개발자가 되는 목표가 잠시 흔들렸다.
 하지만 온라인 수업의 장점도 있었고, 결국 재밌게 마칠 수 있었다.</description>
@@ -100,40 +100,40 @@ $ npm install -g @vue/cli$ vue --version # 버젼확인  프로젝트 생성 �
     
     <item>
       <title>2학기 시작</title>
-      <link>https://dongyeopgu.github.io/%EB%8B%A8%EC%88%9C%EA%B8%B0%EB%A1%9D/2%ED%95%99%EA%B8%B0-%EC%8B%9C%EC%9E%91.html</link>
+      <link>https://gudongyeop.github.io/%EB%8B%A8%EC%88%9C%EA%B8%B0%EB%A1%9D/2%ED%95%99%EA%B8%B0-%EC%8B%9C%EC%9E%91.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/%EB%8B%A8%EC%88%9C%EA%B8%B0%EB%A1%9D/2%ED%95%99%EA%B8%B0-%EC%8B%9C%EC%9E%91.html</guid>
+      <guid>https://gudongyeop.github.io/%EB%8B%A8%EC%88%9C%EA%B8%B0%EB%A1%9D/2%ED%95%99%EA%B8%B0-%EC%8B%9C%EC%9E%91.html</guid>
       <description>SSAFY 2학기 시작  잠시 주춤해진 코로나로 인해 온/오프라인 수업 병행
  다양한 프로젝트를 경험해 볼 수 있는 2학기가 시작되었고 오프라인으로 사람들을 만나서 프로젝트를 할 수 있어서 값진 경험이 되었다.</description>
     </item>
     
     <item>
       <title>https 사용하기</title>
-      <link>https://dongyeopgu.github.io/server/https-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0.html</link>
+      <link>https://gudongyeop.github.io/server/https-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/server/https-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0.html</guid>
+      <guid>https://gudongyeop.github.io/server/https-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0.html</guid>
       <description>https 사용하기(docker, nginx 사용)  처음에 openssl 로 .key 와 .cert를 만들어 사용했지만 인증되지 않았기 때문에 https가 나왔음. 그래서 certbot을 이용하여 다시 인증키를 발급받아 사용.
  1. certbot 이용하여 키 발급  certbot certonly --standalone -d 도메인이름 으로 키 발급 발급이 완료되면 /etc/letsencrypt/live/도메인이름 경로에 cert.pem chain.pem fullchain.pem privkey.pem 파일들이 생김  2. Nginx 설정  나는 default.conf에서 설정하여 실행시켰음 생성된 파일을 다른 폴더에 넣어서 사용했음  upstream client {server 도메인이름;}server {listen 80;server_name 도메인이름;return 301 https://$host$request_uri;}server {listen 443 ssl;server_name 도메인이름; ssl_certificate /ssl/fullchain1.</description>
     </item>
     
     <item>
       <title>2학기 프로젝트 완료</title>
-      <link>https://dongyeopgu.github.io/%EB%8B%A8%EC%88%9C%EA%B8%B0%EB%A1%9D/2%ED%95%99%EA%B8%B0-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%AA%A8%EB%91%90-%EC%99%84%EB%A3%8C.html</link>
+      <link>https://gudongyeop.github.io/%EB%8B%A8%EC%88%9C%EA%B8%B0%EB%A1%9D/2%ED%95%99%EA%B8%B0-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%AA%A8%EB%91%90-%EC%99%84%EB%A3%8C.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/%EB%8B%A8%EC%88%9C%EA%B8%B0%EB%A1%9D/2%ED%95%99%EA%B8%B0-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%AA%A8%EB%91%90-%EC%99%84%EB%A3%8C.html</guid>
+      <guid>https://gudongyeop.github.io/%EB%8B%A8%EC%88%9C%EA%B8%B0%EB%A1%9D/2%ED%95%99%EA%B8%B0-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%AA%A8%EB%91%90-%EC%99%84%EB%A3%8C.html</guid>
       <description>SSAFY 2학기 프로젝트 완료  2학기의 모든 프로젝트를 잘 마칠 수 있었고, 많은 발전이 생겼다.
  다양한 프로젝트들을 하며 좋은 경험을 했고, 하고 싶은 분야와 재밌는 분야 및 앞으로 무엇을 더 공부할지 정할 수 있게 되었다.</description>
     </item>
     
     <item>
       <title>Nginx 파일 업로드 용량 설정</title>
-      <link>https://dongyeopgu.github.io/server/nginx-%ED%8C%8C%EC%9D%BC-%EC%97%85%EB%A1%9C%EB%93%9C-%EC%9A%A9%EB%9F%89-%EC%84%A4%EC%A0%95.html</link>
+      <link>https://gudongyeop.github.io/server/nginx-%ED%8C%8C%EC%9D%BC-%EC%97%85%EB%A1%9C%EB%93%9C-%EC%9A%A9%EB%9F%89-%EC%84%A4%EC%A0%95.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/server/nginx-%ED%8C%8C%EC%9D%BC-%EC%97%85%EB%A1%9C%EB%93%9C-%EC%9A%A9%EB%9F%89-%EC%84%A4%EC%A0%95.html</guid>
+      <guid>https://gudongyeop.github.io/server/nginx-%ED%8C%8C%EC%9D%BC-%EC%97%85%EB%A1%9C%EB%93%9C-%EC%9A%A9%EB%9F%89-%EC%84%A4%EC%A0%95.html</guid>
       <description>Docker-compose &amp;amp; Nginx  Docker-compose와 Nginx 사용하며 파일 업로드시 용량이 클 경우 해결하기 위한 방법
    default.conf 파일
 ....server {listen 443 ssl;server_name frontend;ssl on; ssl_certificate /ssl/fullchain.pem;ssl_certificate_key /ssl/privkey.pem; access_log /var/log/nginx/data-access.log combined;location / {proxy_pass http://frontend;proxy_set_header Host $host;proxy_http_version 1.1;proxy_set_header Upgrade $http_upgrade;client_max_body_size 20M;......  default.conf 에서 location 부분에 client_max_body_size &amp;lt;용량&amp;gt;; 추가
@@ -142,20 +142,20 @@ $ npm install -g @vue/cli$ vue --version # 버젼확인  프로젝트 생성 �
     
     <item>
       <title>Django 시작하기</title>
-      <link>https://dongyeopgu.github.io/django/django_start.html</link>
+      <link>https://gudongyeop.github.io/django/django_start.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/django/django_start.html</guid>
+      <guid>https://gudongyeop.github.io/django/django_start.html</guid>
       <description>기초  1. django 설치 $ pip install django==2.1.15(2.1.15 기준으로 배웠기 때문에)
 2. 프로젝트 시작 $ django-admin startproject {프로젝트 이름}그 후에 프로젝트 폴더의 settings.py에서 ALLOWED_HOST = [&amp;#39;*&amp;#39;]로 수정3. App 만들기 # manage.py 파일이 있는 폴더에서 터미널 진입 후 bash 에 $ python manage.py startapp {앱 이름} # 그 후에 settings.py에서  INSTALLED_APPS = [&amp;#39;{앱 이름}&amp;#39; 추가]4. urls.py 작성 # 프로젝트 이름/urls.py에서 예를 들어 index 페이지를 넣을 경우  from app이름 import views #추가 urlpatterns =[path(&amp;#39;index/&amp;#39;, views.</description>
     </item>
     
     <item>
       <title>Docker-compose로 Django 사용</title>
-      <link>https://dongyeopgu.github.io/server/docker-compose%EB%A1%9C-django-%EC%82%AC%EC%9A%A9.html</link>
+      <link>https://gudongyeop.github.io/server/docker-compose%EB%A1%9C-django-%EC%82%AC%EC%9A%A9.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/server/docker-compose%EB%A1%9C-django-%EC%82%AC%EC%9A%A9.html</guid>
+      <guid>https://gudongyeop.github.io/server/docker-compose%EB%A1%9C-django-%EC%82%AC%EC%9A%A9.html</guid>
       <description>Docker-compose &amp;amp; Django &amp;amp; Gunicorn  Docker-compose로 Django &amp;amp; Gunicorn 사용하기
    Dockerfile
 FROMpython:3.6.9ENV PYTHONUNBUFFERED 1RUN mkdir /backendWORKDIR/backendADD requirements.txt /backend/RUN pip install --upgrade pipRUN pip install -r requirements.txtADD . /backend/  docker-compose.yml
@@ -164,29 +164,29 @@ backend:build: context: ./backenddockerfile: Dockerfilerestart: alwaysenv_fi
     
     <item>
       <title>웹 개발자로 취업</title>
-      <link>https://dongyeopgu.github.io/%EB%8B%A8%EC%88%9C%EA%B8%B0%EB%A1%9D/%EC%9B%B9-%EA%B0%9C%EB%B0%9C%EC%9E%90%EB%A1%9C-%EC%B7%A8%EC%97%85.html</link>
+      <link>https://gudongyeop.github.io/%EB%8B%A8%EC%88%9C%EA%B8%B0%EB%A1%9D/%EC%9B%B9-%EA%B0%9C%EB%B0%9C%EC%9E%90%EB%A1%9C-%EC%B7%A8%EC%97%85.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/%EB%8B%A8%EC%88%9C%EA%B8%B0%EB%A1%9D/%EC%9B%B9-%EA%B0%9C%EB%B0%9C%EC%9E%90%EB%A1%9C-%EC%B7%A8%EC%97%85.html</guid>
+      <guid>https://gudongyeop.github.io/%EB%8B%A8%EC%88%9C%EA%B8%B0%EB%A1%9D/%EC%9B%B9-%EA%B0%9C%EB%B0%9C%EC%9E%90%EB%A1%9C-%EC%B7%A8%EC%97%85.html</guid>
       <description>웹 개발자로 취업  프로젝트를 잘 마침과 동시에 웹 개발자로 취업
  백엔드와 서버에 관심이 많았고 스타트업에서 일을 시작하고 싶었기에 스타트업 위주로 하고 싶은 일을 할 수 있는 곳들로 많은 서류를 제출했고, 많은 탈락을 경험하며 결국 원하는 업무와 환경을 제공해주는 곳에 취업을 하게 되었다.</description>
     </item>
     
     <item>
       <title>Django CRUD</title>
-      <link>https://dongyeopgu.github.io/django/django_crud.html</link>
+      <link>https://gudongyeop.github.io/django/django_crud.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/django/django_crud.html</guid>
+      <guid>https://gudongyeop.github.io/django/django_crud.html</guid>
       <description>CRUD - Create, Read, Update, Delete  1. Model 사용할 경우 1. Model 만들기 (ex: Article이라는 모델을 만들경우) # 프로젝트 명/App이름/models.py class Article(models.Model):title = models.CharField(max_length=140)content = models.TextField()created_at = models.DateTimeField(auto_now_add=True)updated_at = models.DateTimeField(auto_now=True) models.Model 을 상속받은 클래스를 생성한다. 속성은 내가 구성하고 싶은 테이블의 컬럼의 이름을 지정하고, 데이터 타입에 맞춰서 필드를 정의한다. 위에서 정의된 필드 정보  CharField :  max_length : 필수   DateTimeField  auto_now_add : (선택) 생성시에만 자동으로 해당 시간 값 설정 auto_now : (선택) 수정시마다 자동으로 해당 시간 값 설정   이외의 필드는 https://docs.</description>
     </item>
     
     <item>
       <title>Django Paginator</title>
-      <link>https://dongyeopgu.github.io/django/django_paginator.html</link>
+      <link>https://gudongyeop.github.io/django/django_paginator.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/django/django_paginator.html</guid>
+      <guid>https://gudongyeop.github.io/django/django_paginator.html</guid>
       <description>Paginator 사용하기   게시판 같은 곳에서 리스트의 양이 많아 질 경우 나누어 보여주기 위해서 사용
 여기 적힌 예에서 model은 Review 이고 forms는 ReviewForm이다.
 bootstrap을 사용했음.
@@ -195,10 +195,10 @@ bootstrap을 사용했음.
     
     <item>
       <title>Django User (1)</title>
-      <link>https://dongyeopgu.github.io/django/django_login.html</link>
+      <link>https://gudongyeop.github.io/django/django_login.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/django/django_login.html</guid>
+      <guid>https://gudongyeop.github.io/django/django_login.html</guid>
       <description>User 관리(sign in, out, up)   로그인 기능을 넣는 방법
 model을 만들 필요 없이 django에서 제공하는 user 모델을 사용함
 bootstrap 사용을 기반으로 작성함
@@ -207,73 +207,83 @@ bootstrap 사용을 기반으로 작성함
     
     <item>
       <title>Django User (2)</title>
-      <link>https://dongyeopgu.github.io/django/django_change_user.html</link>
+      <link>https://gudongyeop.github.io/django/django_change_user.html</link>
       <pubDate>Tue, 14 Apr 2020 16:15:29 +0900</pubDate>
       
-      <guid>https://dongyeopgu.github.io/django/django_change_user.html</guid>
+      <guid>https://gudongyeop.github.io/django/django_change_user.html</guid>
       <description>User 관리(change, customizing)   customizing 방법은 여러가지가 있지만, 앞서 사용했던 방법과 다르게 여기서는 AbstractUser를 상속 받아서 User를 customizing후 사용함
 UserChangeForm도 마찬가지로 ChangeForm을 상속받아 customizing 해서 사용함
 bootstrap을 사용하기 위해 widget에 attrs도 추가
- 1. models.py에서 AbstractUser를 상속 from django.db import models from django.contrib.auth.models import AbstractUser # AbstractUser를 가져옴 # Create your models here. class User(AbstractUser): # User 모델을 AbstractUser 상속받음 # 추가할 내용을 작성 Korean_name = models.CharField(max_length=20, blank=True) address = models.</description>
+ 1. models.py에서 AbstractUser를 상속 from django.db import modelsfrom django.contrib.auth.models import AbstractUser # AbstractUser를 가져옴 # Create your models here. class User(AbstractUser): # User 모델을 AbstractUser 상속받음 # 추가할 내용을 작성 Korean_name = models.</description>
     </item>
     
     <item>
       <title>Django Comment</title>
-      <link>https://dongyeopgu.github.io/django/django_comment.html</link>
+      <link>https://gudongyeop.github.io/django/django_comment.html</link>
       <pubDate>Tue, 21 Apr 2020 22:54:07 +0900</pubDate>
       
-      <guid>https://dongyeopgu.github.io/django/django_comment.html</guid>
+      <guid>https://gudongyeop.github.io/django/django_comment.html</guid>
       <description>Django 댓글 작성 &amp;amp; 삭제  게시글의 model은 Article로 만들었을 경우임. ForeignKey를 사용.
- 1. 댓글 작성  models.py에서 댓글 설정을 위한 class를 만든다.(user 설정을 안했을 경우)  class Comment(models.Model): article = models.ForeignKey(Article, on_delete=models.CASCADE) #on_delete=models.CASCADE는 ForeignKeyField가 삭제 될때 인스턴스도 같이 삭제 content = models.TextField()  forms.py에도 추가  from django import forms from .models import Comment class CommentForm(forms.ModelForm): class Meta: model = Comment fields = [&amp;#39;content&amp;#39;] # fields를 __all__로 해도 됨(all로 했을 경우에는 댓글 작성시 모든 값을 잘 입력 해야한다.</description>
+ 1. 댓글 작성  models.py에서 댓글 설정을 위한 class를 만든다.(user 설정을 안했을 경우)  class Comment(models.Model):article = models.ForeignKey(Article, on_delete=models.CASCADE)#on_delete=models.CASCADE는 ForeignKeyField가 삭제 될때 인스턴스도 같이 삭제 content = models.TextField() forms.py에도 추가  from django import formsfrom .models import Commentclass CommentForm(forms.ModelForm):class Meta:model = Commentfields = [&amp;#39;content&amp;#39;]# fields를 __all__로 해도 됨(all로 했을 경우에는 댓글 작성시 모든 값을 잘 입력 해야한다.</description>
     </item>
     
     <item>
       <title>Django M:N</title>
-      <link>https://dongyeopgu.github.io/django/django_like_follow.html</link>
+      <link>https://gudongyeop.github.io/django/django_like_follow.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/django/django_like_follow.html</guid>
+      <guid>https://gudongyeop.github.io/django/django_like_follow.html</guid>
       <description>Django M:N model  Django에서 좋아요 기능이나 팔로우 기능처럼 M:N 관계 만들기
 ManyToManyField 이용
-  좋아요 기능을 위한 model 추가(게시글 모델)  # 좋아요 기능을 위한 article_like_users 테이블 생성 class 좋아요 기능을 추가할 클래스 명: like_users = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name=&amp;#39;like_articles&amp;#39;) # 팔로우 기능을 위한   팔로우 기능을 위한 model 추가(User 모델을 Customizing)  class User(AbstractUser): followers = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name=&amp;#39;followings&amp;#39;)  게시글 app의 views.py에서 좋아요 기능 설정  def like(request, pk): article = get_object_or_404(Article, pk=pk) # 좋아요를 누르면, &amp;gt;&amp;gt; DB에 존재할 경우 if article.</description>
+  좋아요 기능을 위한 model 추가(게시글 모델)  # 좋아요 기능을 위한 article_like_users 테이블 생성 class 좋아요 기능을 추가할 클래스 명: like_users = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name=&amp;#39;like_articles&amp;#39;)# 팔로우 기능을 위한   팔로우 기능을 위한 model 추가(User 모델을 Customizing)  class User(AbstractUser):followers = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name=&amp;#39;followings&amp;#39;) 게시글 app의 views.py에서 좋아요 기능 설정  def like(request, pk):article = get_object_or_404(Article, pk=pk)# 좋아요를 누르면, &amp;gt;&amp;gt; DB에 존재할 경우 if article.</description>
     </item>
     
     <item>
       <title>Django REST Framework</title>
-      <link>https://dongyeopgu.github.io/django/django_rest_api.html</link>
+      <link>https://gudongyeop.github.io/django/django_rest_api.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/django/django_rest_api.html</guid>
-      <description>Django Rest Framework(DRF) 1. REST API(DRF: Django Rest Framework)  REST API를 활용하면 백 엔드와 프론트 엔드 분리가 쉽고 코드의 재활용성이 좋다. REST API를 사용하기 위해서 먼저 설치가 필요  $ pip install djangorestframework  settings.py에서 INSTALLED_APPS에 &#39;rest_framework&#39;추가 app 폴더에 serializers.py 파일을 만들고 내용 추가  # serializers.py from rest_framework import serializers from .models import * #필요한 모델이름 넣어주기 class &amp;lt;모델명&amp;gt;Serializer(serializers.ModelSerializer): class Meta: model = &amp;lt;모델명&amp;gt; fields = [&amp;#39;필요한 필드&amp;#39;]  views.</description>
+      <guid>https://gudongyeop.github.io/django/django_rest_api.html</guid>
+      <description>Django Rest Framework(DRF) 1. REST API(DRF: Django Rest Framework)  REST API를 활용하면 백 엔드와 프론트 엔드 분리가 쉽고 코드의 재활용성이 좋다. REST API를 사용하기 위해서 먼저 설치가 필요  $ pip install djangorestframework settings.py에서 INSTALLED_APPS에 &#39;rest_framework&#39;추가 app 폴더에 serializers.py 파일을 만들고 내용 추가  # serializers.py from rest_framework import serializersfrom .models import * #필요한 모델이름 넣어주기 class &amp;lt;모델명&amp;gt;Serializer(serializers.ModelSerializer):class Meta:model = &amp;lt;모델명&amp;gt;fields = [&amp;#39;필요한 필드&amp;#39;] views.</description>
+    </item>
+    
+    <item>
+      <title>Django FBV vs CBV</title>
+      <link>https://gudongyeop.github.io/django/django_fbv_cbv.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gudongyeop.github.io/django/django_fbv_cbv.html</guid>
+      <description>Django FBV vs CBV  FBV CBV 차이
+  FBV(Function Based View)  장점  구현이 간단함 읽기 편함 직관적인 코드 데코레이터 사용이 간단함   단점  확장 / 재사용이 힘듬     CBV(Class Based View)  장점  확장에 용의(재사용) 다중 상속 Mixin등 사용 가능 HTTP Method가 클래스 안에서 나누어 처리 강력한 Generic Class View 가 있음   단점  읽기 어려움(코드 흐름이 암시적) 상속되고 믹스되면서 코드 이해를 위해 찾아다녀야함 데코레이터 사용시 별로도 import 하거나 Method 생성       </description>
     </item>
     
     <item>
       <title>Django Image Upload</title>
-      <link>https://dongyeopgu.github.io/django/django_image_upload.html</link>
+      <link>https://gudongyeop.github.io/django/django_image_upload.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/django/django_image_upload.html</guid>
+      <guid>https://gudongyeop.github.io/django/django_image_upload.html</guid>
       <description>Django에서 Image Upload  POST요청을 통해 Vue.js에서 Django로 이미지 전송.
- 기본 세팅  settings.py에서 아래 추가  MEDIA_URL = &amp;#39;/api/&amp;#39; # 기본 api url을 통일 시켜 번거로움을 줄이기 위해 /api/로 설정했음 MEDIA_ROOT = os.path.join(BASE_DIR, &amp;#39;media&amp;#39;) # 이미지 파일이 저장되는 기본 위치를 media폴더로 설정  이미지 url도 다른 application과 같이 api로 시작하게 만들기 위해 MEDIA_URL을 /api/로 설정
-  urls.py  from django.contrib import admin from django.urls import path, include from django.</description>
+ 기본 세팅  settings.py에서 아래 추가  MEDIA_URL = &amp;#39;/api/&amp;#39; # 기본 api url을 통일 시켜 번거로움을 줄이기 위해 /api/로 설정했음 MEDIA_ROOT = os.path.join(BASE_DIR, &amp;#39;media&amp;#39;) # 이미지 파일이 저장되는 기본 위치를 media폴더로 설정  이미지 url도 다른 application과 같이 api로 시작하게 만들기 위해 MEDIA_URL을 /api/로 설정
+  urls.py  from django.contrib import adminfrom django.urls import path, includefrom django.</description>
     </item>
     
     <item>
       <title>Hugo를 이용해 Blog 만들기</title>
-      <link>https://dongyeopgu.github.io/hugo-blog/hugo-blog-start.html</link>
+      <link>https://gudongyeop.github.io/hugo-blog/hugo-blog-start.html</link>
       <pubDate>Mon, 13 Apr 2020 22:13:54 +0900</pubDate>
       
-      <guid>https://dongyeopgu.github.io/hugo-blog/hugo-blog-start.html</guid>
+      <guid>https://gudongyeop.github.io/hugo-blog/hugo-blog-start.html</guid>
       <description>설치 및 실행은 모두 Windows 10에서 함.
  1. Hugo 설치 및 Theme 정하기  나는 hugo github에서 직접 hugo_0.69.0_Windows-64bit.zip를 다운 받아 사용했다. 다운 받은 후 압축을 풀어 C:\Hugo\bin 을 만들어 그 안에 넣어주었고, 시스템 환경 변수에서 Path에 C:\Hugo\bin을 추가했다. 그리고 사용할 테마를 선택하며(여기) $ hugo new site 폴더 이름으로 사용할 폴더를 만들었다. github에서 두개의 repo를 만들었다. (하나는 .github.io 로, 하나는 hugo 관련 소스파일 등과 같은 것을 포함할 (위에서 만든 폴더와 동일하게, 나는 myblog라고 함)) $ git submodule add https://github.</description>
     </item>
     
     <item>
       <title>2020.04.13 다시 기록 시작</title>
-      <link>https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.13.html</link>
+      <link>https://gudongyeop.github.io/til/4%EC%9B%94/20.04.13.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.13.html</guid>
+      <guid>https://gudongyeop.github.io/til/4%EC%9B%94/20.04.13.html</guid>
       <description>오늘 배운 것들   Django에서 기본 제공하는 User 모델을 이용
   이를 이용하여 회원가입, 정보 수정하는 방법
   회원가입시 Django에서 제공하는 UserCreationForm을 사용
@@ -282,105 +292,105 @@ ManyToManyField 이용
     
     <item>
       <title>2020.04.14</title>
-      <link>https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.14.html</link>
+      <link>https://gudongyeop.github.io/til/4%EC%9B%94/20.04.14.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.14.html</guid>
+      <guid>https://gudongyeop.github.io/til/4%EC%9B%94/20.04.14.html</guid>
       <description>오늘 배운 것들  Django  User 모델을 사용하는 것보다 get_user_model 메서드를 사용하는 것을 추천 get_user_model이 더 유연하게 사용할 수 있음. 커스터마이징을 했을 경우에도 쉽게 사용가능 로그인을위해 AuthenticationForm을 사용 회원 탈퇴는 views.py에서 request.user.delete() 이용 Form / ModelForm  Form 제공 GET  context를 넘겨줌   데이터 양식 처리 POST  양식데이터(request.POST) &amp;gt; ModelForm으로 넘겨줌 그 후, 검증       HTTP는 connectless, stateless 그렇기 때문에 정보를 쿠키에 저장  User가 서버로 요청을 보냄 서버가 쿠키와 같이 응답을 보내줌 User가 서버로 요청을 보낼 때 쿠키와 함께 보내줌    </description>
     </item>
     
     <item>
       <title>2020.04.15</title>
-      <link>https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.15.html</link>
+      <link>https://gudongyeop.github.io/til/4%EC%9B%94/20.04.15.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.15.html</guid>
+      <guid>https://gudongyeop.github.io/til/4%EC%9B%94/20.04.15.html</guid>
       <description>오늘 공부한 것들 &amp;amp; 생각한 것 - 생각  간단한 웹 서비스 ? 만들며, 배우고 공부한 것을 활용해보자 회원가입을 안해도 이용가능 하도록 (회원가입의 귀찮음&amp;hellip;) 자세한건 프로젝트 repo를 따로 만들어 관리해보자는 생각  - 공부한것  Django QuerySet API 관련. (참고 : Django 공식문서) - 생각한 웹 페이지에서 필요한 것을 넣기 위해(어디서 관련 정보를 봐야하는지 기록정도, 다 외우는것은 힘들기에) Image를 넣기 위한 ImageField 관련 (Django 공식문서)  </description>
     </item>
     
     <item>
       <title>2020.04.16</title>
-      <link>https://dongyeopgu.github.io/algorithm/d4~6/20.04.16.html</link>
+      <link>https://gudongyeop.github.io/algorithm/d4~6/20.04.16.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/algorithm/d4~6/20.04.16.html</guid>
-      <description>오늘 공부한 것  Algorithm 문제 풀이 (Tree) SWEA-노드의 합  class BinaryTree: def __init__(self, n): self.n = n self.node_list = [0] *(n+1) def insert(self, num1, num2): self.node_list[num1] = num2 def leaf(self, node): if node * 2 &amp;gt; n: self.sum += self.node_list[node] else: self.leaf(node * 2) if node * 2 != n: self.leaf(node * 2 + 1) def result(self, l): self.sum = 0 self.leaf(l) return self.sum for t in range(int(input())): n, m, l = map(int, input().</description>
+      <guid>https://gudongyeop.github.io/algorithm/d4~6/20.04.16.html</guid>
+      <description>오늘 공부한 것  Algorithm 문제 풀이 (Tree) SWEA-노드의 합  class BinaryTree:def __init__(self, n):self.n = nself.node_list = [0] *(n+1)def insert(self, num1, num2):self.node_list[num1] = num2def leaf(self, node):if node * 2 &amp;gt; n:self.sum += self.node_list[node]else:self.leaf(node * 2)if node * 2 != n:self.leaf(node * 2 + 1)def result(self, l):self.sum = 0self.leaf(l)return self.sumfor t in range(int(input())):n, m, l = map(int, input().</description>
     </item>
     
     <item>
       <title>2020.04.16</title>
-      <link>https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.16.html</link>
+      <link>https://gudongyeop.github.io/til/4%EC%9B%94/20.04.16.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.16.html</guid>
-      <description>오늘 공부한 것  Algorithm 문제 풀이 (Tree) SWEA-노드의 합  class BinaryTree: def __init__(self, n): self.n = n self.node_list = [0] *(n+1) def insert(self, num1, num2): self.node_list[num1] = num2 def leaf(self, node): if node * 2 &amp;gt; n: self.sum += self.node_list[node] else: self.leaf(node * 2) if node * 2 != n: self.leaf(node * 2 + 1) def result(self, l): self.sum = 0 self.leaf(l) return self.sum for t in range(int(input())): n, m, l = map(int, input().</description>
+      <guid>https://gudongyeop.github.io/til/4%EC%9B%94/20.04.16.html</guid>
+      <description>오늘 공부한 것  Algorithm 문제 풀이 (Tree) SWEA-노드의 합  class BinaryTree:def __init__(self, n):self.n = nself.node_list = [0] *(n+1)def insert(self, num1, num2):self.node_list[num1] = num2def leaf(self, node):if node * 2 &amp;gt; n:self.sum += self.node_list[node]else:self.leaf(node * 2)if node * 2 != n:self.leaf(node * 2 + 1)def result(self, l):self.sum = 0self.leaf(l)return self.sumfor t in range(int(input())):n, m, l = map(int, input().</description>
     </item>
     
     <item>
       <title>2020.04.17</title>
-      <link>https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.17.html</link>
+      <link>https://gudongyeop.github.io/til/4%EC%9B%94/20.04.17.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.17.html</guid>
+      <guid>https://gudongyeop.github.io/til/4%EC%9B%94/20.04.17.html</guid>
       <description>오늘 생각한 것(혼자해보는 프로젝트)  지금 까지 배운 django로 간단한 물건 예약신청 웹페이지를 만들려 하다보니 필요한게 많았음 회원가입인듯 아닌듯 만들기 위한 생각이 필요했음 신청과 동시에 회원가입을 하는 방향으로 생각했음 관련 파일은 따로 project로 올릴 예정  </description>
     </item>
     
     <item>
       <title>2020.04.18</title>
-      <link>https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.18.html</link>
+      <link>https://gudongyeop.github.io/til/4%EC%9B%94/20.04.18.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.18.html</guid>
-      <description>오늘 공부한 것  AuthenticationForm을 커스터 마이징할 때 class Meta를 통해 attr을 작성 할 경우 원하는 대로 동작하지 않는다. 그렇기 때문에 init을 통해 attr을 추가해야 한다. 아래의 코드는 오늘 사용한 예  class myAuthenticationForm(AuthenticationForm): def __init__(self, *args, **kwargs): super(myAuthenticationForm, self).__init__(*args, **kwargs) self.fields[&amp;#39;username&amp;#39;].widget = forms.TextInput( attrs={ &amp;#39;class&amp;#39;: &amp;#39;form-control&amp;#39; } ) self.fields[&amp;#39;password&amp;#39;].widget = forms.PasswordInput( attrs={ &amp;#39;class&amp;#39;: &amp;#39;form-control&amp;#39; } ) class Meta: model = User fields = [&amp;#39;username&amp;#39;,&amp;#39;password&amp;#39;] </description>
+      <guid>https://gudongyeop.github.io/til/4%EC%9B%94/20.04.18.html</guid>
+      <description>오늘 공부한 것  AuthenticationForm을 커스터 마이징할 때 class Meta를 통해 attr을 작성 할 경우 원하는 대로 동작하지 않는다. 그렇기 때문에 init을 통해 attr을 추가해야 한다. 아래의 코드는 오늘 사용한 예  class myAuthenticationForm(AuthenticationForm):def __init__(self, *args, **kwargs):super(myAuthenticationForm, self).__init__(*args, **kwargs)self.fields[&amp;#39;username&amp;#39;].widget = forms.TextInput(attrs={&amp;#39;class&amp;#39;: &amp;#39;form-control&amp;#39;})self.fields[&amp;#39;password&amp;#39;].widget = forms.PasswordInput(attrs={&amp;#39;class&amp;#39;: &amp;#39;form-control&amp;#39;}) class Meta:model = Userfields = [&amp;#39;username&amp;#39;,&amp;#39;password&amp;#39;]</description>
     </item>
     
     <item>
       <title>2020.04.19</title>
-      <link>https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.19.html</link>
+      <link>https://gudongyeop.github.io/til/4%EC%9B%94/20.04.19.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.19.html</guid>
-      <description>오늘 공부한 것  어제에 이어서 신청 완료시 메일을 발송하게 만들려고 함 django에서 email보내는 것도 지원을 하기때문에 아래 코드를 이용했음 먼저 settings.py에서 아래 코드를 추가  EMAIL_HOST = &amp;#34;smtp.gmail.com&amp;#34; EMAIL_HOST_USER = &amp;#39;내 gmail 주소@gmail.com&amp;#39; EMAIL_HOST_PASSWORD = &amp;#39;내 gmail 비밀번호&amp;#39; EMAIL_PORT = 587 EMAIL_USE_TLS = True  views.py에서 아래 코드 이용(공식문서의 example) 여기 참고  from django.core.mail import send_mail send_mail( &amp;#39;Subject here&amp;#39;, &amp;#39;Here is the message.&amp;#39;, &amp;#39;from@example.com&amp;#39;, [&amp;#39;to@example.com&amp;#39;], fail_silently=False, ) </description>
+      <guid>https://gudongyeop.github.io/til/4%EC%9B%94/20.04.19.html</guid>
+      <description>오늘 공부한 것  어제에 이어서 신청 완료시 메일을 발송하게 만들려고 함 django에서 email보내는 것도 지원을 하기때문에 아래 코드를 이용했음 먼저 settings.py에서 아래 코드를 추가  EMAIL_HOST = &amp;#34;smtp.gmail.com&amp;#34;EMAIL_HOST_USER = &amp;#39;내 gmail 주소@gmail.com&amp;#39;EMAIL_HOST_PASSWORD = &amp;#39;내 gmail 비밀번호&amp;#39;EMAIL_PORT = 587EMAIL_USE_TLS = True views.py에서 아래 코드 이용(공식문서의 example) 여기 참고  from django.core.mail import send_mailsend_mail(&amp;#39;Subject here&amp;#39;,&amp;#39;Here is the message.&amp;#39;,&amp;#39;from@example.com&amp;#39;,[&amp;#39;to@example.com&amp;#39;],fail_silently=False,)</description>
     </item>
     
     <item>
       <title>2020.04.20</title>
-      <link>https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.20.html</link>
+      <link>https://gudongyeop.github.io/til/4%EC%9B%94/20.04.20.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.20.html</guid>
+      <guid>https://gudongyeop.github.io/til/4%EC%9B%94/20.04.20.html</guid>
       <description>오늘 배운 것 SQL 관련 1. Database 기본  RDBMS  데이터베이스를 관리하는 시스템  빠르고 효율적으로 관리하기 위해   RDBMS(Relational Database Management System)  관계형 데이버 베이스 관리 시스템 table(relation) 활용     기본 용어  스키마: DB의 자료 구조와 제약 조건에 대한 전반적인 명세를 기술한 것 테이블 : 열과 행을 사용해 조직한 데이터 요소들 집합 열(column)/필드(field)/속성(attribute) 행(row)/tuple/레코드(record) PK(Primary key):  각 행의 고유값으로 저장된 레코드를 고유하게 식별할 수 있는 값 중복되는 값이 없으면 다 pk로 사용 가능 == unique한 값에 부여      2.</description>
     </item>
     
     <item>
       <title>2020.04.21</title>
-      <link>https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.21.html</link>
+      <link>https://gudongyeop.github.io/til/4%EC%9B%94/20.04.21.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.21.html</guid>
+      <guid>https://gudongyeop.github.io/til/4%EC%9B%94/20.04.21.html</guid>
       <description>오늘 배운 것 Django 댓글 작성 &amp;amp; 삭제  게시글의 model은 Article로 만들었을 경우임. ForeignKey를 사용.
    댓글 작성
   models.py에서 댓글 설정을 위한 class를 만든다.(user 설정을 안했을 경우)
-class Comment(models.Model): article = models.ForeignKey(Article, on_delete=models.CASCADE) #on_delete=models.CASCADE는 ForeignKeyField가 삭제 될때 인스턴스도 같이 삭제 content = models.TextField()   forms.py에도 추가
-from django import forms from .models import Comment class CommentForm(forms.ModelForm): class Meta: model = Comment fields = [&amp;#39;content&amp;#39;] # fields를 __all__로 해도 됨(all로 했을 경우에는 댓글 작성시 모든 값을 잘 입력 해야한다.</description>
+class Comment(models.Model):article = models.ForeignKey(Article, on_delete=models.CASCADE)#on_delete=models.CASCADE는 ForeignKeyField가 삭제 될때 인스턴스도 같이 삭제 content = models.TextField()  forms.py에도 추가
+from django import formsfrom .models import Commentclass CommentForm(forms.ModelForm):class Meta:model = Commentfields = [&amp;#39;content&amp;#39;]# fields를 __all__로 해도 됨(all로 했을 경우에는 댓글 작성시 모든 값을 잘 입력 해야한다.</description>
     </item>
     
     <item>
       <title>2020.04.22</title>
-      <link>https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.22.html</link>
+      <link>https://gudongyeop.github.io/til/4%EC%9B%94/20.04.22.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.22.html</guid>
+      <guid>https://gudongyeop.github.io/til/4%EC%9B%94/20.04.22.html</guid>
       <description>오늘 한 것 간단한 Django 프로젝트  페어프로그래밍으로 간단하게 로그인 후 게시글을 작성하고 댓글을 작성할 수 있는 페이지를 만들었음
  </description>
     </item>
     
     <item>
       <title>2020.04.23</title>
-      <link>https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.23.html</link>
+      <link>https://gudongyeop.github.io/til/4%EC%9B%94/20.04.23.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.23.html</guid>
+      <guid>https://gudongyeop.github.io/til/4%EC%9B%94/20.04.23.html</guid>
       <description>오늘 배운 것 Computational Thinking  SW Expert Academy에 있는 Computational Thinking 학습
    수와 표현
  명제 관련 예)   문제 12 : n^2 이 3의 배수이면 n은 3의 배수이다.
@@ -391,10 +401,10 @@ from django import forms from .models import Comment class CommentForm(forms.Mod
     
     <item>
       <title>2020.04.24</title>
-      <link>https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.24.html</link>
+      <link>https://gudongyeop.github.io/til/4%EC%9B%94/20.04.24.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.24.html</guid>
+      <guid>https://gudongyeop.github.io/til/4%EC%9B%94/20.04.24.html</guid>
       <description>오늘한 것 Django 복습  Django에서 간단한 User 생성, 로그인, 로그아웃 구현 복습
 댓글 위한 모델 작성 복습
   댓글 작성을 위해 ForeignKey 사용 (1:N 관계)  </description>
@@ -402,103 +412,103 @@ from django import forms from .models import Comment class CommentForm(forms.Mod
     
     <item>
       <title>2020.04.25</title>
-      <link>https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.25.html</link>
+      <link>https://gudongyeop.github.io/til/4%EC%9B%94/20.04.25.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.25.html</guid>
+      <guid>https://gudongyeop.github.io/til/4%EC%9B%94/20.04.25.html</guid>
       <description>오늘한 것 Django PJT 추가  혼자 만들어보는 웹 페이지에서 사용자들을 위한 Q&amp;amp;A 페이지 작성
  </description>
     </item>
     
     <item>
       <title>2020.04.26</title>
-      <link>https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.26.html</link>
+      <link>https://gudongyeop.github.io/til/4%EC%9B%94/20.04.26.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.26.html</guid>
+      <guid>https://gudongyeop.github.io/til/4%EC%9B%94/20.04.26.html</guid>
       <description>오늘한 것 Django PJT 추가  Q&amp;amp;A 페이지에서 댓글 추가
-  댓글 작성 위해 1:N 관계 모델 작성  from django.db import models from django.conf import settings # 사진 및 정보를 업로드 하기 위한 모델 정의 class QandA(models.Model): title = models.CharField(max_length=100) user =models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE) content = models.TextField() class Reply(models.Model): content = models.TextField() QandA = models.ForeignKey(QandA, on_delete=models.CASCADE) user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)  ForeignKey를 이용하여 1:N관계 설정 후 migration
+  댓글 작성 위해 1:N 관계 모델 작성  from django.db import modelsfrom django.conf import settings# 사진 및 정보를 업로드 하기 위한 모델 정의 class QandA(models.Model):title = models.CharField(max_length=100)user =models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)content = models.TextField()class Reply(models.Model):content = models.TextField()QandA = models.ForeignKey(QandA, on_delete=models.CASCADE)user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE) ForeignKey를 이용하여 1:N관계 설정 후 migration
  </description>
     </item>
     
     <item>
       <title>2020.04.27</title>
-      <link>https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.27.html</link>
+      <link>https://gudongyeop.github.io/til/4%EC%9B%94/20.04.27.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.27.html</guid>
+      <guid>https://gudongyeop.github.io/til/4%EC%9B%94/20.04.27.html</guid>
       <description>오늘 배운 것 이미지 업로드  ImageField를 활용하여 업로드
-  단순히 ImageField를 사용하기 위해서는 pillow패키지를 설치해야 한다.  $ pip install pillow  Resizing 하기 위해서는 pilkit, django-imagekit 패키지를 설치  $ pip install pilkit django-imagekit  ImageField를 사용할 app의 models.py를 수정  class &amp;lt;사용할 모델&amp;gt;: image = models.ImageField() # 저장하지 않고 잘라서 표현할 때(ex. thumbnail) image_thumbnail = ImageSpecField(source=&amp;#39;image&amp;#39;, processors=[Thumbnail(300, 300)], format=&amp;#39;JPEG&amp;#39;, options={&amp;#39;quality&amp;#39;: 60})  Image 파일을 저장할 경로 설정 settings.</description>
+  단순히 ImageField를 사용하기 위해서는 pillow패키지를 설치해야 한다.  $ pip install pillow Resizing 하기 위해서는 pilkit, django-imagekit 패키지를 설치  $ pip install pilkit django-imagekit ImageField를 사용할 app의 models.py를 수정  class &amp;lt;사용할 모델&amp;gt;: image = models.ImageField() # 저장하지 않고 잘라서 표현할 때(ex. thumbnail) image_thumbnail = ImageSpecField(source=&amp;#39;image&amp;#39;,processors=[Thumbnail(300, 300)],format=&amp;#39;JPEG&amp;#39;,options={&amp;#39;quality&amp;#39;: 60})  Image 파일을 저장할 경로 설정 settings.</description>
     </item>
     
     <item>
       <title>2020.04.28</title>
-      <link>https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.28.html</link>
+      <link>https://gudongyeop.github.io/til/4%EC%9B%94/20.04.28.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.28.html</guid>
+      <guid>https://gudongyeop.github.io/til/4%EC%9B%94/20.04.28.html</guid>
       <description>오늘 배운 것 M:N 모델  Django에서 좋아요 기능이나 팔로우 기능처럼 M:N 관계 만들기
 ManyToManyField 이용
-  좋아요 기능을 위한 model 추가(게시글 모델)  # 좋아요 기능을 위한 article_like_users 테이블 생성 class 좋아요 기능을 추가할 클래스 명: like_users = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name=&amp;#39;like_articles&amp;#39;) # 팔로우 기능을 위한   팔로우 기능을 위한 model 추가(User 모델을 Customizing)  class User(AbstractUser): followers = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name=&amp;#39;followings&amp;#39;)  게시글 app의 views.py에서 좋아요 기능 설정  def like(request, pk): article = get_object_or_404(Article, pk=pk) # 좋아요를 누르면, &amp;gt;&amp;gt; DB에 존재할 경우 if article.</description>
+  좋아요 기능을 위한 model 추가(게시글 모델)  # 좋아요 기능을 위한 article_like_users 테이블 생성 class 좋아요 기능을 추가할 클래스 명: like_users = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name=&amp;#39;like_articles&amp;#39;)# 팔로우 기능을 위한   팔로우 기능을 위한 model 추가(User 모델을 Customizing)  class User(AbstractUser):followers = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name=&amp;#39;followings&amp;#39;) 게시글 app의 views.py에서 좋아요 기능 설정  def like(request, pk):article = get_object_or_404(Article, pk=pk)# 좋아요를 누르면, &amp;gt;&amp;gt; DB에 존재할 경우 if article.</description>
     </item>
     
     <item>
       <title>2020.04.29</title>
-      <link>https://dongyeopgu.github.io/algorithm/d4~6/20.04.29.html</link>
+      <link>https://gudongyeop.github.io/algorithm/d4~6/20.04.29.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/algorithm/d4~6/20.04.29.html</guid>
+      <guid>https://gudongyeop.github.io/algorithm/d4~6/20.04.29.html</guid>
       <description>오늘 한 것  SWEA. 5185 [파이썬 S/W 문제해결 구현] 1일차 - 이진수
- 알고리즘 풀이 for t in range(int(input())): n, num = map(str, input().split()) print(f&amp;#39;#{t+1}&amp;#39;,end=&amp;#34; &amp;#34;) for a in num: b = &amp;#39;0x&amp;#39;+ a.lower() hex_num = int(a, 16) # 16진수를 10진수로 print(&amp;#34;{0:b}&amp;#34;.format(hex_num).zfill(4), end=&amp;#34;&amp;#34;) # 10진수를 2진수로 바꾸면서 (4자리씩) print() </description>
+ 알고리즘 풀이 for t in range(int(input())):n, num = map(str, input().split())print(f&amp;#39;#{t+1}&amp;#39;,end=&amp;#34; &amp;#34;)for a in num:b = &amp;#39;0x&amp;#39;+ a.lower()hex_num = int(a, 16) # 16진수를 10진수로 print(&amp;#34;{0:b}&amp;#34;.format(hex_num).zfill(4), end=&amp;#34;&amp;#34;) # 10진수를 2진수로 바꾸면서 (4자리씩) print()</description>
     </item>
     
     <item>
       <title>2020.04.29</title>
-      <link>https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.29.html</link>
+      <link>https://gudongyeop.github.io/til/4%EC%9B%94/20.04.29.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.29.html</guid>
+      <guid>https://gudongyeop.github.io/til/4%EC%9B%94/20.04.29.html</guid>
       <description>오늘 한 것  SWEA. 5185 [파이썬 S/W 문제해결 구현] 1일차 - 이진수
- 알고리즘 풀이 for t in range(int(input())): n, num = map(str, input().split()) print(f&amp;#39;#{t+1}&amp;#39;,end=&amp;#34; &amp;#34;) for a in num: b = &amp;#39;0x&amp;#39;+ a.lower() hex_num = int(a, 16) # 16진수를 10진수로 print(&amp;#34;{0:b}&amp;#34;.format(hex_num).zfill(4), end=&amp;#34;&amp;#34;) # 10진수를 2진수로 바꾸면서 (4자리씩) print() </description>
+ 알고리즘 풀이 for t in range(int(input())):n, num = map(str, input().split())print(f&amp;#39;#{t+1}&amp;#39;,end=&amp;#34; &amp;#34;)for a in num:b = &amp;#39;0x&amp;#39;+ a.lower()hex_num = int(a, 16) # 16진수를 10진수로 print(&amp;#34;{0:b}&amp;#34;.format(hex_num).zfill(4), end=&amp;#34;&amp;#34;) # 10진수를 2진수로 바꾸면서 (4자리씩) print()</description>
     </item>
     
     <item>
       <title>2020.04.30</title>
-      <link>https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.30.html</link>
+      <link>https://gudongyeop.github.io/til/4%EC%9B%94/20.04.30.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.30.html</guid>
+      <guid>https://gudongyeop.github.io/til/4%EC%9B%94/20.04.30.html</guid>
       <description>오늘 한 것  혼자 해보는 PJT에서 paginator 추가 및 댓글 작성 시 발생한 오류 수정
-  views.py 에서  @require_POST @login_required def reply_create(request, qanda_pk): qanda = get_object_or_404(QandA, pk=qanda_pk) form = ReplyForm(request.POST) if form.is_valid(): reply=form.save(commit=False) reply.user = request.user reply.QandA = qanda reply.save() return redirect(&amp;#39;reservation:QandA_detail&amp;#39;,qanda.pk)  reply.QandA = qanda에서 QandA 모델을 qanda로 불러와서 NOT NULL 오류 발생했었음.
-  paginator 추가 코드  def QandA_list(request): QandAs = QandA.objects.order_by(&amp;#39;-pk&amp;#39;) paginator = Paginator(QandAs, 4) #한 페이지 당 몇개 씩 보여줄 지 지정 page_number = request.</description>
+  views.py 에서  @require_POST@login_requireddef reply_create(request, qanda_pk):qanda = get_object_or_404(QandA, pk=qanda_pk)form = ReplyForm(request.POST)if form.is_valid():reply=form.save(commit=False)reply.user = request.userreply.QandA = qandareply.save()return redirect(&amp;#39;reservation:QandA_detail&amp;#39;,qanda.pk) reply.QandA = qanda에서 QandA 모델을 qanda로 불러와서 NOT NULL 오류 발생했었음.
+  paginator 추가 코드  def QandA_list(request):QandAs = QandA.objects.order_by(&amp;#39;-pk&amp;#39;) paginator = Paginator(QandAs, 4) #한 페이지 당 몇개 씩 보여줄 지 지정 page_number = request.</description>
     </item>
     
     <item>
       <title>2020.05.01</title>
-      <link>https://dongyeopgu.github.io/algorithm/d4~6/20.05.01.html</link>
+      <link>https://gudongyeop.github.io/algorithm/d4~6/20.05.01.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/algorithm/d4~6/20.05.01.html</guid>
+      <guid>https://gudongyeop.github.io/algorithm/d4~6/20.05.01.html</guid>
       <description>오늘 한 것  SWEA 알고리즘 문제풀이
-  [파이썬 S/W 문제해결 구현] 1일차 - 이진수2  for t in range(int(input())): n = float(input()) result = &amp;#39;&amp;#39; cnt = 0 while True: a = n * 2 result += str(int(a)) n = a - int(a) cnt += 1 if n == 0.0: break if cnt &amp;gt; 13: break if cnt &amp;gt; 13: print(f&amp;#34;#{t+1} overflow&amp;#34;) else: print(f&amp;#34;#{t+1} {result}&amp;#34;) </description>
+  [파이썬 S/W 문제해결 구현] 1일차 - 이진수2  for t in range(int(input())):n = float(input())result = &amp;#39;&amp;#39;cnt = 0while True:a = n * 2result += str(int(a))n = a - int(a)cnt += 1if n == 0.0:breakif cnt &amp;gt; 13:breakif cnt &amp;gt; 13:print(f&amp;#34;#{t+1} overflow&amp;#34;)else:print(f&amp;#34;#{t+1} {result}&amp;#34;)</description>
     </item>
     
     <item>
       <title>2020.05.01</title>
-      <link>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.01.html</link>
+      <link>https://gudongyeop.github.io/til/5%EC%9B%94/20.05.01.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.01.html</guid>
+      <guid>https://gudongyeop.github.io/til/5%EC%9B%94/20.05.01.html</guid>
       <description>오늘 한 것  SWEA 알고리즘 문제풀이
-  [파이썬 S/W 문제해결 구현] 1일차 - 이진수2  for t in range(int(input())): n = float(input()) result = &amp;#39;&amp;#39; cnt = 0 while True: a = n * 2 result += str(int(a)) n = a - int(a) cnt += 1 if n == 0.0: break if cnt &amp;gt; 13: break if cnt &amp;gt; 13: print(f&amp;#34;#{t+1} overflow&amp;#34;) else: print(f&amp;#34;#{t+1} {result}&amp;#34;) </description>
+  [파이썬 S/W 문제해결 구현] 1일차 - 이진수2  for t in range(int(input())):n = float(input())result = &amp;#39;&amp;#39;cnt = 0while True:a = n * 2result += str(int(a))n = a - int(a)cnt += 1if n == 0.0:breakif cnt &amp;gt; 13:breakif cnt &amp;gt; 13:print(f&amp;#34;#{t+1} overflow&amp;#34;)else:print(f&amp;#34;#{t+1} {result}&amp;#34;)</description>
     </item>
     
     <item>
       <title>2020.05.02</title>
-      <link>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.02.html</link>
+      <link>https://gudongyeop.github.io/til/5%EC%9B%94/20.05.02.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.02.html</guid>
+      <guid>https://gudongyeop.github.io/til/5%EC%9B%94/20.05.02.html</guid>
       <description>오늘 한 것  프로젝트를 PythonAnywhere를 통해 올릴 것인지 고민.
 C/C++ 혼자 공부하기(일단 알고리즘을 푸는 위주로 할 생각)
   Django로 만든 것을 PythonAnywhere에 올리기 위해 &amp;ldquo;파이썬 웹 프로그래밍&amp;rdquo; 책을 봄  </description>
@@ -506,101 +516,101 @@ C/C++ 혼자 공부하기(일단 알고리즘을 푸는 위주로 할 생각)
     
     <item>
       <title>2020.05.03</title>
-      <link>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.03.html</link>
+      <link>https://gudongyeop.github.io/til/5%EC%9B%94/20.05.03.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.03.html</guid>
+      <guid>https://gudongyeop.github.io/til/5%EC%9B%94/20.05.03.html</guid>
       <description>오늘 한 것  sqlite3 DB파일을 csv로 변환하기
-  혼자 하는 PJT의 User를 포함한 db가 있는 폴더에서 sqlite3 실행  $ sqlite3 db.sqlite3 sqlite&amp;gt; .table # 테이블 확인하면 accounts_user가 있음 accounts_user django_admin_log accounts_user_groups django_content_type  여기 있는 accounts_user에서 필요한 정보만 csv로 만들기 위해 아래 명령어 입력  sqlite&amp;gt; .headers on sqlite&amp;gt; .mode csv sqlite&amp;gt; .output dataout.csv sqlite&amp;gt; select * from accounts_user;  원하는 정보를 csv파일로 만들 수 있음.   하지만 엑셀에서 바로 csv파일을 열면 인코딩이 UTF-8이기때문에 한글이 깨지는 문제가 발생한다.</description>
+  혼자 하는 PJT의 User를 포함한 db가 있는 폴더에서 sqlite3 실행  $ sqlite3 db.sqlite3sqlite&amp;gt; .table # 테이블 확인하면 accounts_user가 있음accounts_user django_admin_logaccounts_user_groups django_content_type 여기 있는 accounts_user에서 필요한 정보만 csv로 만들기 위해 아래 명령어 입력  sqlite&amp;gt; .headers onsqlite&amp;gt; .mode csvsqlite&amp;gt; .output dataout.csvsqlite&amp;gt; select * from accounts_user; 원하는 정보를 csv파일로 만들 수 있음.   하지만 엑셀에서 바로 csv파일을 열면 인코딩이 UTF-8이기때문에 한글이 깨지는 문제가 발생한다.</description>
     </item>
     
     <item>
       <title>2020.05.04</title>
-      <link>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.04.html</link>
+      <link>https://gudongyeop.github.io/til/5%EC%9B%94/20.05.04.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.04.html</guid>
+      <guid>https://gudongyeop.github.io/til/5%EC%9B%94/20.05.04.html</guid>
       <description>오늘 한 것  ERD 이용하여 DB모델 구조 설정 erdcloud.com 이용 위 내용을 바탕으로 Django에서 model 만들기 Django query 개선  </description>
     </item>
     
     <item>
       <title>2020.05.05</title>
-      <link>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.05.html</link>
+      <link>https://gudongyeop.github.io/til/5%EC%9B%94/20.05.05.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.05.html</guid>
+      <guid>https://gudongyeop.github.io/til/5%EC%9B%94/20.05.05.html</guid>
       <description>오늘 한 것  PJT 메인 화면 꾸미기 Heroku 사용법 익히기  </description>
     </item>
     
     <item>
       <title>2020.05.06</title>
-      <link>https://dongyeopgu.github.io/algorithm/d4~6/20.05.06.html</link>
+      <link>https://gudongyeop.github.io/algorithm/d4~6/20.05.06.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/algorithm/d4~6/20.05.06.html</guid>
-      <description>오늘 한 것  SWEA 문제 풀이  # 최소합 dx, dy = [0,1], [1,0] def dfs(x,y): global min_num, result visit[x][y] = 1 if result &amp;lt; min_num: return if x == n-1 and y == n-1: result = min_num return for i in range(2): nx = x + dx[i] ny = y + dy[i] if 0 &amp;lt;= nx &amp;lt; n and 0 &amp;lt;= ny &amp;lt; n and visit[nx][ny] == 0: min_num += a[nx][ny] dfs(nx,ny) visit[nx][ny] = 0 min_num -= a[nx][ny] for t in range(int(input())): n = int(input()) a = [list(map(int, input().</description>
+      <guid>https://gudongyeop.github.io/algorithm/d4~6/20.05.06.html</guid>
+      <description>오늘 한 것  SWEA 문제 풀이  # 최소합 dx, dy = [0,1], [1,0]def dfs(x,y):global min_num, resultvisit[x][y] = 1if result &amp;lt; min_num:returnif x == n-1 and y == n-1:result = min_numreturnfor i in range(2):nx = x + dx[i]ny = y + dy[i]if 0 &amp;lt;= nx &amp;lt; n and 0 &amp;lt;= ny &amp;lt; n and visit[nx][ny] == 0:min_num += a[nx][ny]dfs(nx,ny)visit[nx][ny] = 0min_num -= a[nx][ny]for t in range(int(input())):n = int(input())a = [list(map(int, input().</description>
     </item>
     
     <item>
       <title>2020.05.06</title>
-      <link>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.06.html</link>
+      <link>https://gudongyeop.github.io/til/5%EC%9B%94/20.05.06.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.06.html</guid>
-      <description>오늘 한 것  SWEA 문제 풀이  # 최소합 dx, dy = [0,1], [1,0] def dfs(x,y): global min_num, result visit[x][y] = 1 if result &amp;lt; min_num: return if x == n-1 and y == n-1: result = min_num return for i in range(2): nx = x + dx[i] ny = y + dy[i] if 0 &amp;lt;= nx &amp;lt; n and 0 &amp;lt;= ny &amp;lt; n and visit[nx][ny] == 0: min_num += a[nx][ny] dfs(nx,ny) visit[nx][ny] = 0 min_num -= a[nx][ny] for t in range(int(input())): n = int(input()) a = [list(map(int, input().</description>
+      <guid>https://gudongyeop.github.io/til/5%EC%9B%94/20.05.06.html</guid>
+      <description>오늘 한 것  SWEA 문제 풀이  # 최소합 dx, dy = [0,1], [1,0]def dfs(x,y):global min_num, resultvisit[x][y] = 1if result &amp;lt; min_num:returnif x == n-1 and y == n-1:result = min_numreturnfor i in range(2):nx = x + dx[i]ny = y + dy[i]if 0 &amp;lt;= nx &amp;lt; n and 0 &amp;lt;= ny &amp;lt; n and visit[nx][ny] == 0:min_num += a[nx][ny]dfs(nx,ny)visit[nx][ny] = 0min_num -= a[nx][ny]for t in range(int(input())):n = int(input())a = [list(map(int, input().</description>
     </item>
     
     <item>
       <title>2020.05.07</title>
-      <link>https://dongyeopgu.github.io/algorithm/d4~6/20.05.07.html</link>
+      <link>https://gudongyeop.github.io/algorithm/d4~6/20.05.07.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/algorithm/d4~6/20.05.07.html</guid>
-      <description>오늘 한 것  SWEA 문제 풀이  # 컨테이너 운반 for t in range(int(input())): n,m = map(int, input().split()) weight = list(map(int, input().split())) truck = list(map(int, input().split())) result = 0 for i in range(m): a = 0 for j in weight: if truck[i] &amp;gt;= j &amp;gt;= a: a = j if a != 0: weight.remove(a) result += a print(f&amp;#34;#{t+1} {result}&amp;#34;) # 화물 도크 for t in range(int(input())): n = int(input()) a = [list(map(int, input().</description>
+      <guid>https://gudongyeop.github.io/algorithm/d4~6/20.05.07.html</guid>
+      <description>오늘 한 것  SWEA 문제 풀이  # 컨테이너 운반 for t in range(int(input())):n,m = map(int, input().split())weight = list(map(int, input().split()))truck = list(map(int, input().split()))result = 0for i in range(m):a = 0for j in weight:if truck[i] &amp;gt;= j &amp;gt;= a:a = jif a != 0:weight.remove(a)result += aprint(f&amp;#34;#{t+1} {result}&amp;#34;)# 화물 도크 for t in range(int(input())):n = int(input())a = [list(map(int, input().</description>
     </item>
     
     <item>
       <title>2020.05.07</title>
-      <link>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.07.html</link>
+      <link>https://gudongyeop.github.io/til/5%EC%9B%94/20.05.07.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.07.html</guid>
-      <description>오늘 한 것  SWEA 문제 풀이  # 컨테이너 운반 for t in range(int(input())): n,m = map(int, input().split()) weight = list(map(int, input().split())) truck = list(map(int, input().split())) result = 0 for i in range(m): a = 0 for j in weight: if truck[i] &amp;gt;= j &amp;gt;= a: a = j if a != 0: weight.remove(a) result += a print(f&amp;#34;#{t+1} {result}&amp;#34;) # 화물 도크 for t in range(int(input())): n = int(input()) a = [list(map(int, input().</description>
+      <guid>https://gudongyeop.github.io/til/5%EC%9B%94/20.05.07.html</guid>
+      <description>오늘 한 것  SWEA 문제 풀이  # 컨테이너 운반 for t in range(int(input())):n,m = map(int, input().split())weight = list(map(int, input().split()))truck = list(map(int, input().split()))result = 0for i in range(m):a = 0for j in weight:if truck[i] &amp;gt;= j &amp;gt;= a:a = jif a != 0:weight.remove(a)result += aprint(f&amp;#34;#{t+1} {result}&amp;#34;)# 화물 도크 for t in range(int(input())):n = int(input())a = [list(map(int, input().</description>
     </item>
     
     <item>
       <title>2020.05.08</title>
-      <link>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.08.html</link>
+      <link>https://gudongyeop.github.io/til/5%EC%9B%94/20.05.08.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.08.html</guid>
+      <guid>https://gudongyeop.github.io/til/5%EC%9B%94/20.05.08.html</guid>
       <description>오늘 한 것  오늘은 휴식 ~  </description>
     </item>
     
     <item>
       <title>2020.05.09</title>
-      <link>https://dongyeopgu.github.io/algorithm/d4~6/20.05.09.html</link>
+      <link>https://gudongyeop.github.io/algorithm/d4~6/20.05.09.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/algorithm/d4~6/20.05.09.html</guid>
-      <description>오늘 한 것  SWEA 문제 풀이  C 사용    #include &amp;lt;stdio.h&amp;gt; int test_case; long long sol(int x, int y) { if (y == 0) return 1; return x * sol(x, y - 1); } int main(void) { for (int i = 0; i &amp;lt; 10; i++) { scanf(&amp;#34;%d&amp;#34;, &amp;amp;test_case); int x = 0; int y = 0; scanf(&amp;#34;%d %d&amp;#34;, &amp;amp;x, &amp;amp;y); long long result = 0; result = sol(x, y); printf(&amp;#34;#%d %11d\n&amp;#34;, i + 1, result); } return 0; } </description>
+      <guid>https://gudongyeop.github.io/algorithm/d4~6/20.05.09.html</guid>
+      <description>오늘 한 것  SWEA 문제 풀이  C 사용    #include &amp;lt;stdio.h&amp;gt;int test_case;long long sol(int x, int y) {if (y == 0) return 1;return x * sol(x, y - 1);}int main(void) {for (int i = 0; i &amp;lt; 10; i++) {scanf(&amp;#34;%d&amp;#34;, &amp;amp;test_case);int x = 0;int y = 0;scanf(&amp;#34;%d %d&amp;#34;, &amp;amp;x, &amp;amp;y);long long result = 0;result = sol(x, y);printf(&amp;#34;#%d %11d\n&amp;#34;, i + 1, result);}return 0;}</description>
     </item>
     
     <item>
       <title>2020.05.09</title>
-      <link>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.09.html</link>
+      <link>https://gudongyeop.github.io/til/5%EC%9B%94/20.05.09.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.09.html</guid>
-      <description>오늘 한 것  SWEA 문제 풀이  C 사용    #include &amp;lt;stdio.h&amp;gt; int test_case; long long sol(int x, int y) { if (y == 0) return 1; return x * sol(x, y - 1); } int main(void) { for (int i = 0; i &amp;lt; 10; i++) { scanf(&amp;#34;%d&amp;#34;, &amp;amp;test_case); int x = 0; int y = 0; scanf(&amp;#34;%d %d&amp;#34;, &amp;amp;x, &amp;amp;y); long long result = 0; result = sol(x, y); printf(&amp;#34;#%d %11d\n&amp;#34;, i + 1, result); } return 0; } </description>
+      <guid>https://gudongyeop.github.io/til/5%EC%9B%94/20.05.09.html</guid>
+      <description>오늘 한 것  SWEA 문제 풀이  C 사용    #include &amp;lt;stdio.h&amp;gt;int test_case;long long sol(int x, int y) {if (y == 0) return 1;return x * sol(x, y - 1);}int main(void) {for (int i = 0; i &amp;lt; 10; i++) {scanf(&amp;#34;%d&amp;#34;, &amp;amp;test_case);int x = 0;int y = 0;scanf(&amp;#34;%d %d&amp;#34;, &amp;amp;x, &amp;amp;y);long long result = 0;result = sol(x, y);printf(&amp;#34;#%d %11d\n&amp;#34;, i + 1, result);}return 0;}</description>
     </item>
     
     <item>
       <title>2020.05.10</title>
-      <link>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.10.html</link>
+      <link>https://gudongyeop.github.io/til/5%EC%9B%94/20.05.10.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.10.html</guid>
+      <guid>https://gudongyeop.github.io/til/5%EC%9B%94/20.05.10.html</guid>
       <description>오늘 한 것 vector   vector&amp;lt;int&amp;gt; v; vector v 생성
   vector&amp;lt;int&amp;gt; v(10); 0으로 초기화된 원소 10개 가진 vector 생성
   vector&amp;lt;int&amp;gt; v(10,1); 1로 초기화된 원소 10개 가진 vector 생성
@@ -614,23 +624,23 @@ C/C++ 혼자 공부하기(일단 알고리즘을 푸는 위주로 할 생각)
     
     <item>
       <title>2020.05.11</title>
-      <link>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.11.html</link>
+      <link>https://gudongyeop.github.io/til/5%EC%9B%94/20.05.11.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.11.html</guid>
+      <guid>https://gudongyeop.github.io/til/5%EC%9B%94/20.05.11.html</guid>
       <description>오늘 배운 것 1. REST API(DRF: Django Rest Framework)   REST API를 활용하면 백 엔드와 프론트 엔드 분리가 쉽고 코드의 재활용성이 좋다.
   REST API를 사용하기 위해서 먼저 설치가 필요
-$ pip install djangorestframework   settings.py에서 INSTALLED_APPS에 &#39;rest_framework&#39;추가
+$ pip install djangorestframework  settings.py에서 INSTALLED_APPS에 &#39;rest_framework&#39;추가
   app 폴더에 serializers.py 파일을 만들고 내용 추가
-# serializers.py from rest_framework import serializers from .models import * #필요한 모델이름 넣어주기 class &amp;lt;모델명&amp;gt;Serializer(serializers.ModelSerializer): class Meta: model = &amp;lt;모델명&amp;gt; fields = [&amp;#39;필요한 필드&amp;#39;]   views.</description>
+# serializers.py from rest_framework import serializersfrom .models import * #필요한 모델이름 넣어주기 class &amp;lt;모델명&amp;gt;Serializer(serializers.ModelSerializer):class Meta:model = &amp;lt;모델명&amp;gt;fields = [&amp;#39;필요한 필드&amp;#39;]  views.</description>
     </item>
     
     <item>
       <title>2020.05.12</title>
-      <link>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.12.html</link>
+      <link>https://gudongyeop.github.io/til/5%EC%9B%94/20.05.12.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.12.html</guid>
+      <guid>https://gudongyeop.github.io/til/5%EC%9B%94/20.05.12.html</guid>
       <description>오늘 배운 것 Javascript   Type
  Primitive Type(원시 타입) : 변수에 저장할 때 실제 메모리에 저장된 값을 담는다.
   Number String  ES6+ 부터 String-Template Literal 지원, Backtik(`)을 이용하여 여러 줄에 걸쳐 문자를 정의 가능, JS의 변수를 문자열 안에 바로 넣을 수 있음(Python에서 f&amp;rdquo; &amp;ldquo;와 비슷)   Boolean Empty value (null, undefined)    Operators
@@ -639,207 +649,207 @@ $ pip install djangorestframework   settings.py에서 INSTALLED_APPS에 &#39;res
     
     <item>
       <title>2020.05.13</title>
-      <link>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.13.html</link>
+      <link>https://gudongyeop.github.io/til/5%EC%9B%94/20.05.13.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.13.html</guid>
+      <guid>https://gudongyeop.github.io/til/5%EC%9B%94/20.05.13.html</guid>
       <description>오늘 배운 것 Django   API를 이용해 DB에 저장
  네이버 영화 검색 API를 이용해 영화 목록을 검색한 후, 클릭한 영화를 DB에 저장
 get_or_create를 사용
    views.py
-def movie_list(request): # 영화 목록 naver_client_id = &amp;#34;발급받은 id&amp;#34; naver_client_secret = &amp;#34;발급받은 secret&amp;#34; if request.method == &amp;#39;GET&amp;#39;: client_id = naver_client_id client_secret = naver_client_secret q = request.GET.get(&amp;#39;q&amp;#39;) Text = urllib.parse.quote(f&amp;#34;{q}&amp;#34;) url = &amp;#34;https://openapi.naver.com/v1/search/movie?query=&amp;#34; + Text # json 결과 movie_api_request = urllib.request.Request(url) movie_api_request.</description>
+def movie_list(request): # 영화 목록 naver_client_id = &amp;#34;발급받은 id&amp;#34;naver_client_secret = &amp;#34;발급받은 secret&amp;#34;if request.method == &amp;#39;GET&amp;#39;:client_id = naver_client_idclient_secret = naver_client_secretq = request.GET.get(&amp;#39;q&amp;#39;)Text = urllib.parse.quote(f&amp;#34;{q}&amp;#34;)url = &amp;#34;https://openapi.naver.com/v1/search/movie?query=&amp;#34; + Text # json 결과 movie_api_request = urllib.</description>
     </item>
     
     <item>
       <title>2020.05.14</title>
-      <link>https://dongyeopgu.github.io/algorithm/d4~6/20.05.14.html</link>
+      <link>https://gudongyeop.github.io/algorithm/d4~6/20.05.14.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/algorithm/d4~6/20.05.14.html</guid>
+      <guid>https://gudongyeop.github.io/algorithm/d4~6/20.05.14.html</guid>
       <description>오늘 한 것 SWEA 문제풀이   병합정렬
-def m_sort(a): if len(a) &amp;lt;= 1: return a center = len(a) // 2 right = m_sort(a[center:]) left = m_sort(a[:center]) return merge(left, right) def merge(left,right): global cnt n_right = len(right) n_left = len(left) i = 0 i_right = 0 i_left = 0 result = [0] * (n_right+n_left) if left[-1] &amp;gt; right[-1]: cnt += 1 while i_right != n_right and i_left != n_left: if right[i_right] &amp;gt;= left[i_left]: result[i] += left[i_left] i += 1 i_left += 1 else: result[i] += right[i_right] i += 1 i_right += 1 if i_left !</description>
+def m_sort(a):if len(a) &amp;lt;= 1:return acenter = len(a) // 2right = m_sort(a[center:])left = m_sort(a[:center])return merge(left, right)def merge(left,right):global cntn_right = len(right)n_left = len(left)i = 0i_right = 0i_left = 0result = [0] * (n_right+n_left)if left[-1] &amp;gt; right[-1]:cnt += 1while i_right != n_right and i_left != n_left:if right[i_right] &amp;gt;= left[i_left]:result[i] += left[i_left]i += 1i_left += 1else:result[i] += right[i_right]i += 1i_right += 1if i_left !</description>
     </item>
     
     <item>
       <title>2020.05.14</title>
-      <link>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.14.html</link>
+      <link>https://gudongyeop.github.io/til/5%EC%9B%94/20.05.14.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.14.html</guid>
+      <guid>https://gudongyeop.github.io/til/5%EC%9B%94/20.05.14.html</guid>
       <description>오늘 한 것 SWEA 문제풀이   병합정렬
-def m_sort(a): if len(a) &amp;lt;= 1: return a center = len(a) // 2 right = m_sort(a[center:]) left = m_sort(a[:center]) return merge(left, right) def merge(left,right): global cnt n_right = len(right) n_left = len(left) i = 0 i_right = 0 i_left = 0 result = [0] * (n_right+n_left) if left[-1] &amp;gt; right[-1]: cnt += 1 while i_right != n_right and i_left != n_left: if right[i_right] &amp;gt;= left[i_left]: result[i] += left[i_left] i += 1 i_left += 1 else: result[i] += right[i_right] i += 1 i_right += 1 if i_left !</description>
+def m_sort(a):if len(a) &amp;lt;= 1:return acenter = len(a) // 2right = m_sort(a[center:])left = m_sort(a[:center])return merge(left, right)def merge(left,right):global cntn_right = len(right)n_left = len(left)i = 0i_right = 0i_left = 0result = [0] * (n_right+n_left)if left[-1] &amp;gt; right[-1]:cnt += 1while i_right != n_right and i_left != n_left:if right[i_right] &amp;gt;= left[i_left]:result[i] += left[i_left]i += 1i_left += 1else:result[i] += right[i_right]i += 1i_right += 1if i_left !</description>
     </item>
     
     <item>
       <title>2020.05.15</title>
-      <link>https://dongyeopgu.github.io/algorithm/d4~6/20.05.15.html</link>
+      <link>https://gudongyeop.github.io/algorithm/d4~6/20.05.15.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/algorithm/d4~6/20.05.15.html</guid>
+      <guid>https://gudongyeop.github.io/algorithm/d4~6/20.05.15.html</guid>
       <description>오늘 한 것 SWEA 문제풀이   전기버스2
-def sol(a): global cnt, result if a &amp;gt;= n: if result &amp;gt; cnt: result = cnt return if result &amp;lt; cnt: return b = a c = arr[b] for i in range(b+c, b, -1): cnt += 1 sol(i) cnt -= 1 for t in range(int(input())): arr = list(map(int, input().split())) n = arr[0] result = 987654321 cnt = 0 sol(1) print(f&amp;#34;#{t+1} {result-1}&amp;#34;)   최소생산비용</description>
+def sol(a):global cnt, resultif a &amp;gt;= n:if result &amp;gt; cnt:result = cntreturnif result &amp;lt; cnt:returnb = ac = arr[b]for i in range(b+c, b, -1):cnt += 1sol(i)cnt -= 1for t in range(int(input())):arr = list(map(int, input().split()))n = arr[0]result = 987654321cnt = 0sol(1)print(f&amp;#34;#{t+1} {result-1}&amp;#34;)  최소생산비용</description>
     </item>
     
     <item>
       <title>2020.05.15</title>
-      <link>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.15.html</link>
+      <link>https://gudongyeop.github.io/til/5%EC%9B%94/20.05.15.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.15.html</guid>
+      <guid>https://gudongyeop.github.io/til/5%EC%9B%94/20.05.15.html</guid>
       <description>오늘 한 것 SWEA 문제풀이   전기버스2
-def sol(a): global cnt, result if a &amp;gt;= n: if result &amp;gt; cnt: result = cnt return if result &amp;lt; cnt: return b = a c = arr[b] for i in range(b+c, b, -1): cnt += 1 sol(i) cnt -= 1 for t in range(int(input())): arr = list(map(int, input().split())) n = arr[0] result = 987654321 cnt = 0 sol(1) print(f&amp;#34;#{t+1} {result-1}&amp;#34;)   최소생산비용</description>
+def sol(a):global cnt, resultif a &amp;gt;= n:if result &amp;gt; cnt:result = cntreturnif result &amp;lt; cnt:returnb = ac = arr[b]for i in range(b+c, b, -1):cnt += 1sol(i)cnt -= 1for t in range(int(input())):arr = list(map(int, input().split()))n = arr[0]result = 987654321cnt = 0sol(1)print(f&amp;#34;#{t+1} {result-1}&amp;#34;)  최소생산비용</description>
     </item>
     
     <item>
       <title>2020.05.17</title>
-      <link>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.17.html</link>
+      <link>https://gudongyeop.github.io/til/5%EC%9B%94/20.05.17.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.17.html</guid>
+      <guid>https://gudongyeop.github.io/til/5%EC%9B%94/20.05.17.html</guid>
       <description>오늘 한 것 Project 구상  Q&amp;amp;A 페이지 세부 사항 조정  작성자 본인만 글 확인, 수정, 삭제를 할 수 있도록 수정 댓글 작성 가능하도록   Home 화면 구상  예쁘게 꾸미기 불가능&amp;hellip;. 디자인 도움을 받아야 함    </description>
     </item>
     
     <item>
       <title>2020.05.18</title>
-      <link>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.18.html</link>
+      <link>https://gudongyeop.github.io/til/5%EC%9B%94/20.05.18.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.18.html</guid>
+      <guid>https://gudongyeop.github.io/til/5%EC%9B%94/20.05.18.html</guid>
       <description>오늘 배운 것 Javascript   eventlistener
 예)
-&amp;lt;script&amp;gt; const myButton = document.querySelector(&amp;#39;#myButton&amp;#39;) // 요소.addEventListener(&amp;#39;이벤트&amp;#39;, 이벤트 발생시 실행할 함수)  myButton.addEventListener(&amp;#39;click&amp;#39;, confirmMessage) myButton.addEventListener(&amp;#39;click&amp;#39;, function(event) { console.log(event) }) ) &amp;lt;/script&amp;gt;   이벤트 요소 예
+&amp;lt;script&amp;gt;const myButton = document.querySelector(&amp;#39;#myButton&amp;#39;)// 요소.addEventListener(&amp;#39;이벤트&amp;#39;, 이벤트 발생시 실행할 함수) myButton.addEventListener(&amp;#39;click&amp;#39;, confirmMessage)myButton.addEventListener(&amp;#39;click&amp;#39;, function(event) {console.log(event)}))&amp;lt;/script&amp;gt;  이벤트 요소 예
  click: 마우스 클릭 mouseover: 마우스 포인터가 요소 위에 mouseout: 마우스 포인터가 요소 밖으로 keypress: 누른 키의 문자가 입력됐을 때 keydown: 키를 처음 눌렀을 때 keyup: 키를 뗄 때 load: 페이지 로드가 완료 되었을 때 scroll: 페이지를 위아래로 스크롤 할 때 change: 선택 상자, 체크박스, 라디오 버튼의 상태가 변경되었을 때    </description>
     </item>
     
     <item>
       <title>2020.05.19</title>
-      <link>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.19.html</link>
+      <link>https://gudongyeop.github.io/til/5%EC%9B%94/20.05.19.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.19.html</guid>
+      <guid>https://gudongyeop.github.io/til/5%EC%9B%94/20.05.19.html</guid>
       <description>오늘 배운 것 AJAX   axios
 &amp;lt;script src=&amp;quot;https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt; 추가
-&amp;lt;script&amp;gt; axios.get(&amp;#39;주소&amp;#39;) .then(function(response){ // 성공했을 때  return response.data }) .then(response =&amp;gt; {	// arrow함수로 표현  console.log(response) }) .catch(function(error){ // 실패했을 때  return error }) &amp;lt;/script&amp;gt;   Django와 연결해서   Django Template에서 좋아요와 같은 기능에서 필요없는 반복을 줄일 수 있음
+&amp;lt;script&amp;gt;axios.get(&amp;#39;주소&amp;#39;).then(function(response){ // 성공했을 때 return response.data}).then(response =&amp;gt; {	// arrow함수로 표현 console.log(response)}).catch(function(error){ // 실패했을 때 return error})&amp;lt;/script&amp;gt;  Django와 연결해서   Django Template에서 좋아요와 같은 기능에서 필요없는 반복을 줄일 수 있음
   먼저 수정이 필요한 html에서 반복되는 부분을 js로 처리
-{% for article in articles %} &amp;lt;h4&amp;gt;제목: {{ article.</description>
+{% for article in articles %}&amp;lt;h4&amp;gt;제목: {{ article.</description>
     </item>
     
     <item>
       <title>2020.05.20</title>
-      <link>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.20.html</link>
+      <link>https://gudongyeop.github.io/til/5%EC%9B%94/20.05.20.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.20.html</guid>
+      <guid>https://gudongyeop.github.io/til/5%EC%9B%94/20.05.20.html</guid>
       <description>오늘 한 것 간단한 PJT 구현 과정   Project 기본 설정 및 Model 작성 Data 가져오기 Javascript를 이용한 목록 구성 목록 랜덤 추천   1. Project 기본 설정 및 Model 작성  App의 이름을 accounts와 movies로 설정 한 후, 기본 setting을 변경 하고, 제공된 명세에 따라 Model 작성 후 migrations와 migrate를 했음.
  2. JSON 파일의 Data 가져오기  JSON 파일을 DB에 저장하기 위해서 python manage.py loaddata moviedata.json 이용.</description>
     </item>
     
     <item>
       <title>2020.05.21</title>
-      <link>https://dongyeopgu.github.io/algorithm/d4~6/20.05.21.html</link>
+      <link>https://gudongyeop.github.io/algorithm/d4~6/20.05.21.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/algorithm/d4~6/20.05.21.html</guid>
+      <guid>https://gudongyeop.github.io/algorithm/d4~6/20.05.21.html</guid>
       <description>오늘 한 것 SWEA 문제풀이   연산
-from collections import deque def sol(start, end): check = {} check[start] = end while q: num, cnt = q.popleft() if num == end: return cnt if num &amp;gt; 1000000 or num &amp;lt;= 0: continue for i in range(4): a = 0 if i == 0: a = num + 1 if a not in check: q.append((a, cnt+1)) check[a] = 1 elif i == 1: a = num - 1 if a not in check: q.</description>
+from collections import dequedef sol(start, end):check = {}check[start] = endwhile q:num, cnt = q.popleft()if num == end:return cntif num &amp;gt; 1000000 or num &amp;lt;= 0:continuefor i in range(4):a = 0if i == 0: a = num + 1if a not in check:q.append((a, cnt+1))check[a] = 1elif i == 1:a = num - 1if a not in check:q.</description>
     </item>
     
     <item>
       <title>2020.05.21</title>
-      <link>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.21.html</link>
+      <link>https://gudongyeop.github.io/til/5%EC%9B%94/20.05.21.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.21.html</guid>
+      <guid>https://gudongyeop.github.io/til/5%EC%9B%94/20.05.21.html</guid>
       <description>오늘 한 것 SWEA 문제풀이   연산
-from collections import deque def sol(start, end): check = {} check[start] = end while q: num, cnt = q.popleft() if num == end: return cnt if num &amp;gt; 1000000 or num &amp;lt;= 0: continue for i in range(4): a = 0 if i == 0: a = num + 1 if a not in check: q.append((a, cnt+1)) check[a] = 1 elif i == 1: a = num - 1 if a not in check: q.</description>
+from collections import dequedef sol(start, end):check = {}check[start] = endwhile q:num, cnt = q.popleft()if num == end:return cntif num &amp;gt; 1000000 or num &amp;lt;= 0:continuefor i in range(4):a = 0if i == 0: a = num + 1if a not in check:q.append((a, cnt+1))check[a] = 1elif i == 1:a = num - 1if a not in check:q.</description>
     </item>
     
     <item>
       <title>2020.05.22</title>
-      <link>https://dongyeopgu.github.io/algorithm/d4~6/20.05.22.html</link>
+      <link>https://gudongyeop.github.io/algorithm/d4~6/20.05.22.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/algorithm/d4~6/20.05.22.html</guid>
+      <guid>https://gudongyeop.github.io/algorithm/d4~6/20.05.22.html</guid>
       <description>오늘 한 것 SWEA 문제풀이   최소 신장 트리
-def prim(a): key = [float(&amp;#39;inf&amp;#39;)for _ in range(v+1)] pi = [None for _ in range(v+1)] visit = [0 for _ in range(v+1)] key[0] = 0 for _ in range(v+1): min_key =float(&amp;#39;inf&amp;#39;) start = -1 for i in range(v+1): if key[i] &amp;lt; min_key and not visit[i]: min_key = key[i] start = i visit[start] = 1 for V, W in a[start]: if W &amp;lt; key[V] and not visit[V]: key[V] = W pi[V] = start return sum(key) for t in range(int(input())): v, e = map(int, input().</description>
+def prim(a):key = [float(&amp;#39;inf&amp;#39;)for _ in range(v+1)]pi = [None for _ in range(v+1)]visit = [0 for _ in range(v+1)]key[0] = 0for _ in range(v+1):min_key =float(&amp;#39;inf&amp;#39;)start = -1for i in range(v+1):if key[i] &amp;lt; min_key and not visit[i]:min_key = key[i]start = ivisit[start] = 1for V, W in a[start]:if W &amp;lt; key[V] and not visit[V]:key[V] = Wpi[V] = startreturn sum(key)for t in range(int(input())):v, e = map(int, input().</description>
     </item>
     
     <item>
       <title>2020.05.22</title>
-      <link>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.22.html</link>
+      <link>https://gudongyeop.github.io/til/5%EC%9B%94/20.05.22.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.22.html</guid>
+      <guid>https://gudongyeop.github.io/til/5%EC%9B%94/20.05.22.html</guid>
       <description>오늘 한 것 SWEA 문제풀이   최소 신장 트리
-def prim(a): key = [float(&amp;#39;inf&amp;#39;)for _ in range(v+1)] pi = [None for _ in range(v+1)] visit = [0 for _ in range(v+1)] key[0] = 0 for _ in range(v+1): min_key =float(&amp;#39;inf&amp;#39;) start = -1 for i in range(v+1): if key[i] &amp;lt; min_key and not visit[i]: min_key = key[i] start = i visit[start] = 1 for V, W in a[start]: if W &amp;lt; key[V] and not visit[V]: key[V] = W pi[V] = start return sum(key) for t in range(int(input())): v, e = map(int, input().</description>
+def prim(a):key = [float(&amp;#39;inf&amp;#39;)for _ in range(v+1)]pi = [None for _ in range(v+1)]visit = [0 for _ in range(v+1)]key[0] = 0for _ in range(v+1):min_key =float(&amp;#39;inf&amp;#39;)start = -1for i in range(v+1):if key[i] &amp;lt; min_key and not visit[i]:min_key = key[i]start = ivisit[start] = 1for V, W in a[start]:if W &amp;lt; key[V] and not visit[V]:key[V] = Wpi[V] = startreturn sum(key)for t in range(int(input())):v, e = map(int, input().</description>
     </item>
     
     <item>
       <title>2020.05.23</title>
-      <link>https://dongyeopgu.github.io/algorithm/d4~6/20.05.23.html</link>
+      <link>https://gudongyeop.github.io/algorithm/d4~6/20.05.23.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/algorithm/d4~6/20.05.23.html</guid>
+      <guid>https://gudongyeop.github.io/algorithm/d4~6/20.05.23.html</guid>
       <description>오늘 한 것 SWEA 문제풀이   7829 보물왕 태혁
-#include &amp;lt;stdio.h&amp;gt; int main(void) { int test_case; scanf(&amp;#34;%d&amp;#34;, &amp;amp;test_case); for (int t = 1; t &amp;lt;= test_case; t++){ int n, x; int max = -1, min = 100001; scanf(&amp;#34;%d&amp;#34;, &amp;amp;n); for (int i = 0; i &amp;lt; n; i++) { scanf(&amp;#34;%d&amp;#34;, &amp;amp;x); if (max &amp;lt; x) { max = x; } if (min &amp;gt; x) { min = x; } } printf(&amp;#34;#%d %d\n&amp;#34;, t, min * max); } return 0; }    </description>
+#include &amp;lt;stdio.h&amp;gt; int main(void) {int test_case;scanf(&amp;#34;%d&amp;#34;, &amp;amp;test_case);for (int t = 1; t &amp;lt;= test_case; t++){int n, x;int max = -1, min = 100001;scanf(&amp;#34;%d&amp;#34;, &amp;amp;n);for (int i = 0; i &amp;lt; n; i++) {scanf(&amp;#34;%d&amp;#34;, &amp;amp;x);if (max &amp;lt; x) {max = x;}if (min &amp;gt; x) {min = x;}}printf(&amp;#34;#%d %d\n&amp;#34;, t, min * max);}return 0;}   </description>
     </item>
     
     <item>
       <title>2020.05.23</title>
-      <link>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.23.html</link>
+      <link>https://gudongyeop.github.io/til/5%EC%9B%94/20.05.23.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.23.html</guid>
+      <guid>https://gudongyeop.github.io/til/5%EC%9B%94/20.05.23.html</guid>
       <description>오늘 한 것 SWEA 문제풀이   7829 보물왕 태혁
-#include &amp;lt;stdio.h&amp;gt; int main(void) { int test_case; scanf(&amp;#34;%d&amp;#34;, &amp;amp;test_case); for (int t = 1; t &amp;lt;= test_case; t++){ int n, x; int max = -1, min = 100001; scanf(&amp;#34;%d&amp;#34;, &amp;amp;n); for (int i = 0; i &amp;lt; n; i++) { scanf(&amp;#34;%d&amp;#34;, &amp;amp;x); if (max &amp;lt; x) { max = x; } if (min &amp;gt; x) { min = x; } } printf(&amp;#34;#%d %d\n&amp;#34;, t, min * max); } return 0; }    </description>
+#include &amp;lt;stdio.h&amp;gt; int main(void) {int test_case;scanf(&amp;#34;%d&amp;#34;, &amp;amp;test_case);for (int t = 1; t &amp;lt;= test_case; t++){int n, x;int max = -1, min = 100001;scanf(&amp;#34;%d&amp;#34;, &amp;amp;n);for (int i = 0; i &amp;lt; n; i++) {scanf(&amp;#34;%d&amp;#34;, &amp;amp;x);if (max &amp;lt; x) {max = x;}if (min &amp;gt; x) {min = x;}}printf(&amp;#34;#%d %d\n&amp;#34;, t, min * max);}return 0;}   </description>
     </item>
     
     <item>
       <title>2020.05.24</title>
-      <link>https://dongyeopgu.github.io/algorithm/d4~6/20.05.24.html</link>
+      <link>https://gudongyeop.github.io/algorithm/d4~6/20.05.24.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/algorithm/d4~6/20.05.24.html</guid>
+      <guid>https://gudongyeop.github.io/algorithm/d4~6/20.05.24.html</guid>
       <description>오늘 한 것 SWEA 문제풀이   괄호 짝짓기
-#include &amp;lt;stdio.h&amp;gt; char arr[100001]; int n; bool solution(char* a, int* length) { int l = *length; if (a[l] == &amp;#39;)&amp;#39;) { if (a[l - 1] == &amp;#39;(&amp;#39;) { a[l - 1] = NULL; a[l] = NULL; *length -= 2; return true; } else return false; } if (a[l] == &amp;#39;]&amp;#39;) { if (a[l - 1] == &amp;#39;[&amp;#39;) { a[l - 1] = NULL; a[l] = NULL; *length -= 2; return true; } else return false; } if (a[l] == &amp;#39;}&amp;#39;) { if (a[l - 1] == &amp;#39;{&amp;#39;) { a[l - 1] = NULL; a[l] = NULL; *length -= 2; return true; } else return false; } if (a[l] == &amp;#39;&amp;gt;&amp;#39;) { if (a[l - 1] == &amp;#39;&amp;lt;&amp;#39;) { a[l - 1] = NULL; a[l] = NULL; *length -= 2; return true; } else return false; } return true; } int main() { for (int t = 1; t &amp;lt;= 10; t++) { int result = 1; int length = 0; scanf(&amp;#34;%d&amp;#34;, &amp;amp;n); for (int i = 1; i &amp;lt;= n; i++) { length++; scanf(&amp;#34; %1c&amp;#34;, &amp;amp;arr[length]); if (solution(arr, &amp;amp;length) == false) { result = 0; } } printf(&amp;#34;#%d %d\n&amp;#34;, t, result); } }   </description>
+#include &amp;lt;stdio.h&amp;gt; char arr[100001];int n;bool solution(char* a, int* length) {int l = *length;if (a[l] == &amp;#39;)&amp;#39;) {if (a[l - 1] == &amp;#39;(&amp;#39;) {a[l - 1] = NULL;a[l] = NULL;*length -= 2;return true;}else return false;}if (a[l] == &amp;#39;]&amp;#39;) {if (a[l - 1] == &amp;#39;[&amp;#39;) {a[l - 1] = NULL;a[l] = NULL;*length -= 2;return true;}else return false;}if (a[l] == &amp;#39;}&amp;#39;) {if (a[l - 1] == &amp;#39;{&amp;#39;) {a[l - 1] = NULL;a[l] = NULL;*length -= 2;return true;}else return false;}if (a[l] == &amp;#39;&amp;gt;&amp;#39;) {if (a[l - 1] == &amp;#39;&amp;lt;&amp;#39;) {a[l - 1] = NULL;a[l] = NULL;*length -= 2;return true;}else return false;}return true;}int main() {for (int t = 1; t &amp;lt;= 10; t++) {int result = 1;int length = 0;scanf(&amp;#34;%d&amp;#34;, &amp;amp;n);for (int i = 1; i &amp;lt;= n; i++) {length++;scanf(&amp;#34; %1c&amp;#34;, &amp;amp;arr[length]);if (solution(arr, &amp;amp;length) == false) {result = 0;}}printf(&amp;#34;#%d %d\n&amp;#34;, t, result);}}  </description>
     </item>
     
     <item>
       <title>2020.05.24</title>
-      <link>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.24.html</link>
+      <link>https://gudongyeop.github.io/til/5%EC%9B%94/20.05.24.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.24.html</guid>
+      <guid>https://gudongyeop.github.io/til/5%EC%9B%94/20.05.24.html</guid>
       <description>오늘 한 것 SWEA 문제풀이   괄호 짝짓기
-#include &amp;lt;stdio.h&amp;gt; char arr[100001]; int n; bool solution(char* a, int* length) { int l = *length; if (a[l] == &amp;#39;)&amp;#39;) { if (a[l - 1] == &amp;#39;(&amp;#39;) { a[l - 1] = NULL; a[l] = NULL; *length -= 2; return true; } else return false; } if (a[l] == &amp;#39;]&amp;#39;) { if (a[l - 1] == &amp;#39;[&amp;#39;) { a[l - 1] = NULL; a[l] = NULL; *length -= 2; return true; } else return false; } if (a[l] == &amp;#39;}&amp;#39;) { if (a[l - 1] == &amp;#39;{&amp;#39;) { a[l - 1] = NULL; a[l] = NULL; *length -= 2; return true; } else return false; } if (a[l] == &amp;#39;&amp;gt;&amp;#39;) { if (a[l - 1] == &amp;#39;&amp;lt;&amp;#39;) { a[l - 1] = NULL; a[l] = NULL; *length -= 2; return true; } else return false; } return true; } int main() { for (int t = 1; t &amp;lt;= 10; t++) { int result = 1; int length = 0; scanf(&amp;#34;%d&amp;#34;, &amp;amp;n); for (int i = 1; i &amp;lt;= n; i++) { length++; scanf(&amp;#34; %1c&amp;#34;, &amp;amp;arr[length]); if (solution(arr, &amp;amp;length) == false) { result = 0; } } printf(&amp;#34;#%d %d\n&amp;#34;, t, result); } }   </description>
+#include &amp;lt;stdio.h&amp;gt; char arr[100001];int n;bool solution(char* a, int* length) {int l = *length;if (a[l] == &amp;#39;)&amp;#39;) {if (a[l - 1] == &amp;#39;(&amp;#39;) {a[l - 1] = NULL;a[l] = NULL;*length -= 2;return true;}else return false;}if (a[l] == &amp;#39;]&amp;#39;) {if (a[l - 1] == &amp;#39;[&amp;#39;) {a[l - 1] = NULL;a[l] = NULL;*length -= 2;return true;}else return false;}if (a[l] == &amp;#39;}&amp;#39;) {if (a[l - 1] == &amp;#39;{&amp;#39;) {a[l - 1] = NULL;a[l] = NULL;*length -= 2;return true;}else return false;}if (a[l] == &amp;#39;&amp;gt;&amp;#39;) {if (a[l - 1] == &amp;#39;&amp;lt;&amp;#39;) {a[l - 1] = NULL;a[l] = NULL;*length -= 2;return true;}else return false;}return true;}int main() {for (int t = 1; t &amp;lt;= 10; t++) {int result = 1;int length = 0;scanf(&amp;#34;%d&amp;#34;, &amp;amp;n);for (int i = 1; i &amp;lt;= n; i++) {length++;scanf(&amp;#34; %1c&amp;#34;, &amp;amp;arr[length]);if (solution(arr, &amp;amp;length) == false) {result = 0;}}printf(&amp;#34;#%d %d\n&amp;#34;, t, result);}}  </description>
     </item>
     
     <item>
       <title>2020.05.25</title>
-      <link>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.25.html</link>
+      <link>https://gudongyeop.github.io/til/5%EC%9B%94/20.05.25.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.25.html</guid>
+      <guid>https://gudongyeop.github.io/til/5%EC%9B%94/20.05.25.html</guid>
       <description>오늘 배운 것 Vue.js  body태그에 &amp;lt;script src=&amp;quot;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt; Vue.js cdn을 추가하여 사용
- 1. Declarative Rendering(선언적 렌더링) &amp;lt;div id=&amp;#34;app&amp;#34;&amp;gt; {{ message }} &amp;lt;/div&amp;gt; &amp;lt;!-- vue cdn --&amp;gt; &amp;lt;script src=&amp;#34;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script&amp;gt; const app = new Vue({ el: &amp;#39;#app&amp;#39;, data: { message: &amp;#39;message&amp;#39; } }) &amp;lt;/script&amp;gt; 2. 조건문(if) &amp;lt;div id=&amp;#34;using-if&amp;#34;&amp;gt; &amp;lt;p v-if=&amp;#34;check&amp;#34;&amp;gt;안녕&amp;lt;/p&amp;gt; &amp;lt;!-- 기본적인 자바스크립트 표현 가능 --&amp;gt; &amp;lt;p v-if=&amp;#34;check===&amp;#39;안녕&amp;#39;&amp;#34;&amp;gt;안녕&amp;lt;/p&amp;gt; &amp;lt;p v-else-if=&amp;#34;check===&amp;#39;반가워&amp;#39;&amp;#34;&amp;gt;반가워&amp;lt;/p&amp;gt; &amp;lt;p v-else&amp;gt;안녕 반가워&amp;lt;/p&amp;gt; &amp;lt;!-- false일 때만 보여주기 --&amp;gt; &amp;lt;p v-if=&amp;#34;!check&amp;#34;&amp;gt;False일때 나타내기&amp;lt;/p&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;!</description>
+ 1. Declarative Rendering(선언적 렌더링) &amp;lt;div id=&amp;#34;app&amp;#34;&amp;gt;{{ message }}&amp;lt;/div&amp;gt;&amp;lt;!-- vue cdn --&amp;gt;&amp;lt;script src=&amp;#34;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt;&amp;lt;script&amp;gt;const app = new Vue({el: &amp;#39;#app&amp;#39;,data: {message: &amp;#39;message&amp;#39;}})&amp;lt;/script&amp;gt;2. 조건문(if) &amp;lt;div id=&amp;#34;using-if&amp;#34;&amp;gt;&amp;lt;p v-if=&amp;#34;check&amp;#34;&amp;gt;안녕&amp;lt;/p&amp;gt;&amp;lt;!-- 기본적인 자바스크립트 표현 가능 --&amp;gt;&amp;lt;p v-if=&amp;#34;check===&amp;#39;안녕&amp;#39;&amp;#34;&amp;gt;안녕&amp;lt;/p&amp;gt;&amp;lt;p v-else-if=&amp;#34;check===&amp;#39;반가워&amp;#39;&amp;#34;&amp;gt;반가워&amp;lt;/p&amp;gt;&amp;lt;p v-else&amp;gt;안녕 반가워&amp;lt;/p&amp;gt;&amp;lt;!-- false일 때만 보여주기 --&amp;gt;&amp;lt;p v-if=&amp;#34;!check&amp;#34;&amp;gt;False일때 나타내기&amp;lt;/p&amp;gt; &amp;lt;/div&amp;gt;&amp;lt;!</description>
     </item>
     
     <item>
       <title>2020.05.26</title>
-      <link>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.26.html</link>
+      <link>https://gudongyeop.github.io/til/5%EC%9B%94/20.05.26.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.26.html</guid>
+      <guid>https://gudongyeop.github.io/til/5%EC%9B%94/20.05.26.html</guid>
       <description>오늘 배운 것 Vue.js   computed와 watched 비교
  computed  단순히 data로부터 계산된 값을 출력하기 위한 속성 계산해야 하는 목표 데이터를 정의하는 방식으로 해당 속성이 종속된 대상이 변경될 때만 함수를 실행 소프트웨어 공학에서 얘기하는 &amp;lsquo;선언형(무엇을 할 지) 프로그래밍&amp;rsquo; 방식   watched  특정한 데이터의 변경을 관찰하고 이어서 일어날 동작(로직)을 설정하기 위한 속성 감시할 데이터를 지정하고 그 데이터가 바뀌면 이런 함수를 실행하라는 방식 소프트웨어 공학에서 얘기하는 &amp;lsquo;명령형(어떻게 할 지) 프로그래밍&amp;rsquo; 방식 비동기 로직을 수행할 때 사용한다.</description>
     </item>
     
     <item>
       <title>2020.05.27</title>
-      <link>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.27.html</link>
+      <link>https://gudongyeop.github.io/til/5%EC%9B%94/20.05.27.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.27.html</guid>
+      <guid>https://gudongyeop.github.io/til/5%EC%9B%94/20.05.27.html</guid>
       <description>Vue CLI3 설치   공식 문서
    설치 순서 (Windows10)
 $ npm install -g @vue/cli$ vue --version # 버젼확인  프로젝트 생성 및 실행  $ vue create &amp;lt;프로젝트 명&amp;gt;$ cd &amp;lt;프로젝트명&amp;gt; # 프로젝트 폴더로 이동$ npm run serve프로젝트 정리    src/App.vue에서 필요없는 기본코드 삭제(아래처럼)
@@ -848,186 +858,186 @@ $ npm install -g @vue/cli$ vue --version # 버젼확인  프로젝트 생성 �
     
     <item>
       <title>2020.05.28</title>
-      <link>https://dongyeopgu.github.io/algorithm/d4~6/20.05.28.html</link>
+      <link>https://gudongyeop.github.io/algorithm/d4~6/20.05.28.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/algorithm/d4~6/20.05.28.html</guid>
+      <guid>https://gudongyeop.github.io/algorithm/d4~6/20.05.28.html</guid>
       <description>SWEA 문제풀이   최대상금
 #include &amp;lt;stdio.h&amp;gt;#include &amp;lt;algorithm&amp;gt;#include &amp;lt;string.h&amp;gt;#include &amp;lt;string&amp;gt; using namespace std;int change, result;char arr[6];string str;bool visit[1000000][11];void sol(int cnt) {if (cnt == change) {result = max(result, stoi(str));return;}for (int i = 0; i &amp;lt; str.size(); i++) {for (int j = i; j &amp;lt; str.size(); j++) {if (i==j) { continue; }swap(str[i], str[j]);if (visit[stoi(str)][cnt+1] == false) {visit[stoi(str)][cnt+1] = true;sol(cnt + 1);}swap(str[i], str[j]);}}}int main() {int t;scanf(&amp;#34;%d&amp;#34;, &amp;amp;t);for (int test_case = 1; test_case &amp;lt;= t; test_case++) {scanf(&amp;#34;%s&amp;#34;, arr);str = arr;scanf(&amp;#34;%d&amp;#34;, &amp;amp;change);result = 0;memset(visit, false, sizeof(visit));sol(0);printf(&amp;#34;#%d %d\n&amp;#34;, test_case, result);}return 0;}  최적경로</description>
     </item>
     
     <item>
       <title>2020.05.28</title>
-      <link>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.28.html</link>
+      <link>https://gudongyeop.github.io/til/5%EC%9B%94/20.05.28.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.28.html</guid>
+      <guid>https://gudongyeop.github.io/til/5%EC%9B%94/20.05.28.html</guid>
       <description>SWEA 문제풀이   최대상금
 #include &amp;lt;stdio.h&amp;gt;#include &amp;lt;algorithm&amp;gt;#include &amp;lt;string.h&amp;gt;#include &amp;lt;string&amp;gt; using namespace std;int change, result;char arr[6];string str;bool visit[1000000][11];void sol(int cnt) {if (cnt == change) {result = max(result, stoi(str));return;}for (int i = 0; i &amp;lt; str.size(); i++) {for (int j = i; j &amp;lt; str.size(); j++) {if (i==j) { continue; }swap(str[i], str[j]);if (visit[stoi(str)][cnt+1] == false) {visit[stoi(str)][cnt+1] = true;sol(cnt + 1);}swap(str[i], str[j]);}}}int main() {int t;scanf(&amp;#34;%d&amp;#34;, &amp;amp;t);for (int test_case = 1; test_case &amp;lt;= t; test_case++) {scanf(&amp;#34;%s&amp;#34;, arr);str = arr;scanf(&amp;#34;%d&amp;#34;, &amp;amp;change);result = 0;memset(visit, false, sizeof(visit));sol(0);printf(&amp;#34;#%d %d\n&amp;#34;, test_case, result);}return 0;}  최적경로</description>
     </item>
     
     <item>
       <title>2020.05.29</title>
-      <link>https://dongyeopgu.github.io/algorithm/d4~6/20.05.29.html</link>
+      <link>https://gudongyeop.github.io/algorithm/d4~6/20.05.29.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/algorithm/d4~6/20.05.29.html</guid>
+      <guid>https://gudongyeop.github.io/algorithm/d4~6/20.05.29.html</guid>
       <description>SWEA 문제풀이   공통조상
 def sol(n):q = [n]cnt =0while q:cnt += 1a = q.pop()for i in v_1[a]:q.append(i)return cntfor t in range(int(input())):v, e, n1, n2 = map(int, input().split())n3 = 9**9v_1 = [[]for _ in range(v+1)]v_2 = [[]for _ in range(v+1)]data = [*map(int, input().split())]for i in range(e):v_1[data[2*i]].append(data[2*i+1])v_2[data[2*i+1]].append(data[2*i])while n1 != n3:n1 = v_2[n1][0]n3 = n2while n3&amp;gt;1 and n1 !</description>
     </item>
     
     <item>
       <title>2020.05.29</title>
-      <link>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.29.html</link>
+      <link>https://gudongyeop.github.io/til/5%EC%9B%94/20.05.29.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.29.html</guid>
+      <guid>https://gudongyeop.github.io/til/5%EC%9B%94/20.05.29.html</guid>
       <description>SWEA 문제풀이   공통조상
 def sol(n):q = [n]cnt =0while q:cnt += 1a = q.pop()for i in v_1[a]:q.append(i)return cntfor t in range(int(input())):v, e, n1, n2 = map(int, input().split())n3 = 9**9v_1 = [[]for _ in range(v+1)]v_2 = [[]for _ in range(v+1)]data = [*map(int, input().split())]for i in range(e):v_1[data[2*i]].append(data[2*i+1])v_2[data[2*i+1]].append(data[2*i])while n1 != n3:n1 = v_2[n1][0]n3 = n2while n3&amp;gt;1 and n1 !</description>
     </item>
     
     <item>
       <title>2020.05.30</title>
-      <link>https://dongyeopgu.github.io/algorithm/d4~6/20.05.30.html</link>
+      <link>https://gudongyeop.github.io/algorithm/d4~6/20.05.30.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/algorithm/d4~6/20.05.30.html</guid>
+      <guid>https://gudongyeop.github.io/algorithm/d4~6/20.05.30.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>2020.05.30</title>
-      <link>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.30.html</link>
+      <link>https://gudongyeop.github.io/til/5%EC%9B%94/20.05.30.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.30.html</guid>
+      <guid>https://gudongyeop.github.io/til/5%EC%9B%94/20.05.30.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>2020.05.31</title>
-      <link>https://dongyeopgu.github.io/algorithm/d4~6/20.05.31.html</link>
+      <link>https://gudongyeop.github.io/algorithm/d4~6/20.05.31.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/algorithm/d4~6/20.05.31.html</guid>
+      <guid>https://gudongyeop.github.io/algorithm/d4~6/20.05.31.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>2020.05.31</title>
-      <link>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.31.html</link>
+      <link>https://gudongyeop.github.io/til/5%EC%9B%94/20.05.31.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.31.html</guid>
+      <guid>https://gudongyeop.github.io/til/5%EC%9B%94/20.05.31.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>2020.06.01</title>
-      <link>https://dongyeopgu.github.io/til/6%EC%9B%94/20.06.01.html</link>
+      <link>https://gudongyeop.github.io/til/6%EC%9B%94/20.06.01.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/6%EC%9B%94/20.06.01.html</guid>
+      <guid>https://gudongyeop.github.io/til/6%EC%9B%94/20.06.01.html</guid>
       <description>오늘 배운 것  Vue로 Todo List작성
    App.vue
-&amp;lt;template&amp;gt; &amp;lt;div id=&amp;#34;app&amp;#34;&amp;gt; &amp;lt;div id=&amp;#34;nav&amp;#34;&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;router-view/&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;/template&amp;gt;   TodoView.vue
-&amp;lt;template&amp;gt; &amp;lt;div&amp;gt; &amp;lt;TodoList :todos=&amp;#34;todos&amp;#34; @checked=&amp;#34;updatedTodo&amp;#34;/&amp;gt; &amp;lt;TodoInput @create-todo=&amp;#34;createTodo&amp;#34;/&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;/template&amp;gt; &amp;lt;script&amp;gt; import TodoList from &amp;#39;@/components/TodoList.vue&amp;#39; import TodoInput from &amp;#39;@/components/TodoInput.vue&amp;#39; export default { name: &amp;#39;TodoView&amp;#39;, components: { TodoList, TodoInput, }, data() { return { todos: [ { id: 1, content: &amp;#39;Django 복습&amp;#39;, isCompleted: true, }, { id: 2, content: &amp;#39;Vue 복습&amp;#39;, isCompleted: false, }, { id: 3, content: &amp;#39;저녁&amp;#39;, isCompleted: false, }, ] } }, methods: { updatedTodo(todo) { todo.</description>
+&amp;lt;template&amp;gt;&amp;lt;div id=&amp;#34;app&amp;#34;&amp;gt;&amp;lt;div id=&amp;#34;nav&amp;#34;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;router-view/&amp;gt; &amp;lt;/div&amp;gt;&amp;lt;/template&amp;gt;  TodoView.vue
+&amp;lt;template&amp;gt;&amp;lt;div&amp;gt;&amp;lt;TodoList :todos=&amp;#34;todos&amp;#34; @checked=&amp;#34;updatedTodo&amp;#34;/&amp;gt;&amp;lt;TodoInput @create-todo=&amp;#34;createTodo&amp;#34;/&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/template&amp;gt;&amp;lt;script&amp;gt;import TodoList from &amp;#39;@/components/TodoList.vue&amp;#39;import TodoInput from &amp;#39;@/components/TodoInput.vue&amp;#39;export default {name: &amp;#39;TodoView&amp;#39;,components: {TodoList,TodoInput,},data() {return {todos: [{id: 1,content: &amp;#39;Django 복습&amp;#39;,isCompleted: true,},{id: 2,content: &amp;#39;Vue 복습&amp;#39;,isCompleted: false,},{id: 3,content: &amp;#39;저녁&amp;#39;,isCompleted: false,},]}},methods: {updatedTodo(todo) {todo.</description>
     </item>
     
     <item>
       <title>2020.06.02</title>
-      <link>https://dongyeopgu.github.io/til/6%EC%9B%94/20.06.02.html</link>
+      <link>https://gudongyeop.github.io/til/6%EC%9B%94/20.06.02.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/6%EC%9B%94/20.06.02.html</guid>
+      <guid>https://gudongyeop.github.io/til/6%EC%9B%94/20.06.02.html</guid>
       <description>오늘 배운 것  Vue로 Youtube API를 이용해 영상 찾기 및 재생
    npm i axios로 axios 패키지 설치하여 이용
   App.vue를 작성
-&amp;lt;template&amp;gt; &amp;lt;div id=&amp;#34;app&amp;#34;&amp;gt; &amp;lt;SearchBar @input-change=&amp;#34;onInputChange&amp;#34;/&amp;gt; &amp;lt;VideoList :videos=&amp;#34;videos&amp;#34;/&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;/template&amp;gt; &amp;lt;script&amp;gt; import axios from &amp;#39;axios&amp;#39; import SearchBar from &amp;#39;@/components/SearchBar.vue&amp;#39; import VideoList from &amp;#39;@/components/VideoList.vue&amp;#39; const YOUTUBE_API_KEY = process.env.VUE_APP_YOUTUBE_API_KEY const YOUTUBE_API_URL = &amp;#39;https://www.googleapis.com/youtube/v3/search&amp;#39; export default { name: &amp;#39;App&amp;#39;, components: { SearchBar, VideoList }, data() { return { videos: [], } }, methods: { onInputChange(userInput) { const config = { params: { key: YOUTUBE_API_KEY, part: &amp;#39;snippet&amp;#39;, type: &amp;#39;video&amp;#39;, q: userInput, } } axios.</description>
+&amp;lt;template&amp;gt;&amp;lt;div id=&amp;#34;app&amp;#34;&amp;gt;&amp;lt;SearchBar @input-change=&amp;#34;onInputChange&amp;#34;/&amp;gt;&amp;lt;VideoList :videos=&amp;#34;videos&amp;#34;/&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/template&amp;gt;&amp;lt;script&amp;gt;import axios from &amp;#39;axios&amp;#39;import SearchBar from &amp;#39;@/components/SearchBar.vue&amp;#39;import VideoList from &amp;#39;@/components/VideoList.vue&amp;#39;const YOUTUBE_API_KEY = process.env.VUE_APP_YOUTUBE_API_KEYconst YOUTUBE_API_URL = &amp;#39;https://www.googleapis.com/youtube/v3/search&amp;#39;export default {name: &amp;#39;App&amp;#39;,components: {SearchBar,VideoList},data() {return {videos: [],}},methods: {onInputChange(userInput) {const config = {params: {key: YOUTUBE_API_KEY,part: &amp;#39;snippet&amp;#39;,type: &amp;#39;video&amp;#39;,q: userInput,}}axios.</description>
     </item>
     
     <item>
       <title>2020.06.03</title>
-      <link>https://dongyeopgu.github.io/til/6%EC%9B%94/20.06.03.html</link>
+      <link>https://gudongyeop.github.io/til/6%EC%9B%94/20.06.03.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/6%EC%9B%94/20.06.03.html</guid>
+      <guid>https://gudongyeop.github.io/til/6%EC%9B%94/20.06.03.html</guid>
       <description>오늘 한 것  Vue Project
  구현과정   vue 프로젝트 생성 기본 구조 설정 필요 기능 추가   1. vue 프로젝트 생성  vue create project명 을 bash에서 실행 router 사용을 위한 vue add router cd project명으로 폴더 이동 후 필요한 axios와 같은 패키지 설치  ex) npm i axios , npm i lodash    2. 기본 구조 설정   영화 목록을 가져오고 보여 주는 MovieView.</description>
     </item>
     
     <item>
       <title>2020.06.04</title>
-      <link>https://dongyeopgu.github.io/til/6%EC%9B%94/20.06.04.html</link>
+      <link>https://gudongyeop.github.io/til/6%EC%9B%94/20.06.04.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/6%EC%9B%94/20.06.04.html</guid>
+      <guid>https://gudongyeop.github.io/til/6%EC%9B%94/20.06.04.html</guid>
       <description>오늘 한 것  SWEA 문제풀이
    생일파티
- python  for t in range(int(input())): n, m = map(int, input().split()) a = [[]for _ in range(n+1)] for i in range(m): n1, n2 = map(int,input().split()) a[n1].append(n2) a[n2].append(n1) result = set() result.update(a[1]) for i in a[1]: result.update(a[i]) if 1 in result: result.remove(1) print(f&amp;#34;#{t+1} {len(result)}&amp;#34;)   보급로
- C++  #include &amp;lt;cstdio&amp;gt;#include &amp;lt;cstring&amp;gt;#include &amp;lt;algorithm&amp;gt;#include &amp;lt;queue&amp;gt;using namespace std; int map[100][100]; int dis[100][100]; int dx[4] = {0, 0, -1, 1}; int dy[4] = {-1, 1, 0, 0}; int n; bool border(int x, int y) { return (0 &amp;lt;= x &amp;amp;&amp;amp; x &amp;lt; n &amp;amp;&amp;amp; 0 &amp;lt;= y &amp;amp;&amp;amp; y &amp;lt; n); } void solv() { queue&amp;lt;pair&amp;lt;int, int&amp;gt;&amp;gt; q; q.</description>
+ python  for t in range(int(input())):n, m = map(int, input().split())a = [[]for _ in range(n+1)]for i in range(m):n1, n2 = map(int,input().split())a[n1].append(n2)a[n2].append(n1)result = set()result.update(a[1])for i in a[1]:result.update(a[i])if 1 in result:result.remove(1)print(f&amp;#34;#{t+1} {len(result)}&amp;#34;)  보급로
+ C++  #include &amp;lt;cstdio&amp;gt;#include &amp;lt;cstring&amp;gt;#include &amp;lt;algorithm&amp;gt;#include &amp;lt;queue&amp;gt;using namespace std;int map[100][100];int dis[100][100];int dx[4] = {0, 0, -1, 1};int dy[4] = {-1, 1, 0, 0};int n;bool border(int x, int y) {return (0 &amp;lt;= x &amp;amp;&amp;amp; x &amp;lt; n &amp;amp;&amp;amp; 0 &amp;lt;= y &amp;amp;&amp;amp; y &amp;lt; n);}void solv() {queue&amp;lt;pair&amp;lt;int, int&amp;gt;&amp;gt; q;q.</description>
     </item>
     
     <item>
       <title>2020.06.05</title>
-      <link>https://dongyeopgu.github.io/algorithm/d4~6/20.06.05.html</link>
+      <link>https://gudongyeop.github.io/algorithm/d4~6/20.06.05.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/algorithm/d4~6/20.06.05.html</guid>
+      <guid>https://gudongyeop.github.io/algorithm/d4~6/20.06.05.html</guid>
       <description>오늘 한 것  SWEA, 백준 문제풀이
    하나로
-#include &amp;lt;cstdio&amp;gt; int test_case, n; long long x[1000], y[1000], dis[1000]; bool visit[1000]; double E; long long result; long long dist(long long x1, long long y1, long long x2, long long y2) { return (x1 - x2)*(x1 - x2) + (y1 - y2)*(y1 - y2); } int main() { scanf(&amp;#34;%d&amp;#34;, &amp;amp;test_case); for (int t = 1; t &amp;lt;= test_case; t++) { result = 0; scanf(&amp;#34;%d&amp;#34;, &amp;amp;n); for (int i = 0; i &amp;lt;n; i++) { scanf(&amp;#34;%lld&amp;#34;, &amp;amp;x[i]); } for (int i = 0; i &amp;lt;n; i++) { scanf(&amp;#34;%lld&amp;#34;, &amp;amp;y[i]); } for (int i = 0; i &amp;lt;n; i++) { dis[i] = 1e16; visit[i] = 0; } scanf(&amp;#34;%lf&amp;#34;, &amp;amp;E); dis[0] = 0; for (int i = 0; i &amp;lt; n; i++) { long long a = 1e16; long long b = i; for (int j=0;j&amp;lt;n;j++) { if (!</description>
+#include &amp;lt;cstdio&amp;gt; int test_case, n;long long x[1000], y[1000], dis[1000];bool visit[1000];double E;long long result;long long dist(long long x1, long long y1, long long x2, long long y2) {return (x1 - x2)*(x1 - x2) + (y1 - y2)*(y1 - y2);}int main() {scanf(&amp;#34;%d&amp;#34;, &amp;amp;test_case);for (int t = 1; t &amp;lt;= test_case; t++) {result = 0;scanf(&amp;#34;%d&amp;#34;, &amp;amp;n);for (int i = 0; i &amp;lt;n; i++) {scanf(&amp;#34;%lld&amp;#34;, &amp;amp;x[i]);}for (int i = 0; i &amp;lt;n; i++) {scanf(&amp;#34;%lld&amp;#34;, &amp;amp;y[i]);}for (int i = 0; i &amp;lt;n; i++) {dis[i] = 1e16;visit[i] = 0;}scanf(&amp;#34;%lf&amp;#34;, &amp;amp;E);dis[0] = 0;for (int i = 0; i &amp;lt; n; i++) {long long a = 1e16;long long b = i;for (int j=0;j&amp;lt;n;j++) {if (!</description>
     </item>
     
     <item>
       <title>2020.06.05</title>
-      <link>https://dongyeopgu.github.io/til/6%EC%9B%94/20.06.05.html</link>
+      <link>https://gudongyeop.github.io/til/6%EC%9B%94/20.06.05.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/6%EC%9B%94/20.06.05.html</guid>
+      <guid>https://gudongyeop.github.io/til/6%EC%9B%94/20.06.05.html</guid>
       <description>오늘 한 것  SWEA, 백준 문제풀이
    하나로
-#include &amp;lt;cstdio&amp;gt; int test_case, n; long long x[1000], y[1000], dis[1000]; bool visit[1000]; double E; long long result; long long dist(long long x1, long long y1, long long x2, long long y2) { return (x1 - x2)*(x1 - x2) + (y1 - y2)*(y1 - y2); } int main() { scanf(&amp;#34;%d&amp;#34;, &amp;amp;test_case); for (int t = 1; t &amp;lt;= test_case; t++) { result = 0; scanf(&amp;#34;%d&amp;#34;, &amp;amp;n); for (int i = 0; i &amp;lt;n; i++) { scanf(&amp;#34;%lld&amp;#34;, &amp;amp;x[i]); } for (int i = 0; i &amp;lt;n; i++) { scanf(&amp;#34;%lld&amp;#34;, &amp;amp;y[i]); } for (int i = 0; i &amp;lt;n; i++) { dis[i] = 1e16; visit[i] = 0; } scanf(&amp;#34;%lf&amp;#34;, &amp;amp;E); dis[0] = 0; for (int i = 0; i &amp;lt; n; i++) { long long a = 1e16; long long b = i; for (int j=0;j&amp;lt;n;j++) { if (!</description>
+#include &amp;lt;cstdio&amp;gt; int test_case, n;long long x[1000], y[1000], dis[1000];bool visit[1000];double E;long long result;long long dist(long long x1, long long y1, long long x2, long long y2) {return (x1 - x2)*(x1 - x2) + (y1 - y2)*(y1 - y2);}int main() {scanf(&amp;#34;%d&amp;#34;, &amp;amp;test_case);for (int t = 1; t &amp;lt;= test_case; t++) {result = 0;scanf(&amp;#34;%d&amp;#34;, &amp;amp;n);for (int i = 0; i &amp;lt;n; i++) {scanf(&amp;#34;%lld&amp;#34;, &amp;amp;x[i]);}for (int i = 0; i &amp;lt;n; i++) {scanf(&amp;#34;%lld&amp;#34;, &amp;amp;y[i]);}for (int i = 0; i &amp;lt;n; i++) {dis[i] = 1e16;visit[i] = 0;}scanf(&amp;#34;%lf&amp;#34;, &amp;amp;E);dis[0] = 0;for (int i = 0; i &amp;lt; n; i++) {long long a = 1e16;long long b = i;for (int j=0;j&amp;lt;n;j++) {if (!</description>
     </item>
     
     <item>
       <title>2020.06.06</title>
-      <link>https://dongyeopgu.github.io/til/6%EC%9B%94/20.06.06.html</link>
+      <link>https://gudongyeop.github.io/til/6%EC%9B%94/20.06.06.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/6%EC%9B%94/20.06.06.html</guid>
+      <guid>https://gudongyeop.github.io/til/6%EC%9B%94/20.06.06.html</guid>
       <description>오늘 한 것 </description>
     </item>
     
     <item>
       <title>2020.06.07</title>
-      <link>https://dongyeopgu.github.io/til/6%EC%9B%94/20.06.07.html</link>
+      <link>https://gudongyeop.github.io/til/6%EC%9B%94/20.06.07.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/6%EC%9B%94/20.06.07.html</guid>
+      <guid>https://gudongyeop.github.io/til/6%EC%9B%94/20.06.07.html</guid>
       <description>오늘 한 것 </description>
     </item>
     
     <item>
       <title>2020.06.08</title>
-      <link>https://dongyeopgu.github.io/til/6%EC%9B%94/20.06.08.html</link>
+      <link>https://gudongyeop.github.io/til/6%EC%9B%94/20.06.08.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/6%EC%9B%94/20.06.08.html</guid>
+      <guid>https://gudongyeop.github.io/til/6%EC%9B%94/20.06.08.html</guid>
       <description>오늘 배운 것 Django &amp;amp; Vue  Django를 백엔드로 Vue를 프론트엔드
 Django Rest Framework를 사용
  Django 설정   전에 했던 Django Rest Framework를 사용하여 Serializers를 이용.
   따로 Templates를 만들지 않고 JSON 정보를 가지고 vue를 이용.
   settings.py의 INSTALLED_APP에서 아래 추가 후 사용.
-  INSTALLED_APPS = [ ... &amp;#39;django.contrib.sites&amp;#39;, &amp;#39;rest_framework&amp;#39;, &amp;#39;rest_framework.authtoken&amp;#39;, &amp;#39;rest_auth&amp;#39;, &amp;#39;rest_auth.registration&amp;#39;, &amp;#39;allauth&amp;#39;, &amp;#39;allauth.account&amp;#39;, ... ] REST_FRAMEWORK = { &amp;#39;DEFAULT_AUTHENTICATION_CLASSES&amp;#39;: [ &amp;#39;rest_framework.authentication.TokenAuthentication&amp;#39;, ] } </description>
+  INSTALLED_APPS = [...&amp;#39;django.contrib.sites&amp;#39;,&amp;#39;rest_framework&amp;#39;, &amp;#39;rest_framework.authtoken&amp;#39;,&amp;#39;rest_auth&amp;#39;,&amp;#39;rest_auth.registration&amp;#39;,&amp;#39;allauth&amp;#39;,&amp;#39;allauth.account&amp;#39;,...]REST_FRAMEWORK = {&amp;#39;DEFAULT_AUTHENTICATION_CLASSES&amp;#39;: [&amp;#39;rest_framework.authentication.TokenAuthentication&amp;#39;,]}</description>
     </item>
     
     <item>
       <title>2020.06.09</title>
-      <link>https://dongyeopgu.github.io/til/6%EC%9B%94/20.06.09.html</link>
+      <link>https://gudongyeop.github.io/til/6%EC%9B%94/20.06.09.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/6%EC%9B%94/20.06.09.html</guid>
+      <guid>https://gudongyeop.github.io/til/6%EC%9B%94/20.06.09.html</guid>
       <description>오늘 배운 것 VUE 설정  vue router를 사용하여 Django와 연결하여 data가져옴.
 axios, cookies 사용
   accounts와 관련된 기능을 사용하기 위해 Token을 쿠키로 저장하기 위해 cookies 사용  </description>
@@ -1035,55 +1045,55 @@ axios, cookies 사용
     
     <item>
       <title>2020.06.10 ~ </title>
-      <link>https://dongyeopgu.github.io/til/6%EC%9B%94/20.06.10-~-30-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EA%B3%BC%EC%A0%9C%EB%A1%9C-%EC%9D%B8%ED%95%9C-til-%EB%AF%B8%EC%97%85%EB%A1%9C%EB%93%9C.html</link>
+      <link>https://gudongyeop.github.io/til/6%EC%9B%94/20.06.10-~-30-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EA%B3%BC%EC%A0%9C%EB%A1%9C-%EC%9D%B8%ED%95%9C-til-%EB%AF%B8%EC%97%85%EB%A1%9C%EB%93%9C.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/6%EC%9B%94/20.06.10-~-30-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EA%B3%BC%EC%A0%9C%EB%A1%9C-%EC%9D%B8%ED%95%9C-til-%EB%AF%B8%EC%97%85%EB%A1%9C%EB%93%9C.html</guid>
+      <guid>https://gudongyeop.github.io/til/6%EC%9B%94/20.06.10-~-30-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EA%B3%BC%EC%A0%9C%EB%A1%9C-%EC%9D%B8%ED%95%9C-til-%EB%AF%B8%EC%97%85%EB%A1%9C%EB%93%9C.html</guid>
       <description>프로젝트 기간으로 TIL 없음  Django와 Vue 이용한 프로젝트  </description>
     </item>
     
     <item>
       <title>2020.07.01</title>
-      <link>https://dongyeopgu.github.io/til/7%EC%9B%94/20.07.01.html</link>
+      <link>https://gudongyeop.github.io/til/7%EC%9B%94/20.07.01.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/7%EC%9B%94/20.07.01.html</guid>
+      <guid>https://gudongyeop.github.io/til/7%EC%9B%94/20.07.01.html</guid>
       <description>오늘 한것 Python 데이터 분석 입문 책 보기</description>
     </item>
     
     <item>
       <title>2020.07.02</title>
-      <link>https://dongyeopgu.github.io/til/7%EC%9B%94/20.07.02.html</link>
+      <link>https://gudongyeop.github.io/til/7%EC%9B%94/20.07.02.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/7%EC%9B%94/20.07.02.html</guid>
+      <guid>https://gudongyeop.github.io/til/7%EC%9B%94/20.07.02.html</guid>
       <description>오늘 한것 Python 데이터 분석 입문 책 보기</description>
     </item>
     
     <item>
       <title>2020.07.03</title>
-      <link>https://dongyeopgu.github.io/til/7%EC%9B%94/20.07.03.html</link>
+      <link>https://gudongyeop.github.io/til/7%EC%9B%94/20.07.03.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/7%EC%9B%94/20.07.03.html</guid>
+      <guid>https://gudongyeop.github.io/til/7%EC%9B%94/20.07.03.html</guid>
       <description>오늘 한것 Python 데이터 분석 입문 책 보기</description>
     </item>
     
     <item>
       <title>BAEKJOON - Python</title>
-      <link>https://dongyeopgu.github.io/algorithm/baekjoon/baekjoon.html</link>
+      <link>https://gudongyeop.github.io/algorithm/baekjoon/baekjoon.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/algorithm/baekjoon/baekjoon.html</guid>
+      <guid>https://gudongyeop.github.io/algorithm/baekjoon/baekjoon.html</guid>
       <description>14890. 경사로 def slope(i, c):global anscnt = 1for j in range(0, N-1):d = a[i][j+1]-a[i][j] if c else a[j+1][i]-a[j][i]if d == 0:cnt += 1elif d == 1 and cnt &amp;gt;= L:cnt = 1elif d == -1 and cnt &amp;gt;= 0:cnt = -L+1else:returnif cnt &amp;gt;= 0:ans += 1def solve():for i in range(N):slope(i, 1)slope(i, 0)print(ans)N, L = map(int, input().</description>
     </item>
     
     <item>
       <title>OpenStack Horizon: Create New Plugin</title>
-      <link>https://dongyeopgu.github.io/til/8%EC%9B%94/create-new-plugin.html</link>
+      <link>https://gudongyeop.github.io/til/8%EC%9B%94/create-new-plugin.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/8%EC%9B%94/create-new-plugin.html</guid>
+      <guid>https://gudongyeop.github.io/til/8%EC%9B%94/create-new-plugin.html</guid>
       <description>Create New Plugin 폴더 구조   enabled 폴더
   Plugin을 등록하는 configuration 파일ex)_31000_myplugin.py
   _31000 은 load 순서를 정하는 번호
@@ -1093,38 +1103,38 @@ axios, cookies 사용
     
     <item>
       <title>Server 관련 용어</title>
-      <link>https://dongyeopgu.github.io/til/9%EC%9B%94/%EC%9A%A9%EC%96%B4-%EC%A0%95%EB%A6%AC.html</link>
+      <link>https://gudongyeop.github.io/til/9%EC%9B%94/%EC%9A%A9%EC%96%B4-%EC%A0%95%EB%A6%AC.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/til/9%EC%9B%94/%EC%9A%A9%EC%96%B4-%EC%A0%95%EB%A6%AC.html</guid>
+      <guid>https://gudongyeop.github.io/til/9%EC%9B%94/%EC%9A%A9%EC%96%B4-%EC%A0%95%EB%A6%AC.html</guid>
       <description>관련 용어들  확인 할 용어 생길 때 추가.
   CDN(Content Delivery Network): 콘텐츠를 전송하기 위한 네트워크 시스템. 전송 성능향상과 가용성 향상을 목적으로 함. 가용성(Availability): 시스템을 정지시키지 않음을 뜻함. 다중화(Redundancy): 시스템의 구성요소를 여러 개 배치해서 하나가 고장 나서 정지해도 바로 교체해서 서비스가 멈추지 않도록 하는 것. 데몬(Daemon): 백그라운드에서 지속적으로 실행되면서 특정 작업을 수행하는 프로그램. ex) httpd, bind .. 리소스(Resource): CPU, 메모리, 하드디스크 등, 하드웨어적인 자원  </description>
     </item>
     
     <item>
       <title>SWEA - Python - D3</title>
-      <link>https://dongyeopgu.github.io/algorithm/d3/swea-d3.html</link>
+      <link>https://gudongyeop.github.io/algorithm/d3/swea-d3.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/algorithm/d3/swea-d3.html</guid>
+      <guid>https://gudongyeop.github.io/algorithm/d3/swea-d3.html</guid>
       <description>1240. 단순 2진 암호코드 for t in range(int(input())):n = int(input())arr = [0]*ncnt = 0a = list(input().split())for i in a:flag = 0for j in i:if not flag and j.isupper():flag = 1elif j.isdigit() or (flag and j.isupper()):flag = 0breakif flag:arr[cnt] += 1if (&amp;#39;.&amp;#39; in i) or (&amp;#39;!&amp;#39; in i) or (&amp;#39;?&amp;#39; in i):cnt += 1print(f&amp;#34;#{t+1} {&amp;#39; &amp;#39;.</description>
     </item>
     
     <item>
       <title>SWEA - Python - D4</title>
-      <link>https://dongyeopgu.github.io/algorithm/d4/swea-d4.html</link>
+      <link>https://gudongyeop.github.io/algorithm/d4/swea-d4.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/algorithm/d4/swea-d4.html</guid>
+      <guid>https://gudongyeop.github.io/algorithm/d4/swea-d4.html</guid>
       <description>1210. Ladder1 for _ in range(10):T = input()ladder = [list(map(int, input().split()))for _ in range(100)]j = 0for x in range(100):if ladder[99][x] == 2:j = xstart_p = 0i = 99while i &amp;gt;= 0:if j - 1 &amp;gt;= 0 and ladder[i][j-1] == 1:while 0 &amp;lt;= j - 1 &amp;lt; 100 and ladder[i][j-1] == 1:j -= 1elif j + 1 &amp;lt; 100 and ladder[i][j+1] == 1:while 0 &amp;lt;= j + 1 &amp;lt; 100 and ladder[i][j+1] == 1:j += 1i -= 1print(f&amp;#34;#{T} {j}&amp;#34;)1211.</description>
     </item>
     
     <item>
       <title>SWEA - Python - 모의 테스트</title>
-      <link>https://dongyeopgu.github.io/algorithm/d4/swea_%EB%AA%A8%EC%9D%98-%ED%85%8C%EC%8A%A4%ED%8A%B8.html</link>
+      <link>https://gudongyeop.github.io/algorithm/d4/swea_%EB%AA%A8%EC%9D%98-%ED%85%8C%EC%8A%A4%ED%8A%B8.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dongyeopgu.github.io/algorithm/d4/swea_%EB%AA%A8%EC%9D%98-%ED%85%8C%EC%8A%A4%ED%8A%B8.html</guid>
+      <guid>https://gudongyeop.github.io/algorithm/d4/swea_%EB%AA%A8%EC%9D%98-%ED%85%8C%EC%8A%A4%ED%8A%B8.html</guid>
       <description>1949. 등산로 조성 dt = [(1,0), (0,1), (-1,0), (0,-1)]def sol(x,y,b,cnt=1):global max_rif max_r &amp;lt; cnt:max_r = cntvisit[x][y] = 1for d in dt:dx, dy = x + d[0], y + d[1]if not (0 &amp;lt;= dx &amp;lt; n and 0 &amp;lt;= dy &amp;lt; n) or visit[dx][dy] == 1:continueif Map[x][y] &amp;gt; Map[dx][dy]:sol(dx,dy,b,cnt+1)elif b &amp;gt; 0 and Map[x][y] &amp;gt; Map[dx][dy] - k:temp = Map[dx][dy]Map[dx][dy] = Map[x][y] - 1sol(dx,dy,0,cnt+1)Map[dx][dy] = tempvisit[x][y] = 0for t in range(int(input())):n, k = map(int, input().</description>
     </item>
     
