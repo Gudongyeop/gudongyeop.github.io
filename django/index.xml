@@ -96,5 +96,16 @@ ManyToManyField 이용
       <description>Django Rest Framework(DRF) 1. REST API(DRF: Django Rest Framework)  REST API를 활용하면 백 엔드와 프론트 엔드 분리가 쉽고 코드의 재활용성이 좋다. REST API를 사용하기 위해서 먼저 설치가 필요  $ pip install djangorestframework  settings.py에서 INSTALLED_APPS에 &#39;rest_framework&#39;추가 app 폴더에 serializers.py 파일을 만들고 내용 추가  # serializers.py from rest_framework import serializers from .models import * #필요한 모델이름 넣어주기 class &amp;lt;모델명&amp;gt;Serializer(serializers.ModelSerializer): class Meta: model = &amp;lt;모델명&amp;gt; fields = [&amp;#39;필요한 필드&amp;#39;]  views.</description>
     </item>
     
+    <item>
+      <title>Django Image Upload</title>
+      <link>https://dongyeopgu.github.io/django/django_image_upload.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dongyeopgu.github.io/django/django_image_upload.html</guid>
+      <description>Django에서 Image Upload  POST요청을 통해 Vue.js에서 Django로 이미지 전송.
+ 기본 세팅  settings.py에서 아래 추가  MEDIA_URL = &amp;#39;/api/&amp;#39; # 기본 api url을 통일 시켜 번거로움을 줄이기 위해 /api/로 설정했음 MEDIA_ROOT = os.path.join(BASE_DIR, &amp;#39;media&amp;#39;) # 이미지 파일이 저장되는 기본 위치를 media폴더로 설정  이미지 url도 다른 application과 같이 api로 시작하게 만들기 위해 MEDIA_URL을 /api/로 설정
+  urls.py  from django.contrib import admin from django.urls import path, include from django.</description>
+    </item>
+    
   </channel>
 </rss>

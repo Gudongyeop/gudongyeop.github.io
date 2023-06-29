@@ -34,12 +34,12 @@ $ npm install -g @vue/cli$ vue --version # 버젼확인  프로젝트 생성 �
     </item>
     
     <item>
-      <title>Vue.js</title>
+      <title>Vue</title>
       <link>https://dongyeopgu.github.io/vue.js.html</link>
       <pubDate>Mon, 25 May 2020 21:55:45 +0900</pubDate>
       
       <guid>https://dongyeopgu.github.io/vue.js.html</guid>
-      <description>Vue.js 학습 내용  학습한 Vue.js 내용 정리
+      <description>Vue 학습 내용  학습한 Vue 내용 정리
  </description>
     </item>
     

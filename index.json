@@ -7,6 +7,27 @@
 	"content": ""
 },
 {
+	"uri": "https://dongyeopgu.github.io/server/docker-compose-%EC%9D%B4%EC%9A%A9%ED%95%98%EA%B8%B0.html",
+	"title": "Docker-compose 이용하기",
+	"tags": ["Docker"],
+	"description": "",
+	"content": "Docker-compose를 이용한 배포  Docker compose를 이용하여 배포했던 것 정리.\n혼자 찾아보고 진행했던 내용이기 때문에 정확하지 않을 수 있음.\n 1. docker-compose.yml 파일 만들기  docker 실행 옵션을 미리 작성하고 편하게 사용하기 위함 frontend, backend, database, webserver를 각각 컨테이너로 사용했음 frontend는 vue cli로 backend는 node.js, 웹서버는 nginx, db는 mysql 이용 아래 docker-compose.yml파일은 내가 사용했던 것. 루트 폴더에 작성  version: \u0026#39;3\u0026#39;\rservices:\rfrontend:\rbuild:\rcontext: ./frontend\rdockerfile: Dockerfile\rvolumes:\r- \u0026#39;./frontend:/app\u0026#39;\r- \u0026#39;/app/node_modules\u0026#39;\rports:\r- \u0026#39;8080:8080\u0026#39;\rnginx:\rbuild:\rdockerfile: Dockerfile\rcontext: ./nginx ports:\r- \u0026#39;80:80\u0026#39;\rdepends_on:\r- frontend\rbackend:\rbuild:\rcontext: ./backend\rdockerfile: Dockerfile\rports:\r- \u0026#39;3000:3000\u0026#39;\rvolumes:\r- \u0026#39;./backend/:/app\u0026#39;\r- \u0026#39;/app/node_modules\u0026#39;\rdb:\rimage: mysql:5.7 # docker에서 제공하는 이미지 사용\r restart: always\renvironment:\rMYSQL_DATABASE: \u0026#39;사용할 DB\u0026#39;\r# Password for root access\r MYSQL_ROOT_PASSWORD: \u0026#39;비밀번호\u0026#39;\rports:\r# \u0026lt;Port exposed\u0026gt; : \u0026lt; MySQL Port running inside container\u0026gt;\r - \u0026#39;3306:3306\u0026#39;\rexpose:\r# Opens port 3306 on the container\r - \u0026#39;3306\u0026#39;\r# Where our data will be persisted\r volumes:\r- my-db:/var/lib/mysql\rvolumes:\rmy-db:\r1.1 frontend 부분  build 에 있는 context는 build를 실행할 경로이고 그 경로에 Dockerfile을 작성해 도커 이미지를 지정 아래는 /frontend에 만드는 Dockerfile 예  FROMnode:12.18.2\r\r# set working directory\rWORKDIR/app\r\r# add `/app/node_modules/.bin` to $PATH\rENV PATH /app/node_modules/.bin:$PATH\r\r# install and cache app dependencies\rCOPY package.json /app/package.json\rRUN npm install\r\r# start app\rCMD npm run serve\r volume 부분에서/frontend: /app은 컨테이너 안의 app directory와 연결시킬 루트폴더의 폴더 의미 port는 사용할 포트 지정  1.2 nginx 부분  docker에 있는 nginx 이미지를 사용 /nginx에 default.conf를 생성  upstream frontend {\rserver 내가 사용하는 url or ip:8080;\r}\rserver {\rlisten 80;\rlocation / {\rproxy_pass http://frontend;\rproxy_http_version 1.1;\rproxy_set_header Upgrade $http_upgrade;\rproxy_set_header Connection \u0026quot;Upgrade\u0026quot;;\r}\r}\r /nginx 에 있는 Dockerfile  FROMnginx\rCOPY ./default.conf /etc/nginx/conf.d/default.conf\r1.3 backend 부분  사용한 Dockerfile  FROMnode:12.18.2\r #어플리케이션 폴더를 Workdir로 지정\rWORKDIR/app\r #서버 파일 복사 ADD [어플리케이션파일 위치] [컨테이너내부의 어플리케이션 파일위치]\rADD ./ /app\r #패키지파일들 받기\rCOPY package.json /app/package.json\rRUN npm install\r #배포버젼으로 설정 - 이 설정으로 환경을 나눌 수 있습니다.\rENV NODE_ENV=production\r#서버실행\rCMD npm start\r1.4 DB부분  mysql 이미지 사용  2. 실행하기  docker-compoer build를 먼저 한 후에 docker-compose up을 한다 docker-compose up -d를 하면 실행 후, 콘솔로 나옴 한줄로 바꾸면 docker-compose up -d --build  해결해야할 문제점   docker를 사용할 경우 iptables에서 백엔드로 들어오는 것을 drop시킨 것들이 작동 안함. 그래서 누구나 백엔드 접근이 가능해졌음.\n  docker를 사용하지 않고 백엔드만 npm start 하면 문제없이 drop시킴\n  iptables DOCKER USER에 추가를 해도 안되고, ufw를 사용해도 다 접근 가능했음\n  조금 더 정확한 정보를 확인해야함\n  "
+},
+{
+	"uri": "https://dongyeopgu.github.io/node.js/node.js-%EC%8B%9C%EC%9E%91.html",
+	"title": "Express를 이용한 백엔드 구축",
+	"tags": ["Nodejs", "Node.js", "Express"],
+	"description": "",
+	"content": "Express 시작  백엔드에서 사용할 Nodejs Express 공부한 내용 정리.\n 1. Express 설치 및 Generator 사용  express generator를 사용하면 스켈레톤 코드 생성됨(Django에서 startproject와 유사함.)  $ npm install express --save $ npx express-generator $ express --view=pug 사용할 이름  npx command (available in Node.js 8.2.0)\n--view=pug를 사용안하면 jade파일로 구성됨.\n 2. Routes 이용하기  app.js 기본 구조  var indexRouter = require(\u0026#39;./routes/index\u0026#39;); ... app.use(\u0026#39;/\u0026#39;, indexRouter); ...  미리 만들어져 있는 index와 같이 새로 만들 route를 routes폴더에 생성 후 app.js에 추가 routes/만들.js 구조  let express = require(\u0026#39;express\u0026#39;); let router = express.Router(); // Mysql을 사용하기 위해 let mysql = require(\u0026#39;mysql\u0026#39;); let client = mysql.createConnection({ user: \u0026#39;\u0026#39;, password: \u0026#39;\u0026#39;, database: \u0026#39;\u0026#39; }) //router. 뒤에는 get, post, put, delete 와 같은 method 사용 가능 router.get(\u0026#39;/ddd\u0026#39;, function(req, res, next) { // res.render() 는 view 폴더의 pug 파일과 연동 // 나는 RESTful API로 백엔드로 사용하기 위해 res.json을 사용 // mysql에서 필요한 데이터를 가져오기 위한 쿼리문 작성  let queryString = \u0026#34;SELECT * FROM tableName;\u0026#34; client.query(queryString, function(err, result, fields) { if (err) { console.log(err)//대부분 쿼리문 오류시  } else { res.json(result) } }) })  function(req, res, next) 에서 req.body, req.query 등 이용하여 body나 query에 담겨있는 정보를 사용할 수 있음 url 부분에 /:string과 같이 사용하면 req.params.string을 사용하여 url 변동에 맞춰 사용 가능  "
+},
+{
+	"uri": "https://dongyeopgu.github.io/%EB%8B%A8%EC%88%9C%EA%B8%B0%EB%A1%9D/ssafy-3%EA%B8%B0-%EC%A7%80%EC%9B%90.html",
+	"title": "SSAFY 3기 지원",
+	"tags": ["SSAFY", "SSAFY3기"],
+	"description": "",
+	"content": "SSAFY 3기 지원 2017~2018년에 다니던 회사를 그만 두고 재취업을 하기 위해 1년 이상 시간을 보내며 많은 생각을 했고, 고등학교때 부터 생각만 해보았던 개발자를 해야겠다는 결론을 내렸다.\n이미 나이가 30살이 되었기에 독학으로 하기에는 부담이 되었고 SSAFY를 통해 조금이나마 빠르게 배워야겠다는 생각을 했고, 그렇게 2020년 SSAFY 3기로 시작하게 되었다.\n첫 시작은 나름 성공적이었고, 매일매일 멀티캠퍼스로 수업들으러 가는 일이 재밌었다.\n"
+},
+{
 	"uri": "https://dongyeopgu.github.io/vue.js/vue.js-%EA%B8%B0%EC%B4%88.html",
 	"title": "Vue.js 기초",
 	"tags": ["Vue", "Vue.js"],
@@ -21,6 +42,13 @@
 	"content": ""
 },
 {
+	"uri": "https://dongyeopgu.github.io/node.js/express-mysql.html",
+	"title": "Express와 MySQL",
+	"tags": ["Nodejs", "Node.js", "Express", "Mysql"],
+	"description": "",
+	"content": "Express \u0026amp; MySQL  프로젝트 진행하며 찾은 내용들 정리\n 1. MySQL 사용  npm install mysql 으로 mysql모듈 설치  var mysql = require(\u0026#39;mysql\u0026#39;); // 기본적으로 이렇게 사용 let client = mysql.createConnection({ user: \u0026#39;\u0026#39;, password: \u0026#39;\u0026#39;, database: \u0026#39;\u0026#39;, })  프로젝트를 진행하며 사용한 코드 샘플  router.post(\u0026#39;/measure\u0026#39;, function(req, res, next) { let info = req.body let temp = info.temp let datetime = info.datetime let serial = info.serial let studentNumber = null client.query(`SELECT no FROM student WHERE serial = \u0026#34;${serial}\u0026#34;;`, function(err, result, fields) { if (err) { console.log(err) } else { studentNumber = result[0].no client.query(`INSERT INTO temperature (temp, datetime, stu_no) VALUE (\u0026#34;${temp}\u0026#34;, \u0026#34;${datetime}\u0026#34;, \u0026#34;${studentNumber}\u0026#34;);`, function(err, result) { if (err) { console.log(err) } else { res.json(\u0026#34;완료\u0026#34;) } }) } }) }) 2. 만났던 오류  Vue.js \u0026lt;\u0026ndash;\u0026gt; Node.js \u0026lt;\u0026ndash;\u0026gt; MySQL에서 timezone 때문에 시간이 안맞는 오류가 발생 MySQL에서 timezone을 한국으로 바꾸고 데이터를 저장하고 가져와도 +0900이 아닌 000Z가 계속 붙어서 왔음. 그리고 이미 Vue에선 moment로 timezone을 서울로 바꿔서 사용 중이었기 때문에 18시간이 더해지는 결과가 발생. 쉬운 방법으로 node.js에서 mysql에서 가져온 datetime을 string으로 바꿔 시간 계산을 하여 필요한 시간을 가져다 씀  let client = mysql.createConnection({ user: \u0026#39;\u0026#39;, host: \u0026#39;서버\u0026#39;, port: 3306, password: \u0026#39;\u0026#39;, database: \u0026#39;\u0026#39;, timezone: \u0026#39;+09:00\u0026#39;, dateStrings: \u0026#39;date\u0026#39; }) ... let reGrouped = [] grouped.forEach(e =\u0026gt; { let tem = { \u0026#34;student_number\u0026#34;: e.student_number, \u0026#34;student_name\u0026#34;: e.student_info.name, \u0026#34;student_gisu\u0026#34;: e.student_info.gisu, \u0026#34;student_area\u0026#34;: e.student_info.area, \u0026#34;student_part\u0026#34;: e.student_info.part, \u0026#34;student_class\u0026#34;: e.student_info.stu_class, } e.temp_info.forEach(el =\u0026gt; { console.log(el.datetime); let measuringHour = el.datetime.substr(11,2) measuringHour *= 1 // console.log(measuringHour)  // console.log(dateChange.length)  if (8\u0026lt;= measuringHour \u0026amp;\u0026amp; measuringHour \u0026lt;= 10) { tem[\u0026#34;morning_temp\u0026#34;] = el.temperature tem[\u0026#34;morning_time\u0026#34;]= el.datetime } else if (11 \u0026lt;= measuringHour \u0026amp;\u0026amp; measuringHour \u0026lt;= 14) { tem[\u0026#34;lunch_temp\u0026#34;] = el.temperature tem[\u0026#34;lunch_time\u0026#34;]= el.datetime } }) reGrouped.push(tem) }) res.json(reGrouped); .....  이런식으로 사용했음\n "
+},
+{
 	"uri": "https://dongyeopgu.github.io/vue.js/vue-cli3.html",
 	"title": "Vue CLI",
 	"tags": ["Vue", "Vue.js"],
@@ -28,8 +56,64 @@
 	"content": "Vue CLI3 설치   공식 문서\n   설치 순서 (Windows10)\n$ npm install -g @vue/cli\r$ vue --version # 버젼확인\r  프로젝트 생성 및 실행  $ vue create \u0026lt;프로젝트 명\u0026gt;\r$ cd \u0026lt;프로젝트명\u0026gt; # 프로젝트 폴더로 이동\r$ npm run serve\r프로젝트 정리    src/App.vue에서 필요없는 기본코드 삭제(아래처럼)\n\u0026lt;template\u0026gt;\r\u0026lt;div id=\u0026#34;app\u0026#34;\u0026gt;\r\u0026lt;/div\u0026gt;\r\u0026lt;/template\u0026gt;\r\u0026lt;script\u0026gt;\rexport default {\rname: \u0026#39;App\u0026#39;,\rcomponents: {},\r//여기에 data, methods 등 넣으면 됨\r }\r\u0026lt;/script\u0026gt;\r\u0026lt;style\u0026gt;\r\u0026lt;/style\u0026gt;\r  컴포넌트 사용 방법   컴포넌트 생성 : components폴더에 .vue만들기(PascalCase로 이름만들기) 불러오기 : import 컴포넌트이름 from 경로 등록하기 : components 속성에 등록 사용하기 : \u0026lt;template\u0026gt; 내부에 html 태그처럼 추가  컴포넌트 기초 만들기    .vue파일 만들고 vue + tab 또는 \u0026lt; + tab으로 기초 작성\n  \u0026lt;template\u0026gt; 태그 안에 \u0026lt;div\u0026gt;안에 넣어줘야함\n  App.vue에서 연결\n\u0026lt;template\u0026gt;\r\u0026lt;div id=\u0026#34;app\u0026#34;\u0026gt;\r\u0026lt;Index/\u0026gt;\r\u0026lt;/div\u0026gt;\r\u0026lt;/template\u0026gt;\r\u0026lt;script\u0026gt;\rimport Index from \u0026#39;./components/Index.vue\u0026#39;\rexport default {\rname: \u0026#39;App\u0026#39;,\rcomponents: {\rIndex,\r}\r}\r\u0026lt;/script\u0026gt;\r\u0026lt;style\u0026gt;\r\u0026lt;/style\u0026gt;\r  components에서 data 작성 시 data: function () {}으로 작성\n  lodash 사용하여 샘플링 기능 추가\n$ npm i lodash\r  Vue-Router  공식 문서 참조\n 설치  $ vue add router\r컴포넌트 사용하기   컴포넌트를 만든다. 컴포넌트를 가져온다. 컴포넌트를 등록. 컴포넌트 사용. views폴더에 .vue파일 작성  router 폴더   index를 만들었을 때\n import Vue from \u0026#39;vue\u0026#39;\rimport VueRouter from \u0026#39;vue-router\u0026#39;\rimport Index from \u0026#39;../views/Index.vue\u0026#39;\rVue.use(VueRouter)\rconst routes = [\r{\rpath: \u0026#39;/\u0026#39;,\rname: \u0026#39;Index\u0026#39;,\rcomponents: Index\r},\r]\rconst router = new VueRouter({\rmode: \u0026#39;history\u0026#39;,\rbase: process.env.BASE_URL,\rroutes\r})\rexport default router\rHistory Mode   SPA의 단점은 주소가 바뀌지 않는다는 것. 주소가 바뀌지 않는다는 것은 사용자가 어떤 페이지에 요청을 보내 응답을 받았는지에 대한 history 관리를 할 수 없다는 뜻. 초창기에는 주소 뒤에 #(해쉬)또는 #!(해쉬뱅)을 붙이고 뒤에 하위 주소를 넣었다 (history mode off 하면 확인 가능) 브라우저에서 제공하는 주소 API를 사용해 주소를 바꾼다. 이를 위해 사용하는 것이 history API다.  "
 },
 {
+	"uri": "https://dongyeopgu.github.io/server/%EB%A7%8E%EC%9D%B4-%EC%82%AC%EC%9A%A9%ED%95%9C-ubuntu-%EB%AA%85%EB%A0%B9%EC%96%B4.html",
+	"title": "많이 사용한 Ubuntu 명령어",
+	"tags": ["Ubuntu"],
+	"description": "",
+	"content": "명령어  나중에 생각안날때 보려고 만든 Ubuntu 18.04 에서 배포시 많이 사용했던 명령어들\n  netstat -nlpt 현재 listen 중인 포트 확인 netstat -nat로도 확인 가능 netstat -nap | grep 포트 번호 특정 포트 확인 fuser -k -n tcp 포트번호 포트번호에서 사용중인 프로세스 죽이기 vi로 파일을 읽고 수정했을 때 :wq저장후 닫기 :qa 저장안하고 닫기 :qa! qa안될때 docker ps 현재 켜져있는 docker 확인 docker stop 뒤에 docker ps `으로 감싸면 실행중인 docker 파일들 종료 docker-compose build --no-cache 캐시 이용 안하고 build iptables -L --line-numbers iptable 룰 번호 확인 iptables -D chain이름 숫자 위에서 확인한 번호 룰 삭제할 때 iptables -I chain이름 -p tcp -s 허용할 ip --dport 포트번호 -j ACCEPT 지정한 포트 번호 특정 IP 허용 맨 윗줄에 룰 삽입  SSH 접속 느릴 때  vi /etc/ssh/sshd_config로 sshd_config 파일 수정  GSSAPIAuthentication no 주석 해제 UseDNS no주석 해제 $ service sshd restart 로 재시작    "
+},
+{
+	"uri": "https://dongyeopgu.github.io/%EB%8B%A8%EC%88%9C%EA%B8%B0%EB%A1%9D/%EC%BD%94%EB%A1%9C%EB%82%98...html",
+	"title": "코로나...",
+	"tags": ["SSAFY", "SSAFY3기", "망할코로나"],
+	"description": "",
+	"content": "코로나로 인한 온라인 수업  갑자기 터진 코로나로 인해 모든 수업이 온라인으로 변경됨.\n 코로나로 인해 오프라인으로 열심히 참석하던 수업들이 모두 온라인 수업으로 변경되었고, 알고리즘 스터디 등 열정적으로 시작하던 개발자가 되는 목표가 잠시 흔들렸다.\n하지만 온라인 수업의 장점도 있었고, 결국 재밌게 마칠 수 있었다.\n"
+},
+{
+	"uri": "https://dongyeopgu.github.io/%EB%8B%A8%EC%88%9C%EA%B8%B0%EB%A1%9D/2%ED%95%99%EA%B8%B0-%EC%8B%9C%EC%9E%91.html",
+	"title": "2학기 시작",
+	"tags": ["SSAFY", "SSAFY3기", "SSAFY 2학기"],
+	"description": "",
+	"content": "SSAFY 2학기 시작  잠시 주춤해진 코로나로 인해 온/오프라인 수업 병행\n 다양한 프로젝트를 경험해 볼 수 있는 2학기가 시작되었고 오프라인으로 사람들을 만나서 프로젝트를 할 수 있어서 값진 경험이 되었다.\n"
+},
+{
 	"uri": "https://dongyeopgu.github.io/til/6%EC%9B%94.html",
 	"title": "6월",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/server/https-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0.html",
+	"title": "https 사용하기",
+	"tags": ["ssl", "certbot", "https"],
+	"description": "",
+	"content": "https 사용하기(docker, nginx 사용)  처음에 openssl 로 .key 와 .cert를 만들어 사용했지만 인증되지 않았기 때문에 https가 나왔음. 그래서 certbot을 이용하여 다시 인증키를 발급받아 사용.\n 1. certbot 이용하여 키 발급  certbot certonly --standalone -d 도메인이름 으로 키 발급 발급이 완료되면 /etc/letsencrypt/live/도메인이름 경로에 cert.pem chain.pem fullchain.pem privkey.pem 파일들이 생김  2. Nginx 설정  나는 default.conf에서 설정하여 실행시켰음 생성된 파일을 다른 폴더에 넣어서 사용했음  upstream client {\rserver 도메인이름;\r}\rserver {\rlisten 80;\rserver_name 도메인이름;\rreturn 301 https://$host$request_uri;\r}\rserver {\rlisten 443 ssl;\rserver_name 도메인이름; ssl_certificate /ssl/fullchain1.pem;\rssl_certificate_key /ssl/privkey1.pem;\rlocation / {\rproxy_pass http://도메인이름;\rproxy_http_version 1.1;\rproxy_set_header Upgrade $http_upgrade;\rproxy_set_header Connection \u0026quot;Upgrade\u0026quot;;\r}\r}\r3. Docker-compose.yml 수정  default.conf 파일을 docker-compose.yml과 같은 경로에 넣어서 실행시켰음.  nginx:\rrestart: always\rimage: nginx:latest ports:\r- \u0026#39;80:80\u0026#39; - \u0026#39;443:443\u0026#39;\rvolumes:\r- \u0026#39;./default.conf:/etc/nginx/conf.d/default.conf\u0026#39;\r- \u0026#39;/새로 만든 폴더/ssl/:/ssl/\u0026#39;\r  구글링을 통해 필요하다고 생각하는 부분만 넣어서 사용했기 때문에 정확하지 않을 수 있음. 이론 공부도 함께 해야할 듯.\n "
+},
+{
+	"uri": "https://dongyeopgu.github.io/%EB%8B%A8%EC%88%9C%EA%B8%B0%EB%A1%9D/2%ED%95%99%EA%B8%B0-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%AA%A8%EB%91%90-%EC%99%84%EB%A3%8C.html",
+	"title": "2학기 프로젝트 완료",
+	"tags": ["SSAFY", "SSAFY3기", "SSAFY 2학기"],
+	"description": "",
+	"content": "SSAFY 2학기 프로젝트 완료  2학기의 모든 프로젝트를 잘 마칠 수 있었고, 많은 발전이 생겼다.\n 다양한 프로젝트들을 하며 좋은 경험을 했고, 하고 싶은 분야와 재밌는 분야 및 앞으로 무엇을 더 공부할지 정할 수 있게 되었다.\n"
+},
+{
+	"uri": "https://dongyeopgu.github.io/til/7%EC%9B%94.html",
+	"title": "7월",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/server/nginx-%ED%8C%8C%EC%9D%BC-%EC%97%85%EB%A1%9C%EB%93%9C-%EC%9A%A9%EB%9F%89-%EC%84%A4%EC%A0%95.html",
+	"title": "Nginx 파일 업로드 용량 설정",
+	"tags": ["Nginx"],
+	"description": "",
+	"content": "Docker-compose \u0026amp; Nginx  Docker-compose와 Nginx 사용하며 파일 업로드시 용량이 클 경우 해결하기 위한 방법\n   default.conf 파일\n....\rserver {\rlisten 443 ssl;\rserver_name frontend;\rssl on; ssl_certificate /ssl/fullchain.pem;\rssl_certificate_key /ssl/privkey.pem; access_log /var/log/nginx/data-access.log combined;\rlocation / {\rproxy_pass http://frontend;\rproxy_set_header Host $host;\rproxy_http_version 1.1;\rproxy_set_header Upgrade $http_upgrade;\rclient_max_body_size 20M;\r......\r  default.conf 에서 location 부분에 client_max_body_size \u0026lt;용량\u0026gt;; 추가\n  "
+},
+{
+	"uri": "https://dongyeopgu.github.io/til/8%EC%9B%94.html",
+	"title": "8월",
 	"tags": [],
 	"description": "",
 	"content": ""
@@ -49,6 +133,13 @@
 	"content": "기초  1. django 설치 $ pip install django==2.1.15\r(2.1.15 기준으로 배웠기 때문에)\n2. 프로젝트 시작 $ django-admin startproject {프로젝트 이름}\r그 후에 프로젝트 폴더의 settings.py에서 ALLOWED_HOST = [\u0026#39;*\u0026#39;]로 수정\r3. App 만들기 # manage.py 파일이 있는 폴더에서 터미널 진입 후 bash 에 $ python manage.py startapp {앱 이름}\r # 그 후에 settings.py에서  INSTALLED_APPS = [\r\u0026#39;{앱 이름}\u0026#39; 추가\r]\r4. urls.py 작성 # 프로젝트 이름/urls.py에서 예를 들어 index 페이지를 넣을 경우  from app이름 import views #추가\r urlpatterns =[\rpath(\u0026#39;index/\u0026#39;, views.index),\r]\r## path의 url은 항상 /로 닫기 ##\r 5. views.py 작성 # app 이름/views.py 에서\r def index(request):\rreturn render(request, \u0026#39;index.html\u0026#39;) #기본 형식\r # 만약 html파일에 넣고자 하는 내용이 있을 경우에는\r def index(request):\rsample = \u0026#39;샘플\u0026#39;\rcontext = {\r\u0026#39;sample\u0026#39;: sample,\r}\rreturn render(request, \u0026#39;index.html\u0026#39;, context)\r# 이렇게 쓸 수 있음. 다른 방법으로,\r context를 적지 않고 바로 return render(request, \u0026#39;index.html\u0026#39;, {\u0026#39;sample\u0026#39;:sample})로 쓸 수 있음.\r 함수 정의에서 첫번째 인자는 항상 request로 render에서도 첫번째 인자는 항상 request  6. templates 폴더 만들기  필요한 html 파일을 app이름 폴더 안에 templates 폴더를 만든후 저장. django template language는 https://docs.djangoproject.com/en/3.0/를 이용해서 확인  7. base.html 만들 경우 # 프로젝트명 폴더에 templates 폴더를 만든 후\r # settings.py에서\r TEMPLATES = [\r{\r...\r\u0026#39;DIRS\u0026#39;: [\ros.path.join(BASE_DIR, \u0026#39;templates\u0026#39;)\r], # 추가\r ...\r}\r]\r base.html 작성  \u0026lt;!DOCTYPE html\u0026gt;\r\u0026lt;html lang=\u0026#34;ko\u0026#34;\u0026gt;\r\u0026lt;head\u0026gt;\r\u0026lt;meta charset=\u0026#34;UTF-8\u0026#34;\u0026gt;\r\u0026lt;meta name=\u0026#34;viewport\u0026#34; content=\u0026#34;width=device-width, initial-scale=1.0\u0026#34;\u0026gt;\r\u0026lt;meta http-equiv=\u0026#34;X-UA-Compatible\u0026#34; content=\u0026#34;ie=edge\u0026#34;\u0026gt;\r\u0026lt;title\u0026gt;Document\u0026lt;/title\u0026gt;\r\u0026lt;/head\u0026gt;\r\u0026lt;body\u0026gt;\r{% block body %}\r{% endblock %}\r\u0026lt;/body\u0026gt;\r\u0026lt;/html\u0026gt;\r 그리고 app이름 폴더에 있는 templates 안에 있는 html 파일들에 내용 추가  {% extends \u0026#39;base.html\u0026#39; %}\r{% block body %}\r\u0026lt;!-- html 작성 --\u0026gt;\r{% endblock %}\r  Django CRUD Django Paginator Django User(1) Django User(2) Django Comment Django M:N Django REST Framework  "
 },
 {
+	"uri": "https://dongyeopgu.github.io/server/docker-compose%EB%A1%9C-django-%EC%82%AC%EC%9A%A9.html",
+	"title": "Docker-compose로 Django 사용",
+	"tags": ["Django", "Docker-compose", "Gunicorn"],
+	"description": "",
+	"content": "Docker-compose \u0026amp; Django \u0026amp; Gunicorn  Docker-compose로 Django \u0026amp; Gunicorn 사용하기\n   Dockerfile\nFROMpython:3.6.9\rENV PYTHONUNBUFFERED 1\rRUN mkdir /backend\rWORKDIR/backend\rADD requirements.txt /backend/\rRUN pip install --upgrade pip\rRUN pip install -r requirements.txt\rADD . /backend/\r  docker-compose.yml\nbackend:\rbuild: context: ./backend\rdockerfile: Dockerfile\rrestart: always\renv_file:\r- ./backend/.env\rexpose:\r- \u0026#34;8001\u0026#34;\rvolumes:\r- \u0026#39;./backend:/backend\u0026#39;\rcommand:\r\u0026#34;gunicorn --workers=2 --bind=0.0.0.0:8001 backend.wsgi:application\u0026#34;\r 내부 접속만 열기위한 설정  backend-dev:\rbuild: context: ./backend\rdockerfile: Dockerfile\rrestart: always\renv_file:\r- ./backend/.env\rports:\r- \u0026#34;8000:8000\u0026#34;\rvolumes:\r- \u0026#39;./backend:/backend\u0026#39;\rcommand:\r\u0026#34;gunicorn --workers=2 --bind=0.0.0.0:8000 backend.wsgi:application\u0026#34;\r 포트 8000은 외부 접속을 할 수 있도록 하여 개발 중 서버에 있는 DB를 사용    expose를 사용하여 컨테이너 내부의 포트만 사용해 컨테이너 내부 IP 172.xxxxx로 서버에서만 접속 가능하도록 했음\n  명령어 docker inspect \u0026lt;컨테이너 id\u0026gt; 로 내부 IP 를 확인 후 vue.config.js에서 proxy를 사용하여 프록시 설정까지 해줌.\n 사용 예)  module.exports = {\rdevServer: {\rdisableHostCheck: true,\rproxy: {\r\u0026#39;/api\u0026#39; : {\rtarget: \u0026#39;http://172.19.0.4:8001\u0026#39;,\r.......\r 컨테이너 중지 후 다시 킬 경우 내부 IP가 변동될 수 있기 때문에 확인하여 수정하거나 내부 IP를 고정시키는 방법을 봐야함.    "
+},
+{
 	"uri": "https://dongyeopgu.github.io/algorithm/baekjoon.html",
 	"title": "백준 문제풀이",
 	"tags": ["백준", "baekjoon"],
@@ -56,11 +147,25 @@
 	"content": "BAEKJOON 의 알고리즘 문제  BAEKJOON 답  "
 },
 {
+	"uri": "https://dongyeopgu.github.io/%EB%8B%A8%EC%88%9C%EA%B8%B0%EB%A1%9D/%EC%9B%B9-%EA%B0%9C%EB%B0%9C%EC%9E%90%EB%A1%9C-%EC%B7%A8%EC%97%85.html",
+	"title": "웹 개발자로 취업",
+	"tags": ["SSAFY", "SSAFY3기", "SSAFY 2학기"],
+	"description": "",
+	"content": "웹 개발자로 취업  프로젝트를 잘 마침과 동시에 웹 개발자로 취업\n 백엔드와 서버에 관심이 많았고 스타트업에서 일을 시작하고 싶었기에 스타트업 위주로 하고 싶은 일을 할 수 있는 곳들로 많은 서류를 제출했고, 많은 탈락을 경험하며 결국 원하는 업무와 환경을 제공해주는 곳에 취업을 하게 되었다.\n"
+},
+{
 	"uri": "https://dongyeopgu.github.io/project.html",
 	"title": "Project",
 	"tags": [],
 	"description": "",
-	"content": "현재 진행 중인 프로젝트   Django를 이용한 간단한 웹페이지 구현\nGithub repo 주소\n  Django와 vue를 이용한 영화 추천 사이트\nGithub repo 주소\n배포한 사이트\n  "
+	"content": "완료한 프로젝트   Django를 이용한 간단한 웹페이지 구현\nGithub repo 주소\n  Django와 vue를 이용한 영화 추천 사이트\nGithub repo 주소\n[배포 중단]\n  비접촉 체온 측정(IoT 프로젝트)\nGithub repo 주소\n[배포 중단]\n  수상한 동물 사전(AI 이용한 동물 판단)\nGithub repo 주소\n[배포 중단]\n  정수리영역 점수(재미로 보는 탈모진단)(진행중)\nhttps://정수리영역점수.kro.kr\n  "
+},
+{
+	"uri": "https://dongyeopgu.github.io/til/9%EC%9B%94.html",
+	"title": "9월",
+	"tags": [],
+	"description": "",
+	"content": ""
 },
 {
 	"uri": "https://dongyeopgu.github.io/algorithm.html",
@@ -105,18 +210,18 @@
 	"content": "Paginator 사용하기   게시판 같은 곳에서 리스트의 양이 많아 질 경우 나누어 보여주기 위해서 사용\n여기 적힌 예에서 model은 Review 이고 forms는 ReviewForm이다.\nbootstrap을 사용했음.\n 1. views.py에 내용 추가하기 from django.core.paginator import Paginator\rdef review_list(request):\rreviews = Review.objects.order_by(\u0026#39;-pk\u0026#39;)\rpaginator = Paginator(reviews, 5) #한 페이지 당 몇개 씩 보여줄 지 지정\r page_number = request.GET.get(\u0026#39;page\u0026#39;)\rpage_obj = paginator.get_page(page_number)\rreviews_all = get_list_or_404(Review) #전체 개수를 보기 위해\r total_count = len(reviews_all)\t# 리뷰의 총 개수  total_page = total_count//5\t# 리뷰 총 개수 / 한 페이지에 보여줄 수\r page_range = range(1,total_page+1)\rcontext = {\r\u0026#39;reviews\u0026#39;: reviews,\r\u0026#39;page_obj\u0026#39;: page_obj,\r\u0026#39;page_range\u0026#39;: page_range,\r}\rreturn render(request, \u0026#39;앱이름/review_list.html\u0026#39;, context)\r2. 리스트를 보여줄 html파일 수정 {% for review in page_obj %}\r\u0026lt;div class=\u0026#34;card mb-3 border-info\u0026#34; onclick=\u0026#34;location.href=\u0026#39;/community/{{ review.pk }}/\u0026#39;\u0026#34; style=\u0026#34;cursor:pointer\u0026#34;\u0026gt;\r\u0026lt;div class=\u0026#34;card-header\u0026#34;\u0026gt;\r{{ review.movie_title }}\r\u0026lt;/div\u0026gt;\r\u0026lt;div class=\u0026#34;card-body\u0026#34;\u0026gt;\r\u0026lt;h5 class=\u0026#34;card-title\u0026#34;\u0026gt;{{ review.title }}\u0026lt;/h5\u0026gt;\r\u0026lt;p class=\u0026#34;card-text\u0026#34;\u0026gt;{{ review.content }} \u0026lt;/p\u0026gt;\r\u0026lt;a href=\u0026#34;{% url \u0026#39;reviews:detail\u0026#39; review.pk %}\u0026#34; class=\u0026#34;btn btn-info float-right\u0026#34;\u0026gt;Go Detail\u0026lt;/a\u0026gt;\r\u0026lt;p class=\u0026#34;card-text\u0026#34;\u0026gt;{{ review.created_at|date:\u0026#34;y.m.d P\u0026#34; }}\u0026lt;/h3\u0026gt;\r\u0026lt;/div\u0026gt;\r\u0026lt;/div\u0026gt;\r{% endfor %}\r\u0026lt;!-- Paginator !--\u0026gt;\r\u0026lt;nav aria-label=\u0026#34;Page navigation\u0026#34;\u0026gt;\r\u0026lt;ul class=\u0026#34;pagination\u0026#34;\u0026gt;\r{% if page_obj.has_previous %}\r\u0026lt;li class=\u0026#34;page-item\u0026#34;\u0026gt;\u0026lt;a class=\u0026#34;page-link\u0026#34; href=\u0026#34;?page={{ page_obj.previous_page_number }}\u0026#34;\u0026gt;Previous\u0026lt;/a\u0026gt;\u0026lt;/li\u0026gt;\r{% else %}\r\u0026lt;li class=\u0026#34;page-item\u0026#34;\u0026gt;\u0026lt;a class=\u0026#34;page-link\u0026#34; href=\u0026#34;#\u0026#34;\u0026gt;Previous\u0026lt;/a\u0026gt;\u0026lt;/li\u0026gt;\r{% endif %}\r{% for page in page_range %}\r{% if page_obj.number == page %}\r\u0026lt;li class=\u0026#34;page-item active\u0026#34;\u0026gt;\u0026lt;a class=\u0026#34;page-link\u0026#34; href=\u0026#34;?page={{ page }}\u0026#34;\u0026gt;{{ page }}\u0026lt;span class=\u0026#34;sr-only\u0026#34;\u0026gt;(current)\u0026lt;/span\u0026gt;\u0026lt;/a\u0026gt;\u0026lt;/li\u0026gt;\r{% else %}\r\u0026lt;li class=\u0026#34;page-item\u0026#34;\u0026gt;\u0026lt;a class=\u0026#34;page-link\u0026#34; href=\u0026#34;?page={{ page }}\u0026#34;\u0026gt;{{ page }}\u0026lt;/a\u0026gt;\u0026lt;/li\u0026gt;\r{% endif %}\r{% endfor %}\r{% if page_obj.has_next %}\r\u0026lt;li class=\u0026#34;page-item\u0026#34;\u0026gt;\u0026lt;a class=\u0026#34;page-link\u0026#34; href=\u0026#34;?page={{ page_obj.next_page_number }}\u0026#34;\u0026gt;Next\u0026lt;/a\u0026gt;\u0026lt;/li\u0026gt;\r{% else %}\r\u0026lt;li class=\u0026#34;page-item\u0026#34;\u0026gt;\u0026lt;a class=\u0026#34;page-link\u0026#34; href=\u0026#34;#\u0026#34;\u0026gt;Next\u0026lt;/a\u0026gt;\u0026lt;/li\u0026gt;\r{% endif %}\r\u0026lt;/ul\u0026gt;\r\u0026lt;/nav\u0026gt;\r 현재 페이지에 따라 표시를 다르게 하기 위하여 {% if page_obj.number == page %}을 사용함    Django 기초 Django CRUD Django User(1) Django User(2) Django Comment Django M:N Django REST Framework  "
 },
 {
+	"uri": "https://dongyeopgu.github.io/algorithm/d4~6.html",
+	"title": "D4~6 문제풀이",
+	"tags": ["SWEA"],
+	"description": "",
+	"content": "SW Expert Academy의 D4~D6 문제 "
+},
+{
 	"uri": "https://dongyeopgu.github.io/django/django_login.html",
 	"title": "Django User (1)",
 	"tags": ["django", "sign in", "sign out", "sign up"],
 	"description": "",
 	"content": "User 관리(sign in, out, up)   로그인 기능을 넣는 방법\nmodel을 만들 필요 없이 django에서 제공하는 user 모델을 사용함\nbootstrap 사용을 기반으로 작성함\n 1. accounts라는 새로운 app을 작성 2. 기본 제공되는 User 모델을 사용하기 때문에 forms.py만 작성 from django.forms import ModelForm\rfrom django.contrib.auth.models import User # django에서 기본 제공하는 model이 있음.\r from django import forms\rclass SignupForm(ModelForm): #회원가입을 제공하는 class이다.\r username = forms.CharField(\rmax_length=20,\rmin_length=6,\rwidget=forms.TextInput(\rattrs={\r\u0026#39;class\u0026#39;: \u0026#39;form-control\u0026#39;\r}\r)\r)\rpassword = forms.CharField(\rmax_length=16,\rmin_length=8,\rwidget=forms.PasswordInput(\rattrs={\r\u0026#39;class\u0026#39;: \u0026#39;form-control\u0026#39;,\r\u0026#39;placeholder\u0026#39;: \u0026#39;8글자 이상, 16글자 이하로 작성해주세요.\u0026#39;\r}\r)\r)\rpassword_confirm = forms.CharField(\rmax_length=16,\rmin_length=8,\rwidget=forms.PasswordInput(\rattrs={\r\u0026#39;class\u0026#39;: \u0026#39;form-control\u0026#39;,\r\u0026#39;placeholder\u0026#39;: \u0026#39;8글자 이상, 16글자 이하로 작성해주세요.\u0026#39;\r}\r)\r)\rlast_name = forms.CharField(\rwidget=forms.TextInput(\rattrs={\r\u0026#39;class\u0026#39;: \u0026#39;form-control\u0026#39;,\r}\r)\r)\rfirst_name = forms.CharField(\rwidget=forms.TextInput(\rattrs={\r\u0026#39;class\u0026#39;: \u0026#39;form-control\u0026#39;,\r}\r)\r)\remail = forms.EmailField(\rwidget=forms.EmailInput(\rattrs={\r\u0026#39;class\u0026#39;: \u0026#39;form-control\u0026#39;,\r}\r)\r)\rfield_order=[\u0026#39;username\u0026#39;,\u0026#39;password\u0026#39;,\u0026#39;password_confirm\u0026#39;,\u0026#39;last_name\u0026#39;,\u0026#39;first_name\u0026#39;,\u0026#39;email\u0026#39;]\r#field_order는 만들어지는 입력양식의 순서, password 바로 밑에 password_check 양식을 추가하기 위해 사용\r class Meta:\rmodel=User\rwidgets = {\u0026#39;password\u0026#39;:forms.PasswordInput}\rfields = [\u0026#39;username\u0026#39;,\u0026#39;password\u0026#39;,\u0026#39;last_name\u0026#39;,\u0026#39;first_name\u0026#39;,\u0026#39;email\u0026#39;]\r#User model에 정의된 username, passwordm last_name, first_name, email을 입력양식으로\r class SigninForm(ModelForm):\rusername = forms.CharField(\rmax_length=20,\rmin_length=6,\rwidget=forms.TextInput(\rattrs={\r\u0026#39;class\u0026#39;: \u0026#39;form-control\u0026#39;\r}\r)\r)\rpassword = forms.CharField(\rmax_length=16,\rmin_length=8,\rwidget=forms.PasswordInput(\rattrs={\r\u0026#39;class\u0026#39;: \u0026#39;form-control\u0026#39;,\r}\r)\r)\rclass Meta:\rmodel = User\rwidgets = {\u0026#39;password\u0026#39;:forms.PasswordInput}\rfields = [\u0026#39;username\u0026#39;,\u0026#39;password\u0026#39;]\r3. urls.py와 views.py 작성 ### urls.py ###\r from django.urls import path, include\rfrom . import views\rapp_name=\u0026#39;accounts\u0026#39;\rurlpatterns = [\rpath(\u0026#39;signup/\u0026#39;, views.signup, name=\u0026#34;signup\u0026#34;),\rpath(\u0026#39;signin/\u0026#39;, views.signin, name=\u0026#34;signin\u0026#34;),\rpath(\u0026#39;signout/\u0026#39;, views.signout, name=\u0026#34;signout\u0026#34;),\rpath(\u0026#39;community/\u0026#39;, include(\u0026#39;community.urls\u0026#39;)),\r]\r### views.py ###\r from django.shortcuts import render, redirect\rfrom django.urls.base import reverse\rfrom django.contrib.auth.models import User\rfrom django.contrib.auth import login, authenticate, logout\r#login은 login처리를 해주며, authenticate는 아이디와 비밀번호가 모두 일치하는 User 객체를 추출\r from .forms import SigninForm, SignupForm\r# Create your views here.\r def signup(request):#역시 GET/POST 방식을 사용하여 구현한다.\r if request.method == \u0026#34;GET\u0026#34;:\rform = SignupForm()\rcontext = {\r\u0026#39;form\u0026#39;: form\r}\rreturn render(request, \u0026#39;accounts/signup.html\u0026#39;, context)\relif request.method == \u0026#34;POST\u0026#34;:\rform = SignupForm(request.POST)\rif form.is_valid():\rif form.cleaned_data[\u0026#39;password\u0026#39;] == form.cleaned_data[\u0026#39;password_confirm\u0026#39;]:\r#cleaned_data는 사용자가 입력한 데이터를 뜻한다.\r #즉 사용자가 입력한 password와 password_check가 맞는지 확인하기위해 작성해주었다.\r new_user = User.objects.create_user(\rform.cleaned_data[\u0026#39;username\u0026#39;],\rform.cleaned_data[\u0026#39;email\u0026#39;],\rform.cleaned_data[\u0026#39;password\u0026#39;]\r)\r#User.object.create_user는 사용자가 입력한 name, email, password를 가지고 아이디를 만든다.\r #바로 .save를 안해주는 이유는 User.object.create를 먼저 해주어야 비밀번호가 암호화되어 저장된다.\r new_user.last_name = form.cleaned_data[\u0026#39;last_name\u0026#39;]\rnew_user.first_name = form.cleaned_data[\u0026#39;first_name\u0026#39;]\r#나머지 입력하지 못한 last_name과, first_name은 따로 지정해준다.\r new_user.save()\rreturn redirect(reverse(\u0026#39;reviews:review_list\u0026#39;))\relse:\rcontext = {\r\u0026#39;form\u0026#39;:form,\r\u0026#39;error\u0026#39;:\u0026#39;비밀번호와 비밀번호 확인이 다릅니다.\u0026#39;\r}\rreturn render(request, \u0026#39;accounts/signup.html\u0026#39;,)\r#password와 password_check가 다를 것을 대비하여 error를 지정해준다.\r else: #form.is_valid()가 아닐 경우, 즉 유효한 값이 들어오지 않았을 경우\r context = {\r\u0026#39;form\u0026#39;:form\r}\rreturn render(request, \u0026#39;accounts/signup.html\u0026#39;, context)\rdef signin(request):\rif request.method == \u0026#34;GET\u0026#34;:\rform = SigninForm()\rcontext = {\r\u0026#39;form\u0026#39;: form,\r}\rreturn render(request, \u0026#39;accounts/signin.html\u0026#39;, context)\relif request.method == \u0026#34;POST\u0026#34;:\rform = SigninForm(request.POST)\rid = request.POST[\u0026#39;username\u0026#39;]\rpw = request.POST[\u0026#39;password\u0026#39;]\ruser = authenticate(username=id, password=pw) # username과 password를 비교, 같으면 해당객체 반환 아니면 none\r if user: # user 값이 있으면\r login(request, user=user) # user값으로 로그인\r return redirect(\u0026#39;reviews:review_list\u0026#39;)\relse:\rcontext = {\r\u0026#39;form\u0026#39; : form,\r\u0026#39;error\u0026#39;: \u0026#39;아이디나 비밀번호가 일치하지 않습니다.\u0026#39;\r}\rreturn render(request, \u0026#39;accounts/signin.html\u0026#39;, context)\rdef signout(request):\rlogout(request)\rreturn redirect(\u0026#39;reviews:review_list\u0026#39;)\r4. 로그인 관련 html을 작성  bootstrap을 사용하여 네비게이션 바에 로그인 상태에 따라 다르게 표시함\n \u0026lt;!-- base.html 일부 --\u0026gt;\r\u0026lt;div class=\u0026#34;collapse navbar-collapse justify-content-between\u0026#34; id=\u0026#34;navbarNav\u0026#34;\u0026gt;\r\u0026lt;ul class=\u0026#34;navbar-nav\u0026#34;\u0026gt;\r{% if request.resolver_match.url_name == \u0026#39;create\u0026#39; %}\r\u0026lt;li class=\u0026#34;nav-item\u0026#34;\u0026gt;\r\u0026lt;a class=\u0026#34;nav-link\u0026#34; href=\u0026#34;{% url \u0026#39;reviews:review_list\u0026#39; %}\u0026#34;\u0026gt;List\u0026lt;/a\u0026gt;\r\u0026lt;/li\u0026gt;\r\u0026lt;li class=\u0026#34;nav-item active\u0026#34;\u0026gt;\r\u0026lt;a class=\u0026#34;nav-link\u0026#34; href=\u0026#34;{% url \u0026#39;reviews:create\u0026#39; %}\u0026#34;\u0026gt;New\u0026lt;span class=\u0026#34;sr-only\u0026#34;\u0026gt;(current)\u0026lt;/span\u0026gt;\u0026lt;/a\u0026gt;\r\u0026lt;/li\u0026gt;\r{% else %}\r\u0026lt;li class=\u0026#34;nav-item active\u0026#34;\u0026gt;\r\u0026lt;a class=\u0026#34;nav-link\u0026#34; href=\u0026#34;{% url \u0026#39;reviews:review_list\u0026#39; %}\u0026#34;\u0026gt;List\u0026lt;span class=\u0026#34;sr-only\u0026#34;\u0026gt;(current)\u0026lt;/span\u0026gt;\u0026lt;/a\u0026gt;\r\u0026lt;/li\u0026gt;\r\u0026lt;li class=\u0026#34;nav-item\u0026#34;\u0026gt;\r\u0026lt;a class=\u0026#34;nav-link\u0026#34; href=\u0026#34;{% url \u0026#39;reviews:create\u0026#39; %}\u0026#34;\u0026gt;New\u0026lt;/a\u0026gt;\r\u0026lt;/li\u0026gt;\r{% endif %}\r\u0026lt;/ul\u0026gt;\r\u0026lt;div class=\u0026#34;d-flex flex-row\u0026#34;\u0026gt;\r{% if user.is_authenticated %}\u0026lt;!-- login 된 상태일 경우 --\u0026gt;\r\u0026lt;div class=\u0026#34;p-2\u0026#34;\u0026gt;{{ user.username }}님 환영합니다.\u0026lt;/div\u0026gt;\r\u0026lt;ul class=\u0026#34;navbar-nav\u0026#34;\u0026gt;\r\u0026lt;li class=\u0026#34;nav-item dropdown\u0026#34;\u0026gt;\r\u0026lt;a class=\u0026#34;nav-link dropdown-toggle\u0026#34; href=\u0026#34;#\u0026#34; id=\u0026#34;navbarDropdownMenuLink\u0026#34; role=\u0026#34;button\u0026#34; data-toggle=\u0026#34;dropdown\u0026#34; aria-haspopup=\u0026#34;true\u0026#34; aria-expanded=\u0026#34;false\u0026#34;\u0026gt;\rSign out\r\u0026lt;/a\u0026gt;\r\u0026lt;div class=\u0026#34;dropdown-menu\u0026#34; aria-labelledby=\u0026#34;navbarDropdownMenuLink\u0026#34;\u0026gt;\r\u0026lt;a class=\u0026#34;dropdown-item\u0026#34; href=\u0026#34;{% url \u0026#39;accounts:signout\u0026#39; %}\u0026#34;\u0026gt;Sign Out\u0026lt;/a\u0026gt;\r\u0026lt;/div\u0026gt;\r{% else %}\r\u0026lt;ul class=\u0026#34;navbar-nav\u0026#34;\u0026gt;\r\u0026lt;li class=\u0026#34;nav-item dropdown\u0026#34;\u0026gt;\r\u0026lt;a class=\u0026#34;nav-link dropdown-toggle\u0026#34; href=\u0026#34;#\u0026#34; id=\u0026#34;navbarDropdownMenuLink\u0026#34; role=\u0026#34;button\u0026#34; data-toggle=\u0026#34;dropdown\u0026#34; aria-haspopup=\u0026#34;true\u0026#34; aria-expanded=\u0026#34;false\u0026#34;\u0026gt;\rSign In\r\u0026lt;/a\u0026gt;\r\u0026lt;div class=\u0026#34;dropdown-menu\u0026#34; aria-labelledby=\u0026#34;navbarDropdownMenuLink\u0026#34;\u0026gt;\r\u0026lt;a class=\u0026#34;dropdown-item\u0026#34; href=\u0026#34;{% url \u0026#39;accounts:signup\u0026#39; %}\u0026#34;\u0026gt;Sign Up\u0026lt;/a\u0026gt;\r\u0026lt;a class=\u0026#34;dropdown-item\u0026#34; href=\u0026#34;{% url \u0026#39;accounts:signin\u0026#39; %}\u0026#34;\u0026gt;Sign In\u0026lt;/a\u0026gt;\r\u0026lt;/div\u0026gt;\r{% endif %}\r\u0026lt;/li\u0026gt;\r\u0026lt;/ul\u0026gt;\r\u0026lt;/div\u0026gt;\r\u0026lt;/div\u0026gt;\r5. singup.html 작성 \u0026lt;!-- signup.html --\u0026gt;\r{% extends \u0026#39;base.html\u0026#39; %}\r{% load static %}\r{% block body %}\r{% if error %}\r\u0026lt;h3 class=\u0026#34;text-danger\u0026#34;\u0026gt;{{ error }}\u0026lt;/h3\u0026gt;\r{% endif %}\r\u0026lt;form action=\u0026#34;\u0026#34; method=\u0026#34;POST\u0026#34;\u0026gt;\r{% csrf_token %}\r\u0026lt;div class=\u0026#34;form-row mb-3 mt-5\u0026#34;\u0026gt;\r\u0026lt;div class=\u0026#34;col-12\u0026#34;\u0026gt;\r\u0026lt;label for=\u0026#34;username\u0026#34;\u0026gt;Username\u0026lt;/label\u0026gt;\r\u0026lt;div\u0026gt;{{ form.username }}\u0026lt;/div\u0026gt;\r\u0026lt;/div\u0026gt;\r\u0026lt;/div\u0026gt;\r\u0026lt;div class=\u0026#34;form-row mb-3\u0026#34;\u0026gt;\r\u0026lt;div class=\u0026#34;col-6\u0026#34;\u0026gt;\r\u0026lt;label for=\u0026#34;password\u0026#34;\u0026gt;Password\u0026lt;/label\u0026gt;\r\u0026lt;div\u0026gt;{{ form.password }}\u0026lt;/div\u0026gt;\r\u0026lt;/div\u0026gt;\r\u0026lt;div class=\u0026#34;col-6\u0026#34;\u0026gt;\r\u0026lt;label for=\u0026#34;password_confirm\u0026#34;\u0026gt;Password Confirm\u0026lt;/label\u0026gt;\r\u0026lt;div\u0026gt;{{ form.password_confirm }}\u0026lt;/div\u0026gt;\r\u0026lt;/div\u0026gt;\r\u0026lt;/div\u0026gt;\r\u0026lt;div class=\u0026#34;form-row mb-3\u0026#34;\u0026gt;\r\u0026lt;div class=\u0026#34;col-6\u0026#34;\u0026gt;\r\u0026lt;label for=\u0026#34;last_name\u0026#34;\u0026gt;Last name\u0026lt;/label\u0026gt;\r\u0026lt;div\u0026gt;{{ form.last_name }}\u0026lt;/div\u0026gt;\r\u0026lt;/div\u0026gt;\r\u0026lt;div class=\u0026#34;col-6\u0026#34;\u0026gt;\r\u0026lt;label for=\u0026#34;last_name\u0026#34;\u0026gt;First name\u0026lt;/label\u0026gt;\r\u0026lt;div\u0026gt;{{ form.first_name }}\u0026lt;/div\u0026gt;\r\u0026lt;/div\u0026gt;\r\u0026lt;/div\u0026gt;\r\u0026lt;div class=\u0026#34;form-row mb-3\u0026#34;\u0026gt;\r\u0026lt;div class=\u0026#34;col-12\u0026#34;\u0026gt;\r\u0026lt;label for=\u0026#34;email\u0026#34;\u0026gt;Email\u0026lt;/label\u0026gt;\r\u0026lt;div\u0026gt;{{ form.email }}\u0026lt;/div\u0026gt;\r\u0026lt;/div\u0026gt;\r\u0026lt;/div\u0026gt;\r\u0026lt;div class=\u0026#34;form-row mb-3\u0026#34;\u0026gt;\r\u0026lt;button type=\u0026#34;submit\u0026#34; class=\u0026#34;btn btn-info col-12\u0026#34;\u0026gt;SIGN UP\u0026lt;/button\u0026gt;\r\u0026lt;/div\u0026gt;\r\u0026lt;div class=\u0026#34;form-row mb-3\u0026#34;\u0026gt;\r\u0026lt;a href=\u0026#34;/community/\u0026#34; class=\u0026#34;btn btn-secondary col-12\u0026#34;\u0026gt;CANCEL\u0026lt;/a\u0026gt;\r\u0026lt;/div\u0026gt;\r\u0026lt;/form\u0026gt;\r{% endblock %}\r6. signin.html 작성 \u0026lt;!-- signin.html --\u0026gt;\r{% extends \u0026#39;base.html\u0026#39; %}\r{% load static %}\r{% block body %}\r\u0026lt;form action=\u0026#34;\u0026#34; method=\u0026#34;POST\u0026#34;\u0026gt;\r{% csrf_token %}\r\u0026lt;div class=\u0026#34;form-row mb-3 mt-5\u0026#34;\u0026gt;\r\u0026lt;div class=\u0026#34;col-12\u0026#34;\u0026gt;\r{% if error %}\r\u0026lt;div class=\u0026#34;d-flex flex-row\u0026#34;\u0026gt;\r\u0026lt;label for=\u0026#34;username\u0026#34; class=\u0026#34;mr-3\u0026#34;\u0026gt;Username\u0026lt;/label\u0026gt;\r\u0026lt;p class=\u0026#34;text-danger p-0 m-0\u0026#34;\u0026gt;{{ error }}\u0026lt;/p\u0026gt;\r\u0026lt;/div\u0026gt;\r{% else %}\r\u0026lt;label for=\u0026#34;username\u0026#34;\u0026gt;Username\u0026lt;/label\u0026gt;\r{% endif %}\r\u0026lt;div\u0026gt;{{ form.username }}\u0026lt;/div\u0026gt;\r\u0026lt;/div\u0026gt;\r\u0026lt;/div\u0026gt;\r\u0026lt;div class=\u0026#34;form-row mb-3\u0026#34;\u0026gt;\r\u0026lt;div class=\u0026#34;col-12\u0026#34;\u0026gt;\r\u0026lt;label for=\u0026#34;password\u0026#34;\u0026gt;Password\u0026lt;/label\u0026gt;\r\u0026lt;div\u0026gt;{{ form.password }}\u0026lt;/div\u0026gt;\r\u0026lt;/div\u0026gt;\r\u0026lt;/div\u0026gt;\r\u0026lt;div class=\u0026#34;form-row mb-3\u0026#34;\u0026gt;\r\u0026lt;button type=\u0026#34;submit\u0026#34; class=\u0026#34;btn btn-info col-12\u0026#34;\u0026gt;SIGN IN\u0026lt;/button\u0026gt;\r\u0026lt;/div\u0026gt;\r\u0026lt;div class=\u0026#34;form-row justify-content-between\u0026#34;\u0026gt;\r\u0026lt;a href=\u0026#34;/accounts/signup/\u0026#34; class=\u0026#34;btn btn-info col-5\u0026#34;\u0026gt;SIGN UP\u0026lt;/a\u0026gt;\r\u0026lt;a href=\u0026#34;/community/\u0026#34; class=\u0026#34;btn btn-secondary col-5\u0026#34;\u0026gt;CANCEL\u0026lt;/a\u0026gt;\r\u0026lt;/div\u0026gt;\r\u0026lt;/form\u0026gt;\r{% endblock %}\r7. 로그인 페이지를 modal로 변경하기  base.html에서 include를 사용하여 modal 부분을 적은 html을 불러온다.  \u0026lt;ul class=\u0026#34;navbar-nav\u0026#34;\u0026gt;\r\u0026lt;li class=\u0026#34;nav-item dropdown\u0026#34;\u0026gt;\r\u0026lt;a class=\u0026#34;nav-link dropdown-toggle\u0026#34; href=\u0026#34;#\u0026#34; id=\u0026#34;navbarDropdownMenuLink\u0026#34; role=\u0026#34;button\u0026#34; data-toggle=\u0026#34;dropdown\u0026#34; aria-haspopup=\u0026#34;true\u0026#34; aria-expanded=\u0026#34;false\u0026#34;\u0026gt;\rSign Up / Sign In\r\u0026lt;/a\u0026gt;\r\u0026lt;div class=\u0026#34;dropdown-menu\u0026#34; aria-labelledby=\u0026#34;navbarDropdownMenuLink\u0026#34;\u0026gt;\r\u0026lt;a class=\u0026#34;dropdown-item\u0026#34; href=\u0026#34;{% url \u0026#39;accounts:signup\u0026#39; %}\u0026#34;\u0026gt;Sign Up\u0026lt;/a\u0026gt;\r\u0026lt;a type=\u0026#34;button\u0026#34; class=\u0026#34;dropdown-item\u0026#34; data-toggle=\u0026#34;modal\u0026#34; data-target=\u0026#34;#SIGNIN\u0026#34;\u0026gt;\rSign In\r\u0026lt;/a\u0026gt;\r\u0026lt;/div\u0026gt;\r{% endif %}\r\u0026lt;/li\u0026gt;\r\u0026lt;/ul\u0026gt;\r\u0026lt;/div\u0026gt;\r\u0026lt;/div\u0026gt;\r{% include \u0026#39;modal.html\u0026#39; %}\r modal.html을 작성 후 form action을 통해 만들어 놓은 sigin으로 보내어 로그인  {% load static %}\r\u0026lt;!DOCTYPE html\u0026gt;\r\u0026lt;html lang=\u0026#34;en\u0026#34;\u0026gt;\r\u0026lt;head\u0026gt;\r\u0026lt;meta charset=\u0026#34;UTF-8\u0026#34;\u0026gt;\r\u0026lt;meta name=\u0026#34;viewport\u0026#34; content=\u0026#34;width=device-width, initial-scale=1.0\u0026#34;\u0026gt;\r\u0026lt;meta http-equiv=\u0026#34;X-UA-Compatible\u0026#34; content=\u0026#34;ie=edge\u0026#34;\u0026gt;\r\u0026lt;title\u0026gt;SIGN IN\u0026lt;/title\u0026gt;\r\u0026lt;/head\u0026gt;\r\u0026lt;body\u0026gt;\r\u0026lt;!-- Modal --\u0026gt;\r\u0026lt;div class=\u0026#34;modal fade\u0026#34; id=\u0026#34;SIGNIN\u0026#34; tabindex=\u0026#34;-1\u0026#34; role=\u0026#34;dialog\u0026#34; aria-labelledby=\u0026#34;SIGNINTitle\u0026#34; aria-hidden=\u0026#34;true\u0026#34;\u0026gt;\r\u0026lt;div class=\u0026#34;modal-dialog modal-dialog-centered\u0026#34; role=\u0026#34;document\u0026#34;\u0026gt;\r\u0026lt;div class=\u0026#34;modal-content\u0026#34;\u0026gt;\r\u0026lt;div class=\u0026#34;modal-header\u0026#34;\u0026gt;\r\u0026lt;h5 class=\u0026#34;modal-title\u0026#34; id=\u0026#34;SIGNINTitle\u0026#34;\u0026gt;SIGN IN\u0026lt;/h5\u0026gt;\r\u0026lt;button type=\u0026#34;button\u0026#34; class=\u0026#34;close\u0026#34; data-dismiss=\u0026#34;modal\u0026#34; aria-label=\u0026#34;Close\u0026#34;\u0026gt;\r\u0026lt;span aria-hidden=\u0026#34;true\u0026#34;\u0026gt;\u0026amp;times;\u0026lt;/span\u0026gt;\r\u0026lt;/button\u0026gt;\r\u0026lt;/div\u0026gt;\r\u0026lt;div class=\u0026#34;modal-body\u0026#34;\u0026gt;\r\u0026lt;form action=\u0026#34;{% url \u0026#39;accounts:signin\u0026#39; %}\u0026#34; method=\u0026#34;POST\u0026#34;\u0026gt;\r{% csrf_token %}\r\u0026lt;div class=\u0026#34;form-row mb-3 mt-5\u0026#34;\u0026gt;\r\u0026lt;div class=\u0026#34;col-12\u0026#34;\u0026gt;\r{% if error %}\r\u0026lt;div class=\u0026#34;d-flex flex-row\u0026#34;\u0026gt;\r\u0026lt;label for=\u0026#34;username\u0026#34; class=\u0026#34;mr-3\u0026#34;\u0026gt;Username\u0026lt;/label\u0026gt;\r\u0026lt;p class=\u0026#34;text-danger p-0 m-0\u0026#34;\u0026gt;{{ error }}\u0026lt;/p\u0026gt;\r\u0026lt;/div\u0026gt;\r{% else %}\r\u0026lt;label for=\u0026#34;username\u0026#34;\u0026gt;Username\u0026lt;/label\u0026gt;\r{% endif %}\r\u0026lt;div\u0026gt;\u0026lt;input type=\u0026#39;text\u0026#39; id=\u0026#39;username\u0026#39; name=\u0026#34;username\u0026#34; class=\u0026#34;form-control\u0026#34;\u0026gt;\u0026lt;/div\u0026gt;\r\u0026lt;/div\u0026gt;\r\u0026lt;/div\u0026gt;\r\u0026lt;div class=\u0026#34;form-row mb-6\u0026#34;\u0026gt;\r\u0026lt;div class=\u0026#34;col-12\u0026#34;\u0026gt;\r\u0026lt;label for=\u0026#34;password\u0026#34;\u0026gt;Password\u0026lt;/label\u0026gt;\r\u0026lt;div\u0026gt;\u0026lt;input type=\u0026#39;password\u0026#39; id=\u0026#39;password\u0026#39; name=\u0026#34;password\u0026#34; class=\u0026#34;form-control\u0026#34;\u0026gt;\u0026lt;/div\u0026gt;\r\u0026lt;/div\u0026gt;\r\u0026lt;/div\u0026gt;\r\u0026lt;div class=\u0026#34;modal-footer mt-5\u0026#34;\u0026gt;\r\u0026lt;button type=\u0026#34;button\u0026#34; class=\u0026#34;btn btn-secondary\u0026#34; data-dismiss=\u0026#34;modal\u0026#34;\u0026gt;Close\u0026lt;/button\u0026gt;\r\u0026lt;button type=\u0026#34;submit\u0026#34; class=\u0026#34;btn btn-primary\u0026#34;\u0026gt;Sign In\u0026lt;/button\u0026gt;\r\u0026lt;/div\u0026gt;\r\u0026lt;/form\u0026gt;\r\u0026lt;/div\u0026gt;\r\u0026lt;/div\u0026gt;\r\u0026lt;/div\u0026gt;\r\u0026lt;/div\u0026gt;\r\u0026lt;/body\u0026gt;\r\u0026lt;/html\u0026gt;\r참고   내가 여기서 사용한 것은 django에서 기본으로 제공하는 user 모델만 사용했음. 하지만 django에서는 UserCreationForm 이라는 ModelForm도 제공함. 다만, UserCreationForm은 username과 password1, 2만 입력받음.    Django 기초 Django CRUD Django Paginator Django User(2) Django Comment Django M:N Django REST Framework  "
-},
-{
-	"uri": "https://dongyeopgu.github.io/til.html",
-	"title": "TIL",
-	"tags": [],
-	"description": "",
-	"content": "Today I Learned - 단순 기록  2020.04.13 이전에 TIL로 파일을 Github에 올렸지만 Private 폴더.\n문서화를 듬성듬성한 상태로 파일만 있는것이 대부분.\n대부분의 TIL은 알고리즘이기 때문에 Algorithm문제풀이에 올라가있음.\n그렇기에 4월 13일 부터 매일 올리는 것이 목표.\n "
 },
 {
 	"uri": "https://dongyeopgu.github.io/django/django_change_user.html",
@@ -134,10 +239,10 @@
 },
 {
 	"uri": "https://dongyeopgu.github.io/vue.js.html",
-	"title": "Vue.js",
+	"title": "Vue",
 	"tags": ["Vue", "Vue.js"],
 	"description": "",
-	"content": "Vue.js 학습 내용  학습한 Vue.js 내용 정리\n "
+	"content": "Vue 학습 내용  학습한 Vue 내용 정리\n "
 },
 {
 	"uri": "https://dongyeopgu.github.io/django/django_comment.html",
@@ -154,6 +259,13 @@
 	"content": "Django M:N model  Django에서 좋아요 기능이나 팔로우 기능처럼 M:N 관계 만들기\nManyToManyField 이용\n  좋아요 기능을 위한 model 추가(게시글 모델)  # 좋아요 기능을 위한 article_like_users 테이블 생성 class 좋아요 기능을 추가할 클래스 명: like_users = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name=\u0026#39;like_articles\u0026#39;) # 팔로우 기능을 위한   팔로우 기능을 위한 model 추가(User 모델을 Customizing)  class User(AbstractUser): followers = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name=\u0026#39;followings\u0026#39;)  게시글 app의 views.py에서 좋아요 기능 설정  def like(request, pk): article = get_object_or_404(Article, pk=pk) # 좋아요를 누르면, \u0026gt;\u0026gt; DB에 존재할 경우 if article.like_users.filter(id=request.user.pk).exists(): article.like_users.remove(request.user) # 좋아요 취소 else:\t#좋아요 누르지 않았다면 article.like_users.add(request.user) return redirect(\u0026#39;articles:detail\u0026#39;, article.pk)  계정 관련 app의 views.py에서 팔로우 기능 설정  def follow(request, username): User = get_user_model() user = get_object_or_404(User, username=username) if user != request.user: if user.followers.filter(username=request.user.username).exists(): user.followers.remove(request.user) else: user.followers.add(request.user) return redirect(\u0026#39;accounts:profile\u0026#39;, user.username)  html 작성   좋아요를 위한 html\n ... {% for article in articles %} \u0026lt;ul\u0026gt; \u0026lt;li\u0026gt;{{ article.title }}\u0026lt;/li\u0026gt; \u0026lt;/ul\u0026gt; \u0026lt;!-- 좋아요를 눌렀을 경우 --\u0026gt; {% if request.user in article.like_users.all %} \u0026lt;a href=\u0026#34;{% url \u0026#39;articles:like\u0026#39; article.pk %}\u0026#34;\u0026gt; \u0026lt;!-- 좋아요 표시를 위한 아이콘이나 사진을 넣음 --\u0026gt; \u0026lt;/a\u0026gt; \u0026lt;!-- 좋아요를 다시 눌러 취소할 경우 --\u0026gt; {% else %} \u0026lt;a href=\u0026#34;{% url \u0026#39;articles:like\u0026#39; article.pk %}\u0026#34;\u0026gt; \u0026lt;!-- 좋아요 표시를 위한 아이콘이나 사진을 넣음 --\u0026gt; \u0026lt;/a\u0026gt; {% endif %} \u0026lt;!-- 좋아요를 누른 사람을 카운트하기 위해 --\u0026gt; \u0026lt;p style=\u0026#34;display: inline;\u0026#34;\u0026gt;{{ article.like_users.count }}명이 좋아합니다.\u0026lt;/p\u0026gt; \u0026lt;hr\u0026gt; {% endfor %} ...  팔로우 기능을 위한 html\n ... \u0026lt;!-- 자기 자신을 팔로우 하지 않기 위해 request 유저가 팔로우할 user가 아닐 경우--\u0026gt; {% if request.user != user %} {% if request.user in user.followers.all %}\u0026lt;!--팔로우 상태일 경우 --\u0026gt; \u0026lt;a href=\u0026#34;{% url \u0026#39;accounts:follow\u0026#39; user.username %}\u0026#34;\u0026gt;팔로우 취소\u0026lt;/a\u0026gt; {% else %} \u0026lt;a href=\u0026#34;{% url \u0026#39;accounts:follow\u0026#39; user.username %}\u0026#34;\u0026gt;팔로우\u0026lt;/a\u0026gt; {% endif %} {% endif %} \u0026lt;p\u0026gt;팔로워: {{ user.followers.all.count }}명\u0026lt;/p\u0026gt; \u0026lt;p\u0026gt;팔로잉: {{ user.followings.all.count }}명\u0026lt;/p\u0026gt; \u0026lt;hr\u0026gt; \u0026lt;h3\u0026gt;작성한 글 목록\u0026lt;/h3\u0026gt; {% for article in user.article_set.all %} \u0026lt;p\u0026gt;{{ article.title }}\u0026lt;/p\u0026gt; {% endfor %} \u0026lt;h3\u0026gt;좋아요한 글 목록\u0026lt;/h3\u0026gt; {% for article in user.like_articles.all %} \u0026lt;p\u0026gt;{{ article.title }}\u0026lt;/p\u0026gt; {% endfor %} ...  이 html에서 template tag인 with를 사용하면 user.followers.all을 조금더 간단하게 이름을 변경해 사용 가능하다\n   Django 기초 Django CRUD Django Paginator Django User(1) Django User(2) Django Comment Django REST Framework  "
 },
 {
+	"uri": "https://dongyeopgu.github.io/node.js.html",
+	"title": "Node.js / Express.js",
+	"tags": ["Node", "Node.js", "Express", "Express.js"],
+	"description": "",
+	"content": "Node.js, Express.js  Node.js, Express.js 내용 정리\n "
+},
+{
 	"uri": "https://dongyeopgu.github.io/django/django_rest_api.html",
 	"title": "Django REST Framework",
 	"tags": ["django", "REST API", "REST Framework"],
@@ -161,11 +273,39 @@
 	"content": "Django Rest Framework(DRF) 1. REST API(DRF: Django Rest Framework)  REST API를 활용하면 백 엔드와 프론트 엔드 분리가 쉽고 코드의 재활용성이 좋다. REST API를 사용하기 위해서 먼저 설치가 필요  $ pip install djangorestframework  settings.py에서 INSTALLED_APPS에 'rest_framework'추가 app 폴더에 serializers.py 파일을 만들고 내용 추가  # serializers.py from rest_framework import serializers from .models import * #필요한 모델이름 넣어주기 class \u0026lt;모델명\u0026gt;Serializer(serializers.ModelSerializer): class Meta: model = \u0026lt;모델명\u0026gt; fields = [\u0026#39;필요한 필드\u0026#39;]  views.py에 필요한 내용 추가  from django.shortcuts import render, get_object_or_404 from rest_framework.response import Response from rest_framework.decorators import api_view from .models import * from .serializers import * @api_view([\u0026#39;GET\u0026#39;]) #method에 따라 다르게 적어주면 됨 (GET, POST 등) def list(request):\t#예를 들어 목록을 보여준다고 할때 변수명 = 모델명.objects.all()\t#queryset serializer = 모델명Serializer(변수명, many=True)\t#위에서 만든 이름임, many=True는 1:N 경우, queryset을 json으로 변환 return Response(serializer.data) @api_view([\u0026#39;GET\u0026#39;]) def detail(request, pk): 변수명 = get_object_or_404(모델명,pk=pk) serializer = 모델명DetailSerializer(변수명)\t#serializers.py에서 detail을 위한 모델명DetailSerializer를 만든 후 사용 return Response(serializer.data) # Create 경우 @api_view([\u0026#39;POST\u0026#39;]) def create(request): serializer = 모델명Serializer(data=request.data) if serializer.is_valid(): serializer.save() return Response(serializer.data) # Update, Delete @api_view([\u0026#39;PUT\u0026#39;, \u0026#39;DELETE\u0026#39;]) def comment_edit(request, pk): 변수명 = get_object_or_404(모델명, pk=pk) if request.method == \u0026#39;PUT\u0026#39;: serializer = 모델명Serializer(변수명, data=request.data) if serializer.is_valid(): serializer.save() return Response(\u0026#39;성공적으로 수정이 완료 되었습니다.\u0026#39;) return Response(status=status.HTTP_400_BAD_REQUEST) # 상태까지 나타내기 위함  if request.method == \u0026#39;DELETE\u0026#39;: comment.delete() return Response(\u0026#39;성공적으로 삭제 되었습니다.\u0026#39;, status=status.HTTP_204_NO_CONTENT)  views.py에서 작성한 이름대로 urls.py에 추가    Django 기초 Django CRUD Django Paginator Django User(1) Django User(2) Django Comment Django M:N  "
 },
 {
+	"uri": "https://dongyeopgu.github.io/server.html",
+	"title": "Server 관련",
+	"tags": ["Server", "AWS", "Ubuntu"],
+	"description": "",
+	"content": "Server 관련 내용  Ubuntu로 웹 사이트 배포 관련 내용\n "
+},
+{
+	"uri": "https://dongyeopgu.github.io/django/django_image_upload.html",
+	"title": "Django Image Upload",
+	"tags": ["django", "Image", "Upload"],
+	"description": "",
+	"content": "Django에서 Image Upload  POST요청을 통해 Vue.js에서 Django로 이미지 전송.\n 기본 세팅  settings.py에서 아래 추가  MEDIA_URL = \u0026#39;/api/\u0026#39; # 기본 api url을 통일 시켜 번거로움을 줄이기 위해 /api/로 설정했음 MEDIA_ROOT = os.path.join(BASE_DIR, \u0026#39;media\u0026#39;) # 이미지 파일이 저장되는 기본 위치를 media폴더로 설정  이미지 url도 다른 application과 같이 api로 시작하게 만들기 위해 MEDIA_URL을 /api/로 설정\n  urls.py  from django.contrib import admin from django.urls import path, include from django.conf.urls.static import static from django.conf import settings urlpatterns = [ path(\u0026#39;admin/\u0026#39;, admin.site.urls), path(\u0026#39;api/accounts/\u0026#39;, include(\u0026#39;accounts.urls\u0026#39;)), path(\u0026#39;api/articles/\u0026#39;, include(\u0026#39;articles.urls\u0026#39;)), path(\u0026#39;api/images/\u0026#39;, include(\u0026#39;images.urls\u0026#39;)), ] urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)  urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) 을 추가함\n 1. Image를 Base64로 받아서 저장하는 방법  순서  Vue 에서 Image를 base64로 인코딩 인코딩한 정보를 django로 보냄 django에서 디코딩하여 저장   views.py  import base64 import os from datetime import datetime @api_view([\u0026#39;POST\u0026#39;]) def upload_image(request): img_string = request.data[\u0026#39;img_base64\u0026#39;] # POST요청을 통해 받은 base64정보 imgdata = base64.b64decode(img_string) # 디코딩 now = datetime.now() now = datetime.timestamp(now) filename = f\u0026#39;temp_image_{request.user}.jpg\u0026#39; # DB에 저장하지 않고 사용한다음 지우기 위해 with open(filename, \u0026#39;wb\u0026#39;) as f: f.write(imgdata)\t# 디코딩한 이미지를 사용하기 위해 잠시 저장 #### 이미지를 사용하는 코드 ##### os.remove(filename) # 이미지를 사용한 후 삭제 return Response({\u0026#39;result\u0026#39; : result}) @api_view([\u0026#39;POST\u0026#39;]) @permission_classes([IsAuthenticated]) def save_image(request): img_string = request.data[\u0026#39;img_base64\u0026#39;] img_result = request.data[\u0026#39;result\u0026#39;] imgdata = base64.b64decode(img_string) now = datetime.now() now = datetime.timestamp(now) filename = f\u0026#39;{img_result}_{request.user}_{now}.jpg\u0026#39; dir_list = os.listdir(settings.MEDIA_ROOT+\u0026#39;/users/\u0026#39;) if str(request.user) not in dir_list: os.makedirs(settings.MEDIA_ROOT+\u0026#39;/users/\u0026#39;+f\u0026#39;{request.user}/\u0026#39;) media_root = settings.MEDIA_ROOT+\u0026#39;/users/\u0026#39;+f\u0026#39;{request.user}/\u0026#39;+filename # 각각 user이름의 폴더에 이미지 저장한 후 db에 저장하기 위해 with open(media_root, \u0026#39;wb\u0026#39;) as f: f.write(imgdata) animal = get_object_or_404(Animal, english_name=img_result) animal_image = AnimalImage.objects.create( upload_image=f\u0026#39;users/{request.user}/{filename}\u0026#39;, animal=animal, upload_user=request.user )  이미지 경로를 설정하지 않은 경우 BASE_DIR에 저장됨\n 2. Image를 파일로 받아서 저장하는 방법  순서  vue에서 formData로 보낼 파일을 넣어줌 django에서 파일정보를 받아 저장   vue(vuetify 사용했음)  \u0026lt;v-file-input v-model=\u0026#34;files\u0026#34; multiple name=\u0026#34;files\u0026#34; \u0026gt;\u0026lt;/v-file-input\u0026gt; \u0026lt;!-- 여러파일 보낼경우 multiple 사용 --\u0026gt; \u0026lt;script\u0026gt; import axios from \u0026#39;axios\u0026#39; export default { data() { return { files: null } }, methods: { sendImages() { let info = new formData() info.append(\u0026#39;files\u0026#39;, this.files) if (this.files===null) { // 파일을 보내지 않을 경우  info.append(\u0026#39;files\u0026#39;, []) } else { for (let i = 0; i \u0026lt; this.files.length; i++) { // 파일이 하나 이상인 경우  info.append(\u0026#39;files\u0026#39;, this.files[i]); } } const token = sessionStorage.getItem(\u0026#34;token\u0026#34;) // token을 세션에 저장시켜 사용했기 때문에  let config = { headers: { \u0026#39;Content-Type\u0026#39;: \u0026#39;multipart/form-data\u0026#39;, // Content-Type을 변경해야 파일이 전송됨  \u0026#39;Authorization\u0026#39;: `token ${token}` } } axios.post( `${process.env.VUE_APP_BACKEND_URL}요청 보낼 URL`, info, config) .then((res) =\u0026gt; { console.log(res) // 필요한 것 넣어서 쓰면됨  }) } } } \u0026lt;/script\u0026gt;  models.py(위에서 한 방법과 다르게 바로 models.py에서 사용자별 폴더를 생성해 저장하는 방법)  def user_directory_path(instance, filename): return \u0026#39;users/{0}/{1}\u0026#39;.format(instance.upload_user.username, filename) # user를 upload_user로 저장했기 때문에 instance.upload_user로 사용함 def user_path(instance): return \u0026#39;users/{0}\u0026#39;.format(instance.upload_user.username) class HairImage(models.Model): upload_date = models.DateTimeField(auto_now_add=True) # 업로드 시간 upload_user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE) # 업로드 유저 upload_image = models.ImageField(upload_to=user_directory_path, blank=True) # 이미지 경로 def delete(self, *args, **kargs): # DB 를 삭제하면 저장한 이미지도 삭제되도록 하기 위해 if self.upload_image: img_path = f\u0026#39;{settings.MEDIA_ROOT}/{user_path}\u0026#39; os.remove(os.path.join(img_path, self.upload_image.path)) super(HairImage, self).delete(*args, **kargs)  views.py  @api_view([\u0026#39;POST\u0026#39;]) @permission_classes([IsAuthenticated]) def analyze_image(request): src = request.FILES[\u0026#39;files\u0026#39;] # 파일이 하나일 경우 #for img in request.FILES.getlist(\u0026#39;files\u0026#39;): # 파일이 여러개일 경우 # upload_img = UploadImage.objects.create(image=img, .....) ######## ######## uploaded_image = HairImage.objects.create(upload_image=src, upload_user=request.user) ######## ######## return Response(\u0026#39;response할 내용\u0026#39;)   Django 기초 Django CRUD Django Paginator Django User(1) Django User(2) Django Comment Django M:N  "
+},
+{
+	"uri": "https://dongyeopgu.github.io/til.html",
+	"title": "I Learned",
+	"tags": [],
+	"description": "",
+	"content": "I Learned - 단순 기록  수업들었던 내용들 정리.\n "
+},
+{
+	"uri": "https://dongyeopgu.github.io/%EB%8B%A8%EC%88%9C%EA%B8%B0%EB%A1%9D.html",
+	"title": "단순 기록",
+	"tags": [],
+	"description": "",
+	"content": "단순 기록  2020년 30살에 개발자를 목표로 시작.\n  SSAFY 3기에 지원 열심히 다니다가 중간에 코로나로 인한 모든 수업 온라인 진행 2학기 프로젝트 시작 개발자가 너무 하고 싶어짐 모든 프로젝트 완료 웹 개발자로 취업성공   크게 보았을 때 일단 목표를 잘 시작한 것 같음.\n "
+},
+{
 	"uri": "https://dongyeopgu.github.io/",
 	"title": "Dongyeop&#39;s Blog",
 	"tags": [],
 	"description": "",
-	"content": "여러가지 해보는 중 Algorithm   SWEA D3 SWEA D4 백준   Django   Django 기초 Django CRUD Django Paginator Django User(1) Django User(2) Django Comment Django M:N Model Django REST Framework   Hugo-blog   Hugo로 Blog만들기   "
+	"content": "Project    Django를 이용한 간단한 웹페이지 구현\nGithub repo 주소\n  Django와 vue를 이용한 영화 추천 사이트\nGithub repo 주소\n[배포중단]\n  비접촉 체온 측정(IoT 프로젝트)\nGithub repo 주소\n[배포 중단]\n  수상한 동물 사전(AI 이용한 동물 판단)\nGithub repo 주소\n[배포 중단]\n  정수리영역 점수(재미로 보는 탈모진단)(진행중)\nhttps://정수리영역점수.kro.kr\n   Algorithm  바로 가기\n Django  바로가기\n Hugo-blog  Hugo로 Blog만들기\n Vue  바로가기\n Node.js/Express.js  바로가기\n Server 관련  바로가기\n "
 },
 {
 	"uri": "https://dongyeopgu.github.io/tags.html",
@@ -658,6 +798,27 @@
 	"content": ""
 },
 {
+	"uri": "https://dongyeopgu.github.io/tags/20.07.01.html",
+	"title": "20.07.01",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/20.07.02.html",
+	"title": "20.07.02",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/20.07.03.html",
+	"title": "20.07.03",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.13.html",
 	"title": "2020.04.13 다시 기록 시작",
 	"tags": ["TIL", "20.04.13", "4월"],
@@ -677,6 +838,13 @@
 	"tags": ["TIL", "20.04.15", "4월"],
 	"description": "",
 	"content": "오늘 공부한 것들 \u0026amp; 생각한 것 - 생각  간단한 웹 서비스 ? 만들며, 배우고 공부한 것을 활용해보자 회원가입을 안해도 이용가능 하도록 (회원가입의 귀찮음\u0026hellip;) 자세한건 프로젝트 repo를 따로 만들어 관리해보자는 생각  - 공부한것  Django QuerySet API 관련. (참고 : Django 공식문서) - 생각한 웹 페이지에서 필요한 것을 넣기 위해(어디서 관련 정보를 봐야하는지 기록정도, 다 외우는것은 힘들기에) Image를 넣기 위한 ImageField 관련 (Django 공식문서)  "
+},
+{
+	"uri": "https://dongyeopgu.github.io/algorithm/d4~6/20.04.16.html",
+	"title": "2020.04.16",
+	"tags": ["20.04.16", "4월", "Algorithm"],
+	"description": "",
+	"content": "오늘 공부한 것  Algorithm 문제 풀이 (Tree) SWEA-노드의 합  class BinaryTree: def __init__(self, n): self.n = n self.node_list = [0] *(n+1) def insert(self, num1, num2): self.node_list[num1] = num2 def leaf(self, node): if node * 2 \u0026gt; n: self.sum += self.node_list[node] else: self.leaf(node * 2) if node * 2 != n: self.leaf(node * 2 + 1) def result(self, l): self.sum = 0 self.leaf(l) return self.sum for t in range(int(input())): n, m, l = map(int, input().split()) bin_tree = BinaryTree(n) for i in range(m): num1, num2 = map(int, input().split()) bin_tree.insert(num1, num2) print(f\u0026#34;#{t+1} {bin_tree.result(l)}\u0026#34;)  subtree  class Node: def __init__(self, data): self.data = data self.left = None self.right = None class BinaryTree: def __init__(self, cnt): self.node_list = [None] for i in range(e+1): self.node_list.append(Node(i)) def insert(self, node, data): if self.node_list[node].left == None: self.node_list[node].left = self.node_list[data] else: self.node_list[node].right = self.node_list[data] def count(self, node): self.cnt += 1 if node.left != None: self.count(node.left) elif node.right != None: self.count(node.right) def result(self, num): self.cnt = 0 self.count(self.node_list[num]) return self.cnt for t in range(int(input())): e, n = map(int, input().split()) numbers = list(map(int, input().split())) bin_tree = BinaryTree(e) for i in range(e): bin_tree.insert(numbers[2*i], numbers[2*i+1]) print(f\u0026#34;#{t+1} {bin_tree.result(n)}\u0026#34;) "
 },
 {
 	"uri": "https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.16.html",
@@ -770,6 +938,13 @@
 	"content": "오늘 배운 것 M:N 모델  Django에서 좋아요 기능이나 팔로우 기능처럼 M:N 관계 만들기\nManyToManyField 이용\n  좋아요 기능을 위한 model 추가(게시글 모델)  # 좋아요 기능을 위한 article_like_users 테이블 생성 class 좋아요 기능을 추가할 클래스 명: like_users = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name=\u0026#39;like_articles\u0026#39;) # 팔로우 기능을 위한   팔로우 기능을 위한 model 추가(User 모델을 Customizing)  class User(AbstractUser): followers = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name=\u0026#39;followings\u0026#39;)  게시글 app의 views.py에서 좋아요 기능 설정  def like(request, pk): article = get_object_or_404(Article, pk=pk) # 좋아요를 누르면, \u0026gt;\u0026gt; DB에 존재할 경우 if article.like_users.filter(id=request.user.pk).exists(): article.like_users.remove(request.user) # 좋아요 취소 else:\t#좋아요 누르지 않았다면 article.like_users.add(request.user) return redirect(\u0026#39;articles:detail\u0026#39;, article.pk)  계정 관련 app의 views.py에서 팔로우 기능 설정  def follow(request, pk): User = get_user_model() # 팔로우 당하는 사람 user = get_object_or_404(User, pk=pk) if user != request.user: # 팔로우를 요청한 사람 =\u0026gt; request.user # 팔로우가 되어 있다면, if user.followers.filter(pk=request.user.pk).exists(): # 삭제 user.followers.remove(request.user) else: # 추가 user.followers.add(request.user) return redirect(\u0026#39;accounts:detail\u0026#39;, user.pk) "
 },
 {
+	"uri": "https://dongyeopgu.github.io/algorithm/d4~6/20.04.29.html",
+	"title": "2020.04.29",
+	"tags": ["20.04.29", "4월", "Algorithm"],
+	"description": "",
+	"content": "오늘 한 것  SWEA. 5185 [파이썬 S/W 문제해결 구현] 1일차 - 이진수\n 알고리즘 풀이 for t in range(int(input())): n, num = map(str, input().split()) print(f\u0026#39;#{t+1}\u0026#39;,end=\u0026#34; \u0026#34;) for a in num: b = \u0026#39;0x\u0026#39;+ a.lower() hex_num = int(a, 16) # 16진수를 10진수로 print(\u0026#34;{0:b}\u0026#34;.format(hex_num).zfill(4), end=\u0026#34;\u0026#34;) # 10진수를 2진수로 바꾸면서 (4자리씩) print() "
+},
+{
 	"uri": "https://dongyeopgu.github.io/til/4%EC%9B%94/20.04.29.html",
 	"title": "2020.04.29",
 	"tags": ["TIL", "20.04.29", "4월", "Algorithm"],
@@ -782,6 +957,13 @@
 	"tags": ["TIL", "20.04.30", "4월", "Django"],
 	"description": "",
 	"content": "오늘 한 것  혼자 해보는 PJT에서 paginator 추가 및 댓글 작성 시 발생한 오류 수정\n  views.py 에서  @require_POST @login_required def reply_create(request, qanda_pk): qanda = get_object_or_404(QandA, pk=qanda_pk) form = ReplyForm(request.POST) if form.is_valid(): reply=form.save(commit=False) reply.user = request.user reply.QandA = qanda reply.save() return redirect(\u0026#39;reservation:QandA_detail\u0026#39;,qanda.pk)  reply.QandA = qanda에서 QandA 모델을 qanda로 불러와서 NOT NULL 오류 발생했었음.\n  paginator 추가 코드  def QandA_list(request): QandAs = QandA.objects.order_by(\u0026#39;-pk\u0026#39;) paginator = Paginator(QandAs, 4) #한 페이지 당 몇개 씩 보여줄 지 지정 page_number = request.GET.get(\u0026#39;page\u0026#39;) page_obj = paginator.get_page(page_number) reviews_all = get_list_or_404(QandA) total_count = len(reviews_all) total_page = total_count//4 + 1 page_range = range(1,total_page+1) context = { \u0026#39;QandAs\u0026#39; : QandAs, \u0026#39;page_obj\u0026#39;: page_obj, \u0026#39;page_range\u0026#39;: page_range, } return render(request, \u0026#39;reservation/QandA.html\u0026#39;, context) "
+},
+{
+	"uri": "https://dongyeopgu.github.io/algorithm/d4~6/20.05.01.html",
+	"title": "2020.05.01",
+	"tags": ["20.05.01", "5월", "Algorithm"],
+	"description": "",
+	"content": "오늘 한 것  SWEA 알고리즘 문제풀이\n  [파이썬 S/W 문제해결 구현] 1일차 - 이진수2  for t in range(int(input())): n = float(input()) result = \u0026#39;\u0026#39; cnt = 0 while True: a = n * 2 result += str(int(a)) n = a - int(a) cnt += 1 if n == 0.0: break if cnt \u0026gt; 13: break if cnt \u0026gt; 13: print(f\u0026#34;#{t+1} overflow\u0026#34;) else: print(f\u0026#34;#{t+1} {result}\u0026#34;) "
 },
 {
 	"uri": "https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.01.html",
@@ -819,11 +1001,25 @@
 	"content": "오늘 한 것  PJT 메인 화면 꾸미기 Heroku 사용법 익히기  "
 },
 {
+	"uri": "https://dongyeopgu.github.io/algorithm/d4~6/20.05.06.html",
+	"title": "2020.05.06",
+	"tags": ["20.05.06", "5월", "Algorithm"],
+	"description": "",
+	"content": "오늘 한 것  SWEA 문제 풀이  # 최소합 dx, dy = [0,1], [1,0] def dfs(x,y): global min_num, result visit[x][y] = 1 if result \u0026lt; min_num: return if x == n-1 and y == n-1: result = min_num return for i in range(2): nx = x + dx[i] ny = y + dy[i] if 0 \u0026lt;= nx \u0026lt; n and 0 \u0026lt;= ny \u0026lt; n and visit[nx][ny] == 0: min_num += a[nx][ny] dfs(nx,ny) visit[nx][ny] = 0 min_num -= a[nx][ny] for t in range(int(input())): n = int(input()) a = [list(map(int, input().split()))for _ in range(n)] visit = [[0 for _ in range(n)]for _ in range(n)] min_num = a[0][0] result = 10000000 dfs(0,0) print(f\u0026#34;#{t+1} {result}\u0026#34;) # 전자카트 def sol(a,b,c): if b == n-1: c += arr[a][0] result.append(c) else: for i in range(1,n): if not visit[i]: c += arr[a][i] visit[i]=1 sol(i,b+1,c) visit[i]=0 c -= arr[a][i] for t in range(int(input())): n = int(input()) arr = [list(map(int, input().split()))for _ in range(n)] visit = [0]*n result = [] sol(0,0,0) print(f\u0026#34;#{t+1} {min(result)}\u0026#34;) "
+},
+{
 	"uri": "https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.06.html",
 	"title": "2020.05.06",
 	"tags": ["TIL", "20.05.06", "5월", "Algorithm"],
 	"description": "",
 	"content": "오늘 한 것  SWEA 문제 풀이  # 최소합 dx, dy = [0,1], [1,0] def dfs(x,y): global min_num, result visit[x][y] = 1 if result \u0026lt; min_num: return if x == n-1 and y == n-1: result = min_num return for i in range(2): nx = x + dx[i] ny = y + dy[i] if 0 \u0026lt;= nx \u0026lt; n and 0 \u0026lt;= ny \u0026lt; n and visit[nx][ny] == 0: min_num += a[nx][ny] dfs(nx,ny) visit[nx][ny] = 0 min_num -= a[nx][ny] for t in range(int(input())): n = int(input()) a = [list(map(int, input().split()))for _ in range(n)] visit = [[0 for _ in range(n)]for _ in range(n)] min_num = a[0][0] result = 10000000 dfs(0,0) print(f\u0026#34;#{t+1} {result}\u0026#34;) # 전자카트 def sol(a,b,c): if b == n-1: c += arr[a][0] result.append(c) else: for i in range(1,n): if not visit[i]: c += arr[a][i] visit[i]=1 sol(i,b+1,c) visit[i]=0 c -= arr[a][i] for t in range(int(input())): n = int(input()) arr = [list(map(int, input().split()))for _ in range(n)] visit = [0]*n result = [] sol(0,0,0) print(f\u0026#34;#{t+1} {min(result)}\u0026#34;) "
+},
+{
+	"uri": "https://dongyeopgu.github.io/algorithm/d4~6/20.05.07.html",
+	"title": "2020.05.07",
+	"tags": ["20.05.07", "5월", "Algorithm"],
+	"description": "",
+	"content": "오늘 한 것  SWEA 문제 풀이  # 컨테이너 운반 for t in range(int(input())): n,m = map(int, input().split()) weight = list(map(int, input().split())) truck = list(map(int, input().split())) result = 0 for i in range(m): a = 0 for j in weight: if truck[i] \u0026gt;= j \u0026gt;= a: a = j if a != 0: weight.remove(a) result += a print(f\u0026#34;#{t+1} {result}\u0026#34;) # 화물 도크 for t in range(int(input())): n = int(input()) a = [list(map(int, input().split()))for _ in range(n)] for i in range(n): for j in range(i, n): if a[i][1] \u0026gt; a[j][1]: a[i], a[j] = a[j], a[i] result = [a[0]] visit = [0]*n visit[0] = 1 while True: for i in range(n): if result[-1][-1] \u0026gt; a[i][0]: visit[i] = 1 if not 0 in visit: break idx = 0 max_value = 100000000 for i in range(n): if visit[i] == 0 and result[-1][-1] \u0026lt;= a[i][0] and a[i][1] \u0026lt; max_value: idx = i max_value = a[i][0] result.append(a[idx]) print(f\u0026#34;#{t+1} {len(result)}\u0026#34;) # 베이비진 for t in range(int(input())): a = list(map(int, input().split())) cnt = 0 flag = False for i in range(6, 13, 2): result = [] for j in range(2): deck = [a[k]for k in range(j, i, 2)] cnt_list = [0]*12 for m in range(len(deck)): cnt_list[deck[m]] += 1 n = 0 tri = Run = 0 while n \u0026lt; 10: if cnt_list[n] \u0026gt;= 3: cnt_list[n] -= 3 tri += 1 continue if cnt_list[n] \u0026gt;= 1 and cnt_list[n+1] \u0026gt;= 1 and cnt_list[n+2] \u0026gt;= 1: cnt_list[n] -= 1 cnt_list[n+1] -= 1 cnt_list[n+2] -= 1 Run += 1 continue n += 1 cnt += 1 if tri \u0026gt; 0 or Run \u0026gt; 0: result.append(1) else: result.append(0) if result[0] \u0026lt; result[1]: flag = True print(f\u0026#34;#{t+1} 2\u0026#34;) break elif result[0] \u0026gt; result[1] or ((result[0] == 1 and result[1] == 1) or (result[0] == 2 and result[1] == 2)): flag = True print(f\u0026#34;#{t+1} 1\u0026#34;) break if flag: continue else: print(f\u0026#34;#{t+1} 0\u0026#34;) "
 },
 {
 	"uri": "https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.07.html",
@@ -838,6 +1034,13 @@
 	"tags": ["TIL", "20.05.08", "5월"],
 	"description": "",
 	"content": "오늘 한 것  오늘은 휴식 ~  "
+},
+{
+	"uri": "https://dongyeopgu.github.io/algorithm/d4~6/20.05.09.html",
+	"title": "2020.05.09",
+	"tags": ["20.05.09", "5월", "Algorithm"],
+	"description": "",
+	"content": "오늘 한 것  SWEA 문제 풀이  C 사용    #include \u0026lt;stdio.h\u0026gt; int test_case; long long sol(int x, int y) { if (y == 0) return 1; return x * sol(x, y - 1); } int main(void) { for (int i = 0; i \u0026lt; 10; i++) { scanf(\u0026#34;%d\u0026#34;, \u0026amp;test_case); int x = 0; int y = 0; scanf(\u0026#34;%d %d\u0026#34;, \u0026amp;x, \u0026amp;y); long long result = 0; result = sol(x, y); printf(\u0026#34;#%d %11d\\n\u0026#34;, i + 1, result); } return 0; } "
 },
 {
 	"uri": "https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.09.html",
@@ -875,11 +1078,25 @@
 	"content": "오늘 배운 것 Django   API를 이용해 DB에 저장\n 네이버 영화 검색 API를 이용해 영화 목록을 검색한 후, 클릭한 영화를 DB에 저장\nget_or_create를 사용\n   views.py\ndef movie_list(request): # 영화 목록 naver_client_id = \u0026#34;발급받은 id\u0026#34; naver_client_secret = \u0026#34;발급받은 secret\u0026#34; if request.method == \u0026#39;GET\u0026#39;: client_id = naver_client_id client_secret = naver_client_secret q = request.GET.get(\u0026#39;q\u0026#39;) Text = urllib.parse.quote(f\u0026#34;{q}\u0026#34;) url = \u0026#34;https://openapi.naver.com/v1/search/movie?query=\u0026#34; + Text # json 결과 movie_api_request = urllib.request.Request(url) movie_api_request.add_header(\u0026#34;X-Naver-Client-Id\u0026#34;, client_id) movie_api_request.add_header(\u0026#34;X-Naver-Client-Secret\u0026#34;, client_secret) response = urllib.request.urlopen(movie_api_request) rescode = response.getcode() if rescode == 200: response_body = response.read() result = json.loads(response_body.decode(\u0026#39;utf-8\u0026#39;)) items = result.get(\u0026#39;items\u0026#39;) context = { \u0026#39;items\u0026#39;: items } return render(request, \u0026#39;reviews/movie_list.html\u0026#39;, context)  검색한 후, DB에 저장되어 있지 않은 영화는 저장 후 바로 detail 페이지로 넘어가도록 만들기 위해 get_or_create 를 사용\n   views.py\ndef movie_save(request): poster_URL = request.GET.get(\u0026#39;poster_url\u0026#39;) title = request.GET.get(\u0026#39;title\u0026#39;) content = request.GET.get(\u0026#39;content\u0026#39;) movie, created = Movie.objects.get_or_create(title=title, poster_URL=poster_URL, content=content) return redirect(\u0026#39;reviews:movie_detail\u0026#39;, movie.pk)  새로 movie_save 함수를 만들어서 GET으로 넘어온 url query에서 필요한 정보를 가지고 db에 저장.\nget_or_create는 tuple형식으로 created에 boolean값으로 저장됨.\n   html\n\u0026#34;{% url \u0026#39;reviews:movie_save\u0026#39; %}?poster_url={{item.image}}\u0026amp;title={{item.title|safe}}\u0026amp;content={{item.userRating}}\u0026#34;  바로 query를 추가하여 넘겨주기 위해 위 코드를 사용했다.\n     "
 },
 {
+	"uri": "https://dongyeopgu.github.io/algorithm/d4~6/20.05.14.html",
+	"title": "2020.05.14",
+	"tags": ["20.05.14", "5월", "Algorithm"],
+	"description": "",
+	"content": "오늘 한 것 SWEA 문제풀이   병합정렬\ndef m_sort(a): if len(a) \u0026lt;= 1: return a center = len(a) // 2 right = m_sort(a[center:]) left = m_sort(a[:center]) return merge(left, right) def merge(left,right): global cnt n_right = len(right) n_left = len(left) i = 0 i_right = 0 i_left = 0 result = [0] * (n_right+n_left) if left[-1] \u0026gt; right[-1]: cnt += 1 while i_right != n_right and i_left != n_left: if right[i_right] \u0026gt;= left[i_left]: result[i] += left[i_left] i += 1 i_left += 1 else: result[i] += right[i_right] i += 1 i_right += 1 if i_left != n_left: while i_left != n_left: result[i] += left[i_left] i += 1 i_left += 1 if i_right != n_right: while i_right != n_right: result[i] += right[i_right] i += 1 i_right += 1 return result for t in range(int(input())): n = int(input()) a = list(map(int, input().split())) cnt = 0 result_ = m_sort(a) print(f\u0026#34;#{t+1} {result_[n//2]} {cnt}\u0026#34;)   퀵 정렬\n# def quick_sort(a): # if len(a) \u0026lt;= 1: # return a # pivot = a[len(a)//2] # left, right, equal =[],[],[] # for i in a: # if i \u0026lt; pivot: # left.append(i) # elif i \u0026gt; pivot: # right.append(i) # else: # equal.append(i) # return quick_sort(left) + equal + quick_sort(right) def quick_sort(a, l, r): if l \u0026lt; r: p = partition(a, l, r) quick_sort(a, l, p - 1) quick_sort(a, p + 1, r) def partition(a, l, r): pivot = (l + r) // 2 while l \u0026lt; r : while(a[l] \u0026lt; a[pivot] and l \u0026lt; r): l += 1 while(a[r] \u0026gt;= a[pivot] and l \u0026lt; r): r -= 1 if l \u0026lt; r: if l == pivot: pivot = r a[l], a[r] = a[r], a[l] A[pivot], a[r] = a[r], a[pivot] return r for t in range(int(input())): n = int(input()) a = list(map(int, input().split())) quick_sort(a, 0, n-1) print(f\u0026#34;#{t+1} {a[n//2]}\u0026#34;)  주석 처리 된 방법을 사용하면 10개중 9개 맞고 런타임에러\n   이진 탐색\nfor t in range(int(input())): n, m = map(int, input().split()) arr1 = sorted(list(map(int, input().split()))) arr2 = list(map(int, input().split())) cnt = 0 for i in arr2: a = 0 b = n-1 check = 0 while a \u0026lt;= b: c = (a+b)//2 if i \u0026gt;= arr1[c]: if i == arr1[c]: cnt+=1 break a = c + 1 if check == 1: break check = 1 elif i \u0026lt; arr1[c]: b = c - 1 if check == 2: break check = 2 print(f\u0026#34;#{t+1} {cnt}\u0026#34;)   "
+},
+{
 	"uri": "https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.14.html",
 	"title": "2020.05.14",
 	"tags": ["TIL", "20.05.14", "5월", "Algorithm"],
 	"description": "",
 	"content": "오늘 한 것 SWEA 문제풀이   병합정렬\ndef m_sort(a): if len(a) \u0026lt;= 1: return a center = len(a) // 2 right = m_sort(a[center:]) left = m_sort(a[:center]) return merge(left, right) def merge(left,right): global cnt n_right = len(right) n_left = len(left) i = 0 i_right = 0 i_left = 0 result = [0] * (n_right+n_left) if left[-1] \u0026gt; right[-1]: cnt += 1 while i_right != n_right and i_left != n_left: if right[i_right] \u0026gt;= left[i_left]: result[i] += left[i_left] i += 1 i_left += 1 else: result[i] += right[i_right] i += 1 i_right += 1 if i_left != n_left: while i_left != n_left: result[i] += left[i_left] i += 1 i_left += 1 if i_right != n_right: while i_right != n_right: result[i] += right[i_right] i += 1 i_right += 1 return result for t in range(int(input())): n = int(input()) a = list(map(int, input().split())) cnt = 0 result_ = m_sort(a) print(f\u0026#34;#{t+1} {result_[n//2]} {cnt}\u0026#34;)   퀵 정렬\n# def quick_sort(a): # if len(a) \u0026lt;= 1: # return a # pivot = a[len(a)//2] # left, right, equal =[],[],[] # for i in a: # if i \u0026lt; pivot: # left.append(i) # elif i \u0026gt; pivot: # right.append(i) # else: # equal.append(i) # return quick_sort(left) + equal + quick_sort(right) def quick_sort(a, l, r): if l \u0026lt; r: p = partition(a, l, r) quick_sort(a, l, p - 1) quick_sort(a, p + 1, r) def partition(a, l, r): pivot = (l + r) // 2 while l \u0026lt; r : while(a[l] \u0026lt; a[pivot] and l \u0026lt; r): l += 1 while(a[r] \u0026gt;= a[pivot] and l \u0026lt; r): r -= 1 if l \u0026lt; r: if l == pivot: pivot = r a[l], a[r] = a[r], a[l] A[pivot], a[r] = a[r], a[pivot] return r for t in range(int(input())): n = int(input()) a = list(map(int, input().split())) quick_sort(a, 0, n-1) print(f\u0026#34;#{t+1} {a[n//2]}\u0026#34;)  주석 처리 된 방법을 사용하면 10개중 9개 맞고 런타임에러\n   이진 탐색\nfor t in range(int(input())): n, m = map(int, input().split()) arr1 = sorted(list(map(int, input().split()))) arr2 = list(map(int, input().split())) cnt = 0 for i in arr2: a = 0 b = n-1 check = 0 while a \u0026lt;= b: c = (a+b)//2 if i \u0026gt;= arr1[c]: if i == arr1[c]: cnt+=1 break a = c + 1 if check == 1: break check = 1 elif i \u0026lt; arr1[c]: b = c - 1 if check == 2: break check = 2 print(f\u0026#34;#{t+1} {cnt}\u0026#34;)   "
+},
+{
+	"uri": "https://dongyeopgu.github.io/algorithm/d4~6/20.05.15.html",
+	"title": "2020.05.15",
+	"tags": ["20.05.15", "5월", "Algorithm"],
+	"description": "",
+	"content": "오늘 한 것 SWEA 문제풀이   전기버스2\ndef sol(a): global cnt, result if a \u0026gt;= n: if result \u0026gt; cnt: result = cnt return if result \u0026lt; cnt: return b = a c = arr[b] for i in range(b+c, b, -1): cnt += 1 sol(i) cnt -= 1 for t in range(int(input())): arr = list(map(int, input().split())) n = arr[0] result = 987654321 cnt = 0 sol(1) print(f\u0026#34;#{t+1} {result-1}\u0026#34;)   최소생산비용\ndef sol(a, s): global result if a == n: if result \u0026gt; s: result = s return if result \u0026lt; s: return for i in range(n): if visit[i] == 0: visit[i] = 1 sol(a+1, s + arr[a][i]) visit[i] = 0 for t in range(int(input())): n = int(input()) arr = [list(map(int, input().split()))for _ in range(n)] result = 1111111111111 visit = [0] * n sol(0,0) print(f\u0026#34;#{t+1} {result}\u0026#34;)   "
 },
 {
 	"uri": "https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.15.html",
@@ -917,11 +1134,25 @@
 	"content": "오늘 한 것 간단한 PJT 구현 과정   Project 기본 설정 및 Model 작성 Data 가져오기 Javascript를 이용한 목록 구성 목록 랜덤 추천   1. Project 기본 설정 및 Model 작성  App의 이름을 accounts와 movies로 설정 한 후, 기본 setting을 변경 하고, 제공된 명세에 따라 Model 작성 후 migrations와 migrate를 했음.\n 2. JSON 파일의 Data 가져오기  JSON 파일을 DB에 저장하기 위해서 python manage.py loaddata moviedata.json 이용.\n위에서 만든 모델의 필드와 json파일의 필드가 같아야 완료 가능함.\n 3. Javascript를 이용하여 목록 구성  추천 목록과 500개가 넘는 전체 목록을 구성할 때 Javascript를 이용.\n영화 포스터가 나오도록 for 문을 돌리고 클릭시 modal로 영화 정보를 볼 수 있도록 만들었음.\n  전체 영화 목록의 html  {% extends \u0026#39;base.html\u0026#39; %} {% block content %} \u0026lt;!-- 영화 포스터로 목록을 만들기 위한 for문 --\u0026gt; \u0026lt;div class=\u0026#34;container poster-block\u0026#34;\u0026gt; {% for movie in movies %} \u0026lt;img src=\u0026#34;https://image.tmdb.org/t/p/w92/{{ movie.poster_path }}\u0026#34; class=\u0026#34;movie-poster\u0026#34; data-id=\u0026#34;{{movie.pk}}\u0026#34; data-toggle=\u0026#34;modal\u0026#34; data-target=\u0026#34;#ModalCenter\u0026#34;\u0026gt; {% endfor %} \u0026lt;/div\u0026gt; \u0026lt;span id=\u0026#34;user_id\u0026#34; class=\u0026#34;text-dark\u0026#34;\u0026gt;{{ user.pk }}\u0026lt;/span\u0026gt; \u0026lt;!-- Modal 부분 --\u0026gt; \u0026lt;div class=\u0026#34;modal fade\u0026#34; id=\u0026#34;ModalCenter\u0026#34; tabindex=\u0026#34;-1\u0026#34; role=\u0026#34;dialog\u0026#34; aria-labelledby=\u0026#34;ModalCenterTitle\u0026#34; aria-hidden=\u0026#34;true\u0026#34;\u0026gt; \u0026lt;div class=\u0026#34;modal-dialog modal-dialog-centered\u0026#34; role=\u0026#34;document\u0026#34;\u0026gt; \u0026lt;div class=\u0026#34;modal-content\u0026#34; style=\u0026#34;opacity: 0.95\u0026#34;\u0026gt; \u0026lt;div class=\u0026#34;modal-header d-flex\u0026#34;\u0026gt; \u0026lt;h5 class=\u0026#34;modal-title titletitle\u0026#34; id=\u0026#34;ModalCenterTitle\u0026#34;\u0026gt;\u0026lt;/h5\u0026gt; \u0026lt;button type=\u0026#34;button\u0026#34; class=\u0026#34;close ml-0\u0026#34; data-dismiss=\u0026#34;modal\u0026#34; aria-label=\u0026#34;Close\u0026#34;\u0026gt; \u0026lt;span aria-hidden=\u0026#34;true\u0026#34;\u0026gt;\u0026amp;times;\u0026lt;/span\u0026gt; \u0026lt;/button\u0026gt; \u0026lt;/div\u0026gt; \u0026lt;div class=\u0026#34;modal-body bodybody container justify-content-center\u0026#34;\u0026gt; \u0026lt;/div\u0026gt; \u0026lt;div class=\u0026#34;modal-footer\u0026#34;\u0026gt; \u0026lt;i class=\u0026#34;fas fa-heart fa-lg like-button\u0026#34; style=\u0026#34;color: black;\u0026#34;\u0026gt;\u0026lt;/i\u0026gt; \u0026lt;span id=\u0026#34;like-count-span\u0026#34;\u0026gt;\u0026lt;/span\u0026gt; \u0026lt;button type=\u0026#34;button\u0026#34; class=\u0026#34;btn btn-secondary\u0026#34; data-dismiss=\u0026#34;modal\u0026#34;\u0026gt;Close\u0026lt;/button\u0026gt; \u0026lt;/div\u0026gt; \u0026lt;/div\u0026gt; \u0026lt;/div\u0026gt; \u0026lt;/div\u0026gt; \u0026lt;script\u0026gt; // 번호로 저장되어 있는 장르를 영어로 가져오기 위해 리스트 작성  const movieGenreList = { 12:\u0026#34;Adventure\u0026#34;, 14:\u0026#34;Fantasy\u0026#34;, 16:\u0026#34;Animation\u0026#34;, 18:\u0026#34;Drama\u0026#34;, 27:\u0026#34;Horror\u0026#34;, 28:\u0026#34;Action\u0026#34;, 35:\u0026#34;Comedy\u0026#34;, 36:\u0026#34;History\u0026#34;, 37:\u0026#34;Western\u0026#34;, 53:\u0026#34;Thriller\u0026#34;, 80:\u0026#34;Crime\u0026#34;, 99:\u0026#34;Documentary\u0026#34;, 878:\u0026#34;Science Fiction\u0026#34;, 9648:\u0026#34;Mystery\u0026#34;, 10402:\u0026#34;Music\u0026#34;, 10749:\u0026#34;Romance\u0026#34;, 10751:\u0026#34;Family\u0026#34;, 10752:\u0026#34;War\u0026#34;, 10770:\u0026#34;TV Movie\u0026#34; } const userIdSpan = document.querySelector(\u0026#34;#user_id\u0026#34;) // 좋아요 기능에서 유저 판별을 통해 빨간색, 검은색을 넣기 위해 Userid를 가져오는 queryselector  const userId = userIdSpan.innerText // 가져온 queryselector에서 필요한 id만 추출  const moviePosterList = document.querySelectorAll(\u0026#34;.movie-poster\u0026#34;) // 영화 포스터를 넣기 위해 모든 .movie-poster를 select  const movieTitleH5 = document.querySelector(\u0026#34;.titletitle\u0026#34;) // 영화 제목을 넣기 위해  const likeButton = document.querySelector(\u0026#34;.like-button\u0026#34;) const imgSection = document.createElement(\u0026#39;img\u0026#39;) const posterBlock = document.querySelector(\u0026#34;.poster-block\u0026#34;) const overView = document.createElement(\u0026#39;p\u0026#39;) const makingHr = document.createElement(\u0026#39;hr\u0026#39;) const makingHr1 = document.createElement(\u0026#39;hr\u0026#39;) const movieGenre = document.createElement(\u0026#39;p\u0026#39;) moviePosterList.forEach(moviePoster =\u0026gt; { moviePoster.addEventListener(\u0026#39;click\u0026#39;, function(e) { const posterData = e.target.dataset.id axios.get(`/movies/${posterData}`) .then(res =\u0026gt; { likeButton.style.color = \u0026#34;black\u0026#34; const movieTitle = res.data.title const movieRealTitle = res.data.original_title const backGround = document.querySelector(\u0026#34;.modal-backdrop\u0026#34;) //뒷 배경  const movieBackground = res.data.backdrop_path const movieRank = res.data.vote_average const overViewContent = res.data.overview const genre = res.data.genres movieGenre.innerText = \u0026#34;장르: \u0026#34; genre.forEach(aGenre =\u0026gt; { if (aGenre in movieGenreList){ movieGenre.innerText += `${movieGenreList[aGenre]}/ ` } }) overView.innerText = `${overViewContent}` backGround.style.backgroundImage = `url(\u0026#39;https://image.tmdb.org/t/p/original${movieBackground}\u0026#39;)` backGround.style.backgroundSize = \u0026#34;cover\u0026#34; backGround.style.opacity=\u0026#34;0.9\u0026#34; const likeUsers = res.data.like_users movieTitleH5.innerText = `${movieTitle}(${movieRealTitle})` const modalBody = document.querySelector(\u0026#34;.bodybody\u0026#34;) modalBody.appendChild(movieGenre) const moviePoster = res.data.poster_path imgSection.setAttribute(\u0026#39;src\u0026#39;, `https://image.tmdb.org/t/p/w342/${moviePoster}`) modalBody.appendChild(imgSection) imgSection.setAttribute(\u0026#39;class\u0026#39;, \u0026#39;mb-2 col-12\u0026#39;) modalBody.appendChild(makingHr) modalBody.appendChild(overView) modalBody.appendChild(makingHr1) const likeCount = res.data.like_users.length const likePeople = document.querySelector(\u0026#34;#like-count-span\u0026#34;) likePeople.innerText = `${likeCount}` for (let i = 0; i \u0026lt; likeCount; i++){ if (likeUsers[i] == userId){ likeButton.style.color = \u0026#34;crimson\u0026#34; break } else { likeButton.style.color = \u0026#34;black\u0026#34; } } // 좋아요 버튼  likeButton.addEventListener(\u0026#39;click\u0026#39;, function(e) { e.stopImmediatePropagation() axios.get(`${posterData}/like/`) .then(response =\u0026gt; { const likeCount1 = response.data.count const likePeople1 = document.querySelector(\u0026#34;#like-count-span\u0026#34;) likePeople1.innerText = `${likeCount1}` if (response.data.liked){ likeButton.style.color=\u0026#34;crimson\u0026#34; } else { likeButton.style.color=\u0026#34;black\u0026#34; } }) .catch(err =\u0026gt; { console.log(err) }) }) }) }) }) \u0026lt;/script\u0026gt; {% endblock %} views.py  from django.shortcuts import render, redirect, get_object_or_404 from django.http import JsonResponse from django.contrib.auth.decorators import login_required from .models import Movie, Genre from .serializers import * from rest_framework.response import Response from rest_framework.decorators import api_view # Create your views here. def movie_list(request): genres = Genre.objects.all() movies = Movie.objects.order_by(\u0026#39;-popularity\u0026#39;) context = { \u0026#39;movies\u0026#39;: movies, \u0026#39;genres\u0026#39;: genres, } return render(request, \u0026#39;movies/movie_list.html\u0026#39;, context) @api_view([\u0026#39;GET\u0026#39;]) def movie_detail(request, movie_pk): movie = get_object_or_404(Movie, pk=movie_pk) serializer = MovieSerializer(movie) return Response(serializer.data) # modal에서 가져올 data를 json으로 받기 위해 serializer 이용  @login_required @api_view([\u0026#39;GET\u0026#39;]) def like(request, movie_pk): user = request.user movie = get_object_or_404(Movie, pk=movie_pk) serializer =MovieSerializer(movie) if movie.like_users.filter(pk=user.pk).exists(): movie.like_users.remove(user) liked = False else: movie.like_users.add(user) liked = True data = { \u0026#39;liked\u0026#39;: liked, \u0026#39;count\u0026#39;: movie.like_users.count(), \u0026#39;movie\u0026#39;: serializer.data } return JsonResponse(data) # 랜덤으로 영화를 가져오기 위해 def recommend(request): movies = Movie.objects.order_by(\u0026#39;?\u0026#39;)[:12] context = { \u0026#39;movies\u0026#39;:movies } return render(request,\u0026#39;movies/movie_recommend.html\u0026#39;, context) "
 },
 {
+	"uri": "https://dongyeopgu.github.io/algorithm/d4~6/20.05.21.html",
+	"title": "2020.05.21",
+	"tags": ["20.05.21", "5월", "Algorithm"],
+	"description": "",
+	"content": "오늘 한 것 SWEA 문제풀이   연산\nfrom collections import deque def sol(start, end): check = {} check[start] = end while q: num, cnt = q.popleft() if num == end: return cnt if num \u0026gt; 1000000 or num \u0026lt;= 0: continue for i in range(4): a = 0 if i == 0: a = num + 1 if a not in check: q.append((a, cnt+1)) check[a] = 1 elif i == 1: a = num - 1 if a not in check: q.append((a, cnt+1)) check[a] = 1 elif i == 2: a = num * 2 if a not in check: q.append((a, cnt+1)) check[a] = 1 elif i == 3: a = num - 10 if a not in check: q.append((a, cnt+1)) check[a] = 1 for t in range(int(input())): n, m = map(int, input().split()) q = deque() q.append([n, 0]) # 시작과 카운트 입력 result = sol(n, m) print(f\u0026#34;#{t+1} {result}\u0026#34;)   그룹나누기\ndef search(a): if a == group[a]: return a else: return search(group[a]) def sol(a, b): group[search(b)] = search(a) for t in range(int(input())): n, m = map(int, input().split()) arr = list(map(int, input().split())) group = [] for i in range(1, n+1): group.append(i) group.insert(0,0) # print(group) for i in range(m): start = arr[2*i] end = arr[2*i+1] sol(start, end) result = [] for i in range(len(group)): result.append(search(i)) print(f\u0026#34;#{t+1} {len(set(result))-1}\u0026#34;)   "
+},
+{
 	"uri": "https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.21.html",
 	"title": "2020.05.21",
 	"tags": ["TIL", "20.05.21", "5월", "Algorithm"],
 	"description": "",
 	"content": "오늘 한 것 SWEA 문제풀이   연산\nfrom collections import deque def sol(start, end): check = {} check[start] = end while q: num, cnt = q.popleft() if num == end: return cnt if num \u0026gt; 1000000 or num \u0026lt;= 0: continue for i in range(4): a = 0 if i == 0: a = num + 1 if a not in check: q.append((a, cnt+1)) check[a] = 1 elif i == 1: a = num - 1 if a not in check: q.append((a, cnt+1)) check[a] = 1 elif i == 2: a = num * 2 if a not in check: q.append((a, cnt+1)) check[a] = 1 elif i == 3: a = num - 10 if a not in check: q.append((a, cnt+1)) check[a] = 1 for t in range(int(input())): n, m = map(int, input().split()) q = deque() q.append([n, 0]) # 시작과 카운트 입력 result = sol(n, m) print(f\u0026#34;#{t+1} {result}\u0026#34;)   그룹나누기\ndef search(a): if a == group[a]: return a else: return search(group[a]) def sol(a, b): group[search(b)] = search(a) for t in range(int(input())): n, m = map(int, input().split()) arr = list(map(int, input().split())) group = [] for i in range(1, n+1): group.append(i) group.insert(0,0) # print(group) for i in range(m): start = arr[2*i] end = arr[2*i+1] sol(start, end) result = [] for i in range(len(group)): result.append(search(i)) print(f\u0026#34;#{t+1} {len(set(result))-1}\u0026#34;)   "
+},
+{
+	"uri": "https://dongyeopgu.github.io/algorithm/d4~6/20.05.22.html",
+	"title": "2020.05.22",
+	"tags": ["20.05.22", "5월", "Algorithm"],
+	"description": "",
+	"content": "오늘 한 것 SWEA 문제풀이   최소 신장 트리\ndef prim(a): key = [float(\u0026#39;inf\u0026#39;)for _ in range(v+1)] pi = [None for _ in range(v+1)] visit = [0 for _ in range(v+1)] key[0] = 0 for _ in range(v+1): min_key =float(\u0026#39;inf\u0026#39;) start = -1 for i in range(v+1): if key[i] \u0026lt; min_key and not visit[i]: min_key = key[i] start = i visit[start] = 1 for V, W in a[start]: if W \u0026lt; key[V] and not visit[V]: key[V] = W pi[V] = start return sum(key) for t in range(int(input())): v, e = map(int, input().split()) graph = {} for _ in range(e): n1, n2, weight = map(int, input().split()) if n1 not in graph: graph[n1] = set() if n2 not in graph: graph[n2] = set() graph[n1].add((n2, weight)) graph[n2].add((n1, weight)) print(f\u0026#34;#{t+1} {prim(graph)}\u0026#34;)   최소 이동 거리\ndef dis(): key = [float(\u0026#39;inf\u0026#39;)for _ in range(n+1)] visit = [0 for _ in range(n+1)] check = set() check.add(0) key[0] = 0 while True: min_key = float(\u0026#39;inf\u0026#39;) s = -1 for i in check: if key[i] \u0026lt; min_key: min_key = key[i] s = i visit[s] = 1 check.remove(s) if s == n: return key[s] for e, w in l[s]: if key[e] \u0026gt; key[s] + w and not visit[e]: key[e] = key[s] + w check.add(e) for t in range(int(input())): n, e = map(int, input().split()) l = {} for _ in range(e): s, e, w = map(int, input().split()) if s not in l: l[s] = [(e, w)] else: l[s] += [(e, w)] result = dis() print(f\u0026#34;#{t+1} {result}\u0026#34;)   "
 },
 {
 	"uri": "https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.22.html",
@@ -931,11 +1162,25 @@
 	"content": "오늘 한 것 SWEA 문제풀이   최소 신장 트리\ndef prim(a): key = [float(\u0026#39;inf\u0026#39;)for _ in range(v+1)] pi = [None for _ in range(v+1)] visit = [0 for _ in range(v+1)] key[0] = 0 for _ in range(v+1): min_key =float(\u0026#39;inf\u0026#39;) start = -1 for i in range(v+1): if key[i] \u0026lt; min_key and not visit[i]: min_key = key[i] start = i visit[start] = 1 for V, W in a[start]: if W \u0026lt; key[V] and not visit[V]: key[V] = W pi[V] = start return sum(key) for t in range(int(input())): v, e = map(int, input().split()) graph = {} for _ in range(e): n1, n2, weight = map(int, input().split()) if n1 not in graph: graph[n1] = set() if n2 not in graph: graph[n2] = set() graph[n1].add((n2, weight)) graph[n2].add((n1, weight)) print(f\u0026#34;#{t+1} {prim(graph)}\u0026#34;)   최소 이동 거리\ndef dis(): key = [float(\u0026#39;inf\u0026#39;)for _ in range(n+1)] visit = [0 for _ in range(n+1)] check = set() check.add(0) key[0] = 0 while True: min_key = float(\u0026#39;inf\u0026#39;) s = -1 for i in check: if key[i] \u0026lt; min_key: min_key = key[i] s = i visit[s] = 1 check.remove(s) if s == n: return key[s] for e, w in l[s]: if key[e] \u0026gt; key[s] + w and not visit[e]: key[e] = key[s] + w check.add(e) for t in range(int(input())): n, e = map(int, input().split()) l = {} for _ in range(e): s, e, w = map(int, input().split()) if s not in l: l[s] = [(e, w)] else: l[s] += [(e, w)] result = dis() print(f\u0026#34;#{t+1} {result}\u0026#34;)   "
 },
 {
+	"uri": "https://dongyeopgu.github.io/algorithm/d4~6/20.05.23.html",
+	"title": "2020.05.23",
+	"tags": ["20.05.23", "5월", "Algorithm"],
+	"description": "",
+	"content": "오늘 한 것 SWEA 문제풀이   7829 보물왕 태혁\n#include \u0026lt;stdio.h\u0026gt; int main(void) { int test_case; scanf(\u0026#34;%d\u0026#34;, \u0026amp;test_case); for (int t = 1; t \u0026lt;= test_case; t++){ int n, x; int max = -1, min = 100001; scanf(\u0026#34;%d\u0026#34;, \u0026amp;n); for (int i = 0; i \u0026lt; n; i++) { scanf(\u0026#34;%d\u0026#34;, \u0026amp;x); if (max \u0026lt; x) { max = x; } if (min \u0026gt; x) { min = x; } } printf(\u0026#34;#%d %d\\n\u0026#34;, t, min * max); } return 0; }    "
+},
+{
 	"uri": "https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.23.html",
 	"title": "2020.05.23",
 	"tags": ["TIL", "20.05.23", "5월", "Algorithm"],
 	"description": "",
 	"content": "오늘 한 것 SWEA 문제풀이   7829 보물왕 태혁\n#include \u0026lt;stdio.h\u0026gt; int main(void) { int test_case; scanf(\u0026#34;%d\u0026#34;, \u0026amp;test_case); for (int t = 1; t \u0026lt;= test_case; t++){ int n, x; int max = -1, min = 100001; scanf(\u0026#34;%d\u0026#34;, \u0026amp;n); for (int i = 0; i \u0026lt; n; i++) { scanf(\u0026#34;%d\u0026#34;, \u0026amp;x); if (max \u0026lt; x) { max = x; } if (min \u0026gt; x) { min = x; } } printf(\u0026#34;#%d %d\\n\u0026#34;, t, min * max); } return 0; }    "
+},
+{
+	"uri": "https://dongyeopgu.github.io/algorithm/d4~6/20.05.24.html",
+	"title": "2020.05.24",
+	"tags": ["20.05.24", "5월", "Algorithm"],
+	"description": "",
+	"content": "오늘 한 것 SWEA 문제풀이   괄호 짝짓기\n#include \u0026lt;stdio.h\u0026gt; char arr[100001]; int n; bool solution(char* a, int* length) { int l = *length; if (a[l] == \u0026#39;)\u0026#39;) { if (a[l - 1] == \u0026#39;(\u0026#39;) { a[l - 1] = NULL; a[l] = NULL; *length -= 2; return true; } else return false; } if (a[l] == \u0026#39;]\u0026#39;) { if (a[l - 1] == \u0026#39;[\u0026#39;) { a[l - 1] = NULL; a[l] = NULL; *length -= 2; return true; } else return false; } if (a[l] == \u0026#39;}\u0026#39;) { if (a[l - 1] == \u0026#39;{\u0026#39;) { a[l - 1] = NULL; a[l] = NULL; *length -= 2; return true; } else return false; } if (a[l] == \u0026#39;\u0026gt;\u0026#39;) { if (a[l - 1] == \u0026#39;\u0026lt;\u0026#39;) { a[l - 1] = NULL; a[l] = NULL; *length -= 2; return true; } else return false; } return true; } int main() { for (int t = 1; t \u0026lt;= 10; t++) { int result = 1; int length = 0; scanf(\u0026#34;%d\u0026#34;, \u0026amp;n); for (int i = 1; i \u0026lt;= n; i++) { length++; scanf(\u0026#34; %1c\u0026#34;, \u0026amp;arr[length]); if (solution(arr, \u0026amp;length) == false) { result = 0; } } printf(\u0026#34;#%d %d\\n\u0026#34;, t, result); } }   "
 },
 {
 	"uri": "https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.24.html",
@@ -966,11 +1211,25 @@
 	"content": "Vue CLI3 설치   공식 문서\n   설치 순서 (Windows10)\n$ npm install -g @vue/cli\r$ vue --version # 버젼확인\r  프로젝트 생성 및 실행  $ vue create \u0026lt;프로젝트 명\u0026gt;\r$ cd \u0026lt;프로젝트명\u0026gt; # 프로젝트 폴더로 이동\r$ npm run serve\r프로젝트 정리    src/App.vue에서 필요없는 기본코드 삭제(아래처럼)\n\u0026lt;template\u0026gt;\r\u0026lt;div id=\u0026#34;app\u0026#34;\u0026gt;\r\u0026lt;/div\u0026gt;\r\u0026lt;/template\u0026gt;\r\u0026lt;script\u0026gt;\rexport default {\rname: \u0026#39;App\u0026#39;,\rcomponents: {},\r//여기에 data, methods 등 넣으면 됨\r }\r\u0026lt;/script\u0026gt;\r\u0026lt;style\u0026gt;\r\u0026lt;/style\u0026gt;\r  컴포넌트 사용 방법   컴포넌트 생성 : components폴더에 .vue만들기(PascalCase로 이름만들기) 불러오기 : import 컴포넌트이름 from 경로 등록하기 : components 속성에 등록 사용하기 : \u0026lt;template\u0026gt; 내부에 html 태그처럼 추가  컴포넌트 기초 만들기    .vue파일 만들고 vue + tab 또는 \u0026lt; + tab으로 기초 작성\n  \u0026lt;template\u0026gt; 태그 안에 \u0026lt;div\u0026gt;안에 넣어줘야함\n  App.vue에서 연결\n\u0026lt;template\u0026gt;\r\u0026lt;div id=\u0026#34;app\u0026#34;\u0026gt;\r\u0026lt;Index/\u0026gt;\r\u0026lt;/div\u0026gt;\r\u0026lt;/template\u0026gt;\r\u0026lt;script\u0026gt;\rimport Index from \u0026#39;./components/Index.vue\u0026#39;\rexport default {\rname: \u0026#39;App\u0026#39;,\rcomponents: {\rIndex,\r}\r}\r\u0026lt;/script\u0026gt;\r\u0026lt;style\u0026gt;\r\u0026lt;/style\u0026gt;\r  components에서 data 작성 시 data: function () {}으로 작성\n  lodash 사용하여 샘플링 기능 추가\n$ npm i lodash\r  Vue-Router  공식 문서 참조\n 설치  $ vue add router\r컴포넌트 사용하기   컴포넌트를 만든다. 컴포넌트를 가져온다. 컴포넌트를 등록. 컴포넌트 사용. views폴더에 .vue파일 작성  router 폴더   index를 만들었을 때\n import Vue from \u0026#39;vue\u0026#39;\rimport VueRouter from \u0026#39;vue-router\u0026#39;\rimport Index from \u0026#39;../views/Index.vue\u0026#39;\rVue.use(VueRouter)\rconst routes = [\r{\rpath: \u0026#39;/\u0026#39;,\rname: \u0026#39;Index\u0026#39;,\rcomponents: Index\r},\r]\rconst router = new VueRouter({\rmode: \u0026#39;history\u0026#39;,\rbase: process.env.BASE_URL,\rroutes\r})\rexport default router\rHistory Mode   SPA의 단점은 주소가 바뀌지 않는다는 것. 주소가 바뀌지 않는다는 것은 사용자가 어떤 페이지에 요청을 보내 응답을 받았는지에 대한 history 관리를 할 수 없다는 뜻. 초창기에는 주소 뒤에 #(해쉬)또는 #!(해쉬뱅)을 붙이고 뒤에 하위 주소를 넣었다 (history mode off 하면 확인 가능) 브라우저에서 제공하는 주소 API를 사용해 주소를 바꾼다. 이를 위해 사용하는 것이 history API다.  "
 },
 {
+	"uri": "https://dongyeopgu.github.io/algorithm/d4~6/20.05.28.html",
+	"title": "2020.05.28",
+	"tags": ["20.05.28", "5월", "Algorithm"],
+	"description": "",
+	"content": "SWEA 문제풀이   최대상금\n#include \u0026lt;stdio.h\u0026gt;\r#include \u0026lt;algorithm\u0026gt;\r#include \u0026lt;string.h\u0026gt;\r#include \u0026lt;string\u0026gt;\r using namespace std;\rint change, result;\rchar arr[6];\rstring str;\rbool visit[1000000][11];\rvoid sol(int cnt) {\rif (cnt == change) {\rresult = max(result, stoi(str));\rreturn;\r}\rfor (int i = 0; i \u0026lt; str.size(); i++) {\rfor (int j = i; j \u0026lt; str.size(); j++) {\rif (i==j) { continue; }\rswap(str[i], str[j]);\rif (visit[stoi(str)][cnt+1] == false) {\rvisit[stoi(str)][cnt+1] = true;\rsol(cnt + 1);\r}\rswap(str[i], str[j]);\r}\r}\r}\rint main() {\rint t;\rscanf(\u0026#34;%d\u0026#34;, \u0026amp;t);\rfor (int test_case = 1; test_case \u0026lt;= t; test_case++) {\rscanf(\u0026#34;%s\u0026#34;, arr);\rstr = arr;\rscanf(\u0026#34;%d\u0026#34;, \u0026amp;change);\rresult = 0;\rmemset(visit, false, sizeof(visit));\rsol(0);\rprintf(\u0026#34;#%d %d\\n\u0026#34;, test_case, result);\r}\rreturn 0;\r}\r  최적경로\n// 순열\r#include \u0026lt;iostream\u0026gt;\r#include \u0026lt;algorithm\u0026gt;\r using namespace std;\rstruct po {\rint x, y;\r};\rint t, n;\rint visit[12];\rpo a[12];\rint main() {\rscanf(\u0026#34;%d\u0026#34;, \u0026amp;t);\rfor (int test_case = 1; test_case \u0026lt;= t; test_case++) {\rscanf(\u0026#34;%d\u0026#34;, \u0026amp;n);\rint result = 987654321;\rscanf(\u0026#34;%d %d\u0026#34;, \u0026amp;a[0].x, \u0026amp;a[0].y);\rscanf(\u0026#34;%d %d\u0026#34;, \u0026amp;a[n+1].x, \u0026amp;a[n+1].y);\rfor (int i=1;i\u0026lt;=n;i++) {\rscanf(\u0026#34;%d %d\u0026#34;, \u0026amp;a[i].x, \u0026amp;a[i].y);\rvisit[i] = i;\r}\rvisit[n+1] = n+1;\rdo {\rint sum = 0;\rfor (int i = 1; i \u0026lt;= n + 1; ++i) sum += abs(a[visit[i]].x - a[visit[i - 1]].x) + abs(a[visit[i]].y - a[visit[i - 1]].y);\rresult = min(result, sum);\r} while (next_permutation(visit+1,visit+1+n));\rprintf(\u0026#34;#%d %d\\n\u0026#34;, test_case, result);\r}\rreturn 0;\r}\r  "
+},
+{
 	"uri": "https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.28.html",
 	"title": "2020.05.28",
 	"tags": ["TIL", "20.05.28", "5월", "Algorithm"],
 	"description": "",
 	"content": "SWEA 문제풀이   최대상금\n#include \u0026lt;stdio.h\u0026gt;\r#include \u0026lt;algorithm\u0026gt;\r#include \u0026lt;string.h\u0026gt;\r#include \u0026lt;string\u0026gt;\r using namespace std;\rint change, result;\rchar arr[6];\rstring str;\rbool visit[1000000][11];\rvoid sol(int cnt) {\rif (cnt == change) {\rresult = max(result, stoi(str));\rreturn;\r}\rfor (int i = 0; i \u0026lt; str.size(); i++) {\rfor (int j = i; j \u0026lt; str.size(); j++) {\rif (i==j) { continue; }\rswap(str[i], str[j]);\rif (visit[stoi(str)][cnt+1] == false) {\rvisit[stoi(str)][cnt+1] = true;\rsol(cnt + 1);\r}\rswap(str[i], str[j]);\r}\r}\r}\rint main() {\rint t;\rscanf(\u0026#34;%d\u0026#34;, \u0026amp;t);\rfor (int test_case = 1; test_case \u0026lt;= t; test_case++) {\rscanf(\u0026#34;%s\u0026#34;, arr);\rstr = arr;\rscanf(\u0026#34;%d\u0026#34;, \u0026amp;change);\rresult = 0;\rmemset(visit, false, sizeof(visit));\rsol(0);\rprintf(\u0026#34;#%d %d\\n\u0026#34;, test_case, result);\r}\rreturn 0;\r}\r  최적경로\n// 순열\r#include \u0026lt;iostream\u0026gt;\r#include \u0026lt;algorithm\u0026gt;\r using namespace std;\rstruct po {\rint x, y;\r};\rint t, n;\rint visit[12];\rpo a[12];\rint main() {\rscanf(\u0026#34;%d\u0026#34;, \u0026amp;t);\rfor (int test_case = 1; test_case \u0026lt;= t; test_case++) {\rscanf(\u0026#34;%d\u0026#34;, \u0026amp;n);\rint result = 987654321;\rscanf(\u0026#34;%d %d\u0026#34;, \u0026amp;a[0].x, \u0026amp;a[0].y);\rscanf(\u0026#34;%d %d\u0026#34;, \u0026amp;a[n+1].x, \u0026amp;a[n+1].y);\rfor (int i=1;i\u0026lt;=n;i++) {\rscanf(\u0026#34;%d %d\u0026#34;, \u0026amp;a[i].x, \u0026amp;a[i].y);\rvisit[i] = i;\r}\rvisit[n+1] = n+1;\rdo {\rint sum = 0;\rfor (int i = 1; i \u0026lt;= n + 1; ++i) sum += abs(a[visit[i]].x - a[visit[i - 1]].x) + abs(a[visit[i]].y - a[visit[i - 1]].y);\rresult = min(result, sum);\r} while (next_permutation(visit+1,visit+1+n));\rprintf(\u0026#34;#%d %d\\n\u0026#34;, test_case, result);\r}\rreturn 0;\r}\r  "
+},
+{
+	"uri": "https://dongyeopgu.github.io/algorithm/d4~6/20.05.29.html",
+	"title": "2020.05.29",
+	"tags": ["20.05.29", "5월", "Algorithm"],
+	"description": "",
+	"content": "SWEA 문제풀이   공통조상\ndef sol(n):\rq = [n]\rcnt =0\rwhile q:\rcnt += 1\ra = q.pop()\rfor i in v_1[a]:\rq.append(i)\rreturn cnt\rfor t in range(int(input())):\rv, e, n1, n2 = map(int, input().split())\rn3 = 9**9\rv_1 = [[]for _ in range(v+1)]\rv_2 = [[]for _ in range(v+1)]\rdata = [*map(int, input().split())]\rfor i in range(e):\rv_1[data[2*i]].append(data[2*i+1])\rv_2[data[2*i+1]].append(data[2*i])\rwhile n1 != n3:\rn1 = v_2[n1][0]\rn3 = n2\rwhile n3\u0026gt;1 and n1 != n3:\rn3=v_2[n3][0]\rresult = sol(n1)\rprint(f\u0026#34;#{t+1} {n1} {result}\u0026#34;)\r  "
 },
 {
 	"uri": "https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.29.html",
@@ -980,9 +1239,23 @@
 	"content": "SWEA 문제풀이   공통조상\ndef sol(n):\rq = [n]\rcnt =0\rwhile q:\rcnt += 1\ra = q.pop()\rfor i in v_1[a]:\rq.append(i)\rreturn cnt\rfor t in range(int(input())):\rv, e, n1, n2 = map(int, input().split())\rn3 = 9**9\rv_1 = [[]for _ in range(v+1)]\rv_2 = [[]for _ in range(v+1)]\rdata = [*map(int, input().split())]\rfor i in range(e):\rv_1[data[2*i]].append(data[2*i+1])\rv_2[data[2*i+1]].append(data[2*i])\rwhile n1 != n3:\rn1 = v_2[n1][0]\rn3 = n2\rwhile n3\u0026gt;1 and n1 != n3:\rn3=v_2[n3][0]\rresult = sol(n1)\rprint(f\u0026#34;#{t+1} {n1} {result}\u0026#34;)\r  "
 },
 {
+	"uri": "https://dongyeopgu.github.io/algorithm/d4~6/20.05.30.html",
+	"title": "2020.05.30",
+	"tags": ["20.05.30", "5월", "Algorithm"],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "https://dongyeopgu.github.io/til/5%EC%9B%94/20.05.30.html",
 	"title": "2020.05.30",
 	"tags": ["TIL", "20.05.30", "5월", "Algorithm"],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/algorithm/d4~6/20.05.31.html",
+	"title": "2020.05.31",
+	"tags": ["20.05.31", "5월", "Algorithm"],
 	"description": "",
 	"content": ""
 },
@@ -1022,6 +1295,13 @@
 	"content": "오늘 한 것  SWEA 문제풀이\n   생일파티\n python  for t in range(int(input())): n, m = map(int, input().split()) a = [[]for _ in range(n+1)] for i in range(m): n1, n2 = map(int,input().split()) a[n1].append(n2) a[n2].append(n1) result = set() result.update(a[1]) for i in a[1]: result.update(a[i]) if 1 in result: result.remove(1) print(f\u0026#34;#{t+1} {len(result)}\u0026#34;)   보급로\n C++  #include \u0026lt;cstdio\u0026gt;#include \u0026lt;cstring\u0026gt;#include \u0026lt;algorithm\u0026gt;#include \u0026lt;queue\u0026gt;using namespace std; int map[100][100]; int dis[100][100]; int dx[4] = {0, 0, -1, 1}; int dy[4] = {-1, 1, 0, 0}; int n; bool border(int x, int y) { return (0 \u0026lt;= x \u0026amp;\u0026amp; x \u0026lt; n \u0026amp;\u0026amp; 0 \u0026lt;= y \u0026amp;\u0026amp; y \u0026lt; n); } void solv() { queue\u0026lt;pair\u0026lt;int, int\u0026gt;\u0026gt; q; q.push(make_pair(0,0)); while (!q.empty()) { int x = q.front().first; int y = q.front().second; q.pop(); for (int i=0; i\u0026lt;4; i++) { int nx = x+dx[i]; int ny = y+dy[i]; if (border(nx,ny)) { int dist = map[nx][ny] + dis[x][y]; if (dist \u0026lt; dis[nx][ny]) { q.push(make_pair(nx, ny)); dis[nx][ny] = dist; } } } } return; } int main() { int test_case; scanf(\u0026#34;%d\u0026#34;, \u0026amp;test_case); for (int t=1; t\u0026lt;=test_case; t++) { scanf(\u0026#34;%d\u0026#34;, \u0026amp;n); for (int i=0; i\u0026lt;n;i++) { for (int j=0;j\u0026lt;n;j++) { scanf(\u0026#34;%1d\u0026#34;, \u0026amp;map[i][j]); dis[i][j] = 9999999; } } dis[0][0] = 0; solv(); printf(\u0026#34;#%d %d\\n\u0026#34;, t, dis[n-1][n-1]); } return 0; }   "
 },
 {
+	"uri": "https://dongyeopgu.github.io/algorithm/d4~6/20.06.05.html",
+	"title": "2020.06.05",
+	"tags": ["20.06.05", "6월", "Algorithm"],
+	"description": "",
+	"content": "오늘 한 것  SWEA, 백준 문제풀이\n   하나로\n#include \u0026lt;cstdio\u0026gt; int test_case, n; long long x[1000], y[1000], dis[1000]; bool visit[1000]; double E; long long result; long long dist(long long x1, long long y1, long long x2, long long y2) { return (x1 - x2)*(x1 - x2) + (y1 - y2)*(y1 - y2); } int main() { scanf(\u0026#34;%d\u0026#34;, \u0026amp;test_case); for (int t = 1; t \u0026lt;= test_case; t++) { result = 0; scanf(\u0026#34;%d\u0026#34;, \u0026amp;n); for (int i = 0; i \u0026lt;n; i++) { scanf(\u0026#34;%lld\u0026#34;, \u0026amp;x[i]); } for (int i = 0; i \u0026lt;n; i++) { scanf(\u0026#34;%lld\u0026#34;, \u0026amp;y[i]); } for (int i = 0; i \u0026lt;n; i++) { dis[i] = 1e16; visit[i] = 0; } scanf(\u0026#34;%lf\u0026#34;, \u0026amp;E); dis[0] = 0; for (int i = 0; i \u0026lt; n; i++) { long long a = 1e16; long long b = i; for (int j=0;j\u0026lt;n;j++) { if (!visit[j] \u0026amp;\u0026amp; dis[j] \u0026lt; a) { a = dis[j]; b = j; } } visit[b] = true; result += a; for (int j = 0; j \u0026lt;n; j++) { if (!visit[j]) { a = dist(x[b], y[b], x[j], y[j]); if (dis[j] \u0026gt; a) { dis[j] = a; } } } } printf(\u0026#34;#%d %.0lf\\n\u0026#34;, t, E*result); } return 0; }   색종이 붙이기(백준)\n#include \u0026lt;iostream\u0026gt; #include \u0026lt;algorithm\u0026gt; using namespace std; const int INF = 987654321; int arr[10][10]; int cnt = 0; int result; int paper[6] = { 0, 5, 5, 5, 5, 5 }; void sol(int y, int x) { // 해당 줄은 다 확인했으므로 다음 줄 확인  if (x == 10) { sol(y + 1, 0); return; } // 마지막 줄까지 다 확인했으므로 현재 색종이 개수 확인  if (y == 10) { result = min(result, cnt); return; } // 덮을 필요 없으므로 다음 칸 확인  if (arr[y][x] == 0) { sol(y, x + 1); return; } // 모든 경우의 수 다 확인  for (int len = 5; len \u0026gt;= 1; len--) { // 현재 len 크기 색종이가 없거나 덮었을 때 범위를 벗어날 경우  if (paper[len] == 0 || y + len \u0026gt; 10 || x + len \u0026gt; 20) { continue; } bool flag = true; // len 길이만한 정사각형이 존재하는지 확인  for (int j = 0; j \u0026lt; len; j++) { for (int k = 0; k \u0026lt; len; k++) { if (arr[y + j][x + k] == 0) { flag = false; break; } } if (flag == false) { break; } } // 존재하지 않으면 확인할 필요 없음  if (flag == false) { continue; } // 덮었다고 치고  for (int j = 0; j \u0026lt; len; j++) { for (int k = 0; k \u0026lt; len; k++) { arr[y + j][x + k] = 0; } } paper[len]--; cnt++; // 다음 칸 확인  sol(y, x + len); // 덮었던 색종이를 치운다  for (int j = 0; j \u0026lt; len; j++) { for (int k = 0; k \u0026lt; len; k++) { arr[y + j][x + k] = 1; } } paper[len]++; cnt--; } } int main(void) { for (int i = 0; i \u0026lt; 10; i++) { for (int j = 0; j \u0026lt; 10; j++) { scanf(\u0026#34;%d\u0026#34;, \u0026amp;arr[i][j]); } } result = INF; sol(0, 0); if (result == INF) { result = -1; } printf(\u0026#34;%d\u0026#34;, result); return 0; }   "
+},
+{
 	"uri": "https://dongyeopgu.github.io/til/6%EC%9B%94/20.06.05.html",
 	"title": "2020.06.05",
 	"tags": ["TIL", "20.06.05", "6월", "Algorithm"],
@@ -1057,11 +1337,32 @@
 	"content": "오늘 배운 것 VUE 설정  vue router를 사용하여 Django와 연결하여 data가져옴.\naxios, cookies 사용\n  accounts와 관련된 기능을 사용하기 위해 Token을 쿠키로 저장하기 위해 cookies 사용  "
 },
 {
-	"uri": "https://dongyeopgu.github.io/til/6%EC%9B%94/20.06.10-~-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EA%B3%BC%EC%A0%9C%EB%A1%9C-%EC%9D%B8%ED%95%9C-til-%EB%AF%B8%EC%97%85%EB%A1%9C%EB%93%9C.html",
+	"uri": "https://dongyeopgu.github.io/til/6%EC%9B%94/20.06.10-~-30-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EA%B3%BC%EC%A0%9C%EB%A1%9C-%EC%9D%B8%ED%95%9C-til-%EB%AF%B8%EC%97%85%EB%A1%9C%EB%93%9C.html",
 	"title": "2020.06.10 ~ ",
 	"tags": ["TIL", "프로젝트기간", "6월", "Vue", "Django"],
 	"description": "",
 	"content": "프로젝트 기간으로 TIL 없음  Django와 Vue 이용한 프로젝트  "
+},
+{
+	"uri": "https://dongyeopgu.github.io/til/7%EC%9B%94/20.07.01.html",
+	"title": "2020.07.01",
+	"tags": ["TIL", "20.07.01", "7월"],
+	"description": "",
+	"content": "오늘 한것 Python 데이터 분석 입문 책 보기\n"
+},
+{
+	"uri": "https://dongyeopgu.github.io/til/7%EC%9B%94/20.07.02.html",
+	"title": "2020.07.02",
+	"tags": ["TIL", "20.07.02", "7월"],
+	"description": "",
+	"content": "오늘 한것 Python 데이터 분석 입문 책 보기\n"
+},
+{
+	"uri": "https://dongyeopgu.github.io/til/7%EC%9B%94/20.07.03.html",
+	"title": "2020.07.03",
+	"tags": ["TIL", "20.07.03", "7월"],
+	"description": "",
+	"content": "오늘 한것 Python 데이터 분석 입문 책 보기\n"
 },
 {
 	"uri": "https://dongyeopgu.github.io/tags/4%EC%9B%94.html",
@@ -1085,8 +1386,36 @@
 	"content": ""
 },
 {
+	"uri": "https://dongyeopgu.github.io/tags/7%EC%9B%94.html",
+	"title": "7월",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/8%EC%9B%94.html",
+	"title": "8월",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/9%EC%9B%94.html",
+	"title": "9월",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "https://dongyeopgu.github.io/tags/algorithm.html",
 	"title": "Algorithm",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/aws.html",
+	"title": "AWS",
 	"tags": [],
 	"description": "",
 	"content": ""
@@ -1104,6 +1433,13 @@
 	"tags": ["baekjoon", "백준"],
 	"description": "",
 	"content": "14890. 경사로 def slope(i, c):\rglobal ans\rcnt = 1\rfor j in range(0, N-1):\rd = a[i][j+1]-a[i][j] if c else a[j+1][i]-a[j][i]\rif d == 0:\rcnt += 1\relif d == 1 and cnt \u0026gt;= L:\rcnt = 1\relif d == -1 and cnt \u0026gt;= 0:\rcnt = -L+1\relse:\rreturn\rif cnt \u0026gt;= 0:\rans += 1\rdef solve():\rfor i in range(N):\rslope(i, 1)\rslope(i, 0)\rprint(ans)\rN, L = map(int, input().split())\ra = [list(map(int, input().split())) for _ in range(N)]\rans = 0\rsolve()\r14503. 로봇 청소기 dt = [(-1,0),(0,1),(1,0),(0,-1)] # 북, 동, 남, 서\r def leftdir(d): # 왼쪽 탐색 index 만들기 위해\r if d == 0:\rreturn 3\relse:\rreturn d - 1\rn, m = map(int,input().split())\rr, c, d = map(int, input().split())\rroom = [list(map(int, input().split()))for _ in range(n)]\rcheck = 0\rx = r\ry = c\rwhile True:\rd = d % 4\rif check == 4: # 4가지 방향 탐색 후\r bx = x - dt[d][0] # 뒤로 한칸 가서\r by = y - dt[d][1] if room[bx][by] == 1: # 벽이면 break\r break\relse: x = bx\ry = by\rcheck = 0\rif room[x][y] == 0: # 먼저 청소기 놓은곳 2로 변경\r room[x][y] = 2\rnd = leftdir(d) # 왼쪽 탐색위한 index변경\r nx = x + dt[nd][0]\rny = y + dt[nd][1]\rif room[nx][ny] == 0: # 왼쪽이 0 이면 다시 청소시작\r x = nx\ry = ny\rd = leftdir(d)\rcheck = 0\relse: # 왼쪽 청소거나 벽이면 다시  d = leftdir(d)\rcheck += 1\rcnt = 0\rfor i in range(n):\rfor j in range(m):\rif room[i][j] == 2:\rcnt += 1\rprint(cnt)\r12100. 2048(easy) import copy\rdef rotation(a):\rfor i in range(n):\rfor j in range(i):\ra[i][j], a[j][i] = a[j][i], a[i][j]\rreturn a\rdef rev(a):\rfor i in range(n):\ra[i] = a[i][::-1]\rreturn a\rdef left(a): for i in range(n):\rfor j in range(a[i].count(0)):\ra[i].append(a[i].pop(a[i].index(0)))\rfor j in range(1,n):\rif a[i][j-1] == a[i][j]:\ra[i][j-1] = a[i][j-1]*2\ra[i][j] = 0\rfor j in range(a[i].count(0)):\ra[i].append(a[i].pop(a[i].index(0)))\rreturn a\rdef right(a):\rrev(a)\rleft(a)\rreturn rev(a)\rdef up(a):\rrotation(a)\rleft(a)\rreturn rotation(a)\rdef down(a):\rrotation(a)\rright(a)\rreturn rotation(a)\rdef my_max(a):\rmax_v = 0\rfor i in range(n):\rfor j in range(n):\rif a[i][j] \u0026gt; max_v:\rmax_v = a[i][j]\rreturn max_v\rdef solv(cnt, a):\rglobal result\rif cnt == 5:\rresult = max(result, my_max(a))\rif cnt\u0026lt;5:\rcopy_a = copy.deepcopy(a)\rup(copy_a)\rsolv(cnt+1, copy_a)\rcopy_a = copy.deepcopy(a)\rdown(copy_a)\rsolv(cnt+1, copy_a)\rcopy_a = copy.deepcopy(a)\rleft(copy_a)\rsolv(cnt+1, copy_a)\rcopy_a = copy.deepcopy(a)\rright(copy_a)\rsolv(cnt+1, copy_a)\rn = int(input())\ra = [list(map(int, input().split()))for _ in range(n)]\rresult = 0\rsolv(0,a)\rprint(result)\r1012. 유기농 배추 def DFS(y,x):\rdy = [0,1,0,-1]\rdx = [1,0,-1,0]\rboard[y][x] = 0\rfor i in range(4):\rny = y + dy[i]\rnx = x + dx[i]\rif ny \u0026lt; 0 or ny \u0026gt;= N or nx \u0026lt; 0 or nx \u0026gt;= M:\rcontinue\rif board[ny][nx]:\rDFS(ny,nx)\rfor _ in range(int(input())):\rM, N, K = map(int, input().split())\rboard = [[0 for _ in range(M)] for _ in range(N)]\rfor _ in range(K):\rX, Y = map(int, input().split())\rboard[Y][X] = 1\rcnt = 0\rfor i in range(N):\rfor j in range(M):\rif not board[i][j]:\rcontinue\rcnt += 1\rDFS(i,j)\rprint(cnt)\r1244. 스위치 켜고 끄기 n = int(input()) #스위치개수\r switch = list(map(int, input().split()))\rm = int(input()) #사람수\r for _ in range(m):\rstudent = list(map(int, input().split()))\rif student[0] == 1:\rk = student[1] - 1\rwhile k \u0026lt; n:\rswitch[k] = 1 - switch[k]\rk += student[1]\relse:\rj = student[1] - 1\rswitch[j] = 1 - switch[j]\rfor a in range(1,n-1):\rif j - a \u0026gt;= 0 and j + a \u0026lt; n and switch[j - a] == switch[j + a]:\rswitch[j - a] = 1 - switch[j - a]\rswitch[j + a] = 1 - switch[j + a]\relse:\rbreak\rfor i, e in enumerate(switch):\rif i and not (i%20):\rprint()\rprint(e, end=\u0026#39; \u0026#39;)\r2583. 영역구하기 from sys import*\rsetrecursionlimit(10**6)\rdt = ([1, 0], [-1, 0], [0, 1], [0, -1])\rdef solv(y,x):\rglobal cnt\rvisit[y][x] = 1\rcnt += 1\rfor i in range(4):\rnx = x + dt[i][0]\rny = y + dt[i][1]\rif 0 \u0026lt;= nx \u0026lt; n and 0 \u0026lt;= ny \u0026lt; m:\rif arr[ny][nx] == 0 and visit[ny][nx]==0:\rsolv(ny,nx)\rm, n, k = map(int, input().split())\rarr = [[0 for _ in range(n)]for _ in range(m)]\rfor i in range(k):\ra, b, c, d = map(int, input().split())\rfor x in range(a,c):\rfor y in range(b,d):\rarr[y][x] = 1\rarr = list(reversed(arr))\rvisit = [[0 for _ in range(n)]for _ in range(m)]\rresult = []\rfor i in range(m):\rfor j in range(n):\rif arr[i][j] == 0 and visit[i][j] == 0:\rcnt = 0\rsolv(i,j)\rresult.append(cnt)\rprint(len(result))\rprint(\u0026#39; \u0026#39;.join(map(str, sorted(result))))\r2589. 보물섬 dt = [(1,0), (-1,0), (0,1), (0,-1)]\rdef xy(i,j):\rreturn 0 \u0026lt;= i \u0026lt; row and 0 \u0026lt;= j \u0026lt; col and Map[i][j] == \u0026#39;L\u0026#39;\rdef solv(x,y):\rq.append([x,y])\rdist = [[0 for _ in range(col)]for _ in range(row)]\rdist[x][y] = 1\rresult = 0\rwhile q:\ri, j = q.pop(0)\rfor idx in dt:\rnx = i + idx[0]\rny = j + idx[1]\rif xy(nx,ny) and dist[nx][ny] == 0:\rdist[nx][ny] = dist[i][j] + 1\rresult = max(result, dist[nx][ny]) q.append([nx,ny])\rreturn result - 1\rrow, col = map(int, input().split())\rMap = [list(map(str, input()))for _ in range(row)]\rvisit = [[0 for _ in range(col)]for _ in range(row)]\rq = []\rcnt = 0\rfor i in range(row):\rfor j in range(col):\rif Map[i][j] == \u0026#39;L\u0026#39;:\rcnt = max(cnt, solv(i,j))\rprint(cnt)\r"
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/certbot.html",
+	"title": "certbot",
+	"tags": [],
+	"description": "",
+	"content": ""
 },
 {
 	"uri": "https://dongyeopgu.github.io/tags/create.html",
@@ -1148,8 +1484,57 @@
 	"content": ""
 },
 {
+	"uri": "https://dongyeopgu.github.io/tags/docker.html",
+	"title": "Docker",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/docker-compose.html",
+	"title": "Docker-compose",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/express.html",
+	"title": "Express",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/express.js.html",
+	"title": "Express.js",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "https://dongyeopgu.github.io/tags/follow.html",
 	"title": "follow",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/gunicorn.html",
+	"title": "Gunicorn",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/https.html",
+	"title": "https",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/image.html",
+	"title": "Image",
 	"tags": [],
 	"description": "",
 	"content": ""
@@ -1174,6 +1559,48 @@
 	"tags": [],
 	"description": "",
 	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/mysql.html",
+	"title": "Mysql",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/nginx.html",
+	"title": "Nginx",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/node.html",
+	"title": "Node",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/node.js.html",
+	"title": "Node.js",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/nodejs.html",
+	"title": "Nodejs",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/til/8%EC%9B%94/create-new-plugin.html",
+	"title": "OpenStack Horizon: Create New Plugin",
+	"tags": ["8월"],
+	"description": "",
+	"content": "Create New Plugin 폴더 구조   enabled 폴더\n  Plugin을 등록하는 configuration 파일ex)_31000_myplugin.py\n  _31000 은 load 순서를 정하는 번호\n  ex)_31000_myplugin.py 파일\n# The name of the panel to be added to HORIZON_CONFIG. Required.\r PANEL = \u0026#39;mypanel\u0026#39;\r# The name of the dashboard the PANEL associated with. Required.\r PANEL_DASHBOARD = \u0026#39;identity\u0026#39;\r# Python panel class of the PANEL to be added.\r ADD_PANEL = \u0026#39;myplugin.content.mypanel.panel.MyPanel\u0026#39;\r# A list of applications to be prepended to INSTALLED_APPS\r ADD_INSTALLED_APPS = [\u0026#39;myplugin\u0026#39;]\r# A list of AngularJS modules to be loaded when Angular bootstraps.\r ADD_ANGULAR_MODULES = [\u0026#39;horizon.dashboard.identity.myplugin.mypanel\u0026#39;]\r# Automatically discover static resources in installed apps\r AUTO_DISCOVER_STATIC_FILES = True\r# A list of js files to be included in the compressed set of files\r ADD_JS_FILES = []\r# A list of scss files to be included in the compressed set of files\r ADD_SCSS_FILES = [\u0026#39;dashboard/identity/myplugin/mypanel/mypanel.scss\u0026#39;]\r# A list of template-based views to be added to the header\r ADD_HEADER_SECTIONS = [\u0026#39;myplugin.content.mypanel.views.HeaderView\u0026#39;,]\r  여기에 세팅 설명 참조\n    my_rest_api.py\n Angular 사용시 필요, 순수 Django만 사용할 시 불필요. 추가할 플러그인과 새로운 서비스와 통신하거나 이미 Horizon에서 지원하는 서비스와 interaction시 필요함. 플러그인의 클라이언트 쪽과 Horizon 통신시 새 REST 인터페이스를 정의하는 역할. 일반적으로 이 REST 인터페이스는 myservice.py를 호출.    myservice.py\n Django나 Angular 사용한 플러그인 생성시 필요. 추가할 플러그인이 지원하는 새로운 서비스와 interaction 하기 위해 편리한 location 역할.    panel.py\n  플러그인의 콘텐츠가 상주할 패널을 정의.\n  slug는 패널의 고유 식별자로 URL의 일부로 자주 사용.\nfrom django.utils.translation import ugettext_lazy as _\rimport horizon\rclass MyPanel(horizon.Panel):\rname = _(\u0026#34;My Panel\u0026#34;)\rslug = \u0026#34;mypanel\u0026#34;\r    views.py\n  Django 사용했을 때 그대로, 같은 역할.\nfrom django.views import generic\rclass IndexView(generic.TemplateView):\rtemplate_name = \u0026#39;identity/mypanel/index.html\u0026#39;\r 주로 어떤 방식으로 만드는지 확인 필요.\nFBV도 사용하는지 확인 필요.\n     index.html\n  Django만 사용할 시\n{% extends \u0026#39;base.html\u0026#39; %}\r{% load i18n %}\r{% block title %}{% trans \u0026#34;My plugin\u0026#34; %}{% endblock %}\r{% block page_header %}\r{% include \u0026#34;horizon/common/_domain_page_header.html\u0026#34; with title=_(\u0026#34;My Panel\u0026#34;) %}\r{% endblock page_header %}\r{% block main %}\rHello world!\r{% endblock %}\r  새로운 templates 만들어서 사용하면 됨(Django 사용했던 pjt 생각)\n    MANIFEST.in\n tar에 포함 할 경로  include setup.py\rrecursive-include myplugin *.js *.html *.scss\r  setup.py, setup.cfg 확인 필요\n  "
 },
 {
 	"uri": "https://dongyeopgu.github.io/tags/pagination.html",
@@ -1218,8 +1645,50 @@
 	"content": ""
 },
 {
+	"uri": "https://dongyeopgu.github.io/tags/server.html",
+	"title": "Server",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/til/9%EC%9B%94/%EC%9A%A9%EC%96%B4-%EC%A0%95%EB%A6%AC.html",
+	"title": "Server 관련 용어",
+	"tags": ["9월"],
+	"description": "",
+	"content": "관련 용어들  확인 할 용어 생길 때 추가.\n  CDN(Content Delivery Network): 콘텐츠를 전송하기 위한 네트워크 시스템. 전송 성능향상과 가용성 향상을 목적으로 함. 가용성(Availability): 시스템을 정지시키지 않음을 뜻함. 다중화(Redundancy): 시스템의 구성요소를 여러 개 배치해서 하나가 고장 나서 정지해도 바로 교체해서 서비스가 멈추지 않도록 하는 것. 데몬(Daemon): 백그라운드에서 지속적으로 실행되면서 특정 작업을 수행하는 프로그램. ex) httpd, bind .. 리소스(Resource): CPU, 메모리, 하드디스크 등, 하드웨어적인 자원  "
+},
+{
 	"uri": "https://dongyeopgu.github.io/tags/sql.html",
 	"title": "SQL",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/ssafy.html",
+	"title": "SSAFY",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/ssafy-2%ED%95%99%EA%B8%B0.html",
+	"title": "SSAFY 2학기",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/ssafy3%EA%B8%B0.html",
+	"title": "SSAFY3기",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/ssl.html",
+	"title": "ssl",
 	"tags": [],
 	"description": "",
 	"content": ""
@@ -1260,6 +1729,13 @@
 	"content": ""
 },
 {
+	"uri": "https://dongyeopgu.github.io/tags/ubuntu.html",
+	"title": "Ubuntu",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "https://dongyeopgu.github.io/tags/update.html",
 	"title": "update",
 	"tags": [],
@@ -1267,8 +1743,22 @@
 	"content": ""
 },
 {
+	"uri": "https://dongyeopgu.github.io/tags/upload.html",
+	"title": "Upload",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "https://dongyeopgu.github.io/tags/vue-cli.html",
 	"title": "Vue cli",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dongyeopgu.github.io/tags/%EB%A7%9D%ED%95%A0%EC%BD%94%EB%A1%9C%EB%82%98.html",
+	"title": "망할코로나",
 	"tags": [],
 	"description": "",
 	"content": ""
