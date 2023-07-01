@@ -249,7 +249,7 @@
 	"title": "Django Channels",
 	"tags": ["django", "channels", "websocket"],
 	"description": "",
-	"content": "Django Channels  Django Channels는 Django\n   프레임워크에서 비동기 작업 및 웹 소켓 프로토콜을 지원하기 위한 패키지. 이를 통해 실시간 기능을 구현하고 사용자와 웹 애플리케이션 간의 양방향 통신을 제공.\n  Channels 주요 개념\n Consumer  Consumer는 Django Channels에서 주요 구성 요소, 웹 소켓 연결에 대한 이벤트를 처리하는 코드를 작성.   Routing  Routing은 어떤 Consumer가 어떤 웹 소켓 연결을 처리해야 하는지를 결정하는 부분. Routing은 URL 경로 또는 패턴을 Consumer와 연결하는 역할.   Channel Layer  Channel Layer는 Django Channels의 핵심 요소, 메시지 전달을 관리하고 다른 프로세스 간 통신을 가능하게 함. Channel Layer는 Redis, RabbitMQ, ASGI 프로세스 등 다양한 백엔드를 사용하여 구성 가능.      기본 사용 방법\n Django Channels 설치: pip install channels ASGI 설정: Django 프로젝트의 settings.py 파일에서 ASGI 관련 설정을 추가. Channels를 사용하기 위해 ASGI_APPLICATION 설정을 수정. Consumer 작성: Consumer는 웹 소켓 연결에 대한 이벤트를 처리. CBV/FBV로 Consumer를 작성. Routing 설정: routing.py 파일을 생성하고, URL 경로 또는 패턴과 Consumer를 연결.     "
+	"content": "Django Channels  Django Channels는 프레임워크에서 비동기 작업 및 웹 소켓 프로토콜을 지원하기 위한 패키지. 이를 통해 실시간 기능을 구현하고 사용자와 웹 애플리케이션 간의 양방향 통신을 제공.\n Channels 주요 개념  Consumer  Consumer는 Django Channels에서 주요 구성 요소, 웹 소켓 연결에 대한 이벤트를 처리하는 코드를 작성.   Routing  Routing은 어떤 Consumer가 어떤 웹 소켓 연결을 처리해야 하는지를 결정하는 부분. Routing은 URL 경로 또는 패턴을 Consumer와 연결하는 역할.   Channel Layer  Channel Layer는 Django Channels의 핵심 요소, 메시지 전달을 관리하고 다른 프로세스 간 통신을 가능하게 함. Channel Layer는 Redis, RabbitMQ, ASGI 프로세스 등 다양한 백엔드를 사용하여 구성 가능.    기본 사용 방법  Django Channels 설치: pip install channels ASGI 설정: Django 프로젝트의 settings.py 파일에서 ASGI 관련 설정을 추가. Channels를 사용하기 위해 ASGI_APPLICATION 설정을 수정. Consumer 작성: Consumer는 웹 소켓 연결에 대한 이벤트를 처리. CBV/FBV로 Consumer를 작성. Routing 설정: routing.py 파일을 생성하고, URL 경로 또는 패턴과 Consumer를 연결.   "
 },
 {
 	"uri": "https://gudongyeop.github.io/django.html",
