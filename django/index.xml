@@ -117,5 +117,17 @@ ManyToManyField 이용
   urls.py  from django.contrib import adminfrom django.urls import path, includefrom django.</description>
     </item>
     
+    <item>
+      <title>Django Channels</title>
+      <link>https://gudongyeop.github.io/django/django_channels.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gudongyeop.github.io/django/django_channels.html</guid>
+      <description>Django Channels  Django Channels는 Django
+   프레임워크에서 비동기 작업 및 웹 소켓 프로토콜을 지원하기 위한 패키지. 이를 통해 실시간 기능을 구현하고 사용자와 웹 애플리케이션 간의 양방향 통신을 제공.
+  Channels 주요 개념
+ Consumer  Consumer는 Django Channels에서 주요 구성 요소, 웹 소켓 연결에 대한 이벤트를 처리하는 코드를 작성.   Routing  Routing은 어떤 Consumer가 어떤 웹 소켓 연결을 처리해야 하는지를 결정하는 부분. Routing은 URL 경로 또는 패턴을 Consumer와 연결하는 역할.</description>
+    </item>
+    
   </channel>
 </rss>

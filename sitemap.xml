@@ -181,6 +181,10 @@
   </url>
   
   <url>
+    <loc>https://gudongyeop.github.io/django/django_channels.html</loc>
+  </url>
+  
+  <url>
     <loc>https://gudongyeop.github.io/%EB%8B%A8%EC%88%9C%EA%B8%B0%EB%A1%9D.html</loc>
   </url>
   
@@ -855,6 +859,10 @@
   </url>
   
   <url>
+    <loc>https://gudongyeop.github.io/tags/channels.html</loc>
+  </url>
+  
+  <url>
     <loc>https://gudongyeop.github.io/tags/create.html</loc>
   </url>
   
@@ -1036,6 +1044,10 @@
   
   <url>
     <loc>https://gudongyeop.github.io/tags/vue-cli.html</loc>
+  </url>
+  
+  <url>
+    <loc>https://gudongyeop.github.io/tags/websocket.html</loc>
   </url>
   
   <url>
