@@ -7,6 +7,10 @@
   </url>
   
   <url>
+    <loc>https://gudongyeop.github.io/django/django_start.html</loc>
+  </url>
+  
+  <url>
     <loc>https://gudongyeop.github.io/server/docker-compose-%EC%9D%B4%EC%9A%A9%ED%95%98%EA%B8%B0.html</loc>
   </url>
   
@@ -24,6 +28,10 @@
   
   <url>
     <loc>https://gudongyeop.github.io/til/5%EC%9B%94.html</loc>
+  </url>
+  
+  <url>
+    <loc>https://gudongyeop.github.io/django/django_crud.html</loc>
   </url>
   
   <url>
@@ -51,6 +59,10 @@
   </url>
   
   <url>
+    <loc>https://gudongyeop.github.io/django/django_paginator.html</loc>
+  </url>
+  
+  <url>
     <loc>https://gudongyeop.github.io/server/https-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0.html</loc>
   </url>
   
@@ -63,7 +75,16 @@
   </url>
   
   <url>
+    <loc>https://gudongyeop.github.io/django/django_login.html</loc>
+  </url>
+  
+  <url>
     <loc>https://gudongyeop.github.io/server/nginx-%ED%8C%8C%EC%9D%BC-%EC%97%85%EB%A1%9C%EB%93%9C-%EC%9A%A9%EB%9F%89-%EC%84%A4%EC%A0%95.html</loc>
+  </url>
+  
+  <url>
+    <loc>https://gudongyeop.github.io/django/django_change_user.html</loc>
+    <lastmod>2020-04-14T16:15:29+09:00</lastmod>
   </url>
   
   <url>
@@ -72,10 +93,6 @@
   
   <url>
     <loc>https://gudongyeop.github.io/basics.html</loc>
-  </url>
-  
-  <url>
-    <loc>https://gudongyeop.github.io/django/django_start.html</loc>
   </url>
   
   <url>
@@ -91,12 +108,29 @@
   </url>
   
   <url>
+    <loc>https://gudongyeop.github.io/django/django_comment.html</loc>
+    <lastmod>2020-04-21T22:54:07+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://gudongyeop.github.io/project.html</loc>
     <lastmod>2020-04-18T22:16:46+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://gudongyeop.github.io/til/9%EC%9B%94.html</loc>
+  </url>
+  
+  <url>
+    <loc>https://gudongyeop.github.io/django/django_like_follow.html</loc>
+  </url>
+  
+  <url>
+    <loc>https://gudongyeop.github.io/django/django_rest_api.html</loc>
+  </url>
+  
+  <url>
+    <loc>https://gudongyeop.github.io/django/django_image_upload.html</loc>
   </url>
   
   <url>
@@ -108,7 +142,11 @@
   </url>
   
   <url>
-    <loc>https://gudongyeop.github.io/django/django_crud.html</loc>
+    <loc>https://gudongyeop.github.io/django/django_fbv_cbv.html</loc>
+  </url>
+  
+  <url>
+    <loc>https://gudongyeop.github.io/django/django_channels.html</loc>
   </url>
   
   <url>
@@ -121,20 +159,7 @@
   </url>
   
   <url>
-    <loc>https://gudongyeop.github.io/django/django_paginator.html</loc>
-  </url>
-  
-  <url>
     <loc>https://gudongyeop.github.io/algorithm/d4~6.html</loc>
-  </url>
-  
-  <url>
-    <loc>https://gudongyeop.github.io/django/django_login.html</loc>
-  </url>
-  
-  <url>
-    <loc>https://gudongyeop.github.io/django/django_change_user.html</loc>
-    <lastmod>2020-04-14T16:15:29+09:00</lastmod>
   </url>
   
   <url>
@@ -148,20 +173,7 @@
   </url>
   
   <url>
-    <loc>https://gudongyeop.github.io/django/django_comment.html</loc>
-    <lastmod>2020-04-21T22:54:07+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://gudongyeop.github.io/django/django_like_follow.html</loc>
-  </url>
-  
-  <url>
     <loc>https://gudongyeop.github.io/node.js.html</loc>
-  </url>
-  
-  <url>
-    <loc>https://gudongyeop.github.io/django/django_rest_api.html</loc>
   </url>
   
   <url>
@@ -169,19 +181,7 @@
   </url>
   
   <url>
-    <loc>https://gudongyeop.github.io/django/django_fbv_cbv.html</loc>
-  </url>
-  
-  <url>
-    <loc>https://gudongyeop.github.io/django/django_image_upload.html</loc>
-  </url>
-  
-  <url>
     <loc>https://gudongyeop.github.io/til.html</loc>
-  </url>
-  
-  <url>
-    <loc>https://gudongyeop.github.io/django/django_channels.html</loc>
   </url>
   
   <url>

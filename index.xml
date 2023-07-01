@@ -12,6 +12,16 @@
     
     
     <item>
+      <title>Django 시작하기</title>
+      <link>https://gudongyeop.github.io/django/django_start.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gudongyeop.github.io/django/django_start.html</guid>
+      <description>기초  1. django 설치 $ pip install django==2.1.15(2.1.15 기준으로 배웠기 때문에)
+2. 프로젝트 시작 $ django-admin startproject {프로젝트 이름}그 후에 프로젝트 폴더의 settings.py에서 ALLOWED_HOST = [&amp;#39;*&amp;#39;]로 수정3. App 만들기 # manage.py 파일이 있는 폴더에서 터미널 진입 후 bash 에 $ python manage.py startapp {앱 이름} # 그 후에 settings.py에서  INSTALLED_APPS = [&amp;#39;{앱 이름}&amp;#39; 추가]4. urls.py 작성 # 프로젝트 이름/urls.py에서 예를 들어 index 페이지를 넣을 경우  from app이름 import views #추가 urlpatterns =[path(&amp;#39;index/&amp;#39;, views.</description>
+    </item>
+    
+    <item>
       <title>Docker-compose 이용하기</title>
       <link>https://gudongyeop.github.io/server/docker-compose-%EC%9D%B4%EC%9A%A9%ED%95%98%EA%B8%B0.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -53,6 +63,15 @@
       <guid>https://gudongyeop.github.io/vue.js/vue.js-%EA%B8%B0%EC%B4%88.html</guid>
       <description>Vue.js 기초  body태그에 &amp;lt;script src=&amp;quot;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt; Vue.js cdn을 추가하여 사용
  1. Declarative Rendering(선언적 렌더링) &amp;lt;div id=&amp;#34;app&amp;#34;&amp;gt;{{ message }}&amp;lt;/div&amp;gt;&amp;lt;!-- vue cdn --&amp;gt;&amp;lt;script src=&amp;#34;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt;&amp;lt;script&amp;gt;const app = new Vue({el: &amp;#39;#app&amp;#39;,data: {message: &amp;#39;message&amp;#39;}})&amp;lt;/script&amp;gt;2. 조건문(if) &amp;lt;div id=&amp;#34;using-if&amp;#34;&amp;gt;&amp;lt;p v-if=&amp;#34;check&amp;#34;&amp;gt;안녕&amp;lt;/p&amp;gt;&amp;lt;!-- 기본적인 자바스크립트 표현 가능 --&amp;gt;&amp;lt;p v-if=&amp;#34;check===&amp;#39;안녕&amp;#39;&amp;#34;&amp;gt;안녕&amp;lt;/p&amp;gt;&amp;lt;p v-else-if=&amp;#34;check===&amp;#39;반가워&amp;#39;&amp;#34;&amp;gt;반가워&amp;lt;/p&amp;gt;&amp;lt;p v-else&amp;gt;안녕 반가워&amp;lt;/p&amp;gt;&amp;lt;!-- false일 때만 보여주기 --&amp;gt;&amp;lt;p v-if=&amp;#34;!check&amp;#34;&amp;gt;False일때 나타내기&amp;lt;/p&amp;gt; &amp;lt;/div&amp;gt;&amp;lt;!</description>
+    </item>
+    
+    <item>
+      <title>Django CRUD</title>
+      <link>https://gudongyeop.github.io/django/django_crud.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gudongyeop.github.io/django/django_crud.html</guid>
+      <description>CRUD - Create, Read, Update, Delete  1. Model 사용할 경우 1. Model 만들기 (ex: Article이라는 모델을 만들경우) # 프로젝트 명/App이름/models.py class Article(models.Model):title = models.CharField(max_length=140)content = models.TextField()created_at = models.DateTimeField(auto_now_add=True)updated_at = models.DateTimeField(auto_now=True) models.Model 을 상속받은 클래스를 생성한다. 속성은 내가 구성하고 싶은 테이블의 컬럼의 이름을 지정하고, 데이터 타입에 맞춰서 필드를 정의한다. 위에서 정의된 필드 정보  CharField :  max_length : 필수   DateTimeField  auto_now_add : (선택) 생성시에만 자동으로 해당 시간 값 설정 auto_now : (선택) 수정시마다 자동으로 해당 시간 값 설정   이외의 필드는 https://docs.</description>
     </item>
     
     <item>
@@ -109,6 +128,18 @@ $ npm install -g @vue/cli$ vue --version # 버젼확인  프로젝트 생성 �
     </item>
     
     <item>
+      <title>Django Paginator</title>
+      <link>https://gudongyeop.github.io/django/django_paginator.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gudongyeop.github.io/django/django_paginator.html</guid>
+      <description>Paginator 사용하기   게시판 같은 곳에서 리스트의 양이 많아 질 경우 나누어 보여주기 위해서 사용
+여기 적힌 예에서 model은 Review 이고 forms는 ReviewForm이다.
+bootstrap을 사용했음.
+ 1. views.py에 내용 추가하기 from django.core.paginator import Paginatordef review_list(request):reviews = Review.objects.order_by(&amp;#39;-pk&amp;#39;)paginator = Paginator(reviews, 5) #한 페이지 당 몇개 씩 보여줄 지 지정 page_number = request.GET.get(&amp;#39;page&amp;#39;)page_obj = paginator.get_page(page_number)reviews_all = get_list_or_404(Review) #전체 개수를 보기 위해 total_count = len(reviews_all)	# 리뷰의 총 개수  total_page = total_count//5	# 리뷰 총 개수 / 한 페이지에 보여줄 수 page_range = range(1,total_page+1)context = {&amp;#39;reviews&amp;#39;: reviews,&amp;#39;page_obj&amp;#39;: page_obj,&amp;#39;page_range&amp;#39;: page_range,}return render(request, &amp;#39;앱이름/review_list.</description>
+    </item>
+    
+    <item>
       <title>https 사용하기</title>
       <link>https://gudongyeop.github.io/server/https-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -129,6 +160,18 @@ $ npm install -g @vue/cli$ vue --version # 버젼확인  프로젝트 생성 �
     </item>
     
     <item>
+      <title>Django User (1)</title>
+      <link>https://gudongyeop.github.io/django/django_login.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gudongyeop.github.io/django/django_login.html</guid>
+      <description>User 관리(sign in, out, up)   로그인 기능을 넣는 방법
+model을 만들 필요 없이 django에서 제공하는 user 모델을 사용함
+bootstrap 사용을 기반으로 작성함
+ 1. accounts라는 새로운 app을 작성 2. 기본 제공되는 User 모델을 사용하기 때문에 forms.py만 작성 from django.forms import ModelFormfrom django.contrib.auth.models import User # django에서 기본 제공하는 model이 있음. from django import formsclass SignupForm(ModelForm): #회원가입을 제공하는 class이다. username = forms.CharField(max_length=20,min_length=6,widget=forms.TextInput(attrs={&amp;#39;class&amp;#39;: &amp;#39;form-control&amp;#39;}))password = forms.</description>
+    </item>
+    
+    <item>
       <title>Nginx 파일 업로드 용량 설정</title>
       <link>https://gudongyeop.github.io/server/nginx-%ED%8C%8C%EC%9D%BC-%EC%97%85%EB%A1%9C%EB%93%9C-%EC%9A%A9%EB%9F%89-%EC%84%A4%EC%A0%95.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -141,13 +184,15 @@ $ npm install -g @vue/cli$ vue --version # 버젼확인  프로젝트 생성 �
     </item>
     
     <item>
-      <title>Django 시작하기</title>
-      <link>https://gudongyeop.github.io/django/django_start.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>Django User (2)</title>
+      <link>https://gudongyeop.github.io/django/django_change_user.html</link>
+      <pubDate>Tue, 14 Apr 2020 16:15:29 +0900</pubDate>
       
-      <guid>https://gudongyeop.github.io/django/django_start.html</guid>
-      <description>기초  1. django 설치 $ pip install django==2.1.15(2.1.15 기준으로 배웠기 때문에)
-2. 프로젝트 시작 $ django-admin startproject {프로젝트 이름}그 후에 프로젝트 폴더의 settings.py에서 ALLOWED_HOST = [&amp;#39;*&amp;#39;]로 수정3. App 만들기 # manage.py 파일이 있는 폴더에서 터미널 진입 후 bash 에 $ python manage.py startapp {앱 이름} # 그 후에 settings.py에서  INSTALLED_APPS = [&amp;#39;{앱 이름}&amp;#39; 추가]4. urls.py 작성 # 프로젝트 이름/urls.py에서 예를 들어 index 페이지를 넣을 경우  from app이름 import views #추가 urlpatterns =[path(&amp;#39;index/&amp;#39;, views.</description>
+      <guid>https://gudongyeop.github.io/django/django_change_user.html</guid>
+      <description>User 관리(change, customizing)   customizing 방법은 여러가지가 있지만, 앞서 사용했던 방법과 다르게 여기서는 AbstractUser를 상속 받아서 User를 customizing후 사용함
+UserChangeForm도 마찬가지로 ChangeForm을 상속받아 customizing 해서 사용함
+bootstrap을 사용하기 위해 widget에 attrs도 추가
+ 1. models.py에서 AbstractUser를 상속 from django.db import modelsfrom django.contrib.auth.models import AbstractUser # AbstractUser를 가져옴 # Create your models here. class User(AbstractUser): # User 모델을 AbstractUser 상속받음 # 추가할 내용을 작성 Korean_name = models.</description>
     </item>
     
     <item>
@@ -170,51 +215,6 @@ backend:build: context: ./backenddockerfile: Dockerfilerestart: alwaysenv_fi
       <guid>https://gudongyeop.github.io/%EB%8B%A8%EC%88%9C%EA%B8%B0%EB%A1%9D/%EC%9B%B9-%EA%B0%9C%EB%B0%9C%EC%9E%90%EB%A1%9C-%EC%B7%A8%EC%97%85.html</guid>
       <description>웹 개발자로 취업  프로젝트를 잘 마침과 동시에 웹 개발자로 취업
  백엔드와 서버에 관심이 많았고 스타트업에서 일을 시작하고 싶었기에 스타트업 위주로 하고 싶은 일을 할 수 있는 곳들로 많은 서류를 제출했고, 많은 탈락을 경험하며 결국 원하는 업무와 환경을 제공해주는 곳에 취업을 하게 되었다.</description>
-    </item>
-    
-    <item>
-      <title>Django CRUD</title>
-      <link>https://gudongyeop.github.io/django/django_crud.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://gudongyeop.github.io/django/django_crud.html</guid>
-      <description>CRUD - Create, Read, Update, Delete  1. Model 사용할 경우 1. Model 만들기 (ex: Article이라는 모델을 만들경우) # 프로젝트 명/App이름/models.py class Article(models.Model):title = models.CharField(max_length=140)content = models.TextField()created_at = models.DateTimeField(auto_now_add=True)updated_at = models.DateTimeField(auto_now=True) models.Model 을 상속받은 클래스를 생성한다. 속성은 내가 구성하고 싶은 테이블의 컬럼의 이름을 지정하고, 데이터 타입에 맞춰서 필드를 정의한다. 위에서 정의된 필드 정보  CharField :  max_length : 필수   DateTimeField  auto_now_add : (선택) 생성시에만 자동으로 해당 시간 값 설정 auto_now : (선택) 수정시마다 자동으로 해당 시간 값 설정   이외의 필드는 https://docs.</description>
-    </item>
-    
-    <item>
-      <title>Django Paginator</title>
-      <link>https://gudongyeop.github.io/django/django_paginator.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://gudongyeop.github.io/django/django_paginator.html</guid>
-      <description>Paginator 사용하기   게시판 같은 곳에서 리스트의 양이 많아 질 경우 나누어 보여주기 위해서 사용
-여기 적힌 예에서 model은 Review 이고 forms는 ReviewForm이다.
-bootstrap을 사용했음.
- 1. views.py에 내용 추가하기 from django.core.paginator import Paginatordef review_list(request):reviews = Review.objects.order_by(&amp;#39;-pk&amp;#39;)paginator = Paginator(reviews, 5) #한 페이지 당 몇개 씩 보여줄 지 지정 page_number = request.GET.get(&amp;#39;page&amp;#39;)page_obj = paginator.get_page(page_number)reviews_all = get_list_or_404(Review) #전체 개수를 보기 위해 total_count = len(reviews_all)	# 리뷰의 총 개수  total_page = total_count//5	# 리뷰 총 개수 / 한 페이지에 보여줄 수 page_range = range(1,total_page+1)context = {&amp;#39;reviews&amp;#39;: reviews,&amp;#39;page_obj&amp;#39;: page_obj,&amp;#39;page_range&amp;#39;: page_range,}return render(request, &amp;#39;앱이름/review_list.</description>
-    </item>
-    
-    <item>
-      <title>Django User (1)</title>
-      <link>https://gudongyeop.github.io/django/django_login.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://gudongyeop.github.io/django/django_login.html</guid>
-      <description>User 관리(sign in, out, up)   로그인 기능을 넣는 방법
-model을 만들 필요 없이 django에서 제공하는 user 모델을 사용함
-bootstrap 사용을 기반으로 작성함
- 1. accounts라는 새로운 app을 작성 2. 기본 제공되는 User 모델을 사용하기 때문에 forms.py만 작성 from django.forms import ModelFormfrom django.contrib.auth.models import User # django에서 기본 제공하는 model이 있음. from django import formsclass SignupForm(ModelForm): #회원가입을 제공하는 class이다. username = forms.CharField(max_length=20,min_length=6,widget=forms.TextInput(attrs={&amp;#39;class&amp;#39;: &amp;#39;form-control&amp;#39;}))password = forms.</description>
-    </item>
-    
-    <item>
-      <title>Django User (2)</title>
-      <link>https://gudongyeop.github.io/django/django_change_user.html</link>
-      <pubDate>Tue, 14 Apr 2020 16:15:29 +0900</pubDate>
-      
-      <guid>https://gudongyeop.github.io/django/django_change_user.html</guid>
-      <description>User 관리(change, customizing)   customizing 방법은 여러가지가 있지만, 앞서 사용했던 방법과 다르게 여기서는 AbstractUser를 상속 받아서 User를 customizing후 사용함
-UserChangeForm도 마찬가지로 ChangeForm을 상속받아 customizing 해서 사용함
-bootstrap을 사용하기 위해 widget에 attrs도 추가
- 1. models.py에서 AbstractUser를 상속 from django.db import modelsfrom django.contrib.auth.models import AbstractUser # AbstractUser를 가져옴 # Create your models here. class User(AbstractUser): # User 모델을 AbstractUser 상속받음 # 추가할 내용을 작성 Korean_name = models.</description>
     </item>
     
     <item>
@@ -248,16 +248,6 @@ ManyToManyField 이용
     </item>
     
     <item>
-      <title>Django FBV vs CBV</title>
-      <link>https://gudongyeop.github.io/django/django_fbv_cbv.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://gudongyeop.github.io/django/django_fbv_cbv.html</guid>
-      <description>Django FBV vs CBV  FBV CBV 차이
-  FBV(Function Based View)  장점  구현이 간단함 읽기 편함 직관적인 코드 데코레이터 사용이 간단함   단점  확장 / 재사용이 힘듬     CBV(Class Based View)  장점  확장에 용의(재사용) 다중 상속 Mixin등 사용 가능 HTTP Method가 클래스 안에서 나누어 처리 강력한 Generic Class View 가 있음   단점  읽기 어려움(코드 흐름이 암시적) 상속되고 믹스되면서 코드 이해를 위해 찾아다녀야함 데코레이터 사용시 별로도 import 하거나 Method 생성       </description>
-    </item>
-    
-    <item>
       <title>Django Image Upload</title>
       <link>https://gudongyeop.github.io/django/django_image_upload.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -266,6 +256,16 @@ ManyToManyField 이용
       <description>Django에서 Image Upload  POST요청을 통해 Vue.js에서 Django로 이미지 전송.
  기본 세팅  settings.py에서 아래 추가  MEDIA_URL = &amp;#39;/api/&amp;#39; # 기본 api url을 통일 시켜 번거로움을 줄이기 위해 /api/로 설정했음 MEDIA_ROOT = os.path.join(BASE_DIR, &amp;#39;media&amp;#39;) # 이미지 파일이 저장되는 기본 위치를 media폴더로 설정  이미지 url도 다른 application과 같이 api로 시작하게 만들기 위해 MEDIA_URL을 /api/로 설정
   urls.py  from django.contrib import adminfrom django.urls import path, includefrom django.</description>
+    </item>
+    
+    <item>
+      <title>Django FBV vs CBV</title>
+      <link>https://gudongyeop.github.io/django/django_fbv_cbv.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gudongyeop.github.io/django/django_fbv_cbv.html</guid>
+      <description>Django FBV vs CBV  FBV CBV 차이
+  FBV(Function Based View)  장점  구현이 간단함 읽기 편함 직관적인 코드 데코레이터 사용이 간단함   단점  확장 / 재사용이 힘듬     CBV(Class Based View)  장점  확장에 용의(재사용) 다중 상속 Mixin등 사용 가능 HTTP Method가 클래스 안에서 나누어 처리 강력한 Generic Class View 가 있음   단점  읽기 어려움(코드 흐름이 암시적) 상속되고 믹스되면서 코드 이해를 위해 찾아다녀야함 데코레이터 사용시 별로도 import 하거나 Method 생성       </description>
     </item>
     
     <item>
