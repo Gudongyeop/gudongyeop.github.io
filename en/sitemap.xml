@@ -36,8 +36,6 @@
   </url><url>
     <loc>https://gudongyeop.github.io/en/til/8%EC%9B%94.html</loc>
   </url><url>
-    <loc>https://gudongyeop.github.io/en/basics.html</loc>
-  </url><url>
     <loc>https://gudongyeop.github.io/en/django/django_start.html</loc>
   </url><url>
     <loc>https://gudongyeop.github.io/en/server/docker-compose%EB%A1%9C-django-%EC%82%AC%EC%9A%A9.html</loc>
@@ -50,8 +48,6 @@
     <lastmod>2020-04-18T22:16:46+09:00</lastmod>
   </url><url>
     <loc>https://gudongyeop.github.io/en/til/9%EC%9B%94.html</loc>
-  </url><url>
-    <loc>https://gudongyeop.github.io/en/algorithm.html</loc>
   </url><url>
     <loc>https://gudongyeop.github.io/en/algorithm/d3.html</loc>
   </url><url>
@@ -88,9 +84,6 @@
     <loc>https://gudongyeop.github.io/en/hugo-blog.html</loc>
     <lastmod>2020-04-13T21:55:45+09:00</lastmod>
   </url><url>
-    <loc>https://gudongyeop.github.io/en/vue.js.html</loc>
-    <lastmod>2020-05-25T21:55:45+09:00</lastmod>
-  </url><url>
     <loc>https://gudongyeop.github.io/en/django/django_comment.html</loc>
     <lastmod>2020-04-21T22:54:07+09:00</lastmod>
   </url><url>
@@ -102,6 +95,8 @@
   </url><url>
     <loc>https://gudongyeop.github.io/en/server.html</loc>
   </url><url>
+    <loc>https://gudongyeop.github.io/en/algorithm.html</loc>
+  </url><url>
     <loc>https://gudongyeop.github.io/en/django/django_fbv_cbv.html</loc>
   </url><url>
     <loc>https://gudongyeop.github.io/en/django/django_image_upload.html</loc>
@@ -109,8 +104,6 @@
     <loc>https://gudongyeop.github.io/en/docker/docker-%EA%B4%80%EB%A0%A8-%EB%AA%85%EB%A0%B9%EC%96%B4.html</loc>
   </url><url>
     <loc>https://gudongyeop.github.io/en/python/fastapi/fastapi-%EB%AC%B8%EC%A0%9C-%ED%95%B4%EA%B2%B0.html</loc>
-  </url><url>
-    <loc>https://gudongyeop.github.io/en/til.html</loc>
   </url><url>
     <loc>https://gudongyeop.github.io/en/kafka/kafka-consumer-%EC%82%AC%EC%9A%A9-%EC%9C%84%EC%B9%98-%EB%B9%84%EA%B5%90.html</loc>
   </url><url>
@@ -127,6 +120,11 @@
     <loc>https://gudongyeop.github.io/en/redis/redis-%EB%A9%94%EB%AA%A8%EB%A6%AC-%EA%B4%80%EB%A6%AC.html</loc>
   </url><url>
     <loc>https://gudongyeop.github.io/en/%EB%8B%A8%EC%88%9C%EA%B8%B0%EB%A1%9D.html</loc>
+  </url><url>
+    <loc>https://gudongyeop.github.io/en/vue.js.html</loc>
+    <lastmod>2020-05-25T21:55:45+09:00</lastmod>
+  </url><url>
+    <loc>https://gudongyeop.github.io/en/til.html</loc>
   </url><url>
     <loc>https://gudongyeop.github.io/en/</loc>
     <lastmod>2020-05-25T21:55:45+09:00</lastmod>
